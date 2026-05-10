@@ -1,28 +1,34 @@
-# 📡 サイレーダー 2026-05-10 14:07 JST 試作版
+# 📡 サイレーダー 2026-05-10 14:11 JST 試作版
 
-このレポートは、2026-05-09 14:06 JST〜2026-05-10 14:06 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-09 14:10 JST〜2026-05-10 14:10 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
 - 観測トピック数: 49
-- [音声で扱う想定のトピック](#audio-topics): 3
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
+- [音声で扱う想定のトピック](#audio-topics): 0
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 4
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>音声掲載理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | 音声 | 温度感上位枠 |
-| 2 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | GitHub | - |
+| 2 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | GitHub | - |
 | 3 | [Fake OpenAI repository on Hugging Face pushes infostealer malware](#topic-2068) | 33.0 | 20.0 | 42.0 | GitHub | - |
-| 4 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 4 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | GitHub | - |
 
 ---
 
 <a id="audio-topics"></a>
 
 ## 🔊 音声で扱う想定のトピック
+
+今回は音声で扱う想定のトピックはありません。
+
+<a id="github-only-topics"></a>
+
+## 📌 GitHubのみ掲載の注目トピック
 
 <a id="topic-12"></a>
 
@@ -32,9 +38,8 @@
 
 | 項目 | 値 |
 |---|---:|
-| <nobr>区分</nobr> | 音声 |
+| <nobr>区分</nobr> | GitHub |
 | <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>Windows</nobr> / <nobr>権限昇格</nobr> / <nobr>TTP</nobr> / <nobr>脆弱性</nobr> / <nobr>KEV</nobr> |
-| <nobr>音声掲載理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 温度上昇中 |
 | <nobr>温度感</nobr> | 74.0 |
 | <nobr>実務影響</nobr> | 82.0 |
@@ -42,9 +47,10 @@
 
 #### 概要
 
-CVE-2025-60710は、Microsoft WindowsのTaskhostに関連するローカル権限昇格の脆弱性として扱われており、CISAのKnown Exploited Vulnerabilitiesにも掲載されています。
-公開PoCや検証コードの言及もあるため、影響を受ける環境では早めの確認が求められます。権限昇格は、侵入後の横展開や影響拡大につながりやすく、単独でも対応優先度が高い類型です。
-さらにKEV掲載は、実際の悪用リスクを踏まえて速やかな対処が必要であることを示します。
+CVE-2025-60710は、Microsoft WindowsのTaskhost関連タスクに起因するローカル権限昇格の脆弱性として整理されています。
+CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証コードの言及もあるため、優先度の高い確認対象と見られます。
+権限昇格系の脆弱性は、端末内での被害拡大や管理者権限の取得につながる可能性があるため、影響が大きくなりやすいです。
+さらに、実利用や再現可能性を示す情報がある場合は、運用環境での対応を急ぐ必要があります。
 
 #### CISA KEV詳細
 
@@ -87,9 +93,9 @@ CVE-2025-60710は、Microsoft WindowsのTaskhostに関連するローカル権�
 
 #### 担当者向け確認ポイント
 
-- Microsoftの修正情報や推奨対策を確認し、該当バージョンの影響有無を点検する。
-- Windows端末で不審なTaskhost関連の挙動や、権限変化の兆候がないか監視を強化する。
-- PoCの存在を前提に、管理者権限の最小化と重要端末の優先的な更新を進める。
+- Windows端末で該当CVEの影響有無を確認し、ベンダーの修正情報や回避策を適用する。
+- 特権アカウントの利用状況と、Taskhost関連の不審な挙動や異常な権限昇格の兆候を監視する。
+- 優先度の高い脆弱性として、資産台帳に基づく対象範囲の洗い出しとパッチ適用計画を前倒しで進める。
 
 #### 関連する対象
 
@@ -129,9 +135,8 @@ CVE-2025-60710は、Microsoft WindowsのTaskhostに関連するローカル権�
 
 | 項目 | 値 |
 |---|---:|
-| <nobr>区分</nobr> | 音声 |
+| <nobr>区分</nobr> | GitHub |
 | <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>防御・運用</nobr> |
-| <nobr>音声掲載理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 継続監視 |
 | <nobr>温度感</nobr> | 36.0 |
 | <nobr>実務影響</nobr> | 30.0 |
@@ -139,10 +144,10 @@ CVE-2025-60710は、Microsoft WindowsのTaskhostに関連するローカル権�
 
 #### 概要
 
-Akamai Security Intelligenceは、MySQLサーバーを標的とするランサムウェアの攻撃キャンペーンを報告しました。
-攻撃者は二重恐喝の手口を用い、被害者への圧力としてデータ公開を行うとされています。
-MySQLは多くのシステムで中核的な役割を担うため、侵害されると業務やデータ保護への影響が大きくなり得ます。
-ランサムウェアの事例として、バックアップや復旧体制の見直しが改めて重要になります。
+Akamai Security Intelligence が、MySQL サーバーを狙うランサムウェアのキャンペーンを取り上げています。
+公開情報では、攻撃者が二重恐喝の手口を用い、被害者への圧力としてデータ公開を行っているとされています。
+MySQL は業務システムの基盤として使われることが多く、侵害されると広い範囲に影響が及ぶ可能性があります。
+ランサムウェアは暗号化だけでなく情報流出を伴う場合があり、復旧と対外対応の負担が大きくなりやすい点が注目されます。
 
 #### 温度感の理由
 
@@ -157,9 +162,9 @@ MySQLは多くのシステムで中核的な役割を担うため、侵害され
 
 #### 担当者向け確認ポイント
 
-- MySQLサーバーの露出状況、認証設定、アクセス制御を点検する。
-- バックアップの分離保管と復旧手順の実効性を確認する。
-- 公開情報で示された攻撃傾向を踏まえ、ログ監視と異常検知の運用を強化する。
+- MySQL サーバーの公開範囲、認証設定、アクセス制御を点検し、不要な露出を減らす。
+- バックアップの取得状況と復元手順を確認し、実際に戻せるか定期的に検証する。
+- 監視ログやアラートで、不審な認証失敗や想定外の管理操作を早期に検知できるようにする。
 
 #### 参照リンク
 
@@ -180,72 +185,9 @@ MySQLは多くのシステムで中核的な役割を担うため、侵害され
 
 ---
 
-<a id="topic-29"></a>
-
-### 3. Threats Making WAVs - Incident Response to a Cryptomining Attack
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>防御・運用</nobr> / <nobr>マルウェア</nobr> |
-| <nobr>音声掲載理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 30.0 |
-| <nobr>実務影響</nobr> | 20.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-公開情報によると、暗号資産マイニング用の不正プログラムがWAVファイルに隠された事例について、感染や横展開、マルウェア解析を含むインシデント対応の分析が示されています。
-攻撃の一連の流れと、データセンター環境での対応改善に向けた提言がまとめられています。
-ファイル形式を悪用して不正プログラムを隠す手口は、従来の検知や運用の前提を外れる可能性があるため注目されています。インシデント対応の初動や調査範囲の見直しにもつながる話題です。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 弱。
-
-##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 音声ファイルなど一見無害なデータも含め、想定外のファイル種別を監視・検査対象に含める。
-- データセンターやサーバー環境で、暗号資産マイニングの兆候となるCPU使用率や不審な通信を継続監視する。
-- 感染後の調査では、端末単体だけでなく内部ネットワーク上の横展開の有無まで確認する。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Threats Making WAVs - Incident Response to a Cryptomining Attack](https://akamai.com/blog/security/threats-making-wavs-incident-reponse-cryptomining-attack) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 未評価。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 未評価。
-- 技術者コミュニティ反応: 弱。
-- 開発者コミュニティ反応: 未評価。
-- 攻撃・悪用観測シグナル: なし。
-- 継続観測: 初出。
-
----
-
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
 <a id="topic-2068"></a>
 
-### 1. Fake OpenAI repository on Hugging Face pushes infostealer malware
+### 3. Fake OpenAI repository on Hugging Face pushes infostealer malware
 
 #### スコアカード
 
@@ -260,10 +202,10 @@ MySQLは多くのシステムで中核的な役割を担うため、侵害され
 
 #### 概要
 
-Hugging Face上で、OpenAIの「Privacy Filter」プロジェクトを装った不正なリポジトリが確認され、Windows利用者を狙った情報窃取型マルウェアの配布につながったと報じられています。
-公開情報では、このリポジトリがプラットフォーム上の注目欄に入っていたとされ、見た目だけでは正規の資料と区別しにくい点が問題視されています。
-AI関連の開発資産や公開リポジトリは信頼されやすく、偽装された場合に利用者や開発者が巻き込まれるおそれがあります。
-特に、ソフトウェア供給網や配布基盤を悪用した事例として、審査・確認の重要性を示しています。
+Hugging Face上で、OpenAIの「Privacy Filter」プロジェクトを装った不正なリポジトリが見つかり、Windows利用者向けに情報窃取型マルウェアを配布していたと報じられています。
+公開情報では、この偽リポジトリはプラットフォーム上で注目される状態に達していたとされています。
+AI関連の公開リポジトリやモデル配布基盤が、正規プロジェクトを装う供給網型の悪用に使われうることを示しています。
+利用者や運用側にとっては、信頼できる発行元の確認と導入前の検証が重要になります。
 
 #### 温度感の理由
 
@@ -279,9 +221,9 @@ AI関連の開発資産や公開リポジトリは信頼されやすく、偽装
 
 #### 担当者向け確認ポイント
 
-- AI関連の公開リポジトリでも、提供元や内容の整合性を確認し、出所不明のファイルは扱わない。
-- Windows環境では、ダウンロードした成果物の実行前に検証を行い、EDRやウイルス対策の検知状況を確認する。
-- 社内向けには、生成AIやモデル配布サイトの利用ルールを明確化し、類似の偽装事案への注意喚起を行う。
+- AI/ML関連リポジトリでも、発行元・説明・公開履歴の整合性を確認する。
+- 社内端末では不審な実行ファイルやスクリプトの持ち込みを制限し、EDRで異常挙動を監視する。
+- 従業員に対して、人気順や見た目の正しさだけで取得・実行しないよう注意喚起する。
 
 #### 関連する対象
 
@@ -308,6 +250,64 @@ AI関連の開発資産や公開リポジトリは信頼されやすく、偽装
 
 ---
 
+<a id="topic-29"></a>
+
+### 4. Threats Making WAVs - Incident Response to a Cryptomining Attack
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | GitHub |
+| <nobr>タグ</nobr> | <nobr>防御・運用</nobr> / <nobr>マルウェア</nobr> |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+Akamai Security Intelligenceは、WAVファイルの中に暗号資産マイナーを隠したとされる攻撃について、検知から感染、ネットワーク内での拡散、マルウェア解析までを整理した分析を公開しました。
+あわせて、データセンターでのインシデント対応を改善するための示唆もまとめられています。音声ファイルのように一見安全に見える形式が悪用される可能性を示す事例として注目されます。
+実運用環境での検知・封じ込め・調査の体制が十分かを見直す材料になります。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- WAVなど一般的なファイル形式でも不審な挙動があれば、内容だけでなく実行・展開時の監視を強化する。
+- 感染後の横展開を想定し、セグメンテーションや権限管理、異常通信の検知を確認する。
+- インシデント対応では初動の検知から封じ込め、証跡保全、復旧までの手順を定期的に点検する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Threats Making WAVs - Incident Response to a Cryptomining Attack](https://akamai.com/blog/security/threats-making-wavs-incident-reponse-cryptomining-attack) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 未評価。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 未評価。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 未評価。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
+
 <a id="low-record-topics"></a>
 
 ## ❄️ 低温だが記録しておくトピック
@@ -317,20 +317,20 @@ AI関連の開発資産や公開リポジトリは信頼されやすく、偽装
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [Must see: UniFi Access におけるリモートコード実行（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
-| [Netskopeにおけるクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
-| [Nansh0uキャンペーン――ハッカーの武器庫がさらに強化](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
-| [Oracle of Delphi が認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
+| [Unifi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
+| [Netskopeのクロステナント認証バイパスに関するセキュリティ情報](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
+| [Nansh0uキャンペーン - ハッカーの武器庫がさらに強化される](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
+| [Oracle of Delphiが認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
 | [JDownloaderサイトが改ざんされ、インストーラーがPython RATマルウェアに差し替えられる](https://bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware) | 28.0 | 20.0 | 42.0 |
 | [AI生成画像の背景を透明化するのに役立つ画像背景削除ツール「Rembg」](https://gigazine.net/news/20260510-rembg) | 27.0 | 20.0 | 42.0 |
 | [「執筆に生成AIを使った疑い」で大手出版社がホラー小説の出版を中止、この騒動が意味するAI執筆と出版の問題とは？](https://gigazine.net/news/20260509-horror-novel-pulled-ai-concerns) | 27.0 | 20.0 | 42.0 |
-| [cPanelとWHMの3件の新たな脆弱性を修正する更新を公開、今すぐ適用を](https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html) | 25.0 | 40.0 | 50.0 |
+| [cPanelとWHMの3件の新たな脆弱性修正パッチ公開、今すぐ適用を](https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html) | 25.0 | 40.0 | 50.0 |
 | [カメラの出っ張りゼロで背面フラットな「Google Pixel 10a」の写真撮影性能を検証するべくいろいろ撮影してきました](https://gigazine.net/news/20260509-google-pixel-10a-photo-example) | 25.0 | 20.0 | 43.0 |
-| [OpenAI Sora 2のセキュリティ：マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
-| [Must see: Geminiのハッキング：多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
-| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 23.0 | 34.0 | 50.0 |
+| [Security: OpenAI Sora 2の内部解析 - マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
+| [Must see: Geminiのハッキング - 多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
+| [Security: Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 23.0 | 34.0 | 50.0 |
 | [GitHubだけで配布されているAndroid用アプリをF-Droidのようにインストールして管理＆自動更新できる「Obtainium」レビュー](https://gigazine.net/news/20260509-obtainium) | 23.0 | 20.0 | 42.0 |
-| [「MixMaster MMORPG」のリバースエンジニアリングに関するセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
+| [MixMaster MMORPGのリバースエンジニアリングとセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
 | [手持ちの小型扇風機みたいな見た目の折り畳み小型ドローン「DJI Flip」を飛ばして撮影性能を確かめてみた](https://gigazine.net/news/20260510-dji-flip-gravitate-osaka) | 22.0 | 20.0 | 42.0 |
 | [茨木市の日本最長の歩行者専用つり橋で3眼カメラドローン「DJI Mavic 4 Pro」空撮レビューしてみた](https://gigazine.net/news/20260510-dji-mavic-4-pro-gravitate-osaka) | 22.0 | 20.0 | 42.0 |
 | [人は「怒り」を感じると信頼性の低い情報源からのニュースを拡散しやすくなる](https://gigazine.net/news/20260510-anger-accelerates-misinformation-sharing) | 22.0 | 20.0 | 42.0 |
