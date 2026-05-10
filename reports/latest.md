@@ -1,21 +1,21 @@
-# 📡 サイレーダー 2026-05-10 13:41 JST 試作版
+# 📡 サイレーダー 2026-05-10 14:07 JST 試作版
 
-このレポートは、2026-05-09 13:40 JST〜2026-05-10 13:40 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-09 14:06 JST〜2026-05-10 14:06 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
 - 観測トピック数: 49
-- [音声で扱う想定のトピック](#audio-topics): 4
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
+- [音声で扱う想定のトピック](#audio-topics): 3
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>音声掲載理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
 | 1 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | 音声 | 温度感上位枠 |
 | 2 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
-| 3 | [Fake OpenAI repository on Hugging Face pushes infostealer malware](#topic-2068) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 3 | [Fake OpenAI repository on Hugging Face pushes infostealer malware](#topic-2068) | 33.0 | 20.0 | 42.0 | GitHub | - |
 | 4 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
@@ -42,10 +42,9 @@
 
 #### 概要
 
-CVE-2025-60710は、Microsoft WindowsのTaskhost関連の処理におけるローカル権限昇格の脆弱性として扱われており、CISAのKnown Exploited Vulnerabilitiesにも関連づけられています。
-公開PoCや検証コードの言及があるため、影響範囲の確認と対応優先度の判断が必要な話題です。
-権限昇格系の脆弱性は、初期侵入後の被害拡大や端末掌握につながりやすいため注意が必要です。
-さらに、公開PoCの存在は再現可能性を高め、実運用環境でのリスク評価を急ぐ理由になります。
+CVE-2025-60710は、Microsoft WindowsのTaskhostに関連するローカル権限昇格の脆弱性として扱われており、CISAのKnown Exploited Vulnerabilitiesにも掲載されています。
+公開PoCや検証コードの言及もあるため、影響を受ける環境では早めの確認が求められます。権限昇格は、侵入後の横展開や影響拡大につながりやすく、単独でも対応優先度が高い類型です。
+さらにKEV掲載は、実際の悪用リスクを踏まえて速やかな対処が必要であることを示します。
 
 #### CISA KEV詳細
 
@@ -88,9 +87,9 @@ CVE-2025-60710は、Microsoft WindowsのTaskhost関連の処理におけるロ�
 
 #### 担当者向け確認ポイント
 
-- Windows端末で該当CVEの修正状況を確認し、未対応なら優先的に適用する。
-- Taskhost関連の異常な挙動や不審な権限変化がないか、端末監視とログ確認を強化する。
-- 既知悪用対象として扱い、脆弱性管理の対象資産に含めて継続的に棚卸しする。
+- Microsoftの修正情報や推奨対策を確認し、該当バージョンの影響有無を点検する。
+- Windows端末で不審なTaskhost関連の挙動や、権限変化の兆候がないか監視を強化する。
+- PoCの存在を前提に、管理者権限の最小化と重要端末の優先的な更新を進める。
 
 #### 関連する対象
 
@@ -140,10 +139,10 @@ CVE-2025-60710は、Microsoft WindowsのTaskhost関連の処理におけるロ�
 
 #### 概要
 
-Akamai Security Intelligenceは、MySQLサーバーを狙うランサムウェア活動を取り上げています。
-攻撃者は二重恐喝の手口を用い、盗んだデータの公開で被害者に圧力をかけるとされています。
-MySQLは業務データの基盤として使われることが多く、侵害時の影響が広がりやすい点が注意されます。
-ランサムウェアに加えて情報漏えいのリスクも伴うため、復旧だけでなく証跡保全や対外対応まで含めた備えが必要です。
+Akamai Security Intelligenceは、MySQLサーバーを標的とするランサムウェアの攻撃キャンペーンを報告しました。
+攻撃者は二重恐喝の手口を用い、被害者への圧力としてデータ公開を行うとされています。
+MySQLは多くのシステムで中核的な役割を担うため、侵害されると業務やデータ保護への影響が大きくなり得ます。
+ランサムウェアの事例として、バックアップや復旧体制の見直しが改めて重要になります。
 
 #### 温度感の理由
 
@@ -158,9 +157,9 @@ MySQLは業務データの基盤として使われることが多く、侵害時
 
 #### 担当者向け確認ポイント
 
-- MySQLの公開範囲、認証設定、不要な外部到達性を再点検する。
-- バックアップの隔離と復元手順の定期確認を行い、復旧可能性を確認する。
-- 監査ログやアラートを見直し、異常な接続や権限変更の早期検知を強化する。
+- MySQLサーバーの露出状況、認証設定、アクセス制御を点検する。
+- バックアップの分離保管と復旧手順の実効性を確認する。
+- 公開情報で示された攻撃傾向を踏まえ、ログ監視と異常検知の運用を強化する。
 
 #### 参照リンク
 
@@ -181,17 +180,79 @@ MySQLは業務データの基盤として使われることが多く、侵害時
 
 ---
 
-<a id="topic-2068"></a>
+<a id="topic-29"></a>
 
-### 3. Fake OpenAI repository on Hugging Face pushes infostealer malware
+### 3. Threats Making WAVs - Incident Response to a Cryptomining Attack
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> / <nobr>Windows</nobr> |
+| <nobr>タグ</nobr> | <nobr>防御・運用</nobr> / <nobr>マルウェア</nobr> |
 | <nobr>音声掲載理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+公開情報によると、暗号資産マイニング用の不正プログラムがWAVファイルに隠された事例について、感染や横展開、マルウェア解析を含むインシデント対応の分析が示されています。
+攻撃の一連の流れと、データセンター環境での対応改善に向けた提言がまとめられています。
+ファイル形式を悪用して不正プログラムを隠す手口は、従来の検知や運用の前提を外れる可能性があるため注目されています。インシデント対応の初動や調査範囲の見直しにもつながる話題です。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 音声ファイルなど一見無害なデータも含め、想定外のファイル種別を監視・検査対象に含める。
+- データセンターやサーバー環境で、暗号資産マイニングの兆候となるCPU使用率や不審な通信を継続監視する。
+- 感染後の調査では、端末単体だけでなく内部ネットワーク上の横展開の有無まで確認する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Threats Making WAVs - Incident Response to a Cryptomining Attack](https://akamai.com/blog/security/threats-making-wavs-incident-reponse-cryptomining-attack) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 未評価。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 未評価。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 未評価。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
+
+<a id="github-only-topics"></a>
+
+## 📌 GitHubのみ掲載の注目トピック
+
+<a id="topic-2068"></a>
+
+### 1. Fake OpenAI repository on Hugging Face pushes infostealer malware
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | GitHub |
+| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> / <nobr>Windows</nobr> |
 | <nobr>温度状態</nobr> | 継続監視 |
 | <nobr>温度感</nobr> | 33.0 |
 | <nobr>実務影響</nobr> | 20.0 |
@@ -199,10 +260,10 @@ MySQLは業務データの基盤として使われることが多く、侵害時
 
 #### 概要
 
-Hugging Face上で、OpenAIの「Privacy Filter」プロジェクトを装う不正なリポジトリが見つかり、Windows利用者に情報窃取型マルウェアを配布していたと報じられています。
-公開情報では、そのリポジトリがトレンド一覧に入っていたことも確認されています。
-AI関連の公開リポジトリを装った配布は、開発者や利用者が信頼しやすく、被害につながりやすい点が問題です。
-こうした事例は、生成AIやML関連のサプライチェーンを狙う偽装のリスクを改めて示しています。
+Hugging Face上で、OpenAIの「Privacy Filter」プロジェクトを装った不正なリポジトリが確認され、Windows利用者を狙った情報窃取型マルウェアの配布につながったと報じられています。
+公開情報では、このリポジトリがプラットフォーム上の注目欄に入っていたとされ、見た目だけでは正規の資料と区別しにくい点が問題視されています。
+AI関連の開発資産や公開リポジトリは信頼されやすく、偽装された場合に利用者や開発者が巻き込まれるおそれがあります。
+特に、ソフトウェア供給網や配布基盤を悪用した事例として、審査・確認の重要性を示しています。
 
 #### 温度感の理由
 
@@ -211,16 +272,16 @@ AI関連の公開リポジトリを装った配布は、開発者や利用者が
 - 脅威・攻撃キャンペーン文脈。
 
 ##### 実務影響
-- 現時点では、主要な根拠を整理中です。
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- AI/ML関連の公開リポジトリでも、提供元の真正性と配布物の内容を確認する運用を徹底する。
-- Windows端末での不審な実行ファイルや認証情報の流出兆候を監視し、EDRやログで異常を早期検知する。
-- 社内で話題のAIツールやライブラリを導入する際は、公式配布元や署名、ハッシュ確認を標準手順に含める。
+- AI関連の公開リポジトリでも、提供元や内容の整合性を確認し、出所不明のファイルは扱わない。
+- Windows環境では、ダウンロードした成果物の実行前に検証を行い、EDRやウイルス対策の検知状況を確認する。
+- 社内向けには、生成AIやモデル配布サイトの利用ルールを明確化し、類似の偽装事案への注意喚起を行う。
 
 #### 関連する対象
 
@@ -247,72 +308,6 @@ AI関連の公開リポジトリを装った配布は、開発者や利用者が
 
 ---
 
-<a id="topic-29"></a>
-
-### 4. Threats Making WAVs - Incident Response to a Cryptomining Attack
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>防御・運用</nobr> / <nobr>マルウェア</nobr> |
-| <nobr>音声掲載理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 30.0 |
-| <nobr>実務影響</nobr> | 20.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-Akamai Security Intelligenceが、WAVファイルの中に暗号資産マイナーを隠していたとされる攻撃事例の分析を公表しました。
-報告では、検知から感染、ネットワーク内での広がり、マルウェア解析までの流れと、データセンターにおけるインシデント対応の改善点が整理されています。
-一般的な音声ファイルのように見えるデータにも悪意あるコードが含まれうるため、従来の監視や検査だけでは見落としが起きる可能性があります。
-暗号資産マイニングは直接的な情報窃取でなくても、計算資源の消費や運用影響につながるため、実務上の注意が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 弱。
-
-##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- ファイル種別だけで安全性を判断せず、受信・保存時の検査と振る舞い監視を組み合わせる。
-- 暗号資産マイニングの兆候として、CPU・GPU使用率や不審な外向き通信の変化を確認する。
-- 侵入後の横展開を想定し、端末・サーバー・データセンターでの隔離手順と対応連携を事前に見直す。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Threats Making WAVs - Incident Response to a Cryptomining Attack](https://akamai.com/blog/security/threats-making-wavs-incident-reponse-cryptomining-attack) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 未評価。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 未評価。
-- 技術者コミュニティ反応: 弱。
-- 開発者コミュニティ反応: 未評価。
-- 攻撃・悪用観測シグナル: なし。
-- 継続観測: 初出。
-
----
-
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
-今回はGitHubのみ掲載の注目トピックはありません。
-
 <a id="low-record-topics"></a>
 
 ## ❄️ 低温だが記録しておくトピック
@@ -322,20 +317,20 @@ Akamai Security Intelligenceが、WAVファイルの中に暗号資産マイナ�
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [UniFi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
-| [Netskopeにおけるクロステナント認証バイパスのセキュリティ問題](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
+| [Must see: UniFi Access におけるリモートコード実行（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
+| [Netskopeにおけるクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
 | [Nansh0uキャンペーン――ハッカーの武器庫がさらに強化](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
-| [Oracle of Delphiが認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
-| [JDownloaderのサイトが改ざんされ、インストーラーがPython RATマルウェアに差し替えられる](https://bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware) | 28.0 | 20.0 | 42.0 |
+| [Oracle of Delphi が認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
+| [JDownloaderサイトが改ざんされ、インストーラーがPython RATマルウェアに差し替えられる](https://bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware) | 28.0 | 20.0 | 42.0 |
 | [AI生成画像の背景を透明化するのに役立つ画像背景削除ツール「Rembg」](https://gigazine.net/news/20260510-rembg) | 27.0 | 20.0 | 42.0 |
 | [「執筆に生成AIを使った疑い」で大手出版社がホラー小説の出版を中止、この騒動が意味するAI執筆と出版の問題とは？](https://gigazine.net/news/20260509-horror-novel-pulled-ai-concerns) | 27.0 | 20.0 | 42.0 |
-| [cPanelとWHMの3件の新たな脆弱性修正を公開、今すぐ適用を](https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html) | 25.0 | 40.0 | 50.0 |
+| [cPanelとWHMの3件の新たな脆弱性を修正する更新を公開、今すぐ適用を](https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html) | 25.0 | 40.0 | 50.0 |
 | [カメラの出っ張りゼロで背面フラットな「Google Pixel 10a」の写真撮影性能を検証するべくいろいろ撮影してきました](https://gigazine.net/news/20260509-google-pixel-10a-photo-example) | 25.0 | 20.0 | 43.0 |
-| [OpenAI Sora 2の内部セキュリティ：マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
-| [Must see: Geminiをハッキングする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
+| [OpenAI Sora 2のセキュリティ：マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
+| [Must see: Geminiのハッキング：多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
 | [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 23.0 | 34.0 | 50.0 |
 | [GitHubだけで配布されているAndroid用アプリをF-Droidのようにインストールして管理＆自動更新できる「Obtainium」レビュー](https://gigazine.net/news/20260509-obtainium) | 23.0 | 20.0 | 42.0 |
-| [MixMaster MMORPGのリバースエンジニアリングに関するセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
+| [「MixMaster MMORPG」のリバースエンジニアリングに関するセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
 | [手持ちの小型扇風機みたいな見た目の折り畳み小型ドローン「DJI Flip」を飛ばして撮影性能を確かめてみた](https://gigazine.net/news/20260510-dji-flip-gravitate-osaka) | 22.0 | 20.0 | 42.0 |
 | [茨木市の日本最長の歩行者専用つり橋で3眼カメラドローン「DJI Mavic 4 Pro」空撮レビューしてみた](https://gigazine.net/news/20260510-dji-mavic-4-pro-gravitate-osaka) | 22.0 | 20.0 | 42.0 |
 | [人は「怒り」を感じると信頼性の低い情報源からのニュースを拡散しやすくなる](https://gigazine.net/news/20260510-anger-accelerates-misinformation-sharing) | 22.0 | 20.0 | 42.0 |
@@ -358,7 +353,7 @@ Akamai Security Intelligenceが、WAVファイルの中に暗号資産マイナ�
 | <nobr>実務影響</nobr> | 対象組織・担当者にとって、対応優先度や被害可能性がどれだけ大きいかを示します。 |
 | <nobr>確度</nobr> | 公的機関、ベンダー公式、複数ソース、CVE/KEV、一次資料などにより、情報をどれだけ確認できているかを示します。事件報道系は、複数報道があっても司法文書・当局発表などの一次資料が弱い場合、脆弱性KEV系より低く出ることがあります。 |
 
-スコアは、公開情報から抽出した特徴量と事前定義した重み付けに基づく参考指標です。詳しい算出方針は `docs/scoring/` を参照してください。
+スコアは、公開情報から抽出した特徴量と事前定義した重み付けに基づく参考指標です。詳しい算出方針は [スコアリング方針](../docs/scoring.md) を参照してください。
 
 ## 🔒 公開しない内部情報について
 
