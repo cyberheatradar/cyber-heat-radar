@@ -1,22 +1,23 @@
-# 📡 サイレーダー 2026-05-10 17:00 JST 試作版
+# 📡 サイレーダー 2026-05-10 22:12 JST 試作版
 
-このレポートは、2026-05-09 17:00 JST〜2026-05-10 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-09 22:11 JST〜2026-05-10 22:11 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 49
-- [音声で扱う想定のトピック](#audio-topics): 3
+- 観測トピック数: 69
+- [音声で扱う想定のトピック](#audio-topics): 4
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 1
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>音声掲載理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | 音声 | 温度感上位枠 |
-| 2 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
-| 3 | [Fake OpenAI repository on Hugging Face pushes infostealer malware](#topic-2068) | 33.0 | 20.0 | 42.0 | GitHub | - |
-| 4 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [CVE-2026-41940: cPanel & WHM authentication bypass exploited in ransomware attacks](#topic-216) | 100.0 | 99.0 | 92.0 | 音声 | 温度感上位枠 |
+| 2 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | 音声 | 温度感上位枠 |
+| 3 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 4 | [Fake OpenAI repository on Hugging Face pushes infostealer malware](#topic-2068) | 33.0 | 20.0 | 42.0 | GitHub | - |
+| 5 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -24,9 +25,118 @@
 
 ## 🔊 音声で扱う想定のトピック
 
+<a id="topic-216"></a>
+
+### 1. CVE-2026-41940: cPanel & WHM authentication bypass exploited in ransomware attacks
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>KEV</nobr> / <nobr>認証バイパス</nobr> / <nobr>防御・運用</nobr> / <nobr>政策・規制</nobr> / <nobr>脅威レポート</nobr> / <nobr>PoC</nobr> / <nobr>ボットネット</nobr> / <nobr>ゼロデイ</nobr> |
+| <nobr>音声掲載理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 高温 |
+| <nobr>温度感</nobr> | 100.0 |
+| <nobr>実務影響</nobr> | 99.0 |
+| <nobr>確度</nobr> | 92.0 |
+
+#### 概要
+
+CVE-2026-41940は、WebProsのcPanel & WHMおよびWP2（WordPress Squared）における認証回避の脆弱性で、CISAのKEVカタログに追加されています。
+公開情報では、すでに悪用が確認されており、ランサムウェア関連の攻撃文脈でも言及されています。
+cPanel/WHMはサーバー管理の要となるため、侵害されると複数のホスト環境や運用基盤に広く影響が及ぶおそれがあります。
+公開PoCの言及もあり、対応の遅れが被害拡大につながりやすい点が注目されています。
+
+#### CISA KEV詳細
+
+- **CVE**: CVE-2026-41940
+- **Vendor / Project**: WebPros
+- **Product**: cPanel & WHM and WP2 (WordPress Squared)
+- **Vulnerability Name**: WebPros cPanel & WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability
+- **Date Added**: 2026-04-30
+- **Due Date**: 2026-05-03
+- **Known Ransomware Use**: Known
+
+**Required Action**
+
+> Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 7 sources。
+- CISA KEV関連。
+- 実悪用・ゼロデイ文脈。
+- 公開PoC・検証コード言及あり。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- 悪用済み脆弱性として優先確認が必要。
+- 悪用情報あり。
+- 公開PoCにより再現・悪用可能性が上がる。
+- RCEまたは認証バイパス系。
+- ランサムウェア文脈。
+
+##### 確度
+- 複数ソース確認。
+- 公的機関情報あり。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 公開PoC・検証コード言及あり。
+- 公開PoC/Exploitコード: 確認あり。
+- 直接PoCリンク: 掲載しません。
+- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
+
+#### 担当者向け確認ポイント
+
+- 該当製品の利用有無を確認し、CISA KEVの対象として優先的に更新・緩和策を適用する。
+- 管理画面への不審なログインや設定変更、権限昇格の痕跡がないかを点検する。
+- 関連システム全体で認証情報の再確認と、侵害前提の監視・ログ保全を強める。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-41940 | 主要CVE | 1.00 |
+| ベンダー | WebPros | 影響ベンダー | 1.00 |
+| 製品 | cPanel & WHM and WP2 (WordPress Squared) | 影響製品 | 1.00 |
+| 脆弱性 | CVE-2026-26268 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-42208 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2023-1389 | 主要CVE | 1.00 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-41940](https://nvd.nist.gov/vuln/detail/CVE-2026-41940) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>公的機関</nobr> | [CISA KEV: CVE-2026-41940](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-41940) | <nobr>KEV掲載内容、Date Added、Due Date、Required Action</nobr> |
+| <nobr>公的機関データ</nobr> | [CISA KEV JSON](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) | <nobr>CISA公式の機械可読データ。CVE IDで検索して確認</nobr> |
+| <nobr>出典</nobr> | [Week in review: cPanel vulnerability actively exploited, DigiCert breach, Linked](https://helpnetsecurity.com/2026/05/10/week-in-review-cpanel-vulnerability-actively-exploited-digicert-breach-linkedin-job-scams) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [4th May – Threat Intelligence Report](https://research.checkpoint.com/2026/4th-may-threat-intelligence-report) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [South-East Asian Military Entities Targeted via cPanel (CVE-2026-41940)](https://ctrlaltintel.com/research/SEA-CPanel) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Critical Vulnerability Alert: CVE-2026-41940 in cPanel, WHM, and WP Squared](https://bitsight.com/blog/critical-vulnerability-alert-cve-2026-41940-cPanel-WHM-WPSquared) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://cisa.gov/news-events/alerts/2026/04/30/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 未評価。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 弱。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 弱。
+- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
+- 継続観測: 継続。
+
+---
+
 <a id="topic-12"></a>
 
-### 1. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
+### 2. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
 
 #### スコアカード
 
@@ -42,9 +152,9 @@
 
 #### 概要
 
-CVE-2025-60710は、Microsoft WindowsのTaskhost関連タスクにおけるローカル権限昇格の脆弱性として扱われています。
-CISAのKnown Exploited Vulnerabilitiesに掲載されており、公開PoCや検証コードの言及もあるため、優先的な確認対象とみられます。
-権限昇格につながる脆弱性は、侵入後の被害拡大や管理者権限の奪取に結びつく可能性があります。加えて、KEV掲載と公開PoCの情報は、対応の優先度を高める材料になります。
+CVE-2025-60710は、Microsoft WindowsのTaskhost関連の処理におけるローカル権限昇格の脆弱性として整理されています。
+CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCの言及もあるため、優先的な確認対象とみられます。
+権限昇格の脆弱性は、端末内での不正な権限取得につながるため影響が大きくなりやすいです。既知悪用対象として扱われている点から、一般的な重要脆弱性よりも早めの対応が求められます。
 
 #### CISA KEV詳細
 
@@ -87,9 +197,9 @@ CISAのKnown Exploited Vulnerabilitiesに掲載されており、公開PoCや検
 
 #### 担当者向け確認ポイント
 
-- 対象Windows環境で、当該CVEに関する修正プログラムや緩和策の適用状況を確認する。
-- Taskhost関連の異常な挙動や権限変更の兆候を監視対象に含める。
-- 脆弱性管理の優先順位を見直し、影響範囲のある端末・サーバーから順に対応する。
+- 対象のWindows環境で、該当CVEの影響有無と修正状況を確認する。
+- 権限昇格に結びつく可能性があるため、端末の管理者権限運用や特権アカウントの監視を強化する。
+- ベンダーの修正情報や緩和策、検知情報の更新を継続的に確認する。
 
 #### 関連する対象
 
@@ -123,7 +233,7 @@ CISAのKnown Exploited Vulnerabilitiesに掲載されており、公開PoCや検
 
 <a id="topic-31"></a>
 
-### 2. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
+### 3. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
 
 #### スコアカード
 
@@ -139,9 +249,9 @@ CISAのKnown Exploited Vulnerabilitiesに掲載されており、公開PoCや検
 
 #### 概要
 
-Guardicore Labsによる分析で、MySQLサーバーを狙うランサムウェア関連のキャンペーンが確認されたとされています。
-攻撃者は二重の脅迫手口を用い、漏えいデータの公開で被害者に圧力をかけると説明されています。
-MySQLは多くの業務システムの基盤で使われるため、侵害が起きると広範囲に影響が及ぶ可能性があります。ランサムウェアに加えてデータ公開の圧力が伴う点も、被害対応を難しくします。
+Guardicore Labs による公開情報では、MySQLサーバーを狙うランサムウェア関連のキャンペーンが確認されたとされています。
+攻撃者は二重の脅迫手口を用い、被害組織に圧力をかける目的でデータ公開も行うと説明されています。MySQLは多くのシステムで基盤として使われるため、影響が広がる可能性があります。
+データ漏えいと暗号化の両面で被害が大きくなりやすく、運用・復旧・広報対応まで含めた備えが重要です。
 
 #### 温度感の理由
 
@@ -156,9 +266,9 @@ MySQLは多くの業務システムの基盤で使われるため、侵害が起
 
 #### 担当者向け確認ポイント
 
-- MySQLサーバーの公開範囲、認証設定、不要な外部アクセス経路を見直す。
-- バックアップの整合性確認と、復旧手順の定期的な検証を行う。
-- 異常な認証失敗、DBへの不審な接続、データ転送の兆候を監視する。
+- MySQLサーバーの公開範囲、認証設定、不要な外部公開の有無を見直す。
+- バックアップの整合性と復旧手順を定期的に確認し、実際に戻せるか検証する。
+- 異常な接続や設定変更、データアクセスの増加などを監視し、早期検知につなげる。
 
 #### 参照リンク
 
@@ -181,7 +291,7 @@ MySQLは多くの業務システムの基盤で使われるため、侵害が起
 
 <a id="topic-29"></a>
 
-### 3. Threats Making WAVs - Incident Response to a Cryptomining Attack
+### 4. Threats Making WAVs - Incident Response to a Cryptomining Attack
 
 #### スコアカード
 
@@ -197,10 +307,8 @@ MySQLは多くの業務システムの基盤で使われるため、侵害が起
 
 #### 概要
 
-公開された分析によると、暗号資産のマイニングを行う不審な活動が、WAVファイルの中に埋め込まれていた事例が報告されています。
-研究者は、検知、侵入、ネットワーク内での広がり、マルウェア解析までを含む一連の流れを整理し、データセンターでのインシデント対応の改善点も示しています。
-音声ファイルのように見える一般的な形式が悪用される可能性があるため、検知の難しさが注目点です。
-暗号資産マイニングは直接的な情報窃取でなくても、サーバー資源の消費や運用影響につながるため、対応優先度が高いと考えられます。
+Threats Making WAVs - Incident Response to a Cryptomining Attack に関するインシデント・侵害報道系の話題です。
+影響範囲、原因、復旧状況、利用者影響、追加公表の有無を中心に確認する価値があります。
 
 #### 温度感の理由
 
@@ -216,9 +324,9 @@ MySQLは多くの業務システムの基盤で使われるため、侵害が起
 
 #### 担当者向け確認ポイント
 
-- WAVなどの一般的なファイル形式でも、通常と異なる振る舞いがないかを監視すること。
-- サーバー資源の急な消費増加や、想定外のネットワーク通信を早期に把握できる運用を確認すること。
-- インシデント対応では、感染経路の特定だけでなく、横展開の有無と影響範囲の切り分けを重視すること。
+- 被害組織、影響範囲、利用者影響を確認する。
+- 原因、侵入経路、復旧状況、追加公表の有無を確認する。
+- 自組織で類似構成・類似委託先・類似サービス利用がないか確認する。
 
 #### 参照リンク
 
@@ -260,10 +368,10 @@ MySQLは多くの業務システムの基盤で使われるため、侵害が起
 
 #### 概要
 
-Hugging Face上で、OpenAIの「Privacy Filter」プロジェクトを装った悪性リポジトリが確認されたとされています。
-このリポジトリは、Windows利用者向けに情報窃取型マルウェアを配布する目的だったと報じられています。
-AI関連の人気プロジェクトを装う手口は、開発者や利用者の信頼を悪用しやすく、通常の確認だけでは見抜きにくい点が注目されます。
-公開リポジトリやモデル配布基盤が攻撃の踏み台になり得るため、サプライチェーンリスクとして無視できません。
+Hugging Face上で、OpenAIの「Privacy Filter」プロジェクトを装った悪意あるリポジトリが見つかり、Windowsユーザー向けに情報窃取型マルウェアを配布していたと報告されています。
+公開情報では、この偽リポジトリがトレンド表示に載っていたことも確認されており、正規プロジェクトに見せかけた誘導が問題視されています。
+AI関連の開発・配布基盤が悪用されると、利用者が正規物に見誤りやすく、被害の発見が遅れるおそれがあります。
+特に情報窃取型マルウェアは認証情報や機密情報の漏えいにつながるため、開発者・利用者双方に注意喚起が必要です。
 
 #### 温度感の理由
 
@@ -279,9 +387,9 @@ AI関連の人気プロジェクトを装う手口は、開発者や利用者の
 
 #### 担当者向け確認ポイント
 
-- AI関連リポジトリを導入する際は、提供者の実在性や公開履歴、説明内容の整合性を確認する。
-- Windows端末では、未知の配布物やスクリプトの実行を制限し、EDRやアプリケーション制御で異常な挙動を監視する。
-- 社内で利用するAI資産の取得元を限定し、トレンド表示や人気順だけで採用しない運用ルールを設ける。
+- AI/ML関連の公開リポジトリは、提供元・作者名・説明文だけでなく、配布物の整合性や評判も確認する。
+- Windows端末では、不審な実行ファイルやアーカイブの取得・実行を抑止するため、ダウンロード経路の制御とEDR監視を強化する。
+- 社内の開発者向けに、トレンド表示や人気度を過信せず、外部の公開モデル・コードを採用する際の確認手順を周知する。
 
 #### 関連する対象
 
@@ -318,29 +426,29 @@ AI関連の人気プロジェクトを装う手口は、開発者や利用者の
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
 | [Unifi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
-| [Netskopeのクロステナント認証バイパスセキュリティ問題](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
-| [Oracle of Delphiが認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
+| [OllamaのOut-of-Bounds Read脆弱性によりリモートでプロセスメモリが漏えいする問題](https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html) | 28.0 | 46.0 | 50.0 |
+| [CVE-2026-44656: Vimの「path」補完によるOSコマンドインジェクション](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44656) | 28.0 | 46.0 | 38.0 |
+| [Netskopeのクロステナント認証バイパスに関するセキュリティ情報](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
 | [Nansh0uキャンペーン―ハッカーの武器庫がさらに強化される](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
-| [JDownloaderのサイトが改ざんされ、インストーラーがPython RATマルウェアに差し替えられる](https://bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware) | 28.0 | 20.0 | 42.0 |
+| [Oracle of Delphiが認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
+| [JDownloaderサイトが侵害され、インストーラーがPython RATマルウェアに差し替えられる](https://bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware) | 28.0 | 20.0 | 42.0 |
 | [AI生成画像の背景を透明化するのに役立つ画像背景削除ツール「Rembg」](https://gigazine.net/news/20260510-rembg) | 27.0 | 20.0 | 42.0 |
-| [「執筆に生成AIを使った疑い」で大手出版社がホラー小説の出版を中止、この騒動が意味するAI執筆と出版の問題とは？](https://gigazine.net/news/20260509-horror-novel-pulled-ai-concerns) | 27.0 | 20.0 | 42.0 |
-| [カメラの出っ張りゼロで背面フラットな「Google Pixel 10a」の写真撮影性能を検証するべくいろいろ撮影してきました](https://gigazine.net/news/20260509-google-pixel-10a-photo-example) | 25.0 | 20.0 | 43.0 |
-| [Security: OpenAI Sora 2の内部調査 - マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
-| [Must see: Geminiをハッキングする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
+| [Googleの廉価版スマホ「Google Pixel 10a」のベンチマークスコアやバッテリー持続時間を検証してみたよレビュー](https://gigazine.net/news/20260510-google-pixel-10a-benchmark-battery) | 25.0 | 20.0 | 43.0 |
+| [Security: OpenAI Sora 2の内部を探る - マルチモーダルLLMを駆動するシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
+| [Must see: Geminiをハッキングする - 多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
 | [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 23.0 | 34.0 | 50.0 |
-| [GitHubだけで配布されているAndroid用アプリをF-Droidのようにインストールして管理＆自動更新できる「Obtainium」レビュー](https://gigazine.net/news/20260509-obtainium) | 23.0 | 20.0 | 42.0 |
-| [MixMaster MMORPGのリバースエンジニアリングに関するセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
+| [CVE-2026-39826 html/template の Escaper 回避により XSS が発生する脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39826) | 23.0 | 34.0 | 38.0 |
+| [CVE-2026-39823: html/templateのmeta content URLエスケープ回避によるXSS脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39823) | 23.0 | 34.0 | 38.0 |
+| [MixMaster MMORPGの逆コンパイル解析について](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
+| [わずか6年で約146兆円、AI向けデータセンター投資の巨大さが一目で分かるグラフ](https://gigazine.net/news/20260510-ai-datacenter-megaprojects) | 22.0 | 20.0 | 42.0 |
+| [送電インフラを必要とせず利益も得ない住民が10年で2500億円以上のコスト負担を受けることになるのはおかしいとメリーランド州当局が異議を申し立て](https://gigazine.net/news/20260510-maryland-ai-data-center-cost) | 22.0 | 20.0 | 42.0 |
+| [AIにはプログラマーの美徳の1つである「怠惰」がないという指摘](https://gigazine.net/news/20260510-llm-lost-laziness) | 22.0 | 20.0 | 42.0 |
+| [無料で使えるAndroid用RSSリーダー「Read You」、FreshRSSとの連係も可能](https://gigazine.net/news/20260510-read-you) | 22.0 | 20.0 | 42.0 |
 | [ドローンの空撮映像をリアルタイムでVRゲーム風に表示できるゴーグル型デバイス「DJI Goggles N3」レビュー](https://gigazine.net/news/20260510-dji-goggles-n3) | 22.0 | 20.0 | 42.0 |
 | [手持ちの小型扇風機みたいな見た目の折り畳み小型ドローン「DJI Flip」を飛ばして撮影性能を確かめてみた](https://gigazine.net/news/20260510-dji-flip-gravitate-osaka) | 22.0 | 20.0 | 42.0 |
 | [茨木市の日本最長の歩行者専用つり橋で3眼カメラドローン「DJI Mavic 4 Pro」空撮レビューしてみた](https://gigazine.net/news/20260510-dji-mavic-4-pro-gravitate-osaka) | 22.0 | 20.0 | 42.0 |
 | [人は「怒り」を感じると信頼性の低い情報源からのニュースを拡散しやすくなる](https://gigazine.net/news/20260510-anger-accelerates-misinformation-sharing) | 22.0 | 20.0 | 42.0 |
 | [テスラのCybertruckがまたもやリコール、2024～2026年に販売された18インチスチールホイール装着モデルでホイール故障のリスクあり](https://gigazine.net/news/20260510-cybertruck-recall-tesla-rotor-cracks) | 22.0 | 20.0 | 42.0 |
-| [砂漠のド真ん中に1週間だけの街を作り上げる「バーニングマン」は終了後に数週間かけてゴミ掃除をしている](https://gigazine.net/news/20260510-burning-man-moop) | 22.0 | 20.0 | 42.0 |
-| [Duolingoの採用試験では「会場に着くまでのタクシー運転手への態度」が選考基準になっていた](https://gigazine.net/news/20260510-duoling-interview-test) | 22.0 | 20.0 | 42.0 |
-| [「働くネコ」たちを写真とエピソードで記録した「Bodega Cats of New York」プロジェクト](https://gigazine.net/news/20260509-bodega-cats-of-new-york) | 22.0 | 20.0 | 42.0 |
-| [Chromeの「オンデバイスAI」がGoogleサーバーにデータを送信していないという主張を削除](https://gigazine.net/news/20260509-chrome-on-device-ai) | 22.0 | 20.0 | 42.0 |
-| [IntelがApple端末向けのチップの一部を製造することで両社が予備合意](https://gigazine.net/news/20260509-apple-intel-preliminary-chip-making-agreement) | 22.0 | 20.0 | 42.0 |
-| [中国産ソシャゲ「NTE」をプレイしたマンガ家が思う「アニメ調オープンワールド大作」を日本が作らなくてもいい理由](https://itmedia.co.jp/news/articles/2605/10/news014.html) | 21.0 | 20.0 | 42.0 |
 
 ---
 
