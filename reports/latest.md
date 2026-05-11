@@ -1,23 +1,25 @@
-# 📡 サイレーダー 2026-05-11 11:00 JST 試作版
+# 📡 サイレーダー 2026-05-11 17:00 JST 試作版
 
-このレポートは、2026-05-10 11:00 JST〜2026-05-11 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-10 17:00 JST〜2026-05-11 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 130
-- [音声で扱う想定のトピック](#audio-topics): 0
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 5
+- 観測トピック数: 367
+- [音声で扱う想定のトピック](#audio-topics): 5
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 2
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>音声掲載理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
 | 1 | [CVE-2026-41940: cPanel & WHM authentication bypass exploited in ransomware attacks](#topic-216) | 100.0 | 99.0 | 92.0 | GitHub | - |
-| 2 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | GitHub | - |
-| 3 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | GitHub | - |
-| 4 | [Hackers abuse Google ads, Claude.ai chats to push Mac malware](#topic-2177) | 34.0 | 20.0 | 42.0 | GitHub | - |
-| 5 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | GitHub | - |
+| 2 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | 音声 | 温度感上位枠 |
+| 3 | [「BerriAI LiteLLM」にSQLi脆弱性 - 認証情報漏洩のおそれ、悪用も](#topic-2412) | 43.0 | 46.0 | 43.0 | 音声 | 温度感上位枠 |
+| 4 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 5 | [Hackers abuse Google ads, Claude.ai chats to push Mac malware](#topic-2177) | 34.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 6 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | GitHub | - |
+| 7 | [次世代reCAPTCHAがAIによる突破対策のため「Google Play開発者サービス」を必須にしてパズルではなくQRコードスキャンを要求](#topic-2403) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -25,7 +27,351 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-12"></a>
+
+### 1. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>Windows</nobr> / <nobr>権限昇格</nobr> / <nobr>TTP</nobr> / <nobr>脆弱性</nobr> / <nobr>KEV</nobr> |
+| <nobr>音声掲載理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 温度上昇中 |
+| <nobr>温度感</nobr> | 74.0 |
+| <nobr>実務影響</nobr> | 82.0 |
+| <nobr>確度</nobr> | 81.0 |
+
+#### 概要
+
+CVE-2025-60710は、Microsoft WindowsのTaskhost関連の処理に起因するローカル権限昇格の脆弱性として報告されています。
+CISAのKnown Exploited Vulnerabilitiesに関連情報があり、公開PoCや検証コードの言及も見られるため、優先的な確認対象とされています。
+権限昇格の脆弱性は、侵入後に端末内で攻撃者の権限を大きく広げるおそれがあるため、運用上の影響が大きくなりやすいです。
+公開PoCの存在は、再現や悪用のハードルを下げる要因として注意が必要です。
+
+#### CISA KEV詳細
+
+- **CVE**: CVE-2025-60710
+- **Vendor / Project**: Microsoft
+- **Product**: Windows
+- **Vulnerability Name**: Microsoft Windows Link Following Vulnerability
+- **Date Added**: 2026-04-13
+- **Due Date**: 2026-04-27
+- **Known Ransomware Use**: Unknown
+
+**Required Action**
+
+> Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 2 sources。
+- CISA KEV関連。
+- 公開PoC・検証コード言及あり。
+
+##### 実務影響
+- 悪用済み脆弱性として優先確認が必要。
+- 公開PoCにより再現・悪用可能性が上がる。
+- 権限昇格系。
+
+##### 確度
+- 複数ソース確認。
+- 公的機関情報あり。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 公開PoC・検証コード言及あり。
+- 公開PoC/Exploitコード: 確認あり。
+- 直接PoCリンク: 掲載しません。
+- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
+
+#### 担当者向け確認ポイント
+
+- Windows端末で該当CVEへの対策状況を確認し、ベンダー案内に沿って更新を適用すること。
+- 管理者権限の付与状況や不要な高権限アカウントを見直し、権限昇格の影響範囲を抑えること。
+- 端末監視で不審なタスク実行や権限変更の兆候を確認し、関連イベントを重点的に追跡すること。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2025-60710 | 主要CVE | 1.00 |
+| ベンダー | Microsoft | 影響ベンダー | 1.00 |
+| 製品 | Windows | 影響製品 | 1.00 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2025-60710](https://nvd.nist.gov/vuln/detail/CVE-2025-60710) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>公的機関</nobr> | [CISA KEV: CVE-2025-60710](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-60710) | <nobr>KEV掲載内容、Date Added、Due Date、Required Action</nobr> |
+| <nobr>公的機関データ</nobr> | [CISA KEV JSON](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) | <nobr>CISA公式の機械可読データ。CVE IDで検索して確認</nobr> |
+| <nobr>出典</nobr> | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](https://github.com/Wh04m1001/CVE-2025-60710) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 未評価。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 未評価。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 弱。
+- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
+- 継続観測: 継続。
+
+---
+
+<a id="topic-2412"></a>
+
+### 2. 「BerriAI LiteLLM」にSQLi脆弱性 - 認証情報漏洩のおそれ、悪用も
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>AI</nobr> |
+| <nobr>音声掲載理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 43.0 |
+| <nobr>実務影響</nobr> | 46.0 |
+| <nobr>確度</nobr> | 43.0 |
+
+#### 概要
+
+LLMサービス向けプロキシ「BerriAI LiteLLM」にSQLインジェクションの脆弱性が報告され、米当局が悪用を踏まえた注意喚起を行っています。
+データベース内の情報が読み取られるおそれがあり、認証情報の漏えいにつながる可能性があるとされています。
+LLM基盤や周辺コンポーネントは、利用データや認証情報を集約しやすいため、ひとたび漏えいが起きると影響範囲が大きくなり得ます。
+すでに悪用が示唆されているため、早期の確認と対策が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+- 情報漏えい系。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- LiteLLMの利用有無と導入形態を確認し、影響対象のインスタンスを特定する。
+- 認証情報や接続先情報を含むデータベース関連の保護状況を点検し、必要に応じてアクセス制御や監査を強化する。
+- 提供元の修正版情報や注意喚起を確認し、更新適用と周辺ログの点検を進める。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [「BerriAI LiteLLM」にSQLi脆弱性 - 認証情報漏洩のおそれ、悪用も](https://security-next.com/184241) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 未評価。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 中。
+- 日本語圏反応: 未評価。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 未評価。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+- 継続観測: 初出。
+
+---
+
+<a id="topic-31"></a>
+
+### 3. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>防御・運用</nobr> |
+| <nobr>音声掲載理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 36.0 |
+| <nobr>実務影響</nobr> | 30.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+Guardicore Labs による公開情報では、MySQL サーバーを狙うランサムウェアのキャンペーンが確認されています。
+攻撃者はデータの公開をちらつかせる二重脅迫の手口を用い、被害組織に圧力をかけているとされています。
+MySQL は業務システムの基盤として広く使われるため、侵害されると業務停止や情報漏えいの影響が大きくなり得ます。
+ランサムウェアと二重脅迫の組み合わせは、復旧だけでなく情報管理面でも対応負荷を高めます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- MySQL の公開設定、認証強度、不要な外部到達性を点検する。
+- バックアップの分離保管と復元手順の定期確認を行い、復旧可能性を検証する。
+- データベース周辺の監視を強化し、異常な接続やデータ流出の兆候を早期に把握する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 未評価。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 未評価。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 未評価。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
+
+<a id="topic-2177"></a>
+
+### 4. Hackers abuse Google ads, Claude.ai chats to push Mac malware
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>AI</nobr> / <nobr>マルウェア</nobr> / <nobr>攻撃キャンペーン</nobr> |
+| <nobr>音声掲載理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 34.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+Hackers abuse Google ads, Claude.ai chats to push Mac malware は、AIを攻撃者側の自動化・詐欺・マルウェア・フィッシングに利用する話題です。
+攻撃手口、標的、検知観点、利用者教育やSOC監視への反映要否を確認する価値があります。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 攻撃者がAIを使っている工程と、既存の検知・教育で補足できる範囲を確認する。
+- フィッシング、マルウェア、詐欺テンプレート、認証情報窃取の観点で検知ロジックを確認する。
+- SOC/CSIRTで共有すべきIoC、TTP、注意喚起文面があるか確認する。
+- 利用者向け注意喚起や訓練内容を更新する必要があるか確認する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ai_model_or_project | Claude | 主題 | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Hackers abuse Google ads, Claude.ai chats to push Mac malware](https://bleepingcomputer.com/news/security/hackers-abuse-google-ads-claudeai-chats-to-push-mac-malware) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 未評価。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 弱。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 弱。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
+
+<a id="topic-2403"></a>
+
+### 5. 次世代reCAPTCHAがAIによる突破対策のため「Google Play開発者サービス」を必須にしてパズルではなくQRコードスキャンを要求
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>Android</nobr> / <nobr>AI</nobr> |
+| <nobr>音声掲載理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+Googleが不正なアクセスを防ぐための仕組みとして導入している「reCAPTCHA」で、AIによる突破を防ぎ人間のユーザーだけを通すためのふるいとして、Android端末では「『Google Play開発者サービス』がインストールされていること」を必須要件としたことがわかりました。
+不審なアクティビティと判断された場合に人間であることを証明する方法も「パズルを解く」ではなく「QRコードをスキャンする」に改められています。続きを読む...
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 攻撃者、標的業種、対象地域を確認する。
+- 公開されたTTP、IoC、検知ロジックを確認する。
+- 自組織のログ・EDR・SIEMで検知可能か確認する。
+- 初期侵入経路、横展開、永続化、情報窃取の有無を確認する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [次世代reCAPTCHAがAIによる突破対策のため「Google Play開発者サービス」を必須にしてパズルではなくQRコードスキャンを要求](https://gigazine.net/news/20260511-google-new-recaptcha-needs-google-play-services) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 未評価。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 中。
+- 日本語圏反応: 未評価。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 未評価。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -48,9 +394,10 @@
 
 #### 概要
 
-CVE-2026-41940は、WebProsのcPanel & WHMおよびWP Squaredに存在する認証回避の脆弱性として公表され、CISAのKEV Catalogにも追加されています。
-公開情報では、実際の悪用が確認されており、ランサムウェア攻撃との関連も示されています。
-cPanel/WHMはホスティング運用の中核に関わるため、侵害されると広範囲に影響が及ぶおそれがあります。公開PoCの言及もあるため、未対策環境では迅速な確認と対応が重要です。
+CVE-2026-41940は、WebProsのcPanel & WHMおよびWP2（WordPress Squared）に関連する認証回避の脆弱性で、CISAのKEVカタログに追加されています。
+公開情報では、実際の悪用が確認されており、ランサムウェア攻撃や標的型の侵害文脈でも言及されています。
+管理系コントロールパネルへの不正アクセスにつながる可能性があるため、影響は大きいと見られます。
+公開PoCの言及もあり、未対策環境では短期間で悪用リスクが高まりやすい点が注目されています。
 
 #### CISA KEV詳細
 
@@ -97,9 +444,9 @@ cPanel/WHMはホスティング運用の中核に関わるため、侵害され�
 
 #### 担当者向け確認ポイント
 
-- cPanel & WHM / WP Squaredの該当バージョンを確認し、ベンダーの修正版・回避策があれば直ちに適用する。
-- インターネット公開された管理画面や関連サービスのアクセス制御、認証ログ、異常な管理操作の有無を点検する。
-- KEV掲載脆弱性として優先度を上げ、他の管理系製品や同一基盤上の不審な変更・永続化の兆候もあわせて確認する。
+- cPanel & WHM / WP2の利用有無を確認し、ベンダーの修正情報と適用状況を点検する。
+- 外部公開された管理画面や関連サービスのアクセス制御を見直し、不要な露出を減らす。
+- 認証回避や管理者権限の不審な操作、設定変更、ログイン痕跡を重点的に監視する。
 
 #### 関連する対象
 
@@ -138,228 +485,9 @@ cPanel/WHMはホスティング運用の中核に関わるため、侵害され�
 
 ---
 
-<a id="topic-12"></a>
-
-### 2. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>Windows</nobr> / <nobr>権限昇格</nobr> / <nobr>TTP</nobr> / <nobr>脆弱性</nobr> / <nobr>KEV</nobr> |
-| <nobr>温度状態</nobr> | 温度上昇中 |
-| <nobr>温度感</nobr> | 74.0 |
-| <nobr>実務影響</nobr> | 82.0 |
-| <nobr>確度</nobr> | 81.0 |
-
-#### 概要
-
-CVE-2025-60710は、Microsoft WindowsのTaskhost関連の処理におけるローカル権限昇格の脆弱性として扱われています。
-CISAのKnown Exploited Vulnerabilitiesにも掲載されており、公開PoCの言及もあるため、実務上は優先確認対象と考えられます。
-権限昇格の脆弱性は、最初の侵入後に被害を拡大させる足がかりになりやすい点が重要です。さらに、KEV掲載は実際の悪用リスクを示す材料として、対応優先度を上げる根拠になります。
-
-#### CISA KEV詳細
-
-- **CVE**: CVE-2025-60710
-- **Vendor / Project**: Microsoft
-- **Product**: Windows
-- **Vulnerability Name**: Microsoft Windows Link Following Vulnerability
-- **Date Added**: 2026-04-13
-- **Due Date**: 2026-04-27
-- **Known Ransomware Use**: Unknown
-
-**Required Action**
-
-> Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 2 sources。
-- CISA KEV関連。
-- 公開PoC・検証コード言及あり。
-
-##### 実務影響
-- 悪用済み脆弱性として優先確認が必要。
-- 公開PoCにより再現・悪用可能性が上がる。
-- 権限昇格系。
-
-##### 確度
-- 複数ソース確認。
-- 公的機関情報あり。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 公開PoC・検証コード言及あり。
-- 公開PoC/Exploitコード: 確認あり。
-- 直接PoCリンク: 掲載しません。
-- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
-
-#### 担当者向け確認ポイント
-
-- 対象Windows環境でCVE-2025-60710の影響有無を確認し、ベンダーの修正情報や回避策を確認する。
-- Taskhost関連の異常な実行や権限変化、予定外のタスク操作がないか監視する。
-- 公開PoCの存在を踏まえ、該当端末の優先度を上げてパッチ適用と検出ルールの見直しを進める。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2025-60710 | 主要CVE | 1.00 |
-| ベンダー | Microsoft | 影響ベンダー | 1.00 |
-| 製品 | Windows | 影響製品 | 1.00 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2025-60710](https://nvd.nist.gov/vuln/detail/CVE-2025-60710) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
-| <nobr>公的機関</nobr> | [CISA KEV: CVE-2025-60710](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-60710) | <nobr>KEV掲載内容、Date Added、Due Date、Required Action</nobr> |
-| <nobr>公的機関データ</nobr> | [CISA KEV JSON](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) | <nobr>CISA公式の機械可読データ。CVE IDで検索して確認</nobr> |
-| <nobr>出典</nobr> | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](https://github.com/Wh04m1001/CVE-2025-60710) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 未評価。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 未評価。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 弱。
-- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
-- 継続観測: 継続。
-
----
-
-<a id="topic-31"></a>
-
-### 3. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>防御・運用</nobr> |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 36.0 |
-| <nobr>実務影響</nobr> | 30.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-AkamaiのSecurity Intelligenceによると、Guardicore LabsはMySQLサーバーを標的とするランサムウェア関連のキャンペーンを確認しました。
-攻撃者は二重脅迫の手法を用い、データ公開をちらつかせて被害組織に圧力をかけているとされています。
-MySQLは多くの業務システムやアプリケーションの基盤で使われるため、侵害されると広範囲の業務停止や情報漏えいにつながるおそれがあります。
-ランサムウェアは暗号化だけでなくデータ流出も組み合わせることがあり、復旧と対外対応の負担が大きくなります。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- MySQLサーバーの公開範囲、認証設定、パッチ適用状況を点検する。
-- バックアップが実際に復元できるかを定期的に確認し、重要データの保全体制を見直す。
-- 不審な認証試行や設定変更、データ転送の兆候を監視し、インシデント対応手順を再確認する。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 未評価。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 未評価。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 未評価。
-- 攻撃・悪用観測シグナル: なし。
-- 継続観測: 初出。
-
----
-
-<a id="topic-2177"></a>
-
-### 4. Hackers abuse Google ads, Claude.ai chats to push Mac malware
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>AI</nobr> / <nobr>マルウェア</nobr> / <nobr>攻撃キャンペーン</nobr> |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 34.0 |
-| <nobr>実務影響</nobr> | 20.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-攻撃者がGoogle広告とClaude.aiの共有チャットを悪用し、Mac向けマルウェアへ誘導するキャンペーンが報告されています。
-検索結果上では正規のサービスに見える導線が使われるため、利用者が不審な手順や配布物に気づきにくい点が特徴です。
-正規サービスや広告枠を経由するため、見た目の信頼性に惑わされやすく、エンドユーザーの初動を誤らせるリスクがあります。
-AIサービスの共有機能や検索広告が攻撃の足場として使われうる点は、運用・教育の両面で注意が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 検索広告経由のダウンロード導線をそのまま信頼せず、配布元ドメインと入手経路を確認する。
-- AIチャットの共有リンクや外部に公開された手順書を経由した不審な案内に注意し、社内では正規のインストール手順を明示する。
-- Mac端末でも不審なプロファイル、権限要求、未知のインストーラに警戒し、検知・教育を見直す。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ai_model_or_project | Claude | 主題 | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Hackers abuse Google ads, Claude.ai chats to push Mac malware](https://bleepingcomputer.com/news/security/hackers-abuse-google-ads-claudeai-chats-to-push-mac-malware) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 未評価。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 弱。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 弱。
-- 攻撃・悪用観測シグナル: なし。
-- 継続観測: 初出。
-
----
-
 <a id="topic-29"></a>
 
-### 5. Threats Making WAVs - Incident Response to a Cryptomining Attack
+### 2. Threats Making WAVs - Incident Response to a Cryptomining Attack
 
 #### スコアカード
 
@@ -424,23 +552,23 @@ Threats Making WAVs - Incident Response to a Cryptomining Attack に関するイ
 | [UniFi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
 | [Ollamaの境界外読み取り脆弱性によりリモートでプロセスメモリが漏えいする問題](https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html) | 28.0 | 46.0 | 50.0 |
 | [CVE-2026-44656: Vimの「path」補完によるOSコマンドインジェクション](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44656) | 28.0 | 46.0 | 38.0 |
-| [Security: Netskopeのクロステナント認証バイパス](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
-| [Oracle of Delphi が認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
-| [Nansh0uキャンペーン：ハッカーの攻撃手法がさらに強化される](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
-| [AI生成画像の背景を透明化するのに役立つ画像背景削除ツール「Rembg」](https://gigazine.net/news/20260510-rembg) | 27.0 | 20.0 | 42.0 |
-| [クリエイターの創造力を拡張、コロプラが作った「世界初」の生成AIゲーム](https://xtech.nikkei.com/atcl/nxt/column/18/03076/050700025) | 26.0 | 20.0 | 42.0 |
-| [LINEヤフーのAIエージェント「Agent i」、日本での強みを生かせるか](https://xtech.nikkei.com/atcl/nxt/column/18/00086/00402) | 26.0 | 20.0 | 42.0 |
+| [Netskopeにおけるクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
+| [Oracle of Delphiが認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
+| [Nansh0uキャンペーン：ハッカーの武器庫がさらに強化](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
+| [5年以上にわたるフィッシングキャンペーンで500以上の組織が被害](https://securityweek.com/over-500-organizations-hit-in-years-long-phishing-campaign) | 28.0 | 20.0 | 42.0 |
+| [Electerm projectのElectermにおける複数の脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-014913.html) | 28.0 | 20.0 | 42.0 |
+| [Palo Alto NetworksのPAN-OSにおける境界外書き込みに関する脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-014858.html) | 28.0 | 20.0 | 42.0 |
+| [LinuxのLinux Kernelにおける境界外書き込みに関する脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-014806.html) | 27.0 | 23.0 | 43.0 |
+| [デジタルコンテンツや生成AIのアーカイブを保存する非営利財団「インターネットアーカイブ・スイス」設立](https://gigazine.net/news/20260511-internet-archive-switzerland) | 27.0 | 20.0 | 42.0 |
+| [ヒンドゥー教・シーク教・モルモン教などの指導者とAnthropicやOpenAIなどのAI企業が会合、AIモデルに倫理と道徳を組み込む方法に関する原則を策定へ](https://gigazine.net/news/20260511-ai-and-religion-faith-ai-covenant) | 27.0 | 20.0 | 42.0 |
+| [Mervin Praison (MervinPraison)のPraisonAIにおける複数の脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-014907.html) | 27.0 | 20.0 | 42.0 |
+| [sandboxie-plusのSandboxieにおけるスタックベースのバッファオーバーフローの脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-014792.html) | 27.0 | 20.0 | 42.0 |
+| [MUFG、購買や決済などのAIエージェントを開発--戦略パートナーにグーグル](https://japan.zdnet.com/article/35247279) | 26.0 | 20.0 | 42.0 |
+| [MUFGがGoogleと戦略的提携 リテール総合金融、AIでSMBCより「先行」狙う](https://xtech.nikkei.com/atcl/nxt/column/18/00001/11718) | 26.0 | 20.0 | 42.0 |
+| [ソニーが打ち出した「AIによる成長」と“ただし書き”の中身 26年度経営方針説明会](https://itmedia.co.jp/news/articles/2605/11/news089.html) | 26.0 | 20.0 | 42.0 |
+| [“ChatGPT以後”に公開のWebサイト、35％がAI生成に？ 米スタンフォード大などが調査 広まる「不自然に明るい文章」](https://itmedia.co.jp/news/articles/2605/11/news027.html) | 26.0 | 20.0 | 42.0 |
 | [AIエージェント開発は「正解」なのか、日経BPのAI・データラボ所長が解説](https://xtech.nikkei.com/atcl/nxt/column/18/03585/050800002) | 26.0 | 20.0 | 42.0 |
-| [Googleの廉価版スマホ「Google Pixel 10a」のベンチマークスコアやバッテリー持続時間を検証してみたよレビュー](https://gigazine.net/news/20260510-google-pixel-10a-benchmark-battery) | 25.0 | 20.0 | 43.0 |
-| [OpenAI Sora 2のセキュリティ分析：マルチモーダルLLMを駆動するシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
-| [必見：Geminiをハッキングする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
-| [YARA-X 1.16.0のリリース](https://isc.sans.edu/diary/rss/32970) | 25.0 | 20.0 | 42.0 |
-| [あなたのパスワードは何分耐えられる？ 解析速度上昇で「8文字パスワード」はほぼ無力に](https://itmedia.co.jp/enterprise/articles/2605/11/news036.html) | 24.0 | 20.0 | 43.0 |
-| [「Linuxカーネル」の暗号通信処理にLoP脆弱性「Dirty Frag」](https://security-next.com/184228) | 24.0 | 20.0 | 42.0 |
-| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 23.0 | 34.0 | 50.0 |
-| [CVE-2026-39826 html/template の Escaper 回避により XSS が発生する脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39826) | 23.0 | 34.0 | 38.0 |
-| [CVE-2026-39823: html/templateのmeta content URLエスケープ回避によるXSS脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39823) | 23.0 | 34.0 | 38.0 |
-| [MixMaster MMORPGのリバースエンジニアリングに関するセキュリティ情報](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
+| [LINEヤフーのAIエージェント「Agent i」、日本での強みを生かせるか](https://xtech.nikkei.com/atcl/nxt/column/18/00086/00402) | 26.0 | 20.0 | 42.0 |
 
 ---
 
