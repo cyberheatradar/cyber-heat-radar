@@ -1,19 +1,19 @@
-# 📡 サイレーダー 2026-05-11 10:38 JST 試作版
+# 📡 サイレーダー 2026-05-11 10:49 JST 試作版
 
-このレポートは、2026-05-10 10:37 JST〜2026-05-11 10:37 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-10 10:48 JST〜2026-05-11 10:48 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
 - 観測トピック数: 131
-- [音声で扱う想定のトピック](#audio-topics): 4
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
+- [音声で扱う想定のトピック](#audio-topics): 3
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 2
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>音声掲載理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [CVE-2026-41940: cPanel & WHM authentication bypass exploited in ransomware attacks](#topic-216) | 100.0 | 99.0 | 92.0 | 音声 | 温度感上位枠 |
+| 1 | [CVE-2026-41940: cPanel & WHM authentication bypass exploited in ransomware attacks](#topic-216) | 100.0 | 99.0 | 92.0 | GitHub | - |
 | 2 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | 音声 | 温度感上位枠 |
 | 3 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 | 4 | [Hackers abuse Google ads, Claude.ai chats to push Mac malware](#topic-2177) | 34.0 | 20.0 | 42.0 | GitHub | - |
@@ -25,117 +25,9 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-216"></a>
-
-### 1. CVE-2026-41940: cPanel & WHM authentication bypass exploited in ransomware attacks
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>KEV</nobr> / <nobr>認証バイパス</nobr> / <nobr>防御・運用</nobr> / <nobr>政策・規制</nobr> / <nobr>脅威レポート</nobr> / <nobr>PoC</nobr> / <nobr>ボットネット</nobr> / <nobr>ゼロデイ</nobr> |
-| <nobr>音声掲載理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 高温 |
-| <nobr>温度感</nobr> | 100.0 |
-| <nobr>実務影響</nobr> | 99.0 |
-| <nobr>確度</nobr> | 92.0 |
-
-#### 概要
-
-CVE-2026-41940は、WebProsのcPanel & WHMおよびWP2（WordPress Squared）に関する認証回避の脆弱性で、CISAのKEVカタログに追加されています。
-公開情報では、実際に悪用されている状況が示されており、ランサムウェア関連の文脈でも言及されています。
-管理パネルへの未認証アクセスにつながる可能性があるため、影響範囲が大きいと考えられます。公開PoCの言及もあり、未対策環境では早期の確認が重要です。
-
-#### CISA KEV詳細
-
-- **CVE**: CVE-2026-41940
-- **Vendor / Project**: WebPros
-- **Product**: cPanel & WHM and WP2 (WordPress Squared)
-- **Vulnerability Name**: WebPros cPanel & WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability
-- **Date Added**: 2026-04-30
-- **Due Date**: 2026-05-03
-- **Known Ransomware Use**: Known
-
-**Required Action**
-
-> Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 7 sources。
-- CISA KEV関連。
-- 実悪用・ゼロデイ文脈。
-- 公開PoC・検証コード言及あり。
-- 技術者コミュニティ反応: 弱。
-
-##### 実務影響
-- 悪用済み脆弱性として優先確認が必要。
-- 悪用情報あり。
-- 公開PoCにより再現・悪用可能性が上がる。
-- RCEまたは認証バイパス系。
-- ランサムウェア文脈。
-
-##### 確度
-- 複数ソース確認。
-- 公的機関情報あり。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 公開PoC・検証コード言及あり。
-- 公開PoC/Exploitコード: 確認あり。
-- 直接PoCリンク: 掲載しません。
-- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
-
-#### 担当者向け確認ポイント
-
-- cPanel & WHM / WP2の利用有無を確認し、該当バージョンや公開状況を洗い出す。
-- ベンダーの修正情報とCISA KEV掲載状況を踏まえ、優先度高く適用可否を確認する。
-- 管理パネルへの不審なログインや設定変更、アカウント追加などの兆候を点検する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-41940 | 主要CVE | 1.00 |
-| ベンダー | WebPros | 影響ベンダー | 1.00 |
-| 製品 | cPanel & WHM and WP2 (WordPress Squared) | 影響製品 | 1.00 |
-| 脆弱性 | CVE-2026-26268 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-42208 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2023-1389 | 主要CVE | 1.00 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-41940](https://nvd.nist.gov/vuln/detail/CVE-2026-41940) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
-| <nobr>公的機関</nobr> | [CISA KEV: CVE-2026-41940](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-41940) | <nobr>KEV掲載内容、Date Added、Due Date、Required Action</nobr> |
-| <nobr>公的機関データ</nobr> | [CISA KEV JSON](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) | <nobr>CISA公式の機械可読データ。CVE IDで検索して確認</nobr> |
-| <nobr>出典</nobr> | [Week in review: cPanel vulnerability actively exploited, DigiCert breach, Linked](https://helpnetsecurity.com/2026/05/10/week-in-review-cpanel-vulnerability-actively-exploited-digicert-breach-linkedin-job-scams) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [4th May – Threat Intelligence Report](https://research.checkpoint.com/2026/4th-may-threat-intelligence-report) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [South-East Asian Military Entities Targeted via cPanel (CVE-2026-41940)](https://ctrlaltintel.com/research/SEA-CPanel) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Critical Vulnerability Alert: CVE-2026-41940 in cPanel, WHM, and WP Squared](https://bitsight.com/blog/critical-vulnerability-alert-cve-2026-41940-cPanel-WHM-WPSquared) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://cisa.gov/news-events/alerts/2026/04/30/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 未評価。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 弱。
-- 技術者コミュニティ反応: 弱。
-- 開発者コミュニティ反応: 弱。
-- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
-- 継続観測: 継続。
-
----
-
 <a id="topic-12"></a>
 
-### 2. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
+### 1. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
 
 #### スコアカード
 
@@ -151,9 +43,10 @@ CVE-2026-41940は、WebProsのcPanel & WHMおよびWP2（WordPress Squared）に
 
 #### 概要
 
-CVE-2025-60710は、Microsoft WindowsのTaskhost関連タスクに起因するローカル権限昇格の脆弱性として報告されています。
-CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証コードの言及もあるため、優先的な確認対象とみられます。
-権限昇格の脆弱性は、初期侵入後の被害拡大や防御回避につながる可能性があるため注意が必要です。さらに、KEV掲載は実際の悪用リスクがあることを示す材料になります。
+CVE-2025-60710は、Microsoft WindowsのTaskhost関連の処理におけるローカル権限昇格の脆弱性として扱われています。
+CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証コードに言及があるため、優先度の高い確認対象と見られています。
+権限昇格の脆弱性は、初期侵入後の被害拡大や管理者権限の取得につながる可能性があるため、運用上の影響が大きくなりやすいです。
+加えて、KEV掲載は実際の悪用可能性を示す重要なシグナルとして受け止められます。
 
 #### CISA KEV詳細
 
@@ -196,9 +89,9 @@ CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証
 
 #### 担当者向け確認ポイント
 
-- Windows環境で該当CVEの影響有無を確認し、必要な更新や緩和策を適用する。
-- 管理者権限で動作するタスクやTaskhost関連の設定・挙動に不審な変更がないか点検する。
-- 侵害前提で、特権昇格を示す兆候や不審なプロセス実行の監視を強化する。
+- Windows環境で当該CVEの影響有無を確認し、ベンダーの修正情報や回避策の有無を追う。
+- 権限昇格の前段となる不審なログオン、タスク実行、プロセス起動の痕跡を点検する。
+- 公開PoCの存在を前提に、脆弱な端末の優先度を上げて早期に対処する。
 
 #### 関連する対象
 
@@ -232,7 +125,7 @@ CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証
 
 <a id="topic-31"></a>
 
-### 3. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
+### 2. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
 
 #### スコアカード
 
@@ -248,9 +141,10 @@ CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証
 
 #### 概要
 
-Guardicore Labsは、MySQLサーバーを狙うランサムウェアの攻撃キャンペーンを確認したとしています。
-攻撃者は二重恐喝の手口を用い、被害組織に圧力をかけるためにデータ公開を行うとされています。MySQLは多くのサービス基盤で使われるため、影響範囲が広がりやすい点が注目されます。
-ランサムウェアは暗号化だけでなく情報漏えいのリスクも伴うため、復旧対応と情報管理の両面が重要です。
+Akamai Security Intelligenceは、MySQLサーバーを狙うランサムウェア関連のキャンペーンを報告しています。
+攻撃者は二重の脅迫を用い、盗んだとみられるデータの公開によって被害者に圧力をかける手口が示されています。
+MySQLは業務システムで広く使われるため、侵害が起きるとデータ漏えいや停止の影響が大きくなり得ます。
+ランサムウェアに加えて情報公開で脅す形は、復旧判断や対外対応を難しくします。
 
 #### 温度感の理由
 
@@ -265,9 +159,9 @@ Guardicore Labsは、MySQLサーバーを狙うランサムウェアの攻撃キ
 
 #### 担当者向け確認ポイント
 
-- MySQLの公開状況と認証設定を点検し、不要な外部露出を避ける。
-- バックアップの分離保管と復旧手順の確認を行い、復旧可能性を事前に検証する。
-- データ持ち出しを前提に、監視・ログ保全・異常検知の体制を見直す。
+- MySQLの露出状況、認証設定、不要な外部公開の有無を点検する。
+- バックアップの整合性確認と、復旧手順の定期的な検証を行う。
+- データ流出を前提に、監視・検知とインシデント対応手順を見直す。
 
 #### 参照リンク
 
@@ -290,7 +184,7 @@ Guardicore Labsは、MySQLサーバーを狙うランサムウェアの攻撃キ
 
 <a id="topic-29"></a>
 
-### 4. Threats Making WAVs - Incident Response to a Cryptomining Attack
+### 3. Threats Making WAVs - Incident Response to a Cryptomining Attack
 
 #### スコアカード
 
@@ -350,9 +244,117 @@ Threats Making WAVs - Incident Response to a Cryptomining Attack に関するイ
 
 ## 📌 GitHubのみ掲載の注目トピック
 
+<a id="topic-216"></a>
+
+### 1. CVE-2026-41940: cPanel & WHM authentication bypass exploited in ransomware attacks
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | GitHub |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>KEV</nobr> / <nobr>認証バイパス</nobr> / <nobr>防御・運用</nobr> / <nobr>政策・規制</nobr> / <nobr>脅威レポート</nobr> / <nobr>PoC</nobr> / <nobr>ボットネット</nobr> / <nobr>ゼロデイ</nobr> |
+| <nobr>温度状態</nobr> | 高温 |
+| <nobr>温度感</nobr> | 100.0 |
+| <nobr>実務影響</nobr> | 99.0 |
+| <nobr>確度</nobr> | 92.0 |
+
+#### 概要
+
+CVE-2026-41940は、WebProsのcPanel & WHMおよびWP Squaredに存在する認証回避の脆弱性として公表され、CISAのKEV Catalogにも追加されています。
+公開情報では、実際の悪用が確認されており、ランサムウェア攻撃の文脈でも言及されています。
+cPanel/WHMはサーバー運用の基盤として使われることが多く、認証回避が成立すると管理機能への不正アクセスにつながる可能性があります。
+既知の悪用対象に入っているため、対応の優先度は高いと考えられます。
+
+#### CISA KEV詳細
+
+- **CVE**: CVE-2026-41940
+- **Vendor / Project**: WebPros
+- **Product**: cPanel & WHM and WP2 (WordPress Squared)
+- **Vulnerability Name**: WebPros cPanel & WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability
+- **Date Added**: 2026-04-30
+- **Due Date**: 2026-05-03
+- **Known Ransomware Use**: Known
+
+**Required Action**
+
+> Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 7 sources。
+- CISA KEV関連。
+- 実悪用・ゼロデイ文脈。
+- 公開PoC・検証コード言及あり。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- 悪用済み脆弱性として優先確認が必要。
+- 悪用情報あり。
+- 公開PoCにより再現・悪用可能性が上がる。
+- RCEまたは認証バイパス系。
+- ランサムウェア文脈。
+
+##### 確度
+- 複数ソース確認。
+- 公的機関情報あり。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 公開PoC・検証コード言及あり。
+- 公開PoC/Exploitコード: 確認あり。
+- 直接PoCリンク: 掲載しません。
+- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
+
+#### 担当者向け確認ポイント
+
+- 対象製品の利用有無を確認し、ベンダー案内に沿って修正・緩和策を適用する。
+- 外部公開された管理画面や関連サービスのアクセス制御を見直し、不要な露出を減らす。
+- 管理者アカウントや設定変更の履歴を点検し、不審な操作や侵入の兆候がないか確認する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-41940 | 主要CVE | 1.00 |
+| ベンダー | WebPros | 影響ベンダー | 1.00 |
+| 製品 | cPanel & WHM and WP2 (WordPress Squared) | 影響製品 | 1.00 |
+| 脆弱性 | CVE-2026-26268 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-42208 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2023-1389 | 主要CVE | 1.00 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-41940](https://nvd.nist.gov/vuln/detail/CVE-2026-41940) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>公的機関</nobr> | [CISA KEV: CVE-2026-41940](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-41940) | <nobr>KEV掲載内容、Date Added、Due Date、Required Action</nobr> |
+| <nobr>公的機関データ</nobr> | [CISA KEV JSON](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) | <nobr>CISA公式の機械可読データ。CVE IDで検索して確認</nobr> |
+| <nobr>出典</nobr> | [Week in review: cPanel vulnerability actively exploited, DigiCert breach, Linked](https://helpnetsecurity.com/2026/05/10/week-in-review-cpanel-vulnerability-actively-exploited-digicert-breach-linkedin-job-scams) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [4th May – Threat Intelligence Report](https://research.checkpoint.com/2026/4th-may-threat-intelligence-report) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [South-East Asian Military Entities Targeted via cPanel (CVE-2026-41940)](https://ctrlaltintel.com/research/SEA-CPanel) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Critical Vulnerability Alert: CVE-2026-41940 in cPanel, WHM, and WP Squared](https://bitsight.com/blog/critical-vulnerability-alert-cve-2026-41940-cPanel-WHM-WPSquared) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://cisa.gov/news-events/alerts/2026/04/30/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 未評価。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 弱。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 弱。
+- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
+- 継続観測: 継続。
+
+---
+
 <a id="topic-2177"></a>
 
-### 1. Hackers abuse Google ads, Claude.ai chats to push Mac malware
+### 2. Hackers abuse Google ads, Claude.ai chats to push Mac malware
 
 #### スコアカード
 
@@ -367,9 +369,10 @@ Threats Making WAVs - Incident Response to a Cryptomining Attack に関するイ
 
 #### 概要
 
-公開情報によると、攻撃者がGoogle広告とClaude.aiの共有チャットを悪用し、Mac向けマルウェアへ誘導するキャンペーンが確認されています。
-検索結果のスポンサー広告や共有リンクを起点に、正規サービスを装った導線が使われているとされています。
-正規の広告枠や共有機能が悪用されると、利用者が信頼しやすく、注意だけでは見抜きにくくなります。AIサービスの周辺機能が攻撃の入口になるため、認知と対策の両面で警戒が必要です。
+攻撃者がGoogle広告やClaude.aiの共有チャットを悪用し、Mac向けマルウェアへ誘導するキャンペーンが報じられています。
+検索結果や共有コンテンツを通じて正規サービスに見せかけ、利用者を不正な手順へ導く手口とされています。
+正規の広告枠や信頼されやすい共有コンテンツが悪用されるため、利用者が見分けにくい点が問題です。
+AIサービス関連の案内やダウンロード導線を装うため、社内外の案内や検索経由の導入フローにも注意が必要です。
 
 #### 温度感の理由
 
@@ -385,9 +388,9 @@ Threats Making WAVs - Incident Response to a Cryptomining Attack に関するイ
 
 #### 担当者向け確認ポイント
 
-- 検索広告経由の導線や共有チャットのリンク先を、そのまま信頼しない運用を徹底する。
-- Mac端末では、アプリ入手元の確認と未承認ソフトの実行抑止を強化する。
-- 広告経由・共有リンク経由の問い合わせ増加を想定し、利用者向け注意喚起を準備する。
+- 検索広告経由の導線について、公式URLや配布元の確認を徹底する。
+- Claude.aiを含む共有チャットや外部共有情報を、インストール手順の根拠として扱わない。
+- Mac端末で不審なプロファイル、権限要求、未承認アプリの導入がないか点検する。
 
 #### 関連する対象
 
@@ -427,26 +430,26 @@ Threats Making WAVs - Incident Response to a Cryptomining Attack に関するイ
 | [山一電機 フィリピン子会社にランサムウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/05/11/55233.html) | 29.0 | 30.0 | 42.0 |
 | [東山産業へのランサムウェア攻撃、データの公開を確認](https://scan.netsecurity.ne.jp/article/2026/05/11/55232.html) | 29.0 | 30.0 | 42.0 |
 | [ファイルが暗号化されておりランサムウェアである可能性が高い ～ オーミケンシへのサイバー攻撃によるシステム障害](https://scan.netsecurity.ne.jp/article/2026/05/11/55231.html) | 29.0 | 30.0 | 42.0 |
-| [UniFi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
-| [Ollamaの境界外読み取り脆弱性によりリモートでプロセスメモリが漏えいする問題](https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html) | 28.0 | 46.0 | 50.0 |
+| [Unifi Accessのリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
+| [Ollamaの境界外読み取りの脆弱性によりリモートでプロセスメモリが漏えいする問題](https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html) | 28.0 | 46.0 | 50.0 |
 | [CVE-2026-44656: Vimの「path」補完によるOSコマンドインジェクション](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44656) | 28.0 | 46.0 | 38.0 |
-| [Netskopeにおけるクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
+| [Security: Netskopeのクロステナント認証バイパス](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
 | [Oracle of Delphiが認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
-| [Nansh0uキャンペーン―ハッカーの武器庫がさらに強化される](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
+| [Nansh0uキャンペーン――ハッカーの武器がさらに強化](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
 | [AI生成画像の背景を透明化するのに役立つ画像背景削除ツール「Rembg」](https://gigazine.net/news/20260510-rembg) | 27.0 | 20.0 | 42.0 |
 | [クリエイターの創造力を拡張、コロプラが作った「世界初」の生成AIゲーム](https://xtech.nikkei.com/atcl/nxt/column/18/03076/050700025) | 26.0 | 20.0 | 42.0 |
 | [LINEヤフーのAIエージェント「Agent i」、日本での強みを生かせるか](https://xtech.nikkei.com/atcl/nxt/column/18/00086/00402) | 26.0 | 20.0 | 42.0 |
 | [AIエージェント開発は「正解」なのか、日経BPのAI・データラボ所長が解説](https://xtech.nikkei.com/atcl/nxt/column/18/03585/050800002) | 26.0 | 20.0 | 42.0 |
 | [Googleの廉価版スマホ「Google Pixel 10a」のベンチマークスコアやバッテリー持続時間を検証してみたよレビュー](https://gigazine.net/news/20260510-google-pixel-10a-benchmark-battery) | 25.0 | 20.0 | 43.0 |
-| [Security: OpenAI Sora 2の内部に迫る――マルチモーダルLLMを駆動するシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
-| [Must see: Geminiのハッキング - 多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
+| [OpenAI Sora 2の内部セキュリティ：マルチモーダルLLMを駆動するシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
+| [必見：Geminiをハッキングする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
 | [YARA-X 1.16.0のリリース](https://isc.sans.edu/diary/rss/32970) | 25.0 | 20.0 | 42.0 |
 | [あなたのパスワードは何分耐えられる？ 解析速度上昇で「8文字パスワード」はほぼ無力に](https://itmedia.co.jp/enterprise/articles/2605/11/news036.html) | 24.0 | 20.0 | 43.0 |
 | [「Linuxカーネル」の暗号通信処理にLoP脆弱性「Dirty Frag」](https://security-next.com/184228) | 24.0 | 20.0 | 42.0 |
 | [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 23.0 | 34.0 | 50.0 |
 | [CVE-2026-39826 html/template の Escaper 回避により XSS が発生する脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39826) | 23.0 | 34.0 | 38.0 |
 | [CVE-2026-39823: html/templateのmeta content URLエスケープ回避によるXSS脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39823) | 23.0 | 34.0 | 38.0 |
-| [Security: 「MixMaster MMORPG」のリバースエンジニアリング](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
+| [MixMaster MMORPGのリバースエンジニアリングに関するセキュリティ記事](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
 
 ---
 
