@@ -1,24 +1,25 @@
-# 📡 サイレーダー 2026-05-13 07:23 JST 試作版
+# 📡 サイレーダー 2026-05-13 07:36 JST 試作版
 
-このレポートは、2026-05-13 01:23 JST〜2026-05-13 07:23 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-13 01:35 JST〜2026-05-13 07:35 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 92
-- [音声で扱う想定のトピック](#audio-topics): 3
+- 観測トピック数: 95
+- [音声で扱う想定のトピック](#audio-topics): 4
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 3
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | 音声 | 温度感上位枠 |
-| 2 | [Microsoft 2026年5月 Patch Tuesday 関連まとめ](#topic-3472) | 74.0 | 56.0 | 58.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 3 | [Multiple Vulnerabilities in Fortinet Products Could Allow for Remote Code Execution](#topic-3622) | 61.0 | 66.0 | 43.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 4 | [Adobe Patches 52 Vulnerabilities in 10 Products](#topic-3486) | 37.0 | 38.0 | 43.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 5 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
-| 6 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [PAN-OSに深刻な脆弱性「CVE-2026-0300」発覚 root権限奪取の恐れ](#topic-345) | 100.0 | 96.0 | 91.0 | 音声 | 温度感上位枠 |
+| 2 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | 音声 | 温度感上位枠 |
+| 3 | [Microsoft 2026年5月 Patch Tuesday 関連まとめ](#topic-3472) | 74.0 | 56.0 | 58.0 | GitHub | 直近掲載済み・再掲抑制 |
+| 4 | [Multiple Vulnerabilities in Fortinet Products Could Allow for Remote Code Execution](#topic-3622) | 61.0 | 66.0 | 43.0 | GitHub | 直近掲載済み・再掲抑制 |
+| 5 | [Adobe Patches 52 Vulnerabilities in 10 Products](#topic-3486) | 37.0 | 38.0 | 43.0 | GitHub | 直近掲載済み・再掲抑制 |
+| 6 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 7 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -26,9 +27,97 @@
 
 ## 🔊 音声で扱う想定のトピック
 
+<a id="topic-345"></a>
+
+### 1. PAN-OSに深刻な脆弱性「CVE-2026-0300」発覚 root権限奪取の恐れ
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>KEV</nobr> / <nobr>RCE</nobr> / <nobr>ゼロデイ</nobr> / <nobr>国家支援</nobr> / <nobr>防御・運用</nobr> / <nobr>脅威アクター</nobr> / <nobr>IoC</nobr> / <nobr>政策・規制</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 高温 |
+| <nobr>温度感</nobr> | 100.0 |
+| <nobr>実務影響</nobr> | 96.0 |
+| <nobr>確度</nobr> | 91.0 |
+
+#### 概要
+
+Palo Alto NetworksのPAN-OSに、認証不要でリモートから悪用されうる深刻な脆弱性CVE-2026-0300が公表されました。
+対象はPA-SeriesおよびVM-Seriesの一部で、User-ID Authentication Portal機能が有効な環境が影響を受けるとされています。
+ベンダーは、すでに限定的な実悪用を確認したとして注意を呼びかけています。
+ファイアウォール製品の脆弱性であり、境界防御の中核に影響しうるため、影響範囲が大きくなりやすい点が重要です。
+現時点で実悪用が確認されているため、対象環境では早急な確認と暫定対策が必要になります。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 10 sources。
+- CISA KEV関連。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 悪用済み脆弱性として優先確認が必要。
+
+##### 確度
+- 複数ソース確認。
+- 公的機関情報あり。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- User-ID Authentication Portalの有効・無効と、外部公開の有無を確認する。
+- 修正版が適用可能になるまで、ベンダーの案内する一時対策を優先して実施する。
+- 影響対象のPAN-OSバージョンかどうかを棚卸しし、更新計画を前倒しする。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-0300 | 主要CVE | 1.00 |
+| ベンダー | Palo Alto Networks | 影響ベンダー | 1.00 |
+| 製品 | PAN-OS | 影響製品 | 1.00 |
+| ベンダー | Palo Alto | 言及あり | 0.80 |
+| 製品 | Active Directory | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-0300](https://nvd.nist.gov/vuln/detail/CVE-2026-0300) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [PAN-OSに深刻な脆弱性「CVE-2026-0300」発覚　root権限奪取の恐れ](https://atmarkit.itmedia.co.jp/ait/articles/2605/13/news034.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [PAN-OS RCE Exploit Under Active Use Enabling Root Access and Espionage](https://thehackernews.com/2026/05/pan-os-rce-exploit-under-active-use.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [State-sponsored hackers likely behind zero-day attacks on Palo Alto firewalls](https://helpnetsecurity.com/2026/05/07/state-sponsored-hackers-zero-day-attacks-palo-alto-firewalls) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CVE-2026-0300 PAN-OS: Unauthenticated user initiated Buffer Overflow Vulnerabili](https://security.paloaltonetworks.com/CVE-2026-0300) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Threat Brief: Exploitation of PAN-OS Captive Portal Zero-Day for Unauthenticated](https://unit42.paloaltonetworks.com/captive-portal-zero-day) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [A critical Palo Alto PAN-OS zero-day is being exploited in the wild](https://cyberscoop.com/palo-alto-networks-pan-os-firewall-zero-day-vulnerability-exploited) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Critical Buffer Overflow in Palo Alto Networks PAN-OS User-ID Authentication Por](https://rapid7.com/blog/post/etr-critical-buffer-overflow-in-palo-alto-networks-pan-os-user-id-authentication-portal-cve-2026-0300) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 未評価。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 弱。
+- 日本語圏反応: 未評価。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 未評価。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+- 継続観測: 継続。
+
+---
+
 <a id="topic-12"></a>
 
-### 1. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
+### 2. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
 
 #### スコアカード
 
@@ -44,10 +133,10 @@
 
 #### 概要
 
-CVE-2025-60710は、Microsoft WindowsのTaskhost関連機能におけるローカル権限昇格の脆弱性とされています。
-CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証コードの存在も示唆されています。
-権限昇格系の脆弱性は、端末内での権限拡大や後続攻撃の足がかりになり得るため注意が必要です。
-さらに、実際に悪用対象として扱われている可能性がある点から、優先度を上げて確認すべき話題です。
+CVE-2025-60710は、Microsoft WindowsのTaskhost関連のタスク処理におけるローカル権限昇格の脆弱性として扱われています。
+CISAの既知悪用脆弱性リストにも関連付けられており、公開PoCや検証コードの言及があることから、影響確認の優先度が高い案件です。
+権限昇格の脆弱性は、端末内での被害拡大や権限取得につながるため、初期侵害後のリスクを大きくします。
+既知悪用脆弱性として扱われている点から、単なる理論上の問題ではなく、実運用での対策確認が重要です。
 
 #### CISA KEV詳細
 
@@ -90,9 +179,9 @@ CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証
 
 #### 担当者向け確認ポイント
 
-- Windows端末で該当CVEの影響有無を確認し、ベンダー情報に基づいて修正状況を点検する。
-- 権限昇格の前段となる不審なローカル実行や異常なタスク関連挙動がないか監視する。
-- 公開PoCの存在を踏まえ、露出端末や更新遅延のある環境を優先して対応する。
+- Microsoftの修正情報やCISAの更新を確認し、該当Windows環境への適用状況を点検する。
+- Taskhost関連の異常な挙動や、権限昇格につながる不審なプロセス・タスク実行の有無を監視する。
+- 影響範囲のある端末で、最小権限の徹底と管理者権限の扱いを再確認する。
 
 #### 関連する対象
 
@@ -126,7 +215,7 @@ CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証
 
 <a id="topic-31"></a>
 
-### 2. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
+### 3. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
 
 #### スコアカード
 
@@ -184,7 +273,7 @@ PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers に関す
 
 <a id="topic-29"></a>
 
-### 3. Threats Making WAVs - Incident Response to a Cryptomining Attack
+### 4. Threats Making WAVs - Incident Response to a Cryptomining Attack
 
 #### スコアカード
 
@@ -261,10 +350,9 @@ Threats Making WAVs - Incident Response to a Cryptomining Attack に関するイ
 
 #### 概要
 
-Microsoftの2026年5月のPatch Tuesdayでは、120件超のCVE対応が公表されました。
-現時点で既知のゼロデイや公に確認された悪用は報告されていない一方、Microsoft Wordに関する複数の重要なRCE脆弱性を含むため、優先的な対応が必要とされています。
-件数が多いだけでなく、業務利用の多い製品に影響する修正が含まれるため、未適用のまま残るとリスクが広がりやすい状況です。
-特に高深刻度の脆弱性は、配布文書を起点に影響が及ぶ可能性があるため、パッチ適用の優先順位付けが重要です。
+Microsoftの2026年5月のPatch Tuesdayでは、120件超のCVE修正が公開されました。
+現時点では、公開情報上で悪用中または公表済みのゼロデイは確認されていない一方、Word関連を含む重要度の高い脆弱性が複数あり、優先的な対応が求められています。
+大量の修正が一度に出ているため、資産の棚卸しと適用優先度の整理が必要です。特にリモートコード実行に関わる脆弱性は、未対応のまま放置すると影響が大きくなりやすい点が注目されます。
 
 #### 温度感の理由
 
@@ -290,9 +378,9 @@ Microsoftの2026年5月のPatch Tuesdayでは、120件超のCVE対応が公表�
 
 #### 担当者向け確認ポイント
 
-- Microsoft Word関連の重要度が高い修正を優先して評価し、影響範囲を確認する。
-- 通常の月例更新としてではなく、広範な製品群への影響を踏まえて早めに検証・展開する。
-- 公開悪用の有無に関わらず、資産棚卸しと適用漏れの確認を進める。
+- Microsoft Word関連を含む重要度の高い修正を優先し、業務影響の大きい端末から計画的に適用する。
+- 対象製品と利用状況を確認し、Windows 10の延長セキュリティ更新を含めて更新漏れがないか点検する。
+- ゼロデイ報告はないものの、広範な修正内容なので監視対象を絞り、適用後の不具合確認も行う。
 
 #### 関連する対象
 
@@ -352,9 +440,9 @@ Microsoftの2026年5月のPatch Tuesdayでは、120件超のCVE対応が公表�
 
 #### 概要
 
-Fortinet製品に複数の脆弱性が見つかっており、最も深刻なものではリモートコード実行につながる可能性があるとされています。
-対象としてFortiAuthenticatorやFortiSandboxが挙げられており、影響を受ける場合はシステム上での不正な操作やデータへのアクセスに発展するおそれがあります。
-認証や脅威検知に関わる製品が含まれるため、侵害された場合の影響範囲が大きくなり得ます。悪用が観測されている文脈もあり、早めの確認と対処が重要です。
+Fortinet製品に複数の脆弱性が見つかっており、その中にはリモートコード実行につながる可能性があるものが含まれるとされています。
+対象にはFortiAuthenticatorやFortiSandboxが含まれ、成功した場合は権限に応じて不正な操作やデータ改ざん、アカウント作成などにつながるおそれがあります。
+認証や脅威検知に関わる製品が含まれるため、影響範囲がネットワーク防御の中核に及ぶ可能性があります。悪用が観測されている文脈もあり、早期の確認と対応が重要です。
 
 #### 温度感の理由
 
@@ -378,9 +466,9 @@ Fortinet製品に複数の脆弱性が見つかっており、最も深刻なも
 
 #### 担当者向け確認ポイント
 
-- Fortinet製品の利用有無を確認し、該当製品がある場合はベンダー情報に基づいて更新状況を点検する。
-- 公開状況や自組織への影響を踏まえ、管理者権限の運用やアクセス制御を見直す。
-- 関連ログや異常な管理操作の有無を確認し、必要に応じて監視を強化する。
+- Fortinet製品の利用有無と対象バージョンを確認し、ベンダーや公的アドバイザリの修正情報を点検する。
+- 管理者権限で運用している環境では影響が大きくなり得るため、権限設定とアクセス制御を見直す。
+- 関連製品のログや異常な管理操作、予期しない設定変更がないかを確認する。
 
 #### 関連する対象
 
@@ -480,30 +568,30 @@ Adobe Patches 52 Vulnerabilities in 10 Products に関する脆弱性情報で�
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [Unifi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
+| [AI製のゼロデイ攻撃が出現 Googleが報告した高度化する脆弱性探索と自律型攻撃の脅威](https://itmedia.co.jp/enterprise/articles/2605/13/news041.html) | 29.0 | 20.0 | 42.0 |
+| [Must see: UniFi Accessにおけるリモートコード実行（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
 | [Netskopeのクロステナント認証バイパスのセキュリティ問題](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
-| [FortinetがFortiSandboxとFortiAuthenticatorのRCE脆弱性について警告](https://bleepingcomputer.com/news/security/fortinet-warns-of-critical-rce-flaws-in-fortisandbox-and-fortiauthenticator) | 28.0 | 38.0 | 42.0 |
-| [Microsoft製品向けの重要な修正プログラム公開（2026年5月12日）](https://cisecurity.org/advisory/critical-patches-issued-for-microsoft-products-may-12-2026_2026-048) | 28.0 | 38.0 | 42.0 |
-| [Mini Shai-Huludマルウェアが大規模なサプライチェーン攻撃で数百のオープンソースパッケージを侵害](https://cyberscoop.com/mini-shai-hulud-supply-chain-malware-attack) | 28.0 | 30.0 | 42.0 |
-| [West Pharmaceutical、ランサムウェア攻撃を警告　業務に影響](https://therecord.media/west-pharmaceutical-warns-of-ransomware-attack-impacting-operations) | 28.0 | 30.0 | 42.0 |
+| [Fortinet、FortiSandboxとFortiAuthenticatorの重大なRCE脆弱性を警告](https://bleepingcomputer.com/news/security/fortinet-warns-of-critical-rce-flaws-in-fortisandbox-and-fortiauthenticator) | 28.0 | 38.0 | 42.0 |
+| [Microsoft製品向け緊急パッチ公開、2026年5月12日](https://cisecurity.org/advisory/critical-patches-issued-for-microsoft-products-may-12-2026_2026-048) | 28.0 | 38.0 | 42.0 |
+| [Mini Shai-Huludマルウェアが大規模なサプライチェーン攻撃で数百件のオープンソースパッケージを侵害](https://cyberscoop.com/mini-shai-hulud-supply-chain-malware-attack) | 28.0 | 30.0 | 42.0 |
+| [West Pharmaceutical、ランサムウェア攻撃による事業運営への影響を警告](https://therecord.media/west-pharmaceutical-warns-of-ransomware-attack-impacting-operations) | 28.0 | 30.0 | 42.0 |
 | [Nansh0uキャンペーン――ハッカーの武器庫がさらに強化される](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
-| [Oracle of Delphiが認証情報を盗む](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
+| [Oracle of Delphiが認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
 | [AIを活用した思考の可視化と共有化―属人知を組織知に転換する7つのステップ](https://japan.zdnet.com/article/35247317) | 26.0 | 20.0 | 42.0 |
 | [東芝、AIの異常検知の根拠を説明する技術　波形データで分かりやすく](https://xtech.nikkei.com/atcl/nxt/news/24/03218) | 26.0 | 20.0 | 42.0 |
-| [Must see: Geminiのハッキング - 多層的なアプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
-| [Security: OpenAI Sora 2の内部 - マルチモーダルLLMを駆動するシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
-| [主要各国経済圏がAI「原材料リスト」の主要要素を明示](https://cyberscoop.com/g7-cisa-ai-sbom-security-guidance) | 25.0 | 20.0 | 42.0 |
-| [Guardrail Technologies、AIコードと開発者を検証・保護する「Traffic Light for Code & AI™」を発表](https://cybersecuritydive.com/spons/guardrail-technologies-launches-traffic-light-for-code-aitm-first-securit/819953) | 25.0 | 20.0 | 42.0 |
-| [SAPがAI駆動の業務運営向けにAutonomous Enterpriseを発表](https://helpnetsecurity.com/2026/05/12/sap-autonomous-enterprise-business-workflows) | 25.0 | 20.0 | 42.0 |
+| [Must see: Geminiをハッキングする方法――多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
+| [Security: OpenAI Sora 2の内部に迫る - マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
+| [主要経済国がAIの「材料リスト」の主要要素を明確化](https://cyberscoop.com/g7-cisa-ai-sbom-security-guidance) | 25.0 | 20.0 | 42.0 |
+| [Guardrail TechnologiesがTraffic Light for Code & AI™を発表、AIコードとその開発者を検証・保護する初のセキュリティ技術](https://cybersecuritydive.com/spons/guardrail-technologies-launches-traffic-light-for-code-aitm-first-securit/819953) | 25.0 | 20.0 | 42.0 |
 | [テスト自動化ツールのオーティファイ、品質検証サービスに乗り出す理由](https://japan.zdnet.com/article/35247210) | 24.0 | 20.0 | 43.0 |
 | [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 23.0 | 34.0 | 50.0 |
 | [Microsoft、2026年5月のPatch Tuesdayで120件の脆弱性を修正、ゼロデイなし](https://bleepingcomputer.com/news/microsoft/microsoft-may-2026-patch-tuesday-fixes-120-flaws-no-zero-days) | 22.0 | 20.0 | 43.0 |
-| [Security: MixMaster MMORPGのリバースエンジニアリング](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
+| [Security: Reverse Engineering "MixMaster MMORPG](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
 | [1980年代まで肉や砂糖が配給制だったポーランドが世界経済大国トップ20に名を連ねた理由とは？](https://gigazine.net/news/20260513-poland-economy-growth-worlds-20th) | 22.0 | 20.0 | 42.0 |
 | [人型ロボットがVRドライブシミュレーターに合わせて後ろから椅子を揺らすシステム「HumanoidTurk」](https://gigazine.net/news/20260513-humanoidturk-vr-driving-haptics) | 22.0 | 20.0 | 42.0 |
 | [三菱電機にオムロン データ事業に本腰](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/050600548/050600003) | 21.0 | 20.0 | 42.0 |
 | [欧米FA大手の転身 知能の継続課金へ](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/050600548/050600002) | 21.0 | 20.0 | 42.0 |
-| [激変するものづくり AIが工場を自律制御](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/050600548/050600001) | 21.0 | 20.0 | 42.0 |
+| [サイバー対処強化法10月施行 対応遅れ、取引停止のリスクも](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/092400133/050700194) | 21.0 | 20.0 | 42.0 |
 
 ---
 
