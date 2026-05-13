@@ -1,22 +1,22 @@
-# 📡 サイレーダー 2026-05-13 09:23 JST 試作版
+# 📡 サイレーダー 2026-05-13 11:00 JST 試作版
 
-このレポートは、2026-05-13 03:22 JST〜2026-05-13 09:22 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-13 05:00 JST〜2026-05-13 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 106
-- [音声で扱う想定のトピック](#audio-topics): 3
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 3
+- 観測トピック数: 90
+- [音声で扱う想定のトピック](#audio-topics): 5
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [PAN-OSに深刻な脆弱性「CVE-2026-0300」発覚 root権限奪取の恐れ](#topic-345) | 100.0 | 96.0 | 91.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 2 | [Microsoft 2026年5月 Patch Tuesday 関連まとめ](#topic-3472) | 76.0 | 56.0 | 58.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 3 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | 音声 | 温度感上位枠 |
-| 4 | [Multiple Vulnerabilities in Fortinet Products Could Allow for Remote Code Execution](#topic-3622) | 61.0 | 66.0 | 43.0 | GitHub | 直近掲載済み・再掲抑制 |
+| 1 | [CVE-2026-41940: cPanel & WHM authentication bypass exploited in ransomware attacks](#topic-216) | 100.0 | 99.0 | 92.0 | 音声 | 温度感上位枠 |
+| 2 | [PAN-OSに深刻な脆弱性「CVE-2026-0300」発覚 root権限奪取の恐れ](#topic-345) | 100.0 | 96.0 | 91.0 | GitHub | 直近掲載済み・再掲抑制 |
+| 3 | [Microsoft 2026年5月 Patch Tuesday 関連まとめ](#topic-3472) | 76.0 | 56.0 | 58.0 | 音声 | 温度感上位枠 |
+| 4 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | 音声 | 温度感上位枠 |
 | 5 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 | 6 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
@@ -26,9 +26,201 @@
 
 ## 🔊 音声で扱う想定のトピック
 
+<a id="topic-216"></a>
+
+### 1. CVE-2026-41940: cPanel & WHM authentication bypass exploited in ransomware attacks
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>KEV</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>マルウェア</nobr> / <nobr>認証バイパス</nobr> / <nobr>Android</nobr> / <nobr>脅威レポート</nobr> / <nobr>権限昇格</nobr> / <nobr>Linux</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 高温 |
+| <nobr>温度感</nobr> | 100.0 |
+| <nobr>実務影響</nobr> | 99.0 |
+| <nobr>確度</nobr> | 92.0 |
+
+#### 概要
+
+cPanel & WHM の認証バイパス脆弱性 CVE-2026-41940 について、複数の情報源で悪用事例が報告されており、ランサムウェアやバックドア配備の文脈でも注目されています。
+JPCERT/CC の週報でも取り上げられており、公開PoCや検証コードの言及もあることから、悪用可能性が高い状態とみられています。
+cPanel & WHM はサーバー管理の中核で使われるため、認証回避が成立すると管理権限の奪取につながるおそれがあります。
+影響範囲が広く、公開情報ベースでも実際の悪用が示唆されている点が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 9 sources。
+- CISA KEV関連。
+- 実悪用・ゼロデイ文脈。
+- 公開PoC・検証コード言及あり。
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- 悪用済み脆弱性として優先確認が必要。
+- 悪用情報あり。
+- 公開PoCにより再現・悪用可能性が上がる。
+- RCEまたは認証バイパス系。
+- ランサムウェア文脈。
+
+##### 確度
+- 複数ソース確認。
+- 公的機関情報あり。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 公開PoC・検証コード言及あり。
+- 公開PoC/Exploitコード: 確認あり。
+- 直接PoCリンク: 掲載しません。
+- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
+
+#### 担当者向け確認ポイント
+
+- cPanel & WHM / WP Squared の該当バージョンを確認し、ベンダー情報に基づいて早急に更新状況を点検する。
+- 管理画面への不審なログイン、設定変更、未知のファイル配置など、侵害の兆候を重点的に監視する。
+- 公開PoCの存在を前提に、インターネット公開面の縮小や管理アクセス制御の見直しを進める。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-41940 | 主要CVE | 1.00 |
+| 製品 | cPanel & WHM and WP2 (WordPress Squared) | 影響製品 | 1.00 |
+| 脆弱性 | CVE-2026-26268 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-42208 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2023-1389 | 主要CVE | 1.00 |
+| ベンダー | WebPros | 影響ベンダー | 1.00 |
+| ベンダー | cPanel | 言及あり | 0.80 |
+| 製品 | Exchange | 言及あり | 0.80 |
+| 製品 | WHM | 言及あり | 0.80 |
+| 製品 | cPanel | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-41940](https://nvd.nist.gov/vuln/detail/CVE-2026-41940) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>公的・一次情報</nobr> | [Weekly Report: cPanel、WHMおよびWP Squaredに認証バイパスの脆弱性](https://jpcert.or.jp/wr/2026/wr260513.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Stealthy hackers exploit cPanel flaw in active backdoor campaign (CVE-2026-41940](https://helpnetsecurity.com/2026/05/12/cpanel-vulnerability-exploited-backdoor-cve-2026-41940) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [cPanel CVE-2026-41940 Under Active Exploitation to Deploy Filemanager Backdoor](https://thehackernews.com/2026/05/cpanel-cve-2026-41940-under-active.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Week in review: cPanel vulnerability actively exploited, DigiCert breach, Linked](https://helpnetsecurity.com/2026/05/10/week-in-review-cpanel-vulnerability-actively-exploited-digicert-breach-linkedin-job-scams) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [4th May – Threat Intelligence Report](https://research.checkpoint.com/2026/4th-may-threat-intelligence-report) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [South-East Asian Military Entities Targeted via cPanel (CVE-2026-41940)](https://ctrlaltintel.com/research/SEA-CPanel) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Critical Vulnerability Alert: CVE-2026-41940 in cPanel, WHM, and WP Squared](https://bitsight.com/blog/critical-vulnerability-alert-cve-2026-41940-cPanel-WHM-WPSquared) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: あり。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
+- 継続観測: 継続。
+
+---
+
+<a id="topic-3472"></a>
+
+### 2. Microsoft 2026年5月 Patch Tuesday 関連まとめ
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>脆弱性</nobr> / <nobr>Windows</nobr> / <nobr>RCE</nobr> / <nobr>クラウド</nobr> / <nobr>DDoS</nobr> / <nobr>AI</nobr> / <nobr>政策・規制</nobr> / <nobr>防御・運用</nobr> / <nobr>Android</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 温度上昇中 |
+| <nobr>温度感</nobr> | 76.0 |
+| <nobr>実務影響</nobr> | 56.0 |
+| <nobr>確度</nobr> | 58.0 |
+
+#### 概要
+
+Microsoftの2026年5月のPatch Tuesdayでは、100件超の脆弱性修正が公開されました。
+公開時点で、少なくともこのまとめでは広く確認されたゼロデイの悪用や公表はない一方、Microsoft WordやNetlogon関連の重要度が高い修正が含まれています。
+件数が多いため、影響範囲の広い環境ではパッチ適用の優先順位付けが重要になります。
+特にリモートコード実行につながる可能性のある修正は、業務影響とリスクの両面から早めの確認が求められます。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 10 sources。
+- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 強。
+
+##### 実務影響
+- 悪用情報あり。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 複数ソース確認。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Word関連の重要なRCE修正は、利用状況に応じて優先的に評価する。
+- ドメインコントローラーなど基盤サーバーでは、Netlogon関連の修正対象を早めに確認する。
+- 今回は大量の修正があるため、資産棚卸しと適用順序の整理を先に行う。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-40364 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-40361 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-41096 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-41089 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-42898 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-40415 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-35435 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-35428 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-42826 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-32207 | 主要CVE | 1.00 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Patch Tuesday - May 2026](https://rapid7.com/blog/post/em-patch-tuesday-may-2026) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Defense at AI speed: Microsoft’s new multi-model agentic security system tops le](https://microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Defense at AI speed: Microsoft’s new multi-model agentic security system tops le](https://microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-finds-16-new-vulnerabilities) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Patch Tuesday, May 2026 Edition](https://krebsonsecurity.com/2026/05/patch-tuesday-may-2026-edition) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [It's Patch Tuesday for Microsoft and Not a Zero-Day In Sight](https://darkreading.com/application-security/patch-tuesday-microsoft-zero-day-sight) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft addresses 137 vulnerabilities in May’s Patch Tuesday, including 13 rat](https://cyberscoop.com/microsoft-patch-tuesday-may-2026) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Patch Tuesday for May 2026 — Snort rules and prominent vulnerabilities](https://blog.talosintelligence.com/microsoft-patch-tuesday-may-2026) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft May 2026 Patch Tuesday: Many fixes, but no zero-days](https://helpnetsecurity.com/2026/05/12/microsoft-may-2026-patch-tuesday) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 強。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+- 継続観測: 継続。
+
+---
+
 <a id="topic-12"></a>
 
-### 1. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
+### 3. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
 
 #### スコアカード
 
@@ -44,10 +236,9 @@
 
 #### 概要
 
-CVE-2025-60710は、Microsoft WindowsのTaskhost関連で発生するローカル権限昇格の脆弱性として報告されています。
-公開情報では、CISAのKnown Exploited Vulnerabilitiesに含まれており、実際に悪用されている脆弱性として優先対応が必要とされています。
-権限昇格につながる脆弱性は、侵入後の被害拡大や管理者権限の奪取に直結しやすいため注意が必要です。
-さらに公開PoCの存在が示されているため、影響範囲の確認と対策の優先度が上がります。
+CVE-2025-60710は、Microsoft WindowsのTaskhost関連タスクにおけるローカル権限昇格の脆弱性として扱われています。
+CISAの既知の悪用脆弱性リストに含まれており、公開PoCや検証コードの言及も確認されています。
+権限昇格系の脆弱性は、侵入後の被害拡大や管理者権限の取得につながるため影響が大きいです。公開PoCの存在は、検証や悪用のハードルを下げる要因として注意が必要です。
 
 #### CISA KEV詳細
 
@@ -90,9 +281,9 @@ CVE-2025-60710は、Microsoft WindowsのTaskhost関連で発生するローカ�
 
 #### 担当者向け確認ポイント
 
-- 対象のWindows環境でCVE-2025-60710の修正状況を確認し、未適用なら速やかに更新を検討する。
-- 権限昇格の兆候がないか、Taskhost関連の不審な挙動や管理者権限取得の痕跡を点検する。
-- CISA KEV掲載のため、通常の脆弱性対応より優先度を上げて資産棚卸しと影響評価を行う。
+- Windows環境でCVE-2025-60710の修正状況を確認し、必要に応じて優先適用する。
+- 特権操作やタスク関連の挙動に不審な点がないか、監査ログやEDRの検知状況を点検する。
+- 外部公開や横展開の前提となる端末について、ローカル権限の上昇余地を最小化する運用を見直す。
 
 #### 関連する対象
 
@@ -126,7 +317,7 @@ CVE-2025-60710は、Microsoft WindowsのTaskhost関連で発生するローカ�
 
 <a id="topic-31"></a>
 
-### 2. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
+### 4. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
 
 #### スコアカード
 
@@ -142,8 +333,10 @@ CVE-2025-60710は、Microsoft WindowsのTaskhost関連で発生するローカ�
 
 #### 概要
 
-PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers に関する脅威・攻撃キャンペーン系の話題です。
-攻撃者、標的、TTP、IoC、悪用技術、検知観点を中心に確認する価値があります。
+Guardicore Labsの調査として、MySQLサーバーを狙うランサムウェアのキャンペーンが確認されたとされています。
+攻撃者はダブルエクストーションの手口を用い、公開をちらつかせて被害者に圧力をかけると説明されています。
+MySQLは業務システムで広く使われるため、被害が発生するとデータ流出と業務停止の両面で影響が大きくなり得ます。
+ランサムウェアは復旧だけでなく、漏えい対応や対外説明まで含めた総合的な対応が必要です。
 
 #### 温度感の理由
 
@@ -158,10 +351,9 @@ PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers に関す
 
 #### 担当者向け確認ポイント
 
-- 標的OS、仮想化基盤、暗号化対象、バックアップ影響を確認する。
-- 初期侵入、横展開、認証情報窃取、永続化のTTPを確認する。
-- EDR/SIEMで検知すべきIoCや振る舞いを確認する。
-- ESXi、vCenter、バックアップ基盤、特権アカウントの保護状況を確認する。
+- MySQLの公開範囲、認証設定、不要な露出を再点検する。
+- バックアップの隔離と復元手順を確認し、実際に復旧できるかを定期的に検証する。
+- 侵入後の横展開や不審なデータ持ち出しを想定し、監視とインシデント対応の連携を見直す。
 
 #### 参照リンク
 
@@ -184,7 +376,7 @@ PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers に関す
 
 <a id="topic-29"></a>
 
-### 3. Threats Making WAVs - Incident Response to a Cryptomining Attack
+### 5. Threats Making WAVs - Incident Response to a Cryptomining Attack
 
 #### スコアカード
 
@@ -261,11 +453,10 @@ Threats Making WAVs - Incident Response to a Cryptomining Attack に関するイ
 
 #### 概要
 
-Palo Alto NetworksのPAN-OSに、認証不要でリモートコード実行につながる可能性がある重大な脆弱性「CVE-2026-0300」が公表されました。
-対象はPA-SeriesとVM-Seriesの一部で、User-ID Authentication Portalが有効な構成で影響を受けるとされています。
-ベンダーは実際の悪用を確認しており、CISAのKEVにも追加されています。
-ファイアウォール製品は社内外の境界に置かれることが多く、侵害されると影響が広範囲に及ぶおそれがあります。
-しかも本件は既に悪用が観測されているため、対応の優先度が高い脆弱性といえます。
+Palo Alto NetworksのPAN-OSに、認証不要でリモートから悪用されうる深刻な脆弱性CVE-2026-0300が公表されました。
+対象はPA-SeriesとVM-Seriesで、User-ID Authentication Portalが有効な構成に影響し、ベンダーは実際の悪用を確認したとしています。
+ファイアウォール製品は境界防御の要であり、ここが侵害されると組織内の広い範囲に影響が及ぶおそれがあります。
+さらに、既知の悪用事例があるため、該当環境では通常の脆弱性対応よりも優先度を上げて確認が必要です。
 
 #### 温度感の理由
 
@@ -291,9 +482,9 @@ Palo Alto NetworksのPAN-OSに、認証不要でリモートコード実行に�
 
 #### 担当者向け確認ポイント
 
-- 自組織のPAN-OS機器でUser-ID Authentication Portalが有効かどうかを確認する。
-- 修正版の提供状況を確認し、適用可能になり次第すぐ更新計画を進める。
-- 当面はベンダー推奨の回避策に従い、ポータルへのアクセスを信頼できる範囲に制限するか、不要なら無効化する。
+- PAN-OSの対象バージョンと、User-ID Authentication Portalの有効化状況を確認する。
+- ベンダーが案内する回避策に従い、不要ならAuthentication Portalを無効化するか、アクセス元を信頼できる内部ゾーンに制限する。
+- 修正版の提供状況を確認し、公開され次第、影響範囲を優先して適用計画に載せる。
 
 #### 関連する対象
 
@@ -331,169 +522,6 @@ Palo Alto NetworksのPAN-OSに、認証不要でリモートコード実行に�
 
 ---
 
-<a id="topic-3472"></a>
-
-### 2. Microsoft 2026年5月 Patch Tuesday 関連まとめ
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>脆弱性</nobr> / <nobr>RCE</nobr> / <nobr>Windows</nobr> / <nobr>クラウド</nobr> / <nobr>AI</nobr> / <nobr>DDoS</nobr> / <nobr>Android</nobr> / <nobr>脅威アクター</nobr> / <nobr>防御・運用</nobr> |
-| <nobr>温度状態</nobr> | 温度上昇中 |
-| <nobr>温度感</nobr> | 76.0 |
-| <nobr>実務影響</nobr> | 56.0 |
-| <nobr>確度</nobr> | 58.0 |
-
-#### 概要
-
-Microsoftの2026年5月のPatch Tuesdayでは、120件超のCVE修正が公開されました。
-現時点で広く確認されたゼロデイや公表済みの悪用はないとされますが、Microsoft Wordに関する複数の重要なRCE脆弱性など、優先度を上げて対応したい項目が含まれています。
-件数が多いだけでなく、業務利用の多い製品に深刻度の高い脆弱性が含まれるため、修正の遅れがリスクにつながります。
-ゼロデイが見当たらない場合でも、公開後の悪用に備えた通常より速い対応が重要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 9 sources。
-- 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 強。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 複数ソース確認。
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- Word関連を含む重要度の高い更新を優先し、影響範囲の大きい端末から適用する。
-- 通常の月次更新として扱わず、検証後すみやかに展開できるよう社内の適用手順を前倒しで確認する。
-- 資産管理と脆弱性管理の観点で、未適用端末や更新失敗端末が残っていないかを重点的に点検する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-40399 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-40364 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-40401 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-33096 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-40361 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-41096 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-41089 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-42898 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-40415 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-35435 | 主要CVE | 1.00 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Defense at AI speed: Microsoft’s new multi-model agentic security system tops le](https://microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-finds-16-new-vulnerabilities) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Patch Tuesday, May 2026 Edition](https://krebsonsecurity.com/2026/05/patch-tuesday-may-2026-edition) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [It's Patch Tuesday for Microsoft and Not a Zero-Day In Sight](https://darkreading.com/application-security/patch-tuesday-microsoft-zero-day-sight) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft addresses 137 vulnerabilities in May’s Patch Tuesday, including 13 rat](https://cyberscoop.com/microsoft-patch-tuesday-may-2026) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft Patch Tuesday for May 2026 — Snort rules and prominent vulnerabilities](https://blog.talosintelligence.com/microsoft-patch-tuesday-may-2026) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft May 2026 Patch Tuesday: Many fixes, but no zero-days](https://helpnetsecurity.com/2026/05/12/microsoft-may-2026-patch-tuesday) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft releases Windows 10 KB5087544 extended security update](https://bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5087544-extended-security-update) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [The May 2026 Security Update Review](https://thezdi.com/blog/2026/5/12/the-may-2026-security-update-review) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 強。
-- 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 継続。
-
----
-
-<a id="topic-3622"></a>
-
-### 3. Multiple Vulnerabilities in Fortinet Products Could Allow for Remote Code Execution
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>RCE</nobr> / <nobr>脆弱性</nobr> / <nobr>防御・運用</nobr> / <nobr>ゼロデイ</nobr> / <nobr>ランサムウェア</nobr> / <nobr>マルウェア</nobr> / <nobr>クラウド</nobr> |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 61.0 |
-| <nobr>実務影響</nobr> | 66.0 |
-| <nobr>確度</nobr> | 43.0 |
-
-#### 概要
-
-Fortinet製品に複数の脆弱性が見つかり、最も深刻なものではリモートコード実行につながる可能性があるとされています。
-対象にはFortiAuthenticatorやFortiSandboxが含まれており、影響が出た場合は権限の範囲に応じて不正な操作や設定変更などのリスクが生じます。
-認証や脅威検知に関わる製品が含まれるため、侵害時の影響が大きくなり得ます。公開情報では悪用の文脈も示されているため、優先的な確認対象になっています。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- Fortinet製品の利用有無と該当バージョンを確認し、ベンダー情報に基づいて修正の要否を判断する。
-- FortiAuthenticatorやFortiSandboxなど、外部から到達し得る管理系サービスの露出状況を見直す。
-- 権限の強い管理アカウントの利用状況を点検し、侵害時の影響を抑えるためアクセス制御を再確認する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ベンダー | Fortinet | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Multiple Vulnerabilities in Fortinet Products Could Allow for Remote Code Execut](https://cisecurity.org/advisory/multiple-vulnerabilities-in-fortinet-products-could-allow-for-remote-code-execution_2026-049) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 初出。
-
----
-
 <a id="low-record-topics"></a>
 
 ## ❄️ 低温だが記録しておくトピック
@@ -504,29 +532,29 @@ Fortinet製品に複数の脆弱性が見つかり、最も深刻なものでは
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
 | [AI製のゼロデイ攻撃が出現 Googleが報告した高度化する脆弱性探索と自律型攻撃の脅威](https://itmedia.co.jp/enterprise/articles/2605/13/news041.html) | 29.0 | 20.0 | 42.0 |
-| [UniFi Access におけるリモートコード実行（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
-| [Netskopeにおけるクロステナント認証バイパス脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
-| [Fortinet、FortiSandboxとFortiAuthenticatorのクリティカルなRCE脆弱性を警告](https://bleepingcomputer.com/news/security/fortinet-warns-of-critical-rce-flaws-in-fortisandbox-and-fortiauthenticator) | 28.0 | 38.0 | 42.0 |
-| [Mini Shai-Huludマルウェアが大規模なサプライチェーン攻撃で数百件のオープンソースパッケージを侵害](https://cyberscoop.com/mini-shai-hulud-supply-chain-malware-attack) | 28.0 | 30.0 | 42.0 |
-| [West Pharmaceutical、ランサムウェア攻撃で業務に影響と警告](https://therecord.media/west-pharmaceutical-warns-of-ransomware-attack-impacting-operations) | 28.0 | 30.0 | 42.0 |
-| [Nansh0uキャンペーン ― ハッカーの武器庫がさらに強化される](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
-| [Oracle of Delphi が認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
-| [米政府、Canvasへの大規模サイバー攻撃に関するInstructureの証言を求める](https://bleepingcomputer.com/news/security/us-govt-seeks-instructure-testimony-on-massive-canvas-cyberattack) | 28.0 | 20.0 | 42.0 |
+| [UniFi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
+| [Netskopeにおけるクロステナント認証バイパスのセキュリティ問題](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
+| [「Mini Shai-Hulud」マルウェアが大規模なサプライチェーン攻撃で数百のオープンソースパッケージを侵害](https://cyberscoop.com/mini-shai-hulud-supply-chain-malware-attack) | 28.0 | 30.0 | 42.0 |
+| [Oracle of Delphiが認証情報を盗む](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
+| [Nansh0uキャンペーン―ハッカーの攻撃手段がさらに強化](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
+| [米政府、Canvasへの大規模サイバー攻撃についてInstructureに証言を要求](https://bleepingcomputer.com/news/security/us-govt-seeks-instructure-testimony-on-massive-canvas-cyberattack) | 28.0 | 20.0 | 42.0 |
 | [Claude拡張機能に深刻な脆弱性 無権限でAI操作を乗っ取り可能](https://atmarkit.itmedia.co.jp/ait/articles/2605/13/news037.html) | 28.0 | 20.0 | 42.0 |
-| [AI支援による合成攻撃ログ生成で検知エンジニアリングを加速する](https://microsoft.com/en-us/security/blog/2026/05/12/accelerating-detection-engineering-using-ai-assisted-synthetic-attack-logs-generation) | 27.0 | 20.0 | 42.0 |
-| [大山鳴動 深刻度「低」脆弱性 1 匹 ～ cURL開発者「脆弱性発見 AI Mythos は宣伝目的の茶番」](https://scan.netsecurity.ne.jp/article/2026/05/13/55258.html) | 26.0 | 20.0 | 42.0 |
+| [大山鳴動 深刻度「低」脆弱性 1 匹 ～ cURL開発者「脆弱性発見 AI Mythos は宣伝目的の茶番」](https://scan.netsecurity.ne.jp/article/2026/05/13/55258.html) | 27.0 | 20.0 | 42.0 |
+| [AI支援による合成攻撃ログ生成で検知エンジニアリングを加速する方法](https://microsoft.com/en-us/security/blog/2026/05/12/accelerating-detection-engineering-using-ai-assisted-synthetic-attack-logs-generation) | 27.0 | 20.0 | 42.0 |
 | [GMOサイバーセキュリティ byイエラエ「AIエージェントペネトレーションテスト」の提供](https://scan.netsecurity.ne.jp/article/2026/05/13/55249.html) | 26.0 | 20.0 | 42.0 |
 | [スリーシェイク「AI-Ready に関する実態調査」を発表](https://scan.netsecurity.ne.jp/article/2026/05/13/55248.html) | 26.0 | 20.0 | 42.0 |
 | [AIを活用した思考の可視化と共有化―属人知を組織知に転換する7つのステップ](https://japan.zdnet.com/article/35247317) | 26.0 | 20.0 | 42.0 |
-| [東芝、AIの異常検知の根拠を説明する技術　波形データで分かりやすく](https://xtech.nikkei.com/atcl/nxt/news/24/03218) | 26.0 | 20.0 | 42.0 |
-| [OpenAI Sora 2のセキュリティ：マルチモーダルLLMを駆動するシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
-| [必見：Geminiをハッキングする—多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
-| [主要世界経済国がAIの「構成要素リスト」の主要項目を明確化](https://cyberscoop.com/g7-cisa-ai-sbom-security-guidance) | 25.0 | 20.0 | 42.0 |
+| [必見：Geminiをハッキングする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
+| [Security: OpenAI Sora 2の内部 - マルチモーダルLLMを駆動するシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
+| [主要国がAIの「原材料リスト」の主要要素を明示](https://cyberscoop.com/g7-cisa-ai-sbom-security-guidance) | 25.0 | 20.0 | 42.0 |
 | [訓練なし、検証なし、責任者不明 サイバーBCPの危うい実態](https://atmarkit.itmedia.co.jp/ait/articles/2605/13/news053.html) | 24.0 | 20.0 | 43.0 |
 | [テスト自動化ツールのオーティファイ、品質検証サービスに乗り出す理由](https://japan.zdnet.com/article/35247210) | 24.0 | 20.0 | 43.0 |
-| [Citrix NetScaler のメモリリークおよび反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 23.0 | 34.0 | 50.0 |
-| [MixMaster MMORPGのリバースエンジニアリングによるセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
-| [Mozilla、「Firefox 150.0.3」を公開 - 脆弱性5件を修正](https://security-next.com/184338) | 22.0 | 20.0 | 42.0 |
+| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 23.0 | 34.0 | 50.0 |
+| [MixMaster MMORPGのリバースエンジニアリングにおけるセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
+| [Proxyで中継できないEXE通信をプロキシへ送る方法](https://isc.sans.edu/diary/rss/32982) | 22.0 | 20.0 | 42.0 |
+| [Apple、「iOS 26.5」「iPadOS 26.5」で多数脆弱性を修正 - 旧端末向け更新も](https://security-next.com/184346) | 22.0 | 20.0 | 42.0 |
+| [3Dプリンターメーカーから圧力をかけられた開発者に対して「修理する権利」のため戦うルイス・ロスマンが費用支援を約束、クラウドファンディング呼びかけも](https://gigazine.net/news/20260513-louis-rossmann-bambu-lab) | 22.0 | 20.0 | 42.0 |
+| [「FortiAuthenticator」に深刻な脆弱性 - 認証なしでコード実行のおそれ](https://security-next.com/184343) | 22.0 | 20.0 | 42.0 |
 
 ---
 
