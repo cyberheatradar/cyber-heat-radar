@@ -1,22 +1,22 @@
-# 📡 サイレーダー 2026-05-14 11:00 JST 試作版
+# 📡 サイレーダー 2026-05-14 17:00 JST 試作版
 
-このレポートは、2026-05-14 05:00 JST〜2026-05-14 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-14 11:00 JST〜2026-05-14 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 94
-- [音声で扱う想定のトピック](#audio-topics): 1
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 3
+- 観測トピック数: 87
+- [音声で扱う想定のトピック](#audio-topics): 3
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
 | 1 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 2 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 3 | [山形のシステム企業がランサム被害 地元自治体や企業中心に影響拡大](#topic-4463) | 33.0 | 38.0 | 42.0 | 音声 | 温度感上位枠 |
-| 4 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | GitHub | 直近掲載済み・再掲抑制 |
+| 2 | [Researcher Drops YellowKey, GreenPlasma Windows Zero-Days](#topic-4582) | 42.0 | 50.0 | 43.0 | 音声 | 温度感上位枠 |
+| 3 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 4 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -24,36 +24,101 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-4463"></a>
+<a id="topic-4582"></a>
 
-### 1. 山形のシステム企業がランサム被害 地元自治体や企業中心に影響拡大
+### 1. Researcher Drops YellowKey, GreenPlasma Windows Zero-Days
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>防御・運用</nobr> |
+| <nobr>タグ</nobr> | <nobr>Windows</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 33.0 |
-| <nobr>実務影響</nobr> | 38.0 |
-| <nobr>確度</nobr> | 42.0 |
+| <nobr>温度感</nobr> | 42.0 |
+| <nobr>実務影響</nobr> | 50.0 |
+| <nobr>確度</nobr> | 43.0 |
 
 #### 概要
 
-山形市の情報システム企業YCC情報システムがランサムウェア被害を受け、その影響が同社に業務委託していた自治体や企業、大学に広がっている可能性が示されています。
-公表内容によると、山形県や山形市、山形交通、山形大学などで、個人情報漏えいの恐れがあるとされています。
-委託先での侵害が複数の組織に波及しており、サプライチェーン経由の情報管理リスクが改めて注目されています。
-影響件数が大きい可能性があり、関係先での確認や利用者への案内が必要になる事案です。
+Windows向けの2件のゼロデイ脆弱性として、YellowKeyとGreenPlasmaが報告されています。
+公開情報によれば、YellowKeyはBitLockerの回避に関わり物理アクセスが必要とされ、GreenPlasmaは権限昇格によりSYSTEM権限を得られるとされています。
+BitLocker回避とSYSTEM権限への昇格は、端末の保護や管理権限に直接影響しうるため注目されています。
+ゼロデイとして扱われている点から、影響範囲の確認と対応状況の把握が重要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 脅威・インシデント関連の公開情報として観測しています。
+- 実悪用・ゼロデイ文脈。
 
 ##### 実務影響
-- 情報漏えい系。
+- 悪用情報あり。
+- 権限昇格系。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Windows端末のBitLocker設定と物理アクセス管理を再点検する。
+- 権限昇格につながる挙動がないか、端末監視やEDRの検知ルールを確認する。
+- 該当情報のベンダー対応や修正状況を追跡し、優先度をつけて適用計画を立てる。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Researcher Drops YellowKey, GreenPlasma Windows Zero-Days](https://securityweek.com/researcher-drops-yellowkey-greenplasma-windows-zero-days) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+- 継続観測: 初出。
+
+---
+
+<a id="topic-31"></a>
+
+### 2. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>防御・運用</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 36.0 |
+| <nobr>実務影響</nobr> | 30.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+Guardicore Labsの分析によると、MySQLサーバーを狙うランサムウェア関連の攻撃キャンペーンが確認されています。
+攻撃者は二重の脅迫を用い、盗んだとされるデータを公開して被害組織に圧力をかける手口が示されています。
+MySQLは多くのシステムで基盤となるため、影響を受けると業務やデータ保全への波及が大きくなり得ます。
+公開情報として脅迫型のランサムウェア活動が示されているため、監視と防御の優先度を再確認する材料になります。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
 - ランサムウェア文脈。
 
 ##### 確度
@@ -61,23 +126,83 @@
 
 #### 担当者向け確認ポイント
 
-- 委託先を含めた保有データの範囲、対象人数、影響有無を早急に洗い出す。
-- 漏えいの可能性がある場合は、関係者への通知方針と問い合わせ窓口を整理する。
-- 類似の委託先・運用先について、アクセス権限やバックアップ、監視体制の見直しを進める。
+- MySQLのインターネット公開状況、認証設定、不要な外部接続の有無を見直す。
+- バックアップの隔離、復旧手順の確認、重要データの暗号化・権限管理を点検する。
+- 異常な接続、認証失敗の増加、データ転送の兆候など、侵入や持ち出しを示すログ監視を強化する。
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [山形のシステム企業がランサム被害　地元自治体や企業中心に影響拡大](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/050701435) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
 - SNS反応: 反応未確認。
 - 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 弱。
-- 日本語圏反応: 反応未確認。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり・低信頼。
 - 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
+
+<a id="topic-29"></a>
+
+### 3. Threats Making WAVs - Incident Response to a Cryptomining Attack
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>防御・運用</nobr> / <nobr>マルウェア</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+Akamai Security Intelligence は、WAVファイルの中に暗号資産マイナーを隠したとされる攻撃について、検知から感染、横展開、解析までをまとめた事例を紹介しています。
+公開された内容では、データセンター環境でのインシデント対応を改善する観点も示されています。
+音声ファイルのような一見無害な形式が悪用される可能性があるため、受け取り側の警戒が必要です。
+暗号資産マイニングは直接的な情報窃取でなくても、計算資源の消費や運用影響につながる点が注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 不審なファイル形式や配布経路を前提にせず、受領ファイルの検査と隔離を徹底する。
+- 端末やサーバーのCPU・GPU使用率、常駐プロセス、通信の異常を監視し、マイニング兆候を早期に把握する。
+- インシデント対応手順を見直し、感染確認後の封じ込めと横展開防止の連絡・復旧フローを整理する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Threats Making WAVs - Incident Response to a Cryptomining Attack](https://akamai.com/blog/security/threats-making-wavs-incident-reponse-cryptomining-attack) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 弱。
 - 開発者コミュニティ反応: 反応未確認。
 - 攻撃・悪用観測シグナル: なし。
 - 継続観測: 初出。
@@ -105,10 +230,10 @@
 
 #### 概要
 
-CVE-2025-60710 は、Microsoft Windows の Taskhost 関連タスクにおけるローカル権限昇格の脆弱性として扱われています。
-公開情報では、CISA の Known Exploited Vulnerabilities に掲載されており、公開PoCや検証コードの言及も確認されています。
-権限昇格系の脆弱性は、初期侵入後に影響範囲を広げる足がかりになりやすく、優先度高く確認すべき対象です。
-さらに、既に悪用対象として扱われているため、未対策環境ではリスクが上がります。
+CVE-2025-60710 は、Microsoft Windows の Taskhost 関連機能におけるローカル権限昇格の脆弱性として扱われています。
+CISA の Known Exploited Vulnerabilities に含まれており、公開PoCや検証コードの言及もあるため、優先的な確認対象とみられます。
+権限昇格系の脆弱性は、端末内での被害拡大や管理者権限の取得につながる可能性があるため、影響が大きくなりやすいです。
+さらに、実際の悪用が確認されている扱いであることから、通常の脆弱性よりも早い対応が求められます。
 
 #### CISA KEV詳細
 
@@ -151,9 +276,9 @@ CVE-2025-60710 は、Microsoft Windows の Taskhost 関連タスクにおける�
 
 #### 担当者向け確認ポイント
 
-- Windows 環境で当該 CVE の影響有無を確認し、該当する場合は優先的に修正状況を点検する。
-- 特権取得につながるため、管理者権限の付与経路や不審なローカル実行の監視を強化する。
-- 公開PoCの存在を前提に、関連ログや端末の異常なタスク動作を点検する。
+- Windows 端末の適用状況を確認し、CVE-2025-60710 の修正有無を把握する。
+- 特権アカウントの利用状況や、想定外の権限昇格の痕跡がないかを点検する。
+- 公開PoCの存在を踏まえ、関連端末の監視を強め、優先度を上げて対応する。
 
 #### 関連する対象
 
@@ -185,123 +310,6 @@ CVE-2025-60710 は、Microsoft Windows の Taskhost 関連タスクにおける�
 
 ---
 
-<a id="topic-31"></a>
-
-### 2. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>防御・運用</nobr> |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 36.0 |
-| <nobr>実務影響</nobr> | 30.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-Akamai Security Intelligence によると、Guardicore Labs は MySQL サーバーを標的にしたランサムウェア関連の攻撃キャンペーンを確認しています。
-攻撃者は二重脅迫の手口を用い、漏えいしたデータの公開を示唆して被害組織に圧力をかけているとされています。
-データベース基盤が直接狙われるため、業務停止や情報流出の影響が大きくなりやすい点が注目されます。
-MySQL を運用する環境では、単なる暗号化被害だけでなく、情報公開を伴う二重脅迫への備えも必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- MySQL の公開範囲、認証設定、不要な外部アクセス許可を見直す。
-- バックアップの隔離と復旧手順を確認し、ランサムウェア被害を想定した復旧訓練を行う。
-- データベース周辺の監視を強化し、異常な認証失敗や不審な接続・操作を早期に検知する。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: なし。
-- 継続観測: 初出。
-
----
-
-<a id="topic-29"></a>
-
-### 3. Threats Making WAVs - Incident Response to a Cryptomining Attack
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>防御・運用</nobr> / <nobr>マルウェア</nobr> |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 30.0 |
-| <nobr>実務影響</nobr> | 20.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-公開情報では、Guardicoreの研究者が、WAVファイルの中に暗号資産マイナーを隠していたクリプトマイニング攻撃について分析しています。
-報告には、検知、感染、ネットワーク内での広がり、マルウェア解析、そしてデータセンター向けのインシデント対応改善の示唆が含まれています。
-通常の音声ファイルに見える形式が悪用された可能性があるため、メール添付やファイル受領時の検査・対応の重要性を示しています。
-インシデント対応の観点でも、初動の検知と封じ込めの体制が問われる事例です。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 弱。
-
-##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- WAVを含む音声系ファイルでも、受け取り経路や振る舞いに不審点がないか確認する。
-- クリプトマイニングの兆候として、CPU/リソース使用率や不審なプロセス・通信を監視する。
-- 感染拡大を想定し、端末隔離、横展開の確認、ログ保全を含む初動手順を点検する。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Threats Making WAVs - Incident Response to a Cryptomining Attack](https://akamai.com/blog/security/threats-making-wavs-incident-reponse-cryptomining-attack) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 弱。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: なし。
-- 継続観測: 初出。
-
----
-
 <a id="low-record-topics"></a>
 
 ## ❄️ 低温だが記録しておくトピック
@@ -311,30 +319,30 @@ MySQL を運用する環境では、単なる暗号化被害だけでなく、�
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [コープいしかわのギフトカタログオンラインショップ委託先にランサムウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/05/14/55266.html) | 29.0 | 30.0 | 42.0 |
-| [日本テレネットにランサムウェア型サイバー攻撃、大和リースのカーシェアリングサービス「Dシェア」の会員情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/05/14/55264.html) | 29.0 | 30.0 | 42.0 |
-| [東京精密の米国グループ会社にランサムウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/05/14/55262.html) | 29.0 | 30.0 | 42.0 |
-| [99％のファイルを数分で封鎖 暗号化不要の準ランサム攻撃「GhostLock」とは？](https://atmarkit.itmedia.co.jp/ait/articles/2605/14/news041.html) | 29.0 | 30.0 | 42.0 |
-| [Unifi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
-| [Netskopeのクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
-| [Exim mailerの新たな重大な脆弱性でリモートコード実行が可能に](https://bleepingcomputer.com/news/security/new-critical-exim-mailer-flaw-allows-remote-code-execution) | 28.0 | 38.0 | 42.0 |
-| [ファイルを書き換えずにランサムウェアのような攻撃を行う手法が発見される。概念実証の「GhostLock」をセキュリティ研究者が発表 Windows NT 3.1から存在しているSMBの仕様を悪用](https://internet.watch.impress.co.jp/docs/news/2108419.html) | 28.0 | 30.0 | 42.0 |
-| [The Gentlemen RaaSギャングへの情報漏えいで形勢逆転](https://darkreading.com/threat-intelligence/gentlemen-raas-gang-data-leak) | 28.0 | 30.0 | 42.0 |
-| [Delphi Oracleが認証情報を盗む](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
-| [Nansh0uキャンペーン――ハッカーの兵器がさらに強化される](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
-| [イランのハッカーが韓国の大手電子機器メーカーを標的にした](https://bleepingcomputer.com/news/security/iranian-hackers-targeted-major-south-korean-electronics-maker) | 28.0 | 20.0 | 42.0 |
-| [攻撃者がRubyGemsをデータのデッドドロップに悪用](https://darkreading.com/application-security/attackers-weaponize-rubygems-data-dead-drops) | 28.0 | 20.0 | 42.0 |
-| [Geminiのツール呼び出し機能を蒸留してスマホでも動作する軽量モデルに仕上げた「Needle」が登場、開発者はスマホ向けAIエージェントの構築に役立つとアピール](https://gigazine.net/news/20260514-needle-tool-calling--distilled-gemini) | 27.0 | 20.0 | 42.0 |
-| [ZDNET Japan読者が答えた「わが社の生成AI実態」--調査で見えた現在地](https://japan.zdnet.com/article/35247484) | 26.0 | 20.0 | 42.0 |
-| [Anthropicの無料トレーニングライブラリー「Claude Courses」を体験](https://japan.zdnet.com/article/35247494) | 26.0 | 20.0 | 42.0 |
-| [シャドーAIはすでに深刻 ServiceNowが進める「AI管制塔」](https://news.mynavi.jp/techplus/article/20260514-4456189) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントを野放しにしない ― ServiceNowは“AI司令塔”で自律とガバナンスを両立](https://ascii.jp/elem/000/004/401/4401495?rss=) | 26.0 | 20.0 | 42.0 |
-| [Google Cloudが新たなAI基盤 エージェント導入から活用まで包括支援](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/050701431) | 26.0 | 20.0 | 42.0 |
-| [国内金融業界、Mythosに危機感 「攻撃激化へ」「対策にAIフル活用」](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/050701434) | 26.0 | 20.0 | 42.0 |
-| [「粗悪記事」「ゼロクリック」「搾取」からクリエイターをどう守るか？ AIに強いnoteが挑む創作エコシステム](https://ascii.jp/elem/000/004/401/4401823?rss=) | 26.0 | 20.0 | 42.0 |
-| [予測不能で急激に高騰するAIエージェントのコスト--成功の保証は無し](https://japan.zdnet.com/article/35247323) | 26.0 | 20.0 | 42.0 |
-| [必見：Geminiをハッキングする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
-| [Security: OpenAI Sora 2の内部分析 - マルチモーダルLLMを駆動するシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
+| [Unifi Accessにおけるリモートコード実行（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
+| [NGINX Rewrite Module の18年前からの脆弱性により認証不要のRCEが可能に](https://thehackernews.com/2026/05/18-year-old-nginx-rewrite-module-flaw.html) | 28.0 | 46.0 | 50.0 |
+| [Netskopeのクロステナント認証バイパスに関するセキュリティ情報](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
+| [Oracle of Delphiが認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
+| [Nansh0uキャンペーン―ハッカーの武器庫がさらに強化される](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
+| [Anthropicがビジネス分析・広告キャンペーン・簿記などの自動化ができる「Claude for Small Business」をリリース](https://gigazine.net/news/20260514-claude-for-small-business) | 27.0 | 20.0 | 42.0 |
+| [AnthropicがClaude Agent SDKクレジットを発表、OpenClawなどのサードパーティー自律型AIエージェントハーネスを再び稼働させることができるように](https://gigazine.net/news/20260514-anthropic-claude-agent-sdk-credits) | 27.0 | 20.0 | 42.0 |
+| [Meta AIとの「真のプライバシー保護」を実現した完全プライベートな会話を可能にする「Incognito Chat」が登場](https://gigazine.net/news/20260514-meta-ai-incognito-chat) | 27.0 | 20.0 | 42.0 |
+| [EY、新サービス「AIレッドチーミング」提供開始、生成AIのセキュリティリスクを可視化](https://news.mynavi.jp/techplus/article/20260514-4458902) | 26.0 | 20.0 | 42.0 |
+| [生成AI利用者の約3割がヒヤリハットを経験--サイバーセキュリティクラウド調査](https://japan.zdnet.com/article/35247508) | 26.0 | 20.0 | 42.0 |
+| [FragnesiaのLinux脆弱性により攻撃者がroot権限を取得可能に](https://bleepingcomputer.com/news/security/new-fragnesia-linux-flaw-lets-attackers-gain-root-privileges) | 25.0 | 40.0 | 50.0 |
+| [OpenAI Sora 2のセキュリティ：マルチモーダルLLMを駆動するシステムプロンプトの解析](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
+| [必見: Geminiをハッキングする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
+| [ベクトル埋め込みのセキュリティギャップが企業AIパイプラインを露呈させる](https://helpnetsecurity.com/2026/05/14/vectorsmuggle-vector-embedding-security) | 25.0 | 20.0 | 42.0 |
+| [企業におけるAIガバナンスのギャップを埋めるには](https://helpnetsecurity.com/2026/05/14/ai-governance-gap-video) | 25.0 | 20.0 | 42.0 |
+| [くら寿司、万博店を再現した“メモリアル店“オープン 回転ベルトなど移設、世界70カ国の料理も](https://itmedia.co.jp/news/articles/2605/14/news084.html) | 24.0 | 20.0 | 43.0 |
+| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 23.0 | 34.0 | 50.0 |
+| [MixMaster MMORPGの逆アセンブルと解析](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
+| [「あなたの忍者に関する知識はすべて間違っている」と題した動画を海外で人気の科学系YouTubeチャンネルKurzgesagtが公開](https://gigazine.net/news/20260514-ninja-image) | 22.0 | 20.0 | 42.0 |
+| [ジャンボジェット機相当サイズのソーラードローンが自律型海上哨戒飛行の記録を更新して着水＆沈没](https://gigazine.net/news/20260514-solar-drone-jumbo-jet-wingspan-broke-record-crashed) | 22.0 | 20.0 | 42.0 |
+| [ウェブサーバ「nginx」に複数脆弱性 - 「クリティカル」も](https://security-next.com/184434) | 22.0 | 20.0 | 42.0 |
+| [Outlookの迷惑メールフォルダにおけるリンクプレビュー機能の簡単な回避方法](https://isc.sans.edu/diary/rss/32990) | 22.0 | 20.0 | 42.0 |
+| [Gemini向けノートPC「Googlebook」の登場によってChromebookはどうなるのか？](https://gigazine.net/news/20260514-googlebooks-premium-focus) | 22.0 | 20.0 | 42.0 |
+| [メモリの価格高騰がメモリの購入者であるAppleにとってむしろ有利に働く理由](https://gigazine.net/news/20260514-apple-memory-panic) | 22.0 | 20.0 | 42.0 |
 
 ---
 
