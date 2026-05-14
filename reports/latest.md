@@ -1,22 +1,29 @@
-# 📡 サイレーダー 2026-05-14 17:00 JST 試作版
+# 📡 サイレーダー 2026-05-15 05:00 JST 試作版
 
-このレポートは、2026-05-14 11:00 JST〜2026-05-14 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-14 17:00 JST〜2026-05-15 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 87
-- [音声で扱う想定のトピック](#audio-topics): 3
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
+- 観測トピック数: 110
+- [音声で扱う想定のトピック](#audio-topics): 6
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 5
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 74.0 | 82.0 | 81.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 2 | [Researcher Drops YellowKey, GreenPlasma Windows Zero-Days](#topic-4582) | 42.0 | 50.0 | 43.0 | 音声 | 温度感上位枠 |
-| 3 | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](#topic-31) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
-| 4 | [Threats Making WAVs - Incident Response to a Cryptomining Attack](#topic-29) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [CVE-2026-20182: CISA KEV catalog addition](#topic-4945) | 77.0 | 74.0 | 67.0 | 音声 | 温度感上位枠 |
+| 2 | [CVE-2026-0265: CISA KEV catalog addition](#topic-4257) | 62.0 | 74.0 | 56.0 | 音声 | 温度感上位枠 |
+| 3 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 54.0 | 82.0 | 81.0 | GitHub | 直近掲載済み・再掲抑制 |
+| 4 | [The Dark Side of Efficiency: When Network Controllers Become "God Mode" for Attackers](#topic-4949) | 43.0 | 30.0 | 43.0 | 音声 | 温度感上位枠 |
+| 5 | [Pwn2Own Berlin 2026 - Day One Results](#topic-4668) | 37.0 | 20.0 | 43.0 | 音声 | 温度感上位枠 |
+| 6 | [PraisonAI CVE-2026-44338 Auth Bypass Targeted Within Hours of Disclosure](#topic-4997) | 36.0 | 46.0 | 50.0 | 音声 | 温度感上位枠 |
+| 7 | [LATAM Under Siege: Agent Tesla’s 18-Month Credential Theft Campaign Against Chilean Enterprises](#topic-4995) | 36.0 | 30.0 | 42.0 | GitHub | 音声枠上限によりGitHubのみ |
+| 8 | [Cofense adds AI-powered campaign detection to stop phishing attacks](#topic-4974) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 9 | [Fragnesia: New Linux kernel LPE bug was spawned by Dirty Frag patch (CVE-2026-46300)](#topic-4581) | 31.0 | 40.0 | 58.0 | GitHub | 音声枠上限によりGitHubのみ |
+| 10 | [委託先がランサム被害、サーバ内部に組合員の個人情報 - コープいしかわ](#topic-4667) | 30.0 | 30.0 | 42.0 | GitHub | 音声枠上限によりGitHubのみ |
+| 11 | [Kazuar: Anatomy of a nation-state botnet](#topic-4956) | 30.0 | 20.0 | 42.0 | GitHub | 音声枠上限によりGitHubのみ |
 
 ---
 
@@ -24,37 +31,204 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-4582"></a>
+<a id="topic-4945"></a>
 
-### 1. Researcher Drops YellowKey, GreenPlasma Windows Zero-Days
+### 1. CVE-2026-20182: CISA KEV catalog addition
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>Windows</nobr> |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>認証バイパス</nobr> / <nobr>KEV</nobr> / <nobr>政策・規制</nobr> / <nobr>IoC</nobr> / <nobr>防御・運用</nobr> / <nobr>PoC</nobr> / <nobr>Linux</nobr> / <nobr>フィッシング</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 42.0 |
-| <nobr>実務影響</nobr> | 50.0 |
-| <nobr>確度</nobr> | 43.0 |
+| <nobr>温度状態</nobr> | 温度上昇中 |
+| <nobr>温度感</nobr> | 77.0 |
+| <nobr>実務影響</nobr> | 74.0 |
+| <nobr>確度</nobr> | 67.0 |
 
 #### 概要
 
-Windows向けの2件のゼロデイ脆弱性として、YellowKeyとGreenPlasmaが報告されています。
-公開情報によれば、YellowKeyはBitLockerの回避に関わり物理アクセスが必要とされ、GreenPlasmaは権限昇格によりSYSTEM権限を得られるとされています。
-BitLocker回避とSYSTEM権限への昇格は、端末の保護や管理権限に直接影響しうるため注目されています。
-ゼロデイとして扱われている点から、影響範囲の確認と対応状況の把握が重要です。
+CISAは、Cisco Catalyst SD-WAN Controllerおよび関連製品に存在する認証バイパスの脆弱性CVE-2026-20182をKnown Exploited Vulnerabilities（KEV）カタログに追加しました。
+公開情報では、Ciscoが修正を案内しており、限定的な実環境での悪用が確認されているとされています。
+認証バイパスは管理者権限の奪取につながり得るため、対象製品を運用する組織にとって影響が大きい事案です。
+KEV入りしたことで、優先的な対応が必要な既知の悪用対象として扱うべき状況になっています。
 
 #### 温度感の理由
 
 ##### 温度感
+- 複数ソースで確認: 5 sources。
 - 実悪用・ゼロデイ文脈。
+- 公開PoC・検証コード言及あり。
+- 技術者コミュニティ反応: 中。
 
 ##### 実務影響
 - 悪用情報あり。
-- 権限昇格系。
+- 公開PoCにより再現・悪用可能性が上がる。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 公開PoC・検証コード言及あり。
+- 公開PoC/Exploitコード: 確認あり。
+- 直接PoCリンク: 掲載しません。
+- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
+
+#### 担当者向け確認ポイント
+
+- Cisco Catalyst SD-WAN Controller／Managerの利用有無と適用バージョンを確認し、修正版の適用状況を点検する。
+- インターネット公開されている管理系インターフェースや関連通信経路がないか棚卸しし、露出を最小化する。
+- ベンダーの推奨する確認手順に沿って、不審な管理アクセスや設定変更の痕跡を点検する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-20182 | 主要CVE | 1.00 |
+| ベンダー | Cisco | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20182](https://nvd.nist.gov/vuln/detail/CVE-2026-20182) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Ac](https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Ongoing exploitation of Cisco Catalyst SD-WAN vulnerabilities](https://blog.talosintelligence.com/sd-wan-ongoing-exploitation) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>公的・一次情報</nobr> | [Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CVE-2026-20182: Critical authentication bypass in Cisco Catalyst SD-WAN Controll](https://rapid7.com/blog/post/ve-cve-2026-20182-critical-authentication-bypass-cisco-catalyst-sd-wan-controller-fixed) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://cisa.gov/news-events/alerts/2026/05/14/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 中。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
+- 継続観測: 継続。
+
+---
+
+<a id="topic-4257"></a>
+
+### 2. CVE-2026-0265: CISA KEV catalog addition
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>脆弱性</nobr> / <nobr>KEV</nobr> / <nobr>認証バイパス</nobr> / <nobr>防御・運用</nobr> / <nobr>脅威アクター</nobr> / <nobr>政策・規制</nobr> / <nobr>PoC</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 62.0 |
+| <nobr>実務影響</nobr> | 74.0 |
+| <nobr>確度</nobr> | 56.0 |
+
+#### 概要
+
+CVE-2026-0265は、Palo Alto NetworksのPAN-OSにおける認証回避の脆弱性として公表され、CISAのKEVカタログにも追加されました。
+Cloud Authentication Service（CAS）を有効にしてログインインターフェースに接続している構成で影響を受ける可能性があり、対象製品では修正版への更新が案内されています。
+認証回避は管理面への不正アクセスにつながり得るため、境界防御機器を運用する組織では影響が大きくなり得ます。
+KEV入りしていることから、既知の悪用リスクを前提に早期対応が求められます。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 2 sources。
+- 実悪用・ゼロデイ文脈。
+- 公開PoC・検証コード言及あり。
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- 悪用情報あり。
+- 公開PoCにより再現・悪用可能性が上がる。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 公開PoC・検証コード言及あり。
+- 公開PoC/Exploitコード: 確認あり。
+- 直接PoCリンク: 掲載しません。
+- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
+
+#### 担当者向け確認ポイント
+
+- PAN-OSの該当バージョンと、CASがログインインターフェースに接続されているかを確認する。
+- 対象となるPA-Series、VM-Series、Panorama環境は、案内済みの修正版へ優先的に更新する。
+- 旧バージョンや未対応系統が残る場合は、ベンダーの最新緩和策を確認しつつ、更新計画を前倒しで進める。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-0265 | 主要CVE | 1.00 |
+| ベンダー | Palo Alto | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-0265](https://nvd.nist.gov/vuln/detail/CVE-2026-0265) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [CVE-2026-0265: Authentication Bypass in Palo Alto Networks PAN-OS](https://rapid7.com/blog/post/etr-cve-2026-0265-authentication-bypass-in-palo-alto-networks-pan-os) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CVE-2026-0265 PAN-OS: Authentication Bypass with Cloud Authentication Service (C](https://security.paloaltonetworks.com/CVE-2026-0265) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
+- 継続観測: 継続。
+
+---
+
+<a id="topic-4949"></a>
+
+### 3. The Dark Side of Efficiency: When Network Controllers Become "God Mode" for Attackers
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>国家支援</nobr> / <nobr>TTP</nobr> / <nobr>防御・運用</nobr> / <nobr>ランサムウェア</nobr> / <nobr>認証バイパス</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>政策・規制</nobr> / <nobr>AI</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 43.0 |
+| <nobr>実務影響</nobr> | 30.0 |
+| <nobr>確度</nobr> | 43.0 |
+
+#### 概要
+
+The Dark Side of Efficiency: When Network Controllers Become "God Mode" for Attackers は、ガイダンス・ベストプラクティス・方針整理に関する話題です。
+対象組織、要求事項、既存運用への反映要否、監査・説明責任への影響を中心に確認する価値があります。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- ランサムウェア文脈。
 
 ##### 確度
 - 一次・公的系ソースあり。
@@ -67,15 +241,163 @@ BitLocker回避とSYSTEM権限への昇格は、端末の保護や管理権限�
 
 #### 担当者向け確認ポイント
 
-- Windows端末のBitLocker設定と物理アクセス管理を再点検する。
-- 権限昇格につながる挙動がないか、端末監視やEDRの検知ルールを確認する。
-- 該当情報のベンダー対応や修正状況を追跡し、優先度をつけて適用計画を立てる。
+- 組織アカウントでパスキー、ハードウェアキー、MFAを利用できるか確認する。
+- 管理者・高権限ユーザーへの適用状況を確認する。
+- SSO、SCIM、監査ログ、退職者アカウント無効化の運用と整合するか確認する。
+- APIキー、共有アカウント、個人アカウント利用の棚卸しを行う。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-20182 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-20127 | 主要CVE | 1.00 |
+| ベンダー | Cisco | 言及あり | 0.80 |
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [Researcher Drops YellowKey, GreenPlasma Windows Zero-Days](https://securityweek.com/researcher-drops-yellowkey-greenplasma-windows-zero-days) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [The Dark Side of Efficiency: When Network Controllers Become "God Mode" for Atta](https://rapid7.com/blog/post/tr-efficiencys-dark-side-network-controllers-in-god-mode-attackers-sd-wan) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+- 継続観測: 初出。
+
+---
+
+<a id="topic-4668"></a>
+
+### 4. Pwn2Own Berlin 2026 - Day One Results
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>AI</nobr> / <nobr>Windows</nobr> / <nobr>CVE</nobr> / <nobr>Linux</nobr> / <nobr>クラウド</nobr> / <nobr>AIエージェント</nobr> / <nobr>DDoS</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 37.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 43.0 |
+
+#### 概要
+
+Pwn2Own Berlin 2026 - Day One Results は、AIを攻撃者側の自動化・詐欺・マルウェア・フィッシングに利用する話題です。
+攻撃手口、標的、検知観点、利用者教育やSOC監視への反映要否を確認する価値があります。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- 攻撃者がAIを使っている工程と、既存の検知・教育で補足できる範囲を確認する。
+- フィッシング、マルウェア、詐欺テンプレート、認証情報窃取の観点で検知ロジックを確認する。
+- SOC/CSIRTで共有すべきIoC、TTP、注意喚起文面があるか確認する。
+- 利用者向け注意喚起や訓練内容を更新する必要があるか確認する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ベンダー | Microsoft | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Pwn2Own Berlin 2026 - Day One Results](https://thezdi.com/blog/2026/5/13/pwn2own-berlin-2026-day-one-results) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+- 継続観測: 初出。
+
+---
+
+<a id="topic-4997"></a>
+
+### 5. PraisonAI CVE-2026-44338 Auth Bypass Targeted Within Hours of Disclosure
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>脆弱性</nobr> / <nobr>脅威アクター</nobr> / <nobr>認証バイパス</nobr> / <nobr>政策・規制</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 36.0 |
+| <nobr>実務影響</nobr> | 46.0 |
+| <nobr>確度</nobr> | 50.0 |
+
+#### 概要
+
+PraisonAI CVE-2026-44338 Auth Bypass Targeted Within Hours of Disclosure に関する脆弱性情報です。
+では英語本文の全文翻訳は行わず、参照リンク、関連する対象、スコア根拠を中心に整理しています。詳細はベンダー公式情報、公的機関情報、NVD等を確認してください。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- RCEまたは認証バイパス系。
+
+##### 確度
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 自組織で対象製品・関連資産を利用しているか確認する。
+- ベンダー公式情報または公的機関情報を優先確認する。
+- 対象バージョンか確認する。
+- 修正版・緩和策の適用状況を確認する。
+- インターネット露出の有無を確認する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-44338 | 主要CVE | 1.00 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-44338](https://nvd.nist.gov/vuln/detail/CVE-2026-44338) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [PraisonAI CVE-2026-44338 Auth Bypass Targeted Within Hours of Disclosure](https://thehackernews.com/2026/05/praisonai-cve-2026-44338-auth-bypass.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
@@ -85,125 +407,66 @@ BitLocker回避とSYSTEM権限への昇格は、端末の保護や管理権限�
 - 日本語圏反応: 反応未確認。
 - 技術者コミュニティ反応: 未評価。
 - 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 初出。
-
----
-
-<a id="topic-31"></a>
-
-### 2. PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>防御・運用</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 36.0 |
-| <nobr>実務影響</nobr> | 30.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-Guardicore Labsの分析によると、MySQLサーバーを狙うランサムウェア関連の攻撃キャンペーンが確認されています。
-攻撃者は二重の脅迫を用い、盗んだとされるデータを公開して被害組織に圧力をかける手口が示されています。
-MySQLは多くのシステムで基盤となるため、影響を受けると業務やデータ保全への波及が大きくなり得ます。
-公開情報として脅迫型のランサムウェア活動が示されているため、監視と防御の優先度を再確認する材料になります。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- MySQLのインターネット公開状況、認証設定、不要な外部接続の有無を見直す。
-- バックアップの隔離、復旧手順の確認、重要データの暗号化・権限管理を点検する。
-- 異常な接続、認証失敗の増加、データ転送の兆候など、侵入や持ち出しを示すログ監視を強化する。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
 - 攻撃・悪用観測シグナル: なし。
 - 継続観測: 初出。
 
 ---
 
-<a id="topic-29"></a>
+<a id="topic-4974"></a>
 
-### 3. Threats Making WAVs - Incident Response to a Cryptomining Attack
+### 6. Cofense adds AI-powered campaign detection to stop phishing attacks
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>防御・運用</nobr> / <nobr>マルウェア</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>タグ</nobr> | <nobr>AI</nobr> / <nobr>フィッシング</nobr> / <nobr>防御・運用</nobr> / <nobr>攻撃キャンペーン</nobr> |
+| <nobr>分類理由</nobr> | AI×Security枠 |
 | <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 30.0 |
+| <nobr>温度感</nobr> | 33.0 |
 | <nobr>実務影響</nobr> | 20.0 |
 | <nobr>確度</nobr> | 42.0 |
 
 #### 概要
 
-Akamai Security Intelligence は、WAVファイルの中に暗号資産マイナーを隠したとされる攻撃について、検知から感染、横展開、解析までをまとめた事例を紹介しています。
-公開された内容では、データセンター環境でのインシデント対応を改善する観点も示されています。
-音声ファイルのような一見無害な形式が悪用される可能性があるため、受け取り側の警戒が必要です。
-暗号資産マイニングは直接的な情報窃取でなくても、計算資源の消費や運用影響につながる点が注目されます。
+Cofense adds AI-powered campaign detection to stop phishing attacks は、防御側でAIを活用するセキュリティ運用・検知・対応強化に関する話題です。
+AIが扱うデータ、検知対象、判断支援の範囲、誤検知・過検知、監査ログ、既存SOC/CSIRT運用との接続を確認する価値があります。
 
 #### 温度感の理由
 
 ##### 温度感
+- AI×Security文脈。
 - 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 弱。
 
 ##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 不審なファイル形式や配布経路を前提にせず、受領ファイルの検査と隔離を徹底する。
-- 端末やサーバーのCPU・GPU使用率、常駐プロセス、通信の異常を監視し、マイニング兆候を早期に把握する。
-- インシデント対応手順を見直し、感染確認後の封じ込めと横展開防止の連絡・復旧フローを整理する。
+- AIが扱うデータ分類と機密度を確認する。
+- AIツールやエージェントに与えている権限・外部接続範囲を確認する。
+- 入力データが学習・保存・第三者提供に使われる条件を確認する。
+- 監査ログ、承認フロー、利用者管理が定義されているか確認する。
+- プラグイン、MCP、外部ツール連携の許可範囲を確認する。
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [Threats Making WAVs - Incident Response to a Cryptomining Attack](https://akamai.com/blog/security/threats-making-wavs-incident-reponse-cryptomining-attack) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Cofense  adds AI-powered campaign detection to stop phishing attacks](https://helpnetsecurity.com/2026/05/14/cofense-phishing-defense-platform-updates) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
 - SNS反応: 反応未確認。
 - 日本語圏一次情報: なし。
 - 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 弱。
-- 開発者コミュニティ反応: 反応未確認。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応あり。
 - 攻撃・悪用観測シグナル: なし。
 - 継続観測: 初出。
 
@@ -223,17 +486,16 @@ Akamai Security Intelligence は、WAVファイルの中に暗号資産マイナ
 |---|---:|
 | <nobr>区分</nobr> | GitHub |
 | <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>Windows</nobr> / <nobr>権限昇格</nobr> / <nobr>TTP</nobr> / <nobr>脆弱性</nobr> / <nobr>KEV</nobr> |
-| <nobr>温度状態</nobr> | 温度上昇中 |
-| <nobr>温度感</nobr> | 74.0 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 54.0 |
 | <nobr>実務影響</nobr> | 82.0 |
 | <nobr>確度</nobr> | 81.0 |
 
 #### 概要
 
-CVE-2025-60710 は、Microsoft Windows の Taskhost 関連機能におけるローカル権限昇格の脆弱性として扱われています。
-CISA の Known Exploited Vulnerabilities に含まれており、公開PoCや検証コードの言及もあるため、優先的な確認対象とみられます。
-権限昇格系の脆弱性は、端末内での被害拡大や管理者権限の取得につながる可能性があるため、影響が大きくなりやすいです。
-さらに、実際の悪用が確認されている扱いであることから、通常の脆弱性よりも早い対応が求められます。
+CVE-2025-60710は、Microsoft WindowsのTaskhost関連タスクにおけるローカル権限昇格の脆弱性として整理されています。
+CISAのKnown Exploited Vulnerabilitiesに含まれており、実際に悪用されている可能性があるため、優先度の高い確認対象です。
+権限昇格は、侵入後に被害を拡大させる足がかりになりやすく、端末内での管理者権限奪取につながるおそれがあります。公開PoCの言及もあるため、対応の遅れがリスクを高めます。
 
 #### CISA KEV詳細
 
@@ -255,6 +517,7 @@ CISA の Known Exploited Vulnerabilities に含まれており、公開PoCや検
 - 複数ソースで確認: 2 sources。
 - CISA KEV関連。
 - 公開PoC・検証コード言及あり。
+- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用済み脆弱性として優先確認が必要。
@@ -276,9 +539,9 @@ CISA の Known Exploited Vulnerabilities に含まれており、公開PoCや検
 
 #### 担当者向け確認ポイント
 
-- Windows 端末の適用状況を確認し、CVE-2025-60710 の修正有無を把握する。
-- 特権アカウントの利用状況や、想定外の権限昇格の痕跡がないかを点検する。
-- 公開PoCの存在を踏まえ、関連端末の監視を強め、優先度を上げて対応する。
+- Windows端末の適用状況を確認し、ベンダーの修正情報や回避策の有無を点検する。
+- EDRや監査ログで、Taskhost周辺の不審な挙動や権限変更の兆候を確認する。
+- 特権アカウントの利用を最小化し、影響範囲の大きい端末を優先して対応する。
 
 #### 関連する対象
 
@@ -310,6 +573,262 @@ CISA の Known Exploited Vulnerabilities に含まれており、公開PoCや検
 
 ---
 
+<a id="topic-4995"></a>
+
+### 2. LATAM Under Siege: Agent Tesla’s 18-Month Credential Theft Campaign Against Chilean Enterprises
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | GitHub |
+| <nobr>タグ</nobr> | <nobr>攻撃キャンペーン</nobr> / <nobr>マルウェア</nobr> / <nobr>ランサムウェア</nobr> |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 36.0 |
+| <nobr>実務影響</nobr> | 30.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+LATAM Under Siege: Agent Tesla’s 18-Month Credential Theft Campaign Against Chilean Enterprises に関する脅威・攻撃キャンペーン系の話題です。
+攻撃者、標的、TTP、IoC、悪用技術、検知観点を中心に確認する価値があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 標的OS、仮想化基盤、暗号化対象、バックアップ影響を確認する。
+- 初期侵入、横展開、認証情報窃取、永続化のTTPを確認する。
+- EDR/SIEMで検知すべきIoCや振る舞いを確認する。
+- ESXi、vCenter、バックアップ基盤、特権アカウントの保護状況を確認する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ベンダー | Microsoft | 言及あり | 0.80 |
+| ベンダー | VMware | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [LATAM Under Siege: Agent Tesla’s 18-Month Credential Theft Campaign Against Chil](https://any.run/cybersecurity-blog/agent-tesla-latam-enterprise) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
+
+<a id="topic-4581"></a>
+
+### 3. Fragnesia: New Linux kernel LPE bug was spawned by Dirty Frag patch (CVE-2026-46300)
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | GitHub |
+| <nobr>タグ</nobr> | <nobr>権限昇格</nobr> / <nobr>Linux</nobr> / <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>TTP</nobr> |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 31.0 |
+| <nobr>実務影響</nobr> | 40.0 |
+| <nobr>確度</nobr> | 58.0 |
+
+#### 概要
+
+Fragnesia: New Linux kernel LPE bug was spawned by Dirty Frag patch (CVE-2026-46300) に関する脆弱性情報です。
+では英語本文の全文翻訳は行わず、参照リンク、関連する対象、スコア根拠を中心に整理しています。詳細はベンダー公式情報、公的機関情報、NVD等を確認してください。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 3 sources。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- 権限昇格系。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 自組織で対象製品・関連資産を利用しているか確認する。
+- ベンダー公式情報または公的機関情報を優先確認する。
+- 対象バージョンか確認する。
+- 修正版・緩和策の適用状況を確認する。
+- インターネット露出の有無を確認する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-46300 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-43284 | 主要CVE | 1.00 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-46300](https://nvd.nist.gov/vuln/detail/CVE-2026-46300) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [Fragnesia: New Linux kernel LPE bug was spawned by Dirty Frag patch (CVE-2026-46](https://helpnetsecurity.com/2026/05/14/fragnesia-cve-2026-46300-linux-lpe-vulnerability) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [New Fragnesia Linux flaw lets attackers gain root privileges](https://bleepingcomputer.com/news/security/new-fragnesia-linux-flaw-lets-attackers-gain-root-privileges) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [New Fragnesia Linux Kernel LPE Grants Root Access via Page Cache Corruption](https://thehackernews.com/2026/05/new-fragnesia-linux-kernel-lpe-grants.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 継続。
+
+---
+
+<a id="topic-4667"></a>
+
+### 4. 委託先がランサム被害、サーバ内部に組合員の個人情報 - コープいしかわ
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | GitHub |
+| <nobr>タグ</nobr> | - |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 30.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+生活協同組合コープいしかわは、委託先がサイバー攻撃の被害に遭い、組合員などの個人情報が流出した可能性があることを明らかにした。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・インシデント関連の公開情報として観測しています。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 標的OS、仮想化基盤、暗号化対象、バックアップ影響を確認する。
+- 初期侵入、横展開、認証情報窃取、永続化のTTPを確認する。
+- EDR/SIEMで検知すべきIoCや振る舞いを確認する。
+- ESXi、vCenter、バックアップ基盤、特権アカウントの保護状況を確認する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [委託先がランサム被害、サーバ内部に組合員の個人情報 - コープいしかわ](https://security-next.com/184416) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 中。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
+
+<a id="topic-4956"></a>
+
+### 5. Kazuar: Anatomy of a nation-state botnet
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | GitHub |
+| <nobr>タグ</nobr> | <nobr>国家支援</nobr> / <nobr>ボットネット</nobr> / <nobr>マルウェア</nobr> |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+Kazuar: Anatomy of a nation-state botnet に関する脅威・攻撃キャンペーン系の話題です。
+攻撃者、標的、TTP、IoC、悪用技術、検知観点を中心に確認する価値があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 攻撃者、標的業種、対象地域を確認する。
+- 公開されたTTP、IoC、検知ロジックを確認する。
+- 自組織のログ・EDR・SIEMで検知可能か確認する。
+- 初期侵入経路、横展開、永続化、情報窃取の有無を確認する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ベンダー | Microsoft | 言及あり | 0.80 |
+| 製品 | Exchange | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Kazuar: Anatomy of a nation-state botnet](https://microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
+
 <a id="low-record-topics"></a>
 
 ## ❄️ 低温だが記録しておくトピック
@@ -319,30 +838,30 @@ CISA の Known Exploited Vulnerabilities に含まれており、公開PoCや検
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [Unifi Accessにおけるリモートコード実行（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 28.0 | 46.0 | 50.0 |
-| [NGINX Rewrite Module の18年前からの脆弱性により認証不要のRCEが可能に](https://thehackernews.com/2026/05/18-year-old-nginx-rewrite-module-flaw.html) | 28.0 | 46.0 | 50.0 |
-| [Netskopeのクロステナント認証バイパスに関するセキュリティ情報](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 28.0 | 38.0 | 42.0 |
-| [Oracle of Delphiが認証情報を窃取する](https://akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials) | 28.0 | 20.0 | 42.0 |
-| [Nansh0uキャンペーン―ハッカーの武器庫がさらに強化される](https://akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger) | 28.0 | 20.0 | 42.0 |
-| [Anthropicがビジネス分析・広告キャンペーン・簿記などの自動化ができる「Claude for Small Business」をリリース](https://gigazine.net/news/20260514-claude-for-small-business) | 27.0 | 20.0 | 42.0 |
-| [AnthropicがClaude Agent SDKクレジットを発表、OpenClawなどのサードパーティー自律型AIエージェントハーネスを再び稼働させることができるように](https://gigazine.net/news/20260514-anthropic-claude-agent-sdk-credits) | 27.0 | 20.0 | 42.0 |
-| [Meta AIとの「真のプライバシー保護」を実現した完全プライベートな会話を可能にする「Incognito Chat」が登場](https://gigazine.net/news/20260514-meta-ai-incognito-chat) | 27.0 | 20.0 | 42.0 |
-| [EY、新サービス「AIレッドチーミング」提供開始、生成AIのセキュリティリスクを可視化](https://news.mynavi.jp/techplus/article/20260514-4458902) | 26.0 | 20.0 | 42.0 |
-| [生成AI利用者の約3割がヒヤリハットを経験--サイバーセキュリティクラウド調査](https://japan.zdnet.com/article/35247508) | 26.0 | 20.0 | 42.0 |
-| [FragnesiaのLinux脆弱性により攻撃者がroot権限を取得可能に](https://bleepingcomputer.com/news/security/new-fragnesia-linux-flaw-lets-attackers-gain-root-privileges) | 25.0 | 40.0 | 50.0 |
-| [OpenAI Sora 2のセキュリティ：マルチモーダルLLMを駆動するシステムプロンプトの解析](https://mindgard.ai/resources/openai-sora-system-prompts) | 25.0 | 20.0 | 42.0 |
-| [必見: Geminiをハッキングする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 25.0 | 20.0 | 42.0 |
-| [ベクトル埋め込みのセキュリティギャップが企業AIパイプラインを露呈させる](https://helpnetsecurity.com/2026/05/14/vectorsmuggle-vector-embedding-security) | 25.0 | 20.0 | 42.0 |
-| [企業におけるAIガバナンスのギャップを埋めるには](https://helpnetsecurity.com/2026/05/14/ai-governance-gap-video) | 25.0 | 20.0 | 42.0 |
-| [くら寿司、万博店を再現した“メモリアル店“オープン 回転ベルトなど移設、世界70カ国の料理も](https://itmedia.co.jp/news/articles/2605/14/news084.html) | 24.0 | 20.0 | 43.0 |
-| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 23.0 | 34.0 | 50.0 |
-| [MixMaster MMORPGの逆アセンブルと解析](https://3r4y.github.io/posts/mixmasterreverseengineering) | 22.0 | 20.0 | 42.0 |
-| [「あなたの忍者に関する知識はすべて間違っている」と題した動画を海外で人気の科学系YouTubeチャンネルKurzgesagtが公開](https://gigazine.net/news/20260514-ninja-image) | 22.0 | 20.0 | 42.0 |
-| [ジャンボジェット機相当サイズのソーラードローンが自律型海上哨戒飛行の記録を更新して着水＆沈没](https://gigazine.net/news/20260514-solar-drone-jumbo-jet-wingspan-broke-record-crashed) | 22.0 | 20.0 | 42.0 |
-| [ウェブサーバ「nginx」に複数脆弱性 - 「クリティカル」も](https://security-next.com/184434) | 22.0 | 20.0 | 42.0 |
-| [Outlookの迷惑メールフォルダにおけるリンクプレビュー機能の簡単な回避方法](https://isc.sans.edu/diary/rss/32990) | 22.0 | 20.0 | 42.0 |
-| [Gemini向けノートPC「Googlebook」の登場によってChromebookはどうなるのか？](https://gigazine.net/news/20260514-googlebooks-premium-focus) | 22.0 | 20.0 | 42.0 |
-| [メモリの価格高騰がメモリの購入者であるAppleにとってむしろ有利に働く理由](https://gigazine.net/news/20260514-apple-memory-panic) | 22.0 | 20.0 | 42.0 |
+| [Siemens SIPROTEC 5に関する脆弱性情報](https://cisa.gov/news-events/ics-advisories/icsa-26-134-13) | 28.0 | 46.0 | 50.0 |
+| [Universal Robots Polyscope 5 の脆弱性](https://cisa.gov/news-events/ics-advisories/icsa-26-134-17) | 28.0 | 46.0 | 50.0 |
+| [18年前から存在するNGINXの脆弱性によりDoSやRCEの可能性](https://bleepingcomputer.com/news/security/18-year-old-nginx-vulnerability-allows-dos-potential-rce) | 28.0 | 38.0 | 42.0 |
+| [HackersがPraisonAIの脆弱性を公開後数時間で標的にした](https://securityweek.com/hackers-targeted-praisonai-vulnerability-hours-after-disclosure) | 28.0 | 38.0 | 42.0 |
+| [West Pharmaceutical、ランサムウェア攻撃後の業務復旧を開始](https://cybersecuritydive.com/news/west-pharmaceutical-restoring-operations-ransomware-attack/820250) | 28.0 | 30.0 | 42.0 |
+| [Foxconn、北米の工場がサイバー攻撃を受けたと確認](https://cyberscoop.com/foxconn-cyberattack-disrupts-north-america-factories) | 28.0 | 30.0 | 42.0 |
+| [Foxconnへの攻撃が浮き彫りにした製造業のサイバー危機](https://darkreading.com/cyberattacks-data-breaches/foxconn-attack-manufacturing-cyber-crisis) | 28.0 | 30.0 | 42.0 |
+| [ランサムウェアが物理的脅威に：サイバー犯罪者が暴力で脅すように変化](https://bitdefender.com/en-us/blog/hotforsecurity/ransomware-physical-threats-violence) | 28.0 | 30.0 | 42.0 |
+| [FrostyNeighbor APTがポーランドとウクライナの政府機関を慎重に標的化](https://darkreading.com/cyberattacks-data-breaches/frostyneighbor-apt-govt-orgs-poland-ukraine) | 28.0 | 20.0 | 42.0 |
+| [Mustang Pandaが関与するアジア太平洋地域のスパイ活動キャンペーンで更新版FDMTPバックドアを使用](https://infosecurity-magazine.com/news/mustang-panda-fdmtp-backdoor-apj) | 28.0 | 20.0 | 42.0 |
+| [中国のAPT、最近のキャンペーンで標的を拡大しバックドアを更新](https://securityweek.com/chinese-apts-expand-targets-update-backdoors-in-recent-campaigns) | 28.0 | 20.0 | 42.0 |
+| [KimsukyがPebbleDashベースのツールで組織を標的にする](https://securelist.com/kimsuky-appleseed-pebbledash-campaigns/119785) | 28.0 | 20.0 | 42.0 |
+| [Malwarebytesが一部のYahoo Mailのリダイレクトをブロックする理由](https://malwarebytes.com/blog/threat-intel/2026/05/why-malwarebytes-blocks-some-yahoo-mail-redirects) | 28.0 | 20.0 | 42.0 |
+| [パッチ適用が本格化する時期の到来](https://blog.talosintelligence.com/the-time-of-much-patching-is-coming) | 27.0 | 20.0 | 42.0 |
+| [自律型AIエージェントの多層防御](https://microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents) | 27.0 | 20.0 | 42.0 |
+| [設定ミスが脆弱性になるとき：AIアプリにおける悪用可能な誤設定](https://microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps) | 27.0 | 20.0 | 42.0 |
+| [AIを単一のスコアで評価する「AI IQ」が登場、各ベンチマーク結果をもとにスコアを算出](https://gigazine.net/news/20260514-ai-iq) | 27.0 | 20.0 | 42.0 |
+| [OpenAIがTanStackのサプライチェーン攻撃によるセキュリティ侵害を確認](https://bleepingcomputer.com/news/security/openai-confirms-security-breach-in-tanstack-supply-chain-attack) | 25.0 | 20.0 | 42.0 |
+| [ThreatsDay Bulletin: PAN-OS RCE、Mythos cURLの脆弱性、AIトークナイザー攻撃など10件以上の話題](https://thehackernews.com/2026/05/threatsday-bulletin-pan-os-rce-mythos.html) | 25.0 | 20.0 | 42.0 |
+| [Frontier AIモデルがセキュリティ脆弱性の迅速な発見を実現](https://cybersecuritydive.com/news/frontier-ai-rapid-discovery-security-vulnerabilities/820258) | 25.0 | 20.0 | 42.0 |
+| [HYCU aiRがバックアップから内部不正リスクとAIの利用状況を検知](https://helpnetsecurity.com/2026/05/14/hycu-air) | 25.0 | 20.0 | 42.0 |
+| [AIがサイバーセキュリティ投資を促進する一方で「死の谷」を拡大](https://darkreading.com/cybersecurity-operations/ai-cybersecurity-investments-valley-death) | 25.0 | 20.0 | 42.0 |
+| [Akamai、AIおよびブラウザセキュリティ企業LayerXを2億500万ドルで買収へ](https://securityweek.com/akamai-to-acquire-ai-and-browser-security-firm-layerx-for-205-million) | 25.0 | 20.0 | 42.0 |
+| [AIのセキュリティ活用は予想以上の速さで進化している](https://itpro.com/security/ai-is-getting-better-at-security-and-its-doing-it-faster-than-expected) | 25.0 | 20.0 | 42.0 |
 
 ---
 
