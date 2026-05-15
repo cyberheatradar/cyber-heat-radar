@@ -1,22 +1,22 @@
-# 📡 サイレーダー 2026-05-15 11:00 JST 試作版
+# 📡 サイレーダー 2026-05-15 17:00 JST 試作版
 
-このレポートは、2026-05-15 05:00 JST〜2026-05-15 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-15 11:00 JST〜2026-05-15 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 101
-- [音声で扱う想定のトピック](#audio-topics): 0
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 4
+- 観測トピック数: 138
+- [音声で扱う想定のトピック](#audio-topics): 1
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 3
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Cisco warns of new critical SD-WAN flaw exploited in zero-day attacks](#topic-4945) | 93.0 | 84.0 | 67.0 | GitHub | 直近掲載済み・再掲抑制 |
+| 1 | [CVE-2026-20182: CISA KEV catalog addition](#topic-4945) | 88.0 | 84.0 | 67.0 | GitHub | 直近掲載済み・再掲抑制 |
 | 2 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 54.0 | 82.0 | 81.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 3 | [Maximum Severity Cisco SD-WAN Bug Exploited in the Wild](#topic-5050) | 45.0 | 38.0 | 43.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 4 | [OpenAI asks macOS users to update after TanStack npm supply chain attack](#topic-5049) | 33.0 | 30.0 | 42.0 | GitHub | 直近掲載済み・再掲抑制 |
+| 3 | [NGINXでリモートコード実行の脆弱性が発見される、影響を受けるバージョンはこれ](#topic-4593) | 34.0 | 49.0 | 55.0 | GitHub | 直近掲載済み・再掲抑制 |
+| 4 | [\[Guest Diary\] New Malware Libraries means New Signatures, (Fri, May 15th)](#topic-5333) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -24,7 +24,65 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-5333"></a>
+
+### 1. [Guest Diary] New Malware Libraries means New Signatures, (Fri, May 15th)
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+SANS Internet Storm Centerの投稿として、新しいマルウェアライブラリの登場により新たなシグネチャ作成が必要になる、という趣旨の話題が取り上げられています。
+公開情報上は詳細な攻撃キャンペーンや被害規模は確認できず、技術コミュニティでの反応は強くないものの、脅威インテリジェンス上の関心事として扱われています。
+マルウェア側の実装が変わると、既存の検知ルールやシグネチャが追随を迫られるため、運用側の更新遅れが検知漏れにつながる可能性があります。
+新しい検知材料の把握は、SOCや脅威ハンティングの精度維持に直結します。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 既存の検知ルールやシグネチャで、新しい亜種や派生に対する追従状況を確認する。
+- EDR/AV/IDSの検知ログを見直し、類似挙動の未検知がないか点検する。
+- 脅威情報の更新頻度を高め、ベンダー提供のルールやフィードの適用状況を確認する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [[Guest Diary]  New Malware Libraries means New Signatures, (Fri, May 15th)](https://isc.sans.edu/diary/rss/32986) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -32,34 +90,35 @@
 
 <a id="topic-4945"></a>
 
-### 1. Cisco warns of new critical SD-WAN flaw exploited in zero-day attacks
+### 1. CVE-2026-20182: CISA KEV catalog addition
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>認証バイパス</nobr> / <nobr>KEV</nobr> / <nobr>政策・規制</nobr> / <nobr>防御・運用</nobr> / <nobr>IoC</nobr> / <nobr>ゼロデイ</nobr> / <nobr>PoC</nobr> / <nobr>国家支援</nobr> |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>認証バイパス</nobr> / <nobr>ゼロデイ</nobr> / <nobr>KEV</nobr> / <nobr>IoC</nobr> / <nobr>PoC</nobr> / <nobr>政策・規制</nobr> / <nobr>防御・運用</nobr> / <nobr>国家支援</nobr> |
 | <nobr>温度状態</nobr> | 高温 |
-| <nobr>温度感</nobr> | 93.0 |
+| <nobr>温度感</nobr> | 88.0 |
 | <nobr>実務影響</nobr> | 84.0 |
 | <nobr>確度</nobr> | 67.0 |
 
 #### 概要
 
-Ciscoは、Catalyst SD-WAN Controllerおよび関連製品に存在する認証バイパスの脆弱性CVE-2026-20182を修正する更新を公開し、限定的なゼロデイ攻撃で悪用されたと説明しています。
-脆弱性の深刻度はCVSS 10.0とされ、影響を受ける環境では管理者権限の不正取得につながる可能性があるとされています。
-SD-WANコントローラはネットワーク制御の中核に位置するため、侵害されると広範な影響が出やすい点が注目されています。
-加えて、実際の悪用が示唆されているため、通常の脆弱性情報よりも早急な対応が求められます。
+CISAは、Cisco Catalyst SD-WAN Controllerに関する認証バイパスの脆弱性CVE-2026-20182をKEVカタログに追加しました。
+Ciscoはこの脆弱性への修正を公表しており、限定的な攻撃で悪用されたと説明しています。
+KEV入りは、実際に悪用が確認されている、またはその可能性が高い脆弱性として優先対応が求められることを意味します。
+SD-WAN基盤はネットワーク制御の要所であるため、影響範囲が大きくなりやすい点が注目されています。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 6 sources。
+- 複数ソースで確認: 7 sources。
 - 実悪用・ゼロデイ文脈。
 - 公開PoC・検証コード言及あり。
 - 脅威・攻撃キャンペーン文脈。
 - 技術者コミュニティ反応: 中。
+- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
@@ -81,19 +140,15 @@ SD-WANコントローラはネットワーク制御の中核に位置するた�
 
 #### 担当者向け確認ポイント
 
-- Ciscoの案内に沿って、該当製品の修正版適用状況を確認する。
-- 自組織でCatalyst SD-WAN Controller / Managerの利用有無と対象バージョンを棚卸しする。
-- 異常な制御接続や管理権限の変化など、ベンダーが示す確認観点に基づいて影響有無を点検する。
+- 該当するCisco Catalyst SD-WAN Controller／Managerの利用有無を確認し、ベンダーの修正情報を基に早急に更新を適用する。
+- KEV対象として優先度を上げ、外部公開状況や管理系インターフェースへの到達性を見直す。
+- IOCや監視強化の案内があれば、管理者権限の異常操作や設定変更の兆候を重点的に点検する。
 
 #### 関連する対象
 
 | <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
 |---|---|---|---:|
 | 脆弱性 | CVE-2026-20182 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20133 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20128 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20122 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20127 | 主要CVE | 1.00 |
 | ベンダー | Cisco | 言及あり | 0.80 |
 
 #### 参照リンク
@@ -101,13 +156,13 @@ SD-WANコントローラはネットワーク制御の中核に位置するた�
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
 | <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20182](https://nvd.nist.gov/vuln/detail/CVE-2026-20182) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [Cisco Patches Another SD-WAN Zero-Day, the Sixth Exploited in 2026](https://securityweek.com/cisco-patches-another-sd-wan-zero-day-the-sixth-exploited-in-2026) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds Cisco SD-WAN CVE-2026-20182 to KEV After Admin Access Exploits](https://thehackernews.com/2026/05/cisa-adds-cisco-sd-wan-cve-2026-20182.html) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Cisco warns of new critical SD-WAN flaw exploited in zero-day attacks](https://bleepingcomputer.com/news/security/cisco-warns-of-new-critical-sd-wan-flaw-exploited-in-zero-day-attacks) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Ac](https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Ongoing exploitation of Cisco Catalyst SD-WAN vulnerabilities](https://blog.talosintelligence.com/sd-wan-ongoing-exploitation) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [The Dark Side of Efficiency: When Network Controllers Become "God Mode" for Atta](https://rapid7.com/blog/post/tr-efficiencys-dark-side-network-controllers-in-god-mode-attackers-sd-wan) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-20182: Critical authentication bypass in Cisco Catalyst SD-WAN Controll](https://rapid7.com/blog/post/ve-cve-2026-20182-critical-authentication-bypass-cisco-catalyst-sd-wan-controller-fixed) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>公的・一次情報</nobr> | [Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://cisa.gov/news-events/alerts/2026/05/14/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CVE-2026-20182: Critical authentication bypass in Cisco Catalyst SD-WAN Controll](https://rapid7.com/blog/post/ve-cve-2026-20182-critical-authentication-bypass-cisco-catalyst-sd-wan-controller-fixed) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
@@ -139,9 +194,10 @@ SD-WANコントローラはネットワーク制御の中核に位置するた�
 
 #### 概要
 
-CVE-2025-60710は、Microsoft WindowsのTaskhost関連の処理におけるローカル権限昇格の脆弱性として整理されています。
-CISAのKnown Exploited Vulnerabilitiesに掲載されており、公開PoCの存在も示されています。
-権限昇格の脆弱性は、侵入後に被害を拡大させる足がかりになりやすいため注意が必要です。公開PoCの言及があることで、検証や悪用のハードルが下がる可能性があります。
+CVE-2025-60710は、Microsoft WindowsのTaskhost関連のタスク処理におけるローカル権限昇格の脆弱性として扱われています。
+CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証コードへの言及もあるため、影響確認の優先度が高い案件です。
+権限昇格の問題は、端末内での被害拡大や管理者権限の奪取につながる可能性があるため注目されます。
+KEV掲載は、実際に悪用されている、または悪用が懸念される脆弱性として早急な対応が求められる目安になります。
 
 #### CISA KEV詳細
 
@@ -185,9 +241,9 @@ CISAのKnown Exploited Vulnerabilitiesに掲載されており、公開PoCの存
 
 #### 担当者向け確認ポイント
 
-- Windows環境での適用状況を確認し、関連する修正や緩和策の有無を点検する。
-- 特にローカルでの権限上昇につながる挙動がないか、監査・検知ルールを見直す。
-- CISA KEV掲載対象として、優先度を上げて資産棚卸しと対応計画を確認する。
+- Windows環境でCVE-2025-60710の影響有無を確認し、関連する更新プログラムの適用状況を点検する。
+- Taskhostを含むタスク関連の挙動や、通常と異なる権限昇格の兆候がないかを監視する。
+- 社内の優先度付けでは、KEV掲載の有無と公開PoCの存在を踏まえて高めに扱う。
 
 #### 関連する対象
 
@@ -219,139 +275,81 @@ CISAのKnown Exploited Vulnerabilitiesに掲載されており、公開PoCの存
 
 ---
 
-<a id="topic-5050"></a>
+<a id="topic-4593"></a>
 
-### 3. Maximum Severity Cisco SD-WAN Bug Exploited in the Wild
+### 3. NGINXでリモートコード実行の脆弱性が発見される、影響を受けるバージョンはこれ
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>KEV</nobr> / <nobr>脅威アクター</nobr> / <nobr>CVE</nobr> |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>RCE</nobr> / <nobr>CVE</nobr> |
 | <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 45.0 |
-| <nobr>実務影響</nobr> | 38.0 |
-| <nobr>確度</nobr> | 43.0 |
+| <nobr>温度感</nobr> | 34.0 |
+| <nobr>実務影響</nobr> | 49.0 |
+| <nobr>確度</nobr> | 55.0 |
 
 #### 概要
 
-CiscoのSD-WAN関連の脆弱性が、現実の攻撃で悪用されたと報じられています。
-報道では、今年に入ってCiscoのネットワーク制御システムに対するCVSS 10.0の脆弱性が再び攻撃者に利用されたとされています。
-ネットワーク機器や制御系の脆弱性は、影響範囲が広く、侵害時の波及も大きくなりやすいため注目されています。
-悪用観測がある場合は、単なる理論上のリスクではなく、迅速な確認と対応が必要になります。
+NGINXのngx_http_rewrite_moduleに、CVE-2026-42945として追跡される深刻な脆弱性が公表されました。
+報道では、ヒープバッファオーバーフローによりリモートコード実行につながる可能性があるとされ、影響範囲はNGINX Open SourceおよびNGINX Plusに及ぶ可能性があります。
+Webサーバー基盤として広く使われる製品のため、該当環境がある場合は優先度高く確認すべき話題です。
+技術詳細や再現情報が出ていることで、ベンダー告知や利用環境の影響確認が進みやすい点も注目されています。
 
 #### 温度感の理由
 
 ##### 温度感
-- 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
+- 複数ソースで確認: 2 sources。
+- 技術詳細・再現情報あり。
+- 技術者コミュニティ反応: 弱。
+- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
-- 悪用情報あり。
+- 技術詳細により影響確認が進みやすい。
+- RCEまたは認証バイパス系。
 
 ##### 確度
+- 複数ソース確認。
+- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 攻撃・悪用観測シグナル
 
-- シグナル種別: 悪用観測あり。
+- シグナル種別: 技術詳細・再現情報あり。
 - 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+- 確認方針: 技術詳細、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
 
 #### 担当者向け確認ポイント
 
-- Cisco SD-WAN環境で該当する製品・バージョンの有無を確認し、ベンダー告知に基づく修正適用を急ぐ。
-- 外部公開されている管理画面や制御系インターフェースの露出状況を見直し、不要な公開を避ける。
-- 関連ログや管理操作の履歴を確認し、異常な認証・設定変更・通信の兆候がないか点検する。
+- 利用中のNGINXの版数と該当モジュールの利用有無を確認する。
+- ベンダーの修正版・緩和策の案内を待たずに、適用可能な更新計画を前倒しで検討する。
+- Webサーバーの異常終了や不審な挙動など、関連ログの監視を強化する。
 
 #### 関連する対象
 
 | <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
 |---|---|---|---:|
-| ベンダー | Cisco | 言及あり | 0.80 |
+| 脆弱性 | CVE-2026-42945 | 主要CVE | 1.00 |
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [Maximum Severity Cisco SD-WAN Bug Exploited in the Wild](https://darkreading.com/vulnerabilities-threats/maximum-severity-cisco-sd-wan-bug-exploited) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-42945](https://nvd.nist.gov/vuln/detail/CVE-2026-42945) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [NGINXでリモートコード実行の脆弱性が発見される、影響を受けるバージョンはこれ](https://gigazine.net/news/20260515-nginx-remote-code-execution) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [18-Year-Old NGINX Rewrite Module Flaw Enables Unauthenticated RCE](https://thehackernews.com/2026/05/18-year-old-nginx-rewrite-module-flaw.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
 - SNS反応: 反応未確認。
 - 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応あり・低信頼。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 初出。
-
----
-
-<a id="topic-5049"></a>
-
-### 4. OpenAI asks macOS users to update after TanStack npm supply chain attack
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>サプライチェーン</nobr> / <nobr>AI</nobr> / <nobr>攻撃キャンペーン</nobr> |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 33.0 |
-| <nobr>実務影響</nobr> | 30.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-OpenAIが、TanStackを巡るnpmのサプライチェーン攻撃に関連して、macOS利用者に更新を促しているとされています。
-公開情報では、この動きはTanStackだけでなく、複数のAI関連企業に結びつくnpmやPyPIパッケージへ影響が広がっている状況を受けたものとされています。
-サプライチェーン攻撃は、直接の標的でなくても依存関係を通じて開発環境や利用者に影響が及ぶ点が重要です。
-特にnpmやPyPIはソフトウェア供給網で広く使われており、影響範囲が拡大しやすいことが注目されています。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- npm/PyPI・侵害パッケージ・開発者/CI/CDへの影響を伴うサプライチェーン攻撃。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 利用中の依存パッケージに更新や異常がないか確認し、公式アナウンスに沿って対応する。
-- 開発・CI/CD環境で、問題となる可能性のあるパッケージの固定化や再取得の有無を点検する。
-- macOSを含む端末側でも、ベンダーや保守担当からの更新案内を優先して適用する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ai_model_or_project | OpenAI | 主題 | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [OpenAI asks macOS users to update after TanStack npm supply chain attack](https://therecord.media/openai-asks-macos-users-to-update-tanstack-npm) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: なし。
-- 継続観測: 初出。
+- 日本語圏メディア波及: 中。
+- 日本語圏反応: 反応あり。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: 技術詳細・再現情報あり。
+- 継続観測: 継続。
 
 ---
 
@@ -364,30 +362,30 @@ OpenAIが、TanStackを巡るnpmのサプライチェーン攻撃に関連して
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [NGINXのrewrite機能に「緊急」の脆弱性 “見落とし設定”がRCEの入り口に](https://atmarkit.itmedia.co.jp/ait/articles/2605/15/news043.html) | 29.0 | 38.0 | 42.0 |
-| [GMOサイバーセキュリティ byイエラエ、オンラインセミナー「増え続けるランサムウェア被害、限られた予算でどこまで守る？脆弱性対策優先順位の付け方」5 / 19 開催](https://scan.netsecurity.ne.jp/article/2026/05/15/55279.html) | 29.0 | 30.0 | 42.0 |
-| [マルタケの一部サーバでのシステム障害、不正アクセス（ランサムウェア）による影響の可能性も含め調査](https://scan.netsecurity.ne.jp/article/2026/05/15/55278.html) | 29.0 | 30.0 | 42.0 |
-| [公益財団法人B&G財団にマルウェア攻撃、サーバでシステム障害が発生](https://scan.netsecurity.ne.jp/article/2026/05/15/55276.html) | 29.0 | 20.0 | 42.0 |
-| [Burst Statistics WordPressプラグインの認証バイパス脆弱性を悪用する攻撃者](https://bleepingcomputer.com/news/security/hackers-exploit-auth-bypass-flaw-in-burst-statistics-wordpress-plugin) | 28.0 | 38.0 | 42.0 |
-| [セキュアな接続と強固なバックアップでランサムウェア被害の早期復旧を支援するサービス、KDDIアイレットが提供開始](https://internet.watch.impress.co.jp/docs/news/2108724.html) | 28.0 | 30.0 | 42.0 |
-| [「Linux」カーネルに三たび重大な脆弱性が見つかる--AIツールの登場で加速](https://japan.zdnet.com/article/35247550) | 26.0 | 20.0 | 42.0 |
-| [AI事業者が争う姿勢 朝日、日経の記事無断使用巡り](https://itmedia.co.jp/news/articles/2605/15/news068.html) | 26.0 | 20.0 | 42.0 |
-| [Anthropicとゲイツ財団が提携 AIによる社会貢献に2億ドル拠出](https://itmedia.co.jp/news/articles/2605/15/news064.html) | 26.0 | 20.0 | 42.0 |
-| [AppleがiOS 26.5公開 カーネルやWebKitなど多数の脆弱性を修正、早期更新を](https://itmedia.co.jp/enterprise/articles/2605/15/news042.html) | 25.0 | 28.0 | 42.0 |
-| [TeamPCPハッカーがMistral AIのコードリポジトリを売りに出す](https://bleepingcomputer.com/news/security/teampcp-hackers-advertise-mistral-ai-code-repos-for-sale) | 25.0 | 20.0 | 42.0 |
-| [国防総省のサイバー担当者、先進AIを「革命的な戦争」と呼ぶ](https://cyberscoop.com/pentagon-cyber-ai-revolutionary-warfare-mythos) | 25.0 | 20.0 | 42.0 |
-| [ホワイトハウスのサイバー担当者、AI時代におけるIDセキュリティの重要性を強調](https://cyberscoop.com/white-house-federal-identity-security-ai-risks) | 25.0 | 20.0 | 42.0 |
-| [日本人の頭蓋骨、100年間で大きく変化 “短頭化”し男女差も拡大 東大や科警研などが研究発表](https://itmedia.co.jp/news/articles/2605/15/news028.html) | 24.0 | 20.0 | 43.0 |
-| [NVIDIA製「RTX5090」登場で記憶認証は崩壊？ GPU進化に負けないパスワードを作るコツ](https://atmarkit.itmedia.co.jp/ait/articles/2605/15/news041.html) | 24.0 | 20.0 | 43.0 |
-| [OpenAIがAppleに対する法的措置も視野に法律事務所に相談中、加入者増加と知名度向上に不服](https://gigazine.net/news/20260515-openai-apple-partnership-frays) | 22.0 | 20.0 | 42.0 |
-| [スマートグラス「Meta Ray-Ban Display」に指の動きだけで文字を入力できる手書き入力が搭載へ](https://gigazine.net/news/20260515-meta-ray-ban-display-neural-handwriting) | 22.0 | 20.0 | 42.0 |
-| [AMD製AIチップで開発された拡散言語モデル「ZAYA1-8B-Diffusion-Preview」が登場、自己回帰モデルを拡散モデルに変換](https://gigazine.net/news/20260515-zaya1-8b-diffusion-preview) | 22.0 | 20.0 | 42.0 |
-| [xAIがコーディングエージェントCLIツール「Grok Build」のベータ版をリリース](https://gigazine.net/news/20260515-grok-build-beta) | 22.0 | 20.0 | 42.0 |
-| [未査読論文リポジトリのarXivが「論文にLLMによる間違いや架空の引用が含まれていたら1年間投稿禁止」の方針を示す](https://gigazine.net/news/20260515-arxiv-ai-paper-banned) | 22.0 | 20.0 | 42.0 |
-| [「VMware Fusion」に権限昇格の脆弱性 - 修正版を公開](https://security-next.com/184463) | 22.0 | 20.0 | 42.0 |
-| [ChatGPTのスマホアプリにCodexへの指示機能が追加される、PCを開かずともCodexでエージェントコーディングやPC自動操作を実行可能](https://gigazine.net/news/20260515-codex-mobile-app) | 22.0 | 20.0 | 42.0 |
-| [「Chrome」で脆弱性79件を修正 - 14件が「クリティカル」](https://security-next.com/184460) | 22.0 | 20.0 | 42.0 |
-| [自分の「好き」を記録しながら同じ趣味の人とゆるやかにつながりあえるSNS「コレクトピア」で自分の趣味をさくっとコレクションにまとめてみた](https://gigazine.net/news/20260515-collectopia) | 22.0 | 20.0 | 42.0 |
+| [アップルのiPadOS等の複数製品における複数の脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015732.html) | 27.0 | 23.0 | 43.0 |
+| [アップルのiPadOS等の複数製品における整数オーバーフローの脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015734.html) | 27.0 | 23.0 | 43.0 |
+| [アップルのiPadOS等の複数製品におけるNULL ポインタデリファレンスに関する脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015722.html) | 27.0 | 23.0 | 43.0 |
+| [アップルのiPadOS等の複数製品におけるリソースの枯渇に関する脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015728.html) | 27.0 | 23.0 | 43.0 |
+| [アップルのiPadOS等の複数製品における境界外書き込みに関する脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015726.html) | 27.0 | 23.0 | 43.0 |
+| [アニメ・イラストに強い画像生成AI「Anima」の正式版がついに登場、タグ・自然言語両対応でSDXLやIllustrious系モデルが動作するPCなら余裕でローカル実行可能](https://gigazine.net/news/20260515-anima-image-generation-ai) | 27.0 | 20.0 | 42.0 |
+| [動画生成AIのRunwayが日本に拠点を開設](https://gigazine.net/news/20260515-runway-comes-to-japan) | 27.0 | 20.0 | 42.0 |
+| [画像生成AI「FLUX.2」によるアウトペインティングに特化した「FLUX Outpainting」が登場、実際に試してみた](https://gigazine.net/news/20260515-flux-outpainting) | 27.0 | 20.0 | 42.0 |
+| [パナソニックHD、2032年への成長戦略--AIインフラに5000億円投資へ](https://japan.zdnet.com/article/35247569) | 26.0 | 20.0 | 42.0 |
+| [AIエージェントをJava開発の“最強のチームメイト”に変えるイベント 「Microsoft Java Day」が5/28開催](https://ascii.jp/elem/000/004/401/4401900?rss=) | 26.0 | 20.0 | 42.0 |
+| [「客先常駐」も、OpenAIがAI導入の新会社 問われるIT部門やSIerの存在意義](https://xtech.nikkei.com/atcl/nxt/column/18/00001/11746) | 26.0 | 20.0 | 42.0 |
+| [Keycardが開発者に自律型AIエージェントのスコープ付きアクセスによる安全な保護を提供](https://helpnetsecurity.com/2026/05/15/keycard-for-multi-agent-apps) | 25.0 | 20.0 | 42.0 |
+| [AI監視のパラドックス：その投資は見合うのか？](https://helpnetsecurity.com/2026/05/15/ai-workforce-impact-report) | 25.0 | 20.0 | 42.0 |
+| [「Exchange Server」に脆弱性 - すでに悪用を確認、パッチは準備中](https://security-next.com/184486) | 24.0 | 20.0 | 43.0 |
+| [アドビのAdobe Commerce等の複数製品におけるクロスサイトスクリプティングの脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015686.html) | 23.0 | 26.0 | 42.0 |
+| [アップルのmacOSにおける複数の脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015725.html) | 23.0 | 20.0 | 43.0 |
+| [The Go Projectのimageにおける不特定の脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015705.html) | 23.0 | 20.0 | 43.0 |
+| [The Go Projectのimageにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015706.html) | 23.0 | 20.0 | 43.0 |
+| [Pengutronix e.K.のbareboxにおける整数オーバーフローの脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015681.html) | 23.0 | 20.0 | 43.0 |
+| [Pengutronix e.K.のbareboxにおける境界外読み取りに関する脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015683.html) | 23.0 | 20.0 | 43.0 |
+| [Pengutronix e.K.のbareboxにおける無限ループに関する脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015682.html) | 23.0 | 20.0 | 43.0 |
+| [PHPOfficeのPhpSpreadsheetにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015661.html) | 23.0 | 20.0 | 43.0 |
+| [ZTEのZX297520V3 ファームウェアにおける境界外書き込みに関する脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015669.html) | 23.0 | 20.0 | 43.0 |
+| [The Go ProjectのGoにおける不特定の脆弱性](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015674.html) | 23.0 | 20.0 | 43.0 |
 
 ---
 
