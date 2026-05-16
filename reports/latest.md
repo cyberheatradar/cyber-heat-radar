@@ -1,12 +1,12 @@
-# 📡 サイレーダー 2026-05-16 11:00 JST 試作版
+# 📡 サイレーダー 2026-05-16 17:00 JST 試作版
 
-このレポートは、2026-05-16 05:00 JST〜2026-05-16 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-16 11:00 JST〜2026-05-16 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 39
+- 観測トピック数: 38
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 1
 - [低温だが記録しておくトピック](#low-record-topics): 24
@@ -44,10 +44,9 @@
 
 #### 概要
 
-CVE-2025-60710は、Microsoft WindowsのTaskhost関連の処理に起因するローカル権限昇格の脆弱性として整理されています。
-CISAのKnown Exploited Vulnerabilitiesにも含まれており、公開PoCの言及もあるため、影響範囲の確認と対策状況の点検が重要です。
-権限昇格は、初期侵入後に管理者権限へ進む足がかりになりやすく、被害の拡大に直結し得ます。
-実際に悪用対象として扱われている情報があるため、優先度を上げて対応を検討すべき脆弱性です。
+CVE-2025-60710は、Microsoft WindowsのTaskhost関連タスクにおけるローカル権限昇格の脆弱性として扱われています。
+CISAのKnown Exploited Vulnerabilitiesに掲載されており、公開PoCや検証コードの言及もあるため、優先度の高い確認対象とみられます。
+権限昇格は、侵入後に被害範囲を拡大されるおそれがあるため、実害につながりやすい類型です。さらにKEV掲載は、少なくとも悪用実績がある前提で対応を急ぐ必要があることを示します。
 
 #### CISA KEV詳細
 
@@ -91,9 +90,9 @@ CISAのKnown Exploited Vulnerabilitiesにも含まれており、公開PoCの言
 
 #### 担当者向け確認ポイント
 
-- 対象のWindows環境で、該当CVEの影響有無と修正適用状況を確認する。
-- 特権アカウントや端末上の不審な権限昇格の兆候、Taskhost関連の異常を点検する。
-- 資産管理上、影響を受ける端末を早めに把握し、更新適用を優先する。
+- 対象となるWindows環境で、適用可能な修正プログラムやベンダー情報を確認する。
+- 特権アカウントやローカル管理者権限の付与状況を点検し、不要な権限を整理する。
+- Taskhostや関連タスクの挙動を監視し、異常な権限昇格の兆候がないか確認する。
 
 #### 関連する対象
 
@@ -134,30 +133,30 @@ CISAのKnown Exploited Vulnerabilitiesにも含まれており、公開PoCの言
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [OpenAI、「ChatGPT」に個人向け資産管理機能 金融口座と連携](https://itmedia.co.jp/news/articles/2605/16/news027.html) | 26.0 | 20.0 | 42.0 |
-| [魔法使いの夜・鬼滅の刃・アズールレーンの巨大タペストリーが空港内に登場、「マチ★アソビ vol.30」空港アニメジャックはこんな感じ](https://gigazine.net/news/20260516-airport-machiasobi30) | 22.0 | 20.0 | 42.0 |
-| [「マチ★アソビ vol.30」全記事一覧まとめ](https://gigazine.net/news/20260516-summary-machiasobi30) | 22.0 | 20.0 | 42.0 |
-| [コウモリに方言が生まれていることが判明](https://gigazine.net/news/20260516-ghost-bat-dialects) | 22.0 | 20.0 | 42.0 |
-| [「涼宮ハルヒの憂鬱」の視聴順を巡る4chan匿名ユーザーの投稿→うっかり数学の未解決問題で歴史的発見 2021年に論文化](https://itmedia.co.jp/news/articles/2605/16/news003.html) | 21.0 | 20.0 | 42.0 |
-| [「Ubuntu 26.04 vs. Fedora 44」--強力な「Linux」ディストロのどちらを選ぶか](https://japan.zdnet.com/article/35247365) | 21.0 | 20.0 | 42.0 |
-| [Unifi Access におけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
-| [Netskopeにおけるクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 20.0 | 38.0 | 42.0 |
+| [『なのは』シリーズ完全新作『魔法少女リリカルなのは EXCEEDS Gun Blaze Vengeance』マチ★アソビスペシャルステージレポート、エンディングテーマ生披露も](https://gigazine.net/news/20260516-nanoha-machiasobi30) | 25.0 | 20.0 | 42.0 |
+| [四国めたんの中の人・田中小雪さんと一緒にアニメのアフレコができる豪華すぎるイベントが徳島で開催されました](https://gigazine.net/news/20260516-shikoku-metan-machiasobi30) | 22.0 | 20.0 | 42.0 |
+| [北海道の北広島市でサブカルイベント「きたコン」の開催が決定、野球のシーズンオフと積雪回避を狙って11月に開催](https://gigazine.net/news/20260516-kitakon-machiasobi30) | 22.0 | 20.0 | 42.0 |
+| [電子書籍を日本語など1000以上の言語で音声読み上げファイルに変換できる「ebook2audiobook」レビュー](https://gigazine.net/news/20260516-ebook2audiobook) | 22.0 | 20.0 | 42.0 |
+| [Anthropicの「Mythos」は予想以上に急激な進化--英国機関が分析](https://japan.zdnet.com/article/35247602) | 21.0 | 20.0 | 42.0 |
+| [Linuxカーネルに「ssh-keysign-pwn」の脆弱性発覚--直近4度目](https://japan.zdnet.com/article/35247599) | 21.0 | 20.0 | 42.0 |
+| [UniFi Accessのリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
+| [Netskopeにおけるクロステナント認証バイパスのセキュリティ問題](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 20.0 | 38.0 | 42.0 |
 | [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
-| [Security: 4 Bytes, 1 Lie - SMAPを回避するカーネルポインタの信頼詐欺（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
-| [Spring ELを用いて環境変数とシステムプロパティを露出させる手法（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
-| [Security: COMを使って低権限でブート構成データ（BCD）を削除できる問題（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
-| [Colorado州知事が選挙否認派のTina Petersの服役刑を減刑](https://cyberscoop.com/colorado-election-denier-tina-peters-sentence-commuted-governor-jared-polis) | 20.0 | 20.0 | 42.0 |
-| [PLEASE_READ_ME: 機会的なランサムウェアがMySQLサーバーを壊滅させる](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 16.0 | 30.0 | 42.0 |
-| [Security: iBootログの難読化解除と再難読化](https://nyansatan.github.io/iboot-log-deobfuscation) | 10.0 | 20.0 | 48.0 |
+| [Spring ELを悪用して環境変数とシステムプロパティを露出させる攻撃（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
+| [Security: COM経由で低権限のままBoot Configuration Data（BCD）を削除可能（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
+| [Security: 4 Bytes, 1 Lie - SMAPを回避するカーネルポインタの詐欺的手法（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
+| [PLEASE_READ_ME: MySQLサーバーを壊滅させる機会主義的ランサムウェア](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 16.0 | 30.0 | 42.0 |
+| [Security: iBootログの難読化解除](https://nyansatan.github.io/iboot-log-deobfuscation) | 10.0 | 20.0 | 48.0 |
 | [サイバーリスクインテリジェンスの未来](https://bitsight.com/de/blog/die-zukunft-liegt-cyber-risk-intelligence) | 10.0 | 20.0 | 42.0 |
-| [PowerShellでChromium系ブラウザのパスワードを復号する手法](https://github.com/The-Viper-One/Invoke-PowerChrome) | 10.0 | 20.0 | 42.0 |
-| [PythonでファイルやOffice文書をMarkdownに変換するツール](https://github.com/microsoft/markitdown) | 10.0 | 20.0 | 42.0 |
+| [PS5のYouTubeアプリを悪用したY2JBによるユーザーランドコード実行](https://github.com/Gezine/Y2JB) | 10.0 | 20.0 | 42.0 |
+| [PowerShellでChromium系ブラウザのパスワードを復号する攻撃](https://github.com/The-Viper-One/Invoke-PowerChrome) | 10.0 | 20.0 | 42.0 |
+| [Fun: ファイルやOffice文書をMarkdownに変換するPythonツール](https://github.com/microsoft/markitdown) | 10.0 | 20.0 | 42.0 |
 | [TigerBeetleで高性能チケット管理システムを構築する方法](https://renerocks.ai/blog/2025-11-02--tigerfans) | 10.0 | 20.0 | 42.0 |
 | [Fun: Terminal UI Operating System](https://github.com/Gaurav-Gosain/tuios) | 10.0 | 20.0 | 42.0 |
 | [NTLMリレーからKerberosリレーへ：知っておくべきすべて](https://decoder.cloud/2025/04/24/from-ntlm-relay-to-kerberos-relay-everything-you-need-to-know) | 10.0 | 20.0 | 42.0 |
-| [PS5のYouTubeアプリを悪用したY2JBによるユーザーランドコード実行](https://github.com/Gezine/Y2JB) | 10.0 | 20.0 | 42.0 |
-| [Advanced JavaScriptファイルの発見・分析ツールに対するハック](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
-| [Security: OpenAI Sora 2の内部を探る - マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 10.0 | 20.0 | 42.0 |
+| [Advanced JavaScriptファイルの発見と解析ツールをハックする方法](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
+| [必見：Geminiをハックする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 10.0 | 20.0 | 42.0 |
+| [Security: OpenAI Sora 2の内部――マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 10.0 | 20.0 | 42.0 |
 
 ---
 
