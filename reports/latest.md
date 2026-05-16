@@ -1,19 +1,17 @@
-# 📡 サイレーダー 2026-05-16 17:00 JST 試作版
+# 📡 サイレーダー 2026-05-17 05:00 JST 試作版
 
-このレポートは、2026-05-16 11:00 JST〜2026-05-16 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-16 17:00 JST〜2026-05-17 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 38
+- 観測トピック数: 64
 - [音声で扱う想定のトピック](#audio-topics): 0
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
-| Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 54.0 | 82.0 | 81.0 | GitHub | 直近掲載済み・再掲抑制 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -27,102 +25,7 @@
 
 ## 📌 GitHubのみ掲載の注目トピック
 
-<a id="topic-12"></a>
-
-### 1. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>Windows</nobr> / <nobr>権限昇格</nobr> / <nobr>TTP</nobr> / <nobr>脆弱性</nobr> / <nobr>KEV</nobr> |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 54.0 |
-| <nobr>実務影響</nobr> | 82.0 |
-| <nobr>確度</nobr> | 81.0 |
-
-#### 概要
-
-CVE-2025-60710は、Microsoft WindowsのTaskhost関連タスクにおけるローカル権限昇格の脆弱性として扱われています。
-CISAのKnown Exploited Vulnerabilitiesに掲載されており、公開PoCや検証コードの言及もあるため、優先度の高い確認対象とみられます。
-権限昇格は、侵入後に被害範囲を拡大されるおそれがあるため、実害につながりやすい類型です。さらにKEV掲載は、少なくとも悪用実績がある前提で対応を急ぐ必要があることを示します。
-
-#### CISA KEV詳細
-
-- **CVE**: CVE-2025-60710
-- **Vendor / Project**: Microsoft
-- **Product**: Windows
-- **Vulnerability Name**: Microsoft Windows Link Following Vulnerability
-- **Date Added**: 2026-04-13
-- **Due Date**: 2026-04-27
-- **Known Ransomware Use**: Unknown
-
-**Required Action**
-
-> Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 2 sources。
-- CISA KEV関連。
-- 公開PoC・検証コード言及あり。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用済み脆弱性として優先確認が必要。
-- 公開PoCにより再現・悪用可能性が上がる。
-- 権限昇格系。
-
-##### 確度
-- 複数ソース確認。
-- 公的機関情報あり。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 公開PoC・検証コード言及あり。
-- 公開PoC/Exploitコード: 確認あり。
-- 直接PoCリンク: 掲載しません。
-- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
-
-#### 担当者向け確認ポイント
-
-- 対象となるWindows環境で、適用可能な修正プログラムやベンダー情報を確認する。
-- 特権アカウントやローカル管理者権限の付与状況を点検し、不要な権限を整理する。
-- Taskhostや関連タスクの挙動を監視し、異常な権限昇格の兆候がないか確認する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2025-60710 | 主要CVE | 1.00 |
-| ベンダー | Microsoft | 影響ベンダー | 1.00 |
-| 製品 | Windows | 影響製品 | 1.00 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2025-60710](https://nvd.nist.gov/vuln/detail/CVE-2025-60710) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
-| <nobr>公的機関</nobr> | [CISA KEV: CVE-2025-60710](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-60710) | <nobr>KEV掲載内容、Date Added、Due Date、Required Action</nobr> |
-| <nobr>公的機関データ</nobr> | [CISA KEV JSON](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) | <nobr>CISA公式の機械可読データ。CVE IDで検索して確認</nobr> |
-| <nobr>出典</nobr> | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](https://github.com/Wh04m1001/CVE-2025-60710) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
-- 継続観測: 継続。
-
----
+今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -133,30 +36,30 @@ CISAのKnown Exploited Vulnerabilitiesに掲載されており、公開PoCや検
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [『なのは』シリーズ完全新作『魔法少女リリカルなのは EXCEEDS Gun Blaze Vengeance』マチ★アソビスペシャルステージレポート、エンディングテーマ生披露も](https://gigazine.net/news/20260516-nanoha-machiasobi30) | 25.0 | 20.0 | 42.0 |
-| [四国めたんの中の人・田中小雪さんと一緒にアニメのアフレコができる豪華すぎるイベントが徳島で開催されました](https://gigazine.net/news/20260516-shikoku-metan-machiasobi30) | 22.0 | 20.0 | 42.0 |
-| [北海道の北広島市でサブカルイベント「きたコン」の開催が決定、野球のシーズンオフと積雪回避を狙って11月に開催](https://gigazine.net/news/20260516-kitakon-machiasobi30) | 22.0 | 20.0 | 42.0 |
-| [電子書籍を日本語など1000以上の言語で音声読み上げファイルに変換できる「ebook2audiobook」レビュー](https://gigazine.net/news/20260516-ebook2audiobook) | 22.0 | 20.0 | 42.0 |
-| [Anthropicの「Mythos」は予想以上に急激な進化--英国機関が分析](https://japan.zdnet.com/article/35247602) | 21.0 | 20.0 | 42.0 |
-| [Linuxカーネルに「ssh-keysign-pwn」の脆弱性発覚--直近4度目](https://japan.zdnet.com/article/35247599) | 21.0 | 20.0 | 42.0 |
-| [UniFi Accessのリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
-| [Netskopeにおけるクロステナント認証バイパスのセキュリティ問題](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 20.0 | 38.0 | 42.0 |
+| [Russian hackers、Kazuarバックドアをモジュール型P2Pボットネットへ転用](https://bleepingcomputer.com/news/security/russian-hackers-turn-kazuar-backdoor-into-modular-p2p-botnet) | 28.0 | 20.0 | 42.0 |
+| [Taskhost Windows タスクにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://github.com/Wh04m1001/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
+| [AI生成のドット絵・ピクセルアートをきちんと自動修正する「Sprite Fusion Pixel Snapper」](https://gigazine.net/news/20260516-spritefusion-pixel-snapper) | 25.0 | 20.0 | 43.0 |
+| [NGINXでリモートコード実行の脆弱性が発見される、影響を受けるバージョンはこれ](https://gigazine.net/news/20260515-nginx-remote-code-execution) | 24.0 | 49.0 | 57.0 |
+| [Pwn2Own Berlin 2026: 3日目の結果とMaster of Pwn](https://thezdi.com/blog/2026/5/16/pwn2own-berlin-2026-day-three-results-and-master-of-pwn) | 24.0 | 20.0 | 43.0 |
+| [観葉植物が部屋の空気をきれいにしてくれるというNASAの研究には誤解が含まれているという指摘](https://gigazine.net/news/20260516-houseplants-air) | 22.0 | 20.0 | 42.0 |
+| [検査や治療の保険適用を拒否するほど利益になるアメリカ医療保険の「事前承認」ビジネスとは？](https://gigazine.net/news/20260516-health-insurance-denials-business) | 22.0 | 20.0 | 42.0 |
+| [選挙で投票する高齢者は投票しない高齢者よりも長生きする](https://gigazine.net/news/20260516-older-adults-vote-live-longer) | 22.0 | 20.0 | 42.0 |
+| [徳島市街を1日歩き回ってマチ★アソビvol.30記念『アニメスタジオスタンプラリー』を全種類コンプリートしました](https://gigazine.net/news/20260516-anime-studio-stamp-rally-machiasobi30) | 22.0 | 20.0 | 42.0 |
+| [重大なNGINX脆弱性のPoCコードが公開される](https://securityweek.com/poc-code-published-for-critical-nginx-vulnerability) | 22.0 | 20.0 | 42.0 |
+| [400ml献血して『なのはガンブレ』のポスターをもらったよレポート、献血は怖くない【マチ★アソビ vol.30】](https://gigazine.net/news/20260516-nanoha-kenketsu-400ml-machiasobi30) | 22.0 | 20.0 | 42.0 |
+| [エミリアがいろんなポーズをキメてくれた【マチ★アソビ vol.30】](https://gigazine.net/news/20260516-kadokawa-goods-shop-emilia-machiasobi30) | 22.0 | 20.0 | 42.0 |
+| [「Xbox」が「XBOX」に名称を変更](https://gigazine.net/news/20260516-microsoft-xbox-rebrand) | 22.0 | 20.0 | 42.0 |
+| [UniFi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
+| [Netskopeのクロステナント認証バイパスに関するセキュリティ情報](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 20.0 | 38.0 | 42.0 |
 | [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
-| [Spring ELを悪用して環境変数とシステムプロパティを露出させる攻撃（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
-| [Security: COM経由で低権限のままBoot Configuration Data（BCD）を削除可能（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
-| [Security: 4 Bytes, 1 Lie - SMAPを回避するカーネルポインタの詐欺的手法（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
-| [PLEASE_READ_ME: MySQLサーバーを壊滅させる機会主義的ランサムウェア](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 16.0 | 30.0 | 42.0 |
-| [Security: iBootログの難読化解除](https://nyansatan.github.io/iboot-log-deobfuscation) | 10.0 | 20.0 | 48.0 |
-| [サイバーリスクインテリジェンスの未来](https://bitsight.com/de/blog/die-zukunft-liegt-cyber-risk-intelligence) | 10.0 | 20.0 | 42.0 |
-| [PS5のYouTubeアプリを悪用したY2JBによるユーザーランドコード実行](https://github.com/Gezine/Y2JB) | 10.0 | 20.0 | 42.0 |
-| [PowerShellでChromium系ブラウザのパスワードを復号する攻撃](https://github.com/The-Viper-One/Invoke-PowerChrome) | 10.0 | 20.0 | 42.0 |
-| [Fun: ファイルやOffice文書をMarkdownに変換するPythonツール](https://github.com/microsoft/markitdown) | 10.0 | 20.0 | 42.0 |
-| [TigerBeetleで高性能チケット管理システムを構築する方法](https://renerocks.ai/blog/2025-11-02--tigerfans) | 10.0 | 20.0 | 42.0 |
-| [Fun: Terminal UI Operating System](https://github.com/Gaurav-Gosain/tuios) | 10.0 | 20.0 | 42.0 |
-| [NTLMリレーからKerberosリレーへ：知っておくべきすべて](https://decoder.cloud/2025/04/24/from-ntlm-relay-to-kerberos-relay-everything-you-need-to-know) | 10.0 | 20.0 | 42.0 |
-| [Advanced JavaScriptファイルの発見と解析ツールをハックする方法](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
-| [必見：Geminiをハックする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 10.0 | 20.0 | 42.0 |
-| [Security: OpenAI Sora 2の内部――マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 10.0 | 20.0 | 42.0 |
+| [Security: 低権限でCOM経由にBoot Configuration Data (BCD)を削除可能な脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
+| [Hack: Spring ELを使って環境変数とシステムプロパティを公開する手法（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
+| [Security: 4 Bytes, 1 Lie - SMAPなしで実行されるカーネルポインタへの巧妙なだまし討ち（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
+| [CVE-2026-43490 ksmbd: 継承されたACEのSID長を検証する](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43490) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-46333 ptrace: get_dumpable()ロジックの改善](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46333) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-44662 rust-opensslのAESキーワラップウィズパディング暗号化時のヒープバッファオーバーフロー](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44662) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-44431 urllib3: プロキシ経由の低レベルリダイレクトで異なるオリジンにSensitive headersが送信される問題](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44431) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-42946: NGINX ngx_http_scgi_moduleおよびngx_http_uwsgi_moduleの脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42946) | 20.0 | 28.0 | 38.0 |
 
 ---
 
