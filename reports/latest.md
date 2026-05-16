@@ -1,25 +1,19 @@
-# 📡 サイレーダー 2026-05-16 05:00 JST 試作版
+# 📡 サイレーダー 2026-05-16 11:00 JST 試作版
 
-このレポートは、2026-05-15 17:00 JST〜2026-05-16 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-16 05:00 JST〜2026-05-16 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 104
-- [音声で扱う想定のトピック](#audio-topics): 4
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 3
+- 観測トピック数: 39
+- [音声で扱う想定のトピック](#audio-topics): 0
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Cisco patches another actively exploited SD-WAN zero-day (CVE-2026-20182)](#topic-4945) | 83.0 | 84.0 | 67.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 2 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 54.0 | 82.0 | 81.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 3 | [Microsoft warns of Exchange zero-day flaw exploited in attacks](#topic-5579) | 48.0 | 44.0 | 43.0 | 音声 | 温度感上位枠 |
-| 4 | [Unpatched Microsoft Exchange Server vulnerability exploited (CVE-2026-42897)](#topic-5098) | 46.0 | 52.0 | 65.0 | GitHub | 直近掲載済み・再掲抑制 |
-| 5 | [Funnel Builder WordPress plugin bug exploited to steal credit cards](#topic-5528) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 6 | [Cisco zero-day under ongoing attack by persistent threat group](#topic-5542) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 7 | [Microsoft Reports Severe Zero-Day Flaw in On-Prem Exchange Servers](#topic-5554) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).](#topic-12) | 54.0 | 82.0 | 81.0 | GitHub | 直近掲載済み・再掲抑制 |
 
 ---
 
@@ -27,391 +21,15 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-5579"></a>
-
-### 1. Microsoft warns of Exchange zero-day flaw exploited in attacks
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>脅威アクター</nobr> / <nobr>ゼロデイ</nobr> / <nobr>Windows</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 48.0 |
-| <nobr>実務影響</nobr> | 44.0 |
-| <nobr>確度</nobr> | 43.0 |
-
-#### 概要
-
-Microsoftは、Exchange Serverに存在する高深刻度の脆弱性について、攻撃で悪用されているとして緩和策を公表しました。
-対象はOutlook on the webの利用者で、XSSに関連する形で任意コード実行につながるおそれがあるとされています。
-ゼロデイとして悪用が確認されている点から、修正や緩和が遅れると影響が広がる可能性があります。
-Exchangeは組織内で広く使われるため、メール基盤への影響が業務全体に及びやすいことも注目点です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- 悪用情報あり。
-- XSS系。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- Exchange ServerとOutlook on the webの利用有無を確認し、Microsoftの案内に沿って緩和策や更新状況を点検する。
-- 外部公開しているExchange関連の機能やアクセス経路について、不要な露出がないか確認する。
-- 管理者向けの監視では、認証やWebアクセスの異常、想定外の挙動がないかを重点的に確認する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ベンダー | Microsoft | 言及あり | 0.80 |
-| 製品 | Exchange | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Microsoft warns of Exchange zero-day flaw exploited in attacks](https://bleepingcomputer.com/news/microsoft/microsoft-warns-of-exchange-zero-day-flaw-exploited-in-attacks) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 初出。
-
----
-
-<a id="topic-5528"></a>
-
-### 2. Funnel Builder WordPress plugin bug exploited to steal credit cards
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 37.0 |
-| <nobr>実務影響</nobr> | 38.0 |
-| <nobr>確度</nobr> | 43.0 |
-
-#### 概要
-
-WordPress向けプラグイン「Funnel Builder」に関する脆弱性が、WooCommerceのチェックアウト画面に不正なJavaScriptを注入する目的で悪用されていると報じられています。
-これにより、決済情報の窃取につながるおそれがあるとされています。ECサイトの決済画面が改ざんされると、利用者のクレジットカード情報が漏えいするリスクがあります。
-WordPressやWooCommerceを使う事業者にとって、プラグインの脆弱性管理が直接的な事業影響につながる事案です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- Funnel Builderプラグインの利用有無とバージョンを確認し、更新版の適用可否を早急に点検する。
-- WooCommerceのチェックアウト画面や関連スクリプトに不審な変更がないか、ファイル改ざんと管理者アカウントの異常を確認する。
-- 決済ページを持つサイトでは、WAFや改ざん検知、支払い時の異常通信監視を強化する。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Funnel Builder WordPress plugin bug exploited to steal credit cards](https://bleepingcomputer.com/news/security/funnel-builder-wordpress-plugin-bug-exploited-to-steal-credit-cards) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 初出。
-
----
-
-<a id="topic-5542"></a>
-
-### 3. Cisco zero-day under ongoing attack by persistent threat group
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>脆弱性</nobr> / <nobr>ゼロデイ</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 37.0 |
-| <nobr>実務影響</nobr> | 38.0 |
-| <nobr>確度</nobr> | 43.0 |
-
-#### 概要
-
-Cisco zero-day under ongoing attack by persistent threat group に関する脆弱性情報です。
-では英語本文の全文翻訳は行わず、参照リンク、関連する対象、スコア根拠を中心に整理しています。詳細はベンダー公式情報、公的機関情報、NVD等を確認してください。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- CISA KEVに追加された各CVEを確認する。
-- 自組織で対象製品を利用しているCVEが含まれるか確認する。
-- 個別CVEごとのRequired Action、緩和策、期限を確認する。
-- 音声や即時対応では、RCE、認証バイパス、広範な製品影響があるCVEを優先する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-20182 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20122 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20128 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20133 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20127 | 主要CVE | 1.00 |
-| ベンダー | Cisco | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Cisco zero-day under ongoing attack by persistent threat group](https://cyberscoop.com/cisco-sd-wan-zero-day-exploited) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 初出。
-
----
-
-<a id="topic-5554"></a>
-
-### 4. Microsoft Reports Severe Zero-Day Flaw in On-Prem Exchange Servers
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>ゼロデイ</nobr> / <nobr>Windows</nobr> / <nobr>脆弱性</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 37.0 |
-| <nobr>実務影響</nobr> | 38.0 |
-| <nobr>確度</nobr> | 43.0 |
-
-#### 概要
-
-Microsoft Reports Severe Zero-Day Flaw in On-Prem Exchange Servers に関する脆弱性情報です。
-では英語本文の全文翻訳は行わず、参照リンク、関連する対象、スコア根拠を中心に整理しています。詳細はベンダー公式情報、公的機関情報、NVD等を確認してください。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- 自組織で対象製品・関連資産を利用しているか確認する。
-- ベンダー公式情報または公的機関情報を優先確認する。
-- 対象バージョンか確認する。
-- 修正版・緩和策の適用状況を確認する。
-- インターネット露出の有無を確認する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ベンダー | Microsoft | 言及あり | 0.80 |
-| 製品 | Exchange | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Microsoft Reports Severe Zero-Day Flaw in On-Prem Exchange Servers](https://infosecurity-magazine.com/news/microsoft-zeroday-exchange-servers) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 初出。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
 ## 📌 GitHubのみ掲載の注目トピック
 
-<a id="topic-4945"></a>
-
-### 1. Cisco patches another actively exploited SD-WAN zero-day (CVE-2026-20182)
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>ゼロデイ</nobr> / <nobr>認証バイパス</nobr> / <nobr>KEV</nobr> / <nobr>防御・運用</nobr> / <nobr>国家支援</nobr> / <nobr>脅威アクター</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>IoC</nobr> |
-| <nobr>温度状態</nobr> | 高温 |
-| <nobr>温度感</nobr> | 83.0 |
-| <nobr>実務影響</nobr> | 84.0 |
-| <nobr>確度</nobr> | 67.0 |
-
-#### 概要
-
-Ciscoは、Catalyst SD-WAN ControllerおよびSD-WAN Managerに影響する認証バイパス脆弱性CVE-2026-20182への修正を公開しました。
-公開情報では、この問題は限定的なゼロデイ攻撃で悪用されたとされ、深刻度はCVSS 10.0とされています。
-SD-WANは企業ネットワークの中核に置かれることが多く、管理系コンポーネントの認証不備は影響範囲が広くなりやすいです。
-CISAのKEV掲載対象にもなっており、優先度の高い対応が必要と見られます。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 8 sources。
-- 実悪用・ゼロデイ文脈。
-- 公開PoC・検証コード言及あり。
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 中。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用情報あり。
-- 公開PoCにより再現・悪用可能性が上がる。
-- RCEまたは認証バイパス系。
-- ランサムウェア文脈。
-
-##### 確度
-- 複数ソース確認。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 公開PoC・検証コード言及あり。
-- 公開PoC/Exploitコード: 確認あり。
-- 直接PoCリンク: 掲載しません。
-- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
-
-#### 担当者向け確認ポイント
-
-- Ciscoの修正情報を確認し、対象製品・対象バージョンの更新適用状況を速やかに点検する。
-- SD-WAN Controller／Managerへの管理アクセス権限や到達経路を見直し、不要な露出を抑える。
-- 関連ログを確認し、不審な管理操作や設定変更の兆候がないかを監視する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-20182 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20133 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20128 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20122 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20127 | 主要CVE | 1.00 |
-| ベンダー | Cisco | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20182](https://nvd.nist.gov/vuln/detail/CVE-2026-20182) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
-| <nobr>出典</nobr> | [Cisco patches another actively exploited SD-WAN zero-day (CVE-2026-20182)](https://helpnetsecurity.com/2026/05/15/cisco-sd-wan-zero-day-cve-2026-20182) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco Patches Another SD-WAN Zero-Day, the Sixth Exploited in 2026](https://securityweek.com/cisco-patches-another-sd-wan-zero-day-the-sixth-exploited-in-2026) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CISA Adds Cisco SD-WAN CVE-2026-20182 to KEV After Admin Access Exploits](https://thehackernews.com/2026/05/cisa-adds-cisco-sd-wan-cve-2026-20182.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco warns of new critical SD-WAN flaw exploited in zero-day attacks](https://bleepingcomputer.com/news/security/cisco-warns-of-new-critical-sd-wan-flaw-exploited-in-zero-day-attacks) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Ac](https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Ongoing exploitation of Cisco Catalyst SD-WAN vulnerabilities](https://blog.talosintelligence.com/sd-wan-ongoing-exploitation) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>公的・一次情報</nobr> | [Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 中。
-- 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
-- 継続観測: 継続。
-
----
-
 <a id="topic-12"></a>
 
-### 2. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
+### 1. Hack: Local Privilege Escalation in Taskhost Windows Tasks (CVE-2025-60710).
 
 #### スコアカード
 
@@ -426,10 +44,10 @@ CISAのKEV掲載対象にもなっており、優先度の高い対応が必要�
 
 #### 概要
 
-CVE-2025-60710は、Microsoft WindowsのTaskhost関連のタスク処理に起因するローカル権限昇格の脆弱性とされています。
-CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証コードの存在が示唆されています。
-権限昇格の脆弱性は、攻撃者が端末内でより高い権限を得る足がかりになり得るため、影響が広がりやすい点が重要です。
-既知悪用リストに載っていることから、優先度を上げて確認すべき対象です。
+CVE-2025-60710は、Microsoft WindowsのTaskhost関連の処理に起因するローカル権限昇格の脆弱性として整理されています。
+CISAのKnown Exploited Vulnerabilitiesにも含まれており、公開PoCの言及もあるため、影響範囲の確認と対策状況の点検が重要です。
+権限昇格は、初期侵入後に管理者権限へ進む足がかりになりやすく、被害の拡大に直結し得ます。
+実際に悪用対象として扱われている情報があるため、優先度を上げて対応を検討すべき脆弱性です。
 
 #### CISA KEV詳細
 
@@ -473,9 +91,9 @@ CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証
 
 #### 担当者向け確認ポイント
 
-- 対象Windows環境でCVE-2025-60710の影響有無を確認し、利用中の構成や更新状況を点検する。
-- Microsoftの修正情報やCISA KEVの更新を確認し、適用可能な緩和策・更新を優先する。
-- 端末内で不審な権限昇格の兆候やTaskhost関連の異常挙動がないか、監視・ログ確認を強化する。
+- 対象のWindows環境で、該当CVEの影響有無と修正適用状況を確認する。
+- 特権アカウントや端末上の不審な権限昇格の兆候、Taskhost関連の異常を点検する。
+- 資産管理上、影響を受ける端末を早めに把握し、更新適用を優先する。
 
 #### 関連する対象
 
@@ -507,88 +125,6 @@ CISAのKnown Exploited Vulnerabilitiesに含まれており、公開PoCや検証
 
 ---
 
-<a id="topic-5098"></a>
-
-### 3. Unpatched Microsoft Exchange Server vulnerability exploited (CVE-2026-42897)
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>Windows</nobr> / <nobr>KEV</nobr> / <nobr>ゼロデイ</nobr> |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 46.0 |
-| <nobr>実務影響</nobr> | 52.0 |
-| <nobr>確度</nobr> | 65.0 |
-
-#### 概要
-
-Microsoft Exchange Serverの脆弱性CVE-2026-42897について、実際の悪用が観測されたとして注意喚起が出ています。
-影響を受けるのはオンプレミス版Exchange Serverで、Exchange Onlineは対象外とされています。
-CISAの既知悪用脆弱性カタログにも追加されており、放置すると組織内メール基盤への影響が広がるおそれがあります。
-Microsoftは恒久修正までの間、暫定的な緩和策を案内しています。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 5 sources。
-- 実悪用・ゼロデイ文脈。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用情報あり。
-- XSS系。
-
-##### 確度
-- 複数ソース確認。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- 対象がオンプレミス版Exchange Serverかを確認し、該当バージョンの有無を棚卸しする。
-- Microsoftが案内する緩和策を適用し、恒久修正の提供状況を継続監視する。
-- Exchange関連の不審な認証・表示不整合・メール起点の異常挙動がないか、監視とログ確認を強化する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-42897 | 主要CVE | 1.00 |
-| ベンダー | Microsoft | 言及あり | 0.80 |
-| 製品 | Exchange | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-42897](https://nvd.nist.gov/vuln/detail/CVE-2026-42897) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft Warns of Exchange Server Zero-Day Exploited in the Wild](https://securityweek.com/microsoft-warns-of-exchange-server-zero-day-exploited-in-the-wild) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://cisa.gov/news-events/alerts/2026/05/15/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Unpatched Microsoft Exchange Server vulnerability exploited (CVE-2026-42897)](https://helpnetsecurity.com/2026/05/15/exchange-server-cve-2026-42897-exploited) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email](https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-42897 Microsoft Exchange Server Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42897) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 継続。
-
----
-
 <a id="low-record-topics"></a>
 
 ## ❄️ 低温だが記録しておくトピック
@@ -598,30 +134,30 @@ Microsoftは恒久修正までの間、暫定的な緩和策を案内してい�
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [CVE-2026-42010 GnuTLSにおけるユーザー名のヌル文字を悪用した認証バイパス](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42010) | 28.0 | 46.0 | 38.0 |
-| [人気のnode-ipc npmパッケージが侵害され、認証情報を窃取](https://bleepingcomputer.com/news/security/popular-node-ipc-npm-package-compromised-to-steal-credentials) | 28.0 | 45.0 | 42.0 |
-| [攻撃者がCisco Catalyst SD-WAN Controllerの重大な脆弱性を悪用](https://cybersecuritydive.com/news/attackers-exploit-critical-flaw-in-cisco-catalyst-sd-wan-controller/820368) | 28.0 | 38.0 | 42.0 |
-| [CISAがCisco SD-WANシステムの悪用済み脆弱性に対する修正を日曜までに全連邦機関へ指示](https://therecord.media/cisa-orders-all-federal-agencies-to-patch-cisco-sd-wan-bug) | 28.0 | 38.0 | 42.0 |
-| [American Lending Centerのデータ侵害で12万3000人に影響](https://securityweek.com/american-lending-center-data-breach-affects-123000-individuals) | 28.0 | 30.0 | 42.0 |
-| [SHADOW-EARTH-053がレガシーなExchange脆弱性を悪用しアジア太平洋地域の政府機関を標的に攻撃](https://blog.polyswarm.io/shadow-earth-053-uses-legacy-exchange-exploitation-to-target-asia-pacific-governments) | 28.0 | 20.0 | 42.0 |
-| [TurlaがKazuarバックドアをモジュール型P2Pボットネットに改変し、持続的アクセスを確保](https://thehackernews.com/2026/05/turla-turns-kazuar-backdoor-into.html) | 28.0 | 20.0 | 42.0 |
-| [BlackFile：Vishingによる恐喝オペレーションの実態](https://cloud.google.com/blog/topics/threat-intelligence/blackfile-vishing-extortion-operation) | 28.0 | 20.0 | 42.0 |
-| [攻撃者がJDownloaderのインストーラー配布をマルウェアに差し替えた問題](https://malwarebytes.com/blog/news/2026/05/attackers-replaced-jdownloader-installer-downloads-with-malware) | 28.0 | 20.0 | 42.0 |
-| [自社ツールを45日間監視して見えてくる本当の攻撃対象領域](https://thehackernews.com/2026/05/what-45-days-of-watching-your-own-tools.html) | 28.0 | 20.0 | 42.0 |
-| [OpenAIがTanStackのサプライチェーン攻撃の標的に](https://securityweek.com/openai-hit-by-tanstack-supply-chain-attack) | 25.0 | 45.0 | 42.0 |
-| [OpenClawの4件の脆弱性によりデータ窃取、権限昇格、永続化が可能に](https://thehackernews.com/2026/05/four-openclaw-flaws-enable-data-theft.html) | 25.0 | 32.0 | 42.0 |
-| [MSPはAI主導のサイバー脅威に対抗するためAIを必要としている、Guardzが指摘](https://cybersecuritydive.com/news/msps-need-ai-to-fight-ai-fueled-cyberthreats-guardz/820371) | 25.0 | 20.0 | 42.0 |
-| [Big Techとカナダの暗号化法案、Ciscoの無料AIセキュリティ仕様、Audiアプリの脆弱性](https://securityweek.com/in-other-news-big-tech-vs-canada-encryption-bill-ciscos-free-ai-security-spec-audi-app-flaws) | 25.0 | 20.0 | 42.0 |
-| [エージェント型AIを導入する前に慎重に検討すること](https://ncsc.gov.uk/blogs/thinking-carefully-before-adopting-agentic-ai) | 25.0 | 20.0 | 42.0 |
-| [Akamai、LayerXを2億500万ドルで買収へ](https://helpnetsecurity.com/2026/05/15/akamai-layerx-acquisition) | 25.0 | 20.0 | 42.0 |
-| [TanStackのサプライチェーン攻撃がOpenAI従業員2人の端末に影響、macOSアップデートを強制](https://thehackernews.com/2026/05/tanstack-supply-chain-attack-hits-two.html) | 25.0 | 20.0 | 42.0 |
-| [Pwn2Own 2日目にMicrosoft ExchangeとWindows 11がハッキングされる](https://bleepingcomputer.com/news/security/pwn2own-day-two-hackers-demo-microsoft-exchange-windows-11-red-had-enterprise-linux-zero-days) | 22.0 | 20.0 | 43.0 |
-| [Metasploitの最新まとめ 2026年5月15日](https://rapid7.com/blog/post/pt-metasploit-wrap-up-05-15-2026) | 22.0 | 20.0 | 42.0 |
-| [マチ★アソビ Vol.30会場まとめ、「アミコドームステージ」が初登場で「旧みずほ銀行徳島支店」内覧会も](https://gigazine.net/news/20260516-place-machiasobi30) | 22.0 | 20.0 | 42.0 |
-| [米当局、「Cisco SD-WAN」の脆弱性悪用で緊急対応を要請](https://security-next.com/184506) | 22.0 | 20.0 | 42.0 |
-| [MITの学長が資金調達と人材育成に関する危機的状況を説明、「率直に言ってこれは国家にとって損失だ」と話す](https://gigazine.net/news/20260515-mit-message-funding-talent-pipeline) | 22.0 | 20.0 | 42.0 |
-| [ファミマで服を買う、出張で忘れ物しても24時間営業で丈夫な服を買えて超便利](https://gigazine.net/news/20260515-familymart-conveniencewear-machiasobi30) | 22.0 | 20.0 | 42.0 |
-| [自動車メーカーによる個人情報の追跡から逃れるべく自力でモデムとGPSを取り外す](https://gigazine.net/news/20260515-removing-modem-gps-from-car) | 22.0 | 20.0 | 42.0 |
+| [OpenAI、「ChatGPT」に個人向け資産管理機能 金融口座と連携](https://itmedia.co.jp/news/articles/2605/16/news027.html) | 26.0 | 20.0 | 42.0 |
+| [魔法使いの夜・鬼滅の刃・アズールレーンの巨大タペストリーが空港内に登場、「マチ★アソビ vol.30」空港アニメジャックはこんな感じ](https://gigazine.net/news/20260516-airport-machiasobi30) | 22.0 | 20.0 | 42.0 |
+| [「マチ★アソビ vol.30」全記事一覧まとめ](https://gigazine.net/news/20260516-summary-machiasobi30) | 22.0 | 20.0 | 42.0 |
+| [コウモリに方言が生まれていることが判明](https://gigazine.net/news/20260516-ghost-bat-dialects) | 22.0 | 20.0 | 42.0 |
+| [「涼宮ハルヒの憂鬱」の視聴順を巡る4chan匿名ユーザーの投稿→うっかり数学の未解決問題で歴史的発見 2021年に論文化](https://itmedia.co.jp/news/articles/2605/16/news003.html) | 21.0 | 20.0 | 42.0 |
+| [「Ubuntu 26.04 vs. Fedora 44」--強力な「Linux」ディストロのどちらを選ぶか](https://japan.zdnet.com/article/35247365) | 21.0 | 20.0 | 42.0 |
+| [Unifi Access におけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
+| [Netskopeにおけるクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 20.0 | 38.0 | 42.0 |
+| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
+| [Security: 4 Bytes, 1 Lie - SMAPを回避するカーネルポインタの信頼詐欺（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
+| [Spring ELを用いて環境変数とシステムプロパティを露出させる手法（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
+| [Security: COMを使って低権限でブート構成データ（BCD）を削除できる問題（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
+| [Colorado州知事が選挙否認派のTina Petersの服役刑を減刑](https://cyberscoop.com/colorado-election-denier-tina-peters-sentence-commuted-governor-jared-polis) | 20.0 | 20.0 | 42.0 |
+| [PLEASE_READ_ME: 機会的なランサムウェアがMySQLサーバーを壊滅させる](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 16.0 | 30.0 | 42.0 |
+| [Security: iBootログの難読化解除と再難読化](https://nyansatan.github.io/iboot-log-deobfuscation) | 10.0 | 20.0 | 48.0 |
+| [サイバーリスクインテリジェンスの未来](https://bitsight.com/de/blog/die-zukunft-liegt-cyber-risk-intelligence) | 10.0 | 20.0 | 42.0 |
+| [PowerShellでChromium系ブラウザのパスワードを復号する手法](https://github.com/The-Viper-One/Invoke-PowerChrome) | 10.0 | 20.0 | 42.0 |
+| [PythonでファイルやOffice文書をMarkdownに変換するツール](https://github.com/microsoft/markitdown) | 10.0 | 20.0 | 42.0 |
+| [TigerBeetleで高性能チケット管理システムを構築する方法](https://renerocks.ai/blog/2025-11-02--tigerfans) | 10.0 | 20.0 | 42.0 |
+| [Fun: Terminal UI Operating System](https://github.com/Gaurav-Gosain/tuios) | 10.0 | 20.0 | 42.0 |
+| [NTLMリレーからKerberosリレーへ：知っておくべきすべて](https://decoder.cloud/2025/04/24/from-ntlm-relay-to-kerberos-relay-everything-you-need-to-know) | 10.0 | 20.0 | 42.0 |
+| [PS5のYouTubeアプリを悪用したY2JBによるユーザーランドコード実行](https://github.com/Gezine/Y2JB) | 10.0 | 20.0 | 42.0 |
+| [Advanced JavaScriptファイルの発見・分析ツールに対するハック](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
+| [Security: OpenAI Sora 2の内部を探る - マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 10.0 | 20.0 | 42.0 |
 
 ---
 
