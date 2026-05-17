@@ -1,12 +1,12 @@
-# 📡 サイレーダー 2026-05-17 05:00 JST 試作版
+# 📡 サイレーダー 2026-05-17 11:00 JST 試作版
 
-このレポートは、2026-05-16 17:00 JST〜2026-05-17 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-17 05:00 JST〜2026-05-17 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 64
+- 観測トピック数: 38
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
@@ -36,30 +36,30 @@
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [Russian hackers、Kazuarバックドアをモジュール型P2Pボットネットへ転用](https://bleepingcomputer.com/news/security/russian-hackers-turn-kazuar-backdoor-into-modular-p2p-botnet) | 28.0 | 20.0 | 42.0 |
+| [AIエージェントが試験で一生懸命「カンニング」していることが発覚](https://gigazine.net/news/20260517-benchmark-hacking) | 27.0 | 20.0 | 42.0 |
 | [Taskhost Windows タスクにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://github.com/Wh04m1001/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
-| [AI生成のドット絵・ピクセルアートをきちんと自動修正する「Sprite Fusion Pixel Snapper」](https://gigazine.net/news/20260516-spritefusion-pixel-snapper) | 25.0 | 20.0 | 43.0 |
-| [NGINXでリモートコード実行の脆弱性が発見される、影響を受けるバージョンはこれ](https://gigazine.net/news/20260515-nginx-remote-code-execution) | 24.0 | 49.0 | 57.0 |
-| [Pwn2Own Berlin 2026: 3日目の結果とMaster of Pwn](https://thezdi.com/blog/2026/5/16/pwn2own-berlin-2026-day-three-results-and-master-of-pwn) | 24.0 | 20.0 | 43.0 |
-| [観葉植物が部屋の空気をきれいにしてくれるというNASAの研究には誤解が含まれているという指摘](https://gigazine.net/news/20260516-houseplants-air) | 22.0 | 20.0 | 42.0 |
-| [検査や治療の保険適用を拒否するほど利益になるアメリカ医療保険の「事前承認」ビジネスとは？](https://gigazine.net/news/20260516-health-insurance-denials-business) | 22.0 | 20.0 | 42.0 |
-| [選挙で投票する高齢者は投票しない高齢者よりも長生きする](https://gigazine.net/news/20260516-older-adults-vote-live-longer) | 22.0 | 20.0 | 42.0 |
-| [徳島市街を1日歩き回ってマチ★アソビvol.30記念『アニメスタジオスタンプラリー』を全種類コンプリートしました](https://gigazine.net/news/20260516-anime-studio-stamp-rally-machiasobi30) | 22.0 | 20.0 | 42.0 |
-| [重大なNGINX脆弱性のPoCコードが公開される](https://securityweek.com/poc-code-published-for-critical-nginx-vulnerability) | 22.0 | 20.0 | 42.0 |
-| [400ml献血して『なのはガンブレ』のポスターをもらったよレポート、献血は怖くない【マチ★アソビ vol.30】](https://gigazine.net/news/20260516-nanoha-kenketsu-400ml-machiasobi30) | 22.0 | 20.0 | 42.0 |
-| [エミリアがいろんなポーズをキメてくれた【マチ★アソビ vol.30】](https://gigazine.net/news/20260516-kadokawa-goods-shop-emilia-machiasobi30) | 22.0 | 20.0 | 42.0 |
-| [「Xbox」が「XBOX」に名称を変更](https://gigazine.net/news/20260516-microsoft-xbox-rebrand) | 22.0 | 20.0 | 42.0 |
-| [UniFi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
-| [Netskopeのクロステナント認証バイパスに関するセキュリティ情報](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 20.0 | 38.0 | 42.0 |
-| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
-| [Security: 低権限でCOM経由にBoot Configuration Data (BCD)を削除可能な脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
-| [Hack: Spring ELを使って環境変数とシステムプロパティを公開する手法（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
-| [Security: 4 Bytes, 1 Lie - SMAPなしで実行されるカーネルポインタへの巧妙なだまし討ち（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
-| [CVE-2026-43490 ksmbd: 継承されたACEのSID長を検証する](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43490) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-46333 ptrace: get_dumpable()ロジックの改善](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46333) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-44662 rust-opensslのAESキーワラップウィズパディング暗号化時のヒープバッファオーバーフロー](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44662) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-44431 urllib3: プロキシ経由の低レベルリダイレクトで異なるオリジンにSensitive headersが送信される問題](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44431) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-42946: NGINX ngx_http_scgi_moduleおよびngx_http_uwsgi_moduleの脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42946) | 20.0 | 28.0 | 38.0 |
+| [YouTube・TikTok・Snapが学校によるソーシャルメディア依存症訴訟で公判前に和解](https://gigazine.net/news/20260517-snap-youtube-tiktok-settle-suit) | 22.0 | 20.0 | 42.0 |
+| [徳島名物なると金時のクレープ＆すだちのソーダをマチ★アソビ会場で食べてみた](https://gigazine.net/news/20260517-narutokintoki-sudachi-machiasobi30) | 22.0 | 20.0 | 42.0 |
+| [わずか10カ月で砂漠の砂を豊かな土壌に変えるプロセスが解明される](https://gigazine.net/news/20260517-china-desert-soil-crust) | 22.0 | 20.0 | 42.0 |
+| [「Switch 2」値上げ！ 持っている人も今のうちにやっておきたいことをゲーム好きマンガ家が解説](https://itmedia.co.jp/news/articles/2605/17/news015.html) | 21.0 | 20.0 | 42.0 |
+| [Unifi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
+| [Netskopeにおけるクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 20.0 | 38.0 | 42.0 |
+| [Citrix NetScaler のメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
+| [Spring ELを悪用して環境変数とシステムプロパティを露出させる攻撃（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
+| [Security: 低権限でCOMを使ってBoot Configuration Data（BCD）を削除できる脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
+| [Security: 4 Bytes, 1 Lie - SMAPを回避するカーネルポインタへの巧妙な手口（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
+| [Microsoft、重大なAzure脆弱性報告を却下しCVE未発行](https://bleepingcomputer.com/news/security/microsoft-rejects-critical-azure-vulnerability-report-no-cve-issued) | 20.0 | 20.0 | 42.0 |
+| [PLEASE_READ_ME: MySQLサーバーを破壊する機会主義型ランサムウェア](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 10.0 | 30.0 | 42.0 |
+| [Security: iBootログの難読化・復号化](https://nyansatan.github.io/iboot-log-deobfuscation) | 10.0 | 20.0 | 48.0 |
+| [サイバーリスクインテリジェンスの未来](https://bitsight.com/de/blog/die-zukunft-liegt-cyber-risk-intelligence) | 10.0 | 20.0 | 42.0 |
+| [PS5のYouTubeアプリを悪用したY2JBによるユーザーランドコード実行](https://github.com/Gezine/Y2JB) | 10.0 | 20.0 | 42.0 |
+| [PowerShellを使ってChromiumベースのブラウザのパスワードを復号する手口](https://github.com/The-Viper-One/Invoke-PowerChrome) | 10.0 | 20.0 | 42.0 |
+| [Fun: ファイルやOffice文書をMarkdownへ変換するPythonツール](https://github.com/microsoft/markitdown) | 10.0 | 20.0 | 42.0 |
+| [TigerBeetleで高性能チケット管理システムを構築する方法](https://renerocks.ai/blog/2025-11-02--tigerfans) | 10.0 | 20.0 | 42.0 |
+| [Terminal UIで動作するOSの楽しさ](https://github.com/Gaurav-Gosain/tuios) | 10.0 | 20.0 | 42.0 |
+| [NTLMリレーからKerberosリレーへ：知っておくべきすべて](https://decoder.cloud/2025/04/24/from-ntlm-relay-to-kerberos-relay-everything-you-need-to-know) | 10.0 | 20.0 | 42.0 |
+| [Hack: 高度なJavaScriptファイルの発見・解析ツール](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
+| [Must see: Geminiをハッキングする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 10.0 | 20.0 | 42.0 |
 
 ---
 
