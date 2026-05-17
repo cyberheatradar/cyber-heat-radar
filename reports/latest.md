@@ -1,17 +1,19 @@
-# 📡 サイレーダー 2026-05-17 17:00 JST 試作版
+# 📡 サイレーダー 2026-05-18 05:00 JST 試作版
 
-このレポートは、2026-05-17 11:00 JST〜2026-05-17 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-17 17:00 JST〜2026-05-18 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 36
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 39
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE](#topic-4593) | 33.0 | 67.0 | 57.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,7 +21,87 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-4593"></a>
+
+### 1. NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>RCE</nobr> / <nobr>KEV</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 33.0 |
+| <nobr>実務影響</nobr> | 67.0 |
+| <nobr>確度</nobr> | 57.0 |
+
+#### 概要
+
+NGINXのngx_http_rewrite_moduleに関する脆弱性CVE-2026-42945が公表され、公開後まもなく実際の悪用が観測されたと報告されています。
+報道では、ワーカーのクラッシュにつながるほか、条件によってはリモートコード実行の可能性があるとされています。
+広く使われるNGINX系製品に影響するため、サーバー運用への影響が大きい可能性があります。すでに悪用観測があるとされる点から、早期の確認と対応が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 3 sources。
+- 実悪用・ゼロデイ文脈。
+- 技術詳細・再現情報あり。
+- 技術者コミュニティ反応: 弱。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- 悪用情報あり。
+- 技術詳細により影響確認が進みやすい。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 技術詳細・悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 技術詳細、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- 利用中のNGINX/OpenとNGINX Plusのバージョンを確認し、影響範囲を特定する。
+- ベンダーや公的な案内を確認し、修正版や回避策が出ていれば速やかに適用する。
+- 異常なワーカー停止や再起動、関連するログの増加がないか監視を強化する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-42945 | 主要CVE | 1.00 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-42945](https://nvd.nist.gov/vuln/detail/CVE-2026-42945) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible ](https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [NGINXでリモートコード実行の脆弱性が発見される、影響を受けるバージョンはこれ](https://gigazine.net/news/20260515-nginx-remote-code-execution) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [18-Year-Old NGINX Rewrite Module Flaw Enables Unauthenticated RCE](https://thehackernews.com/2026/05/18-year-old-nginx-rewrite-module-flaw.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CVE-2026-42945 NGINX ngx_http_rewrite_module vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42945) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 中。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: 技術詳細・悪用観測あり。
+- 継続観測: 継続。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -36,29 +118,29 @@
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [Taskhost Windowsタスクにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://github.com/Wh04m1001/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
-| [きぐるみたちが画鋲つき武器でボコボコ戦う「スーパーきぐるみファイト」観戦レポート、仕事猫も参戦でヨシ！【マチ★アソビ vol.30】](https://gigazine.net/news/20260517-super-kigurumi-fight-machiasobi30) | 22.0 | 20.0 | 42.0 |
-| [マグロの刺身＋ココナッツミルク＋ごはんにライムを絞るナウルフード「ココナッツフィッシュライス」をナウル万博2026in徳島で食べてきた](https://gigazine.net/news/20260517-nauru-expo-2026-in-tokushima) | 22.0 | 20.0 | 42.0 |
-| [AIモデルでブラウザを自動操作できる「Browser-Use」、オープンソースで開発され自然言語で簡単に指示可能](https://gigazine.net/news/20260517-browser-use) | 22.0 | 20.0 | 42.0 |
-| [WordPressプラグイン・テーマの脆弱性最新情報 第28回 WordPress脆弱性31件、未認証攻撃も多数　Forminator FormsやMetaSliderに注意【4月30日～5月6日】](https://news.mynavi.jp/techplus/article/wordpressvulnerability-28) | 21.0 | 20.0 | 42.0 |
-| [UniFi Access におけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
+| [Week in review: CiscoがSD-WANの0-dayを修正、未修正のMicrosoft Exchange Serverの脆弱性が悪用される](https://helpnetsecurity.com/2026/05/17/week-in-review-cisco-patches-sd-wan-0-day-unpatched-microsoft-exchange-server-flaw-exploited) | 37.0 | 38.0 | 43.0 |
+| [Taskhost Windows Tasksにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://github.com/Wh04m1001/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
+| [CVE-2026-46483 Vim: tar#Vimuntarにおけるshellescapeのspecialフラグ不足によるコマンドインジェクション](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46483) | 24.0 | 46.0 | 38.0 |
+| [UniFi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
 | [Netskopeにおけるクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 20.0 | 38.0 | 42.0 |
-| [Citrix NetScalerのメモリリークおよび反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
-| [Spring ELを悪用して環境変数とシステムプロパティを露出させる手口（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
-| [Security: 4 Bytes, 1 Lie - SMAP不要のカーネルポインタに対する巧妙なだまし討ち（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
-| [Security: 低権限で COM を使って Boot Configuration Data（BCD）を削除可能な脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
-| [PLEASE_READ_ME: MySQLサーバーを壊滅させる機会主義的ランサムウェア](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 10.0 | 30.0 | 42.0 |
-| [セキュリティ: iBootログの難読化解除](https://nyansatan.github.io/iboot-log-deobfuscation) | 10.0 | 20.0 | 48.0 |
+| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
+| [セキュリティ：4バイト、1つの嘘 - カーネルポインタに対するSMAP不要の信用詐欺（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
+| [Security: 低権限のCOMでBoot Configuration Data (BCD)を削除可能な脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
+| [Spring ELを用いて環境変数とシステムプロパティを露出させる攻撃（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
+| [CVE-2026-8328: FTP PASVのSSRF、ftpcp()が実際のピアアドレスを使わずサーバー提供のPASVホストアドレスを信頼する問題](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8328) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-8368: Perl向けLWP::UserAgent 6.83未満におけるクロスオリジンリダイレクト時のAuthorizationおよびProxy-Authorizationヘッダー漏えい](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8368) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-44283 etcd: etcdトランザクションのPrevKvによる読み取りアクセスがRBAC認可チェックを回避する可能性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44283) | 20.0 | 28.0 | 38.0 |
+| [Tycoon2FAがデバイスコードフィッシングでMicrosoft 365アカウントを乗っ取る](https://bleepingcomputer.com/news/security/tycoon2fa-hijacks-microsoft-365-accounts-via-device-code-phishing) | 20.0 | 20.0 | 42.0 |
+| [PLEASE_READ_ME：MySQLサーバーを破壊する機会主義的ランサムウェア](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 10.0 | 30.0 | 42.0 |
+| [Security: iBootログの難読化解除と再難読化](https://nyansatan.github.io/iboot-log-deobfuscation) | 10.0 | 20.0 | 48.0 |
 | [サイバーリスクインテリジェンスの未来](https://bitsight.com/de/blog/die-zukunft-liegt-cyber-risk-intelligence) | 10.0 | 20.0 | 42.0 |
-| [Microsoft Windows向けのオープンソース多目的リモートアクセスツールの侵害事件](https://github.com/DarkCoderSc/OptixGate) | 10.0 | 20.0 | 42.0 |
-| [Hack: 高度なJavaScriptファイルの検出と分析ツール](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
-| [Hack: Y2JBによるPS5 YouTubeアプリのユーザーランドコード実行](https://github.com/Gezine/Y2JB) | 10.0 | 20.0 | 42.0 |
-| [PowerShellでChromium系ブラウザのパスワードを復号する手口](https://github.com/The-Viper-One/Invoke-PowerChrome) | 10.0 | 20.0 | 42.0 |
-| [ファイルやOffice文書をMarkdownに変換するPythonツール「Fun」](https://github.com/microsoft/markitdown) | 10.0 | 20.0 | 42.0 |
-| [TigerBeetleを用いた高性能チケット管理システムの構築](https://renerocks.ai/blog/2025-11-02--tigerfans) | 10.0 | 20.0 | 42.0 |
-| [Fun: ターミナルUIオペレーティングシステム](https://github.com/Gaurav-Gosain/tuios) | 10.0 | 20.0 | 42.0 |
-| [NTLMリレーからKerberosリレーへ：知っておくべきすべて](https://decoder.cloud/2025/04/24/from-ntlm-relay-to-kerberos-relay-everything-you-need-to-know) | 10.0 | 20.0 | 42.0 |
-| [Hack：exit API をパッチしてプロセス内のプロセス終了を防ぐ方法](https://github.com/EvilBytecode/ExitPatcher) | 10.0 | 20.0 | 42.0 |
+| [OpenAI Sora 2のセキュリティ分析：マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 10.0 | 20.0 | 42.0 |
+| [Hack: Microsoft Windows向けの多目的リモートアクセスツール（オープンソース）](https://github.com/DarkCoderSc/OptixGate) | 10.0 | 20.0 | 42.0 |
+| [MixMaster MMORPGのリバースエンジニアリング解析](https://3r4y.github.io/posts/mixmasterreverseengineering) | 10.0 | 20.0 | 42.0 |
+| [Windowsセキュリティ研究向けカーネル脆弱性機能フレームワーク（KVC）への攻撃](https://github.com/wesmar/kvc) | 10.0 | 20.0 | 42.0 |
+| [JDWP経由でデバッグ可能なAndroidプロセスにFridaを動的アタッチするハック（root不要）](https://github.com/frankheat/frida-jdwp-loader) | 10.0 | 20.0 | 42.0 |
+| [Win FS minifilter driverで信頼されていないプロセスから機密データを保護する方法](https://github.com/KiExitDispatcher/NoMoreStealers) | 10.0 | 20.0 | 42.0 |
+| [Hack: C/C++シェルコード生成用ツールキット「Extensible Position Independent Code」](https://github.com/Print3M/epic) | 10.0 | 20.0 | 42.0 |
 | [Hack: .pdbファイルに記録されたデバッグ情報を視覚的に確認するツール](https://github.com/diversenok/DiaSymbolView) | 10.0 | 20.0 | 42.0 |
 
 ---
