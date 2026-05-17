@@ -1,12 +1,12 @@
-# 📡 サイレーダー 2026-05-17 11:00 JST 試作版
+# 📡 サイレーダー 2026-05-17 17:00 JST 試作版
 
-このレポートは、2026-05-17 05:00 JST〜2026-05-17 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-17 11:00 JST〜2026-05-17 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 38
+- 観測トピック数: 36
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
@@ -36,30 +36,30 @@
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [AIエージェントが試験で一生懸命「カンニング」していることが発覚](https://gigazine.net/news/20260517-benchmark-hacking) | 27.0 | 20.0 | 42.0 |
-| [Taskhost Windows タスクにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://github.com/Wh04m1001/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
-| [YouTube・TikTok・Snapが学校によるソーシャルメディア依存症訴訟で公判前に和解](https://gigazine.net/news/20260517-snap-youtube-tiktok-settle-suit) | 22.0 | 20.0 | 42.0 |
-| [徳島名物なると金時のクレープ＆すだちのソーダをマチ★アソビ会場で食べてみた](https://gigazine.net/news/20260517-narutokintoki-sudachi-machiasobi30) | 22.0 | 20.0 | 42.0 |
-| [わずか10カ月で砂漠の砂を豊かな土壌に変えるプロセスが解明される](https://gigazine.net/news/20260517-china-desert-soil-crust) | 22.0 | 20.0 | 42.0 |
-| [「Switch 2」値上げ！ 持っている人も今のうちにやっておきたいことをゲーム好きマンガ家が解説](https://itmedia.co.jp/news/articles/2605/17/news015.html) | 21.0 | 20.0 | 42.0 |
-| [Unifi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
+| [Taskhost Windowsタスクにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://github.com/Wh04m1001/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
+| [きぐるみたちが画鋲つき武器でボコボコ戦う「スーパーきぐるみファイト」観戦レポート、仕事猫も参戦でヨシ！【マチ★アソビ vol.30】](https://gigazine.net/news/20260517-super-kigurumi-fight-machiasobi30) | 22.0 | 20.0 | 42.0 |
+| [マグロの刺身＋ココナッツミルク＋ごはんにライムを絞るナウルフード「ココナッツフィッシュライス」をナウル万博2026in徳島で食べてきた](https://gigazine.net/news/20260517-nauru-expo-2026-in-tokushima) | 22.0 | 20.0 | 42.0 |
+| [AIモデルでブラウザを自動操作できる「Browser-Use」、オープンソースで開発され自然言語で簡単に指示可能](https://gigazine.net/news/20260517-browser-use) | 22.0 | 20.0 | 42.0 |
+| [WordPressプラグイン・テーマの脆弱性最新情報 第28回 WordPress脆弱性31件、未認証攻撃も多数　Forminator FormsやMetaSliderに注意【4月30日～5月6日】](https://news.mynavi.jp/techplus/article/wordpressvulnerability-28) | 21.0 | 20.0 | 42.0 |
+| [UniFi Access におけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
 | [Netskopeにおけるクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 20.0 | 38.0 | 42.0 |
-| [Citrix NetScaler のメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
-| [Spring ELを悪用して環境変数とシステムプロパティを露出させる攻撃（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
-| [Security: 低権限でCOMを使ってBoot Configuration Data（BCD）を削除できる脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
-| [Security: 4 Bytes, 1 Lie - SMAPを回避するカーネルポインタへの巧妙な手口（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
-| [Microsoft、重大なAzure脆弱性報告を却下しCVE未発行](https://bleepingcomputer.com/news/security/microsoft-rejects-critical-azure-vulnerability-report-no-cve-issued) | 20.0 | 20.0 | 42.0 |
-| [PLEASE_READ_ME: MySQLサーバーを破壊する機会主義型ランサムウェア](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 10.0 | 30.0 | 42.0 |
-| [Security: iBootログの難読化・復号化](https://nyansatan.github.io/iboot-log-deobfuscation) | 10.0 | 20.0 | 48.0 |
+| [Citrix NetScalerのメモリリークおよび反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
+| [Spring ELを悪用して環境変数とシステムプロパティを露出させる手口（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
+| [Security: 4 Bytes, 1 Lie - SMAP不要のカーネルポインタに対する巧妙なだまし討ち（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
+| [Security: 低権限で COM を使って Boot Configuration Data（BCD）を削除可能な脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
+| [PLEASE_READ_ME: MySQLサーバーを壊滅させる機会主義的ランサムウェア](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 10.0 | 30.0 | 42.0 |
+| [セキュリティ: iBootログの難読化解除](https://nyansatan.github.io/iboot-log-deobfuscation) | 10.0 | 20.0 | 48.0 |
 | [サイバーリスクインテリジェンスの未来](https://bitsight.com/de/blog/die-zukunft-liegt-cyber-risk-intelligence) | 10.0 | 20.0 | 42.0 |
-| [PS5のYouTubeアプリを悪用したY2JBによるユーザーランドコード実行](https://github.com/Gezine/Y2JB) | 10.0 | 20.0 | 42.0 |
-| [PowerShellを使ってChromiumベースのブラウザのパスワードを復号する手口](https://github.com/The-Viper-One/Invoke-PowerChrome) | 10.0 | 20.0 | 42.0 |
-| [Fun: ファイルやOffice文書をMarkdownへ変換するPythonツール](https://github.com/microsoft/markitdown) | 10.0 | 20.0 | 42.0 |
-| [TigerBeetleで高性能チケット管理システムを構築する方法](https://renerocks.ai/blog/2025-11-02--tigerfans) | 10.0 | 20.0 | 42.0 |
-| [Terminal UIで動作するOSの楽しさ](https://github.com/Gaurav-Gosain/tuios) | 10.0 | 20.0 | 42.0 |
+| [Microsoft Windows向けのオープンソース多目的リモートアクセスツールの侵害事件](https://github.com/DarkCoderSc/OptixGate) | 10.0 | 20.0 | 42.0 |
+| [Hack: 高度なJavaScriptファイルの検出と分析ツール](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
+| [Hack: Y2JBによるPS5 YouTubeアプリのユーザーランドコード実行](https://github.com/Gezine/Y2JB) | 10.0 | 20.0 | 42.0 |
+| [PowerShellでChromium系ブラウザのパスワードを復号する手口](https://github.com/The-Viper-One/Invoke-PowerChrome) | 10.0 | 20.0 | 42.0 |
+| [ファイルやOffice文書をMarkdownに変換するPythonツール「Fun」](https://github.com/microsoft/markitdown) | 10.0 | 20.0 | 42.0 |
+| [TigerBeetleを用いた高性能チケット管理システムの構築](https://renerocks.ai/blog/2025-11-02--tigerfans) | 10.0 | 20.0 | 42.0 |
+| [Fun: ターミナルUIオペレーティングシステム](https://github.com/Gaurav-Gosain/tuios) | 10.0 | 20.0 | 42.0 |
 | [NTLMリレーからKerberosリレーへ：知っておくべきすべて](https://decoder.cloud/2025/04/24/from-ntlm-relay-to-kerberos-relay-everything-you-need-to-know) | 10.0 | 20.0 | 42.0 |
-| [Hack: 高度なJavaScriptファイルの発見・解析ツール](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
-| [Must see: Geminiをハッキングする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 10.0 | 20.0 | 42.0 |
+| [Hack：exit API をパッチしてプロセス内のプロセス終了を防ぐ方法](https://github.com/EvilBytecode/ExitPatcher) | 10.0 | 20.0 | 42.0 |
+| [Hack: .pdbファイルに記録されたデバッグ情報を視覚的に確認するツール](https://github.com/diversenok/DiaSymbolView) | 10.0 | 20.0 | 42.0 |
 
 ---
 
