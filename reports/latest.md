@@ -1,19 +1,20 @@
-# 📡 サイレーダー 2026-05-18 05:00 JST 試作版
+# 📡 サイレーダー 2026-05-18 11:00 JST
 
-このレポートは、2026-05-17 17:00 JST〜2026-05-18 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-18 05:00 JST〜2026-05-18 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 39
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 69
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE](#topic-4593) | 33.0 | 67.0 | 57.0 | 音声 | 温度感上位枠 |
+| 1 | [New Windows 'MiniPlasma' zero-day exploit gives SYSTEM access, PoC released](#topic-6023) | 39.0 | 50.0 | 42.0 | 音声 | 温度感上位枠 |
+| 2 | [連鎖感染するnpmワーム「Mini Shai-Hulud」 特徴は「ランサム性」？ どう守る？ 専門家の見解](#topic-6033) | 37.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -21,85 +22,123 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-4593"></a>
+<a id="topic-6023"></a>
 
-### 1. NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE
+### 1. New Windows 'MiniPlasma' zero-day exploit gives SYSTEM access, PoC released
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>RCE</nobr> / <nobr>KEV</nobr> |
+| <nobr>タグ</nobr> | <nobr>Windows</nobr> / <nobr>ゼロデイ</nobr> / <nobr>PoC</nobr> / <nobr>権限昇格</nobr> / <nobr>TTP</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 33.0 |
-| <nobr>実務影響</nobr> | 67.0 |
-| <nobr>確度</nobr> | 57.0 |
+| <nobr>温度感</nobr> | 39.0 |
+| <nobr>実務影響</nobr> | 50.0 |
+| <nobr>確度</nobr> | 42.0 |
 
 #### 概要
 
-NGINXのngx_http_rewrite_moduleに関する脆弱性CVE-2026-42945が公表され、公開後まもなく実際の悪用が観測されたと報告されています。
-報道では、ワーカーのクラッシュにつながるほか、条件によってはリモートコード実行の可能性があるとされています。
-広く使われるNGINX系製品に影響するため、サーバー運用への影響が大きい可能性があります。すでに悪用観測があるとされる点から、早期の確認と対応が重要です。
+Windowsの権限昇格に関する未修正の脆弱性「MiniPlasma」が報告され、PoCが公開されたとされています。
+公開情報では、完全に更新済みのWindows環境でもSYSTEM権限を取得される可能性が示唆されていますが、詳細な検証状況は限定的です。
+権限昇格のゼロデイは、侵入後に被害を拡大させる足がかりになりやすく、端末やサーバーの影響が大きくなりがちです。
+PoCの公開により、今後の悪用リスクや監視の優先度が高まる点が注目されます。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 3 sources。
 - 実悪用・ゼロデイ文脈。
-- 技術詳細・再現情報あり。
 - 技術者コミュニティ反応: 弱。
-- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
-- 技術詳細により影響確認が進みやすい。
-- RCEまたは認証バイパス系。
+- 権限昇格系。
 
 ##### 確度
-- 複数ソース確認。
-- CVE IDあり。
 - 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 技術詳細・悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 技術詳細、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
 
 #### 担当者向け確認ポイント
 
-- 利用中のNGINX/OpenとNGINX Plusのバージョンを確認し、影響範囲を特定する。
-- ベンダーや公的な案内を確認し、修正版や回避策が出ていれば速やかに適用する。
-- 異常なワーカー停止や再起動、関連するログの増加がないか監視を強化する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-42945 | 主要CVE | 1.00 |
+- 該当するWindows環境で、ベンダーの修正提供や追加情報の有無を確認する。
+- EDRやログ監視で、権限昇格に関連する不審なプロセス生成や権限変更の兆候を確認する。
+- 特権アカウントの最小権限化と、管理者権限の利用状況を見直す。
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-42945](https://nvd.nist.gov/vuln/detail/CVE-2026-42945) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
-| <nobr>出典</nobr> | [NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible ](https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [NGINXでリモートコード実行の脆弱性が発見される、影響を受けるバージョンはこれ](https://gigazine.net/news/20260515-nginx-remote-code-execution) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [18-Year-Old NGINX Rewrite Module Flaw Enables Unauthenticated RCE](https://thehackernews.com/2026/05/18-year-old-nginx-rewrite-module-flaw.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-42945 NGINX ngx_http_rewrite_module vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42945) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [New Windows 'MiniPlasma' zero-day exploit gives SYSTEM access, PoC released](https://bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
 - SNS反応: 反応未確認。
 - 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 中。
-- 日本語圏反応: 反応あり・低信頼。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
 - 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
+
+<a id="topic-6033"></a>
+
+### 2. 連鎖感染するnpmワーム「Mini Shai-Hulud」 特徴は「ランサム性」？ どう守る？ 専門家の見解
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 37.0 |
+| <nobr>実務影響</nobr> | 30.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+npmの開発者コミュニティで、GitHub Actionsを起点に複数のパッケージへ影響が広がる「Mini Shai-Hulud」と呼ばれるマルウェアキャンペーンが話題になっています。
+自己増殖の性質に加え、ランサムウェアに似た要素があるとされ、サプライチェーン全体への波及が懸念されています。
+パッケージ管理基盤やCI/CDの侵害は、個別のアプリだけでなく多数の利用者や依存先に影響を及ぼす可能性があります。
+開発環境の認証情報や自動化基盤の管理が不十分だと、被害が連鎖しやすい点が注目されています。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- CI/CDやGitHub Actionsで扱う認証情報・権限を最小化し、不要なシークレットは定期的に見直す。
+- npm依存パッケージの更新や新規導入時は、信頼できる公開元・変更履歴・メンテナンス状況を確認する。
+- 開発環境で不審な挙動がないか監視し、侵害の可能性があればトークン失効や依存関係の棚卸しを速やかに行う。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [連鎖感染するnpmワーム「Mini Shai-Hulud」　特徴は「ランサム性」？　どう守る？　専門家の見解](https://atmarkit.itmedia.co.jp/ait/articles/2605/18/news019.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 弱。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
 - 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: 技術詳細・悪用観測あり。
-- 継続観測: 継続。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
 
 ---
 
@@ -118,30 +157,30 @@ NGINXのngx_http_rewrite_moduleに関する脆弱性CVE-2026-42945が公表さ�
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [Week in review: CiscoがSD-WANの0-dayを修正、未修正のMicrosoft Exchange Serverの脆弱性が悪用される](https://helpnetsecurity.com/2026/05/17/week-in-review-cisco-patches-sd-wan-0-day-unpatched-microsoft-exchange-server-flaw-exploited) | 37.0 | 38.0 | 43.0 |
-| [Taskhost Windows Tasksにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://github.com/Wh04m1001/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
-| [CVE-2026-46483 Vim: tar#Vimuntarにおけるshellescapeのspecialフラグ不足によるコマンドインジェクション](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46483) | 24.0 | 46.0 | 38.0 |
-| [UniFi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
-| [Netskopeにおけるクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass) | 20.0 | 38.0 | 42.0 |
-| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
-| [セキュリティ：4バイト、1つの嘘 - カーネルポインタに対するSMAP不要の信用詐欺（CVE-2025-50168）](https://oobs.io/posts/four-bytes-one-lie) | 20.0 | 28.0 | 50.0 |
-| [Security: 低権限のCOMでBoot Configuration Data (BCD)を削除可能な脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user) | 20.0 | 28.0 | 50.0 |
-| [Spring ELを用いて環境変数とシステムプロパティを露出させる攻撃（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253) | 20.0 | 28.0 | 50.0 |
-| [CVE-2026-8328: FTP PASVのSSRF、ftpcp()が実際のピアアドレスを使わずサーバー提供のPASVホストアドレスを信頼する問題](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8328) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-8368: Perl向けLWP::UserAgent 6.83未満におけるクロスオリジンリダイレクト時のAuthorizationおよびProxy-Authorizationヘッダー漏えい](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8368) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-44283 etcd: etcdトランザクションのPrevKvによる読み取りアクセスがRBAC認可チェックを回避する可能性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44283) | 20.0 | 28.0 | 38.0 |
-| [Tycoon2FAがデバイスコードフィッシングでMicrosoft 365アカウントを乗っ取る](https://bleepingcomputer.com/news/security/tycoon2fa-hijacks-microsoft-365-accounts-via-device-code-phishing) | 20.0 | 20.0 | 42.0 |
-| [PLEASE_READ_ME：MySQLサーバーを破壊する機会主義的ランサムウェア](https://akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 10.0 | 30.0 | 42.0 |
-| [Security: iBootログの難読化解除と再難読化](https://nyansatan.github.io/iboot-log-deobfuscation) | 10.0 | 20.0 | 48.0 |
-| [サイバーリスクインテリジェンスの未来](https://bitsight.com/de/blog/die-zukunft-liegt-cyber-risk-intelligence) | 10.0 | 20.0 | 42.0 |
-| [OpenAI Sora 2のセキュリティ分析：マルチモーダルLLMを動かすシステムプロンプトの解明](https://mindgard.ai/resources/openai-sora-system-prompts) | 10.0 | 20.0 | 42.0 |
-| [Hack: Microsoft Windows向けの多目的リモートアクセスツール（オープンソース）](https://github.com/DarkCoderSc/OptixGate) | 10.0 | 20.0 | 42.0 |
-| [MixMaster MMORPGのリバースエンジニアリング解析](https://3r4y.github.io/posts/mixmasterreverseengineering) | 10.0 | 20.0 | 42.0 |
-| [Windowsセキュリティ研究向けカーネル脆弱性機能フレームワーク（KVC）への攻撃](https://github.com/wesmar/kvc) | 10.0 | 20.0 | 42.0 |
-| [JDWP経由でデバッグ可能なAndroidプロセスにFridaを動的アタッチするハック（root不要）](https://github.com/frankheat/frida-jdwp-loader) | 10.0 | 20.0 | 42.0 |
-| [Win FS minifilter driverで信頼されていないプロセスから機密データを保護する方法](https://github.com/KiExitDispatcher/NoMoreStealers) | 10.0 | 20.0 | 42.0 |
-| [Hack: C/C++シェルコード生成用ツールキット「Extensible Position Independent Code」](https://github.com/Print3M/epic) | 10.0 | 20.0 | 42.0 |
-| [Hack: .pdbファイルに記録されたデバッグ情報を視覚的に確認するツール](https://github.com/diversenok/DiaSymbolView) | 10.0 | 20.0 | 42.0 |
+| [3つの「なぜ」で導く組織的セキュリティ施策--ZDNETセキュリティセミナー開催](https://japan.zdnet.com/article/35247114) | 29.0 | 30.0 | 42.0 |
+| [JavaアプリのモダナイズやAIエージェント実装、どこまで進化してる？ マイクロソフトが語るAI時代のJava開発“最前線”](https://ascii.jp/elem/000/004/401/4401899?rss=) | 26.0 | 20.0 | 42.0 |
+| [AeyeScan blog 第14回 AI に EC サイトを作らせてセキュリティスキャンにかけたら「動くけど守れない」コードだった](https://scan.netsecurity.ne.jp/article/2026/05/18/55289.html) | 26.0 | 20.0 | 42.0 |
+| [企業の生成AI活用、大企業は46.5％に 一方で半数が情報の正確性に懸念 帝国データバンク調査](https://itmedia.co.jp/news/articles/2605/15/news115.html) | 26.0 | 20.0 | 42.0 |
+| [AI供給網を可視化する「SBOM for AI」指針をG7、EUが公表](https://itmedia.co.jp/enterprise/articles/2605/18/news033.html) | 26.0 | 20.0 | 42.0 |
+| [Taskhost Windowsタスクにおけるローカル権限昇格（CVE-2025-60710）](https://github.com/Wh04m1001/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
+| [スマートフォンアプリ「くら寿司 公式アプリ」に証明書検証不備の脆弱性](https://scan.netsecurity.ne.jp/article/2026/05/18/55283.html) | 24.0 | 20.0 | 43.0 |
+| [総務省、違法オンラインカジノのアクセス抑止に関する報告書案を公開、ブロッキングについて継続的な検証を提言 6月15日までパブコメ募集中](https://internet.watch.impress.co.jp/docs/news/2109190.html) | 23.0 | 20.0 | 43.0 |
+| [Windows DNSにCVSS 9.8の“操作不要RCE”が発覚](https://atmarkit.itmedia.co.jp/ait/articles/2605/18/news029.html) | 22.0 | 46.0 | 56.0 |
+| [「MS Edge」にセキュリティ更新 - 独自含む脆弱性76件を修正](https://security-next.com/184528) | 22.0 | 20.0 | 42.0 |
+| [先週注目された記事（2026年5月10日〜2026年5月16日）](https://security-next.com/184519) | 22.0 | 20.0 | 42.0 |
+| [米当局、「Exchange Server」ゼロデイ脆弱性に注意喚起](https://security-next.com/184521) | 22.0 | 20.0 | 42.0 |
+| [映像カメラ搭載、地上の状況をリアルタイムで中継も 警視庁の最新ヘリコプターお披露目](https://itmedia.co.jp/news/articles/2605/18/news052.html) | 21.0 | 20.0 | 42.0 |
+| [グーグル、「Chromebook」の後継製品「Googlebook」を発表](https://japan.zdnet.com/article/35247621) | 21.0 | 20.0 | 42.0 |
+| [2位とトリプルスコア ～ AnthropicバグバウンティプログラムでGMO Flatt SecurityのRyotaK氏が1位を記録](https://scan.netsecurity.ne.jp/article/2026/05/18/55288.html) | 21.0 | 20.0 | 42.0 |
+| [GUARDIANWALL MailSuite にスタックベースのバッファオーバーフローの脆弱性](https://scan.netsecurity.ne.jp/article/2026/05/18/55287.html) | 21.0 | 20.0 | 42.0 |
+| [マイクロソフトが 5 月のセキュリティ情報公開、CVSS 基本値が 9.8 以上と高いスコアの脆弱性が 4 件](https://scan.netsecurity.ne.jp/article/2026/05/18/55286.html) | 21.0 | 20.0 | 42.0 |
+| [Lhaz および Lhaz+ にパストラバーサルの脆弱性](https://scan.netsecurity.ne.jp/article/2026/05/18/55285.html) | 21.0 | 20.0 | 42.0 |
+| [libXpm に境界外読み取りの脆弱性](https://scan.netsecurity.ne.jp/article/2026/05/18/55284.html) | 21.0 | 20.0 | 42.0 |
+| [Ollama に境界外の読み取りおよび書き込みの脆弱性](https://scan.netsecurity.ne.jp/article/2026/05/18/55282.html) | 21.0 | 20.0 | 42.0 |
+| [OpenAIがサプライチェーン侵害「Mini Shai-Hulud」の被害を公表](https://atmarkit.itmedia.co.jp/ait/articles/2605/18/news032.html) | 21.0 | 20.0 | 42.0 |
+| [企業内“20代優遇”で30代が孤立／APAC政府で「ソブリンAI」投資意欲高まる／南海トラフ地震、企業の危機意識は高いが備えは低調、ほか](https://ascii.jp/elem/000/004/402/4402662?rss=) | 21.0 | 20.0 | 42.0 |
+| [“基幹系AI”の実装をオラクルクラウドで進める国産SaaS事業者 データ×業務×ガバナンスが競争優位性に](https://ascii.jp/elem/000/004/402/4402307?rss=) | 21.0 | 20.0 | 42.0 |
+| [AI時代のデータセンター再設計--電力制約時代に求められるインフラ戦略とは（前編）](https://japan.zdnet.com/article/35247351) | 21.0 | 20.0 | 42.0 |
 
 ---
 
