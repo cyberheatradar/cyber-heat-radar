@@ -1,21 +1,21 @@
-# 📡 サイレーダー 2026-05-20 11:00 JST
+# 📡 サイレーダー 2026-05-20 17:00 JST
 
-このレポートは、2026-05-20 05:00 JST〜2026-05-20 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-20 11:00 JST〜2026-05-20 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 79
+- 観測トピック数: 70
 - [音声で扱う想定のトピック](#audio-topics): 3
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Microsoft 2026年5月 Patch Tuesday 関連まとめ](#topic-3472) | 52.0 | 56.0 | 58.0 | 音声 | 温度感上位枠 |
-| 2 | [Cybercrime service disrupted for abusing Microsoft platform to sign malware](#topic-7415) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
-| 3 | [Microsoft Exchange ProxyShell Scanning Doubles in April 2026 as Two Distinct Campaign Clusters Emerge](#topic-7405) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Microsoftがマルウェアを「正規ソフト」に見せかける証明書1000件超を失効](#topic-7537) | 38.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 2 | [Microsoft shares mitigation for YellowKey Windows zero-day](#topic-7533) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 3 | [Steamで配信されていた無料ホラーゲームにマルウェアが仕込まれていることをYouTuberが暴露](#topic-7548) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -23,120 +23,28 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-3472"></a>
+<a id="topic-7537"></a>
 
-### 1. Microsoft 2026年5月 Patch Tuesday 関連まとめ
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>脆弱性</nobr> / <nobr>AI</nobr> / <nobr>Windows</nobr> / <nobr>RCE</nobr> / <nobr>ゼロデイ</nobr> / <nobr>AIエージェント</nobr> / <nobr>脅威レポート</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 52.0 |
-| <nobr>実務影響</nobr> | 56.0 |
-| <nobr>確度</nobr> | 58.0 |
-
-#### 概要
-
-Microsoftは2026年5月のPatch Tuesdayで、120件超のCVEに対応する修正を公開しました。
-現時点では、少なくとも公開情報ベースで広く悪用中のゼロデイは確認されていない一方、Microsoft Word関連の複数の重要なRCE脆弱性を含め、優先度の高い修正が含まれています。
-件数が多く、影響範囲も広いため、通常の月例更新として見過ごしにくい内容です。特に文書ファイルを起点とする脆弱性は利用機会が多く、組織内の端末保護や更新計画に直結します。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 14 sources。
-- 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 強。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 複数ソース確認。
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- Wordを含むOffice系の修正を優先的に適用する。
-- 通常の月例より件数が多いため、検証環境での確認と段階的展開を意識する。
-- OSだけでなく、利用中のMicrosoft製品全体の適用漏れがないか確認する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-40364 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-40361 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-41096 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-41089 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-42898 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-40415 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-35435 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-35428 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-42826 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-32207 | 主要CVE | 1.00 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Windows Zero-Day Barrage Continues After Patch Tuesday](https://www.darkreading.com/cyberattacks-data-breaches/windows-zero-day-barrage-continues-after-patch-tuesday) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [A week in security (May 11 – May 17)](https://www.malwarebytes.com/blog/news/2026/05/a-week-in-security-may-11-may-17-2) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft, Palo Alto Networks Find Many Vulnerabilities by Using AI on Their Own](https://www.securityweek.com/microsoft-palo-alto-networks-find-many-vulnerabilities-by-using-ai-on-their-own-code/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft's MDASH AI System Finds 16 Windows Flaws Fixed in Patch Tuesday](https://thehackernews.com/2026/05/microsofts-mdash-ai-system-finds-16.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [May 2026 Patch Tuesday: no zero-days but plenty to fix](https://www.malwarebytes.com/blog/news/2026/05/may-2026-patch-tuesday-no-zero-days-but-plenty-to-fix) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Chipmaker Patch Tuesday: Intel and AMD Patch 70 Vulnerabilities](https://www.securityweek.com/chipmaker-patch-tuesday-intel-and-amd-patch-70-vulnerabilities/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft Fixes 17 Critical Flaws in May Patch Tuesday](https://www.infosecurity-magazine.com/news/microsoft-17-critical-flaws-may/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [ICS Patch Tuesday: New Security Advisories From Siemens, Schneider, CISA](https://www.securityweek.com/ics-patch-tuesday-new-security-advisories-from-siemens-schneider-cisa/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 強。
-- 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 継続。
-
----
-
-<a id="topic-7415"></a>
-
-### 2. Cybercrime service disrupted for abusing Microsoft platform to sign malware
+### 1. Microsoftがマルウェアを「正規ソフト」に見せかける証明書1000件超を失効
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> / <nobr>ランサムウェア</nobr> / <nobr>攻撃キャンペーン</nobr> |
+| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> / <nobr>ランサムウェア</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 36.0 |
+| <nobr>温度感</nobr> | 38.0 |
 | <nobr>実務影響</nobr> | 30.0 |
 | <nobr>確度</nobr> | 42.0 |
 
 #### 概要
 
-Microsoftは、自社のArtifact Signingサービスを悪用して不正なコード署名証明書を生成し、マルウェアに署名させる「malware-signing-as-a-service」運用を阻止したとしています。
-こうした証明書は、ランサムウェア関係者を含むサイバー犯罪者に利用されていたと説明されています。
-正規の署名に見せかけられると、マルウェアの信頼性が不当に高まり、検知や利用者の判断を難しくするおそれがあります。
-クラウド/署名基盤そのものの悪用は、攻撃対象が端末だけでなく認証・配布の仕組みに及ぶことを示しています。
+Microsoftは、マルウェアに正規ソフトのような見た目を与えるために悪用されていたコード署名証明書を1000件超失効させたと発表しました。
+対象とされた攻撃グループは、短期間有効な証明書を不正に取得し、ランサムウェアを含むマルウェアを検出されにくくしていたとされています。
+コード署名証明書は、ソフトウェアの信頼性判断に影響するため、悪用されると検知や利用者の警戒をすり抜けやすくなります。
+失効対応は一時的な対策だけでなく、署名の信頼性を前提にした運用の見直しが必要であることを示しています。
 
 #### 温度感の理由
 
@@ -151,9 +59,9 @@ Microsoftは、自社のArtifact Signingサービスを悪用して不正なコ�
 
 #### 担当者向け確認ポイント
 
-- コード署名証明書の信頼性確認と、発行元・失効状況の監視を強化する。
-- 署名付きだからといって安全とみなさず、配布経路や挙動ベースの検知も併用する。
-- Microsoft側の関連通知や失効情報があれば、社内の検知ルールやブロックリストに反映する。
+- コード署名されたファイルでも無条件に信頼せず、配布元や更新経路を含めて確認する。
+- 証明書失効や署名検証の結果を、EDRやゲートウェイの検知ルールに反映する。
+- ランサムウェア対策として、署名有無に依存しない多層防御と迅速な隔離手順を再点検する。
 
 #### 関連する対象
 
@@ -165,7 +73,78 @@ Microsoftは、自社のArtifact Signingサービスを悪用して不正なコ�
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [Cybercrime service disrupted for abusing Microsoft platform to sign malware](https://www.bleepingcomputer.com/news/security/cybercrime-service-disrupted-for-abusing-microsoft-platform-to-sign-malware/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoftがマルウェアを「正規ソフト」に見せかける証明書1000件超を失効](https://gigazine.net/news/20260520-microsoft-expose-fox-tempest/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 中。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+- 継続観測: 初出。
+
+---
+
+<a id="topic-7533"></a>
+
+### 2. Microsoft shares mitigation for YellowKey Windows zero-day
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>ゼロデイ</nobr> / <nobr>Windows</nobr> / <nobr>防御・運用</nobr> / <nobr>脆弱性</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 37.0 |
+| <nobr>実務影響</nobr> | 38.0 |
+| <nobr>確度</nobr> | 43.0 |
+
+#### 概要
+
+Microsoftが、WindowsのBitLockerに関するゼロデイ脆弱性「YellowKey」について、緩和策を案内しています。
+報告内容では、この問題により保護されたドライブへのアクセスが可能になるとされていますが、詳細な影響範囲や条件は公開情報だけでは限定的です。
+BitLockerは端末紛失時などのデータ保護で広く使われるため、保護機能の前提を揺るがす問題として注目されます。
+ゼロデイとして扱われている点から、影響を受ける環境では早急な確認が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Microsoftが示す緩和策と対象製品の確認を優先する。
+- BitLockerを利用している端末について、資産棚卸しと影響範囲の把握を進める。
+- 関連情報が追加される可能性があるため、ベンダー告知と更新情報を継続監視する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ベンダー | Microsoft | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Microsoft shares mitigation for YellowKey Windows zero-day](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-mitigation-for-yellowkey-windows-zero-day/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
@@ -175,21 +154,21 @@ Microsoftは、自社のArtifact Signingサービスを悪用して不正なコ�
 - 日本語圏反応: 反応未確認。
 - 技術者コミュニティ反応: 未評価。
 - 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: なし。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
 - 継続観測: 初出。
 
 ---
 
-<a id="topic-7405"></a>
+<a id="topic-7548"></a>
 
-### 3. Microsoft Exchange ProxyShell Scanning Doubles in April 2026 as Two Distinct Campaign Clusters Emerge
+### 3. Steamで配信されていた無料ホラーゲームにマルウェアが仕込まれていることをYouTuberが暴露
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>攻撃キャンペーン</nobr> / <nobr>CVE</nobr> |
+| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 継続監視 |
 | <nobr>温度感</nobr> | 30.0 |
@@ -198,49 +177,41 @@ Microsoftは、自社のArtifact Signingサービスを悪用して不正なコ�
 
 #### 概要
 
-F5 Labsの分析によると、2026年4月にMicrosoft ExchangeのProxyShell関連のスキャン活動が増加したとされています。
-あわせて、活動は性質の異なる2つのキャンペーンクラスターに分かれている可能性が示されています。
-Exchangeは組織内の重要な業務システムで使われることが多く、関連するスキャンの増加は防御側にとって無視できません。
-攻撃の兆候が複数のグループに分かれている可能性があるため、単一の動きとして見ない監視が必要です。
+Steamで無料配信されていたホラーゲーム「Beyond the Dark」にマルウェアが含まれていたと、テクノロジー系YouTuberが指摘しました。
+報道によると、動画公開後にValveは同ゲームをSteamから削除しています。
+正規の配信プラットフォームを通じた配布であっても、ソフトウェアに不正なコードが紛れ込む可能性があることを示す事例です。
+利用者保護だけでなく、配信・審査プロセスの信頼性が問われます。
 
 #### 温度感の理由
 
 ##### 温度感
 - 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 弱。
 
 ##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- Exchange公開系の露出状況や不要な外部公開設定を再確認する。
-- ProxyShell関連の検知ルールやログ監視を見直し、急なスキャン増加を追えるようにする。
-- 侵害の有無にかかわらず、パッチ適用状況と管理系アカウントの保護を点検する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ベンダー | Microsoft | 言及あり | 0.80 |
-| 製品 | Exchange | 言及あり | 0.80 |
+- 配信元や公開状況にかかわらず、入手したソフトは実行前に信頼できる情報で確認する。
+- 不審な挙動があれば利用を止め、端末の検査や関連アカウントの確認を行う。
+- 自組織でゲームや無料ツールを許可する場合は、導入制御や端末保護のルールを見直す。
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [Microsoft Exchange ProxyShell Scanning Doubles in April 2026 as Two Distinct Cam](https://www.f5.com/labs/articles/microsoft-exchange-proxyshell-scanning-doubles-in-april-2026-as-two-distinct-campaign-clusters) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Steamで配信されていた無料ホラーゲームにマルウェアが仕込まれていることをYouTuberが暴露](https://gigazine.net/news/20260520-steam-game-removed-malware/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
 - SNS反応: 反応未確認。
 - 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
+- 日本語圏メディア波及: 中。
 - 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 弱。
+- 技術者コミュニティ反応: 未評価。
 - 開発者コミュニティ反応: 反応未確認。
 - 攻撃・悪用観測シグナル: なし。
 - 継続観測: 初出。
@@ -262,30 +233,30 @@ Exchangeは組織内の重要な業務システムで使われることが多く
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [Verizon DBIR 2026：脆弱性の悪用が認証情報窃取を上回り主要な侵害経路に](https://www.securityweek.com/verizon-dbir-2026-vulnerability-exploitation-overtakes-credential-theft-as-top-breach-vector/) | 28.0 | 30.0 | 42.0 |
-| [Claude Mythosのヤバすぎる実力を検証 脆弱性を連結して攻撃経路を生成](https://atmarkit.itmedia.co.jp/ait/articles/2605/20/news042.html) | 28.0 | 20.0 | 42.0 |
-| [グーグル、AIプランを刷新--これから選ぶべきプランは？](https://japan.zdnet.com/article/35247708/) | 26.0 | 20.0 | 42.0 |
-| [AWSのワークショップで「旅行プランナー」のAIエージェントを開発した](https://ascii.jp/elem/000/004/402/4402705/?rss=) | 26.0 | 20.0 | 42.0 |
-| [攻撃・防御それぞれで AI に向き合うエンジニアが語る ～ GMO IERAE HackNight #4 が 6 / 2 開催](https://scan.netsecurity.ne.jp/article/2026/05/20/55311.html) | 26.0 | 20.0 | 42.0 |
-| [Okta for AI Agents と「Amazon Bedrock AgentCore」が統合](https://scan.netsecurity.ne.jp/article/2026/05/20/55306.html) | 26.0 | 20.0 | 42.0 |
-| [Google、パーソナルAIエージェント「Gemini Spark」発表――デバイスを閉じても自律で働く](https://www.itmedia.co.jp/news/articles/2605/20/news068.html) | 26.0 | 20.0 | 42.0 |
-| [Google検索が「AI検索」に──エージェント機能やマルチモーダル入力に対応](https://www.itmedia.co.jp/news/articles/2605/20/news067.html) | 26.0 | 20.0 | 42.0 |
-| [現実世界を基に"動き回れる"仮想空間を生成　Googleの世界生成AI「Project Genie」にストリートビュー連携機能](https://www.itmedia.co.jp/news/articles/2605/20/news065.html) | 26.0 | 20.0 | 42.0 |
-| [TaskhostのWindowsタスクにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://nvd.nist.gov/vuln/detail/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
-| [Netskope、SASEプラットフォーム「Netskope One」に、AIエージェントにも対応するセキュリティ機能群を統合](https://internet.watch.impress.co.jp/docs/news/2109912.html) | 25.0 | 20.0 | 42.0 |
-| [AIアプリ向けChromaDBの最高深刻度の脆弱性によりサーバーが乗っ取られる](https://www.bleepingcomputer.com/news/security/max-severity-flaw-in-chromadb-for-ai-apps-allows-server-hijacking/) | 25.0 | 20.0 | 42.0 |
-| [Androidアプリ「パスワード管理 ロボフォーム」のintent処理における検証不備の脆弱性](https://jvn.jp/vu/JVNVU93461473/) | 23.0 | 20.0 | 43.0 |
-| [Cloudflareが明かす「Mythos Preview」の実力 AIが脆弱性発見から攻撃実証まで自律実行](https://www.itmedia.co.jp/enterprise/articles/2605/20/news035.html) | 23.0 | 20.0 | 42.0 |
-| [推論サーバ「NVIDIA Triton Inference Server」に複数脆弱性](https://www.security-next.com/184657) | 22.0 | 20.0 | 42.0 |
-| [「Firefox 151」がリリース - 脆弱性31件に対応](https://www.security-next.com/184650) | 22.0 | 20.0 | 42.0 |
-| [「Drupal」が緊急更新を予定 - 数時間で脆弱性悪用の可能性](https://www.security-next.com/184640) | 22.0 | 20.0 | 42.0 |
-| [PR： ネットワークのブラックボックス化が招く致命的な被害とは 有線・無線を一括制御して、トラブル復旧を速める秘策](https://atmarkit.itmedia.co.jp/ait/articles/2605/20/news003.html) | 21.0 | 20.0 | 42.0 |
-| [アメリカ人「近所にデータセンターが建設されるくらいなら原子力発電所が建つ方がまだまし」世論調査結果](https://scan.netsecurity.ne.jp/article/2026/05/20/55312.html) | 21.0 | 20.0 | 42.0 |
-| [はてな資金流出、特別調査委員会設置](https://scan.netsecurity.ne.jp/article/2026/05/20/55310.html) | 21.0 | 20.0 | 42.0 |
-| [東邦大学医療センター大森病院の業務委託先がペースメーカープログラマを紛失、個人情報が不正に閲覧される可能性が否定できない状況](https://scan.netsecurity.ne.jp/article/2026/05/20/55309.html) | 21.0 | 20.0 | 42.0 |
-| [東北大学に不正アクセス、大学病院のNASに保存されていた個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/05/20/55308.html) | 21.0 | 20.0 | 42.0 |
-| [「E/SASV Games公式サイト」に不正アクセス、ファイル改ざんと不正なプログラムの設置を確認](https://scan.netsecurity.ne.jp/article/2026/05/20/55307.html) | 21.0 | 20.0 | 42.0 |
-| [TSS LINK「トランセーファー BASIC」Ver.4.7リリース、Adobe Acrobat・Adobe Acrobat Reader バージョン2026 に対応](https://scan.netsecurity.ne.jp/article/2026/05/20/55305.html) | 21.0 | 20.0 | 42.0 |
+| [「PowerShell」がランサムウェア攻撃に悪用？ 正規ツールを“凶器”にする手口と対策](https://atmarkit.itmedia.co.jp/ait/articles/2605/20/news053.html) | 29.0 | 30.0 | 42.0 |
+| [GitHub、TeamPCPによる約4,000件の内部リポジトリ侵害申告を調査中](https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html) | 28.0 | 20.0 | 42.0 |
+| [グーグルが検索画面を刷新--AIエージェントや5つのアップグレードを解説](https://japan.zdnet.com/article/35247744/) | 26.0 | 20.0 | 42.0 |
+| [Google、AIが価格監視や決済最適化を自動で行う「Universal Cart」発表](https://www.itmedia.co.jp/news/articles/2605/20/news102.html) | 26.0 | 20.0 | 42.0 |
+| [Claude Mythosの登場に危機感 政府が新防衛構想「Project YATA-Shield」を始動](https://atmarkit.itmedia.co.jp/ait/articles/2605/20/news051.html) | 26.0 | 20.0 | 42.0 |
+| [GoogleピチャイCEO「AIエージェントを個人に」、新機能Sparkは総合力に活路](https://xtech.nikkei.com/atcl/nxt/column/18/00001/11755/) | 26.0 | 20.0 | 42.0 |
+| [Taskhost Windows タスクにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://nvd.nist.gov/vuln/detail/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
+| [AIアシスタントが本番環境の鍵を握るとき](https://www.helpnetsecurity.com/2026/05/20/agentic-ai-security-llm-research/) | 25.0 | 20.0 | 42.0 |
+| [セキュリティ担当者が知るべき7つの厳しい現実：2026年DevOps脅威レポート](https://www.helpnetsecurity.com/2026/05/20/hard-truths-from-2026-devops-threats-report/) | 25.0 | 20.0 | 42.0 |
+| [NTTインテグレーションと日本IBM、省電力AI基盤を共同検証--「IBM Spyre」でオンプレAI強化](https://japan.zdnet.com/article/35247737/) | 24.0 | 20.0 | 43.0 |
+| [Windows 11に6年前修正済みの脆弱性、最新パッチ適用後も悪用可能](https://news.mynavi.jp/techplus/article/20260520-4478064/) | 23.0 | 40.0 | 50.0 |
+| [トヨタ系カー用品店にサイバー攻撃 - 会員情報流出の可能性](https://www.security-next.com/184420) | 22.0 | 20.0 | 42.0 |
+| [「NGINX JavaScript」に深刻な脆弱性 - 修正版が公開](https://www.security-next.com/184692) | 22.0 | 20.0 | 42.0 |
+| [複数ECサイトから顧客情報約310万件が流出 - ユニバーサルミュージック](https://www.security-next.com/184576) | 22.0 | 20.0 | 42.0 |
+| [ISC Stormcast（2026年5月20日配信）](https://isc.sans.edu/diary/rss/32998) | 22.0 | 20.0 | 42.0 |
+| [取締役会に伝わるドル建てのサイバーリスクの伝え方](https://www.helpnetsecurity.com/2026/05/20/nick-nieuwenhuis-nedscaper-cyber-resilience-strategy/) | 21.0 | 20.0 | 43.0 |
+| [ヴイエムウェア、「VMware Cloud Foundation 9.1」を発表](https://japan.zdnet.com/article/35247745/) | 21.0 | 20.0 | 42.0 |
+| [グーグル、動画生成ツール「Omni」を発表--「Nano Banana」同様の革新に期待](https://japan.zdnet.com/article/35247760/) | 21.0 | 20.0 | 42.0 |
+| [レッドハットとパナソニック コネクト、「TOUGHBOOK」でエッジ基盤強化--製造現場DXを推進](https://japan.zdnet.com/article/35247740/) | 21.0 | 20.0 | 42.0 |
+| [JISAが「AI共生宣言」と2026年度事業計画を発表--AIは「協働する存在」へ](https://japan.zdnet.com/article/35247715/) | 21.0 | 20.0 | 42.0 |
+| [ファンティアの「修正・モザイク基準」改定にクリエイター悲鳴 「過去作も？」「時間なさすぎ」](https://www.itmedia.co.jp/news/articles/2605/20/news087.html) | 21.0 | 20.0 | 42.0 |
+| [平均パスワード保有数が168件から120件に初の減少 その裏で起きていること](https://atmarkit.itmedia.co.jp/ait/articles/2605/20/news059.html) | 21.0 | 20.0 | 42.0 |
+| [GitHub、内部リポジトリへの不正アクセスを「調査中」 ハッカー集団「4000件窃取」と主張](https://www.itmedia.co.jp/news/articles/2605/20/news085.html) | 21.0 | 20.0 | 42.0 |
+| [Absolute、AIによる復旧自動化とSSE連携でサイバーレジリエンスを強化](https://japan.zdnet.com/article/35247718/) | 21.0 | 20.0 | 42.0 |
 
 ---
 
