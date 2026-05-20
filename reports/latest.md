@@ -1,23 +1,21 @@
-# 📡 サイレーダー 2026-05-20 05:00 JST
+# 📡 サイレーダー 2026-05-20 11:00 JST
 
-このレポートは、2026-05-19 17:00 JST〜2026-05-20 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-20 05:00 JST〜2026-05-20 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 116
-- [音声で扱う想定のトピック](#audio-topics): 5
+- 観測トピック数: 79
+- [音声で扱う想定のトピック](#audio-topics): 3
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Exposing Fox Tempest: A malware-signing service operation](#topic-7178) | 38.0 | 30.0 | 48.0 | 音声 | 温度感上位枠 |
-| 2 | [Huawei zero-day attack behind last year’s crash of Luxembourg's entire telecoms network](#topic-7164) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 3 | [Microsoft disrupts Fox Tempest malware-signing-as-a-service platform tied to ransomware gangs](#topic-7169) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
-| 4 | [Microsoft Disrupts Malware-Signing Service Run by ‘Fox Tempest’](#topic-7173) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
-| 5 | [Microsoft disrupts cybercrime service that abused software verification systems en masse](#topic-7180) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Microsoft 2026年5月 Patch Tuesday 関連まとめ](#topic-3472) | 52.0 | 56.0 | 58.0 | 音声 | 温度感上位枠 |
+| 2 | [Cybercrime service disrupted for abusing Microsoft platform to sign malware](#topic-7415) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 3 | [Microsoft Exchange ProxyShell Scanning Doubles in April 2026 as Two Distinct Campaign Clusters Emerge](#topic-7405) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -25,106 +23,43 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-7178"></a>
+<a id="topic-3472"></a>
 
-### 1. Exposing Fox Tempest: A malware-signing service operation
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>マルウェア</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>脅威アクター</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 38.0 |
-| <nobr>実務影響</nobr> | 30.0 |
-| <nobr>確度</nobr> | 48.0 |
-
-#### 概要
-
-Microsoftの公開情報によると、Fox Tempestは金銭目的の脅威アクターで、他のサイバー犯罪者向けにマルウェアの署名を支援する「malware-signing-as-a-service（MSaaS）」を運用していたとされています。
-これにより、Vanilla Tempestや一部のStorm系グループなどが、ランサムウェアを含む悪意あるコードをより通しやすく配布していた可能性が示されています。
-署名付きの不正コードは、検知や信頼の見た目をすり抜けやすく、防御側の判断を難しくします。
-ランサムウェアの流通を支える周辺サービスの実態が明らかになる点でも、実務上の関心が高い話題です。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 弱。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 署名の有無だけで信頼せず、配布元・挙動・証明書の不自然さも含めて確認する。
-- ランサムウェア関連の封じ込めでは、侵入経路だけでなく、署名済み不正ファイルの流通も前提に監視する。
-- Microsoftなどの脅威情報を参照し、関連するグループ名や活動パターンを検知ルールや調査観点に反映する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ransomware_group | Akira | 主題 | 0.80 |
-| ransomware_group | Qilin | 主題 | 0.80 |
-| ベンダー | Microsoft | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Exposing Fox Tempest: A malware-signing service operation](https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 弱。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: なし。
-- 継続観測: 初出。
-
----
-
-<a id="topic-7164"></a>
-
-### 2. Huawei zero-day attack behind last year’s crash of Luxembourg's entire telecoms network
+### 1. Microsoft 2026年5月 Patch Tuesday 関連まとめ
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>ゼロデイ</nobr> / <nobr>脆弱性</nobr> / <nobr>通信基盤</nobr> |
+| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>脆弱性</nobr> / <nobr>AI</nobr> / <nobr>Windows</nobr> / <nobr>RCE</nobr> / <nobr>ゼロデイ</nobr> / <nobr>AIエージェント</nobr> / <nobr>脅威レポート</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 37.0 |
-| <nobr>実務影響</nobr> | 38.0 |
-| <nobr>確度</nobr> | 43.0 |
+| <nobr>温度感</nobr> | 52.0 |
+| <nobr>実務影響</nobr> | 56.0 |
+| <nobr>確度</nobr> | 58.0 |
 
 #### 概要
 
-昨年ルクセンブルクの通信網全体に障害が発生した件について、Huawei製品に関するゼロデイ攻撃が背景にあった可能性が報じられています。
-現時点では同様の事象の再発は確認されておらず、原因となった脆弱性の詳細も公には説明されていません。
-通信インフラ全体に影響が及ぶと、広範なサービス停止につながるため、影響範囲の大きさが注目されています。
-原因が未解明のままだと、同種環境を運用する組織では継続的な監視とリスク評価が必要になります。
+Microsoftは2026年5月のPatch Tuesdayで、120件超のCVEに対応する修正を公開しました。
+現時点では、少なくとも公開情報ベースで広く悪用中のゼロデイは確認されていない一方、Microsoft Word関連の複数の重要なRCE脆弱性を含め、優先度の高い修正が含まれています。
+件数が多く、影響範囲も広いため、通常の月例更新として見過ごしにくい内容です。特に文書ファイルを起点とする脆弱性は利用機会が多く、組織内の端末保護や更新計画に直結します。
 
 #### 温度感の理由
 
 ##### 温度感
+- 複数ソースで確認: 14 sources。
 - 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 強。
+- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
+- RCEまたは認証バイパス系。
 
 ##### 確度
+- 複数ソース確認。
 - 一次・公的系ソースあり。
 
 #### 攻撃・悪用観測シグナル
@@ -135,39 +70,61 @@ Microsoftの公開情報によると、Fox Tempestは金銭目的の脅威アク
 
 #### 担当者向け確認ポイント
 
-- 該当ベンダー製機器を使う通信・ネットワーク環境では、障害時の切り分け手順とログ保全を改めて確認する。
-- 重要インフラや基幹網では、単一機器・単一経路への依存を避け、冗長化とフェイルオーバーの動作確認を行う。
-- ベンダーの通知、修正情報、回避策の有無を継続的に追い、未解明の障害として扱う間は監視を強める。
+- Wordを含むOffice系の修正を優先的に適用する。
+- 通常の月例より件数が多いため、検証環境での確認と段階的展開を意識する。
+- OSだけでなく、利用中のMicrosoft製品全体の適用漏れがないか確認する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-40364 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-40361 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-41096 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-41089 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-42898 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-40415 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-35435 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-35428 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-42826 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-32207 | 主要CVE | 1.00 |
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [Huawei zero-day attack behind last year’s crash of Luxembourg's entire telecoms ](https://therecord.media/huawei-zero-day-behind-last-year-luxembourg-telecom-outage) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Windows Zero-Day Barrage Continues After Patch Tuesday](https://www.darkreading.com/cyberattacks-data-breaches/windows-zero-day-barrage-continues-after-patch-tuesday) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [A week in security (May 11 – May 17)](https://www.malwarebytes.com/blog/news/2026/05/a-week-in-security-may-11-may-17-2) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft, Palo Alto Networks Find Many Vulnerabilities by Using AI on Their Own](https://www.securityweek.com/microsoft-palo-alto-networks-find-many-vulnerabilities-by-using-ai-on-their-own-code/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft's MDASH AI System Finds 16 Windows Flaws Fixed in Patch Tuesday](https://thehackernews.com/2026/05/microsofts-mdash-ai-system-finds-16.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [May 2026 Patch Tuesday: no zero-days but plenty to fix](https://www.malwarebytes.com/blog/news/2026/05/may-2026-patch-tuesday-no-zero-days-but-plenty-to-fix) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Chipmaker Patch Tuesday: Intel and AMD Patch 70 Vulnerabilities](https://www.securityweek.com/chipmaker-patch-tuesday-intel-and-amd-patch-70-vulnerabilities/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Fixes 17 Critical Flaws in May Patch Tuesday](https://www.infosecurity-magazine.com/news/microsoft-17-critical-flaws-may/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [ICS Patch Tuesday: New Security Advisories From Siemens, Schneider, CISA](https://www.securityweek.com/ics-patch-tuesday-new-security-advisories-from-siemens-schneider-cisa/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
 - SNS反応: 反応未確認。
 - 日本語圏一次情報: なし。
 - 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 強。
+- 開発者コミュニティ反応: 反応あり。
 - 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 初出。
+- 継続観測: 継続。
 
 ---
 
-<a id="topic-7169"></a>
+<a id="topic-7415"></a>
 
-### 3. Microsoft disrupts Fox Tempest malware-signing-as-a-service platform tied to ransomware gangs
+### 2. Cybercrime service disrupted for abusing Microsoft platform to sign malware
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> / <nobr>ランサムウェア</nobr> |
+| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> / <nobr>ランサムウェア</nobr> / <nobr>攻撃キャンペーン</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 継続監視 |
 | <nobr>温度感</nobr> | 36.0 |
@@ -176,10 +133,10 @@ Microsoftの公開情報によると、Fox Tempestは金銭目的の脅威アク
 
 #### 概要
 
-Microsoftは、ランサムウェア集団につながるとされる「Fox Tempest」というマルウェア署名支援サービスの妨害に踏み切ったと明らかにしました。
-公開された訴訟資料によると、このサービスは2025年5月から活動していたとされ、サイバー犯罪者向けにコード署名に関わる機能を提供していたようです。
-コード署名の悪用は、悪性ファイルの信頼性を装う手口に結びつくため、検知や封じ込めを難しくする可能性があります。
-ランサムウェア関連の支援基盤が断たれることで、関連攻撃の継続性に影響が出る点が注目されます。
+Microsoftは、自社のArtifact Signingサービスを悪用して不正なコード署名証明書を生成し、マルウェアに署名させる「malware-signing-as-a-service」運用を阻止したとしています。
+こうした証明書は、ランサムウェア関係者を含むサイバー犯罪者に利用されていたと説明されています。
+正規の署名に見せかけられると、マルウェアの信頼性が不当に高まり、検知や利用者の判断を難しくするおそれがあります。
+クラウド/署名基盤そのものの悪用は、攻撃対象が端末だけでなく認証・配布の仕組みに及ぶことを示しています。
 
 #### 温度感の理由
 
@@ -194,9 +151,9 @@ Microsoftは、ランサムウェア集団につながるとされる「Fox Temp
 
 #### 担当者向け確認ポイント
 
-- 正規のコード署名証明書や署名済みファイルを前提にした信頼判断を見直す。
-- 署名済みでも不審な配布経路・実行挙動を検知できるよう、端末側の監視を強化する。
-- ランサムウェア関連の初期侵入・横展開・実行兆候に対するログ確認とアラート設定を再点検する。
+- コード署名証明書の信頼性確認と、発行元・失効状況の監視を強化する。
+- 署名付きだからといって安全とみなさず、配布経路や挙動ベースの検知も併用する。
+- Microsoft側の関連通知や失効情報があれば、社内の検知ルールやブロックリストに反映する。
 
 #### 関連する対象
 
@@ -208,7 +165,7 @@ Microsoftは、ランサムウェア集団につながるとされる「Fox Temp
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [Microsoft disrupts Fox Tempest malware-signing-as-a-service platform tied to ran](https://therecord.media/microsoft-disrupts-fox-tempest-malware-signing-service) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Cybercrime service disrupted for abusing Microsoft platform to sign malware](https://www.bleepingcomputer.com/news/security/cybercrime-service-disrupted-for-abusing-microsoft-platform-to-sign-malware/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
@@ -223,57 +180,59 @@ Microsoftは、ランサムウェア集団につながるとされる「Fox Temp
 
 ---
 
-<a id="topic-7173"></a>
+<a id="topic-7405"></a>
 
-### 4. Microsoft Disrupts Malware-Signing Service Run by ‘Fox Tempest’
+### 3. Microsoft Exchange ProxyShell Scanning Doubles in April 2026 as Two Distinct Campaign Clusters Emerge
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> / <nobr>ランサムウェア</nobr> |
+| <nobr>タグ</nobr> | <nobr>攻撃キャンペーン</nobr> / <nobr>CVE</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 36.0 |
-| <nobr>実務影響</nobr> | 30.0 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
 | <nobr>確度</nobr> | 42.0 |
 
 #### 概要
 
-Microsoftが、Fox Tempestとされるグループに関連したマルウェア署名サービスを妨害したと報じられています。
-このサービスは、正規ソフトを装ってランサムウェアや他のマルウェアを配布する用途で悪用されていたとされています。
-正規ソフトに見せかけた配布は検知や利用者の見分けを難しくするため、ランサムウェア対策の観点で注目されます。
-今回の件は、脅威アクターの流通基盤に対する対処が行われた事例として重要です。
+F5 Labsの分析によると、2026年4月にMicrosoft ExchangeのProxyShell関連のスキャン活動が増加したとされています。
+あわせて、活動は性質の異なる2つのキャンペーンクラスターに分かれている可能性が示されています。
+Exchangeは組織内の重要な業務システムで使われることが多く、関連するスキャンの増加は防御側にとって無視できません。
+攻撃の兆候が複数のグループに分かれている可能性があるため、単一の動きとして見ない監視が必要です。
 
 #### 温度感の理由
 
 ##### 温度感
 - 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
 
 ##### 実務影響
-- ランサムウェア文脈。
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 正規ソフトに見える実行ファイルや署名付きファイルでも、入手元と配布経路の確認を徹底する。
-- 不審な配布物に対しては、署名の有無だけでなく、ハッシュ・配布元・更新経路を含めて検証する。
-- ランサムウェア文脈のため、検知ルールや隔離手順、ユーザー通知フローを改めて確認する。
+- Exchange公開系の露出状況や不要な外部公開設定を再確認する。
+- ProxyShell関連の検知ルールやログ監視を見直し、急なスキャン増加を追えるようにする。
+- 侵害の有無にかかわらず、パッチ適用状況と管理系アカウントの保護を点検する。
 
 #### 関連する対象
 
 | <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
 |---|---|---|---:|
 | ベンダー | Microsoft | 言及あり | 0.80 |
+| 製品 | Exchange | 言及あり | 0.80 |
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [Microsoft Disrupts Malware-Signing Service Run by ‘Fox Tempest’](https://www.securityweek.com/microsoft-disrupts-malware-signing-service-run-by-fox-tempest/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Exchange ProxyShell Scanning Doubles in April 2026 as Two Distinct Cam](https://www.f5.com/labs/articles/microsoft-exchange-proxyshell-scanning-doubles-in-april-2026-as-two-distinct-campaign-clusters) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
@@ -281,73 +240,7 @@ Microsoftが、Fox Tempestとされるグループに関連したマルウェア
 - 日本語圏一次情報: なし。
 - 日本語圏メディア波及: 未評価。
 - 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: なし。
-- 継続観測: 初出。
-
----
-
-<a id="topic-7180"></a>
-
-### 5. Microsoft disrupts cybercrime service that abused software verification systems en masse
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>マルウェア</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 36.0 |
-| <nobr>実務影響</nobr> | 30.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-Microsoft disrupts cybercrime service that abused software verification systems en masse に関する脅威・攻撃キャンペーン系の話題です。
-攻撃者、標的、TTP、IoC、悪用技術、検知観点を中心に確認する価値があります。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 標的OS、仮想化基盤、暗号化対象、バックアップ影響を確認する。
-- 初期侵入、横展開、認証情報窃取、永続化のTTPを確認する。
-- EDR/SIEMで検知すべきIoCや振る舞いを確認する。
-- ESXi、vCenter、バックアップ基盤、特権アカウントの保護状況を確認する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ransomware_group | Akira | 主題 | 0.80 |
-| ransomware_group | Qilin | 主題 | 0.80 |
-| ベンダー | Microsoft | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Microsoft disrupts cybercrime service that abused software verification systems ](https://cyberscoop.com/microsoft-digital-crimes-unit-disrupts-fox-tempest/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
+- 技術者コミュニティ反応: 弱。
 - 開発者コミュニティ反応: 反応未確認。
 - 攻撃・悪用観測シグナル: なし。
 - 継続観測: 初出。
@@ -369,30 +262,30 @@ Microsoft disrupts cybercrime service that abused software verification systems 
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [ZKTeco製CCTVカメラ](https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-04) | 32.0 | 46.0 | 50.0 |
-| [Linux KernelのCVE-2026-31635 LPE脆弱性に対するDirtyDecrypt PoC公開](https://thehackernews.com/2026/05/dirtydecrypt-poc-released-for-linux.html) | 31.0 | 50.0 | 52.0 |
-| [PDB文字列からMaaSへ：中国語話者の脅威アクターが利用する一般的なBadIISエコシステムの追跡](https://blog.talosintelligence.com/from-pdb-strings-to-maas-tracking-a-commodity-badiis-ecosystem/) | 30.0 | 20.0 | 42.0 |
-| [Mini Shai-Huludが再来、数百件のnpmパッケージが侵害される](https://cyberscoop.com/mini-shai-hulud-malware-npm-packages-compromised-again/) | 28.0 | 45.0 | 42.0 |
-| [Shai-Huludマルウェアの新たな波が600件のnpmパッケージを侵害](https://www.bleepingcomputer.com/news/security/new-shai-hulud-malware-wave-compromises-600-npm-packages/) | 28.0 | 35.0 | 42.0 |
-| [Microsoftがランサムウェア支援の署名ツールを提供していたFox Tempestを摘発](https://www.infosecurity-magazine.com/news/microsoft-takes-down-fox-tempest/) | 28.0 | 30.0 | 42.0 |
-| [Microsoft Self-Service Password Resetを悪用したAzureデータ窃取攻撃](https://www.bleepingcomputer.com/news/security/microsoft-self-service-password-reset-abused-in-azure-data-theft-attacks/) | 28.0 | 20.0 | 42.0 |
-| [Trapdoor Android広告詐欺スキームが455アプリを使って1日6億5900万件の入札リクエストを発生させた件](https://thehackernews.com/2026/05/trapdoor-android-ad-fraud-scheme-hit.html) | 28.0 | 20.0 | 42.0 |
-| [PureLogs infostealerが世界中で認証情報を窃取](https://www.helpnetsecurity.com/2026/05/19/purelogs-infostealer-delivery-steganography/) | 28.0 | 20.0 | 42.0 |
-| [レガシーなWindowsツールMSHTAがサイレントマルウェア攻撃の急増を助長](https://www.securityweek.com/legacy-windows-tool-mshta-fuels-surge-in-silent-malware-attacks/) | 28.0 | 20.0 | 42.0 |
-| [Google、“動画版Nano Banana”こと「Gemini Omni」公開 会話で映像を生成・編集](https://www.itmedia.co.jp/news/articles/2605/20/news063.html) | 26.0 | 20.0 | 42.0 |
-| [日立、Anthropicと提携 グループ29万人に「Claude」などAI導入 社会インフラ分野にも展開へ](https://www.itmedia.co.jp/news/articles/2605/19/news120.html) | 26.0 | 20.0 | 42.0 |
-| [デル、「Dell Deskside Agentic AI」を発表--AIとデータの主導権は「企業が握れ！」](https://japan.zdnet.com/article/35247694/) | 26.0 | 20.0 | 42.0 |
-| [Taskhost Windows タスクにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://nvd.nist.gov/vuln/detail/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
-| [Rapid7の2026年グローバルサイバーセキュリティサミット：セキュリティリーダー向けの重要ポイント](https://www.rapid7.com/blog/post/it-2026-global-cybersecurity-summit-key-takeaways-security-leaders) | 25.0 | 20.0 | 42.0 |
-| [サイバー進化の動的なブイヤベースを振り返り、未来を見据える](https://www.darkreading.com/cybersecurity-operations/looking-back-looking-forward-bouillabaisse-cyber-evolution) | 25.0 | 20.0 | 42.0 |
-| [Selector、AI駆動の可観測性をマルチクラウド環境へ拡張](https://www.helpnetsecurity.com/2026/05/19/selector-ai-driven-observability-capabilities/) | 25.0 | 20.0 | 42.0 |
-| [LaunchDarkly、運用中のAIエージェントにリアルタイム制御機能を追加](https://www.helpnetsecurity.com/2026/05/19/launchdarkly-agentcontrol/) | 25.0 | 20.0 | 42.0 |
-| [Canonical、Ubuntu Core 26を15年間のセキュリティ保守付きで提供](https://www.helpnetsecurity.com/2026/05/19/ubuntu-core-26-released/) | 25.0 | 20.0 | 42.0 |
-| [AIが脆弱性認識とセキュア・バイ・デザインなソフトウェアの基準を引き上げる](https://www.infosecurity-magazine.com/news/ai-raises-vulnerability-awareness/) | 25.0 | 20.0 | 42.0 |
-| [Agentic AIがソフトウェアビルドとモバイルアプリ攻撃を加速させる](https://www.infosecurity-magazine.com/news/agentic-ai-accelerates-software/) | 25.0 | 20.0 | 42.0 |
-| [2026年に企業を狙うフィッシング主導のソーシャルエンジニアリング攻撃5選](https://any.run/cybersecurity-blog/social-engineering-attacks-2026/) | 25.0 | 20.0 | 42.0 |
-| [YouTube、ディープフェイク対策に顔認証を導入へ](https://www.malwarebytes.com/blog/ai/2026/05/youtube-wants-your-face-to-fight-deepfakes) | 25.0 | 20.0 | 42.0 |
-| [ABB CoreSense HMおよびCoreSense M10の脆弱性](https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-01) | 24.0 | 46.0 | 50.0 |
+| [Verizon DBIR 2026：脆弱性の悪用が認証情報窃取を上回り主要な侵害経路に](https://www.securityweek.com/verizon-dbir-2026-vulnerability-exploitation-overtakes-credential-theft-as-top-breach-vector/) | 28.0 | 30.0 | 42.0 |
+| [Claude Mythosのヤバすぎる実力を検証 脆弱性を連結して攻撃経路を生成](https://atmarkit.itmedia.co.jp/ait/articles/2605/20/news042.html) | 28.0 | 20.0 | 42.0 |
+| [グーグル、AIプランを刷新--これから選ぶべきプランは？](https://japan.zdnet.com/article/35247708/) | 26.0 | 20.0 | 42.0 |
+| [AWSのワークショップで「旅行プランナー」のAIエージェントを開発した](https://ascii.jp/elem/000/004/402/4402705/?rss=) | 26.0 | 20.0 | 42.0 |
+| [攻撃・防御それぞれで AI に向き合うエンジニアが語る ～ GMO IERAE HackNight #4 が 6 / 2 開催](https://scan.netsecurity.ne.jp/article/2026/05/20/55311.html) | 26.0 | 20.0 | 42.0 |
+| [Okta for AI Agents と「Amazon Bedrock AgentCore」が統合](https://scan.netsecurity.ne.jp/article/2026/05/20/55306.html) | 26.0 | 20.0 | 42.0 |
+| [Google、パーソナルAIエージェント「Gemini Spark」発表――デバイスを閉じても自律で働く](https://www.itmedia.co.jp/news/articles/2605/20/news068.html) | 26.0 | 20.0 | 42.0 |
+| [Google検索が「AI検索」に──エージェント機能やマルチモーダル入力に対応](https://www.itmedia.co.jp/news/articles/2605/20/news067.html) | 26.0 | 20.0 | 42.0 |
+| [現実世界を基に"動き回れる"仮想空間を生成　Googleの世界生成AI「Project Genie」にストリートビュー連携機能](https://www.itmedia.co.jp/news/articles/2605/20/news065.html) | 26.0 | 20.0 | 42.0 |
+| [TaskhostのWindowsタスクにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://nvd.nist.gov/vuln/detail/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
+| [Netskope、SASEプラットフォーム「Netskope One」に、AIエージェントにも対応するセキュリティ機能群を統合](https://internet.watch.impress.co.jp/docs/news/2109912.html) | 25.0 | 20.0 | 42.0 |
+| [AIアプリ向けChromaDBの最高深刻度の脆弱性によりサーバーが乗っ取られる](https://www.bleepingcomputer.com/news/security/max-severity-flaw-in-chromadb-for-ai-apps-allows-server-hijacking/) | 25.0 | 20.0 | 42.0 |
+| [Androidアプリ「パスワード管理 ロボフォーム」のintent処理における検証不備の脆弱性](https://jvn.jp/vu/JVNVU93461473/) | 23.0 | 20.0 | 43.0 |
+| [Cloudflareが明かす「Mythos Preview」の実力 AIが脆弱性発見から攻撃実証まで自律実行](https://www.itmedia.co.jp/enterprise/articles/2605/20/news035.html) | 23.0 | 20.0 | 42.0 |
+| [推論サーバ「NVIDIA Triton Inference Server」に複数脆弱性](https://www.security-next.com/184657) | 22.0 | 20.0 | 42.0 |
+| [「Firefox 151」がリリース - 脆弱性31件に対応](https://www.security-next.com/184650) | 22.0 | 20.0 | 42.0 |
+| [「Drupal」が緊急更新を予定 - 数時間で脆弱性悪用の可能性](https://www.security-next.com/184640) | 22.0 | 20.0 | 42.0 |
+| [PR： ネットワークのブラックボックス化が招く致命的な被害とは 有線・無線を一括制御して、トラブル復旧を速める秘策](https://atmarkit.itmedia.co.jp/ait/articles/2605/20/news003.html) | 21.0 | 20.0 | 42.0 |
+| [アメリカ人「近所にデータセンターが建設されるくらいなら原子力発電所が建つ方がまだまし」世論調査結果](https://scan.netsecurity.ne.jp/article/2026/05/20/55312.html) | 21.0 | 20.0 | 42.0 |
+| [はてな資金流出、特別調査委員会設置](https://scan.netsecurity.ne.jp/article/2026/05/20/55310.html) | 21.0 | 20.0 | 42.0 |
+| [東邦大学医療センター大森病院の業務委託先がペースメーカープログラマを紛失、個人情報が不正に閲覧される可能性が否定できない状況](https://scan.netsecurity.ne.jp/article/2026/05/20/55309.html) | 21.0 | 20.0 | 42.0 |
+| [東北大学に不正アクセス、大学病院のNASに保存されていた個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/05/20/55308.html) | 21.0 | 20.0 | 42.0 |
+| [「E/SASV Games公式サイト」に不正アクセス、ファイル改ざんと不正なプログラムの設置を確認](https://scan.netsecurity.ne.jp/article/2026/05/20/55307.html) | 21.0 | 20.0 | 42.0 |
+| [TSS LINK「トランセーファー BASIC」Ver.4.7リリース、Adobe Acrobat・Adobe Acrobat Reader バージョン2026 に対応](https://scan.netsecurity.ne.jp/article/2026/05/20/55305.html) | 21.0 | 20.0 | 42.0 |
 
 ---
 
