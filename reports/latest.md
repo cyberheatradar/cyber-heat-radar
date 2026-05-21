@@ -1,19 +1,17 @@
-# 📡 サイレーダー 2026-05-21 11:00 JST
+# 📡 サイレーダー 2026-05-21 17:00 JST
 
-このレポートは、2026-05-21 05:00 JST〜2026-05-21 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-21 11:00 JST〜2026-05-21 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 84
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 74
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
-| Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Hackers bypass SonicWall VPN MFA due to incomplete patching](#topic-8150) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -21,64 +19,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-8150"></a>
-
-### 1. Hackers bypass SonicWall VPN MFA due to incomplete patching
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>脅威アクター</nobr> / <nobr>防御・運用</nobr> / <nobr>ランサムウェア</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 36.0 |
-| <nobr>実務影響</nobr> | 30.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-SonicWall Gen6 SSL-VPN機器で、パッチ適用が不十分な状態を突かれ、MFAを回避されたとされる事案が報じられています。
-攻撃者はVPN認証情報の総当たりも用いたとされ、ランサムウェア攻撃に使われるツールの展開につながった可能性が示されています。
-VPNとMFAは遠隔アクセス防御の要であり、ここが崩れると社内ネットワークへの侵入経路になり得ます。
-境界機器のパッチ適用状況と認証設定の見直しが、実害の抑止に直結するため注目されています。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- SonicWall Gen6 SSL-VPN機器のパッチ適用状況と、関連する公開情報・修正内容を確認する。
-- VPNの認証ログを見直し、異常な失敗試行や不審な成功、深夜帯の接続などを点検する。
-- MFAだけに依存せず、管理系アクセスの制限、不要アカウントの整理、リモートアクセス経路の最小化を進める。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Hackers bypass SonicWall VPN MFA due to incomplete patching](https://www.bleepingcomputer.com/news/security/hackers-bypass-sonicwall-vpn-mfa-due-to-incomplete-patching/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: なし。
-- 継続観測: 初出。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -95,30 +36,30 @@ VPNとMFAは遠隔アクセス防御の要であり、ここが崩れると社�
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [ノストラムにランサムウェア攻撃、学習支援サービスも停止](https://scan.netsecurity.ne.jp/article/2026/05/21/55323.html) | 29.0 | 30.0 | 42.0 |
-| [ウクライナ、28,000件の窃取アカウントに関与した情報窃取マルウェア運用者を特定](https://www.bleepingcomputer.com/news/security/ukraine-identifies-infostealer-operator-tied-to-28-000-stolen-accounts/) | 28.0 | 20.0 | 42.0 |
-| [GitHub、侵害を確認　内部リポジトリ4,000件が窃取されたと発表](https://www.darkreading.com/application-security/github-confirms-breach-4k-internal-repos-stolen) | 28.0 | 20.0 | 42.0 |
-| [グーグル、「Universal Cart」を発表--AIがショッピングをサポート](https://japan.zdnet.com/article/35247796/) | 26.0 | 20.0 | 42.0 |
-| [「マルチAIエージェント管理基盤を手掛けてはどうか」とIIJ社長に聞いてみた](https://japan.zdnet.com/article/35247763/) | 26.0 | 20.0 | 42.0 |
-| [開発プロセスをAI前提で再設計 「内製化地図」7段階を押さえる](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/051500549/051500001/) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントをまとめる基盤を提供し、勝者を目指す--Workato CAIOのロイ氏](https://japan.zdnet.com/article/35247586/) | 26.0 | 20.0 | 42.0 |
-| [Taskhost Windows Tasksにおけるローカル権限昇格の脆弱性（CVE-2025-60710）](https://nvd.nist.gov/vuln/detail/CVE-2025-60710) | 25.0 | 82.0 | 81.0 |
-| [NTTドコモビジネス、AIエージェントとSOARで高度化したサイバー攻撃から守る「AI SOC」提供開始](https://internet.watch.impress.co.jp/docs/news/2110318.html) | 25.0 | 20.0 | 42.0 |
-| [サイバー専門家の間で分かれるAIの功罪評価](https://www.darkreading.com/cybersecurity-analytics/cyber-pros-ai) | 25.0 | 20.0 | 42.0 |
-| [Microsoftの新しいレッドチーム向けAIエージェント「Rampart」と「Clarity」](https://cyberscoop.com/microsoft-rampart-clarity-agentic-ai-security-red-teaming-tools/) | 25.0 | 20.0 | 42.0 |
-| [キヤノンMJら、愛媛県で画像・環境データとAIを活用した農作業判断支援サービスの実装実験](https://japan.zdnet.com/article/35247773/) | 24.0 | 20.0 | 43.0 |
-| [エージェント型コーディングの「終末論」をめぐる5つの誤解](https://japan.zdnet.com/article/35247475/) | 24.0 | 20.0 | 43.0 |
-| [「Fedora Kinoite 対 Silverblue」--2つの不変型「Linux」ディスロを比較検証](https://japan.zdnet.com/article/35247493/) | 24.0 | 20.0 | 43.0 |
-| [「Drupal」に深刻なSQLi脆弱性 - 影響ない環境も更新を強く推奨](https://www.security-next.com/184732) | 22.0 | 20.0 | 42.0 |
-| [「Chrome」にセキュリティ更新 - クリティカル含む脆弱性16件を修正](https://www.security-next.com/184727) | 22.0 | 20.0 | 42.0 |
-| [ワークロード保護製品「Cisco Secure Workload」に深刻な脆弱性](https://www.security-next.com/184720) | 22.0 | 20.0 | 42.0 |
-| [賞金総額10億円 スクエニがゲーム開発コンテスト 受賞作は世界配信を支援](https://www.itmedia.co.jp/news/articles/2605/21/news067.html) | 21.0 | 20.0 | 42.0 |
-| [アドビがブランド可視化を強化--ゼロクリック検索時代への対策](https://japan.zdnet.com/article/35247769/) | 21.0 | 20.0 | 42.0 |
-| [トヨタ紡織、タレントマネジメント基盤に「SAP SuccessFactors」を採用](https://japan.zdnet.com/article/35247748/) | 21.0 | 20.0 | 42.0 |
-| [NVIDIA、売上高は過去最高の816億ドル、純利益は3倍超に──AI投資「持続する」とフアンCEO](https://www.itmedia.co.jp/news/articles/2605/21/news063.html) | 21.0 | 20.0 | 42.0 |
-| [海外駐在員の負担を軽減し、ワンチームへ kintoneは言語と文化の壁を越える「翻訳の魔法」](https://ascii.jp/elem/000/004/403/4403667/?rss=) | 21.0 | 20.0 | 42.0 |
-| [データセンター全体の再設計が問われるAI時代、デルが提示する5つの中核要素](https://japan.zdnet.com/article/35247780/) | 21.0 | 20.0 | 42.0 |
-| [Cloudbase Blog 第13回 セキュリティ担当者は勇者である。Cloudbase の Security Days Spring 2026 全力出展レポート](https://scan.netsecurity.ne.jp/article/2026/05/21/55326.html) | 21.0 | 20.0 | 42.0 |
+| [Anthropic、SpaceXのクラウドに毎月2000億円弱を支払うと判明 「Claude」の計算リソース確保で](https://www.itmedia.co.jp/news/articles/2605/21/news083.html) | 29.0 | 20.0 | 42.0 |
+| [NTTドコモビジネス、「AI SOC」を提供開始--AIエージェントとSOARで防御を高速化](https://japan.zdnet.com/article/35247818/) | 26.0 | 20.0 | 42.0 |
+| [AIレッドチーミングエージェントがLLMのテスト手法を変える](https://www.helpnetsecurity.com/2026/05/21/ai-red-teaming-agents-research/) | 26.0 | 20.0 | 42.0 |
+| [ガートナー、AIエージェントのセキュリティで注力すべき6つのアクションを発表](https://japan.zdnet.com/article/35247812/) | 26.0 | 20.0 | 42.0 |
+| [ネットスコープ、AIエコシステム全体を保護する「Netskope One AI Security」を発表](https://japan.zdnet.com/article/35247754/) | 26.0 | 20.0 | 42.0 |
+| [AI電話応対支援のIVRy、メガバンク3行から45億円を調達](https://xtech.nikkei.com/atcl/nxt/news/24/03236/) | 26.0 | 20.0 | 42.0 |
+| [アイデンティティセキュリティとAIエージェントにおける予算動向の変化](https://www.darkreading.com/identity-access-management-security/shifting-budget-dynamics-for-identity-security-and-ai-agents) | 25.0 | 20.0 | 42.0 |
+| [CTERAが非構造化データ向けにAIインサイトと自動化を提供](https://www.helpnetsecurity.com/2026/05/21/ctera-insightai/) | 25.0 | 20.0 | 42.0 |
+| [AIが旅行テクノロジーの脅威モデルを変えた理由](https://www.helpnetsecurity.com/2026/05/21/devon-bryan-booking-holdings-cso-leadership-travel/) | 25.0 | 20.0 | 42.0 |
+| [サイバー脅威の増加で中小企業のセキュリティ投資が拡大](https://www.helpnetsecurity.com/2026/05/21/idc-smbs-cybersecurity-spending-report/) | 25.0 | 20.0 | 42.0 |
+| [Drupal Coreの高リスク脆弱性、PostgreSQLサイトをRCE攻撃にさらす](https://thehackernews.com/2026/05/highly-critical-drupal-core-flaw.html) | 24.0 | 46.0 | 50.0 |
+| [「AIを使った未検証の報告は単なるノイズ」 GitHubがバグ報奨金制度を厳格化](https://atmarkit.itmedia.co.jp/ait/articles/2605/21/news050.html) | 24.0 | 20.0 | 43.0 |
+| [「TrendAI Apex One」に複数脆弱性 - 一部はすでに悪用](https://www.security-next.com/184772) | 22.0 | 20.0 | 42.0 |
+| [海外グループ会社にサイバー攻撃、業務影響は解消 - 近鉄エクスプレス](https://www.security-next.com/184580) | 22.0 | 20.0 | 42.0 |
+| [「BIND 9」に複数の脆弱性、すみやかな更新を強く推奨](https://www.security-next.com/184760) | 22.0 | 20.0 | 42.0 |
+| [GitHubの内部情報が流出、Visual Studio Codeの拡張機能経由で約3800のリポジトリに不正アクセスされる](https://gigazine.net/news/20260521-github-unauthorized-access/) | 22.0 | 20.0 | 42.0 |
+| [ISC Stormcast：2026年5月21日（木）版](https://isc.sans.edu/diary/rss/33000) | 22.0 | 20.0 | 42.0 |
+| [New Relic、オブザーバビリティをITからビジネス領域に広げる新戦略](https://japan.zdnet.com/article/35247824/) | 21.0 | 20.0 | 42.0 |
+| [ポケモンカード、公式抽選販売などにマイナカード認証導入へ 転売対策か 8月から](https://www.itmedia.co.jp/news/articles/2605/21/news107.html) | 21.0 | 20.0 | 42.0 |
+| [はじめまして、CData です。](https://ascii.jp/elem/000/004/403/4403807/?rss=) | 21.0 | 20.0 | 42.0 |
+| [NieV、2万人規模のスタッフ管理システムを「SPIRAL」で内製化](https://japan.zdnet.com/article/35247789/) | 21.0 | 20.0 | 42.0 |
+| [トラスコ中山と富士通、AI活用で人事異動プロセスを高速化--異動案作成工数を削減](https://japan.zdnet.com/article/35247785/) | 21.0 | 20.0 | 42.0 |
+| [リコー、LLMの入出力に含まれる有害情報を検知する自社開発の「セーフガードモデル」を無償公開](https://japan.zdnet.com/article/35247792/) | 21.0 | 20.0 | 42.0 |
+| [NHK会長、ネトフリでの配信は海外展開の「絶好の機会」 ローカライズ「対応してもらう」](https://www.itmedia.co.jp/news/articles/2605/21/news093.html) | 21.0 | 20.0 | 42.0 |
 
 ---
 
