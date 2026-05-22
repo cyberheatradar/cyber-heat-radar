@@ -1,21 +1,24 @@
-# 📡 サイレーダー 2026-05-22 17:00 JST
+# 📡 サイレーダー 2026-05-23 05:00 JST
 
-このレポートは、2026-05-22 11:00 JST〜2026-05-22 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-22 17:00 JST〜2026-05-23 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 66
-- [音声で扱う想定のトピック](#audio-topics): 1
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 2
+- 観測トピック数: 97
+- [音声で扱う想定のトピック](#audio-topics): 5
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [注意喚起: Palo Alto Networks製PAN-OSにおける認証回避の脆弱性（CVE-2026-0265）に関する注意喚起 (公開)](#topic-4257) | 47.0 | 74.0 | 60.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
-| 2 | [CISA Adds Exploited Langflow and Trend Micro Apex One Vulnerabilities to KEV](#topic-8595) | 38.0 | 38.0 | 47.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
-| 3 | [ランサム攻撃で障害発生、情報流出の可能性も - 東京鋪装工業](#topic-8947) | 30.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [CVE-2026-9082: CISA KEV catalog addition](#topic-8272) | 47.0 | 64.0 | 63.0 | 音声 | 温度感上位枠 |
+| 2 | [CISA’s new KEV nomination form opens reporting to vendors and researchers](#topic-8595) | 38.0 | 38.0 | 51.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
+| 3 | [$20 per zero-day is already the WordPress plugin reality](#topic-9273) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 4 | [Trend Micro warns of Apex One zero-day exploited in the wild](#topic-9274) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 5 | [CVE-2025-20333: Cisco ASA/FTD persistence mechanism update](#topic-203) | 33.0 | 46.0 | 62.0 | 音声 | 温度感上位枠 |
+| 6 | [Fake Gemini and Claude Code Sites Spread Infostealers Through SEO Poisoning](#topic-9288) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -23,104 +26,39 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-8947"></a>
+<a id="topic-8272"></a>
 
-### 1. ランサム攻撃で障害発生、情報流出の可能性も - 東京鋪装工業
+### 1. CVE-2026-9082: CISA KEV catalog addition
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | - |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>KEV</nobr> / <nobr>RCE</nobr> / <nobr>権限昇格</nobr> / <nobr>TTP</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 30.0 |
-| <nobr>実務影響</nobr> | 30.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-東京鋪装工業はサイバー攻撃を受け、障害が発生したことを公表しました。取引先や従業員の個人情報が流出した可能性も示されており、影響範囲の確認が進められている状況です。
-業務停止と個人情報の流出可能性が同時に示されており、被害が運用面と情報管理の両方に及ぶおそれがあります。
-取引先を含む関係者への影響が想定されるため、類似事案として注意が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・インシデント関連の公開情報として観測しています。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 個人情報や取引先情報を含むデータの保全状況と流出有無を早期に確認する。
-- 障害の影響範囲を整理し、業務継続手順や代替運用を速やかに見直す。
-- 関係先への連絡体制と、必要に応じた公表・通知の準備を進める。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [ランサム攻撃で障害発生、情報流出の可能性も - 東京鋪装工業](https://www.security-next.com/184425) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 中。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: なし。
-- 継続観測: 初出。
-
----
-
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
-<a id="topic-4257"></a>
-
-### 1. 注意喚起: Palo Alto Networks製PAN-OSにおける認証回避の脆弱性（CVE-2026-0265）に関する注意喚起 (公開)
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | GitHub |
-| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>脆弱性</nobr> / <nobr>認証バイパス</nobr> / <nobr>KEV</nobr> / <nobr>防御・運用</nobr> / <nobr>脅威アクター</nobr> / <nobr>政策・規制</nobr> / <nobr>PoC</nobr> |
-| <nobr>温度状態</nobr> | 継続監視 |
 | <nobr>温度感</nobr> | 47.0 |
-| <nobr>実務影響</nobr> | 74.0 |
-| <nobr>確度</nobr> | 60.0 |
+| <nobr>実務影響</nobr> | 64.0 |
+| <nobr>確度</nobr> | 63.0 |
 
 #### 概要
 
-Palo Alto NetworksのPAN-OSに、Cloud Authentication Service（CAS）が有効な構成で認証を回避されるおそれのある脆弱性（CVE-2026-0265）が公表されました。
-影響範囲はPA-Series、VM-Series、Panoramaの一部で、Cloud NGFWとPrisma Accessは対象外とされています。
-認証回避は、外部からの不正アクセスや管理系ポータルへの侵入につながる可能性があるため、境界防御製品では特に注意が必要です。
-加えて、該当構成が非デフォルトでも一般的とされており、棚卸しと早期更新の優先度が高い話題です。
+CISAは、Drupal Coreの脆弱性CVE-2026-9082をKnown Exploited Vulnerabilities（KEV）カタログに追加しました。
+公開情報では、Drupalはすでにこの脆弱性に対する悪用の試みを確認しており、影響範囲は認証なしでの情報漏えい、権限昇格、リモートコード実行につながる可能性があるとされています。
+KEV追加は、実際に悪用が確認された脆弱性として優先対応が求められることを意味します。
+Drupalを利用する組織では、Webサイトや関連サービスの被害防止のため、修正適用の優先度が高い案件です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 3 sources。
+- 複数ソースで確認: 4 sources。
 - 実悪用・ゼロデイ文脈。
-- 公開PoC・検証コード言及あり。
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 弱。
 - 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
-- 公開PoCにより再現・悪用可能性が上がる。
-- RCEまたは認証バイパス系。
+- 情報漏えい系。
 
 ##### 確度
 - 複数ソース確認。
@@ -129,50 +67,323 @@ Palo Alto NetworksのPAN-OSに、Cloud Authentication Service（CAS）が有効�
 
 #### 攻撃・悪用観測シグナル
 
-- シグナル種別: 公開PoC・検証コード言及あり。
-- 公開PoC/Exploitコード: 確認あり。
-- 直接PoCリンク: 掲載しません。
-- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
 
 #### 担当者向け確認ポイント
 
-- CASを使っているPAN-OS環境がないか確認し、該当する場合はベンダーが案内する修正版への更新を優先する。
-- PA-Series、VM-Series、Panoramaのどれが影響対象か、利用中のバージョンが修正版に含まれるかを点検する。
-- 管理画面やログイン用インターフェースの公開状況を見直し、不要な外部到達性があれば縮小する。
+- Drupal Coreの該当修正版が適用済みかを確認し、未適用なら早急に対応する。
+- 公開中のDrupalサイトで不審な挙動や改ざん、情報流出の兆候がないか点検する。
+- KEV対象として、資産棚卸しと脆弱性管理の優先順位を上げる。
 
 #### 関連する対象
 
 | <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
 |---|---|---|---:|
-| 脆弱性 | CVE-2026-0265 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-0300 | 主要CVE | 1.00 |
-| ベンダー | Palo Alto | 言及あり | 0.80 |
+| 脆弱性 | CVE-2026-9082 | 主要CVE | 1.00 |
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-0265](https://nvd.nist.gov/vuln/detail/CVE-2026-0265) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
-| <nobr>公的・一次情報</nobr> | [注意喚起: Palo Alto Networks製PAN-OSにおける認証回避の脆弱性（CVE-2026-0265）に関する注意喚起  (公開)](https://www.jpcert.or.jp/at/2026/at260015.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-0265: Authentication Bypass in Palo Alto Networks PAN-OS](https://www.rapid7.com/blog/post/etr-cve-2026-0265-authentication-bypass-in-palo-alto-networks-pan-os) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-0265 PAN-OS: Authentication Bypass with Cloud Authentication Service (C](https://security.paloaltonetworks.com/CVE-2026-0265) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-9082](https://nvd.nist.gov/vuln/detail/CVE-2026-9082) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [Drupal Vulnerability in Hacker Crosshairs Shortly After Disclosure](https://www.securityweek.com/drupal-vulnerability-in-hacker-crosshairs-shortly-after-disclosure/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/05/22/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Drupal Patches Highly Critical Vulnerability Exposing Websites to Hacking](https://www.securityweek.com/drupal-patches-highly-critical-vulnerability-exposing-websites-to-hacking/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CVE-2026-9082: Mitigating a Critical SQL Injection Vulnerability in Drupal](https://www.akamai.com/blog/security-research/2026/may/cve-2026-9082-mitigating-critical-sql-injection-drupal) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Highly Critical Drupal Core Flaw Exposes PostgreSQL Sites to RCE Attacks](https://thehackernews.com/2026/05/highly-critical-drupal-core-flaw.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
 - SNS反応: 反応あり・高信頼。
-- 日本語圏一次情報: あり。
+- 日本語圏一次情報: なし。
 - 日本語圏メディア波及: 未評価。
 - 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 弱。
+- 技術者コミュニティ反応: 未評価。
 - 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
-- 継続観測: 継続。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
 
 ---
 
+<a id="topic-9273"></a>
+
+### 2. $20 per zero-day is already the WordPress plugin reality
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>AI</nobr> / <nobr>ゼロデイ</nobr> / <nobr>AIエージェント</nobr> / <nobr>脆弱性</nobr> / <nobr>MCP</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 37.0 |
+| <nobr>実務影響</nobr> | 38.0 |
+| <nobr>確度</nobr> | 43.0 |
+
+#### 概要
+
+WordPressプラグインを対象に、AIを使った脆弱性発見の取り組みが紹介されました。
+研究者らは短期間で構築したパイプラインにより、静的解析と動的検証を組み合わせて実際の不具合を見つけられる可能性を示したとされています。
+AIが脆弱性調査の効率をどこまで高められるかは、攻撃面の拡大と防御側の検証能力の両面で注目されています。
+WordPressは利用範囲が広いため、プラグインの品質管理や検証体制への関心が高まる話題です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- WordPressプラグインの更新状況と、未修正の既知脆弱性がないかを継続確認する。
+- AI支援の検出結果は過信せず、再現性と誤検知の切り分けを前提に評価する。
+- プラグイン導入時は提供元の保守状況、更新頻度、権限設定を見直す。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [$20 per zero-day is already the WordPress plugin reality](https://www.helpnetsecurity.com/2026/05/22/ai-wordpress-plugin-vulnerabilities/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
+
+<a id="topic-9274"></a>
+
+### 3. Trend Micro warns of Apex One zero-day exploited in the wild
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>ゼロデイ</nobr> / <nobr>KEV</nobr> / <nobr>Windows</nobr> / <nobr>脆弱性</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 37.0 |
+| <nobr>実務影響</nobr> | 38.0 |
+| <nobr>確度</nobr> | 43.0 |
+
+#### 概要
+
+Trend Microは、Apex Oneに存在するゼロデイ脆弱性について注意喚起し、Windowsを狙った攻撃で悪用が確認されているとしています。
+現時点では、詳細な影響範囲や攻撃の広がりについては公開情報の範囲で慎重に見る必要があります。
+ゼロデイで実際の悪用が確認されている点は、修正前の製品利用者に直接的なリスクがあるため注目されています。
+エンドポイント防御製品に関わる問題であり、対応の遅れが被害拡大につながる可能性があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Apex Oneの利用有無を確認し、ベンダーの案内に従って更新や緩和策を早急に適用する。
+- 管理対象端末で不審な挙動や未承認の操作痕跡がないかを点検する。
+- 関連するログや検知ルールを見直し、同種の攻撃兆候を監視できる状態にしておく。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Trend Micro warns of Apex One zero-day exploited in the wild](https://www.bleepingcomputer.com/news/security/trend-micro-warns-of-apex-one-zero-day-exploited-in-attacks/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
+
+<a id="topic-203"></a>
+
+### 4. CVE-2025-20333: Cisco ASA/FTD persistence mechanism update
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>脆弱性</nobr> / <nobr>TTP</nobr> / <nobr>防御・運用</nobr> / <nobr>RCE</nobr> / <nobr>ランサムウェア</nobr> / <nobr>脅威アクター</nobr> / <nobr>Linux</nobr> / <nobr>ゼロデイ</nobr> / <nobr>フィッシング</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 33.0 |
+| <nobr>実務影響</nobr> | 46.0 |
+| <nobr>確度</nobr> | 62.0 |
+
+#### 概要
+
+CISAとCiscoは、Cisco Secure Firewall ASA/FTD製品に関連する脆弱性対応の更新を公表し、攻撃者が修正後も残る持続化の仕組みを確認したとしています。
+初期侵入は、修正前に存在したCVE-2025-20333およびCVE-2025-20362の悪用から始まった可能性が示されています。
+境界機器に関わる侵害は、組織内ネットワーク全体への影響につながるおそれがあるため注目されています。
+修正適用後も残り得る持続化の可能性が示されたことで、単純なアップデートだけでは安心できない点が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 4 sources。
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 中。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Cisco ASA/FTDおよび関連プラットフォームで、修正済みリリースへの更新状況と適用漏れがないか確認する。
+- 侵害の有無を、設定変更や不審な管理動作だけでなく、ベンダーや公的機関の案内に沿って点検する。
+- 境界機器の監視を強化し、異常な認証・VPN利用・管理アクセスの兆候を継続的に確認する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2025-20333 | 主要CVE | 1.00 |
+| ベンダー | Cisco | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2025-20333](https://nvd.nist.gov/vuln/detail/CVE-2025-20333) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [From edge appliance to enterprise compromise: Multi-stage Linux intrusion via F5](https://www.microsoft.com/en-us/security/blog/2026/05/22/from-edge-appliance-to-enterprise-compromise-multi-stage-linux-intrusion-via-f5-and-confluence/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>公的・一次情報</nobr> | [Continued Evolution of Persistence Mechanism Against Cisco Secure Firewall Adapt](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-CISAED25-03) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>公的・一次情報</nobr> | [Weekly Report: JPCERT/CCが「Cisco ASAおよびFTDにおける複数の脆弱性（CVE-2025-20333、CVE-2025-2036](https://www.jpcert.or.jp/wr/2026/wr260430.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>公的・一次情報</nobr> | [注意喚起: Cisco ASAおよびFTDにおける複数の脆弱性（CVE-2025-20333、CVE-2025-20362）に関する注意喚起  (更新)](https://www.jpcert.or.jp/at/2025/at250021.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [It pays to be a forever student](https://blog.talosintelligence.com/it-pays-to-be-a-forever-student/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [UAT-4356's Targeting of Cisco Firepower Devices](https://blog.talosintelligence.com/uat-4356-firestarter/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [IR Trends Q1 2026: Phishing reemerges as top initial access vector, as attacks t](https://blog.talosintelligence.com/ir-trends-q1-2026/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: あり。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 中。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: なし。
+
+---
+
+<a id="topic-9288"></a>
+
+### 5. Fake Gemini and Claude Code Sites Spread Infostealers Through SEO Poisoning
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>AI</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>マルウェア</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 33.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+検索エンジン最適化を悪用して、GeminiやClaude Codeを装う偽サイトへ誘導し、情報窃取型マルウェアを配布するキャンペーンが報告されています。
+公開情報では、盗まれる対象にはコラボレーション系の認証情報や暗号資産ウォレットなど、幅広いデータが含まれるとされています。
+生成AI関連サービスを装う偽サイトは、利用者の警戒心を下げやすく、正規サイトと見分けにくい点が問題です。
+認証情報やウォレット情報が含まれるため、個人被害だけでなく、業務環境への侵害や二次被害にもつながるおそれがあります。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 検索経由で配布される偽サイトやスポンサーリンクを前提に、正規ドメイン確認を徹底する。
+- コラボレーションツールやAIサービスの認証情報、セッション情報の保護を見直す。
+- 情報窃取型マルウェアを想定し、端末側のEDR監視や不審なダウンロード検知を強化する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ai_model_or_project | Claude | 主題 | 0.80 |
+| ai_model_or_project | Gemini | 主題 | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Fake Gemini and Claude Code Sites Spread Infostealers Through SEO Poisoning](https://www.infosecurity-magazine.com/news/gemini-claude-infostealers-seo/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+
+---
+
+<a id="github-only-topics"></a>
+
+## 📌 GitHubのみ掲載の注目トピック
+
 <a id="topic-8595"></a>
 
-### 2. CISA Adds Exploited Langflow and Trend Micro Apex One Vulnerabilities to KEV
+### 1. CISA’s new KEV nomination form opens reporting to vendors and researchers
 
 #### スコアカード
 
@@ -183,18 +394,19 @@ Palo Alto NetworksのPAN-OSに、Cloud Authentication Service（CAS）が有効�
 | <nobr>温度状態</nobr> | 継続監視 |
 | <nobr>温度感</nobr> | 38.0 |
 | <nobr>実務影響</nobr> | 38.0 |
-| <nobr>確度</nobr> | 47.0 |
+| <nobr>確度</nobr> | 51.0 |
 
 #### 概要
 
-CISAは、実際に悪用が確認された脆弱性として、LangflowとTrend Micro Apex Oneに関する脆弱性をKEVカタログに追加しました。
-あわせて、別の資料ではMicrosoft Defenderに関する脆弱性を含む複数件の追加も示されています。
-KEV入りは、当該脆弱性が現実に攻撃へ使われていることを示す重要なシグナルです。対象製品を使う組織では、優先度を上げて影響確認と更新対応を進める必要があります。
+CISAは、既知の悪用が確認された脆弱性を公開リストに載せるための新しいノミネーションフォームを公開し、ベンダーや研究者が報告しやすくしました。
+あわせて、KEVカタログには複数の脆弱性が追加されており、Microsoft Defender関連の問題も含まれています。
+公的な優先順位付けの対象に入る脆弱性が増え、組織側は修正や監視の優先度を見直す必要があります。
+外部からの報告経路が整備されたことで、悪用が確認された脆弱性がより早く可視化される可能性があります。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 2 sources。
+- 複数ソースで確認: 3 sources。
 - 実悪用・ゼロデイ文脈。
 - 現在の熱量に合わせた冷却補正。
 
@@ -213,9 +425,9 @@ KEV入りは、当該脆弱性が現実に攻撃へ使われていることを�
 
 #### 担当者向け確認ポイント
 
-- CISAのKEVに追加された対象を確認し、自組織の利用有無と影響範囲を点検する。
-- 該当製品・関連コンポーネントの修正パッチやベンダー案内を確認し、適用計画を前倒しする。
-- 検知・監視ルールを見直し、関連する不審な挙動がないかログを確認する。
+- KEVカタログへの追加有無を定期確認し、該当製品の修正状況を把握する。
+- Microsoft Defenderを含む対象製品は、ベンダー情報と資産棚卸しを突き合わせて影響範囲を確認する。
+- 外部公開情報だけで判断せず、検知ログや脅威インテリジェンスと合わせて優先度を決める。
 
 #### 関連する対象
 
@@ -228,19 +440,19 @@ KEV入りは、当該脆弱性が現実に攻撃へ使われていることを�
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
+| <nobr>出典</nobr> | [CISA’s new KEV nomination form opens reporting to vendors and researchers](https://www.helpnetsecurity.com/2026/05/22/cisa-kev-nomination-form/) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [CISA Adds Exploited Langflow and Trend Micro Apex One Vulnerabilities to KEV](https://thehackernews.com/2026/05/cisa-adds-exploited-langflow-and-trend.html) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Microsoft Defender vulnerabilities are being exploited in the wild](https://www.malwarebytes.com/blog/bugs/2026/05/microsoft-defender-vulnerabilities-are-being-exploited-in-the-wild) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
-- SNS反応: 反応あり・低信頼。
+- SNS反応: 反応あり・高信頼。
 - 日本語圏一次情報: なし。
 - 日本語圏メディア波及: 未評価。
 - 日本語圏反応: 反応あり・低信頼。
 - 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
+- 開発者コミュニティ反応: 反応あり。
 - 攻撃・悪用観測シグナル: 悪用観測あり。
-- 継続観測: 継続。
 
 ---
 
@@ -253,30 +465,30 @@ KEV入りは、当該脆弱性が現実に攻撃へ使われていることを�
 
 | <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
 |---|---:|---:|---:|
-| [建設現場の知見共有をAIで効率化--「Google Workspace」「Gemini」活用でブログ作成も](https://japan.zdnet.com/article/35247877/) | 27.0 | 20.0 | 42.0 |
-| [CapCut、GoogleのGeminiと提携 生成AIから直接動画・画像編集が可能に](https://www.itmedia.co.jp/news/articles/2605/22/news097.html) | 26.0 | 20.0 | 42.0 |
-| [「Google AI Pro」ユーザーはYouTube広告ほぼ非表示 「Premium Lite」無料付与](https://www.itmedia.co.jp/news/articles/2605/22/news107.html) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントが10分で脅威特定、NTTドコモビジネスが新提供](https://xtech.nikkei.com/atcl/nxt/news/24/03238/) | 26.0 | 20.0 | 42.0 |
-| [新しい詐欺の経済学：より安く、より速く、より説得力のある手口](https://www.helpnetsecurity.com/2026/05/22/visa-consumer-payment-fraud-report/) | 25.0 | 20.0 | 42.0 |
-| [ふるさと納税寄付者の非公開氏名をサイトに誤掲載 - 八重瀬町](https://www.security-next.com/184586) | 22.0 | 20.0 | 42.0 |
-| [Cross-Platform NPM Stealerの脅威拡大](https://isc.sans.edu/diary/rss/33006) | 22.0 | 20.0 | 42.0 |
-| [Android版「ロボフォーム」に脆弱性 - 意図しないファイルDLのおそれ](https://www.security-next.com/184747) | 22.0 | 20.0 | 42.0 |
-| [SNS公開のインタビュー動画に患者が映り込み - 大田記念病院](https://www.security-next.com/184742) | 22.0 | 20.0 | 42.0 |
-| [度重なるサプライチェーン攻撃を受けnpmが「段階的リリース」を導入、流出したトークンだけではパッケージを公開できない仕組みを追加](https://gigazine.net/news/20260522-npm-staged-publishing/) | 22.0 | 20.0 | 42.0 |
-| [VAIO、個人向けPCを「指定価格」に どの店でも同じ価格](https://www.itmedia.co.jp/news/articles/2605/22/news117.html) | 21.0 | 20.0 | 42.0 |
-| [「とらのあな」電子書籍サービスに“不正な自動アクセス” 一部サービスを停止中](https://www.itmedia.co.jp/news/articles/2605/22/news116.html) | 21.0 | 20.0 | 42.0 |
-| [マイナンバーカード取得義務化の提言に「法的必要性の議論必要」 松本デジタル相](https://xtech.nikkei.com/atcl/nxt/news/24/03239/) | 21.0 | 20.0 | 42.0 |
-| [ファミマが楽天SPUに参加、グループ外で初 月3000円利用でポイント+0.5倍に](https://www.itmedia.co.jp/news/articles/2605/22/news108.html) | 21.0 | 20.0 | 42.0 |
-| [「銀行をかたる」はもう古い クレカ13社共同のフィッシングサイト閉鎖、その成果は](https://atmarkit.itmedia.co.jp/ait/articles/2605/22/news048.html) | 21.0 | 20.0 | 42.0 |
-| [NHK技研、目が疲れにくいVRゴーグルを“薄型化” 厚みを79％削減した新しい光学系を開発](https://www.itmedia.co.jp/news/articles/2605/22/news074.html) | 21.0 | 20.0 | 42.0 |
-| [拘束しない認知症ケアを目指す、現場に寄り添った行動検知システムを開発](https://ascii.jp/elem/000/004/400/4400095/?rss=) | 21.0 | 20.0 | 42.0 |
-| [物言う株主、KADOKAWA夏野CEO解任に賛同呼びかけ 在任5年で業績悪化、「ELDEN RING」「ニコニコ」への姿勢も疑問視](https://www.itmedia.co.jp/news/articles/2605/22/news086.html) | 21.0 | 20.0 | 42.0 |
-| [ソフトバンクが「みまもりGPS」で声明 「日々の位置情報を中国と共有することない」──SNS上の噂に対応か](https://www.itmedia.co.jp/news/articles/2605/22/news080.html) | 21.0 | 20.0 | 42.0 |
-| [国民年金の未納通知を装うフィッシングに注意　PayPayで送金要求](https://news.mynavi.jp/techplus/article/20260522-4482827/) | 21.0 | 20.0 | 42.0 |
-| [久米商船、船舶管理プラットフォーム「MARITIME 7」船員労務管理を導入](https://japan.zdnet.com/article/35247873/) | 21.0 | 20.0 | 42.0 |
-| [EIZO、JR西日本と共創したAIエッジコンピュータ--画像認識AIで異常を即時通知](https://japan.zdnet.com/article/35247869/) | 21.0 | 20.0 | 42.0 |
-| [Cisco、Secure WorkloadのREST API脆弱性を修正しデータアクセスを可能にしたCVSS 10.0の問題](https://thehackernews.com/2026/05/cisco-patches-cvss-100-secure-workload.html) | 20.0 | 46.0 | 54.0 |
-| [Unifi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://www.catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
+| [25のランサムウェアグループに利用されていたVPN、国際共同摘発で初めて摘発](https://thehackernews.com/2026/05/first-vpn-dismantled-in-global-takedown.html) | 28.0 | 30.0 | 42.0 |
+| [Verizon DBIR: 医療業界が増加するソーシャルエンジニアリング攻撃を撃退](https://www.darkreading.com/cyber-risk/verizon-dbir-healthcare-fends-off-increased-social-engineering-attacks) | 28.0 | 30.0 | 42.0 |
+| [ランサムウェア関連の法執行・司法措置](https://www.securityweek.com/first-vpn-cybercrime-service-disrupted-administrator-arrested/) | 28.0 | 30.0 | 42.0 |
+| [Microsoft 365ユーザーを標的にしたMFAを回避する新たなフィッシング脅威](https://www.helpnetsecurity.com/2026/05/22/kali365-microsoft-365-phishing-fbi-warning/) | 28.0 | 20.0 | 48.0 |
+| [オランダ、サイバー攻撃を助長したホスティング会社の800台のサーバーを押収](https://www.bleepingcomputer.com/news/security/netherlands-seizes-800-servers-of-hosting-firm-enabling-cyberattacks/) | 28.0 | 20.0 | 42.0 |
+| [Kazuarがバックドアから堅牢なスパイ活動エコシステムへ進化](https://blog.polyswarm.io/kazuar-evolves-from-backdoor-to-resilient-espionage-ecosystem) | 28.0 | 20.0 | 42.0 |
+| [GhostwriterがPrometheusフィッシングマルウェアでウクライナ政府機関を標的にする](https://thehackernews.com/2026/05/ghostwriter-targets-ukraine-government.html) | 28.0 | 20.0 | 42.0 |
+| [Fast and Furious: イラン紛争中のNimbus Manticoreの活動](https://research.checkpoint.com/2026/fast-and-furious-nimbus-manticore-operations-during-the-iranian-conflict/) | 28.0 | 20.0 | 42.0 |
+| [Canadian man arrested, charged for running KimWolf DDoSボットネット](https://therecord.media/canadian-man-arrested-charged-running-kimwolf-botnet) | 28.0 | 20.0 | 42.0 |
+| [イランのAPTグループScreening Serpensによる2026年のスパイ活動キャンペーンの追跡](https://unit42.paloaltonetworks.com/tracking-iran-apt-screening-serpens/) | 28.0 | 20.0 | 42.0 |
+| [Kimwolfボットネットを運用したカナダ人が逮捕される](https://www.securityweek.com/canadian-man-arrested-for-operating-kimwolf-botnet/) | 28.0 | 20.0 | 42.0 |
+| [Megalodon、悪意あるCI/CDワークフローで5,561件のGitHubリポジトリを標的に攻撃](https://thehackernews.com/2026/05/megalodon-github-attack-targets-5561.html) | 28.0 | 20.0 | 42.0 |
+| [DDoS請負サービス運営に関与した疑いでKimWolfボットネット管理者を逮捕](https://www.helpnetsecurity.com/2026/05/22/kimwolf-ddos-botnet-administrator-arrested/) | 28.0 | 20.0 | 42.0 |
+| [ROADtoolsと国家レベルの戦術が織りなすクラウド上の意図的な道筋](https://unit42.paloaltonetworks.com/roadtools-cloud-attacks/) | 28.0 | 20.0 | 42.0 |
+| [米国とカナダ、Kimwolfボットネットの管理者とみられる人物を逮捕・起訴](https://www.bleepingcomputer.com/news/security/us-and-canada-arrest-and-charge-suspected-kimwolf-botnet-admin/) | 28.0 | 20.0 | 42.0 |
+| [カナダでDDoS代行攻撃の運営者Kimwolfボットネット管理者を逮捕](https://thehackernews.com/2026/05/kimwolf-ddos-botnet-operator-arrested.html) | 28.0 | 20.0 | 42.0 |
+| [Microsoft Securityの成功事例：St. Luke’sとManpowerGroupはいかにAI基盤を守っているか](https://www.microsoft.com/en-us/security/blog/2026/05/22/microsoft-security-success-stories-how-st-lukes-and-manpowergroup-are-securing-ai-foundations/) | 27.0 | 20.0 | 42.0 |
+| [AIシステムを過信せず恐れすぎずに守るために 第2回：攻撃対象領域とチェックポイントフロー](https://blog.nviso.eu/2026/05/22/securing-ai-systems-without-overconfidence-or-fear-part-2-attack-surfaces-and-the-checkpoint-flow/) | 27.0 | 20.0 | 42.0 |
+| [ハードウェアなしで脆弱なドライバを悪用可能にするBYOVDの視点](https://thehackernews.com/2026/05/making-vulnerable-drivers-exploitable.html) | 25.0 | 23.0 | 43.0 |
+| [Kore.ai、企業向けマルチエージェントシステムのためのAIネイティブ・プラットフォームを発表](https://www.helpnetsecurity.com/2026/05/22/kore-ai-unveils-ai-native-platform-for-enterprise-multiagent-systems/) | 25.0 | 20.0 | 42.0 |
+| [Versa、AIエージェントとMCPワークフローにゼロトラスト原則を拡張](https://www.helpnetsecurity.com/2026/05/22/versa-extends-zero-trust-principles-to-ai-agents-and-mcp-workflows/) | 25.0 | 20.0 | 42.0 |
+| [GitLab 19.0にAIワークフロー、シークレット管理、セルフホスト型モデル対応を追加](https://www.helpnetsecurity.com/2026/05/22/gitlab-19-0-adds-ai-workflows-secrets-management-and-self-hosted-model-support/) | 25.0 | 20.0 | 42.0 |
+| [Proton Pass、AIエージェント向けの監視付き認証情報共有機能を追加](https://www.helpnetsecurity.com/2026/05/22/proton-pass-adds-monitored-credential-sharing-for-ai-agents/) | 25.0 | 20.0 | 42.0 |
+| [Microsoft、Forrester Wave™ の Workforce Identity Security Platforms でリーダーに認定](https://www.microsoft.com/en-us/security/blog/2026/05/22/microsoft-recognized-as-a-leader-in-the-forrester-wave-for-workforce-identity-security-platforms/) | 22.0 | 20.0 | 42.0 |
 
 ---
 
