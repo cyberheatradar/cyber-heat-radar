@@ -1,19 +1,19 @@
-# 📡 サイレーダー 2026-05-23 11:00 JST
+# 📡 サイレーダー 2026-05-23 17:00 JST
 
-このレポートは、2026-05-23 05:00 JST〜2026-05-23 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-23 11:00 JST〜2026-05-23 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 40
+- 観測トピック数: 33
 - [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
-| Rank | Topic | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> | <nobr>区分</nobr> | <nobr>分類理由</nobr> |
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [CISA to allow researchers to report vulnerabilities to exploited bugs catalog](#topic-9401) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [An Example of Stack String in High Level Language, (Sat, May 23rd)](#topic-9448) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -21,67 +21,62 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-9401"></a>
+<a id="topic-9448"></a>
 
-### 1. CISA to allow researchers to report vulnerabilities to exploited bugs catalog
+### 1. An Example of Stack String in High Level Language, (Sat, May 23rd)
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>KEV</nobr> / <nobr>脆弱性</nobr> |
+| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> / <nobr>TTP</nobr> / <nobr>Windows</nobr> / <nobr>ボットネット</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 37.0 |
-| <nobr>実務影響</nobr> | 38.0 |
-| <nobr>確度</nobr> | 43.0 |
+| <nobr>温度感</nobr> | 33.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
 
 #### 概要
 
-CISAは、Known Exploited Vulnerabilities（KEV）カタログに追加すべき脆弱性を、研究者・ベンダー・業界関係者から提案できるようにする申請フォームの提供を発表しました。
-脆弱性管理の対象を広げ、実際に悪用が確認されている問題の把握を早める狙いがあるとみられます。
-KEVカタログは優先対応の判断材料として使われるため、掲載対象の見直しや追加が迅速化すると、組織のパッチ適用計画に影響します。
-実際に悪用されている脆弱性の把握精度が上がれば、防御側の優先順位付けに役立ちます。
+SANS Internet Storm Centerの投稿では、SEC670「Red Teaming Tools - Developing Windows Implants, Shellcode, Command and Control」に参加した所感として、マルウェア分析とは逆の視点から悪性コードの作成を扱う内容だと紹介されています。
+題名にある「Stack String in High Level Language」は技術テーマを示すものですが、この材料だけでは具体的な脅威や実害の有無までは確認できません。
+攻撃者側の手口や開発視点を扱う技術情報は、防御側にとって検知・分析の観点を補強する材料になります。
+特に脅威インテリジェンスやマルウェア分析に携わる実務者は、こうした文脈から防御策の見直しにつなげやすい点に注目できます。
 
 #### 温度感の理由
 
 ##### 温度感
-- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 中。
 
 ##### 実務影響
-- 悪用情報あり。
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
 #### 担当者向け確認ポイント
 
-- KEVカタログの更新を継続監視し、自組織の対象製品が含まれていないか確認する。
-- 脆弱性報告やベンダー情報だけでなく、実悪用の有無を踏まえたパッチ優先度の見直しを行う。
-- 資産棚卸しと脆弱性管理の運用を整え、KEV掲載時に迅速に対応できる体制を確認する。
+- 攻撃手法の解説そのものより、検知・分析に転用できる観点があるかを確認する。
+- マルウェア分析やレッドチーム系の知見を、EDR/ログ監視/アラート設計の見直しに活かせるか検討する。
+- 現時点では具体的な攻撃キャンペーンやCVEの裏付けは示されていないため、断定せず関連情報を継続監視する。
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [CISA to allow researchers to report vulnerabilities to exploited bugs catalog](https://therecord.media/cisa-to-allow-researchers-to-report-vulnerabilities-kev) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [An Example of Stack String in High Level Language, (Sat, May 23rd)](https://isc.sans.edu/diary/rss/33008) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
-- SNS反応: 反応あり・高信頼。
+- SNS反応: 反応あり・低信頼。
 - 日本語圏一次情報: なし。
 - 日本語圏メディア波及: 未評価。
 - 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
+- 技術者コミュニティ反応: 中。
 - 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
+- 攻撃・悪用観測シグナル: なし。
 
 ---
 
@@ -98,43 +93,43 @@ KEVカタログは優先対応の判断材料として使われるため、掲�
 音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
 重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
 
-| <nobr>Topic</nobr> | <nobr>温度感</nobr> | <nobr>実務影響</nobr> | <nobr>確度</nobr> |
+| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ランサムウェア被害額は平均6.4億円、事業停滞54日――パロアルトの調査で分かった国内企業のセキュリティ実態](https://www.itmedia.co.jp/enterprise/articles/2605/23/news022.html) | 29.0 | 30.0 | 42.0 |
-| [FBIが警告、4月のMicrosoft 365攻撃後にKali365のフィッシング・アズ・ア・サービスを確認](https://therecord.media/fbi-warns-of-kali365-phishing-attacks) | 28.0 | 20.0 | 48.0 |
-| [画像がだめなら文字で誘導 「アスキーアート」型フィッシングメールの実態](https://www.itmedia.co.jp/enterprise/articles/2605/23/news018.html) | 24.0 | 20.0 | 43.0 |
-| [これぞ“普通のコンデジ” パナソニック「DC-TX3」はカジュアルに使える15倍ズーム機](https://www.itmedia.co.jp/news/articles/2605/23/news012.html) | 21.0 | 20.0 | 42.0 |
-| [L.トーバルズ氏、「AIには愛も憎しみもある」と明かす](https://japan.zdnet.com/article/35247851/) | 21.0 | 20.0 | 42.0 |
-| [Google.comで「ignore」を検索すると……](https://www.itmedia.co.jp/news/articles/2605/23/news033.html) | 21.0 | 20.0 | 42.0 |
-| [Unifi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://www.catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
-| [Security: Netskopeのクロステナント認証バイパス](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass/) | 20.0 | 38.0 | 42.0 |
-| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
-| [Security: 低権限でCOM経由によりBoot Configuration Data（BCD）を削除可能（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user/) | 20.0 | 28.0 | 50.0 |
-| [Security: 4 Bytes, 1 Lie - SMAPを回避するカーネルポインタの信用詐欺（CVE-2025-50168）](https://www.oobs.io/posts/four-bytes-one-lie/) | 20.0 | 28.0 | 50.0 |
-| [Spring ELを悪用して環境変数とシステムプロパティを露出させる攻撃（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253/) | 20.0 | 28.0 | 50.0 |
-| [FBIが警告、Microsoft 365ユーザーを狙う急拡大中のフィッシングキット](https://cyberscoop.com/fbi-phishing-kali365-microsoft365-access-tokens/) | 20.0 | 20.0 | 48.0 |
-| [PLEASE_READ_ME: MySQLサーバーを壊滅させる機会主義的ランサムウェア](https://www.akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 10.0 | 30.0 | 42.0 |
+| [Must see: UniFi Access におけるリモートコード実行脆弱性（CVE-2025-52665）](https://www.catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
+| [Netskopeのクロステナント認証バイパス脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass/) | 20.0 | 38.0 | 42.0 |
+| [Citrix NetScalerのメモリリークおよび反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
+| [Security: 4 Bytes, 1 Lie - SMAPを回避するカーネルポインタの虚偽表示（CVE-2025-50168）](https://www.oobs.io/posts/four-bytes-one-lie/) | 20.0 | 28.0 | 50.0 |
+| [Security: COMを使って低権限でBoot Configuration Data（BCD）を削除できる問題（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user/) | 20.0 | 28.0 | 50.0 |
+| [Spring ELを用いて環境変数とシステムプロパティを露出させる攻撃（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253/) | 20.0 | 28.0 | 50.0 |
+| [PLEASE_READ_ME: MySQLサーバーを襲う機会主義的ランサムウェア](https://www.akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 10.0 | 30.0 | 42.0 |
 | [Security: iBootログの難読化・復号化](https://nyansatan.github.io/iboot-log-deobfuscation/) | 10.0 | 20.0 | 48.0 |
-| [Mythos効果とセキュリティ運用およびリスク管理における「これまで通り」の終焉](https://www.bitsight.com/de/blog/mythos-effect-ai-vulnerability-management) | 10.0 | 20.0 | 42.0 |
-| [PowerShellを使ってChromium系ブラウザのパスワードを復号する攻撃](https://github.com/The-Viper-One/Invoke-PowerChrome) | 10.0 | 20.0 | 42.0 |
-| [MixMaster MMORPGのリバースエンジニアリングによるセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering/) | 10.0 | 20.0 | 42.0 |
-| [Windowsセキュリティ研究のためのカーネル脆弱性機能フレームワーク（KVC）におけるハック](https://github.com/wesmar/kvc/) | 10.0 | 20.0 | 42.0 |
-| [JDWP経由でデバッグ可能なAndroidプロセスにFridaを動的アタッチする手法（root不要）](https://github.com/frankheat/frida-jdwp-loader) | 10.0 | 20.0 | 42.0 |
-| [Win FSミニフィルタードライバーで信頼できないプロセスから機密データを保護する方法](https://github.com/KiExitDispatcher/NoMoreStealers) | 10.0 | 20.0 | 42.0 |
-| [Hack: C/C++シェルコード作成用の拡張可能な位置独立コードツールキット](https://github.com/Print3M/epic) | 10.0 | 20.0 | 42.0 |
+| [Mythos効果とSecurity Operationsおよびリスク管理における「通常運転」の終焉](https://www.bitsight.com/de/blog/mythos-effect-ai-vulnerability-management) | 10.0 | 20.0 | 42.0 |
+| [Fun: ターミナルUI搭載オペレーティングシステム](https://github.com/Gaurav-Gosain/tuios/) | 10.0 | 20.0 | 42.0 |
+| [NTLMリレーからKerberosリレーへ：知っておくべきすべて](https://decoder.cloud/2025/04/24/from-ntlm-relay-to-kerberos-relay-everything-you-need-to-know/) | 10.0 | 20.0 | 42.0 |
+| [Security: ベンダーからESC1型証明書テンプレートへ](https://medium.com/@Debugger/from-vendor-to-esc1-ed32281b7ea7) | 10.0 | 20.0 | 42.0 |
+| [TigerBeetleを活用した高性能チケッティングシステムの構築](https://renerocks.ai/blog/2025-11-02--tigerfans/) | 10.0 | 20.0 | 42.0 |
+| [Security: MixMaster MMORPGのリバースエンジニアリング](https://3r4y.github.io/posts/mixmasterreverseengineering/) | 10.0 | 20.0 | 42.0 |
+| [Windowsセキュリティ研究向け Kernel Vulnerability Capabilities Framework（KVC）を悪用したハック](https://github.com/wesmar/kvc/) | 10.0 | 20.0 | 42.0 |
+| [JDWP経由でデバッグ可能なAndroidプロセスにFridaを動的接続する手法（root不要）](https://github.com/frankheat/frida-jdwp-loader) | 10.0 | 20.0 | 42.0 |
+| [Win FS minifilter driverで信頼されていないプロセスから機密データを保護する方法](https://github.com/KiExitDispatcher/NoMoreStealers) | 10.0 | 20.0 | 42.0 |
+| [Hack: C/C++シェルコード作成用の拡張可能なPosition Independent Codeツールキット](https://github.com/Print3M/epic) | 10.0 | 20.0 | 42.0 |
 | [Hack: .pdbファイルに記録されたデバッグ情報を視覚的に確認するツール](https://github.com/diversenok/DiaSymbolView) | 10.0 | 20.0 | 42.0 |
-| [パッチ適用により in-process のプロセス終了を防止する方法](https://github.com/EvilBytecode/ExitPatcher) | 10.0 | 20.0 | 42.0 |
+| [プロセス内からの終了をexit APIのパッチ適用で防ぐ方法](https://github.com/EvilBytecode/ExitPatcher) | 10.0 | 20.0 | 42.0 |
+| [Must see: Geminiをハッキングする—多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 10.0 | 20.0 | 42.0 |
+| [Hack: Advanced JavaScript File Discovery and Analysis Tool](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
+| [Hack: Y2JBはPS5のYouTubeアプリを利用したユーザーランドコード実行](https://github.com/Gezine/Y2JB) | 10.0 | 20.0 | 42.0 |
+| [PowerShellでChromium系ブラウザのパスワードを復号する手口](https://github.com/The-Viper-One/Invoke-PowerChrome) | 10.0 | 20.0 | 42.0 |
 
 ---
 
 ## 📊 スコアの見方
 
-| <nobr>指標</nobr> | 意味 |
+| 指⁠標 | 意味 |
 |---|---|
-| <nobr>温度状態</nobr> | 話題のライフサイクルを示す補助ラベルです。例: 低温、継続監視、温度上昇中、高温、冷却中。 |
-| <nobr>温度感</nobr> | 話題として今どれだけ注目・拡散・更新されているかを示します。 |
-| <nobr>実務影響</nobr> | 対象組織・担当者にとって、対応優先度や被害可能性がどれだけ大きいかを示します。 |
-| <nobr>確度</nobr> | 公的機関、ベンダー公式、複数ソース、CVE/KEV、一次資料などにより、情報をどれだけ確認できているかを示します。事件報道系は、複数報道があっても司法文書・当局発表などの一次資料が弱い場合、脆弱性KEV系より低く出ることがあります。 |
+| 温⁠度⁠状⁠態 | 話題のライフサイクルを示す補助ラベルです。例: 低温、継続監視、温度上昇中、高温、冷却中。 |
+| 温⁠度⁠感 | 話題として今どれだけ注目・拡散・更新されているかを示します。 |
+| 実⁠務⁠影⁠響 | 対象組織・担当者にとって、対応優先度や被害可能性がどれだけ大きいかを示します。 |
+| 確⁠度 | 公的機関、ベンダー公式、複数ソース、CVE/KEV、一次資料などにより、情報をどれだけ確認できているかを示します。事件報道系は、複数報道があっても司法文書・当局発表などの一次資料が弱い場合、脆弱性KEV系より低く出ることがあります。 |
 
 スコアは、公開情報から抽出した特徴量と事前定義した重み付けに基づく参考指標です。詳しい算出方針は [スコアリング方針](../docs/scoring.md) を参照してください。
 
