@@ -1,12 +1,12 @@
-# 📡 サイレーダー 2026-05-24 11:00 JST
+# 📡 サイレーダー 2026-05-24 17:00 JST
 
-このレポートは、2026-05-24 05:00 JST〜2026-05-24 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-24 11:00 JST〜2026-05-24 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 34
+- 観測トピック数: 32
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
@@ -36,30 +36,30 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Laravel Lang packagesが乗っ取られ、認証情報窃取マルウェアを配布](https://www.bleepingcomputer.com/news/security/laravel-lang-packages-hijacked-to-deploy-credential-stealing-malware/) | 28.0 | 45.0 | 42.0 |
-| [どうしても「Forza Horizon 6」で遊びたかったマンガ家が古いPCに四苦八苦……そして見つけた“最適解”とは？](https://www.itmedia.co.jp/news/articles/2605/24/news017.html) | 21.0 | 20.0 | 42.0 |
-| [Unifi Accessのリモートコード実行脆弱性（CVE-2025-52665）](https://www.catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
-| [Netskopeのクロステナント認証バイパス脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass/) | 20.0 | 38.0 | 42.0 |
+| [UniFi Access におけるリモートコード実行の脆弱性（CVE-2025-52665）](https://www.catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
+| [Netskopeのクロステナント認証回避脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass/) | 20.0 | 38.0 | 42.0 |
 | [Citrix NetScalerのメモリリークおよび反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
 | [Security: 4 Bytes, 1 Lie - SMAPを回避するカーネルポインタの信頼性トリック（CVE-2025-50168）](https://www.oobs.io/posts/four-bytes-one-lie/) | 20.0 | 28.0 | 50.0 |
-| [Security: 低権限のCOM経由でBoot Configuration Data（BCD）を削除可能な脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user/) | 20.0 | 28.0 | 50.0 |
-| [Spring ELを悪用して環境変数とシステムプロパティを露出させる攻撃（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253/) | 20.0 | 28.0 | 50.0 |
-| [PLEASE_READ_ME: MySQLサーバーを破壊する機会主義的ランサムウェア](https://www.akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 10.0 | 30.0 | 42.0 |
-| [iBootログの難読化解除と難読化対応](https://nyansatan.github.io/iboot-log-deobfuscation/) | 10.0 | 20.0 | 48.0 |
-| [Security Operationsとリスクマネジメントにおける「通常運転」の終焉と神話効果](https://www.bitsight.com/de/blog/mythos-effect-ai-vulnerability-management) | 10.0 | 20.0 | 42.0 |
-| [Fun: ターミナルUIオペレーティングシステム](https://github.com/Gaurav-Gosain/tuios/) | 10.0 | 20.0 | 42.0 |
-| [NTLMリレーからKerberosリレーへ：知っておくべきすべて](https://decoder.cloud/2025/04/24/from-ntlm-relay-to-kerberos-relay-everything-you-need-to-know/) | 10.0 | 20.0 | 42.0 |
-| [ベンダーからESC1型証明書テンプレートまでのセキュリティ問題](https://medium.com/@Debugger/from-vendor-to-esc1-ed32281b7ea7) | 10.0 | 20.0 | 42.0 |
-| [TigerBeetleで構築する高性能チケット管理システム](https://renerocks.ai/blog/2025-11-02--tigerfans/) | 10.0 | 20.0 | 42.0 |
-| [「MixMaster MMORPG」のリバースエンジニアリングによるセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering/) | 10.0 | 20.0 | 42.0 |
-| [Windowsセキュリティ研究のためのKernel Vulnerability Capabilities Framework（KVC）ハック](https://github.com/wesmar/kvc/) | 10.0 | 20.0 | 42.0 |
-| [JDWP経由でデバッグ可能なAndroidプロセスにFridaを動的に接続する手法（root不要）](https://github.com/frankheat/frida-jdwp-loader) | 10.0 | 20.0 | 42.0 |
-| [Win FS minifilter driverで信頼できないプロセスから機密データを保護するHack](https://github.com/KiExitDispatcher/NoMoreStealers) | 10.0 | 20.0 | 42.0 |
-| [Hack: C/C++ シェルコード作成のための Extensible Position Independent Code ツールキット](https://github.com/Print3M/epic) | 10.0 | 20.0 | 42.0 |
+| [低権限のCOM経由でBoot Configuration Data（BCD）を削除できる脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user/) | 20.0 | 28.0 | 50.0 |
+| [Spring ELを悪用して環境変数とシステムプロパティを公開する攻撃（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253/) | 20.0 | 28.0 | 50.0 |
+| [Security: iBootログの難読化解除と再難読化](https://nyansatan.github.io/iboot-log-deobfuscation/) | 10.0 | 20.0 | 48.0 |
+| [Mythos効果とSecurity Operationsおよびリスク管理における「ビジネス・アズ・ユージュアル」の終焉](https://www.bitsight.com/de/blog/mythos-effect-ai-vulnerability-management) | 10.0 | 20.0 | 42.0 |
+| [オープンソースの多目的リモートアクセスツール「Hack」、Microsoft Windowsを標的に展開](https://github.com/DarkCoderSc/OptixGate) | 10.0 | 20.0 | 42.0 |
+| [TigerBeetleを用いた高性能チケット管理システムの構築](https://renerocks.ai/blog/2025-11-02--tigerfans/) | 10.0 | 20.0 | 42.0 |
+| [Terminal UIを備えたオペレーティングシステム](https://github.com/Gaurav-Gosain/tuios/) | 10.0 | 20.0 | 42.0 |
+| [Security: NTLM relayからKerberos relayへ ― 知っておくべきすべて](https://decoder.cloud/2025/04/24/from-ntlm-relay-to-kerberos-relay-everything-you-need-to-know/) | 10.0 | 20.0 | 42.0 |
+| [ベンダー証明書テンプレートからESC1型証明書テンプレートへ](https://medium.com/@Debugger/from-vendor-to-esc1-ed32281b7ea7) | 10.0 | 20.0 | 42.0 |
+| [PythonファイルやOffice文書をMarkdownに変換するツール「Fun」](https://github.com/microsoft/markitdown) | 10.0 | 20.0 | 42.0 |
+| [「MixMaster MMORPG」のリバースエンジニアリングとセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering/) | 10.0 | 20.0 | 42.0 |
+| [Windowsセキュリティ研究のためのKernel Vulnerability Capabilities Framework（KVC）に関するハック](https://github.com/wesmar/kvc/) | 10.0 | 20.0 | 42.0 |
+| [JDWP経由でFridaをデバッグ可能なAndroidプロセスに動的接続する手法（root不要）](https://github.com/frankheat/frida-jdwp-loader) | 10.0 | 20.0 | 42.0 |
+| [Win FS minifilter driverで信頼できないプロセスから機密データを保護する手法](https://github.com/KiExitDispatcher/NoMoreStealers) | 10.0 | 20.0 | 42.0 |
+| [Hack: Extensible Position Independent Code – Toolkit for C/C++ shellcode building](https://github.com/Print3M/epic) | 10.0 | 20.0 | 42.0 |
 | [Hack: .pdbファイルに記録されたデバッグ情報を視覚的に確認するツール](https://github.com/diversenok/DiaSymbolView) | 10.0 | 20.0 | 42.0 |
-| [Hack: exit APIのパッチ適用によるプロセス内プロセス終了の防止](https://github.com/EvilBytecode/ExitPatcher) | 10.0 | 20.0 | 42.0 |
-| [Must see: Geminiをハッキングする——多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 10.0 | 20.0 | 42.0 |
-| [Hack: 高度なJavaScriptファイル検出・解析ツール](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
+| [in-processのprocess終了をexit APIのパッチ適用で防ぐ方法](https://github.com/EvilBytecode/ExitPatcher) | 10.0 | 20.0 | 42.0 |
+| [Must see: Geminiをハッキングする多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 10.0 | 20.0 | 42.0 |
+| [Hack: 高度なJavaScriptファイルの探索・解析ツール](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
+| [PS5のYouTubeアプリを悪用したY2JBによるユーザーモード任意コード実行](https://github.com/Gezine/Y2JB) | 10.0 | 20.0 | 42.0 |
 
 ---
 
