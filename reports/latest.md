@@ -1,12 +1,12 @@
-# 📡 サイレーダー 2026-05-24 05:00 JST
+# 📡 サイレーダー 2026-05-24 11:00 JST
 
-このレポートは、2026-05-23 17:00 JST〜2026-05-24 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-24 05:00 JST〜2026-05-24 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 50
+- 観測トピック数: 34
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
@@ -36,30 +36,30 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Laravel-Lang PHPパッケージが侵害され、クロスプラットフォームの認証情報窃取マルウェアを配布](https://thehackernews.com/2026/05/laravel-lang-php-packages-compromised.html) | 28.0 | 45.0 | 42.0 |
-| [Packagistのサプライチェーン攻撃、GitHub上のLinuxマルウェアで8件のパッケージに感染](https://thehackernews.com/2026/05/packagist-supply-chain-attack-infects-8.html) | 28.0 | 20.0 | 42.0 |
-| [Claude Mythos AIが広く使われるソフトウェアで1万件の重大な脆弱性を発見](https://thehackernews.com/2026/05/claude-mythos-ai-finds-10000-high.html) | 26.0 | 20.0 | 42.0 |
-| [UniFi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://www.catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
-| [Netskopeのクロステナント認証バイパスの脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass/) | 20.0 | 38.0 | 42.0 |
-| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
-| [ISC BINDにおける複数の脆弱性（2026年5月）](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016803.html) | 20.0 | 31.0 | 53.0 |
-| [npm、サプライチェーン攻撃対策として2FA必須の公開とパッケージ導入制御を追加](https://thehackernews.com/2026/05/npm-adds-2fa-gated-publishing-and.html) | 20.0 | 30.0 | 42.0 |
-| [Security: 低権限のCOM経由でBoot Configuration Data (BCD)を削除可能な脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user/) | 20.0 | 28.0 | 50.0 |
-| [Hack: Spring ELを用いて環境変数とシステムプロパティを露出させる手法（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253/) | 20.0 | 28.0 | 50.0 |
-| [Security: 4 Bytes, 1つの嘘 - カーネルポインタに対するSMAP回避不要のConfidence Trick（CVE-2025-50168）](https://www.oobs.io/posts/four-bytes-one-lie/) | 20.0 | 28.0 | 50.0 |
-| [ONNX 1.17.0のonnx.external_data_helper.save_external_dataにおけるパストラバーサル脆弱性による任意ファイル上書き問題](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-51480) | 20.0 | 28.0 | 38.0 |
-| [CVE-2025-14575 Qt NetworkのOpenSSL TLSバックエンドにおける制御されていない検索パス要素により不正なCA証明書が読み込まれる](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-14575) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-8723: qs.stringifyのcomma形式配列でnull/undefined項目によりクラッシュする問題](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8723) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-8711 NGINX JavaScriptの脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8711) | 20.0 | 28.0 | 38.0 |
-| [haveged の権限チェックにおける exit 漏れにより root 権限での攻撃が可能となる脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41054) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-42009 GnuTLSのDTLSパケット再順序化によるサービス拒否の脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42009) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-5950: BIND 9 resolverにおける無制限再送ループの脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5950) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-5947: クエリ洪水時のSIG(0)検証で未定義動作が発生する可能性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5947) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-5946: CLASS != IN の不正な処理](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5946) | 20.0 | 28.0 | 38.0 |
-| [BIND 9のDNS-over-HTTPS実装におけるHeap use-after-free脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3593) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-3592 自己参照のグルーレコードによる増幅脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3592) | 20.0 | 28.0 | 38.0 |
-| [Italy、ストリーミング認証コードを盗んだCINEMAGOAL海賊版アプリを摘発](https://www.bleepingcomputer.com/news/legal/italy-disrupts-cinemagoal-piracy-app-that-stole-streaming-auth-codes/) | 20.0 | 20.0 | 42.0 |
-| [『Underminr』の脆弱性で攻撃者が信頼済みドメインの背後に悪意ある接続を隠蔽可能に](https://www.securityweek.com/underminr-vulnerability-lets-attackers-hide-malicious-connections-behind-trusted-domains/) | 20.0 | 20.0 | 42.0 |
+| [Laravel Lang packagesが乗っ取られ、認証情報窃取マルウェアを配布](https://www.bleepingcomputer.com/news/security/laravel-lang-packages-hijacked-to-deploy-credential-stealing-malware/) | 28.0 | 45.0 | 42.0 |
+| [どうしても「Forza Horizon 6」で遊びたかったマンガ家が古いPCに四苦八苦……そして見つけた“最適解”とは？](https://www.itmedia.co.jp/news/articles/2605/24/news017.html) | 21.0 | 20.0 | 42.0 |
+| [Unifi Accessのリモートコード実行脆弱性（CVE-2025-52665）](https://www.catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
+| [Netskopeのクロステナント認証バイパス脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass/) | 20.0 | 38.0 | 42.0 |
+| [Citrix NetScalerのメモリリークおよび反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
+| [Security: 4 Bytes, 1 Lie - SMAPを回避するカーネルポインタの信頼性トリック（CVE-2025-50168）](https://www.oobs.io/posts/four-bytes-one-lie/) | 20.0 | 28.0 | 50.0 |
+| [Security: 低権限のCOM経由でBoot Configuration Data（BCD）を削除可能な脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user/) | 20.0 | 28.0 | 50.0 |
+| [Spring ELを悪用して環境変数とシステムプロパティを露出させる攻撃（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253/) | 20.0 | 28.0 | 50.0 |
+| [PLEASE_READ_ME: MySQLサーバーを破壊する機会主義的ランサムウェア](https://www.akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers) | 10.0 | 30.0 | 42.0 |
+| [iBootログの難読化解除と難読化対応](https://nyansatan.github.io/iboot-log-deobfuscation/) | 10.0 | 20.0 | 48.0 |
+| [Security Operationsとリスクマネジメントにおける「通常運転」の終焉と神話効果](https://www.bitsight.com/de/blog/mythos-effect-ai-vulnerability-management) | 10.0 | 20.0 | 42.0 |
+| [Fun: ターミナルUIオペレーティングシステム](https://github.com/Gaurav-Gosain/tuios/) | 10.0 | 20.0 | 42.0 |
+| [NTLMリレーからKerberosリレーへ：知っておくべきすべて](https://decoder.cloud/2025/04/24/from-ntlm-relay-to-kerberos-relay-everything-you-need-to-know/) | 10.0 | 20.0 | 42.0 |
+| [ベンダーからESC1型証明書テンプレートまでのセキュリティ問題](https://medium.com/@Debugger/from-vendor-to-esc1-ed32281b7ea7) | 10.0 | 20.0 | 42.0 |
+| [TigerBeetleで構築する高性能チケット管理システム](https://renerocks.ai/blog/2025-11-02--tigerfans/) | 10.0 | 20.0 | 42.0 |
+| [「MixMaster MMORPG」のリバースエンジニアリングによるセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering/) | 10.0 | 20.0 | 42.0 |
+| [Windowsセキュリティ研究のためのKernel Vulnerability Capabilities Framework（KVC）ハック](https://github.com/wesmar/kvc/) | 10.0 | 20.0 | 42.0 |
+| [JDWP経由でデバッグ可能なAndroidプロセスにFridaを動的に接続する手法（root不要）](https://github.com/frankheat/frida-jdwp-loader) | 10.0 | 20.0 | 42.0 |
+| [Win FS minifilter driverで信頼できないプロセスから機密データを保護するHack](https://github.com/KiExitDispatcher/NoMoreStealers) | 10.0 | 20.0 | 42.0 |
+| [Hack: C/C++ シェルコード作成のための Extensible Position Independent Code ツールキット](https://github.com/Print3M/epic) | 10.0 | 20.0 | 42.0 |
+| [Hack: .pdbファイルに記録されたデバッグ情報を視覚的に確認するツール](https://github.com/diversenok/DiaSymbolView) | 10.0 | 20.0 | 42.0 |
+| [Hack: exit APIのパッチ適用によるプロセス内プロセス終了の防止](https://github.com/EvilBytecode/ExitPatcher) | 10.0 | 20.0 | 42.0 |
+| [Must see: Geminiをハッキングする——多層的アプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 10.0 | 20.0 | 42.0 |
+| [Hack: 高度なJavaScriptファイル検出・解析ツール](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
 
 ---
 
