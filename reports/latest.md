@@ -1,17 +1,19 @@
-# 📡 サイレーダー 2026-05-25 05:00 JST
+# 📡 サイレーダー 2026-05-25 11:00 JST
 
-このレポートは、2026-05-24 17:00 JST〜2026-05-25 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-25 05:00 JST〜2026-05-25 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 35
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 74
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [新日本検定協会のランサムウェア被害、東京海上日動火災保険の顧客情報漏えいの可能性](#topic-9725) | 31.0 | 38.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,7 +21,63 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-9725"></a>
+
+### 1. 新日本検定協会のランサムウェア被害、東京海上日動火災保険の顧客情報漏えいの可能性
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 31.0 |
+| <nobr>実務影響</nobr> | 38.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+新日本検定協会がランサムウェア被害を受け、関連して東京海上日動火災保険の顧客情報が漏えいした可能性があると報じられています。
+現時点では、漏えいの有無や影響範囲については確認途上とみられます。ランサムウェア被害は業務停止だけでなく、委託先や関連先を含む情報管理にも影響が及ぶおそれがあります。
+保険会社の顧客情報が関係する可能性があるため、個人情報保護と対外説明の観点でも注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・インシデント関連の公開情報として観測しています。
+
+##### 実務影響
+- 情報漏えい系。
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 自社・委託先を含む関連システムの侵害有無と、情報流出の可能性を早期に点検する。
+- 個人情報を扱う業務では、保管先・共有先・委託範囲の棚卸しとアクセス権限の確認を急ぐ。
+- 事実関係が未確定な段階でも、問い合わせ対応や通知判断に備えて連絡体制と初動手順を確認する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [新日本検定協会のランサムウェア被害、東京海上日動火災保険の顧客情報漏えいの可能性](https://scan.netsecurity.ne.jp/article/2026/05/25/55338.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 弱。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -36,30 +94,30 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Ghost CMSのSQLインジェクション脆弱性が大規模なClickFixキャンペーンで悪用される](https://www.bleepingcomputer.com/news/security/ghost-cms-sql-injection-flaw-exploited-in-large-scale-clickfix-campaign/) | 28.0 | 28.0 | 50.0 |
-| [Wireshark 4.6.6 リリース](https://isc.sans.edu/diary/rss/33010) | 22.0 | 20.0 | 42.0 |
-| [UniFi Accessにおけるリモートコード実行の脆弱性（CVE-2025-52665）](https://www.catchify.sa/post/cve-2025-52665-rce-in-unifi-os-25-000) | 20.0 | 46.0 | 50.0 |
-| [Netskopeのクロステナント認証バイパス脆弱性](https://blog.amberwolf.com/blog/2025/august/advisory---netskope-cross-tenant-authentication-bypass/) | 20.0 | 38.0 | 42.0 |
-| [Citrix NetScalerのメモリリークと反射型XSS（CVE-2025-12101）](https://bit.ly/48bPzCO) | 20.0 | 34.0 | 50.0 |
-| [Security: 4 Bytes, 1 Lie - SMAPを回避するカーネルポインタの信用詐欺（CVE-2025-50168）](https://www.oobs.io/posts/four-bytes-one-lie/) | 20.0 | 28.0 | 50.0 |
-| [Security: 低権限でCOM経由によりBoot Configuration Data（BCD）を削除可能な脆弱性（CVE-2025-59253）](https://warpnet.nl/blog/deleting-the-bcd-through-com-as-low-privileged-user/) | 20.0 | 28.0 | 50.0 |
-| [Hack: Spring EL を使って環境変数とシステムプロパティを露出させる脆弱性（CVE-2025-41253）](https://psytester.github.io/CVE-2025-41253/) | 20.0 | 28.0 | 50.0 |
-| [iBootログの難読化解除と再難読化](https://nyansatan.github.io/iboot-log-deobfuscation/) | 10.0 | 20.0 | 48.0 |
-| [Mythos効果とSecurity OperationsおよびRisk Managementにおける「Business as usual」の終焉](https://www.bitsight.com/de/blog/mythos-effect-ai-vulnerability-management) | 10.0 | 20.0 | 42.0 |
-| [NTLMリレーからKerberosリレーへ：知っておくべきすべて](https://decoder.cloud/2025/04/24/from-ntlm-relay-to-kerberos-relay-everything-you-need-to-know/) | 10.0 | 20.0 | 42.0 |
-| [MixMaster MMORPGのリバースエンジニアリングによるセキュリティ分析](https://3r4y.github.io/posts/mixmasterreverseengineering/) | 10.0 | 20.0 | 42.0 |
-| [Windowsセキュリティ研究のためのKernel Vulnerability Capabilities Framework（KVC）に関するハック](https://github.com/wesmar/kvc/) | 10.0 | 20.0 | 42.0 |
-| [Hack: JDWP経由でデバッグ可能なAndroidプロセスにFridaを動的アタッチする（root不要）](https://github.com/frankheat/frida-jdwp-loader) | 10.0 | 20.0 | 42.0 |
-| [Hack: Win FS minifilter driverで信頼できないプロセスから機密データを保護する方法](https://github.com/KiExitDispatcher/NoMoreStealers) | 10.0 | 20.0 | 42.0 |
-| [Hack: C/C++シェルコード構築用のExtensible Position Independent Codeツールキット](https://github.com/Print3M/epic) | 10.0 | 20.0 | 42.0 |
-| [Hack: .pdbファイルに記録されたデバッグ情報を視覚的に確認するツール](https://github.com/diversenok/DiaSymbolView) | 10.0 | 20.0 | 42.0 |
-| [インプロセスのプロセス終了をexit APIのパッチ適用で防止する方法](https://github.com/EvilBytecode/ExitPatcher) | 10.0 | 20.0 | 42.0 |
-| [Must see: Geminiをハッキングする—多層的なアプローチ](https://buganizer.cc/hacking-gemini-a-multi-layered-approach-md) | 10.0 | 20.0 | 42.0 |
-| [Hack: Advanced JavaScriptファイル発見・解析ツール](https://github.com/ynsmroztas/InspectJS) | 10.0 | 20.0 | 42.0 |
-| [PS5のYouTubeアプリを悪用したユーザーランドコード実行「Y2JB」攻撃](https://github.com/Gezine/Y2JB) | 10.0 | 20.0 | 42.0 |
-| [PowerShellでChromium系ブラウザのパスワードを復号する手口](https://github.com/The-Viper-One/Invoke-PowerChrome) | 10.0 | 20.0 | 42.0 |
-| [Fun: PythonツールによるファイルとOffice文書のMarkdown変換](https://github.com/microsoft/markitdown) | 10.0 | 20.0 | 42.0 |
-| [TigerBeetleで高性能チケット管理システムを構築する方法](https://renerocks.ai/blog/2025-11-02--tigerfans/) | 10.0 | 20.0 | 42.0 |
+| [ランサム被害を防ぐ「事前防御」への原点回帰--ZDNETセキュリティセミナー開催](https://japan.zdnet.com/article/35247115/) | 29.0 | 30.0 | 42.0 |
+| [キャンディルデザインにランサムウェア攻撃、業績への影響は軽微](https://scan.netsecurity.ne.jp/article/2026/05/25/55341.html) | 29.0 | 30.0 | 42.0 |
+| [フィーチャへのランサムウェア攻撃、ファイル転送ツールを用いて攻撃者管理の OneDrive に送信](https://scan.netsecurity.ne.jp/article/2026/05/25/55340.html) | 29.0 | 30.0 | 42.0 |
+| [暗号化は外部サーバで WantToCryが示した“EDR検知回避型”ランサムの次段階](https://atmarkit.itmedia.co.jp/ait/articles/2605/25/news027.html) | 29.0 | 30.0 | 42.0 |
+| [AIセキュリティで必要な6つの対策／20代の半数が「検索エンジンを使わない」／生成AIツールは「業務インフラ」へ、ほか](https://ascii.jp/elem/000/004/404/4404586/?rss=) | 26.0 | 20.0 | 42.0 |
+| [エージェント管理プラットフォームの台頭とリスク--AIの「シャドーIT」化を防ぐには](https://japan.zdnet.com/article/35247580/) | 26.0 | 20.0 | 42.0 |
+| [使う前から「生成AI疲れ」まん延 活用方法が分からず思考停止](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600007/051500217/) | 26.0 | 20.0 | 42.0 |
+| [Claude Mythos](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600009/052000223/) | 26.0 | 20.0 | 42.0 |
+| [Android アプリ「パスワード管理 ロボフォーム」の intent 処理に検証不備の脆弱性](https://scan.netsecurity.ne.jp/article/2026/05/25/55334.html) | 24.0 | 20.0 | 43.0 |
+| [「Xperia 1 VIII」が大幅値上げ　見合う価値はあるか、買い方も検証](https://xtech.nikkei.com/atcl/nxt/column/18/02980/052200043/) | 24.0 | 20.0 | 43.0 |
+| [「AIファースト」の成否は誰が握る？ 導入が失敗する理由](https://japan.zdnet.com/article/35247634/) | 23.0 | 20.0 | 42.0 |
+| [「情報セキュリティ10大脅威 2026」の個人編ハンドブックが公開](https://www.security-next.com/184874) | 22.0 | 20.0 | 42.0 |
+| [「Apache Fory」Python向け実装に脆弱性 - 修正版を提供](https://www.security-next.com/184867) | 22.0 | 20.0 | 42.0 |
+| [先週注目された記事（2026年5月17日〜2026年5月23日）](https://www.security-next.com/184857) | 22.0 | 20.0 | 42.0 |
+| [「Drupal」のSQLi脆弱性、悪用確認で米当局が対策呼びかけ](https://www.security-next.com/184859) | 22.0 | 20.0 | 42.0 |
+| [LINEヤフーグループのweb3ウォレットが「JPYC」採用 LINEアプリ上で利用可能に](https://www.itmedia.co.jp/news/articles/2605/22/news134.html) | 21.0 | 20.0 | 42.0 |
+| [HENNGEが描く、次世代の全方位防御 - 4つの新製品で実現する「ゼロトラストの民主化」](https://news.mynavi.jp/techplus/kikaku/20260525-4431535/) | 21.0 | 20.0 | 42.0 |
+| [ますます分かりにくくなったグーグルのAI機能](https://japan.zdnet.com/article/35247935/) | 21.0 | 20.0 | 42.0 |
+| [セコムトラストシステムズ、オンラインセミナー「SCS評価制度を活用した現状整理の進め方」を 6 / 17・18 開催](https://scan.netsecurity.ne.jp/article/2026/05/25/55343.html) | 21.0 | 20.0 | 42.0 |
+| [象印マホービンの台湾連結子会社に不正アクセス、国内外のグループ会社に影響なし](https://scan.netsecurity.ne.jp/article/2026/05/25/55342.html) | 21.0 | 20.0 | 42.0 |
+| [最終出社日(春分の日前日)の夜 クラウドからダウンロード ～ 元従業員が取引先個人情報持ち出し 翌営業日検知し面談 事実と認める](https://scan.netsecurity.ne.jp/article/2026/05/25/55339.html) | 21.0 | 20.0 | 42.0 |
+| [52.6%が「取引先に★4以上求める予定」SCS評価制度準備状況調査結果](https://scan.netsecurity.ne.jp/article/2026/05/25/55337.html) | 21.0 | 20.0 | 42.0 |
+| [トレンドマイクロ製企業向けエンドポイントセキュリティ製品に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/05/25/55336.html) | 21.0 | 20.0 | 42.0 |
+| [Movable Type に権限チェックの欠如の脆弱性](https://scan.netsecurity.ne.jp/article/2026/05/25/55335.html) | 21.0 | 20.0 | 42.0 |
 
 ---
 
