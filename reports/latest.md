@@ -1,17 +1,22 @@
-# 📡 サイレーダー 2026-05-25 17:00 JST
+# 📡 サイレーダー 2026-05-26 05:00 JST
 
-このレポートは、2026-05-25 11:00 JST〜2026-05-25 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-25 17:00 JST〜2026-05-26 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 70
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 74
+- [音声で扱う想定のトピック](#audio-topics): 4
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [⚡ Weekly Recap: Linux Flaws, Defender 0-Days, Router Botnets, and Supply Chain Chaos](#topic-9976) | 45.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [25th May – Threat Intelligence Report](#topic-8637) | 36.0 | 46.0 | 59.0 | 音声 | 温度感上位枠 |
+| 3 | [一部サーバでランサムウェア被害 - キャンディルグループ会社](#topic-9987) | 30.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 4 | [TeamPCP Supply Chain Campaign: Activity Through 2026-05-24, (Mon, May 25th)](#topic-9980) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,7 +24,278 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-9976"></a>
+
+### 1. ⚡ Weekly Recap: Linux Flaws, Defender 0-Days, Router Botnets, and Supply Chain Chaos
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>サプライチェーン</nobr> / <nobr>Linux</nobr> / <nobr>フィッシング</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 初出 |
+| <nobr>温度感</nobr> | 45.0 |
+| <nobr>実務影響</nobr> | 38.0 |
+| <nobr>確度</nobr> | 43.0 |
+
+#### 概要
+
+Linuxの脆弱性、Microsoft Defenderのゼロデイ、ルータのボットネット化、サプライチェーン混乱など、複数の脅威が並行して話題になった週次まとめです。
+既知の古い脆弱性の再浮上や、セキュリティ製品自体への対策が必要になる状況も示されており、攻撃対象が広がっていることがうかがえます。
+単発の個別事案というより、企業のLinuxサーバー、端末防御、ネットワーク機器、開発・供給網まで広く影響しうるテーマが同時進行している点が重要です。
+複数の層で更新遅れや見落としがあると、侵入や横展開の足がかりになりやすいため、優先順位付けが求められます。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Linuxや周辺製品の脆弱性情報を継続監視し、影響資産の棚卸しと更新状況の確認を行う。
+- 端末防御製品や管理系ツールについても、例外設定や保護状態を見直し、検知ログを重点確認する。
+- ルータや境界機器、古いサーバーなどの放置資産を洗い出し、不要公開の停止と更新適用を進める。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [⚡ Weekly Recap: Linux Flaws, Defender 0-Days, Router Botnets, and Supply Chain C](https://thehackernews.com/2026/05/weekly-recap-linux-flaws-defender-0.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
+
+<a id="topic-8637"></a>
+
+### 2. 25th May – Threat Intelligence Report
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>CVE</nobr> / <nobr>脆弱性</nobr> / <nobr>KEV</nobr> / <nobr>ランサムウェア</nobr> / <nobr>権限昇格</nobr> / <nobr>DDoS</nobr> / <nobr>マルウェア</nobr> / <nobr>TTP</nobr> / <nobr>脅威レポート</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 再燃 |
+| <nobr>温度感</nobr> | 36.0 |
+| <nobr>実務影響</nobr> | 46.0 |
+| <nobr>確度</nobr> | 59.0 |
+
+#### 概要
+
+Microsoft Defenderに関する2件の脆弱性、CVE-2026-41091とCVE-2026-45498について、実際の悪用が観測されていると報じられています。
+CVE-2026-41091は権限昇格につながる可能性があり、CISAのKnown Exploited Vulnerabilitiesカタログにも追加されています。
+防御製品そのものが狙われるため、影響は個別端末にとどまらず、組織全体の検知・防御体制に波及し得ます。
+既知の悪用事例として扱われているため、優先度を上げて対応状況を確認する必要があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 3 sources。
+- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Microsoftの修正情報と適用状況を確認し、対象環境で更新が未適用の端末を洗い出す。
+- Defender関連の異常動作や権限昇格の兆候、サービス停止などの挙動を監視する。
+- CISAの既知悪用リストに載っている脆弱性として、資産管理とパッチ優先順位付けに反映する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-41091 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-34926 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-45498 | 主要CVE | 1.00 |
+| 脆弱性 | CVE-2026-9082 | 主要CVE | 1.00 |
+| ransomware_group | Qilin | 主題 | 0.80 |
+| ベンダー | Microsoft | 言及あり | 0.80 |
+| ransomware_group | Akira | 主題 | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-41091](https://nvd.nist.gov/vuln/detail/CVE-2026-41091) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [25th May – Threat Intelligence Report](https://research.checkpoint.com/2026/25th-may-threat-intelligence-report/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Defender vulnerabilities exploited in the wild (CVE-2026-41091, CVE-20](https://www.helpnetsecurity.com/2026/05/21/microsoft-defender-vulnerabilities-cve-2026-41091-cve-2026-45498/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Warns of Two Actively Exploited Defender Vulnerabilities](https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・高信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
+
+<a id="topic-9987"></a>
+
+### 3. 一部サーバでランサムウェア被害 - キャンディルグループ会社
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 初出 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 30.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+キャンディルのグループ会社で、住宅メンテナンスサービスなどを手がけるキャンディルパートナーズが、一部サーバに対するランサムウェア被害を公表しました。
+現時点では、被害の範囲や業務への影響の詳細は材料からは確認できません。
+ランサムウェア被害は、情報漏えいや業務停止につながるおそれがあるため、企業の事業継続と顧客対応の両面で注目されます。
+国内企業グループでの公表事案として、同種の被害への備えや初動対応の重要性を示しています。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・インシデント関連の公開情報として観測しています。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 対象サーバの隔離、侵入経路の確認、影響範囲の切り分けを優先する。
+- バックアップの健全性と復旧手順を確認し、復旧優先度を整理する。
+- 関連する認証情報や外部公開設定を点検し、再侵入防止の対策を進める。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [一部サーバでランサムウェア被害 - キャンディルグループ会社](https://www.security-next.com/184740) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 中。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+
+---
+
+<a id="topic-9980"></a>
+
+### 4. TeamPCP Supply Chain Campaign: Activity Through 2026-05-24, (Mon, May 25th)
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>サプライチェーン</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>政策・規制</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 初出 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+TeamPCPに関連するサプライチェーン型の動きが継続しており、複数のパッケージエコシステムにまたがって活動していると報告されています。
+公開情報では、GitHubの内部コードベースやMicrosoftが公開したPython SDKに関する言及があり、供給網を狙うリスクが示唆されています。
+ソフトウェア供給網に関わるため、単一の利用者や組織にとどまらず、依存関係を通じて影響が広がる可能性があります。
+開発・運用の現場では、パッケージやSDKの信頼性確認が改めて重要になります。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 利用しているパッケージやSDKの出所、保守状況、更新履歴を点検する。
+- 依存関係の変更時に、署名・整合性・配布元の確認を徹底する。
+- CI/CDや開発端末で、想定外の更新や不審な依存追加がないか監視を強化する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ベンダー | Microsoft | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [TeamPCP Supply Chain Campaign: Activity Through 2026-05-24, (Mon, May 25th)](https://isc.sans.edu/diary/rss/33016) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [TeamPCP Supply Chain Campaign: Activity Through 2026-05-24, (Mon, May 25th)](https://isc.sans.edu/diary/rss/33014) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -36,30 +312,30 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [「Google ドライブもランサムウェアに狙われている」 身代金を払わずに一括ファイル復元するには](https://atmarkit.itmedia.co.jp/ait/articles/2605/25/news042.html) | 29.0 | 30.0 | 42.0 |
-| [VPNからZTNA/SASEへの移行を考える 課題とサービス紹介まで](https://ascii.jp/featuredarticles/3001319/?rss=) | 29.0 | 30.0 | 42.0 |
-| [Claude Mythos Previewは深刻度「高」以上と推定される脆弱性候補を6202件発見、日本の銀行でも利用に向けた動きが進む高性能AIの初期レポートが公開される](https://gigazine.net/news/20260525-anthropic-project-glasswing/) | 29.0 | 20.0 | 42.0 |
-| [TrapDoorのサプライチェーン攻撃、npm・PyPI・CratesIO経由で認証情報窃取マルウェアを拡散](https://thehackernews.com/2026/05/trapdoor-supply-chain-attack-spreads.html) | 28.0 | 45.0 | 42.0 |
-| [パワポにChatGPTを召喚できるアドイン、OpenAIがβ版公開 スライド作成から編集まで指示するだけ](https://www.itmedia.co.jp/news/articles/2605/25/news102.html) | 26.0 | 20.0 | 42.0 |
-| [「AIに仕事奪われる」論もなんのその エンジニアの9割が業務の変化を歓迎](https://ascii.jp/elem/000/004/404/4404643/?rss=) | 26.0 | 20.0 | 42.0 |
-| [OpenHack: オープンソースAI搭載の脆弱性調査](https://www.helpnetsecurity.com/2026/05/25/openhack-open-source-ai-powered-vulnerability-research/) | 25.0 | 20.0 | 42.0 |
-| [C-suiteがシャドーAIを好むことが判明](https://www.helpnetsecurity.com/2026/05/25/trustedtech-workplace-shadow-ai-use-report/) | 25.0 | 20.0 | 42.0 |
-| [日立ディスクアレイシステムにおけるSVP 脆弱性対策について (2026年3月分)](https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016976.html) | 22.0 | 40.0 | 50.0 |
-| [配達員がバイクで用水路に転落、郵便物が所在不明に - 郵便局](https://www.security-next.com/184478) | 22.0 | 20.0 | 42.0 |
-| [米子会社にサイバー攻撃か、影響など詳細を調査 - 河合楽器](https://www.security-next.com/184882) | 22.0 | 20.0 | 42.0 |
-| [Google、日本の開発者の海外展開を支援する短期集中ワークショップ](https://www.itmedia.co.jp/news/articles/2605/25/news109.html) | 21.0 | 20.0 | 42.0 |
-| [KADOKAWAは「異世界転生しすぎた」が……「N中」「N高」急成長、「ニコニコ」も黒字](https://www.itmedia.co.jp/news/articles/2605/25/news083.html) | 21.0 | 20.0 | 42.0 |
-| [アイ・オー・データ機器、「アイオーデータ」に社名変更 7月からブランド名と統一](https://www.itmedia.co.jp/news/articles/2605/25/news097.html) | 21.0 | 20.0 | 42.0 |
-| [MCPはマネージドか、セルフホストか？ どちらが速くエージェント開発できる？](https://ascii.jp/elem/000/004/403/4403809/?rss=) | 21.0 | 20.0 | 42.0 |
-| [パナソニック、透明導電フィルム応用した半導体「微細配線技術」--既存設備で極薄・高周波に対応](https://japan.zdnet.com/article/35247885/) | 21.0 | 20.0 | 42.0 |
-| [妙だな……「“いいね”押すだけで稼げる」→高額な金銭請求される 国民生活センターが注意喚起](https://www.itmedia.co.jp/news/articles/2605/25/news094.html) | 21.0 | 20.0 | 42.0 |
-| [CISA請負業者、AWS GovCloud認証情報や内部アカウントをGitHubに流出](https://news.mynavi.jp/techplus/article/20260525-4482144/) | 21.0 | 20.0 | 42.0 |
-| [Yahoo!フリマに「まとめ買い」機能 まとめて「専用出品」可能に](https://www.itmedia.co.jp/news/articles/2605/25/news089.html) | 21.0 | 20.0 | 42.0 |
-| [普通のキーボードを“勝手に”エルゴノミクスに変える「MX Tilter Kit」を買ってみた](https://www.itmedia.co.jp/news/articles/2605/25/news086.html) | 21.0 | 20.0 | 42.0 |
-| [金融庁・日銀、金融機関にAIサイバー攻撃の対策要請 対応の優先度決定など9項目](https://www.itmedia.co.jp/news/articles/2605/25/news079.html) | 21.0 | 20.0 | 42.0 |
-| [SNSにおける情報漏えい、企業の7割で社内ルール「なし」 企業規模の違いで対応に格差か](https://www.itmedia.co.jp/news/articles/2605/25/news078.html) | 21.0 | 20.0 | 42.0 |
-| [ハードウェア高騰やサイバー攻撃激化にVMwareはどう対応してる？ VCFの新版「9.1」が登場](https://ascii.jp/elem/000/004/404/4404181/?rss=) | 21.0 | 20.0 | 42.0 |
-| [低温でのアンモニア分解性能を向上、水素利用技術の進展に期待](https://ascii.jp/elem/000/004/400/4400098/?rss=) | 21.0 | 20.0 | 42.0 |
+| [Ghost CMSのCVE-2026-26980を悪用した700以上のサイト乗っ取りによるClickFix攻撃](https://thehackernews.com/2026/05/ghost-cms-cve-2026-26980-exploited-to.html) | 28.0 | 46.0 | 54.0 |
+| [オランダ、サイバー攻撃支援で800台のサーバーを押収し2人を逮捕](https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/) | 28.0 | 20.0 | 42.0 |
+| [Radiology Associates of Richmondでのデータ侵害、26万6000人に影響](https://www.securityweek.com/266000-affected-by-data-breach-at-radiology-associates-of-richmond/) | 28.0 | 20.0 | 42.0 |
+| [Laravel-Langパッケージがマルウェア配布のために改ざんされる](https://www.securityweek.com/laravel-lang-packages-poisoned-for-malware-delivery/) | 28.0 | 20.0 | 42.0 |
+| [Lazarus、金融・暗号資産企業を狙ってRemotePEメモリ常駐型RATを展開](https://thehackernews.com/2026/05/lazarus-deploys-remotepe-memory-only.html) | 28.0 | 20.0 | 42.0 |
+| [富士通、学び続けるマルチAIエージェント技術を開発--業務経験を自ら検証、学習](https://japan.zdnet.com/article/35247971/) | 28.0 | 20.0 | 42.0 |
+| [「Claude Mythos」が1万件以上の脆弱性を発見 しかし修正追い付かず Anthropicが報告書](https://www.itmedia.co.jp/news/articles/2605/25/news130.html) | 26.0 | 20.0 | 42.0 |
+| [日大、教職員1万人が「Google AI Pro」活用へ](https://www.itmedia.co.jp/news/articles/2605/25/news129.html) | 26.0 | 20.0 | 42.0 |
+| [Anthropicの制限付きClaude MythosモデルがClaude Codeに登場する可能性](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropics-restricted-claude-mythos-model-may-be-coming-to-claude-code/) | 25.0 | 20.0 | 42.0 |
+| [Anthropic、Claude向けに28件のセキュリティおよびコンプライアンス統合を追加](https://www.helpnetsecurity.com/2026/05/25/anthropic-security-compliance-integrations-claude/) | 25.0 | 20.0 | 42.0 |
+| [Cisco、AI時代に向けたリスクベース脆弱性開示を改訂](https://www.helpnetsecurity.com/2026/05/25/cisco-risk-based-vulnerability-disclosure-ai/) | 25.0 | 20.0 | 42.0 |
+| [アラートの洪水にようやく対抗策が現れる](https://thehackernews.com/2026/05/the-alert-firehose-finally-meets-its.html) | 25.0 | 20.0 | 42.0 |
+| [Anthropic、1,000のOSSプロジェクトで23,000件の潜在的脆弱性を検出](https://www.securityweek.com/anthropic-mythos-detected-23000-potential-vulnerabilities-across-1000-oss-projects/) | 25.0 | 20.0 | 42.0 |
+| [Microsoft Access VBAに関する脆弱性情報](https://isc.sans.edu/diary/rss/33012) | 22.0 | 20.0 | 42.0 |
+| [交通指導員が小学校児童の登下校用名簿を紛失 - 名古屋市](https://www.security-next.com/184673) | 22.0 | 20.0 | 42.0 |
+| [メール誤送信、ポイント事業参加店舗のメアドが流出 - 宮城県](https://www.security-next.com/184887) | 22.0 | 20.0 | 42.0 |
+| [人間には普通の契約書に見えるのに「嘘のフォント」でAIだけ別の文章を読まされる「Noroboto」攻撃とは？](https://gigazine.net/news/20260525-noroboto/) | 22.0 | 20.0 | 42.0 |
+| [マクドナルド店頭の注文端末が使いにくいと物議に 広報「アップデートを行っているところ」](https://www.itmedia.co.jp/news/articles/2605/25/news137.html) | 21.0 | 20.0 | 42.0 |
+| [U-NEXT、アニメ制作会社GoHandsを買収 過去作に「生徒会役員共」「デキる猫は今日も憂鬱」など](https://www.itmedia.co.jp/news/articles/2605/25/news128.html) | 21.0 | 20.0 | 42.0 |
+| [基地局が"クマ見張り役"に ドコモ、AIカメラで出没検知の実証実験 北海道で](https://www.itmedia.co.jp/news/articles/2605/25/news127.html) | 21.0 | 20.0 | 42.0 |
+| [NTT、クボタ、NTTドコモが山間部におけるロボット農機の遠隔操作実験--モバイル通信と衛星通信の連携](https://japan.zdnet.com/article/35247975/) | 21.0 | 20.0 | 42.0 |
+| [PayPay誘導型が急増、4月下旬にはフィッシング報告の半数に 中国発攻撃も復活](https://news.mynavi.jp/techplus/article/20260525-4485997/) | 21.0 | 20.0 | 42.0 |
+| [近鉄とシャープ、画像処理技術を活用した車両床下検査システム--異常の有無を自動で検査](https://japan.zdnet.com/article/35247969/) | 21.0 | 20.0 | 42.0 |
+| [AIデータセンター、電力と冷却が限界に--シュナイダーが示す次世代インフラ](https://japan.zdnet.com/article/35247967/) | 21.0 | 20.0 | 42.0 |
 
 ---
 
