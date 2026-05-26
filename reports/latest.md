@@ -1,17 +1,20 @@
-# 📡 サイレーダー 2026-05-26 13:00 JST
+# 📡 サイレーダー 2026-05-26 17:00 JST
 
-このレポートは、2026-05-26 06:59 JST〜2026-05-26 12:59 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-26 11:00 JST〜2026-05-26 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 83
-- [音声で扱う想定のトピック](#audio-topics): 0
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
+- 観測トピック数: 59
+- [音声で扱う想定のトピック](#audio-topics): 1
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [KnowledgeDeliver LMS Flaw Exploited to Deploy Godzilla and Cobalt Strike](#topic-9892) | 50.0 | 64.0 | 55.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
+| 2 | [ファイルサーバでランサム被害を確認 - ダイヤモンド関連企業](#topic-10210) | 30.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,13 +22,145 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-10210"></a>
+
+### 1. ファイルサーバでランサム被害を確認 - ダイヤモンド関連企業
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | - |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 初出 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 30.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+オリエンタルダイヤモンドが、ファイルサーバでランサムウェア被害が確認されたと公表しました。
+同社は宝飾用ダイヤモンドの輸入、製造、販売を手がける企業で、サイバー攻撃を受けた事実が明らかになっています。
+ファイルサーバが被害を受けた場合、業務データや共有資料の停止・復旧に影響が及ぶ可能性があります。サプライチェーンや顧客対応への波及も含め、事業継続の観点で注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・インシデント関連の公開情報として観測しています。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 共有ファイルサーバのバックアップ状況と復旧手順を再点検する。
+- ランサムウェア検知後の初動対応と連絡体制を確認する。
+- 外部公開前提の情報だけでなく、社内共有データの重要度分類を見直す。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [ファイルサーバでランサム被害を確認 - ダイヤモンド関連企業](https://www.security-next.com/184467) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 中。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+
+---
 
 <a id="github-only-topics"></a>
 
 ## 📌 GitHubのみ掲載の注目トピック
 
-今回はGitHubのみ掲載の注目トピックはありません。
+<a id="topic-9892"></a>
+
+### 1. KnowledgeDeliver LMS Flaw Exploited to Deploy Godzilla and Cobalt Strike
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | GitHub |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>脅威アクター</nobr> / <nobr>Windows</nobr> / <nobr>ゼロデイ</nobr> / <nobr>IoC</nobr> / <nobr>iOS</nobr> / <nobr>RCE</nobr> / <nobr>CVE</nobr> / <nobr>防御・運用</nobr> / <nobr>政策・規制</nobr> |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 50.0 |
+| <nobr>実務影響</nobr> | 64.0 |
+| <nobr>確度</nobr> | 55.0 |
+
+#### 概要
+
+KnowledgeDeliver LMS において、ASP.<wbr>NET の machineKey が複数環境で共通だったことに起因する脆弱性が悪用され、未認証のリモートコード実行につながったと報告されています。
+攻撃後は、Godzilla としても知られる Web シェルの配置や、Cobalt Strike による感染へ発展した事例が確認されています。
+日本で利用されることの多い LMS に関する事案であり、1つの秘密情報の漏えいが複数の導入先に波及し得る点が問題視されています。
+認証前の侵入から Web シェル設置、端末感染までつながるため、サーバー防御だけでなく利用状況の監視も重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 2 sources。
+- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- 悪用情報あり。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- KnowledgeDeliver の機器・サーバーでは、個別に強固な machineKey が設定されているか確認し、共有値が残っていれば速やかに更新する。
+- Web ルート配下の .js / .aspx / .config の改ざん、IIS ワーカープロセスからの不審な子プロセス、ASP.<wbr>NET の ViewState 関連ログを確認する。
+- LMS への到達範囲を必要最小限に絞り、異常なリクエストや不審なユーザーエージェントの痕跡がないか継続的に監視する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-5426 | 主要CVE | 1.00 |
+| ベンダー | Microsoft | 言及あり | 0.80 |
+| 製品 | Exchange | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-5426](https://nvd.nist.gov/vuln/detail/CVE-2026-5426) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
+| <nobr>出典</nobr> | [KnowledgeDeliver LMS Flaw Exploited to Deploy Godzilla and Cobalt Strike](https://thehackernews.com/2026/05/knowledgedeliver-lms-flaw-exploited-to.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Exploitation of KnowledgeDeliver via ViewState Deserialization Vulnerability](https://cloud.google.com/blog/topics/threat-intelligence/knowledgedeliver-viewstate-deserialization-vulnerability/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・高信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
 
 <a id="low-record-topics"></a>
 
@@ -36,30 +171,30 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [YCC情報システムへのランサムウェア攻撃 第五報 ～ 攻撃者による脅迫文も](https://scan.netsecurity.ne.jp/article/2026/05/26/55350.html) | 29.0 | 30.0 | 42.0 |
-| [侵入経路となった VPN は使用しない ～ オリエンタルダイヤモンドへのランサムウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/05/26/55347.html) | 29.0 | 30.0 | 42.0 |
-| [「EDR無効化」「暗号化はしない」　2026年のランサムウェアに起きた変化](https://atmarkit.itmedia.co.jp/ait/articles/2605/26/news038.html) | 29.0 | 30.0 | 42.0 |
-| [Claudeを装ったページ経由で配布される可能性のあるACR Stealer](https://isc.sans.edu/diary/rss/33018) | 27.0 | 20.0 | 42.0 |
-| [ソフトバンク、「AIデータセンターGPUクラウド」を10月から提供](https://japan.zdnet.com/article/35247978/) | 26.0 | 20.0 | 42.0 |
-| [難易度の高いテクサポとコンテンツローカライズをどう効率化？　 AI活用のリアルな実践例](https://ascii.jp/elem/000/004/403/4403742/?rss=) | 26.0 | 20.0 | 42.0 |
-| [頼りになる職場の新しい同僚「AI」のトリセツ作成方法 ～ JSSEC「生成 AI 利用ルールテンプレート」](https://scan.netsecurity.ne.jp/article/2026/05/26/55352.html) | 26.0 | 20.0 | 42.0 |
-| [前編：加速するAI開発が隠すゆがみ](https://japan.zdnet.com/article/35247829/) | 26.0 | 20.0 | 42.0 |
-| [「人間レベルのエージェントAI」を成功に導く3つのベストプラクティスとは](https://japan.zdnet.com/article/35247628/) | 26.0 | 20.0 | 42.0 |
+| [F-Secure Internet Securityがフィッシングサイトや偽店舗、SMS詐欺をブロックする製品紹介](https://www.helpnetsecurity.com/2026/05/26/product-showcase-f-secure-internet-security-android/) | 36.0 | 30.0 | 42.0 |
+| [ランサムウェア攻撃が「持続可能なビジネス」に 侵入コスト6万6000円、復旧に2億3000万円](https://www.itmedia.co.jp/news/articles/2605/26/news108.html) | 29.0 | 30.0 | 42.0 |
+| [Microsoft 365 CopilotのAIエージェント機能「Cowork」が勝手にファイルを流出させる可能性があるとセキュリティ企業が指摘](https://gigazine.net/news/20260526-microsoft-copilot-cowork-exfiltrates-files/) | 27.0 | 20.0 | 42.0 |
+| [AnthropicのAI「Claude Mythos」、1カ月で1万件超の脆弱性発見 修正作業追いつかず](https://news.mynavi.jp/techplus/article/20260526-4504331/) | 26.0 | 20.0 | 42.0 |
+| [WordPressプラグイン・テーマの脆弱性最新情報 第29回 WordPress脆弱性13件、AI Engineの権限昇格や認証バイパスに注意【5月14日～5月20日】](https://news.mynavi.jp/techplus/article/wordpressvulnerability-29/) | 26.0 | 20.0 | 42.0 |
 | [ソフトバンク、「AIデータセンター GPUクラウド」を10月に提供開始～運用負荷の軽減と柔軟性を実現するクラウドサービス](https://internet.watch.impress.co.jp/docs/news/2111560.html) | 25.0 | 20.0 | 42.0 |
+| [NTTドコモが販売する「CM51FD」など、Atermの5Gモバイルルーター2製品に脆弱性。最新のファームウェアにアップデートを](https://internet.watch.impress.co.jp/docs/news/2111596.html) | 24.0 | 38.0 | 42.0 |
+| [元従業員が取引先情報を持ち出し - ロッキング・オン・ジャパン](https://www.security-next.com/184948) | 22.0 | 20.0 | 42.0 |
 | [iOS版「Firefox」にアップデート - 「なりすまし」脆弱性を解消](https://www.security-next.com/184942) | 22.0 | 20.0 | 42.0 |
-| [ISC Stormcast：2026年5月26日版](https://isc.sans.edu/diary/rss/33020) | 22.0 | 20.0 | 42.0 |
-| [ウェブメール「Roundcube」に複数脆弱性 - アップデートが公開](https://www.security-next.com/184937) | 22.0 | 20.0 | 42.0 |
-| [「nginx」の「rewriteモジュール」に脆弱性 - 修正版が公開](https://www.security-next.com/184933) | 22.0 | 20.0 | 42.0 |
-| [NECのルータ製品「Aterm」シリーズに脆弱性 - 11製品に影響](https://www.security-next.com/184925) | 22.0 | 20.0 | 42.0 |
+| [ISC Stormcast 2026年5月26日（火）版](https://isc.sans.edu/diary/rss/33020) | 22.0 | 20.0 | 42.0 |
+| [薬局で受け取った薬の情報、マイナポータルで当日中に確認可能に 「薬」画面をリニューアル](https://www.itmedia.co.jp/news/articles/2605/26/news106.html) | 21.0 | 20.0 | 42.0 |
+| [フェラーリ、初のEV「Ferrari Luce」発表 元Appleデザイナー、ジョニー・アイブ氏のLoveFromがデザイン担当](https://www.itmedia.co.jp/news/articles/2605/26/news096.html) | 21.0 | 20.0 | 42.0 |
+| [松下幸之助氏の「AI偽動画」に注意 PHP研究所が再告知 津田健次郎さんによるTikTok提訴受け](https://www.itmedia.co.jp/news/articles/2605/26/news080.html) | 21.0 | 20.0 | 42.0 |
+| [被害長女がChatGPTに相談→児相に通報か 巨人・阿部前監督の暴行事件](https://www.itmedia.co.jp/news/articles/2605/26/news081.html) | 21.0 | 20.0 | 42.0 |
 | [加齢に伴う血液の変化が大動脈瘤を悪化させる仕組みを解明](https://ascii.jp/elem/000/004/400/4400132/?rss=) | 21.0 | 20.0 | 42.0 |
-| [【提言】SCS評価制度を“追い風”に変える　中小企業の経営者が認識すべき「3原則・7つの取組」](https://ascii.jp/elem/000/004/404/4404581/?rss=) | 21.0 | 20.0 | 42.0 |
-| [KADOKAWA「ダ・ヴィンチ」休刊　創刊32年、紙からWebへ移行](https://www.itmedia.co.jp/news/articles/2605/26/news068.html) | 21.0 | 20.0 | 42.0 |
-| [Googleで「結婚して」と検索したら、丁寧に断られた　検索クエリを指令と勘違い？](https://www.itmedia.co.jp/news/articles/2605/26/news067.html) | 21.0 | 20.0 | 42.0 |
-| [PR： 「企業におけるデータバックアップの実態」に関するアンケート](https://techtarget.itmedia.co.jp/tt/news/2605/27/news01.html) | 21.0 | 20.0 | 42.0 |
-| [「Firefox」が大多数のユーザーにとって優れたブラウザーと言える理由](https://japan.zdnet.com/article/35247986/) | 21.0 | 20.0 | 42.0 |
-| [IT知識ゼロから大規模コンペに挑戦！「相手基準」で価値を届ける営業術〔FIXERはたらくひと図鑑〕](https://ascii.jp/elem/000/004/404/4404611/?rss=) | 21.0 | 20.0 | 42.0 |
-| [会議室設備にAIを統合　「MAXHUB AI議事録」が提供開始](https://ascii.jp/elem/000/004/404/4404849/?rss=) | 21.0 | 20.0 | 42.0 |
-| [CSIRT支援室 第35回 CVEを年間数十件取得している猛者たちにそのモチベーションを聞いてみた：前編](https://scan.netsecurity.ne.jp/article/2026/05/26/55351.html) | 21.0 | 20.0 | 42.0 |
+| [dnsmasqにおける複数の脆弱性](https://jvn.jp/vu/JVNVU90845089/) | 20.0 | 20.0 | 42.0 |
+| [7-Elevenのデータ侵害で18万5000人の個人情報が流出](https://www.bleepingcomputer.com/news/security/7-eleven-data-breach-exposes-personal-information-of-185-000-people/) | 20.0 | 20.0 | 42.0 |
+| [機械IDを管理する：見落とされがちな特権アクセス層への対策](https://www.helpnetsecurity.com/2026/05/26/delinea-managing-managing-machine-identities-access/) | 20.0 | 20.0 | 42.0 |
+| [今すぐ応募できるサイバーセキュリティ求人：2026年5月26日](https://www.helpnetsecurity.com/2026/05/26/cybersecurity-jobs-available-right-now-may-26-2026/) | 20.0 | 20.0 | 42.0 |
+| [TCLのチューナー搭載大型テレビがAmazonで安い！4K対応75インチが9万4800円 98インチの「98Q6C」が31万8000円！](https://internet.watch.impress.co.jp/docs/shopping/2111627.html) | 20.0 | 20.0 | 42.0 |
+| [ポータブル電源が安い！AmazonにてJackery製品がタイムセール 容量1070Whモデルの「ポータブル電源 1000 New」が6万9483円など](https://internet.watch.impress.co.jp/docs/shopping/2111616.html) | 20.0 | 20.0 | 42.0 |
+| [ロボット農機の遠隔操作、山間部でも可能に～NTT・クボタ・NTTドコモが通信技術を実証 モバイル通信と衛星通信の連携と映像制御の組み合わせ](https://internet.watch.impress.co.jp/docs/news/2111563.html) | 20.0 | 20.0 | 42.0 |
+| [「最新モデル以外のChromecastのサポートが終了」との海外報道、早とちりだったと判明【やじうまWatch】](https://internet.watch.impress.co.jp/docs/yajiuma/2111556.html) | 20.0 | 20.0 | 42.0 |
+| [「忙しければ延期できます」Windows Updateに関するMicrosoftの異例のアピールが話題【やじうまWatch】](https://internet.watch.impress.co.jp/docs/yajiuma/2111557.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
