@@ -1,21 +1,20 @@
-# 📡 サイレーダー 2026-05-27 11:00 JST
+# 📡 サイレーダー 2026-05-27 17:00 JST
 
-このレポートは、2026-05-27 05:00 JST〜2026-05-27 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-27 11:00 JST〜2026-05-27 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 83
-- [音声で扱う想定のトピック](#audio-topics): 3
+- 観測トピック数: 75
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Weekly Report: Palo Alto Networks製PAN-OSにおける認証回避の脆弱性（CVE-2026-0265）に関する注意喚起](#topic-4257) | 47.0 | 74.0 | 60.0 | 音声 | 温度感上位枠 |
-| 2 | [KnowledgeDeliver flaw exploited as a zero-day to install web shells](#topic-10418) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 3 | [From poisoned search results to GPU mining: A cryptojacking campaign abusing ScreenConnect and Microsoft .<wbr>NET utilities](#topic-10561) | 35.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [CISA Urges Immediate Patching of Exploited LiteSpeed cPanel Plugin Zero-Day](#topic-10708) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [MetaやGoogleのAI安全対策がGitHub公開ツールで解除できるとの報告](#topic-10727) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -23,115 +22,27 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-4257"></a>
+<a id="topic-10708"></a>
 
-### 1. Weekly Report: Palo Alto Networks製PAN-OSにおける認証回避の脆弱性（CVE-2026-0265）に関する注意喚起
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>CVE</nobr> / <nobr>認証バイパス</nobr> / <nobr>KEV</nobr> / <nobr>防御・運用</nobr> / <nobr>脅威アクター</nobr> / <nobr>政策・規制</nobr> / <nobr>PoC</nobr> / <nobr>クラウド</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 再燃 |
-| <nobr>温度感</nobr> | 47.0 |
-| <nobr>実務影響</nobr> | 74.0 |
-| <nobr>確度</nobr> | 60.0 |
-
-#### 概要
-
-Palo Alto NetworksのPAN-OSに認証回避の脆弱性（CVE-2026-0265）が公表され、Cloud Authentication Service（CAS）を有効にしている構成で影響を受ける可能性が示されています。
-対象はPA-Series、VM-Series、Panoramaの一部で、Cloud NGFWとPrisma Accessは影響なしとされています。
-認証を迂回されると、管理系や公開ログイン面への不正アクセスにつながるおそれがあるためです。公開情報では実証やPoC言及もあり、該当構成の有無確認と修正適用が注目されています。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 3 sources。
-- 実悪用・ゼロデイ文脈。
-- 公開PoC・検証コード言及あり。
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 弱。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用情報あり。
-- 公開PoCにより再現・悪用可能性が上がる。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 複数ソース確認。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 公開PoC・検証コード言及あり。
-- 公開PoC/Exploitコード: 確認あり。
-- 直接PoCリンク: 掲載しません。
-- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
-
-#### 担当者向け確認ポイント
-
-- CASを使った認証プロファイルがログインインターフェースに付与されているか確認する。
-- 影響対象バージョンの場合は、利用系統に応じた修正版への更新を優先する。
-- 旧式やサポート外のPAN-OSを使っている場合は、サポート対象の固定版への移行計画を早めに立てる。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-0265 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-0300 | 主要CVE | 1.00 |
-| ベンダー | Palo Alto | 言及あり | 0.80 |
-| ベンダー | Cisco | 言及あり | 0.80 |
-| ベンダー | Atlassian | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-0265](https://nvd.nist.gov/vuln/detail/CVE-2026-0265) | <nobr>CVE概要、CVSS、CWE、参照情報</nobr> |
-| <nobr>公的・一次情報</nobr> | [Weekly Report: Palo Alto Networks製PAN-OSにおける認証回避の脆弱性（CVE-2026-0265）に関する注意喚起](https://www.jpcert.or.jp/wr/2026/wr260527.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>公的・一次情報</nobr> | [注意喚起: Palo Alto Networks製PAN-OSにおける認証回避の脆弱性（CVE-2026-0265）に関する注意喚起  (公開)](https://www.jpcert.or.jp/at/2026/at260015.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-0265: Authentication Bypass in Palo Alto Networks PAN-OS](https://www.rapid7.com/blog/post/etr-cve-2026-0265-authentication-bypass-in-palo-alto-networks-pan-os) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-0265 PAN-OS: Authentication Bypass with Cloud Authentication Service (C](https://security.paloaltonetworks.com/CVE-2026-0265) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応あり・低信頼。
-- 日本語圏一次情報: あり。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 弱。
-- 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
-
----
-
-<a id="topic-10418"></a>
-
-### 2. KnowledgeDeliver flaw exploited as a zero-day to install web shells
+### 1. CISA Urges Immediate Patching of Exploited LiteSpeed cPanel Plugin Zero-Day
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>ゼロデイ</nobr> / <nobr>脆弱性</nobr> |
+| <nobr>タグ</nobr> | <nobr>ゼロデイ</nobr> / <nobr>KEV</nobr> / <nobr>脆弱性</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度状態</nobr> | 初出 |
 | <nobr>温度感</nobr> | 37.0 |
 | <nobr>実務影響</nobr> | 38.0 |
 | <nobr>確度</nobr> | 43.0 |
 
 #### 概要
 
-KnowledgeDeliver の学習管理システム（LMS）を搭載したサーバーにおいて、重大なゼロデイ脆弱性が悪用され、Godzilla web shell の設置につながったと報じられています。
-現時点の情報では、悪用が観測されている点が重要ですが、影響範囲や被害の詳細は限定的です。
-ゼロデイとして実際に悪用されているため、該当製品を利用する組織では迅速な確認と対応が必要になる可能性があります。
-web shell の設置は侵害後の継続的な不正操作につながりやすく、監視と封じ込めが重要です。
+CISAが、LiteSpeedのcPanel向けプラグインに関するゼロデイ脆弱性について、早急な修正を促しています。
+公開情報によると、この問題は実際に悪用され、root権限でスクリプトを実行される可能性があったとされています。
+管理系の製品やプラグインの脆弱性は、影響が広い環境で被害につながりやすいため注意が必要です。既に悪用観測があるとされる点から、通常の優先度より高く対応を検討する価値があります。
 
 #### 温度感の理由
 
@@ -152,91 +63,89 @@ web shell の設置は侵害後の継続的な不正操作につながりやす�
 
 #### 担当者向け確認ポイント
 
-- KnowledgeDeliver を利用しているサーバーがないか棚卸しし、対象があればベンダー情報と更新状況を確認する。
-- 不審なファイル改変、未知の管理者権限、異常な外部通信など、侵害の兆候を重点的に点検する。
-- Web サーバー配下の変更履歴やアクセスログを見直し、疑わしい端末・アカウントがあれば隔離と調査を進める。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [KnowledgeDeliver flaw exploited as a zero-day to install web shells](https://www.bleepingcomputer.com/news/security/knowledgedeliver-flaw-exploited-as-a-zero-day-to-install-web-shells/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応あり・高信頼。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-
----
-
-<a id="topic-10561"></a>
-
-### 3. From poisoned search results to GPU mining: A cryptojacking campaign abusing ScreenConnect and Microsoft .<wbr>NET utilities
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>攻撃キャンペーン</nobr> / <nobr>AI</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 35.0 |
-| <nobr>実務影響</nobr> | 20.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-Microsoftは、SEO汚染された検索結果を起点に、ScreenConnectやMicrosoft .<wbr>NET系のユーティリティを悪用して高性能PCを暗号資産マイニングに使うクリプトジャッキングの手口を公表しました。
-悪性サイトがAIチャットボット経由でも見つかっていたとされ、検索や生成AIを経由した誘導にも注意が必要です。
-正規ツールや広く使われる仕組みを悪用するため、検知や切り分けが難しくなるおそれがあります。
-利用者が検索結果やAIの回答を起点に不審サイトへ誘導される点も、従来の警戒ポイントを広げる必要があります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 弱。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- ScreenConnectなどのリモート管理ツールや .<wbr>NET 実行の不審な利用、未知の外部接続、GPU負荷の異常上昇を確認する。
-- 検索経由・AI経由の誘導を前提に、ダウンロード元や配布サイトの真偽確認を徹底し、ユーザー向け注意喚起を行う。
-- エンドポイント保護とログ監視で、正規ツールを装った実行や永続化の兆候を早期に把握できる体制を整える。
+- cPanel環境でLiteSpeed関連コンポーネントを利用している場合は、該当する修正版の適用状況を確認する。
+- 管理サーバーやホスティング基盤で、不審なスクリプト実行や権限昇格につながる兆候がないか監視を強める。
+- ベンダーや公的機関の続報を確認し、関連機能の一時的な制限や補強が必要か評価する。
 
 #### 関連する対象
 
 | <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
 |---|---|---|---:|
-| ベンダー | Microsoft | 言及あり | 0.80 |
-| ベンダー | VMware | 言及あり | 0.80 |
+| ベンダー | cPanel | 言及あり | 0.80 |
+| 製品 | cPanel | 言及あり | 0.80 |
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [From poisoned search results to GPU mining: A cryptojacking campaign abusing Scr](https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Urges Immediate Patching of Exploited LiteSpeed cPanel Plugin Zero-Day](https://www.securityweek.com/cisa-urges-immediate-patching-of-exploited-litespeed-cpanel-plugin-zero-day/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
 - SNS反応: 反応あり・低信頼。
 - 日本語圏一次情報: なし。
 - 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 弱。
-- 開発者コミュニティ反応: 反応あり・低信頼。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
+
+<a id="topic-10727"></a>
+
+### 2. MetaやGoogleのAI安全対策がGitHub公開ツールで解除できるとの報告
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>AI</nobr> / <nobr>マルウェア</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 初出 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+報道によると、MetaやGoogleが公開する一部のオープンウェイトAIモデルでは、組み込まれた安全制御が短時間で取り外せる可能性があるとされています。
+AIは危険な依頼や違法行為につながる質問を拒否する設計ですが、外部のテストでその保護が外せる事例が確認されたと伝えられています。
+生成AIの安全対策が十分に機能しない場合、悪用可能な出力が抑えにくくなり、利用者や導入企業のリスク評価に影響します。
+特に公開モデルは広く利用されるため、安全性の検証や運用時の追加対策の重要性が改めて注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 公開AIモデルを導入する際は、ベンダー提供の安全機能を前提にしすぎず、独自の利用制御や監査を併用する。
+- 危険な出力の抑止はモデル単体ではなく、アクセス制限・ログ監視・ポリシー運用を含めて設計する。
+- 新しいモデルや更新後は、想定する拒否応答や安全挙動が維持されているかを確認する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [MetaやGoogleのAI安全対策がGitHub公開ツールで解除できるとの報告](https://gigazine.net/news/20260527-ai-safety-control-strip/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応未確認。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 中。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応あり。
 - 攻撃・悪用観測シグナル: なし。
 
 ---
@@ -256,30 +165,30 @@ Microsoftは、SEO汚染された検索結果を起点に、ScreenConnectやMicr
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [松沢書店にランサムウェア攻撃、「楽譜ナビ」「注文くん」ほか各種サービスに影響](https://scan.netsecurity.ne.jp/article/2026/05/27/55359.html) | 29.0 | 30.0 | 42.0 |
-| [東京鋪装工業にランサムウェア攻撃、顧客・取引先・従業員の情報が流出した可能性を完全に否定できず](https://scan.netsecurity.ne.jp/article/2026/05/27/55356.html) | 29.0 | 30.0 | 42.0 |
-| [新日本検定協会へのランサムウェア攻撃、共栄火災海上保険の顧客等の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/05/27/55355.html) | 29.0 | 30.0 | 42.0 |
-| [ランサムウェア被害は前年比389％増 爆増・爆速化の背景とは？](https://atmarkit.itmedia.co.jp/ait/articles/2605/27/news050.html) | 29.0 | 30.0 | 42.0 |
-| [穴吹ハウジングサービスがランサム被害](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041800012/051800327/) | 29.0 | 30.0 | 42.0 |
-| [Claude Mythosが1万件超の脆弱性を発見 その裏で開発者コミュニティーに走る緊張](https://atmarkit.itmedia.co.jp/ait/articles/2605/27/news055.html) | 27.0 | 20.0 | 42.0 |
-| [AI駆動開発と仕様駆動開発 見えてきた課題と現時点での開発環境の実装](https://ascii.jp/elem/000/004/404/4404615/?rss=) | 26.0 | 20.0 | 42.0 |
-| [Google がウェブを AI の餌食にする共食いの構図](https://scan.netsecurity.ne.jp/article/2026/05/27/55361.html) | 26.0 | 20.0 | 42.0 |
-| [AIエージェント導入で満足度が73％向上--オンライン旅行会社が実践した5つのステップ](https://japan.zdnet.com/article/35247671/) | 26.0 | 20.0 | 42.0 |
-| [後編：進むべき道--AI時代の勝機をつかむ「ガバナンスファースト」戦略](https://japan.zdnet.com/article/35247837/) | 26.0 | 20.0 | 42.0 |
-| [経理業務における対話型AI活用 約60％が「使用せず」と回答](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600010/052100225/) | 26.0 | 20.0 | 42.0 |
-| [VPNクライアント「OpenVPN Connect」macOS版に脆弱性 - 修正版公開](https://www.security-next.com/185001) | 22.0 | 20.0 | 42.0 |
-| [「WebSphere」のウェブサーバプラグインに深刻な脆弱性](https://www.security-next.com/184994) | 22.0 | 20.0 | 42.0 |
-| [「LiteSpeed cPanel Plugin」に脆弱性 - すでに悪用も、侵害有無の確認を](https://www.security-next.com/184986) | 22.0 | 20.0 | 42.0 |
-| [秘密を分散させて漏えいを防ぐ「シャミアの秘密共有」の仕組みとは？](https://gigazine.net/news/20260527-shamirs-secret-sharing/) | 22.0 | 20.0 | 42.0 |
-| [イミュータブル「Linux」ディストロ「Aurora」--使いやすさと安全性を両立](https://japan.zdnet.com/article/35248043/) | 21.0 | 20.0 | 42.0 |
-| [ロッキング・オン・ジャパン、元従業員が個人情報をUSBメモリで持ち出し 退職時に](https://www.itmedia.co.jp/news/articles/2605/27/news069.html) | 21.0 | 20.0 | 42.0 |
-| [AD環境ではパスワード変更だけでは侵害が止まらない理由とは](https://news.mynavi.jp/techplus/article/20260527-4456274/) | 21.0 | 20.0 | 42.0 |
-| [正社員の5人に1人が「六月病」経験 6月前後にモチベ低下や疲労感](https://www.itmedia.co.jp/news/articles/2605/27/news068.html) | 21.0 | 20.0 | 42.0 |
-| [「世界一地味なデモ」が魅せた圧倒的な性能 超高速タイムスタンプエンジン開発の舞台裏](https://ascii.jp/elem/000/004/404/4404870/?rss=) | 21.0 | 20.0 | 42.0 |
-| [「食品減税」と「所得連動給付」どっちがお得？ 年収などから分かるシミュレータ、チームみらいが公開](https://www.itmedia.co.jp/news/articles/2605/27/news066.html) | 21.0 | 20.0 | 42.0 |
-| [Dropboxの共同創業者、ヒューストンCEOが退任して会長へ](https://www.itmedia.co.jp/news/articles/2605/27/news067.html) | 21.0 | 20.0 | 42.0 |
-| [不審メール送信アカウント廃止 ～ リスク排除の観点](https://scan.netsecurity.ne.jp/article/2026/05/27/55360.html) | 21.0 | 20.0 | 42.0 |
-| [三浦工業への不正アクセス、5,021 件の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/05/27/55358.html) | 21.0 | 20.0 | 42.0 |
+| [ランサムウェア攻撃ってそんなに“高コスパ”だったの？ たった6万円で「億超え」の被害](https://atmarkit.itmedia.co.jp/ait/articles/2605/27/news051.html) | 29.0 | 30.0 | 42.0 |
+| [週に3億回超ダウンロードされているオープンソースパッケージ「Starlette」の脆弱性により数百万のAIエージェントが危険にさらされる](https://gigazine.net/news/20260527-millions-ai-agents-imperiled-vulnerability-starlette/) | 27.0 | 20.0 | 42.0 |
+| [AppOmniのMarlin AIがSaaS脅威の分析、トリアージ、修復を大規模に自動化](https://www.helpnetsecurity.com/2026/05/27/appomni-marlin-ai/) | 25.0 | 20.0 | 42.0 |
+| [Anthropic、Claude Sandboxとセキュリティガイダンスプラグインを新たに公開](https://www.securityweek.com/anthropic-releases-new-claude-sandbox-security-guidance-plugin/) | 25.0 | 20.0 | 42.0 |
+| [NoveeのAgentic Fixは、検証済みのエクスプロイトをAIコーディングエージェントで修正へ変える](https://www.helpnetsecurity.com/2026/05/27/novee-agentic-fix/) | 25.0 | 20.0 | 42.0 |
+| [CoinflowのCISOが語る、AIの圧力下における暗号資産決済のセキュリティ](https://www.helpnetsecurity.com/2026/05/27/malcolm-portelli-coinflow-crypto-payments-security/) | 25.0 | 20.0 | 42.0 |
+| [欧州のAI導入率は99％、規制対象データが大半のポリシー違反を招く](https://www.helpnetsecurity.com/2026/05/27/netskope-european-ai-adoption-risks/) | 25.0 | 20.0 | 42.0 |
+| [レノボ、日本初の水冷AIインフラ検証拠点「Neptuneラボ」を開設--MCDRらと共創](https://japan.zdnet.com/article/35248036/) | 24.0 | 20.0 | 43.0 |
+| [JR西日本、VRChatで“終電後の広島駅”を再現 「バーチャル広島駅 2.u」公開](https://www.itmedia.co.jp/news/articles/2605/27/news099.html) | 24.0 | 20.0 | 43.0 |
+| [カムチャツカ半島沖での25年の観測で、北太平洋西部亜寒帯域の変化が明らかに](https://ascii.jp/elem/000/004/400/4400133/?rss=) | 24.0 | 20.0 | 43.0 |
+| [「GitHub Enterprise Server」にクリティカル脆弱性 - 修正版が公開](https://www.security-next.com/185038) | 22.0 | 20.0 | 42.0 |
+| [公開報告書に個人情報、マスキング処理に不備 - 名古屋市](https://www.security-next.com/184890) | 22.0 | 20.0 | 42.0 |
+| [データセンター反対運動やAI批判が「反テクノロジー過激主義」として監視対象になる恐れがあることがアメリカ当局の内部資料で明らかに](https://gigazine.net/news/20260527-us-law-warn-anti-tech-extremism/) | 22.0 | 20.0 | 42.0 |
+| [インスタアカが乗っ取り被害、復旧後も不正アクセス - 南知多町観光協会](https://www.security-next.com/185012) | 22.0 | 20.0 | 42.0 |
+| [リモート管理ツール「ConnectWise Automate」にセキュリティ更新](https://www.security-next.com/185005) | 22.0 | 20.0 | 42.0 |
+| [ISC Stormcast（2026年5月27日配信）](https://isc.sans.edu/diary/rss/33022) | 22.0 | 20.0 | 42.0 |
+| [竹中工務店など、クレーン吊り荷作業向け無線システムを開発--免許不要のプライベートLTEを活用](https://japan.zdnet.com/article/35248082/) | 21.0 | 20.0 | 42.0 |
+| [7-Elevenで18万5000件超の情報流出 ShinyHuntersがSalesforce侵害主張](https://news.mynavi.jp/techplus/article/20260527-4509613/) | 21.0 | 20.0 | 42.0 |
+| [NotebookLMの「ソースが古いまま」問題が起こらないように Googleドライブのファイル更新を自動で反映](https://www.itmedia.co.jp/news/articles/2605/27/news102.html) | 21.0 | 20.0 | 42.0 |
+| [2026年の今あえてODBCでSAPに接続する方法](https://ascii.jp/elem/000/004/403/4403811/?rss=) | 21.0 | 20.0 | 42.0 |
+| [JALグループ、月面輸送に参入 「メビウスの方舟」で地球文化を次世代へ ispaceと連携](https://www.itmedia.co.jp/news/articles/2605/27/news103.html) | 21.0 | 20.0 | 42.0 |
+| [ロボット農機の遠隔操作を可能に NTTなどが通信技術を実証実験](https://xtech.nikkei.com/atcl/nxt/news/24/03242/) | 21.0 | 20.0 | 42.0 |
+| [95％がセキュリティベンダーを「信じない」 契約後も続く終わりなき疑心暗鬼のワケ](https://atmarkit.itmedia.co.jp/ait/articles/2605/27/news060.html) | 21.0 | 20.0 | 42.0 |
+| [SaaSは本当に死ぬのか 国産スタートアップ3社が示す“Beyond SaaS”への道](https://ascii.jp/elem/000/004/405/4405254/?rss=) | 21.0 | 20.0 | 42.0 |
 
 ---
 
