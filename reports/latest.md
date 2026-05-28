@@ -1,17 +1,23 @@
-# 📡 サイレーダー 2026-05-28 17:00 JST
+# 📡 サイレーダー 2026-05-29 05:00 JST
 
-このレポートは、2026-05-28 11:00 JST〜2026-05-28 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-28 17:00 JST〜2026-05-29 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 63
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 247
+- [音声で扱う想定のトピック](#audio-topics): 5
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [New Gogs zero-day flaw lets hackers get remote code execution](#topic-11823) | 41.0 | 56.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [Microsoft Slams Public Zero-Day Disclosures Amid GitHub Researcher Account Removal](#topic-11829) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 3 | [Critical FortiClient EMS Vulnerability Exploited in Fresh Attacks](#topic-11763) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 4 | [Qumulo NeuralProtect uses AI to detect and stop ransomware before encryption](#topic-11767) | 35.0 | 30.0 | 43.0 | 音声 | 温度感上位枠 |
+| 5 | [Fake ChatGPT download site infects Windows and Mac users with malware](#topic-11790) | 34.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,7 +25,340 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-11823"></a>
+
+### 1. New Gogs zero-day flaw lets hackers get remote code execution
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>RCE</nobr> / <nobr>ゼロデイ</nobr> / <nobr>脆弱性</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 初出 |
+| <nobr>温度感</nobr> | 41.0 |
+| <nobr>実務影響</nobr> | 56.0 |
+| <nobr>確度</nobr> | 43.0 |
+
+#### 概要
+
+セルフホスト型Gitサービス「Gogs」に、未修正のゼロデイ脆弱性があるとされています。
+公開されている情報では、インターネットから到達可能な環境でリモートコード実行につながる可能性が示されており、悪用観測もあるとされています。
+Gogsを外部公開している組織では、サーバー上で任意コード実行につながるおそれがあるため、影響が大きい話題です。
+ゼロデイであるため、修正版の有無や適用状況を早急に確認する必要があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Gogsを外部公開している資産がないか棚卸しし、該当インスタンスを優先確認する。
+- ベンダー告知や修正版の有無を確認し、利用中バージョンへの影響を評価する。
+- Webアクセスログや不審な変更、予期しないプロセス起動など、侵害の兆候を点検する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [New Gogs zero-day flaw lets hackers get remote code execution](https://www.bleepingcomputer.com/news/security/new-gogs-zero-day-flaw-lets-hackers-get-remote-code-execution/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・高信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
+
+<a id="topic-11829"></a>
+
+### 2. Microsoft Slams Public Zero-Day Disclosures Amid GitHub Researcher Account Removal
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>ゼロデイ</nobr> / <nobr>脆弱性</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 初出 |
+| <nobr>温度感</nobr> | 37.0 |
+| <nobr>実務影響</nobr> | 38.0 |
+| <nobr>確度</nobr> | 43.0 |
+
+#### 概要
+
+Microsoftは、脆弱性の発見内容を公開前にベンダーへ共有する協調的な開示（CVD）の重要性を改めて訴えています。
+背景には、研究者による複数のゼロデイ脆弱性に関する公開があり、公開の是非をめぐる議論が続いています。
+ゼロデイ情報の公開は、対策の促進につながる一方で、未修正の状態が広く知られることでリスクが高まる可能性があります。
+ベンダーと研究者の開示プロセスのあり方が、実務上の脆弱性対応に直結するため注目されています。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- 自組織で利用中のMicrosoft製品に未適用の更新や緩和策がないか確認する。
+- 公開された脆弱性情報が自社環境に関係するか、優先度を付けて評価する。
+- 脆弱性の報告・共有はCVDに沿って進め、影響確認と対策準備を早める。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ベンダー | Microsoft | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Microsoft Slams Public Zero-Day Disclosures Amid GitHub Researcher Account Remov](https://thehackernews.com/2026/05/microsoft-slams-public-zero-day.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
+
+<a id="topic-11763"></a>
+
+### 3. Critical FortiClient EMS Vulnerability Exploited in Fresh Attacks
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>KEV</nobr> / <nobr>ゼロデイ</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 37.0 |
+| <nobr>実務影響</nobr> | 38.0 |
+| <nobr>確度</nobr> | 43.0 |
+
+#### 概要
+
+FortinetのFortiClient EMSに関する脆弱性について、実際の悪用が新たに観測されたと報じられています。
+Fortinetは4月に修正を提供し、ゼロデイとして悪用された可能性があるとして早急な適用を呼びかけていました。
+管理製品の脆弱性が現実に悪用されているなら、対応の遅れがそのまま侵害リスクにつながります。対象製品を利用している組織は、修正適用状況と露出状況の確認が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- FortiClient EMSを利用している環境では、修正済みバージョンへの更新状況を確認する。
+- 外部公開の有無や不要な到達経路がないかを点検し、アクセス制御を見直す。
+- 侵害の兆候確認として、関連する認証・管理系のログを重点的に点検する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ベンダー | Fortinet | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Critical FortiClient EMS Vulnerability Exploited in Fresh Attacks](https://www.securityweek.com/critical-forticlient-ems-vulnerability-exploited-in-fresh-attacks/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
+
+<a id="topic-11767"></a>
+
+### 4. Qumulo NeuralProtect uses AI to detect and stop ransomware before encryption
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>AI</nobr> / <nobr>ゼロデイ</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 35.0 |
+| <nobr>実務影響</nobr> | 30.0 |
+| <nobr>確度</nobr> | 43.0 |
+
+#### 概要
+
+Qumuloが、ストレージ層でランサムウェアの兆候を検知し、暗号化される前に止めることを目指す「Qumulo NeuralProtect」を発表しました。
+データ書き込み時点でAI分析を行い、既知・未知の脅威の両方に対応する設計とされています。
+ランサムウェア対策が、被害後の復旧だけでなく、保存前に異常を見つけて抑止する方向へ進んでいる点が注目されます。
+ストレージ基盤に組み込まれるため、バックアップやEDRとは別の防御層として検討される可能性があります。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- 既存のバックアップ、EDR、ストレージ保護との役割分担を整理し、重複や抜けを確認する。
+- 書き込み時点での検知・隔離が業務に与える影響、誤検知時の運用手順を確認する。
+- 未知の脅威対応をうたう製品でも、検知精度や復旧フローは実環境で検証してから採用を判断する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Qumulo NeuralProtect uses AI to detect and stop ransomware before encryption](https://www.helpnetsecurity.com/2026/05/28/qumulo-neuralprotect-uses-ai-to-detect-and-stop-ransomware-before-encryption/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり・低信頼。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
+
+<a id="topic-11790"></a>
+
+### 5. Fake ChatGPT download site infects Windows and Mac users with malware
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>AI</nobr> / <nobr>Windows</nobr> / <nobr>マルウェア</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 継続監視 |
+| <nobr>温度感</nobr> | 34.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+ChatGPTを探している利用者を狙った偽のダウンロードサイトが確認され、WindowsとMacの双方に対してそれぞれ異なる不正なファイルを配布していたとされています。
+正規の入手先を装う形で誘導するため、見た目だけでは判別しにくい点が懸念されます。
+生成AI関連サービスの人気に便乗した誘導は、利用者の注意をすり抜けやすく、端末感染につながるおそれがあります。
+WindowsとMacの両環境が対象になっているため、特定OSだけを守ればよい話ではありません。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AIサービス名を含む配布サイトや広告リンクを、正規の提供元かどうかを含めて確認する。
+- 端末側ではEDR/AVの検知状況を見直し、未知のダウンロード実行や不審なアーカイブ展開を監視する。
+- 社内周知では、検索経由の入手や非公式サイトからのインストールを避けるよう注意喚起する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ベンダー | Microsoft | 言及あり | 0.80 |
+| 製品 | Exchange | 言及あり | 0.80 |
+| ai_model_or_project | ChatGPT | 主題 | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Fake ChatGPT download site infects Windows and Mac users with malware](https://www.malwarebytes.com/blog/threat-intel/2026/05/fake-chatgpt-download-site-infects-windows-and-mac-users-with-malware) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応あり。
+- 技術者コミュニティ反応: 未評価。
+- 開発者コミュニティ反応: 反応あり・低信頼。
+- 攻撃・悪用観測シグナル: なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -36,30 +375,30 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [NTTデータら、生成AIで経理伝票起票を自動化--東急で検証](https://japan.zdnet.com/article/35248107/) | 28.0 | 20.0 | 42.0 |
-| [「AIも使い続けていると人間のように老化する」という指摘、セッションを重ねて記憶が蓄積されることで性能悪化](https://gigazine.net/news/20260528-agingbench-ai-agents-age-too/) | 27.0 | 20.0 | 42.0 |
-| [Amazon MGMスタジオがAIツールを駆使した映像制作を支援する「GenAI Creators’ Fund」を発表、Prime Video向けに3つのAIアニメシリーズの制作を承認＆AWSと共同でAI制作プラットフォーム「Project Nara」を立ち上げ](https://gigazine.net/news/20260528-amazon-mgm-studios-genai-creators-fund/) | 27.0 | 20.0 | 42.0 |
-| [1曲の中で自然にジャンルを切り替えられる音楽生成AI「Music v2」を音声AI企業のElevenLabsがリリース](https://gigazine.net/news/20260528-elevenlabs-introducing-music-v2-ai/) | 27.0 | 20.0 | 42.0 |
-| [動画生成AI「Runway」がChatGPTやClaudeのチャット内で利用可能に、チャットで参考画像やアイデアを入力して動画化できる](https://gigazine.net/news/20260528-runway-mcp-chatgpt-claude/) | 27.0 | 20.0 | 42.0 |
-| [汎用人工知能(AGI)の実現は2030年頃と予想しているが2029年の可能性も視野に入れているとGoogle DeepMindのデミス・ハサビスCEOが発言](https://gigazine.net/news/20260528-google-deepmind-ceo-demis-hassabis-agi-2030/) | 27.0 | 20.0 | 42.0 |
-| [GoogleがAIを用いた自律型サイバー攻撃対策サービス「Google AI Threat Defense」を発表、脆弱性の修正＆監視まで自律的に実行](https://gigazine.net/news/20260528-google-ai-threat-defense/) | 27.0 | 20.0 | 42.0 |
-| [みずほFGとNEC、AIエージェント認証基盤「KYA」構築で共同実証実験](https://japan.zdnet.com/article/35248156/) | 26.0 | 20.0 | 42.0 |
-| [“AIの身元”確かめる認証基盤 みずほFGとNECが共同実証、AIエージェントが銀行を使う時代見据え](https://www.itmedia.co.jp/news/articles/2605/28/news124.html) | 26.0 | 20.0 | 42.0 |
-| [[PR]商品開発から販売まで「3倍速」へ Centric Softwareが描く、AIエージェント時代の商品体験基盤](https://japan.zdnet.com/extra/centricsoftware_202605/35247512/) | 26.0 | 20.0 | 42.0 |
-| [セールスフォースの「Headless 360」、AIエージェント前提の新環境に](https://japan.zdnet.com/article/35248133/) | 26.0 | 20.0 | 42.0 |
-| [Docker専用のAIエージェント「Gordon」が正式リリース 無料アカウントでも利用可能](https://www.itmedia.co.jp/news/articles/2605/28/news090.html) | 26.0 | 20.0 | 42.0 |
-| [KetchがマルチエージェントAIオーケストレーションを企業のプライバシープログラムに導入](https://www.helpnetsecurity.com/2026/05/28/ketch-brings-multi-agent-ai-orchestration-to-enterprise-privacy-programs/) | 25.0 | 20.0 | 42.0 |
-| [侵害報道が相次ぐ市場で信頼感を売るCISO](https://www.helpnetsecurity.com/2026/05/28/hrvoje-englman-span-earning-cybersecurity-confidence/) | 25.0 | 20.0 | 42.0 |
-| [Nudge Security、ブラウザベースのシャドーAIエージェント検出を追加](https://www.helpnetsecurity.com/2026/05/28/nudge-browser-based-agentic-ai-security/) | 25.0 | 20.0 | 42.0 |
-| [Frontier AIモデルは複数ターンのAI攻撃に耐えられないとCiscoが指摘](https://www.helpnetsecurity.com/2026/05/28/cisco-multi-turn-ai-attacks/) | 25.0 | 20.0 | 42.0 |
-| [2026年5月の注目サイバーセキュリティOSSツールまとめ](https://www.helpnetsecurity.com/2026/05/28/hottest-cybersecurity-open-source-tools-of-the-month-may-2026/) | 25.0 | 20.0 | 42.0 |
-| [企業はAIの統制方法を確立する前に中核システムへ組み込んでいた](https://www.helpnetsecurity.com/2026/05/28/check-point-genai-security-controls-report/) | 25.0 | 20.0 | 42.0 |
-| [CODA、生成AI事業者に対してコンテンツやクリエイターの権利を尊重するよう求める声明 既存の著作物に酷似した内容が出力される現状は「著作権侵害」になりうると指摘](https://internet.watch.impress.co.jp/docs/news/2112422.html) | 25.0 | 20.0 | 42.0 |
-| [OpenAIが選挙対策を本格化、ChatGPTにAP通信の開票データ導入＆ディープフェイク規制法案も支持](https://gigazine.net/news/20260528-openai-election-safeguards/) | 22.0 | 20.0 | 42.0 |
-| [Ubiquiti製ネットワーク機器の「UniFi OS」にクリティカル脆弱性](https://www.security-next.com/185047) | 22.0 | 20.0 | 42.0 |
-| [「IBM ELM」の基盤コンポーネントに脆弱性 - 修正パッチをリリース](https://www.security-next.com/185044) | 22.0 | 20.0 | 42.0 |
-| [オープンソースソフトウェア開発者を標的にするボットネット「Glassworm」をCrowdStrikeやGoogleが遮断](https://gigazine.net/news/20260528-crowdstrike-takedown-glassworm/) | 22.0 | 20.0 | 42.0 |
-| [Googleの情報セキュリティエンジニアが内部情報を使ってPolymarketで120万ドルを稼いだとして起訴される](https://gigazine.net/news/20260528-google-employee-charged-insider-trading/) | 22.0 | 20.0 | 42.0 |
+| [Gentlemenランサムウェア：自己拡散型Go暗号化ツールの解析](https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/) | 30.0 | 30.0 | 42.0 |
+| [問合管理システムがランサム被害、学習システムなどは影響なし - CKCグループ](https://www.security-next.com/184513) | 30.0 | 30.0 | 42.0 |
+| [ランサムウェア集団のリークサイトにMyPillowが掲載、侵害は否定](https://www.bitdefender.com/en-us/blog/hotforsecurity/mypillow-ransomware-leak-site-denies-breach) | 28.0 | 30.0 | 42.0 |
+| [2026年ワールドカップ：世界最大のスポーツイベントの攻撃対象領域について](https://unit42.paloaltonetworks.com/fifa-world-cup-attack-surface/) | 28.0 | 30.0 | 42.0 |
+| [CVE-2026-46069: mwifiex_adapter_cleanup()におけるuse-after-freeの修正](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46069) | 28.0 | 28.0 | 38.0 |
+| [Threat ActorsがFortiClient EMSの重大な脆弱性を悪用して認証情報窃取マルウェアを配布](https://thehackernews.com/2026/05/threat-actors-exploit-critical.html) | 28.0 | 20.0 | 42.0 |
+| [クルーズ大手Carnival、約600万人に影響するデータ侵害を確認](https://therecord.media/cruise-giant-carnival-confirms-data-breach-affecting-6-million) | 28.0 | 20.0 | 42.0 |
+| [新しいBTMOB Androidマルウェアが端末を完全に乗っ取る可能性](https://www.securityweek.com/new-btmob-android-malware-enables-full-device-takeover/) | 28.0 | 20.0 | 42.0 |
+| [新たな脅威アクターJinx-0164がmacOS上の暗号資産開発者を標的にする](https://www.infosecurity-magazine.com/news/jinx-0164-crypto-developers-macos/) | 28.0 | 20.0 | 42.0 |
+| [BTMOB RATがMaaSモデルを通じてブラジルとラテンアメリカに拡散](https://www.darkreading.com/cyberattacks-data-breaches/btmob-rat-brazil-latam-maas-model) | 28.0 | 20.0 | 42.0 |
+| [最近のAPTキャンペーンで標的となった石油輸送、ドローンメーカー、そして汚染されたコードライブラリ](https://www.helpnetsecurity.com/2026/05/28/eset-apt-activity-report/) | 28.0 | 20.0 | 42.0 |
+| [Qevlarの新しいAIエージェントがCVE、インシデントデータ、実際の悪用シグナルを相関分析](https://www.helpnetsecurity.com/2026/05/28/qevlar-ai-agents/) | 27.0 | 20.0 | 43.0 |
+| [AIエージェントの「記憶」は人間の記憶とどう異なるのか？](https://gigazine.net/news/20260528-ai-agent-memory-system/) | 27.0 | 20.0 | 42.0 |
+| [AIによる「自律型戦争」は既に始まっている、Anthropicと国防総省との争いが自律型AI兵器のリスクを浮き彫りに](https://gigazine.net/news/20260528-ai-warfare-already/) | 27.0 | 20.0 | 42.0 |
+| [「答弁原案も作成」 政府職員10万人が生成AI「源内」利用可能に デジタル庁が大規模実証開始](https://www.itmedia.co.jp/news/articles/2605/28/news136.html) | 26.0 | 20.0 | 42.0 |
+| [AIがサイバーに与える影響をテーマに下院委員会が公聴会開催へ](https://cyberscoop.com/house-hearing-frontier-ai-cybersecurity-threats/) | 25.0 | 20.0 | 42.0 |
+| [ロシア関連の「GreyVibe」攻撃者がAIを悪用してサイバー攻撃を強化](https://www.securityweek.com/russia-linked-greyvibe-attackers-use-ai-to-supercharge-cyberattacks/) | 25.0 | 20.0 | 42.0 |
+| [LLM誘導によるEDRシグネチャ削減：Adversarial Oracles](https://www.praetorian.com/blog/llm-edr-signature-reduction/) | 25.0 | 20.0 | 42.0 |
+| [Geordie、AIセキュリティおよびガバナンスプラットフォーム向けに3000万ドルを調達](https://www.securityweek.com/geordie-raises-30-million-for-ai-security-and-governance-platform/) | 25.0 | 20.0 | 42.0 |
+| [Agentic AIは危険ではなく、組織の導入方法が問題である](https://www.darkreading.com/application-security/agentic-ai-risky) | 25.0 | 20.0 | 42.0 |
+| [エンタープライズデータがシャドーAIツールに流れ込む問題](https://www.cybersecuritydive.com/news/shadow-ai-enterprise-data-policies-okta/821344/) | 25.0 | 20.0 | 42.0 |
+| [Microsoft Copilotの信頼性テスト：検出ゼロ、モデル拡大、監視の強化](https://www.helpnetsecurity.com/2026/05/28/microsoft-365-copilot-iso-42001-certification/) | 25.0 | 20.0 | 42.0 |
+| [ThreatsDay Bulletin: Claude Security Plugin、Azure特権昇格、Kali365 MFAバイパス、FIFA詐欺ほか15件以上](https://thehackernews.com/2026/05/threatsday-bulletin-claude-security.html) | 25.0 | 20.0 | 42.0 |
+| [OpenAI、選挙に向けたChatGPTの誤情報対策を準備](https://www.helpnetsecurity.com/2026/05/28/chatgpt-ai-election-misinformation-deepfakes/) | 25.0 | 20.0 | 42.0 |
 
 ---
 
