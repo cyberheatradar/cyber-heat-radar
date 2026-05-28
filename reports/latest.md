@@ -1,25 +1,20 @@
-# 📡 サイレーダー 2026-05-28 05:00 JST
+# 📡 サイレーダー 2026-05-28 11:00 JST
 
-このレポートは、2026-05-27 17:00 JST〜2026-05-28 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-28 05:00 JST〜2026-05-28 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 126
-- [音声で扱う想定のトピック](#audio-topics): 7
+- 観測トピック数: 71
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [CISA Adds Three Known Exploited Vulnerabilities to Catalog](#topic-10948) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [CISA gives feds 4 days to patch actively exploited cPanel plugin flaw](#topic-10922) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 3 | [New ransomware threat group, The Gentlemen, has become one of the most active ransomware operators, accounting for 10% of all attacks](#topic-10927) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
-| 4 | [AI chatbot recommendations lure users to cryptojacking malware sites](#topic-10940) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
-| 5 | [Evidence at the Moment of Attack. Answers at AI Speed.](#topic-10946) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
-| 6 | [eSentire launches new Atlas AI Operatives for autonomous threat detection and response](#topic-10893) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
-| 7 | [Fake ChatGPT and Claude installers on GitHub are dropping Deno RAT malware](#topic-10905) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, (Wed, May 27th)](#topic-11144) | 36.0 | 33.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [GPU mining malware spreads via SEO poisoning, AI chatbots](#topic-11140) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -27,217 +22,89 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-10948"></a>
+<a id="topic-11144"></a>
 
-### 1. CISA Adds Three Known Exploited Vulnerabilities to Catalog
+### 1. Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, (Wed, May 27th)
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> / <nobr>KEV</nobr> / <nobr>CVE</nobr> |
+| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>IoC</nobr> / <nobr>Windows</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 初出 |
-| <nobr>温度感</nobr> | 37.0 |
-| <nobr>実務影響</nobr> | 38.0 |
-| <nobr>確度</nobr> | 43.0 |
-
-#### 概要
-
-CISAは、実際の悪用が確認されたとして、Known Exploited Vulnerabilities（KEV）カタログに3件の脆弱性を追加しました。
-対象はCVE-2026-8398、CVE-2026-45321、CVE-2026-48027で、いずれも関連製品の利用環境では優先的な対応が求められます。
-KEVカタログへの追加は、当該脆弱性が現実の攻撃対象になっていることを示すため、放置リスクが高いと見なす必要があります。
-特に資産把握が不十分な環境では、影響範囲の特定と修正の優先順位付けが重要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- 対象製品の利用有無を確認し、該当環境を洗い出す。
-- ベンダー情報と修正可否を確認し、優先度を上げて適用する。
-- 関連ログや検知ルールを見直し、不審な挙動がないか確認する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-8398 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-45321 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-48027 | 主要CVE | 1.00 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [CISA Adds Three Known Exploited Vulnerabilities to Catalog](https://www.cisa.gov/news-events/alerts/2026/05/27/cisa-adds-three-known-exploited-vulnerabilities-catalog) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応あり・低信頼。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-
----
-
-<a id="topic-10922"></a>
-
-### 2. CISA gives feds 4 days to patch actively exploited cPanel plugin flaw
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 37.0 |
-| <nobr>実務影響</nobr> | 38.0 |
-| <nobr>確度</nobr> | 43.0 |
-
-#### 概要
-
-米サイバーセキュリティ・社会基盤安全保障庁（CISA）が、cPanel向けLiteSpeedプラグインに関連する脆弱性について、米連邦機関に短期間での対応を求めました。
-材料では、この問題がすでに攻撃で悪用されているとされており、サーバー管理者に早急な確認と更新が必要な状況です。
-公的機関が期限を区切って対応を促している点から、実運用環境への影響が懸念されています。管理対象にcPanel環境が含まれる組織では、優先度を上げて影響確認を行うべき話題です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- cPanelおよびLiteSpeed関連コンポーネントの利用有無と、適用済みバージョンを確認する。
-- ベンダーや公的機関の更新情報を確認し、利用中の環境に対して優先的にパッチ適用を検討する。
-- 外部公開された管理画面や関連サービスについて、監視とアクセス制御を再点検する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ベンダー | cPanel | 言及あり | 0.80 |
-| 製品 | cPanel | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [CISA gives feds 4 days to patch actively exploited cPanel plugin flaw](https://www.bleepingcomputer.com/news/security/cisa-gives-feds-4-days-to-patch-actively-exploited-cpanel-plugin-flaw/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応あり・低信頼。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-
----
-
-<a id="topic-10927"></a>
-
-### 3. New ransomware threat group, The Gentlemen, has become one of the most active ransomware operators, accounting for 10% of all attacks
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>TTP</nobr> / <nobr>マルウェア</nobr> / <nobr>防御・運用</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
 | <nobr>温度感</nobr> | 36.0 |
-| <nobr>実務影響</nobr> | 30.0 |
-| <nobr>確度</nobr> | 42.0 |
+| <nobr>実務影響</nobr> | 33.0 |
+| <nobr>確度</nobr> | 43.0 |
 
 #### 概要
 
-NTTの研究者によると、ランサムウェア・アズ・ア・サービス（RaaS）型の攻撃グループ「The Gentlemen」が活発化しており、全体の攻撃の一部で大きな存在感を示しているとされています。
-報告では、SystemBCマルウェアを使って検知回避や組織内での横展開を支援している可能性が指摘されています。
-ランサムウェアは業務停止や情報漏えいにつながりやすく、活動が活発なグループの動向は防御側の優先監視対象になります。
-特に、検知を避けながら侵入後の展開を進める手口が示唆されるため、既存の監視だけでは見落としが起きるおそれがあります。
+Akiraランサムウェアに関する分析で、身代金要求や暗号化の局面ではなく、侵入から権限取得、実行前の動きまでを周辺ログと端末ログからたどる視点が示されています。
+防御側にとっては、被害発生後ではなく、その前段で何が起きていたかを確認する重要性が強調されています。
+ランサムウェア対応では、侵入経路や権限昇格、事前の横展開を把握できるかが封じ込めと再発防止を左右します。
+異なるログソースを突き合わせることで、見落としやすい初期兆候の把握につながる可能性があります。
 
 #### 温度感の理由
 
 ##### 温度感
-- 脅威・攻撃キャンペーン文脈。
+- 技術詳細・再現情報あり。
+- 技術者コミュニティ反応: 中。
 
 ##### 実務影響
+- 技術詳細により影響確認が進みやすい。
 - ランサムウェア文脈。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 技術詳細・再現情報あり。
+- 公開PoC/Exploitコード: 未確認または未評価。
+- 確認方針: 技術詳細、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
 #### 担当者向け確認ポイント
 
-- SystemBCのような不審なトンネリングや中継通信の兆候を監視対象に含めること。
-- 横展開を想定し、特権アカウントや内部通信の異常、認証イベントの連続失敗を確認すること。
-- ランサムウェア対策として、バックアップの隔離保全と復旧手順の定期検証を優先すること。
+- 周辺機器の通信ログとWindowsイベントログを個別ではなく、時系列で突き合わせて確認する。
+- 権限昇格や不審な管理者操作、通常と異なる端末活動の有無を重点的に点検する。
+- 侵入後の挙動だけでなく、影響が出る前の数日間のログ保全と分析手順を見直す。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ransomware_group | Akira | 主題 | 0.80 |
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [New ransomware threat group, The Gentlemen, has become one of the most active ra](https://www.itpro.com/security/new-ransomware-threat-group-the-gentlemen-has-become-one-of-the-most-active-ransomware-operators-accounting-for-10-percent-of-all-attacks) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, ](https://isc.sans.edu/diary/rss/33024) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
-- SNS反応: 反応未確認。
+- SNS反応: 反応あり・低信頼。
 - 日本語圏一次情報: なし。
 - 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: なし。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 中。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: 技術詳細・再現情報あり。
 
 ---
 
-<a id="topic-10940"></a>
+<a id="topic-11140"></a>
 
-### 4. AI chatbot recommendations lure users to cryptojacking malware sites
+### 2. GPU mining malware spreads via SEO poisoning, AI chatbots
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>AI</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>マルウェア</nobr> |
-| <nobr>分類理由</nobr> | AI×Security枠 |
+| <nobr>タグ</nobr> | <nobr>脅威アクター</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>AI</nobr> / <nobr>マルウェア</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 初出 |
 | <nobr>温度感</nobr> | 33.0 |
 | <nobr>実務影響</nobr> | 20.0 |
@@ -245,10 +112,10 @@ NTTの研究者によると、ランサムウェア・アズ・ア・サービ�
 
 #### 概要
 
-Microsoftによると、攻撃者がAIチャットボットでのやり取りと検索結果の汚染を組み合わせ、暗号資産採掘型マルウェアへ誘導するキャンペーンが確認されています。
-正規のユーティリティや周辺ソフトに見せかけた名称が使われており、利用者が誤って不正サイトから入手してしまうリスクが指摘されています。
-AIチャットボットの回答や検索結果が、ユーザーのダウンロード先選びに影響しうることを示す事例です。
-正規ソフトの名称を悪用した誘導は、一般ユーザーだけでなくPC愛好家や管理者にも誤認を起こしやすい点が注意されます。
+高性能GPUを搭載したシステムを狙う暗号資産マイニング型マルウェアの拡散が報告されています。
+手口としては、検索結果の操作による誘導に加え、AIチャットボットの推奨内容が悪用された可能性が示されています。
+正規の検索やAIの案内を起点に不審な配布先へ誘導されるため、利用者側の警戒だけでは見抜きにくい点が注目されています。
+特にGPU資源を持つ端末では、性能低下や電力消費の増加につながるおそれがあります。
 
 #### 温度感の理由
 
@@ -264,21 +131,15 @@ AIチャットボットの回答や検索結果が、ユーザーのダウンロ
 
 #### 担当者向け確認ポイント
 
-- ソフト配布先は、チャットボットの推薦や検索結果だけに依存せず、公式サイトや検証済みの入手経路で確認する。
-- 社内向けには、正規ツール名を騙る不審なダウンロードサイトや広告経由の流入に対する注意喚起を行う。
-- 端末側では、ダウンロード後の不審な挙動や不要な採掘負荷を検知できるよう、EDRや監視ルールを見直す。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ベンダー | Microsoft | 言及あり | 0.80 |
+- 検索経由で入手するツールや配布物は、配布元の正当性を改めて確認すること。
+- AIチャットボットの回答を鵜呑みにせず、公式サイトや一次情報で照合する運用を徹底すること。
+- GPU使用率や不審な常駐プロセス、予期しない暗号資産関連の通信・挙動がないか監視を強化すること。
 
 #### 参照リンク
 
 | <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [AI chatbot recommendations lure users to cryptojacking malware sites](https://www.helpnetsecurity.com/2026/05/27/ai-chatbot-cryptojacking-campaign/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [GPU mining malware spreads via SEO poisoning, AI chatbots](https://www.bleepingcomputer.com/news/security/gpu-mining-malware-spreads-via-seo-poisoning-ai-chatbots/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 反応シグナル
 
@@ -288,191 +149,6 @@ AIチャットボットの回答や検索結果が、ユーザーのダウンロ
 - 日本語圏反応: 反応未確認。
 - 技術者コミュニティ反応: 未評価。
 - 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: なし。
-
----
-
-<a id="topic-10946"></a>
-
-### 5. Evidence at the Moment of Attack. Answers at AI Speed.
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>AI</nobr> / <nobr>防御・運用</nobr> |
-| <nobr>分類理由</nobr> | AI×Security枠 |
-| <nobr>温度状態</nobr> | 初出 |
-| <nobr>温度感</nobr> | 33.0 |
-| <nobr>実務影響</nobr> | 20.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-Wizは、検知時点でフォレンジック用の情報を自動収集し、AIで調査を支援する「Wiz Sensor Forensics」を一般提供開始したとしています。
-SOCやIRチームの初動調査を速めることを狙った機能で、アラート対応時の証跡確保を補助する位置づけです。
-クラウド環境では、検知後に必要な証跡が失われると調査が難しくなるため、検知時点での自動採取は実務上の価値があります。
-AIを使った整理・要約が加わることで、限られた運用人員でも対応速度の改善が期待されます。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- アラート発生時に何が自動で保存されるのか、対象範囲と保持条件を確認する。
-- 既存のSIEM/SOARやインシデント対応手順と連携できるかを検証する。
-- AIによる支援結果は補助情報として扱い、最終判断は生データと合わせて行う。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Evidence at the Moment of Attack. Answers at AI Speed.](https://www.wiz.io/blog/wiz-sensor-forensics-ga) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: なし。
-
----
-
-<a id="topic-10893"></a>
-
-### 6. eSentire launches new Atlas AI Operatives for autonomous threat detection and response
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>AI</nobr> / <nobr>防御・運用</nobr> / <nobr>AIエージェント</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 33.0 |
-| <nobr>実務影響</nobr> | 20.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-eSentireが、Atlas Platformにおいて自律的な脅威検知と対応を行う新機能群を発表しました。
-AIオペラティブ同士が連携し、予防・検知・対応を継続的に回す設計だとされています。
-AIを活用したセキュリティ運用の自動化は、SOCやMDRの効率化に直結するため注目されています。
-攻撃対応の迅速化や運用負荷の軽減につながる可能性があり、ベンダー各社の実装動向を比較する材料にもなります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 自律化の範囲がどこまでか、検知・封じ込め・復旧のどの工程まで任せられるのかを確認する。
-- 誤検知時の挙動や、人手による承認が必要な条件など、制御性と監査性を評価する。
-- 既存のMDRやSIEM/SOARとの連携可否、導入後の運用設計への影響を見ておく。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [eSentire launches new Atlas AI Operatives for autonomous threat detection and re](https://www.helpnetsecurity.com/2026/05/27/esentire-atlas-platform-capabilities/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応あり・低信頼。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: なし。
-
----
-
-<a id="topic-10905"></a>
-
-### 7. Fake ChatGPT and Claude installers on GitHub are dropping Deno RAT malware
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> / <nobr>AI</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 33.0 |
-| <nobr>実務影響</nobr> | 20.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-GitHubやSourceForge上で、ChatGPTやClaudeなどの人気ソフトを装った偽インストーラーやプラグインが確認されたと報じられています。
-これらのダウンロードはバックドアを経由して、Deno JavaScript runtime を使ったRATにつながるとされています。
-さらに、改ざんされたYouTubeチャンネルからこれらの不正なリポジトリへ誘導しているとされています。
-生成AI関連の名前を悪用した配布手口は、利用者が正規の入手先と誤認しやすく、被害につながりやすい点が注意されます。
-ソフトの入手経路が複数の公開プラットフォームにまたがるため、組織としての確認範囲も広がります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- ソフト配布は公式サイトや信頼できる配布経路に限定し、GitHub等の第三者掲載物はそのまま信用しない。
-- YouTubeやSNS経由の案内先URLを鵜呑みにせず、提供元・署名・ハッシュなどの確認を徹底する。
-- 端末保護製品とログ監視で、未知のバックドアや不審な実行ファイルの起動を早期検知できるようにする。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ai_model_or_project | ChatGPT | 主題 | 0.80 |
-| ai_model_or_project | Claude | 主題 | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Fake ChatGPT and Claude installers on GitHub are dropping Deno RAT malware](https://www.helpnetsecurity.com/2026/05/27/deno-rat-malware-fake-chatgpt-claude-installers/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応あり・低信頼。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応あり。
 - 攻撃・悪用観測シグナル: なし。
 
 ---
@@ -492,30 +168,30 @@ GitHubやSourceForge上で、ChatGPTやClaudeなどの人気ソフトを装っ�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [連携作戦でGlasswormボットネットを摘発](https://www.cybersecuritydive.com/news/takedown-glassworm-botnet-crowdstrike-Google-Shadowserver/821227/) | 28.0 | 40.0 | 42.0 |
-| [GlassWormマルウェアのテイクダウンで開発者向けサプライチェーン攻撃インフラが混乱](https://thehackernews.com/2026/05/glassworm-malware-takedown-disrupts.html) | 28.0 | 40.0 | 42.0 |
-| [GrandoreiroマルウェアとBTMOB RATキャンペーンがWindowsおよびAndroidユーザーを標的にする](https://thehackernews.com/2026/05/grandoreiro-malware-and-btmob-rat.html) | 28.0 | 20.0 | 42.0 |
-| [CrowdStrikeとGoogleがGlasswormボットネットを停止](https://www.infosecurity-magazine.com/news/crowdstrike-google-takedown/) | 28.0 | 20.0 | 42.0 |
-| [Commit to Compromise：暗号資産業界のソフトウェア開発基盤を狙う新たな脅威アクター](https://www.wiz.io/blog/threat-actors-target-crypto-orgs) | 28.0 | 20.0 | 42.0 |
-| [CrowdStrikeがオープンソースのサプライチェーンを狙うGlasswormボットネットを妨害](https://cyberscoop.com/crowdstrike-glassworm-botnet-takedown/) | 28.0 | 20.0 | 42.0 |
-| [Glasswormボットネット、堅牢なC2インフラのテイクダウン後に停止](https://www.bleepingcomputer.com/news/security/glassworm-botnet-disrupted-after-resilient-c2-infrastructure-takedown/) | 28.0 | 20.0 | 42.0 |
-| [ANY.RUNの10年にわたる進化：CEO Aleksey Lapshinへのインタビュー](https://any.run/cybersecurity-blog/ceo-interview-anyrun-10-years/) | 28.0 | 20.0 | 42.0 |
-| [GlassWormボットネットが無力化される](https://www.securityweek.com/glassworm-botnet-disrupted/) | 28.0 | 20.0 | 42.0 |
-| [LA Metroへのサイバー攻撃、イラン国家支援ハッカーと関連か](https://www.securityweek.com/la-metro-cyberattack-linked-to-iranian-state-sponsored-hackers/) | 28.0 | 20.0 | 42.0 |
-| [Cogent、AI搭載の新たなセキュリティ機能で攻撃から修復までのギャップを狙う](https://www.helpnetsecurity.com/2026/05/27/cogent-zero-day-response-and-autonomous-remediation/) | 27.0 | 20.0 | 43.0 |
-| [Stack OverflowのフォーラムはAIが原因で消滅しかけているが企業自体はまだAIのおかげで健在](https://gigazine.net/news/20260527-stack-overflow-ai/) | 27.0 | 20.0 | 42.0 |
-| [悪意あるnpmパッケージがGitHub経由でClaude AIユーザーディレクトリからファイルを窃取](https://thehackernews.com/2026/05/malicious-npm-package-stole-files-from.html) | 25.0 | 30.0 | 42.0 |
-| [英国のスパイ長官、AIを「止められない力」と位置づけサイバー空間における攻防両面の影響を指摘](https://cyberscoop.com/gchq-warns-ai-cyber-warfare-threats/) | 25.0 | 20.0 | 42.0 |
-| [英国のサイバー諜報責任者、AIを「止められない力」と呼びロシアに警鐘](https://www.securityweek.com/uk-cyberspying-chief-calls-ai-an-unstoppable-force-and-warns-about-russia/) | 25.0 | 20.0 | 42.0 |
-| [AI支援によるエクスプロイト開発がスキャナーの検知を上回る](https://www.darkreading.com/threat-intelligence/ai-assisted-exploit-development-scanner-detection) | 25.0 | 20.0 | 42.0 |
-| [主要なAIモデルはベンダーの主張よりも悪意あるプロンプトに脆弱である](https://www.cybersecuritydive.com/news/cisco-ai-models-research-multi-turn-prompt-attacks/821211/) | 25.0 | 20.0 | 42.0 |
-| [Google AI Threat Defense、AIを使って脆弱性を迅速に見つける攻撃者を標的にする](https://www.helpnetsecurity.com/2026/05/27/google-ai-threat-defense-released/) | 25.0 | 20.0 | 42.0 |
-| [Ping IdentityがAIガバナンスと信頼できるアクセスでエージェント型セキュリティを強化](https://www.helpnetsecurity.com/2026/05/27/ping-identity-advances-agentic-security-with-ai-governance-and-trusted-access/) | 25.0 | 20.0 | 42.0 |
-| [SecurityWeek、8月11日～12日にThe Ritz-Carlton Half Moon BayでAIリスクサミットを開催](https://www.securityweek.com/securityweek-to-host-ai-risk-summit-august-11-12-at-the-ritz-carlton-half-moon-bay/) | 25.0 | 20.0 | 42.0 |
-| [Microsoft Entra Agent IDにおける不審なAIワークフローの調査：自律型エージェント](https://redcanary.com/blog/threat-detection/entra-id-ai-workflows/) | 25.0 | 20.0 | 42.0 |
-| [サイバーセキュリティの進化：境界防御からAIネイティブセキュリティへ](https://www.darkreading.com/cybersecurity-operations/cybersecurity-evolution-perimeter-defense-to-ai-native-security) | 25.0 | 20.0 | 42.0 |
-| [AI脅威に備えるためのWizによる機械速度での防御](https://www.wiz.io/blog/wiz-ai-threat-readiness-operating-model) | 25.0 | 20.0 | 42.0 |
-| [RevEng.AIがソフトウェアバイナリの脆弱性とバックドア発見に1500万ドルを調達](https://www.securityweek.com/reveng-ai-raises-15-million-to-hunt-for-flaws-and-backdoors-in-software-binaries/) | 25.0 | 20.0 | 42.0 |
+| [セキュリティの土台を見直すための次世代プラットフォーム--ZDNETセキュリティセミナー開催](https://japan.zdnet.com/article/35247116/) | 29.0 | 30.0 | 42.0 |
+| [ランサムウェア被害件数、前年の5倍弱--クラウド侵害の大半、認証情報に起因](https://japan.zdnet.com/article/35248092/) | 29.0 | 30.0 | 42.0 |
+| [正規アカウント情報で社内ネットワークに侵入 ～ メディカ出版へのランサムウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/05/28/55368.html) | 29.0 | 30.0 | 42.0 |
+| [ランサムウェア攻撃者が法律事務所のデータ窃取のために直接現れる](https://www.darkreading.com/cyberattacks-data-breaches/ransomware-actors-steal-law-firm-data) | 28.0 | 30.0 | 42.0 |
+| [IFS、産業用AIの進化と「IFS Zero」を発表--日本IBMらとの協業で製造業の生産性を向上](https://japan.zdnet.com/article/35248096/) | 26.0 | 20.0 | 42.0 |
+| [Amazon、AI映像制作の「GenAI Creators' Fund」設立 初期3作品をプライムビデオで配信へ](https://www.itmedia.co.jp/news/articles/2605/28/news079.html) | 26.0 | 20.0 | 42.0 |
+| [Cloudbase Blog 第14回 Mythos が示すサイバー攻撃の変化 ─ Cloudbase が考える AI 時代のクラウドセキュリティの本質](https://scan.netsecurity.ne.jp/article/2026/05/28/55373.html) | 26.0 | 20.0 | 42.0 |
+| [国家サイバー統括室、高度化する AI をふまえ「Project YATA-Shield」始動](https://scan.netsecurity.ne.jp/article/2026/05/28/55363.html) | 26.0 | 20.0 | 42.0 |
+| [Claude Mythosのすごさと怖さ【動画あり】](https://www.itmedia.co.jp/enterprise/articles/2605/28/news037.html) | 26.0 | 20.0 | 42.0 |
+| [AWSガーマンCEO「可能性解き放つ」 オープンAIの最新AIモデル提供で](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/052101438/) | 26.0 | 20.0 | 42.0 |
+| [MUFGがグーグルと提携拡大 購入・決済可能なAIエージェント開発へ](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/052101439/) | 26.0 | 20.0 | 42.0 |
+| [岩手県一関市、「AI電話」を試験導入 RAG利用で職員の負担少なく](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/052101441/) | 26.0 | 20.0 | 42.0 |
+| [AIで脆弱性探索の速度は劇的変化 グーグル傘下のウィズが警鐘](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/052101437/) | 26.0 | 20.0 | 42.0 |
+| [第2回：AIエージェントが生む新しいリスク](https://japan.zdnet.com/article/35247782/) | 26.0 | 20.0 | 42.0 |
+| [7-Zipにヒープ破壊を引き起こす深刻な脆弱性 急ぎ対処を](https://atmarkit.itmedia.co.jp/ait/articles/2605/28/news045.html) | 25.0 | 46.0 | 50.0 |
+| [OpenAI、2026年中間選挙に向けたサイバーセキュリティと選挙干渉対策を発表](https://cyberscoop.com/openai-2026-election-security-plans/) | 25.0 | 20.0 | 42.0 |
+| [GNU InetUtils telnetd における認証回避して管理者権限での操作が可能となる環境変数の検証不備（Scan Tech Report）](https://scan.netsecurity.ne.jp/article/2026/05/28/55374.html) | 24.0 | 20.0 | 43.0 |
+| [NEC Atermシリーズに XSS の脆弱性](https://scan.netsecurity.ne.jp/article/2026/05/28/55366.html) | 22.0 | 26.0 | 42.0 |
+| [「Google Cloud Apigee」にSSRF脆弱性 - トークン漏洩のおそれ](https://www.security-next.com/185049) | 22.0 | 20.0 | 42.0 |
+| [「浜名湖花博2024」ドメイン、県管理外に - 旧リンク解除呼びかけ](https://www.security-next.com/184668) | 22.0 | 20.0 | 42.0 |
+| [Veeamのバックアップ復旧製品に脆弱性 - 修正版が公開](https://www.security-next.com/185062) | 22.0 | 20.0 | 42.0 |
+| [複数ソフトが改ざん被害、正規ルートで汚染版が流通 - 米当局が注意喚起](https://www.security-next.com/185066) | 22.0 | 20.0 | 42.0 |
+| [小規模モデルの限界点](https://www.f5.com/labs/articles/the-small-model-cliff) | 22.0 | 20.0 | 42.0 |
+| [SCS評価制度に備える! EDIとセキュリティの統合で進めるサプライチェーンセキュリティ対策 第5回 セキュリティが「取引の前提条件」になる時代へ―そのEDI運用、知らないうちにリスクになっていませんか?](https://news.mynavi.jp/techplus/kikaku/canon_its_security_edi-5/) | 21.0 | 20.0 | 42.0 |
 
 ---
 
