@@ -1,20 +1,17 @@
-# 📡 サイレーダー 2026-05-28 11:00 JST
+# 📡 サイレーダー 2026-05-28 17:00 JST
 
-このレポートは、2026-05-28 05:00 JST〜2026-05-28 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
+このレポートは、2026-05-28 11:00 JST〜2026-05-28 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を試験的に整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 71
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 63
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 24
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, (Wed, May 27th)](#topic-11144) | 36.0 | 33.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [GPU mining malware spreads via SEO poisoning, AI chatbots](#topic-11140) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -22,136 +19,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-11144"></a>
-
-### 1. Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, (Wed, May 27th)
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> / <nobr>IoC</nobr> / <nobr>Windows</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 初出 |
-| <nobr>温度感</nobr> | 36.0 |
-| <nobr>実務影響</nobr> | 33.0 |
-| <nobr>確度</nobr> | 43.0 |
-
-#### 概要
-
-Akiraランサムウェアに関する分析で、身代金要求や暗号化の局面ではなく、侵入から権限取得、実行前の動きまでを周辺ログと端末ログからたどる視点が示されています。
-防御側にとっては、被害発生後ではなく、その前段で何が起きていたかを確認する重要性が強調されています。
-ランサムウェア対応では、侵入経路や権限昇格、事前の横展開を把握できるかが封じ込めと再発防止を左右します。
-異なるログソースを突き合わせることで、見落としやすい初期兆候の把握につながる可能性があります。
-
-#### 温度感の理由
-
-##### 温度感
-- 技術詳細・再現情報あり。
-- 技術者コミュニティ反応: 中。
-
-##### 実務影響
-- 技術詳細により影響確認が進みやすい。
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 技術詳細・再現情報あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 技術詳細、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- 周辺機器の通信ログとWindowsイベントログを個別ではなく、時系列で突き合わせて確認する。
-- 権限昇格や不審な管理者操作、通常と異なる端末活動の有無を重点的に点検する。
-- 侵入後の挙動だけでなく、影響が出る前の数日間のログ保全と分析手順を見直す。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| ransomware_group | Akira | 主題 | 0.80 |
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, ](https://isc.sans.edu/diary/rss/33024) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応あり・低信頼。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 中。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: 技術詳細・再現情報あり。
-
----
-
-<a id="topic-11140"></a>
-
-### 2. GPU mining malware spreads via SEO poisoning, AI chatbots
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>脅威アクター</nobr> / <nobr>攻撃キャンペーン</nobr> / <nobr>AI</nobr> / <nobr>マルウェア</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 初出 |
-| <nobr>温度感</nobr> | 33.0 |
-| <nobr>実務影響</nobr> | 20.0 |
-| <nobr>確度</nobr> | 42.0 |
-
-#### 概要
-
-高性能GPUを搭載したシステムを狙う暗号資産マイニング型マルウェアの拡散が報告されています。
-手口としては、検索結果の操作による誘導に加え、AIチャットボットの推奨内容が悪用された可能性が示されています。
-正規の検索やAIの案内を起点に不審な配布先へ誘導されるため、利用者側の警戒だけでは見抜きにくい点が注目されています。
-特にGPU資源を持つ端末では、性能低下や電力消費の増加につながるおそれがあります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 検索経由で入手するツールや配布物は、配布元の正当性を改めて確認すること。
-- AIチャットボットの回答を鵜呑みにせず、公式サイトや一次情報で照合する運用を徹底すること。
-- GPU使用率や不審な常駐プロセス、予期しない暗号資産関連の通信・挙動がないか監視を強化すること。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [GPU mining malware spreads via SEO poisoning, AI chatbots](https://www.bleepingcomputer.com/news/security/gpu-mining-malware-spreads-via-seo-poisoning-ai-chatbots/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応あり・低信頼。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -168,30 +36,30 @@ Akiraランサムウェアに関する分析で、身代金要求や暗号化の
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [セキュリティの土台を見直すための次世代プラットフォーム--ZDNETセキュリティセミナー開催](https://japan.zdnet.com/article/35247116/) | 29.0 | 30.0 | 42.0 |
-| [ランサムウェア被害件数、前年の5倍弱--クラウド侵害の大半、認証情報に起因](https://japan.zdnet.com/article/35248092/) | 29.0 | 30.0 | 42.0 |
-| [正規アカウント情報で社内ネットワークに侵入 ～ メディカ出版へのランサムウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/05/28/55368.html) | 29.0 | 30.0 | 42.0 |
-| [ランサムウェア攻撃者が法律事務所のデータ窃取のために直接現れる](https://www.darkreading.com/cyberattacks-data-breaches/ransomware-actors-steal-law-firm-data) | 28.0 | 30.0 | 42.0 |
-| [IFS、産業用AIの進化と「IFS Zero」を発表--日本IBMらとの協業で製造業の生産性を向上](https://japan.zdnet.com/article/35248096/) | 26.0 | 20.0 | 42.0 |
-| [Amazon、AI映像制作の「GenAI Creators' Fund」設立 初期3作品をプライムビデオで配信へ](https://www.itmedia.co.jp/news/articles/2605/28/news079.html) | 26.0 | 20.0 | 42.0 |
-| [Cloudbase Blog 第14回 Mythos が示すサイバー攻撃の変化 ─ Cloudbase が考える AI 時代のクラウドセキュリティの本質](https://scan.netsecurity.ne.jp/article/2026/05/28/55373.html) | 26.0 | 20.0 | 42.0 |
-| [国家サイバー統括室、高度化する AI をふまえ「Project YATA-Shield」始動](https://scan.netsecurity.ne.jp/article/2026/05/28/55363.html) | 26.0 | 20.0 | 42.0 |
-| [Claude Mythosのすごさと怖さ【動画あり】](https://www.itmedia.co.jp/enterprise/articles/2605/28/news037.html) | 26.0 | 20.0 | 42.0 |
-| [AWSガーマンCEO「可能性解き放つ」 オープンAIの最新AIモデル提供で](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/052101438/) | 26.0 | 20.0 | 42.0 |
-| [MUFGがグーグルと提携拡大 購入・決済可能なAIエージェント開発へ](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/052101439/) | 26.0 | 20.0 | 42.0 |
-| [岩手県一関市、「AI電話」を試験導入 RAG利用で職員の負担少なく](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/052101441/) | 26.0 | 20.0 | 42.0 |
-| [AIで脆弱性探索の速度は劇的変化 グーグル傘下のウィズが警鐘](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/052101437/) | 26.0 | 20.0 | 42.0 |
-| [第2回：AIエージェントが生む新しいリスク](https://japan.zdnet.com/article/35247782/) | 26.0 | 20.0 | 42.0 |
-| [7-Zipにヒープ破壊を引き起こす深刻な脆弱性 急ぎ対処を](https://atmarkit.itmedia.co.jp/ait/articles/2605/28/news045.html) | 25.0 | 46.0 | 50.0 |
-| [OpenAI、2026年中間選挙に向けたサイバーセキュリティと選挙干渉対策を発表](https://cyberscoop.com/openai-2026-election-security-plans/) | 25.0 | 20.0 | 42.0 |
-| [GNU InetUtils telnetd における認証回避して管理者権限での操作が可能となる環境変数の検証不備（Scan Tech Report）](https://scan.netsecurity.ne.jp/article/2026/05/28/55374.html) | 24.0 | 20.0 | 43.0 |
-| [NEC Atermシリーズに XSS の脆弱性](https://scan.netsecurity.ne.jp/article/2026/05/28/55366.html) | 22.0 | 26.0 | 42.0 |
-| [「Google Cloud Apigee」にSSRF脆弱性 - トークン漏洩のおそれ](https://www.security-next.com/185049) | 22.0 | 20.0 | 42.0 |
-| [「浜名湖花博2024」ドメイン、県管理外に - 旧リンク解除呼びかけ](https://www.security-next.com/184668) | 22.0 | 20.0 | 42.0 |
-| [Veeamのバックアップ復旧製品に脆弱性 - 修正版が公開](https://www.security-next.com/185062) | 22.0 | 20.0 | 42.0 |
-| [複数ソフトが改ざん被害、正規ルートで汚染版が流通 - 米当局が注意喚起](https://www.security-next.com/185066) | 22.0 | 20.0 | 42.0 |
-| [小規模モデルの限界点](https://www.f5.com/labs/articles/the-small-model-cliff) | 22.0 | 20.0 | 42.0 |
-| [SCS評価制度に備える! EDIとセキュリティの統合で進めるサプライチェーンセキュリティ対策 第5回 セキュリティが「取引の前提条件」になる時代へ―そのEDI運用、知らないうちにリスクになっていませんか?](https://news.mynavi.jp/techplus/kikaku/canon_its_security_edi-5/) | 21.0 | 20.0 | 42.0 |
+| [NTTデータら、生成AIで経理伝票起票を自動化--東急で検証](https://japan.zdnet.com/article/35248107/) | 28.0 | 20.0 | 42.0 |
+| [「AIも使い続けていると人間のように老化する」という指摘、セッションを重ねて記憶が蓄積されることで性能悪化](https://gigazine.net/news/20260528-agingbench-ai-agents-age-too/) | 27.0 | 20.0 | 42.0 |
+| [Amazon MGMスタジオがAIツールを駆使した映像制作を支援する「GenAI Creators’ Fund」を発表、Prime Video向けに3つのAIアニメシリーズの制作を承認＆AWSと共同でAI制作プラットフォーム「Project Nara」を立ち上げ](https://gigazine.net/news/20260528-amazon-mgm-studios-genai-creators-fund/) | 27.0 | 20.0 | 42.0 |
+| [1曲の中で自然にジャンルを切り替えられる音楽生成AI「Music v2」を音声AI企業のElevenLabsがリリース](https://gigazine.net/news/20260528-elevenlabs-introducing-music-v2-ai/) | 27.0 | 20.0 | 42.0 |
+| [動画生成AI「Runway」がChatGPTやClaudeのチャット内で利用可能に、チャットで参考画像やアイデアを入力して動画化できる](https://gigazine.net/news/20260528-runway-mcp-chatgpt-claude/) | 27.0 | 20.0 | 42.0 |
+| [汎用人工知能(AGI)の実現は2030年頃と予想しているが2029年の可能性も視野に入れているとGoogle DeepMindのデミス・ハサビスCEOが発言](https://gigazine.net/news/20260528-google-deepmind-ceo-demis-hassabis-agi-2030/) | 27.0 | 20.0 | 42.0 |
+| [GoogleがAIを用いた自律型サイバー攻撃対策サービス「Google AI Threat Defense」を発表、脆弱性の修正＆監視まで自律的に実行](https://gigazine.net/news/20260528-google-ai-threat-defense/) | 27.0 | 20.0 | 42.0 |
+| [みずほFGとNEC、AIエージェント認証基盤「KYA」構築で共同実証実験](https://japan.zdnet.com/article/35248156/) | 26.0 | 20.0 | 42.0 |
+| [“AIの身元”確かめる認証基盤 みずほFGとNECが共同実証、AIエージェントが銀行を使う時代見据え](https://www.itmedia.co.jp/news/articles/2605/28/news124.html) | 26.0 | 20.0 | 42.0 |
+| [[PR]商品開発から販売まで「3倍速」へ Centric Softwareが描く、AIエージェント時代の商品体験基盤](https://japan.zdnet.com/extra/centricsoftware_202605/35247512/) | 26.0 | 20.0 | 42.0 |
+| [セールスフォースの「Headless 360」、AIエージェント前提の新環境に](https://japan.zdnet.com/article/35248133/) | 26.0 | 20.0 | 42.0 |
+| [Docker専用のAIエージェント「Gordon」が正式リリース 無料アカウントでも利用可能](https://www.itmedia.co.jp/news/articles/2605/28/news090.html) | 26.0 | 20.0 | 42.0 |
+| [KetchがマルチエージェントAIオーケストレーションを企業のプライバシープログラムに導入](https://www.helpnetsecurity.com/2026/05/28/ketch-brings-multi-agent-ai-orchestration-to-enterprise-privacy-programs/) | 25.0 | 20.0 | 42.0 |
+| [侵害報道が相次ぐ市場で信頼感を売るCISO](https://www.helpnetsecurity.com/2026/05/28/hrvoje-englman-span-earning-cybersecurity-confidence/) | 25.0 | 20.0 | 42.0 |
+| [Nudge Security、ブラウザベースのシャドーAIエージェント検出を追加](https://www.helpnetsecurity.com/2026/05/28/nudge-browser-based-agentic-ai-security/) | 25.0 | 20.0 | 42.0 |
+| [Frontier AIモデルは複数ターンのAI攻撃に耐えられないとCiscoが指摘](https://www.helpnetsecurity.com/2026/05/28/cisco-multi-turn-ai-attacks/) | 25.0 | 20.0 | 42.0 |
+| [2026年5月の注目サイバーセキュリティOSSツールまとめ](https://www.helpnetsecurity.com/2026/05/28/hottest-cybersecurity-open-source-tools-of-the-month-may-2026/) | 25.0 | 20.0 | 42.0 |
+| [企業はAIの統制方法を確立する前に中核システムへ組み込んでいた](https://www.helpnetsecurity.com/2026/05/28/check-point-genai-security-controls-report/) | 25.0 | 20.0 | 42.0 |
+| [CODA、生成AI事業者に対してコンテンツやクリエイターの権利を尊重するよう求める声明 既存の著作物に酷似した内容が出力される現状は「著作権侵害」になりうると指摘](https://internet.watch.impress.co.jp/docs/news/2112422.html) | 25.0 | 20.0 | 42.0 |
+| [OpenAIが選挙対策を本格化、ChatGPTにAP通信の開票データ導入＆ディープフェイク規制法案も支持](https://gigazine.net/news/20260528-openai-election-safeguards/) | 22.0 | 20.0 | 42.0 |
+| [Ubiquiti製ネットワーク機器の「UniFi OS」にクリティカル脆弱性](https://www.security-next.com/185047) | 22.0 | 20.0 | 42.0 |
+| [「IBM ELM」の基盤コンポーネントに脆弱性 - 修正パッチをリリース](https://www.security-next.com/185044) | 22.0 | 20.0 | 42.0 |
+| [オープンソースソフトウェア開発者を標的にするボットネット「Glassworm」をCrowdStrikeやGoogleが遮断](https://gigazine.net/news/20260528-crowdstrike-takedown-glassworm/) | 22.0 | 20.0 | 42.0 |
+| [Googleの情報セキュリティエンジニアが内部情報を使ってPolymarketで120万ドルを稼いだとして起訴される](https://gigazine.net/news/20260528-google-employee-charged-insider-trading/) | 22.0 | 20.0 | 42.0 |
 
 ---
 
