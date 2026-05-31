@@ -1,15 +1,15 @@
-# 📡 サイレーダー 2026-05-31 17:00 JST
+# 📡 サイレーダー 2026-06-01 05:00 JST
 
-このレポートは、2026-05-31 11:00 JST〜2026-05-31 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-05-31 17:00 JST〜2026-06-01 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 30
+- 観測トピック数: 52
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 22
 
 今回はサマリ掲載トピックはありません。
 
@@ -36,7 +36,28 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [無料でAI透かしを除去できる「Remove-AI-Watermarks」、画像から可視（Gemini）および不可視（SynthID、C2PA、EXIF）のいずれも削除可能](https://gigazine.net/news/20260531-remove-ai-watermarks/) | 27.0 | 20.0 | 42.0 |
+| [オランダ当局、1700万台の感染端末に関与するボットネットを解体](https://thehackernews.com/2026/05/dutch-authorities-dismantle-botnet.html) | 28.0 | 20.0 | 42.0 |
+| [YARA-X 1.17.0のリリース](https://isc.sans.edu/diary/rss/33032) | 25.0 | 20.0 | 42.0 |
+| [CVE-2026-40034 gitoxideのgix-submoduleにおける部分的な.gitmodules上書きを介したコマンドインジェクション](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40034) | 24.0 | 46.0 | 38.0 |
+| [CVE-2026-7374 KubeVirt: kubevirt virt-handlerのシンボリックリンク追跡脆弱性による権限昇格とノード侵害](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7374) | 22.0 | 40.0 | 38.0 |
+| [CVE-2026-5260 GnuTLS: RSA鍵交換におけるヒープオーバーリードによる情報漏えい](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5260) | 22.0 | 36.0 | 38.0 |
+| [CVE-2026-44839 RabbitMQ: サニタイズされないvhost名により管理UIでXSSが可能に](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44839) | 21.0 | 34.0 | 38.0 |
+| [Node.<wbr>js 20のHTTPパーサにおけるHTTP/1ヘッダー終端不備によるリクエストスミグリング脆弱性（CVE-2025-23167）](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-23167) | 20.0 | 28.0 | 38.0 |
+| [CVE-2024-36137: Node.<wbr>jsの実験的Permission Modelで--allow-fs-write使用時にfile descriptor経由で権限変更が可能な脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-36137) | 20.0 | 28.0 | 38.0 |
+| [Node.<wbr>jsの実験的権限モデルにおけるファイル統計情報の不正取得の脆弱性（CVE-2024-22018）](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-22018) | 20.0 | 28.0 | 38.0 |
+| [CVE-2025-15649: PerlのIO::Uncompress::Unzip 2.215未満における、壊れたDOS日付を含むZIPヘッダー解析時の未処理例外伝播](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-15649) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-48962 Perl向けIO::Compress 2.220未満のFile::GlobMapperで任意コード実行の可能性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48962) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-48864 libsolvの悪意ある.solvページデータの不正な展開処理によるヒープバッファオーバーフロー](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48864) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-9804 KubeVirt: vmexportのディレクトリシンボリックリンク回避によりexporter podでファイル読み取りが可能になる](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-9804) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-42012 GnuTLSにおけるURIおよびSRV SANsの不適切な処理による証明書検証バイパス](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42012) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-42015 GnuTLS: pkcs#12バッグ処理のオフバイワンエラーによるメモリ破損](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42015) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-42013 GnuTLS: oversized subject alternative nameに起因する証明書検証バイパス](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42013) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-42790: public_keyのホスト名検証でsubjectのCommonNameへのフォールバックを悪用したnameConstraints DNSバイパス](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42790) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-42789 public_keyのパス検証で非CA証明書が中間発行者として受け入れられる問題](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42789) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-46242 eventpoll: ep_removeにおけるstruct eventpoll/struct fileのUAF修正](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46242) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-40510 OpenSC 0.27.0-rc1未満におけるcard-piv.cのpiv_process_history()経由スタックバッファオーバーフロー](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40510) | 20.0 | 28.0 | 38.0 |
+| [CVE-2026-40528: OpenSC 0.27.0未満の profile.c における do_key_value() のバッファオーバーラン](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40528) | 20.0 | 28.0 | 38.0 |
+| [WP Maps Proの不具合を悪用してWordPressサイトに管理者アカウントを作成する攻撃](https://www.bleepingcomputer.com/news/security/wp-maps-pro-bug-exploited-to-create-admin-accounts-on-wordpress-sites/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
