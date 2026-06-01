@@ -1,17 +1,19 @@
-# 📡 サイレーダー 2026-06-01 11:00 JST
+# 📡 サイレーダー 2026-06-01 17:00 JST
 
-このレポートは、2026-06-01 05:00 JST〜2026-06-01 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-01 11:00 JST〜2026-06-01 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 55
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 48
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 24
+- [低温だが記録しておくトピック](#low-record-topics): 18
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [FSB’s matryoshka #1/3 – Gamaredon’s gifts that keeps unpacking – GammaPhish and GammaWorm](#topic-13237) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,7 +21,63 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-13237"></a>
+
+### 1. FSB’s matryoshka #1/3 – Gamaredon’s gifts that keeps unpacking – GammaPhish and GammaWorm
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>国家支援</nobr> / <nobr>脅威アクター</nobr> / <nobr>IoC</nobr> / <nobr>TTP</nobr> / <nobr>防御・運用</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 初出 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+Sekoia.ioの公開記事は、Gamaredonに関連するとみられる活動について、GammaPhishとGammaWormと呼ばれる新たな初期侵入手法や関連マルウェアの可能性を扱っています。
+記事は3部構成の調査の一部で、脅威の挙動や検知の観点に焦点を当てています。国家関与が疑われるAPTの活動に関する分析であり、防御側にとって検知・監視の見直し材料になります。
+新しい初期侵入ベクトルの把握は、メールや端末、境界防御の優先度判断に役立ちます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- 検知、監視、SOC/CSIRT運用、環境への適用可否を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Gamaredon関連のTTPや名称の変化を含め、既存の検知ルールとアラートを見直す。
+- 初期侵入に使われる可能性のある経路について、メール・ダウンロード・端末実行の監視を強化する。
+- 関連するIOCや振る舞い指標が追加されていないか、脅威インテリジェンスの更新を継続して確認する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [FSB’s matryoshka #1/3 – Gamaredon’s gifts that keeps unpacking – GammaPhish and ](https://blog.sekoia.io/fsbs-matryoshka-1-3-gamaredons-gifts-that-keeps-unpacking-gammaphish-and-gammaworm/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 反応シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 日本語圏一次情報: なし。
+- 日本語圏メディア波及: 未評価。
+- 日本語圏反応: 反応未確認。
+- 技術者コミュニティ反応: 弱。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -36,30 +94,24 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [SCS評価制度でセキュリティ投資「増額予定」が8割／大企業と中小企業のAI導入格差は2.7倍／情シスの3人に2人が「シャドーAI増加」実感、ほか](https://ascii.jp/elem/000/004/406/4406563/?rss=) | 29.0 | 30.0 | 42.0 |
-| [プルーフポイントのプラットフォームが Claude Compliance API と連携](https://scan.netsecurity.ne.jp/article/2026/06/01/55393.html) | 26.0 | 20.0 | 42.0 |
-| [Okta ISPM と Claude Compliance API が統合](https://scan.netsecurity.ne.jp/article/2026/06/01/55392.html) | 26.0 | 20.0 | 42.0 |
-| [第2回 なぜ攻撃対象に？ エージェンティックAIで広がる攻撃対象領域](https://japan.zdnet.com/article/35247985/) | 26.0 | 20.0 | 42.0 |
-| [【最新機能】Claude Designが優秀すぎ…“パワポ整え地獄”が消える神プロンプト14選](https://www.sbbit.jp/article/cont1/185443?ref=rss) | 25.0 | 20.0 | 42.0 |
-| [不正なVPN接続を確立できる「PAN-OS」脆弱性 - 悪用を確認](https://www.security-next.com/185216) | 24.0 | 20.0 | 43.0 |
-| [未確認のRATがNetSupport RATを展開](https://isc.sans.edu/diary/rss/33034) | 22.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年5月24日〜2026年5月30日）](https://www.security-next.com/185213) | 22.0 | 20.0 | 42.0 |
-| [「Plesk」のLinux版に権限昇格の脆弱性 - 2月のリリースで修正済み](https://www.security-next.com/185206) | 22.0 | 20.0 | 42.0 |
-| [IBMとRed Hat、「Project Lightwell」を発表--約8000億円を投資](https://japan.zdnet.com/article/35248263/) | 21.0 | 20.0 | 42.0 |
-| [エイテックプロに不正アクセス、システム障害が発生](https://scan.netsecurity.ne.jp/article/2026/06/01/55395.html) | 21.0 | 20.0 | 42.0 |
-| [CVE停止の危機とNVDの停滞、セキュリティ担当者が直面する脆弱性情報分断の裏側](https://scan.netsecurity.ne.jp/article/2026/06/01/55394.html) | 21.0 | 20.0 | 42.0 |
-| [「空 × サイバーセキュリティ」をテーマにパネルディスカッション ～「Japan Drone/次世代エアモビリティEXPO 2026」開催 6 / 3 ～ 5](https://scan.netsecurity.ne.jp/article/2026/06/01/55391.html) | 21.0 | 20.0 | 42.0 |
-| [東京都「中小企業向けサイバーセキュリティ対策の極意」ポータルサイトの旧ドメインを第三者が取得](https://scan.netsecurity.ne.jp/article/2026/06/01/55390.html) | 21.0 | 20.0 | 42.0 |
-| [商品問い合わせ欄への不審な QRコード等の投稿に注意喚起](https://scan.netsecurity.ne.jp/article/2026/06/01/55389.html) | 21.0 | 20.0 | 42.0 |
-| [SGLang に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/01/55388.html) | 21.0 | 20.0 | 42.0 |
-| [dnsmasq に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/01/55387.html) | 21.0 | 20.0 | 42.0 |
-| [FortiGateの圧倒的シェアをサプライチェーン防御に生かす フォーティネット 2026年度事業戦略](https://ascii.jp/elem/000/004/406/4406386/?rss=) | 21.0 | 20.0 | 42.0 |
-| [セキュリティ投資の拒絶と有事の責任転嫁 経営層が自戒すべき「人為的ジレンマ」の正体](https://www.itmedia.co.jp/enterprise/articles/2606/02/news004.html) | 21.0 | 20.0 | 42.0 |
-| [インシデント対応演習の基礎](https://japan.zdnet.com/article/35248090/) | 21.0 | 20.0 | 42.0 |
-| [沖縄県浦添市、市民の個人情報11万件以上を保存したノートPCが盗難、入替中で管理不十分な中、委託会社社員が持ち出しか 対象PCは回収済み](https://internet.watch.impress.co.jp/docs/news/2113215.html) | 20.0 | 20.0 | 42.0 |
-| [CyberPowerの無停電電源装置（UPS）がAmazonスマイルSaleに登場！ ラインインタラクティブ＋正弦波出力対応の750VA/525Wモデルが2万6852円](https://internet.watch.impress.co.jp/docs/shopping/2113190.html) | 20.0 | 20.0 | 42.0 |
-| [Casdoorにおける複数の脆弱性](https://jvn.jp/vu/JVNVU95478525/) | 20.0 | 20.0 | 42.0 |
-| [すぐ使えるコード版「ESET HOME セキュリティ プレミアム」がAmazonスマイルSaleで値引き中！ オンラインコード版1台3年版が8263円、5台3年版は1万1880円](https://internet.watch.impress.co.jp/docs/shopping/2113188.html) | 20.0 | 20.0 | 42.0 |
+| [Microsoft、NVIDIAと共同設計のPC「Surface Laptop Ultra」発表 AIモデルのローカル実行可能](https://www.itmedia.co.jp/news/articles/2606/01/news098.html) | 29.0 | 20.0 | 42.0 |
+| [Anthropicの人材採用プロセスはこんな感じ、面接でのAI使用は厳禁](https://gigazine.net/news/20260601-anthropic-recruiting/) | 27.0 | 20.0 | 42.0 |
+| [富士通ビジョン2035、「AI-driven」への変革と人月モデル脱却--防衛ビジネスにも言及](https://japan.zdnet.com/article/35248242/) | 26.0 | 20.0 | 42.0 |
+| [リコージャパン、生成AI開発基盤「Dify」の新ライセンス提供--無償テンプレートも公開](https://japan.zdnet.com/article/35248278/) | 26.0 | 20.0 | 42.0 |
+| [OWASP Agent Memory Guard：AIエージェントが自身のメモリを悪用されるのを防ぐ方法](https://www.helpnetsecurity.com/2026/06/01/owasp-agent-memory-guard/) | 25.0 | 20.0 | 42.0 |
+| [CrowdStrikeがNVIDIA Vera BlueField-4 STXでAIファクトリーにエンタープライズ級セキュリティを提供](https://www.crowdstrike.com/en-us/blog/crowdstrike-nvidia-bring-enterprise-grade-security-to-the-ai-factory/) | 25.0 | 20.0 | 42.0 |
+| [CrowdStrike、Falcon Exposure ManagementでNVIDIAを活用したAIネイティブエージェントを拡大](https://www.crowdstrike.com/en-us/blog/crowdstrike-nvidia-collaborate-to-scale-ai-native-agents-across-falcon-exposure-management/) | 25.0 | 20.0 | 42.0 |
+| [イノベーションを損なわずにシャドーAIを統制する](https://www.helpnetsecurity.com/2026/06/01/governing-shadow-ai-video/) | 25.0 | 20.0 | 42.0 |
+| [2025年に145件のAI法が成立し、プライバシー担当者の負担は増すばかり](https://www.helpnetsecurity.com/2026/06/01/datagrail-ai-privacy-risks-report/) | 25.0 | 20.0 | 42.0 |
+| [分散型DB「Apache Ignite」に脆弱性 - 修正版が公開](https://www.security-next.com/185223) | 22.0 | 20.0 | 42.0 |
+| [ISC Stormcast 2026年6月1日（月）版](https://isc.sans.edu/diary/rss/33036) | 22.0 | 20.0 | 42.0 |
+| [セブン銀行、ファミマに進出 「ファミマATM」提供開始](https://www.itmedia.co.jp/news/articles/2606/01/news084.html) | 21.0 | 20.0 | 42.0 |
+| [「ゼロトラストの前に既定パスワード変更を」 IPA、重要インフラを守る「最低限のセキュリティ」を刷新](https://atmarkit.itmedia.co.jp/ait/articles/2606/01/news048.html) | 21.0 | 20.0 | 42.0 |
+| [Asimilyがデバイスリスクを自動化されたネットワークポリシーに変換](https://www.helpnetsecurity.com/2026/06/01/asimily-segmentation-orchestration/) | 20.0 | 20.0 | 42.0 |
+| [セキュリティの1週間（5月25日～5月31日）](https://www.malwarebytes.com/blog/news/2026/06/a-week-in-security-may-25-may-31) | 20.0 | 20.0 | 42.0 |
+| [企業が見落としがちなデータ発見のギャップ](https://www.helpnetsecurity.com/2026/06/01/avani-desai-schellman-data-discovery-gaps/) | 20.0 | 20.0 | 42.0 |
+| [EU組織、増大するコンプライアンス圧力に苦慮](https://www.helpnetsecurity.com/2026/06/01/antonija-vojnovic-span-cybersecurity-governance-challenges/) | 20.0 | 20.0 | 42.0 |
+| [ServerView Agents for Windowsにおける複数の脆弱性](https://jvn.jp/jp/JVN67883085/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
