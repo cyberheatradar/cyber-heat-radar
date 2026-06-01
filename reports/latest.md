@@ -1,15 +1,15 @@
-# 📡 サイレーダー 2026-06-01 05:00 JST
+# 📡 サイレーダー 2026-06-01 11:00 JST
 
-このレポートは、2026-05-31 17:00 JST〜2026-06-01 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-01 05:00 JST〜2026-06-01 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 52
+- 観測トピック数: 55
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 22
+- [低温だが記録しておくトピック](#low-record-topics): 24
 
 今回はサマリ掲載トピックはありません。
 
@@ -36,28 +36,30 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [オランダ当局、1700万台の感染端末に関与するボットネットを解体](https://thehackernews.com/2026/05/dutch-authorities-dismantle-botnet.html) | 28.0 | 20.0 | 42.0 |
-| [YARA-X 1.17.0のリリース](https://isc.sans.edu/diary/rss/33032) | 25.0 | 20.0 | 42.0 |
-| [CVE-2026-40034 gitoxideのgix-submoduleにおける部分的な.gitmodules上書きを介したコマンドインジェクション](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40034) | 24.0 | 46.0 | 38.0 |
-| [CVE-2026-7374 KubeVirt: kubevirt virt-handlerのシンボリックリンク追跡脆弱性による権限昇格とノード侵害](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7374) | 22.0 | 40.0 | 38.0 |
-| [CVE-2026-5260 GnuTLS: RSA鍵交換におけるヒープオーバーリードによる情報漏えい](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5260) | 22.0 | 36.0 | 38.0 |
-| [CVE-2026-44839 RabbitMQ: サニタイズされないvhost名により管理UIでXSSが可能に](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44839) | 21.0 | 34.0 | 38.0 |
-| [Node.<wbr>js 20のHTTPパーサにおけるHTTP/1ヘッダー終端不備によるリクエストスミグリング脆弱性（CVE-2025-23167）](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-23167) | 20.0 | 28.0 | 38.0 |
-| [CVE-2024-36137: Node.<wbr>jsの実験的Permission Modelで--allow-fs-write使用時にfile descriptor経由で権限変更が可能な脆弱性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-36137) | 20.0 | 28.0 | 38.0 |
-| [Node.<wbr>jsの実験的権限モデルにおけるファイル統計情報の不正取得の脆弱性（CVE-2024-22018）](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-22018) | 20.0 | 28.0 | 38.0 |
-| [CVE-2025-15649: PerlのIO::Uncompress::Unzip 2.215未満における、壊れたDOS日付を含むZIPヘッダー解析時の未処理例外伝播](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-15649) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-48962 Perl向けIO::Compress 2.220未満のFile::GlobMapperで任意コード実行の可能性](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48962) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-48864 libsolvの悪意ある.solvページデータの不正な展開処理によるヒープバッファオーバーフロー](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48864) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-9804 KubeVirt: vmexportのディレクトリシンボリックリンク回避によりexporter podでファイル読み取りが可能になる](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-9804) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-42012 GnuTLSにおけるURIおよびSRV SANsの不適切な処理による証明書検証バイパス](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42012) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-42015 GnuTLS: pkcs#12バッグ処理のオフバイワンエラーによるメモリ破損](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42015) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-42013 GnuTLS: oversized subject alternative nameに起因する証明書検証バイパス](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42013) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-42790: public_keyのホスト名検証でsubjectのCommonNameへのフォールバックを悪用したnameConstraints DNSバイパス](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42790) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-42789 public_keyのパス検証で非CA証明書が中間発行者として受け入れられる問題](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42789) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-46242 eventpoll: ep_removeにおけるstruct eventpoll/struct fileのUAF修正](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46242) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-40510 OpenSC 0.27.0-rc1未満におけるcard-piv.cのpiv_process_history()経由スタックバッファオーバーフロー](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40510) | 20.0 | 28.0 | 38.0 |
-| [CVE-2026-40528: OpenSC 0.27.0未満の profile.c における do_key_value() のバッファオーバーラン](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40528) | 20.0 | 28.0 | 38.0 |
-| [WP Maps Proの不具合を悪用してWordPressサイトに管理者アカウントを作成する攻撃](https://www.bleepingcomputer.com/news/security/wp-maps-pro-bug-exploited-to-create-admin-accounts-on-wordpress-sites/) | 20.0 | 20.0 | 42.0 |
+| [SCS評価制度でセキュリティ投資「増額予定」が8割／大企業と中小企業のAI導入格差は2.7倍／情シスの3人に2人が「シャドーAI増加」実感、ほか](https://ascii.jp/elem/000/004/406/4406563/?rss=) | 29.0 | 30.0 | 42.0 |
+| [プルーフポイントのプラットフォームが Claude Compliance API と連携](https://scan.netsecurity.ne.jp/article/2026/06/01/55393.html) | 26.0 | 20.0 | 42.0 |
+| [Okta ISPM と Claude Compliance API が統合](https://scan.netsecurity.ne.jp/article/2026/06/01/55392.html) | 26.0 | 20.0 | 42.0 |
+| [第2回 なぜ攻撃対象に？ エージェンティックAIで広がる攻撃対象領域](https://japan.zdnet.com/article/35247985/) | 26.0 | 20.0 | 42.0 |
+| [【最新機能】Claude Designが優秀すぎ…“パワポ整え地獄”が消える神プロンプト14選](https://www.sbbit.jp/article/cont1/185443?ref=rss) | 25.0 | 20.0 | 42.0 |
+| [不正なVPN接続を確立できる「PAN-OS」脆弱性 - 悪用を確認](https://www.security-next.com/185216) | 24.0 | 20.0 | 43.0 |
+| [未確認のRATがNetSupport RATを展開](https://isc.sans.edu/diary/rss/33034) | 22.0 | 20.0 | 42.0 |
+| [先週注目された記事（2026年5月24日〜2026年5月30日）](https://www.security-next.com/185213) | 22.0 | 20.0 | 42.0 |
+| [「Plesk」のLinux版に権限昇格の脆弱性 - 2月のリリースで修正済み](https://www.security-next.com/185206) | 22.0 | 20.0 | 42.0 |
+| [IBMとRed Hat、「Project Lightwell」を発表--約8000億円を投資](https://japan.zdnet.com/article/35248263/) | 21.0 | 20.0 | 42.0 |
+| [エイテックプロに不正アクセス、システム障害が発生](https://scan.netsecurity.ne.jp/article/2026/06/01/55395.html) | 21.0 | 20.0 | 42.0 |
+| [CVE停止の危機とNVDの停滞、セキュリティ担当者が直面する脆弱性情報分断の裏側](https://scan.netsecurity.ne.jp/article/2026/06/01/55394.html) | 21.0 | 20.0 | 42.0 |
+| [「空 × サイバーセキュリティ」をテーマにパネルディスカッション ～「Japan Drone/次世代エアモビリティEXPO 2026」開催 6 / 3 ～ 5](https://scan.netsecurity.ne.jp/article/2026/06/01/55391.html) | 21.0 | 20.0 | 42.0 |
+| [東京都「中小企業向けサイバーセキュリティ対策の極意」ポータルサイトの旧ドメインを第三者が取得](https://scan.netsecurity.ne.jp/article/2026/06/01/55390.html) | 21.0 | 20.0 | 42.0 |
+| [商品問い合わせ欄への不審な QRコード等の投稿に注意喚起](https://scan.netsecurity.ne.jp/article/2026/06/01/55389.html) | 21.0 | 20.0 | 42.0 |
+| [SGLang に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/01/55388.html) | 21.0 | 20.0 | 42.0 |
+| [dnsmasq に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/01/55387.html) | 21.0 | 20.0 | 42.0 |
+| [FortiGateの圧倒的シェアをサプライチェーン防御に生かす フォーティネット 2026年度事業戦略](https://ascii.jp/elem/000/004/406/4406386/?rss=) | 21.0 | 20.0 | 42.0 |
+| [セキュリティ投資の拒絶と有事の責任転嫁 経営層が自戒すべき「人為的ジレンマ」の正体](https://www.itmedia.co.jp/enterprise/articles/2606/02/news004.html) | 21.0 | 20.0 | 42.0 |
+| [インシデント対応演習の基礎](https://japan.zdnet.com/article/35248090/) | 21.0 | 20.0 | 42.0 |
+| [沖縄県浦添市、市民の個人情報11万件以上を保存したノートPCが盗難、入替中で管理不十分な中、委託会社社員が持ち出しか 対象PCは回収済み](https://internet.watch.impress.co.jp/docs/news/2113215.html) | 20.0 | 20.0 | 42.0 |
+| [CyberPowerの無停電電源装置（UPS）がAmazonスマイルSaleに登場！ ラインインタラクティブ＋正弦波出力対応の750VA/525Wモデルが2万6852円](https://internet.watch.impress.co.jp/docs/shopping/2113190.html) | 20.0 | 20.0 | 42.0 |
+| [Casdoorにおける複数の脆弱性](https://jvn.jp/vu/JVNVU95478525/) | 20.0 | 20.0 | 42.0 |
+| [すぐ使えるコード版「ESET HOME セキュリティ プレミアム」がAmazonスマイルSaleで値引き中！ オンラインコード版1台3年版が8263円、5台3年版は1万1880円](https://internet.watch.impress.co.jp/docs/shopping/2113188.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
