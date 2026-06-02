@@ -1,20 +1,22 @@
-# 📡 サイレーダー 2026-06-02 11:00 JST
+# 📡 サイレーダー 2026-06-02 17:00 JST
 
-このレポートは、2026-06-02 05:00 JST〜2026-06-02 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-02 11:00 JST〜2026-06-02 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 56
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 45
+- [音声で扱う想定のトピック](#audio-topics): 4
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 29
+- [低温だが記録しておくトピック](#low-record-topics): 16
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [米当局、「Oracle WebLogic Server」既知脆弱性の悪用に警鐘](#topic-13626) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [ランサムウェア感染や情報漏えいなどの対応を支援する「ALSOKインシデント対応支援サービス」提供開始](#topic-13627) | 30.0 | 38.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [This AI model backdoor attack stays hidden until you customize the model](#topic-13799) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 2 | [NVIDIAの新型SoC「RTX Spark」を搭載したMicrosoft Surface Laptop UltraやASUS ProArt P16などの情報が明らかに](#topic-13711) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 3 | [New Wave Of Phishing Emails with SVG Files, (Tue, Jun 2nd)](#topic-13775) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 4 | [Red Hatの公式npmチャンネルを通じて数十個のパッケージにバックドアが仕込まれていたと判明](#topic-13801) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -22,124 +24,242 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-13626"></a>
+<a id="topic-13799"></a>
 
-### 1. 米当局、「Oracle WebLogic Server」既知脆弱性の悪用に警鐘
-
-#### スコアカード
-
-| 項目 | 値 |
-|---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>脆弱性</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 初出 |
-| <nobr>温度感</nobr> | 39.0 |
-| <nobr>実務影響</nobr> | 38.0 |
-| <nobr>確度</nobr> | 43.0 |
-
-#### 概要
-
-米当局が、OracleのJavaアプリケーションサーバ「WebLogic Server」に関する既知の脆弱性が悪用されているとして、早急な対策を呼びかけています。
-現時点の材料では、対象の脆弱性の詳細や影響範囲は明示されていませんが、既知脆弱性への実際の悪用が示唆されています。
-広く使われる製品で既知脆弱性の悪用が確認されると、未対応環境が標的になりやすいためです。パッチ適用や公開状況の確認が遅れると、侵害リスクが高まります。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認または未評価。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- WebLogic Serverの利用有無と該当バージョンを確認し、ベンダーの修正情報に基づいて速やかに適用状況を点検する。
-- 外部公開されている管理系・アプリケーション系の経路を洗い出し、不要な公開を見直す。
-- 関連ログや監視アラートを確認し、不審なアクセスや異常な挙動がないかを点検する。
-
-#### 参照リンク
-
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
-|---|---|---|
-| <nobr>出典</nobr> | [米当局、「Oracle WebLogic Server」既知脆弱性の悪用に警鐘](https://www.security-next.com/185246) | <nobr>内容確認・補足情報</nobr> |
-
-#### 反応シグナル
-
-- SNS反応: 反応あり・低信頼。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 中。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
-- 開発者コミュニティ反応: 反応未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-
----
-
-<a id="topic-13627"></a>
-
-### 2. ランサムウェア感染や情報漏えいなどの対応を支援する「ALSOKインシデント対応支援サービス」提供開始
+### 1. This AI model backdoor attack stays hidden until you customize the model
 
 #### スコアカード
 
 | 項目 | 値 |
 |---|---:|
 | <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>ランサムウェア</nobr> |
+| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> / <nobr>AI</nobr> |
 | <nobr>分類理由</nobr> | 温度感上位枠 |
 | <nobr>温度状態</nobr> | 初出 |
-| <nobr>温度感</nobr> | 30.0 |
-| <nobr>実務影響</nobr> | 38.0 |
+| <nobr>温度感</nobr> | 33.0 |
+| <nobr>実務影響</nobr> | 20.0 |
 | <nobr>確度</nobr> | 42.0 |
 
 #### 概要
 
-ALSOK株式会社は、ランサムウェア感染や情報漏えいなどのサイバーインシデント対応を支援する「ALSOKインシデント対応支援サービス」の提供を5月末から開始しました。
-既存の「ALSOK情報セキュリティ」サービスに無料で付帯できるとされています。
-インシデント発生時は初動対応の速さが被害抑制に直結するため、支援サービスの拡充は企業の備えとして注目されます。
-特にランサムウェアや情報漏えいのような影響の大きい事案に備える手段として関心を集めやすい内容です。
+研究報告では、事前学習済みの基盤モデルにバックドアを仕込み、後からそのモデルをカスタマイズした下流タスクに影響が残りうる攻撃手法が紹介されています。
+公開情報上では、こうした攻撃はモデルをそのまま使う段階では気づきにくく、適応・再学習の過程で問題が表面化する可能性が示されています。
+AIの導入では外部由来のモデルを取り込むケースが多く、供給元や改変履歴の確認がセキュリティ上の論点になります。
+モデル自体が信頼境界の一部になるため、従来のアプリケーション防御だけでは不十分になり得ます。
 
 #### 温度感の理由
 
 ##### 温度感
-- 脅威・インシデント関連の公開情報として観測しています。
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
 
 ##### 実務影響
-- 情報漏えい系。
-- ランサムウェア文脈。
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 既存のセキュリティ契約に付帯する支援範囲と、実際に受けられる初動支援の内容を確認する。
-- 自社のインシデント対応手順や連絡体制と、外部支援サービスの役割分担を整理する。
-- ランサムウェアや情報漏えいを想定した復旧・連絡・報告のフローが現行運用で機能するか点検する。
+- 基盤モデルの入手元、配布経路、改変履歴を確認し、信頼できる供給元を優先する。
+- 本番反映前に、カスタマイズ後のモデルで想定外の挙動や逸脱がないか検証を行う。
+- モデル管理の台帳化や署名・ハッシュ検証など、モデルの真正性を確認する運用を整える。
 
 #### 参照リンク
 
-| <nobr>種別</nobr> | 参照 | <nobr>確認すべき内容</nobr> |
+| <nobr>種別</nobr> | 参⁠照 | <nobr>確⁠認⁠す⁠べ⁠き⁠内⁠容</nobr> |
 |---|---|---|
-| <nobr>出典</nobr> | [ランサムウェア感染や情報漏えいなどの対応を支援する「ALSOKインシデント対応支援サービス」提供開始](https://internet.watch.impress.co.jp/docs/news/2113461.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [This AI model backdoor attack stays hidden until you customize the model](https://www.helpnetsecurity.com/2026/06/02/ai-model-backdoor-attack-research/) | <nobr>内容確認・補足情報</nobr> |
 
-#### 反応シグナル
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 国内公式情報: なし。
+- 国内メディア掲載: 未確認。
+- 国内コミュニティ反応: 反応未確認。
+- 技術者コミュニティ反応: 未確認。
+- 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+
+---
+
+<a id="topic-13711"></a>
+
+### 2. NVIDIAの新型SoC「RTX Spark」を搭載したMicrosoft Surface Laptop UltraやASUS ProArt P16などの情報が明らかに
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>防御・運用</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 温度上昇中 |
+| <nobr>温度感</nobr> | 33.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+NVIDIAはCOMPUTEX TAIPEI 2026にあわせ、Armベースの新型SoC「RTX Spark」を発表しました。
+あわせて、Microsoft、ASUS、MSI、HP、Lenovo、Dellと共同開発した同SoC搭載ノートPCの存在が示され、一部機種ではスペックや発売時期の情報も出ています。
+新しいPCプラットフォームの登場は、OS対応やドライバ提供、周辺ソフトの互換性など、導入時の確認事項に影響します。
+特に業務端末としての採用を検討する場合は、性能面だけでなく管理機能やサポート体制の見極めが重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- ArmベースPCとしての互換性、利用中の業務アプリ、周辺機器の対応状況を事前に確認する。
+- 導入候補に入れる場合は、更新提供方針や管理機能、長期サポートの条件をベンダーごとに比較する。
+- 公表された仕様や発売時期は変わる可能性があるため、正式発表時点の情報で再確認する。
+
+#### 関連する対象
+
+| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
+|---|---|---|---:|
+| ベンダー | Microsoft | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参⁠照 | <nobr>確⁠認⁠す⁠べ⁠き⁠内⁠容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [NVIDIAの新型SoC「RTX Spark」を搭載したMicrosoft Surface Laptop UltraやASUS ProArt P16などの情報が](https://gigazine.net/news/20260602-nvidia-rtx-spark-laptop-pcs/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
 
 - SNS反応: 反応未確認。
-- 日本語圏一次情報: なし。
-- 日本語圏メディア波及: 未評価。
-- 日本語圏反応: 反応未確認。
-- 技術者コミュニティ反応: 未評価。
+- 国内公式情報: なし。
+- 国内メディア掲載: 中。
+- 国内コミュニティ反応: 反応あり。
+- 技術者コミュニティ反応: 未確認。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: なし。
+
+---
+
+<a id="topic-13775"></a>
+
+### 3. New Wave Of Phishing Emails with SVG Files, (Tue, Jun 2nd)
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>脅威アクター</nobr> / <nobr>フィッシング</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 初出 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+SANS Internet Storm Center は、SVGファイルを添付・配信に用いるフィッシングメールが数日間にわたって増えていると報告しています。
+本文にURLを置かず、画像のように見えるファイルを使う点が特徴で、こうした手口は過去にも確認されています。
+SVGは見た目上は画像として扱われやすく、メール受信者や一部の検査をすり抜ける可能性があるため、注意が必要です。
+メール防御や利用者教育の観点で、添付ファイル型のフィッシングへの警戒を改めて促す話題です。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術者コミュニティ反応: 弱。
+
+##### 実務影響
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- SVG添付を含むメールを通常の画像扱いで見落とさないよう、メールゲートウェイや検疫ルールを確認する。
+- 添付ファイルの実体を確認し、ユーザーには不審な画像・文書ファイルを開かないよう周知する。
+- ファイル型フィッシングの検知ログや隔離件数を見て、同種キャンペーンの流入有無を継続監視する。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参⁠照 | <nobr>確⁠認⁠す⁠べ⁠き⁠内⁠容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [New Wave Of Phishing Emails with SVG Files, (Tue, Jun 2nd)](https://isc.sans.edu/diary/rss/33040) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 国内公式情報: なし。
+- 国内メディア掲載: 未確認。
+- 国内コミュニティ反応: 反応未確認。
+- 技術者コミュニティ反応: 弱。
 - 開発者コミュニティ反応: 反応未確認。
+- 攻撃・悪用観測シグナル: なし。
+
+---
+
+<a id="topic-13801"></a>
+
+### 4. Red Hatの公式npmチャンネルを通じて数十個のパッケージにバックドアが仕込まれていたと判明
+
+#### スコアカード
+
+| 項目 | 値 |
+|---|---:|
+| <nobr>区分</nobr> | 音声 |
+| <nobr>タグ</nobr> | <nobr>マルウェア</nobr> / <nobr>Linux</nobr> |
+| <nobr>分類理由</nobr> | 温度感上位枠 |
+| <nobr>温度状態</nobr> | 初出 |
+| <nobr>温度感</nobr> | 30.0 |
+| <nobr>実務影響</nobr> | 20.0 |
+| <nobr>確度</nobr> | 42.0 |
+
+#### 概要
+
+Red Hatの公式npmチャンネル配下にある複数のパッケージが侵害され、バックドアが仕込まれていたと報じられています。
+報道によれば、影響範囲は32パッケージ・96バージョンに及び、開発者の認証情報を狙う不正コードが含まれていた可能性があります。
+公式の配布経路が影響を受けた場合、利用者は信頼して取り込んだ依存関係を通じて被害を受けるおそれがあります。
+サプライチェーン型の問題として、個別の脆弱性よりも広い範囲に波及しうる点が注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 利用中の npm 依存関係に該当パッケージや該当バージョンが含まれていないか確認する。
+- 認証情報やトークンの漏えいを前提に、関連する秘密情報の更新や失効を検討する。
+- ビルド・配布の監視を強化し、依存パッケージの変更検知やサプライチェーン対策を見直す。
+
+#### 参照リンク
+
+| <nobr>種別</nobr> | 参⁠照 | <nobr>確⁠認⁠す⁠べ⁠き⁠内⁠容</nobr> |
+|---|---|---|
+| <nobr>出典</nobr> | [Red Hatの公式npmチャンネルを通じて数十個のパッケージにバックドアが仕込まれていたと判明](https://gigazine.net/news/20260602-red-hat-npm-packages-miasma/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 反応あり・高信頼。
+- 国内公式情報: なし。
+- 国内メディア掲載: 中。
+- 国内コミュニティ反応: 反応未確認。
+- 技術者コミュニティ反応: 未確認。
+- 開発者コミュニティ反応: 反応あり。
 - 攻撃・悪用観測シグナル: なし。
 
 ---
@@ -159,35 +279,22 @@ ALSOK株式会社は、ランサムウェア感染や情報漏えいなどのサ
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Red Hatのnpmパッケージが侵害され開発者認証情報を窃取](https://www.bleepingcomputer.com/news/security/red-hat-npm-packages-compromised-to-steal-developer-credentials/) | 28.0 | 45.0 | 42.0 |
-| [ハッカーが数千のサイトを乗っ取り、ClickFixとFakeUpdate攻撃を実施](https://www.bleepingcomputer.com/news/security/hackers-hijack-thousands-of-sites-for-clickfix-and-fakeupdate-attacks/) | 28.0 | 20.0 | 42.0 |
-| [Claude「一強」崩壊？開発者が「Codex」へ流出するワケ、どこに“17倍”性能差ある？](https://www.sbbit.jp/article/cont1/185499?ref=rss) | 27.0 | 20.0 | 42.0 |
-| [自律型AIエージェントを安全に運用するには？ Anthropicがセキュリティフレームワークを公開](https://www.itmedia.co.jp/enterprise/articles/2606/02/news040.html) | 26.0 | 20.0 | 42.0 |
-| [API keyから数分でライブ脅威検知へ：Elastic SecurityがGoogle Threat Intelligenceを取り込む方法](https://www.elastic.co/security-labs/elastic-security-google-threat-intelligence) | 25.0 | 20.0 | 42.0 |
-| [GAFAMも手を出せない？三菱電機×燈「日本発AI」が“ある市場”で1人勝ちしそうな理由](https://www.sbbit.jp/article/st/185364?ref=rss) | 25.0 | 20.0 | 42.0 |
-| [SBI北尾氏「この2年が勝負」…イーロン・マスク氏と争うAI金融覇権、“最後の手”とは](https://www.sbbit.jp/article/fj/185461?ref=rss) | 25.0 | 20.0 | 42.0 |
-| [OpenAI、サイバー防御力と重要分野のレジリエンス強化を目的とした「日本サイバー・アクションプラン」発表](https://internet.watch.impress.co.jp/docs/news/2113409.html) | 25.0 | 20.0 | 42.0 |
-| [Anthropic 上場に向けIPO申請](https://news.yahoo.co.jp/pickup/6582610?source=rss) | 25.0 | 20.0 | 42.0 |
-| [Anthropic、EUのENISAにMythos AIを公開へ](https://www.darkreading.com/cyber-risk/anthropic-mythos-ai-eu-enisa) | 25.0 | 20.0 | 42.0 |
-| [「Cloud Foundry UAA」にEC秘密鍵情報が漏洩するおそれ](https://www.security-next.com/185257) | 22.0 | 20.0 | 42.0 |
-| [「WebSphere App Server」に複数の深刻な脆弱性 - 暫定パッチ公開](https://www.security-next.com/185252) | 22.0 | 20.0 | 42.0 |
-| [「Google Chrome」、Cookie盗難防止機能の一般提供を開始](https://japan.zdnet.com/article/35248306/) | 21.0 | 20.0 | 42.0 |
-| [セキュリティ研究者がカンファレンス講演枠を獲得する完璧な方法：応募システムのハッキング](https://scan.netsecurity.ne.jp/article/2026/06/02/55404.html) | 21.0 | 20.0 | 42.0 |
-| [Booking.comへの不正アクセス、売上金受領口座情報が改ざん 約 900 万円の損失が発生](https://scan.netsecurity.ne.jp/article/2026/06/02/55403.html) | 21.0 | 20.0 | 42.0 |
-| [Booking.com経由でホテルグランバッハ京都セレクトを予約した顧客にフィッシングサイト誘導メッセージ、注意を呼びかけ](https://scan.netsecurity.ne.jp/article/2026/06/02/55402.html) | 21.0 | 20.0 | 42.0 |
-| [Booking.com 経由でホテルサンルート浅草を予約した顧客に予約確認を装った不審メッセージ、注意を呼びかけ](https://scan.netsecurity.ne.jp/article/2026/06/02/55401.html) | 21.0 | 20.0 | 42.0 |
-| [NTTセキュリティ・ジャパンの Mythos 解説ほか](https://scan.netsecurity.ne.jp/article/2026/06/02/55400.html) | 21.0 | 20.0 | 42.0 |
-| [「 たのめーる」がログイン通知メール送信開始 法人会員対象](https://scan.netsecurity.ne.jp/article/2026/06/02/55399.html) | 21.0 | 20.0 | 42.0 |
-| [AeyeScan が時限式のワンタイムパスワード認証サイトの診断に対応](https://scan.netsecurity.ne.jp/article/2026/06/02/55398.html) | 21.0 | 20.0 | 42.0 |
-| [講義動画を YouTube 配信 ～ IPA「制御システムのセキュリティリスク分析ガイド オンラインセミナー2026年度（上期）」開催](https://scan.netsecurity.ne.jp/article/2026/06/02/55397.html) | 21.0 | 20.0 | 42.0 |
-| [Jupyter Server にオープンリダイレクトの脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/02/55396.html) | 21.0 | 20.0 | 42.0 |
-| [Linuxを狙うマルウエア](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/111900071/051800079/) | 21.0 | 20.0 | 42.0 |
-| [多層防御の意味合いがいつの間にか変化していた](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/091900173/051800033/) | 21.0 | 20.0 | 42.0 |
-| [Palo Alto Networksの見過ごされていた脆弱性を悪用する攻撃者たち](https://cyberscoop.com/palo-alto-networks-cve-2026-0257-exploited-vulnerability/) | 20.0 | 20.0 | 42.0 |
-| [SBI新生銀・北國銀も動いた…「デポジットトークン」徹底解説、その優位性とは？](https://www.sbbit.jp/article/fj/185449?ref=rss) | 20.0 | 20.0 | 42.0 |
-| [AtermシリーズのWi-Fiルーターの一部に脆弱性、対象機種および対策済みファームウェアについての記事に注目が集まる【アクセスランキング】](https://internet.watch.impress.co.jp/docs/news/ranking/2113258.html) | 20.0 | 20.0 | 42.0 |
-| [スペイン、政府職員の機密情報を流出させたドクサーを逮捕](https://www.bleepingcomputer.com/news/security/spain-arrests-doxer-leaking-sensitive-data-of-govt-employees/) | 20.0 | 20.0 | 42.0 |
-| [NISTのミスにより脆弱性データベースが機能不全に、監察官が指摘](https://therecord.media/nist-mistakes-vulnerability-database-inspector-general) | 20.0 | 20.0 | 42.0 |
+| [ゼロトラストの物理セキュリティではエッジでの信頼判断が必要になる](https://www.helpnetsecurity.com/2026/06/02/chuck-davis-hikvision-zero-trust-physical-security/) | 28.0 | 20.0 | 42.0 |
+| [Dashlane、ブルートフォース攻撃を公表　20人未満のユーザーの暗号化されたVaultがダウンロードされる](https://thehackernews.com/2026/06/dashlane-discloses-brute-force-attack.html) | 28.0 | 20.0 | 42.0 |
+| [GitHub Copilotの従量課金がついに開始、「AIクレジット」を使い切ると追加利用には別料金が必要に](https://gigazine.net/news/20260602-github-copilot-update-plan/) | 27.0 | 20.0 | 42.0 |
+| [UiPath、ドキュメント処理「IXP」の標準モデルに「Gemini」を採用](https://japan.zdnet.com/article/35248330/) | 26.0 | 20.0 | 42.0 |
+| [AIで高度化するサイバー攻撃にどう立ち向かう？ 各種レポートに見る脅威の現在地とセキュリティの基本](https://www.itmedia.co.jp/enterprise/articles/2606/02/news024.html) | 26.0 | 20.0 | 42.0 |
+| [TP-LinkのWi-Fiルーター「Archer BE450（BE7200）」に脆弱性、最新ファームウェアへのアップデートを](https://internet.watch.impress.co.jp/docs/news/2113626.html) | 24.0 | 38.0 | 42.0 |
+| [「Ivanti Neurons for ITSM」に高リスク脆弱性 - 定例外パッチを公開](https://www.security-next.com/185285) | 22.0 | 20.0 | 42.0 |
+| [まもなく「Interop Tokyo 2026」が開催 - AI時代のインフラがテーマ](https://www.security-next.com/185278) | 22.0 | 20.0 | 42.0 |
+| [OpenAIのAIモデルとCodexがAWSで利用可能に、企業が既存環境を活用しやすくなる](https://gigazine.net/news/20260602-openai-codex-aws/) | 22.0 | 20.0 | 42.0 |
+| [6分に1つのペースで悪性パッケージが見つかる オープンソースエコシステムを狙う攻撃の実態](https://atmarkit.itmedia.co.jp/ait/articles/2606/02/news056.html) | 21.0 | 20.0 | 42.0 |
+| [女性向け転職サイトで3万8000件の不正ログイン 「女の転職type」にリスト型攻撃](https://www.itmedia.co.jp/news/articles/2606/02/news077.html) | 21.0 | 20.0 | 42.0 |
+| [Oracle、初の月例パッチで77件の脆弱性を修正](https://www.securityweek.com/oracles-first-monthly-patches-resolve-77-vulnerabilities/) | 20.0 | 20.0 | 42.0 |
+| [アイデンティティ攻撃の増加で、チャネルに新たなマネージドサービスの機会が生まれる](https://www.itpro.com/security/as-identity-attacks-rise-the-channel-has-a-new-managed-services-play) | 20.0 | 20.0 | 42.0 |
+| [RSA、Linux環境へのパスワードレス認証を拡張](https://www.helpnetsecurity.com/2026/06/02/rsa-linux-passwordless-authentication-support/) | 20.0 | 20.0 | 42.0 |
+| [BASと自律型ペンテストを併用すべき理由](https://www.helpnetsecurity.com/2026/06/02/picus-security-autonomous-pentesting-validation-gaps/) | 20.0 | 20.0 | 42.0 |
+| [現在募集中のサイバーセキュリティ関連求人情報：2026年6月2日](https://www.helpnetsecurity.com/2026/06/02/cybersecurity-jobs-available-right-now-june-2-2026/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
