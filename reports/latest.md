@@ -1,19 +1,19 @@
-# 📡 サイレーダー 2026-06-03 11:00 JST
+# 📡 サイレーダー 2026-06-03 17:00 JST
 
-このレポートは、2026-06-03 05:00 JST〜2026-06-03 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-03 11:00 JST〜2026-06-03 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 57
+- 観測トピック数: 56
 - [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 30
+- [低温だが記録しておくトピック](#low-record-topics): 28
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [AI-built ransomware toolkit automates EDR evasion, AD discovery](#topic-14050) | 41.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [VS Code zero-day lets hackers steal GitHub tokens in one click](#topic-14402) | 35.0 | 38.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -21,67 +21,60 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-14050"></a>
+<a id="topic-14402"></a>
 
-### 1. AI-built ransomware toolkit automates EDR evasion, AD discovery
+### 1. VS Code zero-day lets hackers steal GitHub tokens in one click
 
 #### スコアカード
 
-| 項目 | 値 |
+| 項⁠目 | 値 |
 |---|---:|
-| <nobr>区分</nobr> | 音声 |
-| <nobr>タグ</nobr> | <nobr>Windows</nobr> / <nobr>ランサムウェア</nobr> / <nobr>防御・運用</nobr> / <nobr>AI</nobr> / <nobr>脅威アクター</nobr> |
-| <nobr>分類理由</nobr> | 温度感上位枠 |
-| <nobr>温度状態</nobr> | 継続監視 |
-| <nobr>温度感</nobr> | 41.0 |
-| <nobr>実務影響</nobr> | 30.0 |
-| <nobr>確度</nobr> | 42.0 |
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>P⁠o⁠C</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 35.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-公開情報によると、脅威アクターがAIで構築されたランサムウェア向けツールキットを利用し、Active Directoryの探索やEDR回避を自動化しているとされています。
-現時点では報告ベースの内容であり、個別の手口や影響範囲の詳細は未確定です。
-ランサムウェアの準備や回避が自動化されると、攻撃の効率が上がり、防御側が検知・対応する前に侵入が進むおそれがあります。
-AIの悪用が実運用の攻撃能力に結びついている点で、注視されています。
+Visual Studio Codeに、ユーザーがリンクをクリックするだけでGitHub認証トークンが盗まれる可能性があるゼロデイ脆弱性が報告されています。
+公開情報では、研究者が関連する実証コードを示したとされますが、被害の広がりや実際の悪用状況は材料だけでは断定できません。
+VS Codeは開発現場で広く使われるため、認証トークンの漏えいはGitHub上のリポジトリや開発資産への不正アクセスにつながるおそれがあります。
+単純なクリックを起点とするため、利用者教育やアクセス制御だけでなく、迅速な製品更新の重要性が高い話題です。
 
 #### 温度感の理由
 
 ##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
+- 実悪用・ゼロデイ文脈。
 
 ##### 実務影響
-- ランサムウェア文脈。
+- 悪用情報あり。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- EDRの検知回避を前提に、アラートだけでなくAD関連の不審な探索・列挙の兆候も合わせて監視する。
-- Active Directoryの権限設計、管理者アカウントの分離、多要素認証、特権操作の最小化を再点検する。
-- ランサムウェア対策として、バックアップの隔離性と復旧手順の実効性を定期的に確認する。
-
-#### 関連する対象
-
-| <nobr>種類</nobr> | 名称 | <nobr>関係</nobr> | <nobr>確度</nobr> |
-|---|---|---|---:|
-| 製品 | Active Directory | 言及あり | 0.80 |
+- VS Codeおよび関連拡張機能を最新状態に保ち、ベンダーの修正情報を確認する。
+- GitHubトークンの権限を最小化し、不要なトークンは失効・ローテーションする。
+- 開発者向けに不審なリンクや外部からの誘導に注意するよう周知し、漏えい時の対応手順を確認しておく。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [AI-built ransomware toolkit automates EDR evasion, AD discovery](https://www.bleepingcomputer.com/news/security/ai-built-ransomware-toolkit-automates-edr-evasion-ad-discovery/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [VS Code zero-day lets hackers steal GitHub tokens in one click](https://www.bleepingcomputer.com/news/security/vs-code-zero-day-lets-hackers-steal-github-tokens-in-one-click/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 反応あり・低信頼。
 - 国内公式情報: なし。
 - 国内メディア掲載: 未確認。
-- 国内コミュニティ反応: 反応あり・低信頼。
+- 国内コミュニティ反応: 未確認。
 - 技術者コミュニティ反応: 未確認。
-- 開発者コミュニティ反応: 未確認。
+- 開発者コミュニティ反応: 反応あり。
 - 攻撃・悪用観測シグナル: なし。
 
 ---
@@ -101,36 +94,34 @@ AIの悪用が実運用の攻撃能力に結びついている点で、注視さ
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [穴吹ハウジングサービスへのランサムウェア攻撃、外部に漏えいした可能性のある個人情報は 207,773 件であることを最終確認](https://scan.netsecurity.ne.jp/article/2026/06/03/55414.html) | 29.0 | 30.0 | 42.0 |
-| [「復旧は被害資産を戻すのではなく新しく構築」東山産業 ランサムウェア攻撃被害](https://scan.netsecurity.ne.jp/article/2026/06/03/55412.html) | 29.0 | 30.0 | 42.0 |
-| [PCの安全性と信頼性を高める無料のWindowsアプリ更新ツール「UniGetUI」](https://japan.zdnet.com/article/35248159/) | 29.0 | 20.0 | 42.0 |
-| [116,000台超のMinecraftシステムがWeedHackマルウェアキャンペーンで感染](https://www.bleepingcomputer.com/news/security/over-116-000-mincraft-systems-infected-in-weedhack-malware-campaign/) | 28.0 | 20.0 | 42.0 |
-| [DriveSurgeが数千のサイトを乗っ取り、ClickFixとFakeUpdate攻撃を展開](https://www.darkreading.com/cyberattacks-data-breaches/drivesurge-hijacks-thousands-sites-clickfix-fakeupdate-attacks) | 28.0 | 20.0 | 42.0 |
-| [マイクロソフト、同社初の推論モデルを含む7つの新AIモデルを発表](https://japan.zdnet.com/article/35248354/) | 26.0 | 20.0 | 42.0 |
-| [Microsoftが自律型AIエージェントを投入、ナデラCEO「やりたいことに集中」](https://xtech.nikkei.com/atcl/nxt/column/18/00001/11790/) | 26.0 | 20.0 | 42.0 |
-| [Okta Blog 第16回 フィッシング詐欺被害に遭った AI エージェント](https://scan.netsecurity.ne.jp/article/2026/06/03/55416.html) | 26.0 | 20.0 | 42.0 |
-| [ソフトバンクの「10億 AI agents」実現を支えるセキュリティ戦略 ～ CISO室ストラテジーリード講演](https://scan.netsecurity.ne.jp/article/2026/06/03/55411.html) | 26.0 | 20.0 | 42.0 |
-| [NECが「AI Platform Service」を開発、活用する理由--AIネイティブ時代に勝ち抜く正念場](https://japan.zdnet.com/article/35248342/) | 26.0 | 20.0 | 42.0 |
-| [OpenAI、GPT-5.5をアップグレードし旧ChatGPTモデルの廃止を計画](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-upgrades-gpt-55-as-it-plans-to-retire-legacy-chatgpt-models/) | 25.0 | 20.0 | 42.0 |
-| [Zoom CISO：AIはセキュリティの推進役であり、役割の代替ではない](https://www.darkreading.com/cybersecurity-operations/zoom-ciso-ai-security-enabler-role-replacer) | 25.0 | 20.0 | 42.0 |
-| [Trumpが署名した、主要AIモデルの国家安全保障リスク審査を促す大統領令](https://www.securityweek.com/trump-signs-executive-order-that-invites-vetting-of-top-ai-models-for-national-security-risks/) | 25.0 | 20.0 | 42.0 |
-| [トランプ米大統領、AI安全保障に関する大統領令に署名 最先端モデルを公開30日前に政府が検査可能に](https://www.itmedia.co.jp/news/articles/2606/03/news068.html) | 24.0 | 20.0 | 43.0 |
-| [Critical Kirkiの脆弱性を悪用したWordPress管理者アカウント乗っ取り](https://www.bleepingcomputer.com/news/security/critical-kirki-flaw-exploited-to-hijack-wordpress-admin-accounts/) | 22.0 | 40.0 | 50.0 |
-| [「Firefox」が複数の脆弱性を修正 - iOS版のアップデートも](https://www.security-next.com/185308) | 22.0 | 20.0 | 42.0 |
-| [マイクロソフト、エージェントAI型脆弱性対策システム「MDASH」をリリース](https://japan.zdnet.com/article/35248345/) | 21.0 | 20.0 | 42.0 |
-| [Safetica Technologies 社のカーネルドライバーにおける任意のプロセスが停止可能となる脆弱性（Scan Tech Report）](https://scan.netsecurity.ne.jp/article/2026/06/03/55417.html) | 21.0 | 20.0 | 42.0 |
-| [オンラインセミナー「サプライチェーン攻撃の 2 大リスク、なりすましと脆弱性悪用」6 / 24 開催、エーアイセキュリティラボとGMOグローバルサイン共催](https://scan.netsecurity.ne.jp/article/2026/06/03/55415.html) | 21.0 | 20.0 | 42.0 |
-| [アイサンテクノロジー コーポレートサイトに不正アクセス、不適切なウェブページへ誘導される事象発生](https://scan.netsecurity.ne.jp/article/2026/06/03/55413.html) | 21.0 | 20.0 | 42.0 |
-| [SBOM 導入の課題整理ほか「サイバーセキュリティに関するグローバル動向四半期レポート（2025年2Q）」](https://scan.netsecurity.ne.jp/article/2026/06/03/55410.html) | 21.0 | 20.0 | 42.0 |
-| [セコムトラストシステムズ、学生証プラットフォームに電子証明書を提供](https://scan.netsecurity.ne.jp/article/2026/06/03/55409.html) | 21.0 | 20.0 | 42.0 |
-| [Auth0 が「Stripe Projects Developer Preview」で利用可能に](https://scan.netsecurity.ne.jp/article/2026/06/03/55408.html) | 21.0 | 20.0 | 42.0 |
-| [総務省近畿総合通信局「医療機関向けサイバーセキュリティワークショップ」を 7 / 23開催、実践的サイバー防御演習「CYDER」の展示ブースも](https://scan.netsecurity.ne.jp/article/2026/06/03/55407.html) | 21.0 | 20.0 | 42.0 |
-| [ServerView Agents for Windowsに複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/03/55406.html) | 21.0 | 20.0 | 42.0 |
-| [サイバー攻撃におけるAIは、葬送のフリーレンのゾルトラークに成り得るのか？［前編］](https://japan.zdnet.com/article/35248069/) | 21.0 | 20.0 | 42.0 |
-| [古いデータがAIの導入を邪魔する要因とその管理方法](https://japan.zdnet.com/article/35248213/) | 21.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年06月02日）](https://jvn.jp/vu/JVNVU95215075/) | 20.0 | 20.0 | 42.0 |
-| [Weekly Report: Atril、EvinceおよびXreaderに引数インジェクションの脆弱性](https://www.jpcert.or.jp/wr/2026/wr260603.html) | 20.0 | 20.0 | 42.0 |
-| [FBIが警告したフィッシングキットKali365の拡大する脅威](https://www.darkreading.com/cyber-risk/fbi-flagged-phishing-kit-kali365-expands-its-reach) | 20.0 | 20.0 | 42.0 |
+| [スロベニアの小規模チームが年間6,000件のサイバーインシデントを対応](https://www.helpnetsecurity.com/2026/06/03/gorazd-bozic-si-cert-cyber-incident-response/) | 28.0 | 30.0 | 42.0 |
+| [WeedhackによるMinecraftユーザーへの攻撃、CountLoaderが86,000件に到達、マイニングツールが海賊版コンテンツ経由で拡散](https://thehackernews.com/2026/06/weedhack-attacks-minecraft-users.html) | 28.0 | 20.0 | 42.0 |
+| [MicrosoftがOpenClawベースの常時稼働型AIエージェント「Scout」を発表、ユーザーの代わりに仕事を進める「Autopilot」第1弾](https://gigazine.net/news/20260603-microsoft-scout-by-openclaw/) | 28.0 | 20.0 | 42.0 |
+| [マーティン・スコセッシ監督がAI企業のアドバイザーに就任、イメージを他者へ共有する手段として画像生成AIの活用に意欲的](https://gigazine.net/news/20260603-martin-scorsese-black-forest-labs/) | 27.0 | 20.0 | 42.0 |
+| [GitHub Copilotが「AIアシスタント」から「AI開発チーム」へ進化、専用アプリの全貌が明らかに](https://gigazine.net/news/20260603-github-copilot-app/) | 27.0 | 20.0 | 42.0 |
+| [トランプ大統領がAI規制は拒否しつつサイバー防衛能力を強化する大統領令に署名](https://gigazine.net/news/20260603-trump-ai-innovation-security/) | 27.0 | 20.0 | 42.0 |
+| [Microsoft、AIエージェント用のカスタマイズ可能な分離環境「Microsoft Execution Containers」発表　OpenClawも動作](https://www.itmedia.co.jp/news/articles/2606/03/news074.html) | 27.0 | 20.0 | 42.0 |
+| [買い物の決め手は生成AIへ--ユーザーレビューを上回る信頼度、「最終判断も委ねたい」6割](https://japan.zdnet.com/article/35248358/) | 26.0 | 20.0 | 42.0 |
+| [テラスカイがAI駆動開発モデル「BLADE」の運用開始、三菱電機で先行導入](https://xtech.nikkei.com/atcl/nxt/news/24/03250/) | 26.0 | 20.0 | 42.0 |
+| [AI活用の障壁は運用の複雑性--Datadog、AI Engineering調査レポート](https://japan.zdnet.com/article/35248395/) | 26.0 | 20.0 | 42.0 |
+| [Microsoft、自社開発した7つのAIモデル発表　画像編集や音声認識も](https://www.itmedia.co.jp/news/articles/2606/03/news077.html) | 26.0 | 20.0 | 42.0 |
+| [Infosecurity Europe: AI搭載サイバー犯罪ツールがダークウェブで急増](https://www.infosecurity-magazine.com/news/cybercrime-ai-tools-surge-3800/) | 25.0 | 20.0 | 42.0 |
+| [Critical Start、マルチエージェントAIシステムでMDR機能を拡張](https://www.helpnetsecurity.com/2026/06/03/critical-start-soc-ai/) | 25.0 | 20.0 | 42.0 |
+| [MazeBolt、DDoSセキュリティテストにAI生成の攻撃シミュレーションを導入](https://www.helpnetsecurity.com/2026/06/03/mazebolt-radar-vectorai/) | 25.0 | 20.0 | 42.0 |
+| [Netskope、AIセキュリティ製品群にAI資産発見とAISecOpsエージェントを追加](https://www.helpnetsecurity.com/2026/06/03/netskope-one-ai-command-center/) | 25.0 | 20.0 | 42.0 |
+| [AIエージェントのセキュリティ脅威に対応するオープン検知ルール形式](https://www.helpnetsecurity.com/2026/06/03/agent-threat-rules-ai-detection/) | 25.0 | 20.0 | 42.0 |
+| [中学校でサポート詐欺被害、1000万円が不正送金 - 牧之原市](https://www.security-next.com/185320) | 22.0 | 20.0 | 42.0 |
+| [Amazon傘下のRingが無断で顔認識データを収集したとして集団訴訟を提起される](https://gigazine.net/news/20260603-amazon-ring-scanning/) | 22.0 | 20.0 | 42.0 |
+| [「Zoho Mail for WordPress」にCSRF脆弱性 - 設定改ざんのおそれ](https://www.security-next.com/185339) | 22.0 | 20.0 | 42.0 |
+| [MicrosoftがgrepなどのUNIX系コマンドをWindowsで使用可能にする「Coreutils for Windows」を公開](https://gigazine.net/news/20260603-coreutils-for-windows/) | 22.0 | 20.0 | 42.0 |
+| [CAMPFIRE「従業員がGitHub認証情報を個人開発サーバに誤アップロード」 不正アクセスの原因公表](https://www.itmedia.co.jp/news/articles/2606/03/news114.html) | 21.0 | 20.0 | 42.0 |
+| [サイバーセキュリティクラウドで働くみんなのデスク環境 上場セキュリティ企業を支える机をチェック](https://www.itmedia.co.jp/news/articles/2606/02/news032.html) | 21.0 | 20.0 | 42.0 |
+| [Appsmithにおけるクロスサイトスクリプティングの脆弱性](https://jvn.jp/vu/JVNVU98968214/) | 20.0 | 20.0 | 42.0 |
+| [Collibra Platform Agentにおける複数の脆弱性](https://jvn.jp/vu/JVNVU95031413/) | 20.0 | 20.0 | 42.0 |
+| [CISOが今後24か月で取り組むべき耐量子移行の対策](https://www.helpnetsecurity.com/2026/06/03/post-quantum-migration-timeline-video/) | 20.0 | 20.0 | 42.0 |
+| [警察庁 サイバー対策に民間専門家](https://news.yahoo.co.jp/pickup/6582772?source=rss) | 20.0 | 20.0 | 42.0 |
+| [アプリケーションセキュリティインシデントの大半を支える既知の脆弱性](https://www.helpnetsecurity.com/2026/06/03/csa-application-security-incidents/) | 20.0 | 20.0 | 42.0 |
+| [WordPress用プラグインZoho Mail for WordPressにおけるクロスサイトリクエストフォージェリの脆弱性](https://jvn.jp/jp/JVN24733221/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
