@@ -1,19 +1,19 @@
-# 📡 サイレーダー 2026-06-06 11:00 JST
+# 📡 サイレーダー 2026-06-06 17:00 JST
 
-このレポートは、2026-06-06 05:00 JST〜2026-06-06 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-06 11:00 JST〜2026-06-06 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 30
+- 観測トピック数: 27
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 4
+- [低温だが記録しておくトピック](#low-record-topics): 1
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Cisco Catalyst SD-WAN Manager Authenticated Privilege Escalation Vulnerability](#topic-4945) | 63.0 | 84.0 | 67.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
+| 1 | [Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch Available](#topic-15753) | 40.0 | 58.0 | 55.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
 
 ---
 
@@ -27,44 +27,38 @@
 
 ## 📌 GitHubのみ掲載の注目トピック
 
-<a id="topic-4945"></a>
+<a id="topic-15753"></a>
 
-### 1. Cisco Catalyst SD-WAN Manager Authenticated Privilege Escalation Vulnerability
+### 1. Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch Available
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | GitHub |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>認⁠証⁠バ⁠イ⁠パ⁠ス</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>I⁠o⁠C</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> |
-| <nobr>温⁠度⁠状⁠態</nobr> | 高温 |
-| <nobr>温⁠度⁠感</nobr> | 63.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 84.0 |
-| <nobr>確⁠度</nobr> | 67.0 |
+| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>T⁠T⁠P</nobr> |
+| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
+| <nobr>温⁠度⁠感</nobr> | 40.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 58.0 |
+| <nobr>確⁠度</nobr> | 55.0 |
 
 #### 概要
 
-Cisco Catalyst SD-WAN Managerに、認証済みのローカル攻撃者が細工したファイルを使ってroot権限で任意コマンドを実行できる脆弱性が報告されています。
-CVE-2026-20182として追跡され、Ciscoは修正アップデートを公開しています。
-公開PoCや限定的な実際の悪用に関する言及もあり、管理系コンポーネントを運用している組織では優先対応が必要です。
-SD-WANの管理プレーンに影響するため、侵害されるとネットワーク全体の運用や制御に波及するおそれがあります。
-さらに、公開PoCや実悪用の文脈があることで、パッチ未適用環境へのリスクが高まります。
+Cisco Catalyst SD-WAN Managerに影響するCVE-2026-20245について、現時点で未修正のまま悪用が観測されていると報じられています。
+公開情報では権限昇格に関わる脆弱性とされ、攻撃には対象環境でのnetadmin権限が必要とされています。
+SD-WAN管理基盤はネットワーク運用の中枢に当たるため、影響が出ると広範囲の管理機能に波及する可能性があります。
+しかも修正パッチがまだないため、緩和策や侵害有無の確認が重要になります。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 9 sources。
+- 複数ソースで確認: 2 sources。
 - 実悪用・ゼロデイ文脈。
-- 公開PoC・検証コード言及あり。
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 中。
 - 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
-- 公開PoCにより再現・悪用可能性が上がる。
-- RCEまたは認証バイパス系。
-- ランサムウェア文脈。
+- 権限昇格系。
 
 ##### 確度
 - 複数ソース確認。
@@ -73,44 +67,30 @@ SD-WANの管理プレーンに影響するため、侵害されるとネット�
 
 #### 攻撃・悪用観測シグナル
 
-- シグナル種別: 公開PoC・検証コード言及あり。
-- 公開PoC/Exploitコード: 確認あり。
-- 直接PoCリンク: 掲載しません。
-- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
 
 #### 担当者向け確認ポイント
 
-- Ciscoの勧告を確認し、該当バージョンかどうかを早急に棚卸しする。
-- 修正済みバージョンへの更新を優先し、適用までの間は管理アクセスとアップロード機能の利用状況を厳格に監視する。
-- SD-WAN Manager/Controller周辺の認証・特権操作ログを点検し、不審なファイル投入や想定外のコマンド実行がないか確認する。
+- CVE-2026-20245の影響範囲に自組織のCisco Catalyst SD-WAN Managerが含まれるか確認する。
+- netadmin権限を持つアカウントの棚卸しと認証情報の保護を強化する。
+- 関連する不審な管理操作や権限変更のログを優先的に点検する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
 |---|---|---|---:|
-| 脆弱性 | CVE-2026-20182 | 主要CVE | 1.00 |
 | 脆弱性 | CVE-2026-20245 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-41940 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2023-7101 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-31431 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20133 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20128 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20122 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-20127 | 主要CVE | 1.00 |
-| 脆弱性 | CVE-2026-24479 | 主要CVE | 1.00 |
+| ベンダー | Cisco | 言及あり | 0.80 |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20182](https://nvd.nist.gov/vuln/detail/CVE-2026-20182) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Cisco Catalyst SD-WAN Manager Authenticated Privilege Escalation Vulnerability](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-privesc-4uxFrdzx) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Metasploit Wrap Up 05/22/2026](https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-22-2026) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco zero-day under ongoing attack by persistent threat group](https://cyberscoop.com/cisco-sd-wan-zero-day-exploited/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco patches another actively exploited SD-WAN zero-day (CVE-2026-20182)](https://www.helpnetsecurity.com/2026/05/15/cisco-sd-wan-zero-day-cve-2026-20182/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco Patches Another SD-WAN Zero-Day, the Sixth Exploited in 2026](https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-the-sixth-exploited-in-2026/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CISA Adds Cisco SD-WAN CVE-2026-20182 to KEV After Admin Access Exploits](https://thehackernews.com/2026/05/cisa-adds-cisco-sd-wan-cve-2026-20182.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco warns of new critical SD-WAN flaw exploited in zero-day attacks](https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-critical-sd-wan-flaw-exploited-in-zero-day-attacks/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20245](https://nvd.nist.gov/vuln/detail/CVE-2026-20245) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch ](https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Cisco SD-WAN 0-day exploited, no patch available (CVE-2026-20245)](https://www.helpnetsecurity.com/2026/06/05/cisco-sd-wan-cve-2026-20245-0-day-exploited/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -118,9 +98,9 @@ SD-WANの管理プレーンに影響するため、侵害されるとネット�
 - 国内公式情報: なし。
 - 国内メディア掲載: 未確認。
 - 国内コミュニティ反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 中。
-- 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
+- 技術者コミュニティ反応: 未確認。
+- 開発者コミュニティ反応: 未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
 
 ---
 
@@ -133,10 +113,7 @@ SD-WANの管理プレーンに影響するため、侵害されるとネット�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [AIになりきって他人の質問に回答できるチャットボット「Your AI Slop Bores Me」](https://gigazine.net/news/20260606-your-ai-slop-bores-me/) | 27.0 | 20.0 | 42.0 |
-| [「Word」「Excel」「PowerPoint」で「Claude」を活用する方法](https://japan.zdnet.com/article/35248236/) | 26.0 | 20.0 | 42.0 |
-| [ToshibaとMujiのサイトに不審なPolyfillログインプロンプトが表示](https://www.bleepingcomputer.com/news/security/suspicious-polyfill-login-prompts-pop-up-on-toshiba-muji-websites/) | 20.0 | 20.0 | 42.0 |
-| [国家が規模を気にしなくなったとき](https://www.security.com/expert-perspectives/nation-states-size) | 20.0 | 20.0 | 42.0 |
+| [Oxford大学の学生データが再び流出、今回はキャリアプラットフォーム侵害による被害](https://www.theregister.com/security/2026/06/06/oxford-university-data-pwned-again-by-career-platform-breach/5251754) | 20.0 | 20.0 | 42.0 |
 
 ---
 
