@@ -1,19 +1,19 @@
-# 📡 サイレーダー 2026-06-06 17:00 JST
+# 📡 サイレーダー 2026-06-07 05:00 JST
 
-このレポートは、2026-06-06 11:00 JST〜2026-06-06 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-06 17:00 JST〜2026-06-07 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 27
-- [音声で扱う想定のトピック](#audio-topics): 0
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 1
+- 観測トピック数: 31
+- [音声で扱う想定のトピック](#audio-topics): 1
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 5
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch Available](#topic-15753) | 40.0 | 58.0 | 55.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
+| 1 | [CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog](#topic-15811) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -21,48 +21,38 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-15811"></a>
 
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
-<a id="topic-15753"></a>
-
-### 1. Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch Available
+### 1. CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
-| <nobr>区⁠分</nobr> | GitHub |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>T⁠T⁠P</nobr> |
-| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
-| <nobr>温⁠度⁠感</nobr> | 40.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 58.0 |
-| <nobr>確⁠度</nobr> | 55.0 |
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>D⁠D⁠o⁠S</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-Cisco Catalyst SD-WAN Managerに影響するCVE-2026-20245について、現時点で未修正のまま悪用が観測されていると報じられています。
-公開情報では権限昇格に関わる脆弱性とされ、攻撃には対象環境でのnetadmin権限が必要とされています。
-SD-WAN管理基盤はネットワーク運用の中枢に当たるため、影響が出ると広範囲の管理機能に波及する可能性があります。
-しかも修正パッチがまだないため、緩和策や侵害有無の確認が重要になります。
+CISAが、SolarWinds Serv-U に影響する脆弱性 CVE-2026-28318 を Known Exploited Vulnerabilities（KEV）カタログに追加しました。
+公開情報では、すでに悪用が観測されており、サービス停止につながるDoS脆弱性とされています。
+KEVへの掲載は、実際に攻撃で使われている可能性が高いことを示すため、優先度を上げて対応すべき対象になります。
+ファイル転送系の基盤製品に影響するため、業務への停止影響が大きくなりやすい点も注意が必要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 2 sources。
 - 実悪用・ゼロデイ文脈。
-- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
-- 権限昇格系。
 
 ##### 確度
-- 複数ソース確認。
-- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 攻撃・悪用観測シグナル
@@ -73,36 +63,39 @@ SD-WAN管理基盤はネットワーク運用の中枢に当たるため、影�
 
 #### 担当者向け確認ポイント
 
-- CVE-2026-20245の影響範囲に自組織のCisco Catalyst SD-WAN Managerが含まれるか確認する。
-- netadmin権限を持つアカウントの棚卸しと認証情報の保護を強化する。
-- 関連する不審な管理操作や権限変更のログを優先的に点検する。
+- SolarWinds Serv-U の利用有無と対象バージョンを確認し、ベンダーの修正版・緩和策を適用する。
+- KEV掲載を前提に、監視強化と障害時の切り分け手順を準備する。
+- 外部公開している場合は、露出範囲とアクセス制御を点検し、不要な公開を見直す。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
 |---|---|---|---:|
-| 脆弱性 | CVE-2026-20245 | 主要CVE | 1.00 |
-| ベンダー | Cisco | 言及あり | 0.80 |
+| 脆弱性 | CVE-2026-28318 | 主要CVE | 1.00 |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20245](https://nvd.nist.gov/vuln/detail/CVE-2026-20245) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch ](https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco SD-WAN 0-day exploited, no patch available (CVE-2026-20245)](https://www.helpnetsecurity.com/2026/06/05/cisco-sd-wan-cve-2026-20245-0-day-exploited/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog](https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 反応あり・高信頼。
 - 国内公式情報: なし。
 - 国内メディア掲載: 未確認。
-- 国内コミュニティ反応: 反応あり・低信頼。
+- 国内コミュニティ反応: 未確認。
 - 技術者コミュニティ反応: 未確認。
 - 開発者コミュニティ反応: 未確認。
 - 攻撃・悪用観測シグナル: 悪用観測あり。
 
 ---
+
+<a id="github-only-topics"></a>
+
+## 📌 GitHubのみ掲載の注目トピック
+
+今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -113,7 +106,11 @@ SD-WAN管理基盤はネットワーク運用の中枢に当たるため、影�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Oxford大学の学生データが再び流出、今回はキャリアプラットフォーム侵害による被害](https://www.theregister.com/security/2026/06/06/oxford-university-data-pwned-again-by-career-platform-breach/5251754) | 20.0 | 20.0 | 42.0 |
+| [Critical Everest Forms Proの脆弱性が悪用されWordPressサイトが乗っ取られる](https://www.bleepingcomputer.com/news/security/critical-everest-forms-pro-flaw-exploited-to-take-over-wordpress-sites/) | 28.0 | 46.0 | 54.0 |
+| [無料で自分のPCで動かせるローカルAIモデルがわかる「LLM Checker」](https://gigazine.net/news/20260606-llm-checker/) | 27.0 | 20.0 | 42.0 |
+| [ChatGPTのロックダウンモード、新たなデータ流出につながる可能性のあるツールを制限](https://thehackernews.com/2026/06/new-chatgpt-lockdown-mode-limits-tools.html) | 25.0 | 20.0 | 42.0 |
+| [Opal Security、AIネイティブなIDガバナンス向けに2300万ドルを調達](https://www.securityweek.com/opal-security-raises-23-million-for-ai-native-identity-governance/) | 25.0 | 20.0 | 42.0 |
+| [無料アプリがスマートテレビを密かにWebスクレイピング用プロキシへ変えている](https://thehackernews.com/2026/06/free-apps-are-quietly-turning-smart-tvs.html) | 25.0 | 20.0 | 42.0 |
 
 ---
 
