@@ -1,19 +1,17 @@
-# 📡 サイレーダー 2026-06-07 05:00 JST
+# 📡 サイレーダー 2026-06-07 11:00 JST
 
-このレポートは、2026-06-06 17:00 JST〜2026-06-07 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-07 05:00 JST〜2026-06-07 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 31
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 26
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 5
+- [低温だが記録しておくトピック](#low-record-topics): 1
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog](#topic-15811) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -21,75 +19,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-15811"></a>
-
-### 1. CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>D⁠D⁠o⁠S</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-CISAが、SolarWinds Serv-U に影響する脆弱性 CVE-2026-28318 を Known Exploited Vulnerabilities（KEV）カタログに追加しました。
-公開情報では、すでに悪用が観測されており、サービス停止につながるDoS脆弱性とされています。
-KEVへの掲載は、実際に攻撃で使われている可能性が高いことを示すため、優先度を上げて対応すべき対象になります。
-ファイル転送系の基盤製品に影響するため、業務への停止影響が大きくなりやすい点も注意が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- SolarWinds Serv-U の利用有無と対象バージョンを確認し、ベンダーの修正版・緩和策を適用する。
-- KEV掲載を前提に、監視強化と障害時の切り分け手順を準備する。
-- 外部公開している場合は、露出範囲とアクセス制御を点検し、不要な公開を見直す。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-28318 | 主要CVE | 1.00 |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog](https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 反応あり・高信頼。
-- 国内公式情報: なし。
-- 国内メディア掲載: 未確認。
-- 国内コミュニティ反応: 未確認。
-- 技術者コミュニティ反応: 未確認。
-- 開発者コミュニティ反応: 未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -106,11 +36,7 @@ KEVへの掲載は、実際に攻撃で使われている可能性が高いこ�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Critical Everest Forms Proの脆弱性が悪用されWordPressサイトが乗っ取られる](https://www.bleepingcomputer.com/news/security/critical-everest-forms-pro-flaw-exploited-to-take-over-wordpress-sites/) | 28.0 | 46.0 | 54.0 |
-| [無料で自分のPCで動かせるローカルAIモデルがわかる「LLM Checker」](https://gigazine.net/news/20260606-llm-checker/) | 27.0 | 20.0 | 42.0 |
-| [ChatGPTのロックダウンモード、新たなデータ流出につながる可能性のあるツールを制限](https://thehackernews.com/2026/06/new-chatgpt-lockdown-mode-limits-tools.html) | 25.0 | 20.0 | 42.0 |
-| [Opal Security、AIネイティブなIDガバナンス向けに2300万ドルを調達](https://www.securityweek.com/opal-security-raises-23-million-for-ai-native-identity-governance/) | 25.0 | 20.0 | 42.0 |
-| [無料アプリがスマートテレビを密かにWebスクレイピング用プロキシへ変えている](https://thehackernews.com/2026/06/free-apps-are-quietly-turning-smart-tvs.html) | 25.0 | 20.0 | 42.0 |
+| [ChatGPTに「ロックダウンモード」 プロンプトインジェクションによる情報漏えい対策](https://www.itmedia.co.jp/news/articles/2606/07/news022.html) | 26.0 | 20.0 | 42.0 |
 
 ---
 
