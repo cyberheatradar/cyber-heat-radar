@@ -1,17 +1,19 @@
-# 📡 サイレーダー 2026-06-07 17:00 JST
+# 📡 サイレーダー 2026-06-08 05:00 JST
 
-このレポートは、2026-06-07 11:00 JST〜2026-06-07 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-07 17:00 JST〜2026-06-08 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 26
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 30
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 4
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Microsoft 2026年6月 Patch Tuesday 関連まとめ](#topic-15857) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,7 +21,74 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-15857"></a>
+
+### 1. Microsoft 2026年6月 Patch Tuesday 関連まとめ
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>A⁠I</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+Microsoftの2026年6月 Patch Tuesday に関する話題として、関連情報のまとめが出ています。
+提供された材料には、同時期の別件としてCisco SD-WANのゼロデイ悪用に触れた記事が含まれており、脆弱性対応への関心が高まっている状況がうかがえます。
+月例更新は、広く利用される製品の脆弱性修正がまとまって出るため、運用現場への影響が大きくなりやすいです。加えて、悪用観測がある脆弱性の文脈では、早期の優先対応が求められます。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- 対象製品の更新有無を確認し、影響範囲を棚卸しする。
+- 緊急度の高い修正があれば、検証後に優先適用する。
+- 関連する監視・検知ルールや資産の露出状況を見直す。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| ベンダー | Cisco | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Week in review: Cisco SD-WAN 0-day exploited, Patch Tuesday forecast](https://www.helpnetsecurity.com/2026/06/07/week-in-review-cisco-sd-wan-0-day-exploited-june-2026-patch-tuesday-forecast/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 未確認。
+- 国内公式情報: なし。
+- 国内メディア掲載: 未確認。
+- 国内コミュニティ反応: 未確認。
+- 技術者コミュニティ反応: 未確認。
+- 開発者コミュニティ反応: 未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -36,7 +105,10 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [OpenAIがプロンプトインジェクション攻撃からユーザーの機密情報を保護するためのロックダウンモードを発表](https://gigazine.net/news/20260607-openai-lockdown-mode/) | 27.0 | 20.0 | 42.0 |
+| [C0XMOボットネット、DD-WRTルーターの脆弱性を悪用して拡散し競合マルウェアを排除](https://www.bleepingcomputer.com/news/security/c0xmo-botnet-spreads-via-dd-wrt-router-flaw-kills-rival-malware/) | 28.0 | 20.0 | 42.0 |
+| [AIコードレビューツール「Open Code Review」、既存のAIに各種ルールを設定してレビュー能力を底上げ可能＆Alibabaグループで100万件のコード欠陥を検出済み](https://gigazine.net/news/20260607-open-code-review/) | 27.0 | 20.0 | 42.0 |
+| [Emphere、AI搭載の脆弱性修復のために210万ドルを調達](https://www.securityweek.com/emphere-raises-2-1-million-for-ai-powered-vulnerability-remediation/) | 25.0 | 20.0 | 42.0 |
+| [Silent Ransom Groupが偽のITサポート電話で法律事務所を標的にする](https://www.bleepingcomputer.com/news/security/silent-ransom-group-targets-law-firms-with-fake-it-support-calls/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
