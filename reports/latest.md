@@ -1,15 +1,15 @@
-# 📡 サイレーダー 2026-06-08 11:00 JST
+# 📡 サイレーダー 2026-06-08 17:00 JST
 
-このレポートは、2026-06-08 05:00 JST〜2026-06-08 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-08 11:00 JST〜2026-06-08 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 47
+- 観測トピック数: 45
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 21
+- [低温だが記録しておくトピック](#low-record-topics): 20
 
 今回はサマリ掲載トピックはありません。
 
@@ -36,27 +36,26 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [会計システムにランサム攻撃 残存していた遠隔デスクトップを悪用](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600011/060400208/) | 29.0 | 30.0 | 42.0 |
-| [史上最大の株式市場デビューとなることが期待されているOpenAI・Anthropic・SpaceXを市場は受け止めきれるか？](https://gigazine.net/news/20260608-stockmarket-swallow-anthropic-spacex-openai/) | 28.0 | 20.0 | 42.0 |
-| [NVIDIAが課したGeForce RTX 5090の性能制限を突破する改造方法とは？](https://gigazine.net/news/20260608-rtx-5090-external-clock/) | 27.0 | 23.0 | 43.0 |
-| [実践：AIエージェントをAWSで構築する ― Strands Agentsで作り、AgentCoreにデプロイする](https://ascii.jp/elem/000/004/407/4407061/?rss=) | 26.0 | 20.0 | 42.0 |
-| [「AIの暴走が不安でDXが進まない」を解消、フォーティネットが導く攻めのリスク制御](https://atmarkit.itmedia.co.jp/ait/articles/2606/08/news049.html) | 26.0 | 20.0 | 42.0 |
-| [R＆Dの未来を先取り 普及始まる「AI科学者」](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600014/060300229/) | 26.0 | 20.0 | 42.0 |
-| [Intelligent Terminalの実機検証とAI搭載Windows Terminalの紹介](https://www.bleepingcomputer.com/news/microsoft/hands-on-with-intelligent-terminal-an-ai-powered-windows-terminal/) | 25.0 | 20.0 | 42.0 |
-| [【対応必須】フロンティアAI時代、「金融庁要請9項目」にどう対応するか？](https://www.sbbit.jp/article/fj/185631?ref=rss) | 25.0 | 20.0 | 42.0 |
-| [【注目記事】いよいよ今週水曜から開催！ 幕張メッセで6月10日～12日に「Interop Tokyo 2026」 「AIとインターネットの次章。～Internet for AI, AI for Internet.～」がテーマ](https://internet.watch.impress.co.jp/docs/readitnow/2115097.html) | 25.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年5月31日〜2026年6月6日）](https://www.security-next.com/185516) | 22.0 | 20.0 | 42.0 |
-| [クリック率より報告率 ～ 文化を醸成するメール訓練 HENNGE「Tadrill」の志についての考察](https://scan.netsecurity.ne.jp/article/2026/06/08/55443.html) | 21.0 | 20.0 | 42.0 |
-| [メール配信で名前に誤表示 データ連携処理に不備](https://scan.netsecurity.ne.jp/article/2026/06/08/55442.html) | 21.0 | 20.0 | 42.0 |
-| [北九州市立大に不正アクセス、偽警告から遠隔操作され個人情報漏えいか](https://scan.netsecurity.ne.jp/article/2026/06/08/55441.html) | 21.0 | 20.0 | 42.0 |
-| [阿波銀行への不正アクセス、原因はテスト環境の「管理不備」と発表 関係役員らの処分も](https://scan.netsecurity.ne.jp/article/2026/06/08/55440.html) | 21.0 | 20.0 | 42.0 |
-| [富士通、海上自衛隊の全物資情報をリアルタイムで管理する基幹システム構築](https://scan.netsecurity.ne.jp/article/2026/06/08/55439.html) | 21.0 | 20.0 | 42.0 |
-| [Securly Chrome Extension に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/08/55438.html) | 21.0 | 20.0 | 42.0 |
-| [WordPress 用プラグイン Zoho Mail for WordPress に CSRF の脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/08/55437.html) | 21.0 | 20.0 | 42.0 |
-| [8 / 19・20 開催「都道府県CIOフォーラム in 茨城 第24回 年次総会」にHENNGEが協賛、赤瀬礼旺氏による講演も](https://scan.netsecurity.ne.jp/article/2026/06/08/55436.html) | 21.0 | 20.0 | 42.0 |
-| [量子コンピューティングの到来とセキュリティへの影響に備えるには](https://japan.zdnet.com/article/35248272/) | 21.0 | 20.0 | 42.0 |
-| [ネット広告で「安い」「即日対応」などとうたうエアコン修理業者とのトラブルに、国民生活センターが注意喚起](https://internet.watch.impress.co.jp/docs/news/2114794.html) | 20.0 | 20.0 | 42.0 |
-| [【2014年のINTERNET Watch】Windows XPサポート終了で混乱、大規模な個人情報流出・名簿売買事件も発生](https://internet.watch.impress.co.jp/docs/special/30th/2104831.html) | 20.0 | 20.0 | 42.0 |
+| [三菱UFJ銀、“PPAP”原則廃止 メール本文にダウンロードURL記載へ](https://www.itmedia.co.jp/news/articles/2606/08/news086.html) | 29.0 | 20.0 | 42.0 |
+| [攻撃が広がりすぎたとき：実際のサイバー攻撃事例から学ぶ教訓](https://www.helpnetsecurity.com/2026/06/08/cyber-attack-case-studies-video/) | 28.0 | 20.0 | 42.0 |
+| [直接IP宛て脅威の52％がインテリジェンスフィードに欠落している](https://www.helpnetsecurity.com/2026/06/08/palo-alto-networks-securing-ip-connections-report/) | 28.0 | 20.0 | 42.0 |
+| [CloudflareがAI利用料の予算管理機能を発表、誰がどのAIにいくら使ったのか把握可能に](https://gigazine.net/news/20260608-cloudflare-ai-gateway-spend-limit/) | 27.0 | 20.0 | 42.0 |
+| [OpenAIはコーディングツールとAIエージェントを備えたChatGPTの改良版スーパーアプリを計画している](https://gigazine.net/news/20260608-openai-plans-chatgpt-superapp-overhaul/) | 27.0 | 20.0 | 42.0 |
+| [LINEのAIエージェントにメモリ機能 ツンデレや執事など“口調”も変更可能に](https://www.itmedia.co.jp/news/articles/2606/08/news100.html) | 26.0 | 20.0 | 42.0 |
+| [ビジュアルアーティストの“作風”を保護する米国「CREATOR法案」とは？ その建て付けと生成AI時代の課題](https://www.itmedia.co.jp/news/articles/2606/08/news101.html) | 26.0 | 20.0 | 42.0 |
+| [OpenAI、上場前にChatGPTの「スーパーアプリ」化を計画 海外報道](https://www.itmedia.co.jp/news/articles/2606/08/news094.html) | 26.0 | 20.0 | 42.0 |
+| [Meta、AIツールの悪用で2万件のInstagramアカウントが侵害されたと発表](https://www.securityweek.com/meta-says-20000-instagram-accounts-hacked-via-ai-tool-abuse/) | 25.0 | 20.0 | 42.0 |
+| [Meta AIサポートを装う攻撃で2万件超のInstagramアカウントが盗難被害](https://www.bleepingcomputer.com/news/security/meta-ai-support-data-breach-affects-20-000-instagram-accounts/) | 25.0 | 20.0 | 42.0 |
+| [Open-source AI-powered Dockerセキュリティスキャナー「DockSec」](https://www.helpnetsecurity.com/2026/06/08/docksec-open-source-ai-docker-security-scanner/) | 25.0 | 20.0 | 42.0 |
+| [Google Colab CLIがClaude CodeとCodex向けにランタイムを開放](https://www.helpnetsecurity.com/2026/06/08/google-colab-command-line-interface-cli/) | 25.0 | 20.0 | 42.0 |
+| [GitHub CopilotアプリがAIコーディングエージェントのデスクトップ向けホームとして登場](https://www.helpnetsecurity.com/2026/06/08/github-copilot-app-ai-coding-agents/) | 25.0 | 20.0 | 42.0 |
+| [公益財団法人運営の産廃業者検索サイトで情報流出の可能性](https://www.security-next.com/185274) | 22.0 | 20.0 | 42.0 |
+| [「TeamCity」などJetBrainsの4製品に22件の脆弱性](https://www.security-next.com/185537) | 22.0 | 20.0 | 42.0 |
+| [YouTubeが透明性レポートを公開、2025年の著作権違反報告は25億件](https://gigazine.net/news/20260608-youtube-copyright-content/) | 22.0 | 20.0 | 42.0 |
+| [「Apache Fory」の「Java SDK」に脆弱性 - 修正版が公開](https://www.security-next.com/185542) | 22.0 | 20.0 | 42.0 |
+| [セキュリティの1週間（6月1日～6月7日）](https://www.malwarebytes.com/blog/news/2026/06/a-week-in-security-june-1-june-7-2) | 20.0 | 20.0 | 42.0 |
+| [VS Code、サプライチェーン攻撃対策で拡張機能の自動更新を2時間遅延へ](https://thehackernews.com/2026/06/vs-code-adds-2-hour-extension-auto.html) | 20.0 | 20.0 | 42.0 |
+| [サイバー犯罪者が2026年ワールドカップに先立ちFIFA関連ドメイン19,000件を作成](https://www.helpnetsecurity.com/2026/06/08/fifa-world-cup-cyber-threats/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
