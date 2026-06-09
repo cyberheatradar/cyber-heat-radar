@@ -1,21 +1,22 @@
-# 📡 サイレーダー 2026-06-09 11:00 JST
+# 📡 サイレーダー 2026-06-09 17:00 JST
 
-このレポートは、2026-06-09 05:00 JST〜2026-06-09 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-09 11:00 JST〜2026-06-09 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 61
-- [音声で扱う想定のトピック](#audio-topics): 3
+- 観測トピック数: 53
+- [音声で扱う想定のトピック](#audio-topics): 4
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 33
+- [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Check Point VPN Flaw Exploited Since Early May](#topic-16147) | 45.0 | 48.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [米当局、Check Point製UTMやLiteLLMの脆弱性悪用に注意喚起](#topic-16088) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 3 | [Check Pointのレガシー構成VPNにゼロデイ脆弱性 - 5月初旬より悪用](#topic-16091) | 32.0 | 30.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [CVE-2026-42271: CISA KEV catalog addition](#topic-16161) | 41.0 | 64.0 | 51.0 | 音声 | 温度感上位枠 |
+| 2 | [Google Patches 5th Chrome Zero-Day Exploited in 2026](#topic-16168) | 37.0 | 46.0 | 51.0 | 音声 | 温度感上位枠 |
+| 3 | [Google patches new Chrome zero-day flaw exploited in the wild](#topic-16158) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 4 | [MicrosoftのGitHubリポジトリ73件が無効化される、AIユーザーから認証情報を盗むマルウェアに侵害されたため](#topic-16166) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -23,27 +24,28 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-16147"></a>
+<a id="topic-16161"></a>
 
-### 1. Check Point VPN Flaw Exploited Since Early May
+### 1. CVE-2026-42271: CISA KEV catalog addition
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 45.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 48.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
+| <nobr>温⁠度⁠感</nobr> | 41.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
+| <nobr>確⁠度</nobr> | 51.0 |
 
 #### 概要
 
-Check PointのVPN製品に関する脆弱性が、5月上旬から悪用されていたとされています。
-少なくとも1件の事案では、Qilinランサムウェアの関係者が関与したと報じられています。VPNは社内ネットワークへの入口になりやすく、ここが悪用されると侵入の起点になり得ます。
-ランサムウェア関係者の関与が示唆されているため、被害の広がりや継続的な悪用への警戒が必要です。
+CISAがBerriAI LiteLLMに影響するCVE-2026-42271をKnown Exploited Vulnerabilities（KEV）カタログに追加し、実際の悪用が確認されたとしています。
+報告では、この脆弱性はコマンドインジェクションに分類され、条件を満たした利用者が任意コマンド実行につながる可能性があるとされています。
+KEVへの追加は、単なる未修正脆弱性ではなく、実際に攻撃者に使われている可能性が高いことを示すため、優先対応が必要になります。
+対象製品を使っている組織は、公開情報に基づく影響有無の確認と、修正版適用や緩和策の検討を急ぐべきです。
 
 #### 温度感の理由
 
@@ -52,9 +54,10 @@ Check PointのVPN製品に関する脆弱性が、5月上旬から悪用され�
 
 ##### 実務影響
 - 悪用情報あり。
-- ランサムウェア文脈。
+- RCEまたは認証バイパス系。
 
 ##### 確度
+- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 攻撃・悪用観測シグナル
@@ -65,21 +68,22 @@ Check PointのVPN製品に関する脆弱性が、5月上旬から悪用され�
 
 #### 担当者向け確認ポイント
 
-- 該当するCheck Point VPN環境で、ベンダー案内に基づく修正適用状況と露出範囲を確認する。
-- 外部公開されたVPN機器や認証まわりのログを点検し、不審な接続や失敗の増加がないか確認する。
-- VPN経由のアクセスを前提に、管理者権限の濫用や横展開を早期に検知できる監視を強化する。
+- LiteLLMの利用有無と該当バージョンを確認し、CVE-2026-42271の影響範囲を把握する。
+- ベンダーや公式情報に基づいて修正版・緩和策を適用し、暫定的なアクセス制御や権限見直しを行う。
+- 認証済み操作や管理系操作に不審な挙動がないか、ログと監視ルールを点検する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
 |---|---|---|---:|
-| ransomware_group | Qilin | 主題 | 0.80 |
+| 脆弱性 | CVE-2026-42271 | 主要CVE | 1.00 |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Check Point VPN Flaw Exploited Since Early May](https://www.darkreading.com/vulnerabilities-threats/check-point-vpn-flaw-exploited-early-may) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-42271](https://nvd.nist.gov/vuln/detail/CVE-2026-42271) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [LiteLLM Flaw CVE-2026-42271 Exploited in the Wild, Chains to Unauthenticated RCE](https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -93,28 +97,97 @@ Check PointのVPN製品に関する脆弱性が、5月上旬から悪用され�
 
 ---
 
-<a id="topic-16088"></a>
+<a id="topic-16168"></a>
 
-### 2. 米当局、Check Point製UTMやLiteLLMの脆弱性悪用に注意喚起
+### 2. Google Patches 5th Chrome Zero-Day Exploited in 2026
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
+| <nobr>確⁠度</nobr> | 51.0 |
+
+#### 概要
+
+GoogleがChromeの脆弱性CVE-2026-11645に対応する修正を公開したとされています。
+この件はゼロデイとして悪用が観測された文脈で扱われており、2026年に確認されたChrome関連のゼロデイとして注目されています。
+広く利用されるブラウザの脆弱性であり、実際の悪用が示唆されている点が重要です。利用者数が多い製品だけに、修正適用の遅れが影響範囲を広げる可能性があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Chromeの該当修正を速やかに適用し、利用中の版が更新済みか確認する。
+- 自動更新の有効化状況や、企業管理下の端末で更新が停滞していないか点検する。
+- 外部公開サービスや社内端末で不審な挙動がないか、通常の監視強化で確認する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-11645 | 主要CVE | 1.00 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-11645](https://nvd.nist.gov/vuln/detail/CVE-2026-11645) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Google Patches 5th Chrome Zero-Day Exploited in 2026](https://www.securityweek.com/google-patches-5th-chrome-zero-day-exploited-in-2026/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 反応あり・高信頼。
+- 国内公式情報: なし。
+- 国内メディア掲載: 未確認。
+- 国内コミュニティ反応: 未確認。
+- 技術者コミュニティ反応: 未確認。
+- 開発者コミュニティ反応: 未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
+
+<a id="topic-16158"></a>
+
+### 3. Google patches new Chrome zero-day flaw exploited in the wild
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>K⁠E⁠V</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
 | <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-米当局が、Check Point製セキュリティゲートウェイとLiteLLMに関連する脆弱性について、実際の悪用が確認されているとして注意喚起を行いました。
-現時点の材料では、具体的な影響範囲や攻撃手法の詳細までは確認できません。
-セキュリティ機器やAI関連基盤で悪用が観測されると、個別製品の問題にとどまらず、組織の境界防御や運用基盤に影響が及ぶ可能性があります。
-公的機関の注意喚起が出ているため、対象製品の利用有無を早急に確認する価値があります。
+Googleは、実際に悪用が観測されたChromeの新たなゼロデイ脆弱性に対して緊急更新を公開しました。年初から数えて、Chromeでこの種の修正は5件目とされています。
+ゼロデイが実際に悪用されている場合、修正の遅れが被害拡大につながるため、迅速な適用が重要です。ブラウザは利用者が多く影響範囲が広いため、組織全体での更新状況確認が注目されます。
 
 #### 温度感の理由
 
@@ -135,15 +208,79 @@ Check PointのVPN製品に関する脆弱性が、5月上旬から悪用され�
 
 #### 担当者向け確認ポイント
 
-- Check Point製ゲートウェイやLiteLLMの利用有無、該当バージョン、公開状況を確認する。
-- ベンダーおよび当局の更新情報を確認し、修正パッチや緩和策があれば速やかに適用する。
-- 関連機器・サービスの認証失敗、異常な管理操作、想定外の外向き通信などのログを点検する。
+- Chromeの更新適用状況を早急に確認し、未適用端末を優先して更新する。
+- 管理対象端末で自動更新の有効性を点検し、例外設定が残っていないか確認する。
+- ブラウザ経由の不審な挙動や関連アラートがないか、ログと問い合わせを短期的に監視する。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [米当局、Check Point製UTMやLiteLLMの脆弱性悪用に注意喚起](https://www.security-next.com/185593) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Google patches new Chrome zero-day flaw exploited in the wild](https://www.bleepingcomputer.com/news/security/google-patches-fifth-chrome-zero-day-bug-exploited-in-attacks-this-year/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 反応あり・低信頼。
+- 国内公式情報: なし。
+- 国内メディア掲載: 未確認。
+- 国内コミュニティ反応: 未確認。
+- 技術者コミュニティ反応: 未確認。
+- 開発者コミュニティ反応: 未確認。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
+
+---
+
+<a id="topic-16166"></a>
+
+### 4. MicrosoftのGitHubリポジトリ73件が無効化される、AIユーザーから認証情報を盗むマルウェアに侵害されたため
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Microsoft関連のGitHubリポジトリ73件が、GitHubの不正利用対策により無効化されたと報じられました。
+公開情報によれば、これらのリポジトリは、開発者がAIコーディングツールでパッケージを扱った際に認証情報を盗むマルウェアに関連していたとされています。
+オープンソース開発の供給網や、AI支援ツールを使う開発環境が狙われる可能性を示す事案として注目されています。
+直接の影響範囲や侵害の詳細は未確認な点もありますが、リポジトリや依存パッケージの信頼性確認の重要性を改めて示しています。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AI支援ツールや依存パッケージを扱う開発端末で、認証情報の保存状況と漏えい対策を確認する。
+- リポジトリやパッケージの出所、更新履歴、メンテナンス状況を改めて点検する。
+- 不審な挙動が見られた場合は、関連するトークンや資格情報の棚卸しとローテーションを検討する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| ベンダー | Microsoft | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [MicrosoftのGitHubリポジトリ73件が無効化される、AIユーザーから認証情報を盗むマルウェアに侵害されたため](https://gigazine.net/news/20260609-microsofts-open-source-tools-hacked/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -152,71 +289,8 @@ Check PointのVPN製品に関する脆弱性が、5月上旬から悪用され�
 - 国内メディア掲載: 中。
 - 国内コミュニティ反応: 未確認。
 - 技術者コミュニティ反応: 未確認。
-- 開発者コミュニティ反応: 未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
-
----
-
-<a id="topic-16091"></a>
-
-### 3. Check Pointのレガシー構成VPNにゼロデイ脆弱性 - 5月初旬より悪用
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 32.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-Check Point Software Technologiesのレガシー構成VPNにゼロデイ脆弱性が見つかり、5月初旬ごろから悪用されている可能性が示されています。
-報道によれば、ランサムウェア攻撃に関連した事例も確認されているとされています。VPNは外部公開されやすく、侵入の起点になりやすいため、影響範囲が広がるおそれがあります。
-既に悪用が疑われるため、対象製品を使っている組織は早急な点検が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- 該当するCheck Point製VPNの構成やバージョンを確認し、ベンダー告知と照合する。
-- 外部公開しているVPN機器のログを点検し、異常な認証失敗や不審な接続の有無を確認する。
-- 修正プログラムや緩和策が案内されている場合は、優先度を上げて適用する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Check Pointのレガシー構成VPNにゼロデイ脆弱性 - 5月初旬より悪用](https://www.security-next.com/185583) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 反応あり・高信頼。
-- 国内公式情報: なし。
-- 国内メディア掲載: 中。
-- 国内コミュニティ反応: 未確認。
-- 技術者コミュニティ反応: 未確認。
-- 開発者コミュニティ反応: 未確認。
-- 攻撃・悪用観測シグナル: 悪用観測あり。
+- 開発者コミュニティ反応: 反応あり。
+- 攻撃・悪用観測シグナル: なし。
 
 ---
 
@@ -235,39 +309,30 @@ Check Point Software Technologiesのレガシー構成VPNにゼロデイ脆弱�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Shai-Hulud攻撃で19件の科学系PyPIパッケージがトロイ化される](https://www.bleepingcomputer.com/news/security/new-shai-hulud-attack-trojanizes-19-science-focused-pypi-packages/) | 28.0 | 45.0 | 42.0 |
-| [GitHub上の偽銀行アプリ更新を通じて拡散するNFCShare Androidマルウェア](https://www.bleepingcomputer.com/news/security/nfcshare-android-malware-spreads-via-fake-banking-app-updates-on-github/) | 28.0 | 20.0 | 42.0 |
-| [新しい「Siri AI」はコスト増につながる可能性--その理由とは](https://japan.zdnet.com/article/35248619/) | 26.0 | 20.0 | 42.0 |
-| [「ChatGPT」、データ窃取を防ぐ「ロックダウンモード」の一般提供を開始](https://japan.zdnet.com/article/35248624/) | 26.0 | 20.0 | 42.0 |
-| [Apple、EU当局を批判「どの解決策も受け入れず」 「Siri AI」EUのiPhone・iPadで提供見送り](https://www.itmedia.co.jp/news/articles/2606/09/news069.html) | 26.0 | 20.0 | 42.0 |
-| [AI時代、Wikipediaの価値はより高まる 人が主役の原則をITで後押し](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600001/060400210/) | 26.0 | 20.0 | 42.0 |
-| [「GitLab」でグローバル標準化へ、オリンパスが描くAI時代の開発組織の姿](https://japan.zdnet.com/article/35248235/) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントのコスト問題に先手を打つ--リミニストリートのラビンCEO](https://japan.zdnet.com/article/35248292/) | 26.0 | 20.0 | 42.0 |
-| [Googleセキュリティ責任者が語る「サイバー脅威の未来」 完全自律型AIエージェントによる攻撃が現実味](https://www.itmedia.co.jp/enterprise/articles/2606/09/news018.html) | 26.0 | 20.0 | 42.0 |
-| [作家の想像力をAIで拡張](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/041700482/060300016/) | 26.0 | 20.0 | 42.0 |
-| [「VCF Operations」に複数のXSS脆弱性 - 修正版が公開](https://www.security-next.com/185569) | 22.0 | 20.0 | 42.0 |
-| [ゼロデイ攻撃の被害をCVE番号付きで公表 - サトーが語る、被害を拡大させないインシデント対応の真髄](https://news.mynavi.jp/techplus/article/20260609-4509833/) | 21.0 | 20.0 | 42.0 |
-| [脅威アクターの神格化にはもうウンザリ：サイバー犯罪者の赤っ恥コレクション](https://scan.netsecurity.ne.jp/article/2026/06/09/55452.html) | 21.0 | 20.0 | 42.0 |
-| [アクティビティ事業者向け予約管理システム「satsuki」にサイバー攻撃、パートナー情報や予約者情報が流出](https://scan.netsecurity.ne.jp/article/2026/06/09/55451.html) | 21.0 | 20.0 | 42.0 |
-| [「優良さんぱいナビ」に海外から不正アクセス、システム内の情報の一部が外部に漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/06/09/55450.html) | 21.0 | 20.0 | 42.0 |
-| [添付ファイル分離メールサーバへの不正アクセス 第二報 ～ 保存されていたメール情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/06/09/55449.html) | 21.0 | 20.0 | 42.0 |
-| [メール送受信の障害で発覚 ～ 山田ボデー工業所のメールシステムサーバに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/06/09/55448.html) | 21.0 | 20.0 | 42.0 |
-| [脱 PPAP の第 2 段階、パスワード付き添付ファイルの「自動削除」開始](https://scan.netsecurity.ne.jp/article/2026/06/09/55447.html) | 21.0 | 20.0 | 42.0 |
-| [彌満和製作所、SCS 評価制度対応や ISMS 取得見据え「HENNGE File DLP」導入](https://scan.netsecurity.ne.jp/article/2026/06/09/55446.html) | 21.0 | 20.0 | 42.0 |
-| [クレジットマスター攻撃による不正利用に注意を呼びかけ](https://scan.netsecurity.ne.jp/article/2026/06/09/55445.html) | 21.0 | 20.0 | 42.0 |
-| [複数の TP-LINK 製品に重要情報の平文送信の脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/09/55444.html) | 21.0 | 20.0 | 42.0 |
-| [セキュリティ対策はもう「コスト」ではない 経営層の意識を変えた背景とは](https://www.itmedia.co.jp/enterprise/articles/2606/09/news033.html) | 21.0 | 20.0 | 42.0 |
-| [「プログラミング不要」で広がる犯罪の入り口 地下フォーラムで人気を集めた“稼ぐための教科書”](https://atmarkit.itmedia.co.jp/ait/articles/2606/09/news036.html) | 21.0 | 20.0 | 42.0 |
-| [「会話がスマホに盗聴されている」の真相 スマホセキュリティで守るべきルールとは？](https://www.itmedia.co.jp/enterprise/articles/2606/09/news040.html) | 21.0 | 20.0 | 42.0 |
-| [Microsoftのシステムが外部パッケージを実行？ 依存関係混乱を巡る攻防](https://atmarkit.itmedia.co.jp/ait/articles/2606/09/news030.html) | 21.0 | 20.0 | 42.0 |
-| [1文字のLinuxカーネル欠陥でローカルRoot権限取得が可能に、PoCも公開](https://thehackernews.com/2026/06/one-character-linux-kernel-flaw-enables.html) | 20.0 | 28.0 | 50.0 |
-| [Microsoft Teamsで「Hi, This Is IT」と名乗る攻撃に注意](https://unit42.paloaltonetworks.com/microsoft-teams-phishing/) | 20.0 | 20.0 | 42.0 |
-| [警察庁やJC3も、企業のPCを遠隔操作する「ボイスフィッシング」新手口に注意喚起](https://internet.watch.impress.co.jp/docs/news/2115383.html) | 20.0 | 20.0 | 42.0 |
-| [Norksが6週間で開発者に250件超の偽求人を送り、認証情報と暗号資産を狙う](https://www.theregister.com/security/2026/06/08/suspected-norks-send-250-fake-dev-job-pitches-to-steal-crypto/5252526) | 20.0 | 20.0 | 42.0 |
-| [SoFi、香港子会社で第三者によるデータ侵害を確認](https://www.bleepingcomputer.com/news/security/sofi-confirms-third-party-data-breach-at-hong-kong-subsidiary/) | 20.0 | 20.0 | 42.0 |
-| [Appleの新機能、漏えいしたパスワードを自動で変更](https://www.bleepingcomputer.com/news/apple/new-apple-feature-automatically-changes-your-compromised-passwords/) | 20.0 | 20.0 | 42.0 |
-| [英国の従業員は職場の不正行為にどの程度「寛容」なのか？【海の向こうの“セキュリティ”】](https://internet.watch.impress.co.jp/docs/column/security/2113884.html) | 20.0 | 20.0 | 42.0 |
-| [Silent Ransom Groupによる米国法律事務所へのエスカレートする恐喝攻撃](https://www.darkreading.com/cyberattacks-data-breaches/silent-ransom-us-law-firms-extortion-attacks) | 20.0 | 20.0 | 42.0 |
+| [防御側が悪用できるバグを含むマルウェア](https://www.helpnetsecurity.com/2026/06/09/malware-source-code-bugs-research/) | 28.0 | 20.0 | 42.0 |
+| [動画生成AI「Grok Imagine 1.5 Preview」が動画生成AIベンチマークで世界1位と2位を獲得](https://gigazine.net/news/20260609-grok-imagine-1-5-preview-artificial-analysis-video-arena/) | 27.0 | 20.0 | 42.0 |
+| [AIブームに便乗した犯罪が急増、ChatGPTやClaudeの名前で認証情報を盗む手口をMicrosoftが分析](https://gigazine.net/news/20260609-ai-brands-as-bait/) | 27.0 | 20.0 | 42.0 |
+| [AIが経済に与える影響を研究する交流プラットフォーム「OpenAI Economic Research Exchange」をOpenAIが設立](https://gigazine.net/news/20260609-openai-economic-research-exchange/) | 27.0 | 20.0 | 42.0 |
+| [OpenAIがIPOに向け書類提出、「自動AI研究者」構想も発表](https://gigazine.net/news/20260609-openai-ipo-s-i-draft/) | 27.0 | 20.0 | 42.0 |
+| [ホンダセールスオペレーション、AIエージェントが販売店スタッフの業務を支援](https://japan.zdnet.com/article/35248659/) | 26.0 | 20.0 | 42.0 |
+| [セゾンテクノロジー、AIエージェントの運用管理基盤を提供 全社展開を支援](https://xtech.nikkei.com/atcl/nxt/news/24/03259/) | 26.0 | 20.0 | 42.0 |
+| [Google「AI Plus」4割値下げ、月725円に ストレージ倍増、価格攻勢でシェア拡大へ](https://www.itmedia.co.jp/news/articles/2606/09/news077.html) | 26.0 | 20.0 | 42.0 |
+| [削除のアーキテクチャ：交通を可視化するだけでなく道路そのものを消す時代へ](https://www.helpnetsecurity.com/2026/06/09/subtractive-security-attack-path-erasure/) | 25.0 | 20.0 | 42.0 |
+| [Federated QueryのセキュリティでAIエージェントをサービスアカウントとして扱う方法](https://www.helpnetsecurity.com/2026/06/09/paras-malhotra-starburst-federated-query-security/) | 25.0 | 20.0 | 42.0 |
+| [米国ソフトウェアにおける中国製AIコーディングモデルをめぐるセキュリティ上の懸念](https://www.helpnetsecurity.com/2026/06/09/chinese-ai-coding-models-security/) | 25.0 | 20.0 | 42.0 |
+| [職員が個人情報1件を目的外利用、懲戒処分 - 大津町](https://www.security-next.com/185337) | 22.0 | 20.0 | 42.0 |
+| [Cloudflareが「攻撃者名」で通信を遮断可能に、脅威インテリジェンスをWAFに統合](https://gigazine.net/news/20260609-cloudflare-realtime-waf/) | 22.0 | 20.0 | 42.0 |
+| [都職員向けサイトでアクセス制御不備 ‐ 個人情報へアクセス可能に](https://www.security-next.com/185459) | 22.0 | 20.0 | 42.0 |
+| [1兆パラメーター級モデルを1000トークン/秒超という爆速で動かす「MiMo-V2.5-Pro-UltraSpeed」が登場、基盤モデルはオープンソースで公開](https://gigazine.net/news/20260609-xiaomi-v2-5-pro-ultraspeed/) | 22.0 | 20.0 | 42.0 |
+| [「Chrome」にセキュ更新、脆弱性74件を修正 - 一部で悪用も](https://www.security-next.com/185635) | 22.0 | 20.0 | 42.0 |
+| [転職サイトのスマホアプリにPWリスト攻撃 - キャリアデザインセンター](https://www.security-next.com/185266) | 22.0 | 20.0 | 42.0 |
+| [ふるさと納税者に関する個人情報の一部がSNS投稿 - 洲本市](https://www.security-next.com/185507) | 22.0 | 20.0 | 42.0 |
+| [サイバーセキュリティクラウド、AIセキュリティを事業化--ますはMCP管理](https://japan.zdnet.com/article/35248668/) | 21.0 | 20.0 | 42.0 |
+| [週5300万回使われるテストツールに複数の脆弱性 開発環境乗っ取りのリスク](https://atmarkit.itmedia.co.jp/ait/articles/2606/09/news047.html) | 21.0 | 20.0 | 42.0 |
+| [EDRを“窒息”させる攻撃ツールが公開 Windows標準搭載のQoSを利用](https://atmarkit.itmedia.co.jp/ait/articles/2606/09/news044.html) | 21.0 | 20.0 | 42.0 |
+| [今すぐ応募できるサイバーセキュリティの求人：2026年6月9日](https://www.helpnetsecurity.com/2026/06/09/cybersecurity-jobs-available-right-now-june-9-2026/) | 20.0 | 20.0 | 42.0 |
+| [CamViewのインストーラにおけるDLL読み込みに関する脆弱性](https://jvn.jp/jp/JVN27656135/) | 20.0 | 20.0 | 42.0 |
+| [Instagramで不具合、有名人ユーザーのメールアドレスや電話番号が誰でも閲覧可能な状態に【やじうまWatch】](https://internet.watch.impress.co.jp/docs/yajiuma/2115502.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
