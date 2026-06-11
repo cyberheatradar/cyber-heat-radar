@@ -1,20 +1,19 @@
-# 📡 サイレーダー 2026-06-11 11:00 JST
+# 📡 サイレーダー 2026-06-11 17:00 JST
 
-このレポートは、2026-06-11 05:00 JST〜2026-06-11 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-11 11:00 JST〜2026-06-11 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 66
+- 観測トピック数: 56
 - [音声で扱う想定のトピック](#audio-topics): 1
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 39
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 30
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Cisco Catalyst SD-WAN Controller, Catalyst SD-WAN Manager, and Catalyst SD-WAN Validator Authenticated Privilege Escalation Vulnerability](#topic-4945) | 63.0 | 84.0 | 67.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
-| 2 | [Chinese agents caught rebuilding botnets and stirring the pot on AI datacenter debate](#topic-16655) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Microsoft Patches Exploited Exchange Server Vulnerability](#topic-5098) | 34.0 | 52.0 | 66.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -22,106 +21,39 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-16655"></a>
+<a id="topic-5098"></a>
 
-### 1. Chinese agents caught rebuilding botnets and stirring the pot on AI datacenter debate
+### 1. Microsoft Patches Exploited Exchange Server Vulnerability
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>ボ⁠ッ⁠ト⁠ネ⁠ッ⁠ト</nobr> / <nobr>地⁠政⁠学⁠・⁠サ⁠イ⁠バ⁠ー⁠紛⁠争</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-中国に関連するとされる関係者が、ボットネットの再構築に関与したと報じられています。
-同時に、AI向けデータセンターをめぐる議論にも影響を与える動きが取り上げられており、攻撃インフラと情報発信の両面が注目されています。
-ボットネットの再活性化は、継続的な攻撃基盤の存在を示すため、広範な不正通信や侵害活動につながり得ます。
-あわせてAIデータセンターをめぐる議論が絡むことで、技術・政策・安全保障の文脈でも関心が高まっています。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 境界防御や不審通信の監視を強化し、ボットネット由来の挙動がないか確認する。
-- AI関連インフラや周辺サービスについて、利用状況と不審なアクセスの増減を点検する。
-- 関連報道や脅威インテリジェンスを継続監視し、組織内説明に使える事実関係を整理する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Chinese agents caught rebuilding botnets and stirring the pot on AI datacenter d](https://www.theregister.com/security/2026/06/11/china-linked-operators-revive-botnet-stir-ai-datacenter-debate/5253873) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 反応あり・低信頼。
-- 国内公式情報: なし。
-- 国内メディア掲載: 未確認。
-- 国内コミュニティ反応: 未確認。
-- 技術者コミュニティ反応: 未確認。
-- 開発者コミュニティ反応: 未確認。
-- 攻撃・悪用観測シグナル: なし。
-
----
-
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
-<a id="topic-4945"></a>
-
-### 1. Cisco Catalyst SD-WAN Controller, Catalyst SD-WAN Manager, and Catalyst SD-WAN Validator Authenticated Privilege Escalation Vulnerability
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | GitHub |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>認⁠証⁠バ⁠イ⁠パ⁠ス</nobr> / <nobr>I⁠o⁠C</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> |
 | <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 63.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 84.0 |
-| <nobr>確⁠度</nobr> | 67.0 |
+| <nobr>温⁠度⁠感</nobr> | 34.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 52.0 |
+| <nobr>確⁠度</nobr> | 66.0 |
 
 #### 概要
 
-Ciscoは、Catalyst SD-WAN Controller、Catalyst SD-WAN Manager、Catalyst SD-WAN Validatorに影響する権限昇格の脆弱性について修正を公開しました。
-公開情報では、認証済みのローカル攻撃者が細工されたファイルを使ってroot権限でコマンドを実行できる可能性があり、CVE-2026-20182として追跡されています。
-SD-WANの管理・制御基盤に関わるため、影響範囲が大きく、侵害されるとネットワーク運用全体に波及し得ます。
-加えて、公開PoCや限定的な悪用報告が示されているため、対応の優先度は高いとみられます。
+Microsoftは、Exchange Serverの脆弱性CVE-2026-42897について、実際の悪用が観測されているとして対策を案内しています。
+公開情報では、この問題はXSSに起因し、オンプレミス版のExchange Serverに影響するものとされていますが、Exchange Onlineは対象外とされています。
+メール基盤は組織内の認証や情報共有の起点になりやすく、Exchange Serverの脆弱性は影響範囲が広くなりがちです。
+今回の件は既に悪用が示されているため、通常の脆弱性対応よりも迅速な確認と緩和策の適用が重要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 9 sources。
+- 複数ソースで確認: 5 sources。
 - 実悪用・ゼロデイ文脈。
-- 公開PoC・検証コード言及あり。
-- 脅威・攻撃キャンペーン文脈。
-- 技術者コミュニティ反応: 中。
 - 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
-- 公開PoCにより再現・悪用可能性が上がる。
-- RCEまたは認証バイパス系。
-- ランサムウェア文脈。
+- XSS系。
 
 ##### 確度
 - 複数ソース確認。
@@ -130,48 +62,53 @@ SD-WANの管理・制御基盤に関わるため、影響範囲が大きく、�
 
 #### 攻撃・悪用観測シグナル
 
-- シグナル種別: 公開PoC・検証コード言及あり。
-- 公開PoC/Exploitコード: 確認あり。
-- 直接PoCリンク: 掲載しません。
-- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
 
 #### 担当者向け確認ポイント
 
-- 該当製品の利用有無を確認し、Ciscoの修正版適用状況を点検する。
-- 管理系のアクセス権限を最小化し、不要なローカルアカウントや操作経路を整理する。
-- 設定変更やファイル取り込みに関する監査ログを確認し、異常な操作の有無を監視する。
+- オンプレミス版Exchange Serverの該当バージョンを棚卸しし、影響有無を確認する。
+- Microsoftが示す一時的な緩和策や追加更新の有無を確認し、適用計画を前倒しする。
+- OWAなど外部公開面の監視を強め、異常な認証・表示挙動がないか確認する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
 |---|---|---|---:|
-| 脆弱性 | CVE-2026-20182 | 主要CVE | 1.00 |
-| ベンダー | Cisco | 言及あり | 0.80 |
+| 脆弱性 | CVE-2026-42897 | 主要CVE | 1.00 |
+| ベンダー | Microsoft | 言及あり | 0.80 |
+| 製品 | Exchange | 言及あり | 0.80 |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20182](https://nvd.nist.gov/vuln/detail/CVE-2026-20182) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Cisco Catalyst SD-WAN Controller, Catalyst SD-WAN Manager, and Catalyst SD-WAN V](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-privesc-4uxFrdzx) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Metasploit Wrap Up 05/22/2026](https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-22-2026) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco zero-day under ongoing attack by persistent threat group](https://cyberscoop.com/cisco-sd-wan-zero-day-exploited/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco patches another actively exploited SD-WAN zero-day (CVE-2026-20182)](https://www.helpnetsecurity.com/2026/05/15/cisco-sd-wan-zero-day-cve-2026-20182/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco Patches Another SD-WAN Zero-Day, the Sixth Exploited in 2026](https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-the-sixth-exploited-in-2026/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CISA Adds Cisco SD-WAN CVE-2026-20182 to KEV After Admin Access Exploits](https://thehackernews.com/2026/05/cisa-adds-cisco-sd-wan-cve-2026-20182.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco warns of new critical SD-WAN flaw exploited in zero-day attacks](https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-critical-sd-wan-flaw-exploited-in-zero-day-attacks/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-42897](https://nvd.nist.gov/vuln/detail/CVE-2026-42897) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Patches Exploited Exchange Server Vulnerability](https://www.securityweek.com/microsoft-patches-exploited-exchange-server-vulnerability/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Exchange Zero-Day Under Attack, No Patch Available](https://www.darkreading.com/vulnerabilities-threats/microsoft-exchange-zero-day-no-patch) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Warns of Exchange Server Zero-Day Exploited in the Wild](https://www.securityweek.com/microsoft-warns-of-exchange-server-zero-day-exploited-in-the-wild/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/05/15/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Unpatched Microsoft Exchange Server vulnerability exploited (CVE-2026-42897)](https://www.helpnetsecurity.com/2026/05/15/exchange-server-cve-2026-42897-exploited/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email](https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
-- SNS反応: 反応あり・低信頼。
+- SNS反応: 反応あり・高信頼。
 - 国内公式情報: なし。
 - 国内メディア掲載: 未確認。
 - 国内コミュニティ反応: 反応あり・低信頼。
-- 技術者コミュニティ反応: 中。
+- 技術者コミュニティ反応: 未確認。
 - 開発者コミュニティ反応: 反応あり。
-- 攻撃・悪用観測シグナル: 公開PoC・検証コード言及あり。
+- 攻撃・悪用観測シグナル: 悪用観測あり。
 
 ---
+
+<a id="github-only-topics"></a>
+
+## 📌 GitHubのみ掲載の注目トピック
+
+今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -182,45 +119,36 @@ SD-WANの管理・制御基盤に関わるため、影響範囲が大きく、�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [圧倒的経済合理性がランサムウェアを「持続可能なビジネス」に ～ Halcyonレポート](https://scan.netsecurity.ne.jp/article/2026/06/11/55465.html) | 29.0 | 30.0 | 42.0 |
-| [「従来の防御システムでは完全に防ぎきることが困難」ミレニアムプランが利用するレンタルサーバにマルウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/06/11/55471.html) | 29.0 | 20.0 | 42.0 |
-| [AI詐欺で約9億ドルの被害、FBI「専門家でも見抜けないレベル」](https://news.mynavi.jp/techplus/article/20260611-4562800/) | 29.0 | 20.0 | 42.0 |
-| [フィッシングメールの“最先端”はAI偽装 攻撃者が愛用する「おとり」に異変](https://www.itmedia.co.jp/enterprise/articles/2606/10/news095.html) | 29.0 | 20.0 | 42.0 |
-| [公式がワンコーラス公開→AIで無断フルコーラス化、拡散 大原ゆい子氏「無職転生III」OPが被害](https://www.itmedia.co.jp/news/articles/2606/11/news075.html) | 26.0 | 20.0 | 42.0 |
-| [日経クロステックNEXT 関西 2026が開幕、AIや量子技術の最新動向を紹介](https://xtech.nikkei.com/atcl/nxt/column/18/03585/060900014/) | 26.0 | 20.0 | 42.0 |
-| [オープンAIがAI導入事業に参入 業務改革から開発、テストまで一括支援](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/060401445/) | 26.0 | 20.0 | 42.0 |
-| [KDDI、新中経でAIシフト鮮明に データ基盤や成長領域に2兆円超投資](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/060401447/) | 26.0 | 20.0 | 42.0 |
-| [コンテナ船積計画にAIエージェント 日本ペイントG、作業時間76％削減](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/060401450/) | 26.0 | 20.0 | 42.0 |
-| [BoxのCIOに聞く社内のAIエージェント展開--セキュリティと変革のバランスを重視](https://japan.zdnet.com/article/35248534/) | 26.0 | 20.0 | 42.0 |
-| [NTTら、グローバルファンド「IOWN AI Fund」と、運営会社Catalight Capital株式会社を創設](https://internet.watch.impress.co.jp/docs/news/2115978.html) | 25.0 | 20.0 | 42.0 |
-| [AI開発プラットフォームLangflowのパストラバーサル脆弱性が攻撃に悪用される](https://www.bleepingcomputer.com/news/security/path-traversal-flaw-in-ai-dev-platform-langflow-exploited-in-attacks/) | 25.0 | 20.0 | 42.0 |
-| [CISA、AI脅威時代に向けて連邦機関のパッチ適用要件を改定](https://www.darkreading.com/cyber-risk/cisa-rewrites-federal-patching-requirements-ai-threat-era) | 25.0 | 20.0 | 42.0 |
-| [OpenAI、ChatGPTを使ってデータセンターを巡る議論をあおろうとした中国系影響工作の可能性を報告](https://cyberscoop.com/openai-china-influence-campaign-chatgpt/) | 25.0 | 20.0 | 42.0 |
-| [CVE-2026-0273 PAN-OSのCLIまたはWeb UI経由の認証済み管理者向けコマンドインジェクション脆弱性](https://security.paloaltonetworks.com/CVE-2026-0273) | 24.0 | 46.0 | 50.0 |
-| [MythosがN-day攻撃までの時間を大幅短縮 わずか1時間でエクスプロイト生成](https://atmarkit.itmedia.co.jp/ait/articles/2606/11/news041.html) | 24.0 | 20.0 | 43.0 |
-| [ビデオ会議ツール「Zoom」のモバイルクライアントなどに脆弱性](https://www.security-next.com/185730) | 22.0 | 20.0 | 42.0 |
-| [Adobe、「Adobe Acrobat Reader」に20件の脆弱性 - アップデートを公開](https://www.security-next.com/185707) | 22.0 | 20.0 | 42.0 |
-| [「Ivanti Sentry」に複数の深刻な脆弱性 - 修正版を公開](https://www.security-next.com/185727) | 22.0 | 20.0 | 42.0 |
-| [MS、6月の月例更新で過去最多の198件の脆弱性を修正--3件はゼロデイ脆弱性](https://japan.zdnet.com/article/35248751/) | 21.0 | 20.0 | 42.0 |
-| [[Interop Tokyo 2026 Best of Show Award] セキュリティ部門グランプリは Keysight、シスコの 2 製品](https://scan.netsecurity.ne.jp/article/2026/06/11/55476.html) | 21.0 | 20.0 | 42.0 |
-| [３社の導入事例、Cloudbaseが合うケース／そうでないケースほか ～ NVCとCloudbaseがクラウドセキュリティ運用セミナー開催](https://scan.netsecurity.ne.jp/article/2026/06/11/55475.html) | 21.0 | 20.0 | 42.0 |
-| [広島県が朝刊の広告に誤って管理者用二次元コードを掲載 ～ 申込者の個人情報が閲覧可能に](https://scan.netsecurity.ne.jp/article/2026/06/11/55474.html) | 21.0 | 20.0 | 42.0 |
-| [CAMPFIRE への不正アクセス、従業員が発行した GitHub 認証情報が個人開発で利用していたサーバ上に意図せずアップロードされ不正利用](https://scan.netsecurity.ne.jp/article/2026/06/11/55473.html) | 21.0 | 20.0 | 42.0 |
-| [中学校でサポート詐欺被害、口座から 100 円と 999 万 9,999 円の送金](https://scan.netsecurity.ne.jp/article/2026/06/11/55472.html) | 21.0 | 20.0 | 42.0 |
-| [CamView のインストーラに DLL 読み込みに関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/11/55470.html) | 21.0 | 20.0 | 42.0 |
-| [Apache HTTP Server 2.4 に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/11/55469.html) | 21.0 | 20.0 | 42.0 |
-| [「セキュリティは経営基盤」へ意識変化、2025年度サイバーセキュリティ市場規模は1.9兆円に](https://scan.netsecurity.ne.jp/article/2026/06/11/55468.html) | 21.0 | 20.0 | 42.0 |
-| [Webとメールのドメイン同一化ほか「フィッシング対策ガイドライン（2026年度版）」が求める 5 つの要件](https://scan.netsecurity.ne.jp/article/2026/06/11/55467.html) | 21.0 | 20.0 | 42.0 |
-| [DMARC 通過する独自ドメインフィッシング急増 ～ フィッシング対策協議会「フィッシングレポート2026」](https://scan.netsecurity.ne.jp/article/2026/06/11/55466.html) | 21.0 | 20.0 | 42.0 |
-| [Fable 5、ガードレール（保護機能）が厳しすぎて「DNAとは？」にも答えず](https://www.itmedia.co.jp/news/articles/2606/11/news063.html) | 21.0 | 20.0 | 42.0 |
-| [IT大手、地銀セキュリティーに照準 総合サービスを相次ぎ投入](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/060301444/) | 21.0 | 20.0 | 42.0 |
-| [世界中のWebサーバが影響 Apacheが危険な脆弱性を一斉修正](https://atmarkit.itmedia.co.jp/ait/articles/2606/11/news040.html) | 21.0 | 20.0 | 42.0 |
-| [ツール汚染から視覚攻撃まで――Microsoftが警告する「エージェント型AIシステム」7つの新脅威](https://www.itmedia.co.jp/enterprise/articles/2606/05/news109.html) | 21.0 | 20.0 | 42.0 |
-| [「Microsoft 365」における今後想定される脅威](https://japan.zdnet.com/article/35248531/) | 21.0 | 20.0 | 42.0 |
-| [中国と北朝鮮の脅威グループ、アジア太平洋地域での成功を足がかりに展開を拡大](https://www.darkreading.com/cyberattacks-data-breaches/chinese-korean-threat-groups-asia-pacific-success) | 20.0 | 20.0 | 42.0 |
-| [Smashing Security podcast #471: このAIワームは自らのルールを書き換えた](https://grahamcluley.com/smashing-security-podcast-471/) | 20.0 | 20.0 | 42.0 |
-| [GitHubで「Miasma」ワームのソースコードが一時的に流出](https://www.bleepingcomputer.com/news/security/the-miasma-worm-source-code-briefly-leaked-on-github/) | 20.0 | 20.0 | 42.0 |
-| [Bug Bounty研究がServiceNowのセキュリティ警告を引き起こす](https://www.darkreading.com/vulnerabilities-threats/bug-bounty-research-triggers-servicenow-security-alert) | 20.0 | 20.0 | 42.0 |
+| [Minecraftマルウェアで11.6万人感染 若年層による嫌がらせにも悪用](https://news.mynavi.jp/techplus/article/20260611-4566885/) | 29.0 | 20.0 | 42.0 |
+| [九州大学病院でランサムウェア感染か、患者43人の氏名・手術動画が流出の可能性、診療業務は通常通り実施](https://internet.watch.impress.co.jp/docs/news/2116327.html) | 28.0 | 30.0 | 42.0 |
+| [APT28の戦術・手法の進化](https://blog.sekoia.io/apt28-an-evolution-of-tradecraft/) | 28.0 | 20.0 | 42.0 |
+| [脅威アクターがクラウドのログイン情報を持つ人々を勧誘している](https://www.helpnetsecurity.com/2026/06/11/report-cloud-insider-threats/) | 28.0 | 20.0 | 42.0 |
+| [Sky、オンプレミス型AI基盤「HPE Private Cloud AI」を導入--約1カ月で構築・検証完了](https://japan.zdnet.com/article/35248752/) | 28.0 | 20.0 | 42.0 |
+| [OpenAIとVisaが提携してAIエージェントが自動でオンラインの購入手続きを完了可能に](https://gigazine.net/news/20260611-visa-openai-partners-ai-commerce/) | 27.0 | 20.0 | 42.0 |
+| [AIもフィッシング詐欺に引っかかることが判明、上司を装ったメール1通でAWS認証情報を外部へ送信](https://gigazine.net/news/20260611-openclaw-ai-phishing/) | 27.0 | 20.0 | 42.0 |
+| [「Claude Fable 5」をAIの開発に利用するとこっそり性能が制限されることが判明、セキュリティ対策も厳しすぎて不満が続出](https://gigazine.net/news/20260611-claude-fable-safeguards-rule/) | 27.0 | 20.0 | 42.0 |
+| [「Claude Fable 5」では会話履歴がAnthropicの従業員によって読まれる場合がある、Microsoftはリスク評価のために従業員による使用を保留中](https://gigazine.net/news/20260611-microsoft-claude-fable-5/) | 27.0 | 20.0 | 42.0 |
+| [人材採用やプレゼン作成をAIエージェントで自動化、最新技術を展示](https://xtech.nikkei.com/atcl/nxt/column/18/03585/061100018/) | 26.0 | 20.0 | 42.0 |
+| [サッカーW杯、偽ライブ配信サイトに注意 生成AIで詐欺が巧妙化 Acronisが警告](https://www.itmedia.co.jp/news/articles/2606/11/news106.html) | 26.0 | 20.0 | 42.0 |
+| [Anthropic、「Fable 5」のガードレールの仕組みを説明 課金の仕組みや設定変更方法など](https://www.itmedia.co.jp/news/articles/2606/11/news104.html) | 26.0 | 20.0 | 42.0 |
+| [AIエージェント管理など注目の最新製品を展示 DXに関する無料相談も](https://xtech.nikkei.com/atcl/nxt/column/18/03585/061100017/) | 26.0 | 20.0 | 42.0 |
+| [Claude Mythosでコスト爆発の恐れ、AIエージェントに潜む3つのリスクを解説](https://xtech.nikkei.com/atcl/nxt/column/18/03585/061100015/) | 26.0 | 20.0 | 42.0 |
+| [生成AIエージェントのセキュリティ障害の多くを引き起こすプロンプトインジェクション](https://www.helpnetsecurity.com/2026/06/11/owasp-prompt-injection-ai-security-failures/) | 25.0 | 30.0 | 42.0 |
+| [組織はモバイルAIの活動を十分に把握できない](https://www.helpnetsecurity.com/2026/06/11/lookout-mobile-ai-governance-risks-report/) | 25.0 | 20.0 | 42.0 |
+| [セブン店舗の購買データを広告に反映 電通・サイバーエージェントと合弁会社](https://www.itmedia.co.jp/news/articles/2606/11/news096.html) | 24.0 | 20.0 | 43.0 |
+| [アメリカ政府がAIの脅威に対処するため最も深刻な脆弱性の対応期限を「3日」に設定](https://gigazine.net/news/20260611-cisa-prioritizing-security/) | 22.0 | 20.0 | 42.0 |
+| [「Splunk Enterprise」にアップデート - 「クリティカル」脆弱性など解消](https://www.security-next.com/185755) | 22.0 | 20.0 | 42.0 |
+| [「Arista EOS」ゼロデイ含む脆弱性3件を悪用リストに追加 - 米当局](https://www.security-next.com/185751) | 22.0 | 20.0 | 42.0 |
+| [「npm install」だけでコードが実行される時代が終了へ、npmが自動スクリプト実行を標準で停止する予定](https://gigazine.net/news/20260611-npm-install-script/) | 22.0 | 20.0 | 42.0 |
+| [「OpenSSL」にセキュリティアップデート - 脆弱性18件を修正](https://www.security-next.com/185705) | 22.0 | 20.0 | 42.0 |
+| [Microsoftの月例パッチ、6月は過去最大規模の約200件 - AIによる脆弱性発見の加速が背景に](https://news.mynavi.jp/techplus/article/20260611-4567257/) | 21.0 | 20.0 | 42.0 |
+| [「キングスライム目薬」は出品禁止物 ヤフオク！など注意喚起](https://www.itmedia.co.jp/news/articles/2606/11/news095.html) | 21.0 | 20.0 | 42.0 |
+| [Nottingham Universityのデータ漏えいで45万人超の学生に影響](https://www.bleepingcomputer.com/news/security/nottingham-university-data-breach-affects-over-450-000-students/) | 20.0 | 20.0 | 42.0 |
+| [全社員のパスワードが1つのExcelファイルに保存されていた件](https://www.theregister.com/security/2026/06/11/every-employees-password-was-stored-in-a-single-excel-file/5253784) | 20.0 | 20.0 | 42.0 |
+| [GitHub、サプライチェーン攻撃対策で npm のインストールスクリプトをデフォルト無効化へ](https://thehackernews.com/2026/06/github-to-disable-npm-install-scripts.html) | 20.0 | 20.0 | 42.0 |
+| [Ivanti Sentryの最高深刻度の脆弱性が攻撃で悪用中](https://www.bleepingcomputer.com/news/security/max-severity-ivanti-sentry-vulnerability-now-exploited-in-attacks/) | 20.0 | 20.0 | 42.0 |
+| [クラウドがプライバシーの希望に従ったことを証明する方法](https://www.helpnetsecurity.com/2026/06/11/gdpr-compliant-cloud-storage-privacy/) | 20.0 | 20.0 | 42.0 |
+| [X Square Robotがロボット不要のデータ収集フレームワークをオープンソース化](https://www.helpnetsecurity.com/2026/06/11/x-square-robot-free-data-collection/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
