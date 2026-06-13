@@ -1,19 +1,17 @@
-# 📡 サイレーダー 2026-06-13 17:00 JST
+# 📡 サイレーダー 2026-06-14 05:00 JST
 
-このレポートは、2026-06-13 11:00 JST〜2026-06-13 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-13 17:00 JST〜2026-06-14 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 29
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 30
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 3
+- [低温だが記録しておくトピック](#low-record-topics): 5
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Anthropicがアメリカ政府の指示で「Claude Fable 5」と「Claude Mythos 5」の提供を停止](#topic-17151) | 32.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -21,72 +19,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-17151"></a>
-
-### 1. Anthropicがアメリカ政府の指示で「Claude Fable 5」と「Claude Mythos 5」の提供を停止
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 温度上昇中 |
-| <nobr>温⁠度⁠感</nobr> | 32.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Anthropicは、Claude Mythos 5とClaude Fable 5の提供を停止したと伝えられています。
-理由として、同社はアメリカ政府の国家安全保障当局からの指示があったと説明しているとされています。
-生成AIの提供停止が政府判断に基づく可能性が示された点で、AIサービスの運用やガバナンスに関心が集まっています。
-企業の利用継続や代替手段の検討にも影響しうるため、実務面でも注視されています。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 契約中のAIサービスが突然停止・制限される可能性を想定し、代替手段や切り替え手順を確認する。
-- 重要業務で使う場合は、モデル依存を下げるために運用設計やバックアップ体制を見直す。
-- ベンダーからの告知や利用条件変更がないか、継続的にモニタリングする。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
-|---|---|---|---:|
-| ai_model_or_project | Anthropic | 主題 | 0.80 |
-| ai_model_or_project | Claude Mythos | 主題 | 0.80 |
-| ai_model_or_project | Claude | 主題 | 0.80 |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Anthropicがアメリカ政府の指示で「Claude Fable 5」と「Claude Mythos 5」の提供を停止](https://gigazine.net/news/20260613-anthropic-claude-fable-mythos-suspend/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内公式情報: なし。
-- 国内メディア掲載: 中。
-- 国内ブックマーク反応: あり（1件）。
-- 国内開発者記事: 採用あり（3件）。
-- 技術・開発者系ソース観測: 観測あり。
-- PoC/検証コード候補: 候補なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -103,9 +36,11 @@ Anthropicは、Claude Mythos 5とClaude Fable 5の提供を停止したと伝え
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Anthropic、最新のAIモデルを新たな輸出規制に対応するためオフライン化](https://www.securityweek.com/anthropic-says-it-has-taken-its-latest-ai-models-offline-to-comply-with-new-export-controls/) | 25.0 | 20.0 | 42.0 |
-| [米国、外国籍利用者向けのAnthropicのFable 5およびMythos 5アクセス停止を命令](https://thehackernews.com/2026/06/us-orders-anthropic-to-suspend-fable-5.html) | 25.0 | 20.0 | 42.0 |
-| [Anthropic ミュトス級AI提供停止](https://news.yahoo.co.jp/pickup/6584060?source=rss) | 25.0 | 20.0 | 42.0 |
+| [Anthropicが政府の懸念を受け新モデルの提供を停止](https://cyberscoop.com/us-government-anthropic-fable-5-mythos-5-export-controls/) | 25.0 | 20.0 | 42.0 |
+| [米国政府がAnthropicにFableとMythosへの外国籍ユーザーのアクセス禁止を要請](https://www.bleepingcomputer.com/news/security/us-gov-asks-anthropic-to-ban-foreign-national-access-to-fable-mythos/) | 25.0 | 20.0 | 42.0 |
+| [認証不要でコード実行を許すSplunk Enterpriseの重大な脆弱性](https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html) | 24.0 | 46.0 | 50.0 |
+| [npm 12、サプライチェーン攻撃防止のためスクリプト実行動作を変更へ](https://www.securityweek.com/npm-12-will-change-script-execution-behavior-to-prevent-supply-chain-attacks/) | 20.0 | 20.0 | 42.0 |
+| [中国のハッカーが認証フローを乗っ取り、隔離ネットワークを10年間監視](https://www.bleepingcomputer.com/news/security/chinese-hackers-hijack-auth-flow-spy-on-isolated-network-for-a-decade/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
