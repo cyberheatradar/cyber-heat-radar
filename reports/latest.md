@@ -1,6 +1,6 @@
-# 📡 サイレーダー 2026-06-14 11:00 JST
+# 📡 サイレーダー 2026-06-14 17:00 JST
 
-このレポートは、2026-06-14 05:00 JST〜2026-06-14 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-14 11:00 JST〜2026-06-14 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
@@ -36,8 +36,8 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [日立も参画、アンソロピックのAI防衛「Project Glasswing」がもたらす新常識](https://www.sbbit.jp/article/st/185743?ref=rss) | 27.0 | 20.0 | 42.0 |
-| [元勤務先をハッキングした元学区職員に禁錮刑](https://www.bleepingcomputer.com/news/security/ex-school-district-employee-jailed-for-hacks-on-former-employer/) | 20.0 | 20.0 | 42.0 |
+| [AIのLLMアーキテクチャの新技法「KV共有」「mHC」「圧縮アテンション」とは何か？](https://gigazine.net/news/20260614-recent-developments-in-llm-architectures/) | 27.0 | 20.0 | 42.0 |
+| [WordPressプラグイン・テーマの脆弱性最新情報 第30回 WordPress脆弱性21件、KirkiやACFEの権限昇格に注意【5月28日～6月3日】](https://news.mynavi.jp/techplus/article/wordpressvulnerability-30/) | 21.0 | 20.0 | 42.0 |
 
 ---
 
