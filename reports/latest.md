@@ -1,15 +1,15 @@
-# 📡 サイレーダー 2026-06-14 17:00 JST
+# 📡 サイレーダー 2026-06-15 05:00 JST
 
-このレポートは、2026-06-14 11:00 JST〜2026-06-14 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-14 17:00 JST〜2026-06-15 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 27
+- 観測トピック数: 30
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 5
 
 今回はサマリ掲載トピックはありません。
 
@@ -36,8 +36,11 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [AIのLLMアーキテクチャの新技法「KV共有」「mHC」「圧縮アテンション」とは何か？](https://gigazine.net/news/20260614-recent-developments-in-llm-architectures/) | 27.0 | 20.0 | 42.0 |
-| [WordPressプラグイン・テーマの脆弱性最新情報 第30回 WordPress脆弱性21件、KirkiやACFEの権限昇格に注意【5月28日～6月3日】](https://news.mynavi.jp/techplus/article/wordpressvulnerability-30/) | 21.0 | 20.0 | 42.0 |
+| [Week in review: Check Point VPNのゼロデイ悪用とOracle PeopleSoftサーバーへの攻撃](https://www.helpnetsecurity.com/2026/06/14/week-in-review-exploited-check-point-vpn-zero-day-oracle-peoplesoft-servers-under-attack/) | 27.0 | 20.0 | 43.0 |
+| [コーディングAIエージェント向けのオープンソースHeroku「InsForge」](https://gigazine.net/news/20260614-insforge/) | 27.0 | 20.0 | 42.0 |
+| [FBIが100万件のURLを用いる大規模AI搭載フィッシングサービスを妨害](https://www.bleepingcomputer.com/news/security/fbi-disrupts-massive-ai-powered-phishing-service-using-a-million-urls/) | 25.0 | 20.0 | 42.0 |
+| [AIはコードであり、プロンプトで賢くすることはできない](https://www.theregister.com/ai-and-ml/2026/06/14/ai-is-code-and-cant-be-prompted-into-being-smarter/5254141) | 25.0 | 20.0 | 42.0 |
+| [Amazon、Anthropicの最新AIについて懸念を伝えていた 米政権による停止命令に先立ち 関係筋](https://www.itmedia.co.jp/news/articles/2606/14/news019.html) | 21.0 | 20.0 | 42.0 |
 
 ---
 
