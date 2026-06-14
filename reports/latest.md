@@ -1,15 +1,15 @@
-# 📡 サイレーダー 2026-06-14 05:00 JST
+# 📡 サイレーダー 2026-06-14 11:00 JST
 
-このレポートは、2026-06-13 17:00 JST〜2026-06-14 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-14 05:00 JST〜2026-06-14 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 30
+- 観測トピック数: 27
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 5
+- [低温だが記録しておくトピック](#low-record-topics): 2
 
 今回はサマリ掲載トピックはありません。
 
@@ -36,11 +36,8 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Anthropicが政府の懸念を受け新モデルの提供を停止](https://cyberscoop.com/us-government-anthropic-fable-5-mythos-5-export-controls/) | 25.0 | 20.0 | 42.0 |
-| [米国政府がAnthropicにFableとMythosへの外国籍ユーザーのアクセス禁止を要請](https://www.bleepingcomputer.com/news/security/us-gov-asks-anthropic-to-ban-foreign-national-access-to-fable-mythos/) | 25.0 | 20.0 | 42.0 |
-| [認証不要でコード実行を許すSplunk Enterpriseの重大な脆弱性](https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html) | 24.0 | 46.0 | 50.0 |
-| [npm 12、サプライチェーン攻撃防止のためスクリプト実行動作を変更へ](https://www.securityweek.com/npm-12-will-change-script-execution-behavior-to-prevent-supply-chain-attacks/) | 20.0 | 20.0 | 42.0 |
-| [中国のハッカーが認証フローを乗っ取り、隔離ネットワークを10年間監視](https://www.bleepingcomputer.com/news/security/chinese-hackers-hijack-auth-flow-spy-on-isolated-network-for-a-decade/) | 20.0 | 20.0 | 42.0 |
+| [日立も参画、アンソロピックのAI防衛「Project Glasswing」がもたらす新常識](https://www.sbbit.jp/article/st/185743?ref=rss) | 27.0 | 20.0 | 42.0 |
+| [元勤務先をハッキングした元学区職員に禁錮刑](https://www.bleepingcomputer.com/news/security/ex-school-district-employee-jailed-for-hacks-on-former-employer/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
