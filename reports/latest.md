@@ -1,20 +1,19 @@
-# 📡 サイレーダー 2026-06-18 11:00 JST
+# 📡 サイレーダー 2026-06-18 17:00 JST
 
-このレポートは、2026-06-18 05:00 JST〜2026-06-18 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-18 11:00 JST〜2026-06-18 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 55
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 47
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 28
+- [低温だが記録しておくトピック](#low-record-topics): 21
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Crypto Clipper uses Tor and worm-like propagation for persistence and control](#topic-17991) | 30.0 | 20.0 | 48.0 | 音声 | 温度感上位枠 |
-| 2 | [Smashing Security podcast #472: AI gets hacked, and BitLocker gets bypassed](#topic-17992) | 30.0 | 20.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [Steamで人気の壁紙アプリ「Wallpaper Engine」用の美少女壁紙にマルウェアが仕込まれていることが判明](#topic-18094) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -22,90 +21,28 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-17991"></a>
+<a id="topic-18094"></a>
 
-### 1. Crypto Clipper uses Tor and worm-like propagation for persistence and control
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 48.0 |
-
-#### 概要
-
-Microsoft Threat Intelligenceが、暗号資産の送金先を書き換えるクリッパー型マルウェアのキャンペーンを分析しました。
-クリップボード上の情報を狙う機能に加え、Torを使った通信や自己拡散に近い挙動、持続性や追加活動につながる軽量バックドア機能が確認されています。
-単なる資産窃取にとどまらず、感染後も残り続けて横展開や追加侵害につながる可能性があるためです。暗号資産を扱う環境だけでなく、一般的な端末管理や通信監視の観点でも注意が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- クリップボード改変やウォレットアドレス置換を疑う端末挙動を監視する。
-- Tor関連通信や不審な外向き通信がないか、端末・ネットワークの両面で確認する。
-- 端末の永続化設定や不要な自動起動項目を点検し、感染端末の隔離と再調査を行う。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
-|---|---|---|---:|
-| ベンダー | Microsoft | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Crypto Clipper uses Tor and worm-like propagation for persistence and control](https://www.microsoft.com/en-us/security/blog/2026/06/17/crypto-clipper-uses-tor-worm-like-propagation-for-persistence-control/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-- PoC/検証コード候補: 候補なし。
-
----
-
-<a id="topic-17992"></a>
-
-### 2. Smashing Security podcast #472: AI gets hacked, and BitLocker gets bypassed
+### 1. Steamで人気の壁紙アプリ「Wallpaper Engine」用の美少女壁紙にマルウェアが仕込まれていることが判明
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
 | <nobr>温⁠度⁠感</nobr> | 30.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-公開情報では、AIコーディング支援やAIエージェントの扱い方をめぐるリスクと、Microsoft製品に関する複数のゼロデイ脆弱性が話題になっています。
-特に、BitLockerの保護を回避し得る事例が取り上げられており、物理アクセスを伴う端末防御の見直しが意識されています。
-AIを業務システムに接続する際の権限管理や入力検証が不十分だと、意図しない情報流出につながる可能性があります。
-また、端末の暗号化機能があっても、周辺の実装や設定に弱点があると防御が崩れるため、注目されています。
+Steamの壁紙アプリ「Wallpaper Engine」で利用されるユーザー作成壁紙の一部に、マルウェアが含まれていたと公表されています。
+公開情報では、カスペルスキーの研究者らがこの配布を確認したとされています。
+人気アプリの利用経路を通じて不正ファイルが広がると、ユーザーが安全だと考えやすい正規の配布環境でも被害が起こり得ます。
+コンテンツ共有型サービスでは、導入する素材や拡張の信頼性確認が重要です。
 
 #### 温度感の理由
 
@@ -118,29 +55,17 @@ AIを業務システムに接続する際の権限管理や入力検証が不十
 ##### 確度
 - 一次・公的系ソースあり。
 
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
 #### 担当者向け確認ポイント
 
-- AIアシスタントやAIエージェントに与える権限を最小限にし、メールやカレンダーなど機微情報への接続は慎重に管理する。
-- Microsoft関連の脆弱性情報を確認し、該当製品の更新適用状況と端末の保護設定を点検する。
-- 物理アクセス前提のリスクも想定し、BitLockerなどの暗号化だけに依存しない多層防御を検討する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
-|---|---|---|---:|
-| ベンダー | Microsoft | 言及あり | 0.80 |
+- 利用者が作成した配布物を取り込む仕組みでは、導入前の検査や評価の運用を見直す。
+- エンドポイント側で不審な挙動の監視を強化し、壁紙やテーマ関連ファイルを安易に信頼しない。
+- 社内端末で同種のアプリを許可している場合、利用可否や配布元の確認ルールを明確にする。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Smashing Security podcast #472: AI gets hacked, and BitLocker gets bypassed](https://grahamcluley.com/smashing-security-podcast-472/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Steamで人気の壁紙アプリ「Wallpaper Engine」用の美少女壁紙にマルウェアが仕込まれていることが判明](https://gigazine.net/news/20260618-wallpaper-engine-malware/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -167,34 +92,27 @@ AIを業務システムに接続する際の権限管理や入力検証が不十
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [「AIを使う学生」vs.「使わない学生」、エッセイが創造的なのはどっち？ 米大学が2025年に実証実験](https://www.itmedia.co.jp/news/articles/2606/18/news043.html) | 28.0 | 20.0 | 42.0 |
-| [Roblox開発者がマルウェア攻撃でゲーム全体を失う被害](https://www.malwarebytes.com/blog/scams/2026/06/roblox-developers-are-losing-entire-games-to-malware-attacks) | 28.0 | 20.0 | 42.0 |
-| [「Splunk」向けのAI拡張ツールに複数の脆弱性](https://www.security-next.com/186052) | 27.0 | 20.0 | 42.0 |
-| [「徹底的にやらないとサイバー被害を防げない」時代 OPSWATがさらに2つの新技術を追加](https://ascii.jp/elem/000/004/411/4411460/?rss=) | 26.0 | 20.0 | 42.0 |
-| [1年経っても生成AIの“成果創出”で足踏みする日本企業 PwCの6カ国比較にみる“分岐点”](https://ascii.jp/elem/000/004/411/4411364/?rss=) | 26.0 | 20.0 | 42.0 |
-| [「AIコーディング」がたった5年で急進化したワケ NTT「tsuzumi 2」開発者が分析](https://www.itmedia.co.jp/news/articles/2606/18/news038.html) | 26.0 | 20.0 | 42.0 |
-| [OpenAI×ソフトバンクの新サービスは脆弱性管理の常識を変える？ それとも期待先行？](https://atmarkit.itmedia.co.jp/ait/articles/2606/18/news041.html) | 26.0 | 20.0 | 42.0 |
-| [ローカルで動くAIエージェント「Hermes」を使う](https://japan.zdnet.com/article/35248761/) | 26.0 | 20.0 | 42.0 |
-| [漏えい情報でOpenAIがChatGPT for Scienceのサブスクリプションをテスト中と確認](https://www.bleepingcomputer.com/news/artificial-intelligence/leak-confirms-openai-is-testing-a-chatgpt-for-science-subscription/) | 25.0 | 20.0 | 42.0 |
-| [豆腐通販サイトで決済アプリ改ざん - 個人情報流出の可能性](https://www.security-next.com/185929) | 22.0 | 20.0 | 42.0 |
-| [「Cisco ISE」にRCE脆弱性 - 端末の接続に影響するおそれも](https://www.security-next.com/186046) | 22.0 | 20.0 | 42.0 |
-| [「Chrome」が脆弱性33件を修正 - 「クリティカル」7件](https://www.security-next.com/186042) | 22.0 | 20.0 | 42.0 |
-| [今日もどこかで情報漏えい 第49回「2026年5月の情報漏えい」その地方ならではのケジメのつけ方](https://scan.netsecurity.ne.jp/article/2026/06/18/55524.html) | 21.0 | 20.0 | 42.0 |
-| [SCSK 公式ホームページで不審な認証表示](https://scan.netsecurity.ne.jp/article/2026/06/18/55523.html) | 21.0 | 20.0 | 42.0 |
-| [日中経済協会のメールアカウントに不正アクセス、不審メール 565 件送信](https://scan.netsecurity.ne.jp/article/2026/06/18/55522.html) | 21.0 | 20.0 | 42.0 |
-| [神姫バスのウェブサイトに DDoS 攻撃](https://scan.netsecurity.ne.jp/article/2026/06/18/55521.html) | 21.0 | 20.0 | 42.0 |
-| [「情報セキュリティサービス基準審査登録制度」2026年度 第2回 登録申請募集開始](https://scan.netsecurity.ne.jp/article/2026/06/18/55520.html) | 21.0 | 20.0 | 42.0 |
-| [SCS 評価制度対応支援でリコージャパンと SecureNavi が協業](https://scan.netsecurity.ne.jp/article/2026/06/18/55519.html) | 21.0 | 20.0 | 42.0 |
-| [「ブラウザの偽警告」から「給与改定の社内通知」まで ～ 4 つの手口から読み解くサポート詐欺最新傾向](https://scan.netsecurity.ne.jp/article/2026/06/18/55518.html) | 21.0 | 20.0 | 42.0 |
-| [東京都、都内中小企業向けに「CSIRT構築・IT-BCP策定」を無償支援 限定 60 社](https://scan.netsecurity.ne.jp/article/2026/06/18/55517.html) | 21.0 | 20.0 | 42.0 |
-| [医療機関のセキュリティの現状を簡単に「見える化」～ HAIP、Webアセスメントサービス開始](https://scan.netsecurity.ne.jp/article/2026/06/18/55516.html) | 21.0 | 20.0 | 42.0 |
-| [「パッチ適用実施していない」建設・不動産 29.5 ％、流通 17.0 ％、旅行・レジャー・飲食 10.0 ％、金融 0.0 ％](https://scan.netsecurity.ne.jp/article/2026/06/18/55515.html) | 21.0 | 20.0 | 42.0 |
-| [点ではなく「振る舞い」を日常学習--ダークトレースのCISOが説く「ビヘイビアAI」](https://japan.zdnet.com/article/35249055/) | 21.0 | 20.0 | 42.0 |
-| [AIが脆弱性を掘り起こし過ぎる時代へ FIRSTがCVE予測を6万6000件に上方修正](https://atmarkit.itmedia.co.jp/ait/articles/2606/18/news047.html) | 21.0 | 20.0 | 42.0 |
-| [「Microsoft 365」の運用におけるリスク](https://japan.zdnet.com/article/35248532/) | 21.0 | 20.0 | 42.0 |
-| [AIでオープンソースの脆弱性に対処--Chainguardが立ち上げた「Athena」連合とは](https://japan.zdnet.com/article/35249018/) | 21.0 | 20.0 | 42.0 |
-| [SignalRGBカーネルドライバにおける不適切なアクセス制御およびIOCTLの脆弱性](https://jvn.jp/vu/JVNVU95564871/) | 20.0 | 20.0 | 42.0 |
-| [Google、UKとEUのユーザーIPアドレスを広告パーソナライズに利用へ](https://www.bleepingcomputer.com/news/security/google-to-use-uk-and-eu-user-ip-addresses-for-ad-personalization/) | 20.0 | 20.0 | 42.0 |
+| [セキュリティチームが開発者エンドポイントの認証情報を可視化する方法](https://www.helpnetsecurity.com/2026/06/18/gitguardian-developer-endpoint-protection/) | 28.0 | 45.0 | 42.0 |
+| [Claude DesignとClaude Codeの連携が強化されてコーディングからデザインまでAIをバリバリ活用可能に](https://gigazine.net/news/20260618-claude-design-claude-code/) | 27.0 | 20.0 | 42.0 |
+| [画像生成AIの「Midjourney」がまさかの医療分野に進出、60秒で全身をスキャンできる「Midjourney Scanner」を開発中](https://gigazine.net/news/20260618-midjourney-medical-scanner/) | 27.0 | 20.0 | 42.0 |
+| [ローカル動画生成AI「LTX-2.3」の公式LoRA開発ツール「LTX Trainer」が大幅にアップデートされキャラLoRAなどの作成が容易に](https://gigazine.net/news/20260618-ltx-trainer-video-generation-ai-lora/) | 27.0 | 20.0 | 42.0 |
+| [xAIが動画生成AI「Grok Imagine Video 1.5」を一般提供開始、高速モデルの「Grok Imagine Video 1.5 Fast」も登場](https://gigazine.net/news/20260618-grok-imagine-video-1-5/) | 27.0 | 20.0 | 42.0 |
+| [動画配信のPLAY、AIエージェントとNew Relicが連携したインシデント対応体制を構築](https://japan.zdnet.com/article/35249111/) | 26.0 | 20.0 | 42.0 |
+| [「定着化」がAI導入の課題に--WalkMe、デジタルアダプション調査](https://japan.zdnet.com/article/35249081/) | 26.0 | 20.0 | 42.0 |
+| [EU、6Gネットワークセキュリティの開発で先行する](https://www.darkreading.com/cybersecurity-operations/eu-6g-network-security) | 25.0 | 20.0 | 42.0 |
+| [AIエージェントがツールを発見・検証するためのGoogleのオープン標準](https://www.helpnetsecurity.com/2026/06/18/google-agentic-resource-discovery/) | 25.0 | 20.0 | 42.0 |
+| [AIエージェントが研究所のコードを書くと監視はどうなるか](https://www.helpnetsecurity.com/2026/06/18/research-ai-coding-agent-oversight/) | 25.0 | 20.0 | 42.0 |
+| [AWS ContinuumがAIモデルをコード脆弱性管理に導入](https://www.helpnetsecurity.com/2026/06/18/aws-continuum-for-code-vulnerabilities/) | 25.0 | 20.0 | 42.0 |
+| [本番環境のほとんどのagentic AIプロジェクトはデータ問題で停滞している](https://www.helpnetsecurity.com/2026/06/18/report-agentic-ai-in-production/) | 25.0 | 20.0 | 42.0 |
+| [packageからpostinstallペイロードへ：Mastraのnpmサプライチェーン侵害の内幕](https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/) | 22.0 | 45.0 | 42.0 |
+| [「nginx」に複数のクリティカル脆弱性 - 修正版が公開](https://www.security-next.com/186092) | 22.0 | 20.0 | 42.0 |
+| [システム設定で変更ミス、一部データが消失 - 厚労省](https://www.security-next.com/185866) | 22.0 | 20.0 | 42.0 |
+| [NEC、NATOサイバー防衛協力センター主催演習に参加 - 環境構築と事前演習を支援](https://news.mynavi.jp/techplus/article/20260618-4598089/) | 21.0 | 20.0 | 42.0 |
+| [リコージャパン、AI実装とSE統合でデジタルサービス加速--笠井CEOが戦略を説明](https://japan.zdnet.com/article/35249096/) | 21.0 | 20.0 | 42.0 |
+| [Blue Planetが統合ネットワーク変更管理でサービスプロバイダーのリスクを低減](https://www.helpnetsecurity.com/2026/06/18/blue-planet-configuration-and-change-management-ccm/) | 20.0 | 20.0 | 42.0 |
+| [Kodak、ShinyHuntersによるハッキング主張後にデータ侵害を認める](https://www.securityweek.com/kodak-admits-data-breach-after-shinyhunters-hack-claims/) | 20.0 | 20.0 | 42.0 |
+| [スマートフォンで車を解錠する際のデジタルキー保護](https://www.helpnetsecurity.com/2026/06/18/alysia-johnson-car-connectivity-consortium-securing-digital-keys/) | 20.0 | 20.0 | 42.0 |
+| [Homebrewがtapのセキュリティを強化し、インターフェース改善に着手](https://www.helpnetsecurity.com/2026/06/18/homebrew-6-0-0-released/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
