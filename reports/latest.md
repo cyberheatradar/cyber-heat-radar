@@ -1,19 +1,23 @@
-# 📡 サイレーダー 2026-06-19 17:01 JST
+# 📡 サイレーダー 2026-06-20 05:01 JST
 
-このレポートは、2026-06-19 11:00 JST〜2026-06-19 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-19 17:00 JST〜2026-06-20 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 48
-- [音声で扱う想定のトピック](#audio-topics): 0
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 23
+- 観測トピック数: 70
+- [音声で扱う想定のトピック](#audio-topics): 5
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 41
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Splunk Enterprise Vulnerability Exploited in Attacks Days After Disclosure](#topic-17163) | 40.0 | 64.0 | 59.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
+| 1 | [CVE-2026-20253: CISA KEV catalog addition](#topic-17163) | 45.0 | 64.0 | 63.0 | 音声 | 温度感上位枠 |
+| 2 | [CISA: Splunk Enterprise flaw actively exploited, patch by Sunday](#topic-18393) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 3 | [Operation Endgame Disrupts Malware Network Linked to Major Ransomware Gang](#topic-18397) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 4 | [Rights groups brand Home Office's AI age guesser for asylum-seekers as biased and inaccurate](#topic-18386) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 5 | [CryptoBandits Malware Doubles as a Backdoor, Abuses Tor](#topic-18383) | 32.0 | 38.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -21,38 +25,34 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
-
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
 <a id="topic-17163"></a>
 
-### 1. Splunk Enterprise Vulnerability Exploited in Attacks Days After Disclosure
+### 1. CVE-2026-20253: CISA KEV catalog addition
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
-| <nobr>区⁠分</nobr> | GitHub |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>I⁠o⁠C</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 温度上昇中 |
-| <nobr>温⁠度⁠感</nobr> | 40.0 |
+| <nobr>温⁠度⁠感</nobr> | 45.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 59.0 |
+| <nobr>確⁠度</nobr> | 63.0 |
 
 #### 概要
 
-Splunk Enterpriseの脆弱性CVE-2026-20253について、公開後まもなく実際の攻撃で悪用されていることが確認されたとされます。
-CISAはKnown Exploited Vulnerabilities（KEV）カタログに追加しており、該当製品の更新適用が急がれています。
-認証なしでのファイル操作やリモートコード実行につながる可能性があるとされ、影響が大きい脆弱性です。
-しかも公開から短期間で悪用観測が出ているため、通常の優先度より高く扱う必要があります。
+CISAは、Splunk EnterpriseにおけるCVE-2026-20253をKnown Exploited Vulnerabilities（KEV）カタログに追加しました。
+複数の報道では、同脆弱性は認証不要で悪用されうる重大な問題で、実際の攻撃での利用も確認されたとされています。
+Splunkは修正版を公開しており、影響を受ける環境では迅速な対応が求められます。
+KEV入りは、すでに実際の悪用が確認されている可能性を示すため、通常の脆弱性情報より優先度が高くなります。
+特に基盤システムとしてSplunkを使う組織では、侵害や横展開の起点になり得る点が重要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 3 sources。
+- 複数ソースで確認: 4 sources。
 - 実悪用・ゼロデイ文脈。
 - 脅威・攻撃キャンペーン文脈。
 - 現在の熱量に合わせた冷却補正。
@@ -74,9 +74,9 @@ CISAはKnown Exploited Vulnerabilities（KEV）カタログに追加しており
 
 #### 担当者向け確認ポイント
 
-- Splunk Enterpriseの該当バージョンを確認し、提供されている修正版への更新状況を最優先で点検する。
-- 外部公開された管理系インターフェースやSplunk関連資産について、不要な露出がないか棚卸しする。
-- CISA KEVや自組織の脆弱性管理ルールに沿って、期限を切った対応と監視強化を行う。
+- Splunk Enterpriseの該当バージョンを使っていないか確認し、修正版の適用状況を点検する。
+- CISAのKEV対象であるため、通常より高い優先度でパッチ適用や緩和策の実施計画を進める。
+- 認証不要での悪用が報じられているため、ログや不審なリクエストの有無を含めて関連システムを確認する。
 
 #### 関連する対象
 
@@ -89,6 +89,7 @@ CISAはKnown Exploited Vulnerabilities（KEV）カタログに追加しており
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
 | <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20253](https://nvd.nist.gov/vuln/detail/CVE-2026-20253) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Unauthenticated RCE in Splunk Enterprise under active attack (CVE-2026-20253)](https://www.helpnetsecurity.com/2026/06/19/splunk-vulnerability-cve-2026-20253-exploited/) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Splunk Enterprise Vulnerability Exploited in Attacks Days After Disclosure](https://www.securityweek.com/splunk-enterprise-vulnerability-exploited-in-attacks-days-after-disclosure/) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Critical Splunk Enterprise Flaw Lets Attackers Run Code Without Authentication](https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html) | <nobr>内容確認・補足情報</nobr> |
@@ -103,6 +104,246 @@ CISAはKnown Exploited Vulnerabilities（KEV）カタログに追加しており
 
 ---
 
+<a id="topic-18393"></a>
+
+### 2. CISA: Splunk Enterprise flaw actively exploited, patch by Sunday
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+CISAが、Splunk Enterpriseに存在する重大な脆弱性について、攻撃で悪用されているとして米連邦機関に期限までの対処を促しています。
+公開情報では詳細な手口までは示されていませんが、既に悪用が観測されている点が注目されています。
+業務監視やログ管理で広く使われる製品に関するため、影響範囲が大きくなる可能性があります。悪用が確認されている脆弱性は、優先的な更新と緊急点検の対象になります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Splunk Enterpriseの該当バージョンや適用済みパッチ状況を確認する。
+- ベンダーや公的機関の告知に基づき、更新・緩和策を早急に適用する。
+- 認証ログや管理画面への不審なアクセスがないか、直近の監査を強化する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-20253 | 関連CVE | 1.00 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [CISA: Splunk Enterprise flaw actively exploited, patch by Sunday](https://www.bleepingcomputer.com/news/security/cisa-splunk-enterprise-flaw-actively-exploited-patch-by-sunday/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+- PoC/検証コード候補: 候補あり（URL 3件以上 / 該当CVE 1件）。
+
+---
+
+<a id="topic-18397"></a>
+
+### 3. Operation Endgame Disrupts Malware Network Linked to Major Ransomware Gang
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 36.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Operation Endgameの一環として、Evil Corpに関連するとされるマルウェア網に対する妨害が実施されたと報じられています。
+あわせて、SocGholishマルウェアがEvil Corp関係の約15,000サイトから除去されたとされています。
+ランサムウェア関連組織の活動基盤に打撃を与える動きとして注目されます。感染経路や誘導元の一部が減少した可能性があり、関連する防御・監視の見直しにつながります。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- SocGholishを含む初期侵入経路の監視を強化し、関連ドメインや不審なリダイレクトの検知を点検する。
+- ランサムウェア関連の脅威情報を踏まえ、メール・Web・エンドポイントの多層防御設定を再確認する。
+- 同種の妨害報道があっても残存インフラや派生活動はあり得るため、アラート運用とログ確認を継続する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Operation Endgame Disrupts Malware Network Linked to Major Ransomware Gang](https://www.infosecurity-magazine.com/news/operation-endgame-socgholish-evil/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+- PoC/検証コード候補: 候補なし。
+
+---
+
+<a id="topic-18386"></a>
+
+### 4. Rights groups brand Home Office's AI age guesser for asylum-seekers as biased and inaccurate
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+英国の内務省が難民申請者の年齢推定に使うとされるAIについて、権利団体から偏りや精度への懸念が示されています。
+特に、子どもと大人の境界にいる人を信頼して判別できないのではないか、という点が問題視されています。
+年齢判定は保護や手続きの分岐に直結しやすく、誤判定が本人の権利や扱いに影響する可能性があります。AIを行政判断に使う際の公平性、説明責任、検証可能性が改めて問われる事例です。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AIの判断を単独で最終決定に使わず、人手による確認や異議申立ての流れを用意すること。
+- 導入前後で、特定集団に不利な誤判定が出ていないかを継続的に点検すること。
+- 判断の根拠、限界、運用条件を関係者に分かる形で明示し、記録を残すこと。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Rights groups brand Home Office's AI age guesser for asylum-seekers as biased an](https://www.theregister.com/security/2026/06/19/rights-groups-brand-home-offices-ai-age-guesser-for-asylum-seekers-as-biased-and-inaccurate/5258892) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+- PoC/検証コード候補: 候補なし。
+
+---
+
+<a id="topic-18383"></a>
+
+### 5. CryptoBandits Malware Doubles as a Backdoor, Abuses Tor
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>R⁠C⁠E</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 32.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+CryptoBanditsと呼ばれるマルウェアが、情報窃取だけでなくバックドアとしても機能し、TorやローカルSOCKS5プロキシを使って通信を中継しているとされています。
+公開情報では、遠隔操作につながる動きが示されており、単なる盗難型マルウェアよりも広い悪用可能性が示唆されています。
+通信の秘匿性を高める仕組みが悪用されると、検知や追跡が難しくなるため、感染後の横展開や遠隔操作のリスクが上がります。
+情報窃取とリモート実行の両面を持つ点は、被害の範囲が広がりやすいことを意味します。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Tor経由やSOCKS系の不審な中継通信がないか、ネットワーク監視とログで確認する。
+- 情報窃取系の兆候だけでなく、バックドアとしての不正な継続接続や外向き通信も合わせて点検する。
+- 既知IOCが少ない場合でも、EDRで不審なプロセス連携やプロキシ利用の挙動検知を優先する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [CryptoBandits Malware Doubles as a Backdoor, Abuses Tor](https://www.securityweek.com/cryptobandits-malware-doubles-as-a-backdoor-abuses-tor/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+- PoC/検証コード候補: 候補なし。
+
+---
+
+<a id="github-only-topics"></a>
+
+## 📌 GitHubのみ掲載の注目トピック
+
+今回はGitHubのみ掲載の注目トピックはありません。
+
 <a id="low-record-topics"></a>
 
 ## ❄️ 低温だが記録しておくトピック
@@ -112,29 +353,47 @@ CISAはKnown Exploited Vulnerabilities（KEV）カタログに追加しており
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [SocGholishボットネットの摘発で15,000件のWordPressサイトをクリーンアップ](https://www.securityweek.com/15000-wordpress-websites-cleaned-up-in-socgholish-botnet-takedown/) | 28.0 | 20.0 | 42.0 |
-| [アジア太平洋地域の詐欺ネットワーク、年間約400億ドルを生み出す](https://www.helpnetsecurity.com/2026/06/19/interpol-asia-cybercrime-trends-report/) | 28.0 | 20.0 | 42.0 |
-| [Photoshopなど「Adobe Creative Cloud」にAIエージェント、アドビが全面導入 ChatGPTやClaudeとも連携](https://www.itmedia.co.jp/news/articles/2606/19/news110.html) | 26.0 | 20.0 | 42.0 |
-| [画像生成AIのMidjourneyが医療参入、超音波全身スキャナとサウナ融合の「Midjourney Spa」構想を発表](https://www.itmedia.co.jp/news/articles/2606/19/news090.html) | 26.0 | 20.0 | 42.0 |
-| [IPv4マップIPv6アドレス経由で配信されるeBankingフィッシング](https://isc.sans.edu/diary/rss/33090) | 22.0 | 20.0 | 42.0 |
-| [GitHubでトロイの木馬を配布するリポジトリ約1万件が見つかる、正規プロジェクトを複製して検索結果に紛れ込む](https://gigazine.net/news/20260619-github-malware-distribution/) | 22.0 | 20.0 | 42.0 |
-| [Appleがワイヤレスイヤホン経由で会話を盗聴される可能性がある深刻な脆弱性を修正](https://gigazine.net/news/20260619-apple-patches-eavesdropping-vulnerability-beats-studio-buds/) | 22.0 | 20.0 | 42.0 |
-| [ロードバランサ「HAProxy」に脆弱性 - 同期破壊のおそれ](https://www.security-next.com/186147) | 22.0 | 20.0 | 42.0 |
-| [Androidの開発者認証が間もなく実施予定、Googleがタイムラインと対応アプリストアを公表](https://gigazine.net/news/20260619-android-developer-verification-timeline/) | 22.0 | 20.0 | 42.0 |
-| [「Webmin」に認証バイパスなど複数の脆弱性 - 最新版で修正](https://www.security-next.com/186140) | 22.0 | 20.0 | 42.0 |
-| [A12およびA13チップ搭載のAppleデバイスでパッチ不可能な脆弱性「usbliter8」が見つかる](https://gigazine.net/news/20260619-unpatchable-exploit-targets-apple-a12-a13/) | 22.0 | 20.0 | 42.0 |
-| [サプライチェーンのモニタリングは“必須”に SLING社CEOに尋ねる、リスク管理のポイント](https://www.itmedia.co.jp/enterprise/articles/2606/18/news030.html) | 21.0 | 20.0 | 42.0 |
-| [ヴィームが示す、レジリエンス強化への道筋--復旧に対する「自信のギャップ」が浮き彫りに](https://japan.zdnet.com/article/35249161/) | 21.0 | 20.0 | 42.0 |
-| [東北大、4月の不正アクセスに続報 連絡取れない元入院患者・治験医師に申し出呼びかけ](https://www.itmedia.co.jp/news/articles/2606/19/news092.html) | 21.0 | 20.0 | 42.0 |
-| [6/25（木）は情シス集合！ ウナギと台湾かき氷を食べながらゆるっと語る、無料のIT業界交流会をアスキーが開催します！](https://ascii.jp/elem/000/004/411/4411814/?rss=) | 21.0 | 20.0 | 42.0 |
-| [Apple、Beats Studio Budsの脆弱性を修正 近くの攻撃者がマイク経由で盗聴可能に](https://thehackernews.com/2026/06/apple-patches-beats-studio-buds-flaw.html) | 20.0 | 28.0 | 50.0 |
-| [CiscoがWideField Securityを買収しSplunkのエージェント型SOCを強化](https://www.securityweek.com/cisco-to-acquire-widefield-security-to-boost-splunks-agentic-soc/) | 20.0 | 20.0 | 42.0 |
-| [約7万4,000台のFortinet機器からパスワードが流出](https://www.itpro.com/security/passwords-nicked-for-nearly-74-000-fortinet-devices) | 20.0 | 20.0 | 42.0 |
-| [CISA、FortinetユーザーにFortiBleed漏えい後のデバイス保護を呼びかけ](https://www.bleepingcomputer.com/news/security/cisa-warns-fortinet-users-to-secure-devices-after-fortibleed-leak/) | 20.0 | 20.0 | 42.0 |
-| [ブラウザタブが他人のファイルの暗号化ストレージになる可能性](https://www.helpnetsecurity.com/2026/06/19/safecloud-browser-based-encrypted-storage/) | 20.0 | 20.0 | 42.0 |
-| [侵害を検知するために必要なログを企業が破棄している](https://www.helpnetsecurity.com/2026/06/19/report-log-management-security-risk/) | 20.0 | 20.0 | 42.0 |
-| [三菱電機製MELSEC iQ-FシリーズのFX5-EIPおよびFX5-ENET/IPにおける脆弱性](https://jvn.jp/vu/JVNVU97140216/) | 20.0 | 20.0 | 42.0 |
-| [Vendor-signed UEFIアプリケーションにおけるセキュアブートバイパスの脆弱性](https://jvn.jp/vu/JVNVU93024090/) | 20.0 | 20.0 | 42.0 |
+| [Gentlemen RaaSがGentleKiller EDRフレームワークを用いて400のセキュリティプロセスを標的に](https://thehackernews.com/2026/06/the-gentlemen-raas-uses-gentlekiller.html) | 28.0 | 30.0 | 42.0 |
+| [GoogleのreCAPTCHAで手のジェスチャーを求められることがある問題](https://www.helpnetsecurity.com/2026/06/19/google-recaptcha-hand-gesture-verification/) | 28.0 | 20.0 | 48.0 |
+| [SocGholish対策で約1万5000件の感染サイトをクリーンアップ](https://www.malwarebytes.com/blog/news/2026/06/nearly-15000-infected-websites-cleaned-in-socgholish-crackdown) | 28.0 | 20.0 | 42.0 |
+| [AppleがBeatsの盗聴脆弱性を修正、DOTがDeltaのCrowdStrike調査を終了、AWS Continuum](https://www.securityweek.com/in-other-news-apple-patches-beats-eavesdropping-flaw-dot-closes-delta-crowdstrike-probe-aws-continuum/) | 28.0 | 20.0 | 42.0 |
+| [CISA、FortiBleedにより86,644台のFortiGateデバイスが影響とFortinet顧客に警告](https://thehackernews.com/2026/06/cisa-warns-fortinet-customers-as.html) | 28.0 | 20.0 | 42.0 |
+| [RussiaのEvil Corpハッカーグループに関連するマルウェアネットワークを警察が摘発](https://therecord.media/socgholish-botnet-disrupted) | 28.0 | 20.0 | 42.0 |
+| [サイバー犯罪者がGitHub、YouTube、VirusTotalを悪用して暗号資産窃取マルウェアを拡散](https://www.helpnetsecurity.com/2026/06/19/fake-github-stars-crypto-stealing-malware/) | 28.0 | 20.0 | 42.0 |
+| [FortiBleed: 8万6000件のFortinetデバイス認証情報が漏えい](https://www.securityweek.com/fortibleed-86000-fortinet-device-credentials-compromised/) | 28.0 | 20.0 | 42.0 |
+| [The Hacker News、ANY.RUNを2026年の最優秀セキュリティ調査プラットフォームに認定](https://any.run/cybersecurity-blog/best-security-platform/) | 28.0 | 20.0 | 42.0 |
+| [Weekly Metasploitアップデート: NTLM Relay権限昇格、MCP Server統合、Paperclip AIのRCEチェーンなど](https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-19-06-2026) | 27.0 | 20.0 | 42.0 |
+| [AIと話すだけで動画編集できる映像ソフト、オープンソースで登場 出力は「Premiere」「DaVinci」でも読み込み可](https://www.itmedia.co.jp/news/articles/2606/19/news119.html) | 26.0 | 20.0 | 42.0 |
+| [AutoJack攻撃で1つのWebページがAIエージェントを乗っ取りホスト上でコード実行可能に](https://thehackernews.com/2026/06/autojack-attack-lets-one-web-page.html) | 25.0 | 20.0 | 42.0 |
+| [すべてのAIエージェントはIDであるが、ほとんどの組織はそう扱っていない](https://www.bleepingcomputer.com/news/security/every-ai-agent-is-an-identity-most-organizations-dont-treat-them-that-way/) | 25.0 | 20.0 | 42.0 |
+| [AIの進展とサイバーセキュリティチームに迫る変化の圧力](https://www.darkreading.com/cybersecurity-operations/stressors-ai-changes-cybersecurity-teams) | 25.0 | 20.0 | 42.0 |
+| [支援型からエージェント型へ：脅威管理を再定義するAIの変革](https://thehackernews.com/2026/06/from-assistive-to-agentic-ai-shift.html) | 25.0 | 20.0 | 42.0 |
+| [AWSがAI搭載の脆弱性管理プラットフォーム「Continuum」を発表](https://www.infosecurity-magazine.com/news/aws-continuum-ai-vulnerability/) | 25.0 | 20.0 | 42.0 |
+| [Shadow AIの真の脅威はアクセス制御にある](https://thehackernews.com/2026/06/forget-data-leakage-shadow-ais-real.html) | 25.0 | 20.0 | 42.0 |
+| [NY州の男性、AI生成のヌード画像で大学生を脅迫し起訴される](https://www.bleepingcomputer.com/news/security/new-york-man-faces-cyberstalking-charge-after-sharing-ai-generated-nudes-online/) | 25.0 | 20.0 | 42.0 |
+| [Klueの侵害によりSalesforceのデータが窃取、Huntressも影響を受ける](https://www.helpnetsecurity.com/2026/06/19/klue-salesforce-data-breach-huntress/) | 23.0 | 23.0 | 43.0 |
+| [学生向けのイベント当選通知でメール誤送信 - 兵庫県立大](https://www.security-next.com/186139) | 22.0 | 20.0 | 42.0 |
+| [職員アカウントが侵害、スパムの踏み台に - 日中経済協会](https://www.security-next.com/185994) | 22.0 | 20.0 | 42.0 |
+| [保護者の同意なく子どもの個人情報をPTAへ提供 - 小田原市](https://www.security-next.com/185935) | 22.0 | 20.0 | 42.0 |
+| [「FortiOS」の「SSL VPN」脆弱性に関するアドバイザリを更新](https://www.security-next.com/186165) | 22.0 | 20.0 | 42.0 |
+| [Apple、Beats Studio Budsの脆弱性を修正、イヤホンが盗聴器化する恐れ](https://www.malwarebytes.com/blog/bugs/2026/06/apple-patches-beats-studio-buds-flaw-that-could-turn-earbuds-into-a-wiretap) | 21.0 | 28.0 | 54.0 |
+| [Cisco Identity Services Engine のリモートコード実行および情報漏えいの脆弱性](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-multi-G5WP8vv) | 20.0 | 46.0 | 50.0 |
+| [修正不能な「usbliter8」エクスプロイトがApple A12およびA13のSecureROM起動チェーンを突破](https://thehackernews.com/2026/06/unpatchable-usbliter8-exploit-breaks.html) | 20.0 | 20.0 | 42.0 |
+| [Texas州政府のデータ侵害で300万人超の運転免許証情報が流出](https://www.bleepingcomputer.com/news/security/texas-govt-data-breach-exposes-over-3-million-drivers-licenses/) | 20.0 | 20.0 | 42.0 |
+| [checkm8型のBootROMエクスプロイトをA12・A13 iPhone向けに公開](https://www.theregister.com/security/2026/06/19/researchers-drop-checkm8-style-bootrom-exploit-for-a12-and-a13-iphones/5259028) | 20.0 | 20.0 | 42.0 |
+| [Appleの「Hide My Email」変更にプライバシー重視派が反発](https://www.bitdefender.com/en-us/blog/hotforsecurity/apples-hide-my-email-tweak-leaves-privacy-fans-fuming) | 20.0 | 20.0 | 42.0 |
+| [Operation Endgame、SocGholishサーバーを妨害し14,971件のWordPressサイトをクリーンアップ](https://thehackernews.com/2026/06/operation-endgame-disrupts-socgholish.html) | 20.0 | 20.0 | 42.0 |
+| [テキサスではすべてが大きく、より良い――データ漏えいも例外ではない](https://www.theregister.com/security/2026/06/19/texas-gov-vendor-breach-exposes-data-of-3m-hunters-anglers/5258815) | 20.0 | 20.0 | 42.0 |
+| [英国のプライバシー監督当局トップが「判断ミス」を認め辞任](https://www.theregister.com/security/2026/06/19/britains-privacy-watchdog-quits-after-poor-judgment-admission/5258926) | 20.0 | 20.0 | 42.0 |
+| [公益事業へのサイバー攻撃の大半を占めるレガシーキット](https://www.itpro.com/security/legacy-kit-behind-vast-majority-of-cyber-attacks-on-utilities) | 20.0 | 20.0 | 42.0 |
+| [展示会会場で聞いたXDRに関する8つの質問](https://www.security.com/product-insights/8-xdr-questions) | 20.0 | 20.0 | 42.0 |
+| [Mastodon 4.6、プロフィールコレクションと二要素認証制御を追加](https://www.helpnetsecurity.com/2026/06/19/mastodon-4-6-released/) | 20.0 | 20.0 | 42.0 |
+| [Klueのサプライチェーン攻撃の影響を受けたサイバーセキュリティ企業](https://www.securityweek.com/cybersecurity-firms-impacted-by-klue-supply-chain-attack/) | 20.0 | 20.0 | 42.0 |
+| [GoogleがAndroid開発者認証の義務化に向けた実施時期を発表](https://www.helpnetsecurity.com/2026/06/19/android-developer-verification-rollout-markets/) | 20.0 | 20.0 | 42.0 |
+| [AccentureがDragos、runZero、NetRiseを42億ドルで買収するサイバーセキュリティ取引](https://www.helpnetsecurity.com/2026/06/19/accenture-dragos-runzero-netrise-acquisition/) | 20.0 | 20.0 | 42.0 |
+| [OAuthトークン悪用による顧客データ漏えいを受けSalesforceがKlueアプリ連携を停止](https://thehackernews.com/2026/06/salesforce-disables-klue-app.html) | 20.0 | 20.0 | 42.0 |
+| [SlackやTeamsなどメール以外のチャネルにおける脅威検知への信頼不足](https://www.infosecurity-magazine.com/news/threat-detection-across-nonemail/) | 20.0 | 20.0 | 42.0 |
+| [IPv4マップドIPv6アドレスを用いたeBankingフィッシング攻撃](https://isc.sans.edu/diary/rss/33090) | 17.0 | 20.0 | 42.0 |
 
 ---
 
