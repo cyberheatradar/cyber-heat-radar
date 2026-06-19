@@ -1,17 +1,19 @@
-# 📡 サイレーダー 2026-06-19 11:01 JST
+# 📡 サイレーダー 2026-06-19 17:01 JST
 
-このレポートは、2026-06-19 05:00 JST〜2026-06-19 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-19 11:00 JST〜2026-06-19 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 57
+- 観測トピック数: 48
 - [音声で扱う想定のトピック](#audio-topics): 0
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 33
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 23
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Splunk Enterprise Vulnerability Exploited in Attacks Days After Disclosure](#topic-17163) | 40.0 | 64.0 | 59.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
 
 ---
 
@@ -25,7 +27,81 @@
 
 ## 📌 GitHubのみ掲載の注目トピック
 
-今回はGitHubのみ掲載の注目トピックはありません。
+<a id="topic-17163"></a>
+
+### 1. Splunk Enterprise Vulnerability Exploited in Attacks Days After Disclosure
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | GitHub |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>温⁠度⁠状⁠態</nobr> | 温度上昇中 |
+| <nobr>温⁠度⁠感</nobr> | 40.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
+| <nobr>確⁠度</nobr> | 59.0 |
+
+#### 概要
+
+Splunk Enterpriseの脆弱性CVE-2026-20253について、公開後まもなく実際の攻撃で悪用されていることが確認されたとされます。
+CISAはKnown Exploited Vulnerabilities（KEV）カタログに追加しており、該当製品の更新適用が急がれています。
+認証なしでのファイル操作やリモートコード実行につながる可能性があるとされ、影響が大きい脆弱性です。
+しかも公開から短期間で悪用観測が出ているため、通常の優先度より高く扱う必要があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 3 sources。
+- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- 悪用情報あり。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Splunk Enterpriseの該当バージョンを確認し、提供されている修正版への更新状況を最優先で点検する。
+- 外部公開された管理系インターフェースやSplunk関連資産について、不要な露出がないか棚卸しする。
+- CISA KEVや自組織の脆弱性管理ルールに沿って、期限を切った対応と監視強化を行う。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-20253 | 関連CVE | 1.00 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20253](https://nvd.nist.gov/vuln/detail/CVE-2026-20253) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Splunk Enterprise Vulnerability Exploited in Attacks Days After Disclosure](https://www.securityweek.com/splunk-enterprise-vulnerability-exploited-in-attacks-days-after-disclosure/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Critical Splunk Enterprise Flaw Lets Attackers Run Code Without Authentication](https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+- PoC/検証コード候補: 候補あり（URL 3件以上 / 該当CVE 1件）。
+
+---
 
 <a id="low-record-topics"></a>
 
@@ -36,39 +112,29 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Gentlemen ransomwareが複数のEDRキラーを使って防御を無効化](https://www.bleepingcomputer.com/news/security/gentlemen-ransomware-uses-multiple-edr-killers-to-disable-defenses/) | 28.0 | 30.0 | 42.0 |
-| [AIエージェント用検索エンジンの新標準「ARD」が登場--グーグルやMSが参加](https://japan.zdnet.com/article/35249130/) | 28.0 | 20.0 | 42.0 |
-| [移転に紛れて: CASTLESTEALERを配布する新たなローダーの分析](https://www.elastic.co/security-labs/oxloader-malware-loader-infostealer) | 28.0 | 20.0 | 42.0 |
-| [日本生命、電話解析AIなどを導入--顧客とのやりとりを記録、分析](https://japan.zdnet.com/article/35249132/) | 28.0 | 20.0 | 42.0 |
-| [当局がEvil CorpのSocGholishボットネットを摘発](https://cyberscoop.com/socgholish-malware-botnet-takedown-evilcorp/) | 28.0 | 20.0 | 42.0 |
-| [AutoJack: AIエージェントを動かすホストを単一ページでRCEできる方法](https://www.microsoft.com/en-us/security/blog/2026/06/18/autojack-single-page-rce-host-running-ai-agent/) | 27.0 | 20.0 | 42.0 |
-| [OpenAI、Google「Gemini」共同リードのノーム・シャジーア氏を獲得 トランプ政権でAI政策を担ったディーン・ボール氏も](https://www.itmedia.co.jp/news/articles/2606/19/news072.html) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントによる知の民主化--「人・基盤・規律」の定着化手法と成果](https://japan.zdnet.com/article/35248602/) | 26.0 | 20.0 | 42.0 |
-| [その3「役割の檻」--AIエージェントの内製とアウトソースのスコープをどう引くか](https://japan.zdnet.com/article/35248181/) | 26.0 | 20.0 | 42.0 |
-| [電博、2社そろってChatGPT広告参入 OpenAIと直接連携の国内ローンチパートナーに](https://www.itmedia.co.jp/news/articles/2606/19/news062.html) | 26.0 | 20.0 | 42.0 |
-| [企業の40％がAIエージェントを廃止--自社エージェントを失敗させない3つの方法](https://japan.zdnet.com/article/35248904/) | 26.0 | 20.0 | 42.0 |
-| [MUFG・SBIも参戦、「AIエージェント」で激変する金融、勝敗分ける“責任の境界”とは](https://www.sbbit.jp/article/fj/185718?ref=rss) | 25.0 | 20.0 | 42.0 |
-| [Congress、AI生成ディープフェイク対策のNo FAKES Actを審議へ](https://cyberscoop.com/congress-tees-up-no-fakes-act-aiming-at-ai-generated-deepfakes/) | 25.0 | 20.0 | 42.0 |
-| [6月公表の「Splunk Enterprise」脆弱性、悪用を確認](https://www.security-next.com/186126) | 24.0 | 20.0 | 43.0 |
-| [FWやVPNの認証情報を攻撃者が大量保有 - 「FortiBleed」に要警戒](https://www.security-next.com/186120) | 24.0 | 20.0 | 43.0 |
-| [エンドポイントの脅威を検知し可視化する「FortiEDR」 AV-Comparatives 2026認証を取得](https://ascii.jp/elem/000/004/410/4410885/?rss=) | 24.0 | 20.0 | 43.0 |
-| [怖いのは「Mythos」だけじゃない バイブコーディングの落とし穴](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100112/061200140/) | 24.0 | 20.0 | 43.0 |
-| [東急「車内コンセントでモバイルバッテリー充電しないで」 注意喚起を更新](https://www.itmedia.co.jp/news/articles/2606/19/news080.html) | 21.0 | 20.0 | 42.0 |
-| [廃棄処理業者に破砕処分を委託したハードディスクが外部に流出](https://scan.netsecurity.ne.jp/article/2026/06/19/55534.html) | 21.0 | 20.0 | 42.0 |
-| [経済産業省から報告徴収 ～ 九州電力送配電が顧客情報を保存した外部記憶媒体が所在不明に](https://scan.netsecurity.ne.jp/article/2026/06/19/55533.html) | 21.0 | 20.0 | 42.0 |
-| [「はいチーズ！フォト」に不正アクセス、一部顧客の個人情報漏えいを確認](https://scan.netsecurity.ne.jp/article/2026/06/19/55532.html) | 21.0 | 20.0 | 42.0 |
-| [日本製鉄ホームページで不審な認証画面](https://scan.netsecurity.ne.jp/article/2026/06/19/55531.html) | 21.0 | 20.0 | 42.0 |
-| [ThingsBoard にプロトタイプ汚染の脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/19/55530.html) | 21.0 | 20.0 | 42.0 |
-| [ディープフェイク検知プラットフォーム「SYNTHETIQ VISION」アップデート、災害画像等の真偽判定が可能に](https://scan.netsecurity.ne.jp/article/2026/06/19/55529.html) | 21.0 | 20.0 | 42.0 |
-| [7 / 16 開催「クラウド前提の自治体運営を支える次世代セキュリティ基盤の実装」でHENNGE 赤瀬礼旺氏が講演](https://scan.netsecurity.ne.jp/article/2026/06/19/55528.html) | 21.0 | 20.0 | 42.0 |
-| [【正】global.kawasaki.com／【誤】global-kawasakis.com ～ 川崎重工業を装った不審メールに注意を呼びかけ、SPF・DKIM や DMARC 等対策は実施済み](https://scan.netsecurity.ne.jp/article/2026/06/19/55527.html) | 21.0 | 20.0 | 42.0 |
-| [Optical Disc Archive Software（Windows版）のインストーラにインストール時の不適切なファイルアクセス権設定の脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/19/55526.html) | 21.0 | 20.0 | 42.0 |
-| [RadiX AX6600 WiFi 6 Tri-Band Gaming Router に OSコマンドインジェクションの脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/19/55525.html) | 21.0 | 20.0 | 42.0 |
-| [「ログを取っているから安心」が危ない 攻撃者はクラウドログを“監視ツール”に変える](https://atmarkit.itmedia.co.jp/ait/articles/2606/19/news046.html) | 21.0 | 20.0 | 42.0 |
-| [セキュリティ運用の分断をDatadogはどう解消するのか--可観測性による防御の加速](https://japan.zdnet.com/article/35249122/) | 21.0 | 20.0 | 42.0 |
-| [パッチ適用後も標的に？ 32万台超のFortiGateを襲った「FortiBleed」の正体](https://atmarkit.itmedia.co.jp/ait/articles/2606/19/news035.html) | 21.0 | 20.0 | 42.0 |
-| [2025年の脆弱性は4万8000件 本当に危険なのは58件](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100113/061200188/) | 21.0 | 20.0 | 42.0 |
-| [Novo Nordiskの情報漏えいで明らかになったソフトウェア開発パイプラインのリスク](https://www.darkreading.com/cyber-risk/novo-nordisk-breach-exposes-dev-pipeline-risk) | 20.0 | 20.0 | 42.0 |
+| [SocGholishボットネットの摘発で15,000件のWordPressサイトをクリーンアップ](https://www.securityweek.com/15000-wordpress-websites-cleaned-up-in-socgholish-botnet-takedown/) | 28.0 | 20.0 | 42.0 |
+| [アジア太平洋地域の詐欺ネットワーク、年間約400億ドルを生み出す](https://www.helpnetsecurity.com/2026/06/19/interpol-asia-cybercrime-trends-report/) | 28.0 | 20.0 | 42.0 |
+| [Photoshopなど「Adobe Creative Cloud」にAIエージェント、アドビが全面導入 ChatGPTやClaudeとも連携](https://www.itmedia.co.jp/news/articles/2606/19/news110.html) | 26.0 | 20.0 | 42.0 |
+| [画像生成AIのMidjourneyが医療参入、超音波全身スキャナとサウナ融合の「Midjourney Spa」構想を発表](https://www.itmedia.co.jp/news/articles/2606/19/news090.html) | 26.0 | 20.0 | 42.0 |
+| [IPv4マップIPv6アドレス経由で配信されるeBankingフィッシング](https://isc.sans.edu/diary/rss/33090) | 22.0 | 20.0 | 42.0 |
+| [GitHubでトロイの木馬を配布するリポジトリ約1万件が見つかる、正規プロジェクトを複製して検索結果に紛れ込む](https://gigazine.net/news/20260619-github-malware-distribution/) | 22.0 | 20.0 | 42.0 |
+| [Appleがワイヤレスイヤホン経由で会話を盗聴される可能性がある深刻な脆弱性を修正](https://gigazine.net/news/20260619-apple-patches-eavesdropping-vulnerability-beats-studio-buds/) | 22.0 | 20.0 | 42.0 |
+| [ロードバランサ「HAProxy」に脆弱性 - 同期破壊のおそれ](https://www.security-next.com/186147) | 22.0 | 20.0 | 42.0 |
+| [Androidの開発者認証が間もなく実施予定、Googleがタイムラインと対応アプリストアを公表](https://gigazine.net/news/20260619-android-developer-verification-timeline/) | 22.0 | 20.0 | 42.0 |
+| [「Webmin」に認証バイパスなど複数の脆弱性 - 最新版で修正](https://www.security-next.com/186140) | 22.0 | 20.0 | 42.0 |
+| [A12およびA13チップ搭載のAppleデバイスでパッチ不可能な脆弱性「usbliter8」が見つかる](https://gigazine.net/news/20260619-unpatchable-exploit-targets-apple-a12-a13/) | 22.0 | 20.0 | 42.0 |
+| [サプライチェーンのモニタリングは“必須”に SLING社CEOに尋ねる、リスク管理のポイント](https://www.itmedia.co.jp/enterprise/articles/2606/18/news030.html) | 21.0 | 20.0 | 42.0 |
+| [ヴィームが示す、レジリエンス強化への道筋--復旧に対する「自信のギャップ」が浮き彫りに](https://japan.zdnet.com/article/35249161/) | 21.0 | 20.0 | 42.0 |
+| [東北大、4月の不正アクセスに続報 連絡取れない元入院患者・治験医師に申し出呼びかけ](https://www.itmedia.co.jp/news/articles/2606/19/news092.html) | 21.0 | 20.0 | 42.0 |
+| [6/25（木）は情シス集合！ ウナギと台湾かき氷を食べながらゆるっと語る、無料のIT業界交流会をアスキーが開催します！](https://ascii.jp/elem/000/004/411/4411814/?rss=) | 21.0 | 20.0 | 42.0 |
+| [Apple、Beats Studio Budsの脆弱性を修正 近くの攻撃者がマイク経由で盗聴可能に](https://thehackernews.com/2026/06/apple-patches-beats-studio-buds-flaw.html) | 20.0 | 28.0 | 50.0 |
+| [CiscoがWideField Securityを買収しSplunkのエージェント型SOCを強化](https://www.securityweek.com/cisco-to-acquire-widefield-security-to-boost-splunks-agentic-soc/) | 20.0 | 20.0 | 42.0 |
+| [約7万4,000台のFortinet機器からパスワードが流出](https://www.itpro.com/security/passwords-nicked-for-nearly-74-000-fortinet-devices) | 20.0 | 20.0 | 42.0 |
+| [CISA、FortinetユーザーにFortiBleed漏えい後のデバイス保護を呼びかけ](https://www.bleepingcomputer.com/news/security/cisa-warns-fortinet-users-to-secure-devices-after-fortibleed-leak/) | 20.0 | 20.0 | 42.0 |
+| [ブラウザタブが他人のファイルの暗号化ストレージになる可能性](https://www.helpnetsecurity.com/2026/06/19/safecloud-browser-based-encrypted-storage/) | 20.0 | 20.0 | 42.0 |
+| [侵害を検知するために必要なログを企業が破棄している](https://www.helpnetsecurity.com/2026/06/19/report-log-management-security-risk/) | 20.0 | 20.0 | 42.0 |
+| [三菱電機製MELSEC iQ-FシリーズのFX5-EIPおよびFX5-ENET/IPにおける脆弱性](https://jvn.jp/vu/JVNVU97140216/) | 20.0 | 20.0 | 42.0 |
+| [Vendor-signed UEFIアプリケーションにおけるセキュアブートバイパスの脆弱性](https://jvn.jp/vu/JVNVU93024090/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
