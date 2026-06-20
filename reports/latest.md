@@ -1,19 +1,17 @@
-# 📡 サイレーダー 2026-06-20 11:00 JST
+# 📡 サイレーダー 2026-06-20 17:00 JST
 
-このレポートは、2026-06-20 05:00 JST〜2026-06-20 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-20 11:00 JST〜2026-06-20 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 27
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 25
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 1
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Hackers exploit info disclosure bug in Gravity SMTP WordPress plugin](#topic-18428) | 32.0 | 38.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -21,61 +19,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-18428"></a>
-
-### 1. Hackers exploit info disclosure bug in Gravity SMTP WordPress plugin
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 32.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-WordPressプラグイン「Gravity SMTP」に、未認証で情報が漏えいする脆弱性があり、悪用が確認されているとされています。
-対象プラグインは多くのサイトで利用されているため、影響範囲が広がる可能性があります。
-認証なしで情報が取得される類の問題は、環境情報や設定情報の露出につながり、追加攻撃の足がかりになるおそれがあります。
-利用サイト数が多いプラグインである点も、運用現場での優先度を高めます。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- 情報漏えい系。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Gravity SMTPを利用しているWordPressサイトでは、ベンダーの修正版や公式案内の有無を確認し、早急に適用可否を判断する。
-- プラグインの利用有無を棚卸しし、不要なものは停止・削除する。
-- 管理画面や関連ログを確認し、不審なアクセスや情報取得の痕跡がないか点検する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Hackers exploit info disclosure bug in Gravity SMTP WordPress plugin](https://www.bleepingcomputer.com/news/security/hackers-exploit-info-disclosure-bug-in-gravity-smtp-wordpress-plugin/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-- PoC/検証コード候補: 候補なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -92,8 +36,7 @@ WordPressプラグイン「Gravity SMTP」に、未認証で情報が漏えい�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [KlueのOAuth侵害、Icarusハッカーによる攻撃主張で被害組織が増加](https://www.bleepingcomputer.com/news/security/klue-oauth-breach-victim-list-grows-as-icarus-hackers-claim-attack/) | 28.0 | 20.0 | 42.0 |
-| [Microsoftが警告 「最新サイバー脅威」の手口と対応策](https://www.itmedia.co.jp/enterprise/articles/2606/20/news013.html) | 21.0 | 20.0 | 42.0 |
+| [大規模な認証情報攻撃の緩和策](https://unit42.paloaltonetworks.com/large-scale-credential-attacks/) | 28.0 | 20.0 | 42.0 |
 
 ---
 
