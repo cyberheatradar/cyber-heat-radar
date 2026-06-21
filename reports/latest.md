@@ -1,15 +1,15 @@
-# 📡 サイレーダー 2026-06-21 17:00 JST
+# 📡 サイレーダー 2026-06-22 05:00 JST
 
-このレポートは、2026-06-21 11:00 JST〜2026-06-21 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-21 17:00 JST〜2026-06-22 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 24
+- 観測トピック数: 26
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 2
 
 今回はサマリ掲載トピックはありません。
 
@@ -31,7 +31,13 @@
 
 ## ❄️ 低温だが記録しておくトピック
 
-今回は低温記録トピックはありません。
+音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
+重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
+
+| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
+|---|---:|---:|---:|
+| [AryStingerボットネットが世界中のD-Linkルーター数千台を感染](https://www.bleepingcomputer.com/news/security/arystinger-botnet-infected-thousands-of-d-link-routers-worldwide/) | 28.0 | 20.0 | 42.0 |
+| [Fortinetファイアウォールの認証情報7万4000件が窃取、Splunk EnterpriseのRCEが活発に攻撃中](https://www.helpnetsecurity.com/2026/06/21/week-in-review-74k-fortinet-firewall-credentials-stolen-splunk-enterprise-rce-under-active-attack/) | 24.0 | 38.0 | 42.0 |
 
 ---
 
