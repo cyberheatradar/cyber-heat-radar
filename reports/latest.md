@@ -1,15 +1,15 @@
-# 📡 サイレーダー 2026-06-22 05:00 JST
+# 📡 サイレーダー 2026-06-22 11:00 JST
 
-このレポートは、2026-06-21 17:00 JST〜2026-06-22 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-22 05:00 JST〜2026-06-22 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 26
+- 観測トピック数: 51
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 27
 
 今回はサマリ掲載トピックはありません。
 
@@ -36,8 +36,33 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [AryStingerボットネットが世界中のD-Linkルーター数千台を感染](https://www.bleepingcomputer.com/news/security/arystinger-botnet-infected-thousands-of-d-link-routers-worldwide/) | 28.0 | 20.0 | 42.0 |
-| [Fortinetファイアウォールの認証情報7万4000件が窃取、Splunk EnterpriseのRCEが活発に攻撃中](https://www.helpnetsecurity.com/2026/06/21/week-in-review-74k-fortinet-firewall-credentials-stolen-splunk-enterprise-rce-under-active-attack/) | 24.0 | 38.0 | 42.0 |
+| [物流企業を襲ったランサムウェア攻撃 - その教訓を生かし、新事業を展開](https://news.mynavi.jp/techplus/article/20260622-4554477/) | 29.0 | 30.0 | 42.0 |
+| [サーバ管理ソフトウェアの脆弱性を悪用 ～ CKCネットワークと学参が運用するシステムにランサムウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/06/22/55540.html) | 29.0 | 30.0 | 42.0 |
+| [Claudeをかたる攻撃がアジア太平洋地域で多発 偽広告から不正コード実行へ](https://www.itmedia.co.jp/enterprise/articles/2606/19/news051.html) | 29.0 | 20.0 | 42.0 |
+| [「ChatGPT」、メモリー機能をアップグレード--一方で問題点も](https://japan.zdnet.com/article/35249203/) | 26.0 | 20.0 | 42.0 |
+| [日経のAI、NTTデータが販売契約 出典明示でハルシネーションに強い法人向け「NIKKEI KAI」](https://www.itmedia.co.jp/news/articles/2606/19/news121.html) | 26.0 | 20.0 | 42.0 |
+| [Okta Blog 第17回 OAuth の限界とセキュリティリスクを克服、Okta「Cross App Access」が実現する安全な AI エージェント活用](https://scan.netsecurity.ne.jp/article/2026/06/22/55543.html) | 26.0 | 20.0 | 42.0 |
+| [日本の AI 関連インシデント経験は 47%、セキュリティ対策の遅れ浮き彫り ～ Proofpoint 調査](https://scan.netsecurity.ne.jp/article/2026/06/22/55539.html) | 26.0 | 20.0 | 42.0 |
+| [AI・SBOM・耐量子暗号 ～ NEDO懸賞金事業の運営体制が決定](https://scan.netsecurity.ne.jp/article/2026/06/22/55538.html) | 26.0 | 20.0 | 42.0 |
+| [AIに「パッチを当てろ」と命じる時代へ Taniumが描く“自律型IT”の正体](https://atmarkit.itmedia.co.jp/ait/articles/2606/22/news039.html) | 26.0 | 20.0 | 42.0 |
+| [「危険なAI」の証拠はあったのか？ Anthropic「Fable 5」規制に広がる疑問の声](https://atmarkit.itmedia.co.jp/ait/articles/2606/22/news026.html) | 26.0 | 20.0 | 42.0 |
+| [「AI駆動開発」を推進するためにAWSで整えるガバナンスの土台](https://japan.zdnet.com/article/35248924/) | 26.0 | 20.0 | 42.0 |
+| [「WooCommerce」旧版にRCE脆弱性 - 実証コードも](https://www.security-next.com/186208) | 22.0 | 20.0 | 42.0 |
+| [先週注目された記事（2026年6月14日〜2026年6月20日）](https://www.security-next.com/186205) | 22.0 | 20.0 | 42.0 |
+| [「Node.<wbr>js」に12件の脆弱性 - 修正版を公開](https://www.security-next.com/186198) | 22.0 | 20.0 | 42.0 |
+| [チップの動作や脆弱性を研究するためにMITの研究者らが独自OS「Fractal」を開発](https://gigazine.net/news/20260622-mit-built-os-fractal-study-chips/) | 22.0 | 20.0 | 42.0 |
+| [CODE BLUE発起人が語る、セキュリティ人材育成の本質とは](https://news.mynavi.jp/techplus/article/20260622-4563712/) | 21.0 | 20.0 | 42.0 |
+| [インシデント対応の現場で崩れ去る「おかしな前提」とは - 名和利男氏が語る、OTセキュリティの真の課題と「事業を止めない」ための構造設計](https://news.mynavi.jp/techplus/article/20260622-4562917/) | 21.0 | 20.0 | 42.0 |
+| [和歌山大学「バーチャルツアー」が踏み台に、外部サイトに転送](https://scan.netsecurity.ne.jp/article/2026/06/22/55542.html) | 21.0 | 20.0 | 42.0 |
+| [大分大学「バーチャルキャンパスツアー」を装った不正なウェブページ表示、ソフトウェアの脆弱性を悪用](https://scan.netsecurity.ne.jp/article/2026/06/22/55541.html) | 21.0 | 20.0 | 42.0 |
+| [エーアイセキュリティラボ「”リアル” 脆弱性診断ツール比較セミナー」を 6 / 26 に開催](https://scan.netsecurity.ne.jp/article/2026/06/22/55537.html) | 21.0 | 20.0 | 42.0 |
+| [シェアレジデンス「nears」の旧サイトに注意を呼びかけ](https://scan.netsecurity.ne.jp/article/2026/06/22/55536.html) | 21.0 | 20.0 | 42.0 |
+| [Vendor-signed UEFI アプリケーションにセキュアブートバイパスの脆弱性](https://scan.netsecurity.ne.jp/article/2026/06/22/55535.html) | 21.0 | 20.0 | 42.0 |
+| [“ひとり情シス”状態はビジネスリスク／シャドーAIを管理できている企業は3割未満／AIアプリは「平均42秒」で攻撃が成功、ほか](https://ascii.jp/elem/000/004/412/4412253/?rss=) | 21.0 | 20.0 | 42.0 |
+| [「Arch User Repository」で悪意あるパッケージが発見される--今すぐやるべき対策](https://japan.zdnet.com/article/35249143/) | 21.0 | 20.0 | 42.0 |
+| [サイバー対処能力強化法が突き付ける「取引停止リスク」](https://japan.zdnet.com/article/35249036/) | 21.0 | 20.0 | 42.0 |
+| [不正アクセスで55万件情報漏洩の恐れ 別システムへの「自動登録」で被害拡大](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600011/061800209/) | 21.0 | 20.0 | 42.0 |
+| [systemd 261のリリースでソフトウェアTPMと新しいOSインストーラーを追加](https://www.helpnetsecurity.com/2026/06/22/systemd-261-released/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
