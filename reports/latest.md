@@ -1,17 +1,20 @@
-# 📡 サイレーダー 2026-06-23 11:00 JST
+# 📡 サイレーダー 2026-06-23 17:00 JST
 
-このレポートは、2026-06-23 05:00 JST〜2026-06-23 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-23 11:00 JST〜2026-06-23 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 60
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 51
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 36
+- [低温だが記録しておくトピック](#low-record-topics): 25
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Claude Code悪用やディープフェイク就職も、標的型攻撃で進むAIの実戦投入](#topic-18812) | 34.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 2 | [システム障害が発生、ランサム被害か - フェースグループ](#topic-18765) | 30.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,7 +22,123 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-18812"></a>
+
+### 1. Claude Code悪用やディープフェイク就職も、標的型攻撃で進むAIの実戦投入
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 34.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+公開情報では、AIが標的型攻撃の現場で実際に使われ始めていることが紹介されています。
+例として、生成AIの悪用、ディープフェイクを使った採用関連のなりすまし、AIを組み込んだマルウェアなどが挙げられています。
+攻撃の準備や偽装にAIが入り込むと、従来よりも見抜きにくい不正や侵入が増えるおそれがあります。特に採用や社内コミュニケーションを入口にしたなりすまし対策の重要性が高まります。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 本人確認や採用フローで、映像・音声だけに依存しない多層的な確認を検討する。
+- 社内外のやり取りで、AI生成文や偽装された指示への警戒を前提に運用を見直す。
+- マルウェア検知や脅威情報の運用で、AI支援を前提にした新しい攻撃パターンを継続的に監視する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| ai_model_or_project | Claude | 主題 | 0.80 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Claude Code悪用やディープフェイク就職も、標的型攻撃で進むAIの実戦投入](https://news.mynavi.jp/techplus/article/20260623-4618449/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+- PoC/検証コード候補: 候補なし。
+
+---
+
+<a id="topic-18765"></a>
+
+### 2. システム障害が発生、ランサム被害か - フェースグループ
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | - |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+エステティック関連事業を展開するフェースグループで、外部からのサイバー攻撃に起因すると見られるシステム障害が発生したと報じられています。
+現時点では、ランサムウェア被害の可能性が示されていますが、詳細や影響範囲は公表情報だけでは断定できません。
+事業継続に直接影響しうるシステム障害であり、ランサムウェア関連事案として注目されています。
+国内メディアで取り上げられており、同種の被害に備えた初動対応の重要性が改めて意識されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・インシデント関連の公開情報として観測しています。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 障害の原因切り分けと影響範囲の確認を急ぎ、業務停止やデータ影響の有無を把握する。
+- バックアップの健全性、復旧手順、外部接続点の監視を見直し、必要に応じて隔離・封じ込めを行う。
+- 対外説明や顧客対応を含め、インシデント対応体制を早期に整える。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [システム障害が発生、ランサム被害か - フェースグループ](https://www.security-next.com/186270) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+- PoC/検証コード候補: 候補なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -36,42 +155,31 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [九州大学の端末がランサムウェア感染、患者43名の氏名と手術動画データが外部流出した可能性を否定できない状況](https://scan.netsecurity.ne.jp/article/2026/06/23/55549.html) | 29.0 | 30.0 | 42.0 |
-| [Fortinet のファイアウォール・VPN を狙う世界的な攻撃キャンペーン展開中、英 NCSC が警告](https://scan.netsecurity.ne.jp/article/2026/06/23/55546.html) | 29.0 | 20.0 | 42.0 |
-| [WhatsAppのフィッシング攻撃、偽の業務文書でPCを侵害](https://www.bleepingcomputer.com/news/security/whatsapp-phishing-attack-uses-fake-business-docs-to-hack-pcs/) | 28.0 | 20.0 | 42.0 |
-| [FortiBleedキャンペーン、FortiGate向けカスタムスニファーで認証情報を窃取](https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/) | 28.0 | 20.0 | 42.0 |
-| [OpenAI、Getty Imagesと複数年契約 ChatGPTの検索結果にライセンス画像を直接表示](https://www.itmedia.co.jp/news/articles/2606/23/news075.html) | 26.0 | 20.0 | 42.0 |
-| [ビッグテックも大注目 フィジカルAIの次](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/061700554/061700001/) | 26.0 | 20.0 | 42.0 |
-| [システム内製は重要課題 鍵は人材育成とAI活用](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600003/061800107/) | 26.0 | 20.0 | 42.0 |
-| [新しい「Siri AI」を「Mac」で使ってみた--10項目のテストの結果は](https://japan.zdnet.com/article/35249103/) | 26.0 | 20.0 | 42.0 |
-| [Claude Fable 5復活の兆し？ 問題の本質は技術ではなく政治か](https://atmarkit.itmedia.co.jp/ait/articles/2606/23/news057.html) | 26.0 | 20.0 | 42.0 |
-| [生成AIの進化で変わる脆弱性対策 CISA新指針と「SCS評価制度」から探るパッチ適用方針](https://www.itmedia.co.jp/enterprise/articles/2606/23/news022.html) | 26.0 | 20.0 | 42.0 |
-| [オープンソースCLIで古いAIオーバーライド指示を検出する方法](https://www.theregister.com/security/2026/06/23/sniff-out-stale-ai-override-advice-with-this-open-source-cli/5259853) | 25.0 | 20.0 | 42.0 |
-| [OpenAIのセキュリティ対策もこちらで紹介](https://www.theregister.com/security/2026/06/23/openai-yoo-hoo-look-over-here-we-do-that-security-stuff-too/5259842) | 25.0 | 20.0 | 42.0 |
-| [FFmpeg、広く使われる動画デコーダーのPixelSmash脆弱性を修正](https://www.bleepingcomputer.com/news/security/ffmpeg-fixes-pixelsmash-flaw-in-widely-used-video-decoder/) | 24.0 | 38.0 | 42.0 |
-| [FastStone Image Viewerにおけるファイル解析に関する複数の脆弱性](https://jvn.jp/vu/JVNVU98582044/) | 23.0 | 20.0 | 43.0 |
-| [Zyxel「GS1900」シリーズに脆弱性 - LAN経由でOSコマンド実行のおそれ](https://www.security-next.com/186256) | 22.0 | 20.0 | 42.0 |
-| [「Autodesk Fusion」に脆弱性 - 悪意あるページ閲覧でRCEのおそれ](https://www.security-next.com/186251) | 22.0 | 20.0 | 42.0 |
-| [ID管理基盤「OpenAM」にアップデート - 多数の脆弱性を修正](https://www.security-next.com/186246) | 22.0 | 20.0 | 42.0 |
-| [旧型の「iPhone」や「iPad」に修正不能な脆弱性--対象機種は？](https://japan.zdnet.com/article/35249250/) | 21.0 | 20.0 | 42.0 |
-| [パナソニックグループに学ぶIT×OT×IoTセキュリティの最適解 – “治外法権”を解消する全社体制とグローバルSOC](https://news.mynavi.jp/techplus/article/20260623-4593932/) | 21.0 | 20.0 | 42.0 |
-| [大阪・関西万博で重大インシデントゼロ - JR西日本グループが実践する「組織・人・技術」のセキュリティ対策](https://news.mynavi.jp/techplus/article/20260623-4561975/) | 21.0 | 20.0 | 42.0 |
-| [住友化学が実践する工場のサイバーレジリエンス強化 - 「侵害前提」で鍛える現場対応力](https://news.mynavi.jp/techplus/article/20260623-4563239/) | 21.0 | 20.0 | 42.0 |
-| [ヘルプデスク詐欺師が家庭訪問開始](https://scan.netsecurity.ne.jp/article/2026/06/23/55553.html) | 21.0 | 20.0 | 42.0 |
-| [Proofpoint Blog 第57回【O365】自動転送やフォルダへの移動 ～ メールボックスのルールを書き換えデータ窃取](https://scan.netsecurity.ne.jp/article/2026/06/23/55552.html) | 21.0 | 20.0 | 42.0 |
-| [ジェリービーンズグループに役職員を装った不正な送金指示、被害対象額は約4,500万円](https://scan.netsecurity.ne.jp/article/2026/06/23/55551.html) | 21.0 | 20.0 | 42.0 |
-| [Kaizen Tech Agent で元従業員が情報を不正取得し社外に持ち出した可能性、不正取得はしていない旨の誓約書を提出](https://scan.netsecurity.ne.jp/article/2026/06/23/55550.html) | 21.0 | 20.0 | 42.0 |
-| [スリーシェイク 鈴木勝史氏、3年連続「AWS Community Builders」選出](https://scan.netsecurity.ne.jp/article/2026/06/23/55548.html) | 21.0 | 20.0 | 42.0 |
-| [ネットワークの構築管理・サイバー情報収集分析 ～ 内閣官房 内閣情報調査室で情報処理技術者を若干名採用、応募7月10日必着](https://scan.netsecurity.ne.jp/article/2026/06/23/55547.html) | 21.0 | 20.0 | 42.0 |
-| [経産省、安全なセキュリティ業者の「認定制度」創設へ 2027年度運用開始を目指す](https://scan.netsecurity.ne.jp/article/2026/06/23/55545.html) | 21.0 | 20.0 | 42.0 |
-| [Okta と Google Cloud が戦略的パートナーシップを拡大、ID 管理・クラウド・生産性向上ソリューションを統合](https://scan.netsecurity.ne.jp/article/2026/06/23/55544.html) | 21.0 | 20.0 | 42.0 |
-| [「年収1.5倍で引き抜かれました」 せっかく育てたセキュリティ人材を失う企業の盲点](https://www.itmedia.co.jp/enterprise/articles/2606/23/news005.html) | 21.0 | 20.0 | 42.0 |
-| [Cloudflareが主要ブラウザと連携し、ウェブサイトがボットと人間を識別しやすくする取り組み](https://www.theregister.com/software/2026/06/22/cloudflare-teams-up-with-big-browsers-to-help-websites-tell-bots-from-people/5259782) | 20.0 | 20.0 | 48.0 |
-| [Cloudflareが主要ブラウザと連携し、Webサイトが正当な訪問者と不正な訪問者を識別しやすくする取り組み](https://www.theregister.com/software/2026/06/22/cloudflare-teams-up-with-big-browsers-to-help-websites-tell-welcome-from-unwelcome-visitors/5259782) | 20.0 | 20.0 | 48.0 |
-| [Microsoft Windows Recovery EnvironmentにおけるUEFI/BIOSパスワード制限回避の脆弱性](https://jvn.jp/vu/JVNVU90386605/) | 20.0 | 20.0 | 42.0 |
-| [裁判所、SAVEデータベースを違法と判断し解体を命令](https://cyberscoop.com/court-rules-save-database-illegal-orders-dismantling/) | 20.0 | 20.0 | 42.0 |
-| [クラウドデータ流出のためのユニバーサルバケットハイジャック手法とグローバルネームスペースのリスク](https://unit42.paloaltonetworks.com/cloud-bucket-hijacking-risks/) | 20.0 | 20.0 | 42.0 |
-| [JaredFromSubwayのMEVボットが1500万ドルの仮想通貨窃取被害に遭う](https://www.bleepingcomputer.com/news/security/jaredfromsubway-mev-bot-hacked-in-15-million-crypto-theft/) | 20.0 | 20.0 | 42.0 |
+| [Xsolisのデータ侵害により140万人の個人情報が影響を受ける](https://www.securityweek.com/xsolis-data-breach-affects-1-4-million-individuals/) | 28.0 | 20.0 | 42.0 |
+| [WhatsAppのVBScriptキャンペーン、偽文書でManageEngine RMMツールをインストール](https://thehackernews.com/2026/06/whatsapp-vbscript-campaign-uses-fake.html) | 28.0 | 20.0 | 42.0 |
+| [無料・登録不要のWorld Cup配信は、サッカーではなく詐欺を配信する](https://www.helpnetsecurity.com/2026/06/23/fake-world-cup-streaming-sites-scams/) | 28.0 | 20.0 | 42.0 |
+| [2億2600万パラメーターで100億パラメーター級の画像補完性能を示すAIフレームワーク「Moebius」、不要物の除去や顔の置き換えが可能](https://gigazine.net/news/20260623-moebius-image-inpainting-framework/) | 27.0 | 20.0 | 42.0 |
+| [Claude Opus級のGLM-5.2をローカルで動かすガイドが公開される、最小構成の目安はメモリ223GB](https://gigazine.net/news/20260623-glm-local-unsloth/) | 27.0 | 20.0 | 42.0 |
+| [“全編AI制作”でコスト9割減を実現したViglooに聞く韓国ショートドラマ事情 「視聴者は制作方法で作品を選ばない」](https://www.itmedia.co.jp/news/articles/2606/22/news137.html) | 26.0 | 20.0 | 42.0 |
+| [OpenAI、AIによる脆弱性対応を目指す「Patch the Planet」など発表](https://japan.zdnet.com/article/35249264/) | 26.0 | 20.0 | 42.0 |
+| [1400ドルのAIセキュリティ監査実験がOpenAIのCodex Securityを上回った](https://www.helpnetsecurity.com/2026/06/23/codex-security-ai-security-auditing/) | 25.0 | 20.0 | 42.0 |
+| [Five Eyes諜報機関、AIで情報セキュリティ事故が重大な業務・財務危機になり得ると警告](https://www.theregister.com/security/2026/06/23/five-eyes-spooks-warn-ai-means-infosec-incidents-can-become-major-operational-and-financial-crises/5259916) | 25.0 | 20.0 | 42.0 |
+| [導入したAIエージェントに対応できている企業はわずか7％](https://www.helpnetsecurity.com/2026/06/23/ai-trust-gap-research/) | 25.0 | 20.0 | 42.0 |
+| [OpenAI、DaybreakをGPT-5.5-Cyberで拡張し防御側の脆弱性修正を支援](https://thehackernews.com/2026/06/openai-expands-daybreak-with-gpt-55.html) | 25.0 | 20.0 | 42.0 |
+| [FBIが作った「偽の町」 病院もデータセンターもまるで本物 約2000平米の巨大空間でサイバー捜査を訓練](https://www.itmedia.co.jp/news/articles/2606/23/news094.html) | 24.0 | 20.0 | 43.0 |
+| [「Drupal」コアに脆弱性 - 影響を受ける環境は限定的](https://www.security-next.com/186220) | 22.0 | 20.0 | 42.0 |
+| [政府や企業に壊滅的なサイバー攻撃をもたらすAIモデルが「数カ月以内」に登場する恐れ、ファイブ・アイズが異例の共同警告](https://gigazine.net/news/20260623-ai-shift-cyber-risk/) | 22.0 | 20.0 | 42.0 |
+| [OpenAIがClaude Mythos 5超えのセキュリティー特化AI「GPT-5.5-Cyber」のアップデートを発表＆セキュリティー特化Codexプラグイン「Codex Security」もアップデート](https://gigazine.net/news/20260623-openai-gpt-cyber-codex-security-daybreak/) | 22.0 | 20.0 | 42.0 |
+| [顧客情報含む振込依頼書を紛失、誤廃棄の可能性 - 呉信金](https://www.security-next.com/186196) | 22.0 | 20.0 | 42.0 |
+| [KDDI、メアドなど最大1422万件漏えいか ISP事業者向けシステムに不正アクセス](https://www.itmedia.co.jp/news/articles/2606/23/news114.html) | 21.0 | 20.0 | 42.0 |
+| [マネフォへの不正アクセス、約6.3万件流出した可能性 調査完了で規模確定](https://www.itmedia.co.jp/news/articles/2606/23/news109.html) | 21.0 | 20.0 | 42.0 |
+| [トランプ大統領、耐量子暗号（PQC）移行を義務付ける大統領令に署名 2030年末期限](https://www.itmedia.co.jp/news/articles/2606/23/news103.html) | 21.0 | 20.0 | 42.0 |
+| [「不完全な実装でも多要素認証よりマシ」 パスキーの“よくある懸念”に英国NCSCが回答](https://atmarkit.itmedia.co.jp/ait/articles/2606/23/news056.html) | 21.0 | 20.0 | 42.0 |
+| [KDDIのISP向けメールシステムに不正アクセス、BIGLOBE、J:COM、ニフティなど最大1422万件の情報漏えいの可能性 影響を受けるサービスの利用者はパスワードの変更を](https://internet.watch.impress.co.jp/docs/news/2119351.html) | 20.0 | 20.0 | 42.0 |
+| [MSSPが重視すべきは複雑化ではなくサイバーリスクの低減](https://www.itpro.com/security/why-mssps-need-to-focus-on-reducing-cyber-risk-not-adding-complexity) | 20.0 | 20.0 | 42.0 |
+| [マネーフォワード、新たに顧客や従業員の個人データが流出した可能性を確認。GitHub不正アクセスの調査を完了](https://internet.watch.impress.co.jp/docs/news/2119307.html) | 20.0 | 20.0 | 42.0 |
+| [LGとSamsungのスマートテレビアプリに潜むResidential proxy SDKs](https://www.helpnetsecurity.com/2026/06/23/tv-residential-proxy-sdk/) | 20.0 | 20.0 | 42.0 |
+| [横河電機製FAST/TOOLSおよびCI Serverにおける重要情報の平文送信の脆弱性](https://jvn.jp/vu/JVNVU96872547/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
