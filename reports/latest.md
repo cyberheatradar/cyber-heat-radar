@@ -1,20 +1,20 @@
-# 📡 サイレーダー 2026-06-24 11:00 JST
+# 📡 サイレーダー 2026-06-24 17:00 JST
 
-このレポートは、2026-06-24 05:00 JST〜2026-06-24 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-24 11:00 JST〜2026-06-24 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 55
+- 観測トピック数: 48
 - [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 28
+- [低温だが記録しておくトピック](#low-record-topics): 21
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [UbiquitiやLantronix製品の脆弱性悪用に注意喚起 - 米当局](#topic-18964) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [「claude.ai」のチャット共有画面から不正コマンドを実行させる ClickFix 型攻撃キャンペーンを分析](#topic-18970) | 34.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Cequence introduces behavioral bot detection and biometric verification without CAPTCHAs](#topic-19014) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 2 | [Linux Process Name Masquerading, (Wed, Jun 24th)](#topic-19022) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -22,104 +22,35 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-18964"></a>
+<a id="topic-19014"></a>
 
-### 1. UbiquitiやLantronix製品の脆弱性悪用に注意喚起 - 米当局
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-米当局が、Ubiquiti製ネットワーク機器やLantronix製サーバに関する脆弱性が実際に悪用されているとして注意喚起を行いました。
-対象製品を利用している組織には、早急な確認と対策が求められています。脆弱性の悪用が確認されているなら、公開済みの問題であっても被害につながる可能性があります。
-ネットワーク機器やサーバは業務基盤に直結するため、影響が広がりやすい点が注目されています。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- 対象製品の利用有無を確認し、ベンダーや公的機関の案内に沿って修正・緩和策を適用する。
-- 外部公開されている管理画面や不要なサービスの露出状況を点検し、必要最小限に絞る。
-- 侵害の兆候がないか、認証履歴や設定変更、通信の異常を点検する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2025-67038 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-34908 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-34909 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-34910 | 関連CVE | 1.00 |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [UbiquitiやLantronix製品の脆弱性悪用に注意喚起 - 米当局](https://www.security-next.com/186316) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-- PoC/検証コード候補: 候補あり（URL 1件以上 / 該当CVE 1件）。
-
----
-
-<a id="topic-18970"></a>
-
-### 2. 「claude.ai」のチャット共有画面から不正コマンドを実行させる ClickFix 型攻撃キャンペーンを分析
+### 1. Cequence introduces behavioral bot detection and biometric verification without CAPTCHAs
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>A⁠I</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 34.0 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
 | <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-「claude.ai」のチャット共有画面を悪用し、利用者に不正なコマンドを実行させようとするClickFix型の攻撃キャンペーンが分析されています。
-現時点では、公開された情報をもとにした脅威の紹介であり、実被害の広がりや影響範囲については慎重な見方が必要です。
-生成AIの共有機能や対話画面が、ユーザー操作を誘導する攻撃の入口になりうることを示しています。
-AIサービスを業務で使う組織にとって、UI上の案内や共有コンテンツをそのまま信用しない運用が重要になります。
+Cequence Securityが、CAPTCHAに依存しないボット対策機能として「Intent Graph」と「Biometric Check」を発表しました。
+説明では、Webやモバイル、API、エージェント型AIのトラフィックにまたがって、行動ベースで不審な自動化を見分ける設計が強調されています。
+従来のブラウザ由来のシグナルだけでは見分けにくい自動化への対処として注目されています。
+認証やアクセス制御の利用体験を大きく損なわずに、ボット対策を見直したい組織にとって関心の高い話題です。
 
 #### 温度感の理由
 
 ##### 温度感
 - AI×Security文脈。
 - 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
 
 ##### 実務影響
 - データ分類、権限管理、監査、外部接続管理などの確認観点があります。
@@ -129,28 +60,78 @@ AIサービスを業務で使う組織にとって、UI上の案内や共有コ�
 
 #### 担当者向け確認ポイント
 
-- 共有された画面や案内からコマンド実行を促されても、内容を安易にコピー・実行しない運用を徹底する。
-- AIサービスの利用ルールに、共有リンクの取り扱い確認や不審な指示の報告手順を含める。
-- エンドユーザー向けに、ClickFix型の誘導手口に関する注意喚起と教育を行う。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
-|---|---|---|---:|
-| ai_model_or_project | Claude | 主題 | 0.80 |
+- CAPTCHA依存の対策だけでなく、行動分析やAPI/モバイル側の監視を含めて現状を見直す。
+- 正規ユーザーへの負荷と不正検知のバランスを評価し、誤検知時の運用手順を確認する。
+- Webだけでなく、APIや自動化トラフィックを含む横断的な可視化・制御の有無を確認する。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [「claude.ai」のチャット共有画面から不正コマンドを実行させる ClickFix 型攻撃キャンペーンを分析](https://scan.netsecurity.ne.jp/article/2026/06/24/55558.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Cequence introduces behavioral bot detection and biometric verification without ](https://www.helpnetsecurity.com/2026/06/24/cequence-intent-graph-biometric-check/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
+- 技術・開発者系ソース観測: 観測あり。
+- PoC/検証コード候補: 候補なし。
+
+---
+
+<a id="topic-19022"></a>
+
+### 2. Linux Process Name Masquerading, (Wed, Jun 24th)
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Linux環境で、悪意あるプロセスが正規のような名前を装って見えにくくする「プロセス名の偽装」に関する話題です。
+SANS Internet Storm Centerの解説では、プロセス一覧だけでは挙動を見誤る可能性があり、過去の攻撃キャンペーンでもこの手法が使われてきたとされています。
+プロセス名の見た目に頼ると、侵入後の不審な活動を見逃すおそれがあります。特にLinuxサーバーでは、通常の運用監視やEDRの見え方を前提にしすぎない確認が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- プロセス名だけで判断せず、実体のあるパスや親子関係、起動元の整合性も確認する。
+- 普段の命名規則から外れたプロセスや、正規ツール名に似た名前を重点的に見る。
+- 一覧表示の結果と、他の監視情報やログを突き合わせて不自然な差異がないか確認する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Linux Process Name Masquerading, (Wed, Jun 24th)](https://isc.sans.edu/diary/rss/33102) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
 - PoC/検証コード候補: 候補なし。
 
 ---
@@ -170,34 +151,27 @@ AIサービスを業務で使う組織にとって、UI上の案内や共有コ�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Weekly Report: Fortinetが「FortiGateデバイスの認証情報を使った攻撃キャンペーンの分析」を公開](https://www.jpcert.or.jp/wr/2026/wr260624.html) | 28.0 | 20.0 | 42.0 |
-| [Anthropic、「Slack」に参加できるAIエージェント「Claude Tag」をリリース](https://japan.zdnet.com/article/35249322/) | 26.0 | 20.0 | 42.0 |
-| [明星大学「はじめてのサイバーセキュリティ演習 ～ AI を前提としたサイバーセキュリティ ～」8 / 23 開催](https://scan.netsecurity.ne.jp/article/2026/06/24/55555.html) | 26.0 | 20.0 | 42.0 |
-| [Anthropic が Okta を選定、Claude への安全な AI エージェント接続を支える](https://scan.netsecurity.ne.jp/article/2026/06/24/55554.html) | 26.0 | 20.0 | 42.0 |
-| [改定続く生成AI料金 エージェントで負担増](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/061700555/061700002/) | 26.0 | 20.0 | 42.0 |
-| [AIエージェント導入時の4つのポイント--スピードと慎重さの両立が重要](https://japan.zdnet.com/article/35249268/) | 26.0 | 20.0 | 42.0 |
-| [AIで「短期プロジェクト増加」は38％ テスト実行・結果確認はAIで時間低減](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600010/061800227/) | 26.0 | 20.0 | 42.0 |
-| [HPEのプライベートクラウド戦略--AIインフラの「主権」とトークン価値観の変化](https://japan.zdnet.com/article/35249145/) | 26.0 | 20.0 | 42.0 |
-| [OpenClawのSkill Marketplaceと新たなAIサプライチェーン脅威](https://unit42.paloaltonetworks.com/openclaw-ai-supply-chain-risk/) | 25.0 | 20.0 | 42.0 |
-| [iFLYTEK、AI機能搭載のボイスレコーダーと翻訳機を全国の家電量販店で販売開始](https://internet.watch.impress.co.jp/docs/news/2119271.html) | 25.0 | 20.0 | 42.0 |
-| [macOS.Gaslight：Rust製バックドアがサンドボックスではなくアナリストにプロンプトインジェクションを仕掛ける](https://www.sentinelone.com/labs/macos-gaslight-rust-backdoor-turns-prompt-injection-on-the-analyst-not-the-sandbox/) | 25.0 | 20.0 | 42.0 |
-| [Wazuh における遠隔からの任意のコード実行が可能となるシリアライズデータの検証不備（Scan Tech Report）](https://scan.netsecurity.ne.jp/article/2026/06/24/55562.html) | 24.0 | 20.0 | 43.0 |
-| [AI開発向けフレームワーク「NVIDIA NeMo」に複数脆弱性](https://www.security-next.com/186297) | 22.0 | 20.0 | 42.0 |
-| [「ManageEngine」の複数製品でアカウント乗っ取りのおそれ](https://www.security-next.com/186303) | 22.0 | 20.0 | 42.0 |
-| [NTTPC「WebARENA」ファイル転送サービスに不正アクセス 業務ファイル4400件超に漏えいの恐れ 再構築へ今後半年間停止](https://www.itmedia.co.jp/news/articles/2606/24/news068.html) | 21.0 | 20.0 | 42.0 |
-| [ID起点のHENNGE流ゼロトラスト ここに爆誕](https://scan.netsecurity.ne.jp/article/2026/06/24/55561.html) | 21.0 | 20.0 | 42.0 |
-| [「様式1 運営委員会名簿」という名の本番データ ～ 124 名分の個人情報が記載されたファイルをメール送信](https://scan.netsecurity.ne.jp/article/2026/06/24/55560.html) | 21.0 | 20.0 | 42.0 |
-| [「はいチーズ！フォト」への不正アクセス、漏えい対象となった顧客特定し個別連絡](https://scan.netsecurity.ne.jp/article/2026/06/24/55559.html) | 21.0 | 20.0 | 42.0 |
-| [リスクモンスターAPIサービスに「反社個人API」を追加](https://scan.netsecurity.ne.jp/article/2026/06/24/55557.html) | 21.0 | 20.0 | 42.0 |
-| [セコムトラストシステムズ、Webセミナー「対策済みの落とし穴 ～ 業務停止を防ぐために見直すべきセキュリティとは」を 7 / 29・30 に開催](https://scan.netsecurity.ne.jp/article/2026/06/24/55556.html) | 21.0 | 20.0 | 42.0 |
-| [FortiBleedはなぜ止まらない？ Fortinetが示した“次に確認すべきこと”](https://atmarkit.itmedia.co.jp/ait/articles/2606/24/news055.html) | 21.0 | 20.0 | 42.0 |
-| [経産省、「信頼できるセキュリティ企業」を認定する制度を開始か その厳しい中身](https://atmarkit.itmedia.co.jp/ait/articles/2606/24/news054.html) | 21.0 | 20.0 | 42.0 |
-| [将来を見据えた「Microsoft 365」のセキュリティ対策](https://japan.zdnet.com/article/35249280/) | 21.0 | 20.0 | 42.0 |
-| [韓国セキュリティ企業S2W、日本市場に参入--ダークウェブ分析AIモデルを開発](https://japan.zdnet.com/article/35249291/) | 21.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年06月23日）](https://jvn.jp/vu/JVNVU98428308/) | 20.0 | 20.0 | 42.0 |
-| [Tata Electronicsがサイバー攻撃を確認、ハッカーがデータを流出](https://www.bleepingcomputer.com/news/security/tata-electronics-confirms-cyberattack-as-hackers-leak-data/) | 20.0 | 20.0 | 42.0 |
-| [富士ソフトのモバイルルーターなど4製品が、セキュリティ評価制度「JC-STAR」★1適合ラベルを取得](https://internet.watch.impress.co.jp/docs/news/2119345.html) | 20.0 | 20.0 | 42.0 |
-| [Salesforceへの攻撃範囲拡大、Icarusがデータを漏えい](https://www.darkreading.com/cyberattacks-data-breaches/scope-salesforce-attacks-expands-icarus-leaks-data) | 20.0 | 20.0 | 42.0 |
+| [日本企業のランサムウェア対策は今なお中途半端--ガートナー調べ](https://japan.zdnet.com/article/35249351/) | 29.0 | 30.0 | 42.0 |
+| [ITとOTの接点で複雑化する鉄道サイバーセキュリティ](https://www.helpnetsecurity.com/2026/06/24/jorge-aldegunde-dnv-railway-cybersecurity/) | 28.0 | 20.0 | 42.0 |
+| [動画生成AI「Seedance 2.5」をByteDanceが発表、最大50個の参照素材から最大30秒の動画を生成可能](https://gigazine.net/news/20260624-bytedance-seedance-2-5/) | 27.0 | 20.0 | 42.0 |
+| [SlackにClaudeを参加させてAIエージェントにタスクを依頼できる「Claude Tag」が登場、Anthropic製品チームのコードの65％はClaude Tagで作成](https://gigazine.net/news/20260624-claude-tag-slack/) | 27.0 | 20.0 | 42.0 |
+| [画像生成AI「Krea 2」がオープンモデル化されてローカル生成可能になったのでComfyUIで実写風画像とイラスト風画像を生成してみたよレビュー](https://gigazine.net/news/20260624-krea-2-raw-turbo/) | 27.0 | 20.0 | 42.0 |
+| [富士通、新アーキテクチャー「PHOTON」を開発--生成AIのコスト構造に転換点](https://japan.zdnet.com/article/35249366/) | 26.0 | 20.0 | 42.0 |
+| [ソフト開発AI「Devin」は企業向け拡販狙う、CursorやClaude Codeと競争激化](https://xtech.nikkei.com/atcl/nxt/column/18/00001/11847/) | 26.0 | 20.0 | 42.0 |
+| [企業の4分の3が安全性とセキュリティへの懸念からAIプロジェクトを停止、Claude Mythosのようなモデル進化でサイバー情勢は悪化すると専門家が警告](https://www.itpro.com/security/three-quarters-of-firms-have-halted-ai-projects-over-safety-and-security-concerns-and-cyber-pros-think-things-will-deteriorate-as-models-like-claude-mythos-improve) | 25.0 | 20.0 | 42.0 |
+| [Brinqa BYOAIにより、組織は信頼できるリスクデータを用いて任意のAIプラットフォームを利用可能に](https://www.helpnetsecurity.com/2026/06/24/brinqa-byoai/) | 25.0 | 20.0 | 42.0 |
+| [Secure Code Warriorの新フレームワークでCISOがAI駆動のソフトウェア開発を統制しやすくなった](https://www.helpnetsecurity.com/2026/06/24/secure-code-warrior-ai-adoption-model/) | 25.0 | 20.0 | 42.0 |
+| [Praxen: オープンソースAIエージェントの振る舞い検証](https://www.helpnetsecurity.com/2026/06/24/praxen-open-source-ai-agent-behavior-verification/) | 25.0 | 20.0 | 42.0 |
+| [AI SOCプラットフォームの評価方法とProphet AIの優位性](https://www.helpnetsecurity.com/2026/06/24/product-showcase-prophet-security-ai-soc-platform/) | 25.0 | 20.0 | 42.0 |
+| [Acompanyなど、国内データセンターで機密データを保護したAI処理の検証に成功](https://japan.zdnet.com/article/35249315/) | 24.0 | 20.0 | 43.0 |
+| [「@nifty」サポート電話つながりにくく メールパスワード漏えいで問い合わせ殺到か](https://www.itmedia.co.jp/news/articles/2606/24/news102.html) | 21.0 | 20.0 | 42.0 |
+| [日立ソリューションズ、「SBOM管理システム」を提供--脆弱性管理を高度化](https://japan.zdnet.com/article/35249344/) | 21.0 | 20.0 | 42.0 |
+| [KDDIのメール「OEM」サービスで情報漏洩疑い、ISP各社が外注する事情](https://xtech.nikkei.com/atcl/nxt/column/18/00001/11845/) | 21.0 | 20.0 | 42.0 |
+| [DigiCertが機密コンピューティング環境に独立した信頼検証を導入](https://www.helpnetsecurity.com/2026/06/24/digicert-independent-trust-validation/) | 20.0 | 20.0 | 42.0 |
+| [KDDIの管理メール認証情報1420万件が流出](https://www.theregister.com/cyber-crime/2026/06/24/you-have-got-to-be-kddi-ng-japanese-telco-exposes-142-million-managed-email-credentials/5260555) | 20.0 | 20.0 | 42.0 |
+| [より遅い世界を前提に作られたセキュリティテスト](https://www.helpnetsecurity.com/2026/06/24/ai-security-testing-report/) | 20.0 | 20.0 | 42.0 |
+| [現在募集中のサイバーセキュリティ関連職種：2026年6月24日現在](https://www.helpnetsecurity.com/2026/06/24/cybersecurity-jobs-available-right-now-june-24-2026/) | 20.0 | 20.0 | 42.0 |
+| [AnthropicのMythosモデルが機密の米政府システムで脆弱性を発見、当局者が明らかにした](https://www.securityweek.com/anthropics-mythos-model-found-vulnerabilities-in-classified-us-government-systems-official-says/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
