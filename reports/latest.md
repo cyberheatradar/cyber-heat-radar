@@ -1,17 +1,19 @@
-# 📡 サイレーダー 2026-06-27 17:00 JST
+# 📡 サイレーダー 2026-06-28 05:00 JST
 
-このレポートは、2026-06-27 11:00 JST〜2026-06-27 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-27 17:00 JST〜2026-06-28 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 26
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 29
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 4
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Clean GitHub repo tricks AI coding agents into running malware](#topic-19744) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,7 +21,62 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-19744"></a>
+
+### 1. Clean GitHub repo tricks AI coding agents into running malware
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+公開情報によると、見た目が無害なGitHubリポジトリを使って、AIコーディングエージェントがクローンやセットアップの過程で不正な処理を実行してしまう可能性が示されています。
+人間のレビューや一般的なセキュリティスキャンでは気づきにくい形で動作する点が懸念されています。
+AI支援の開発フローが普及するほど、リポジトリの内容だけでなくセットアップ時の挙動まで含めた検証が重要になります。
+従来のコードレビューや静的解析だけでは見落とし得るリスクとして注目されています。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AIエージェントにリポジトリの取得や初期化を任せる場合は、実行されるコマンドやスクリプトを明示的に制御する。
+- 依存関係やセットアップ手順に含まれる自動実行要素を確認し、信頼できないソースではサンドボックス環境を使う。
+- 人手レビューに加えて、実行時の挙動監視と最小権限の運用を組み合わせる。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Clean GitHub repo tricks AI coding agents into running malware](https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -36,8 +93,10 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [AIが隠れた脆弱性を次々発見し、セキュリティチームに厳しい夏が訪れる見通し](https://www.theregister.com/security/2026/06/27/its-looking-like-a-hot-messy-summer-for-security-teams-as-ai-finds-countless-previously-hidden-vulns/5260478) | 25.0 | 20.0 | 42.0 |
-| [OpenAI GPT-5.6シリーズを発表](https://news.yahoo.co.jp/pickup/6585874?source=rss) | 25.0 | 20.0 | 42.0 |
+| [教育分野に高くつく教訓となった第三者侵害とベンダーリスク](https://www.darkreading.com/cyber-risk/third-party-breaches-teaches-education-lesson-vendor-risk) | 28.0 | 30.0 | 42.0 |
+| [ウクライナ、ロシア情報機関が偽のサポートメッセージでメッセージング認証情報を窃取したと発表](https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html) | 28.0 | 20.0 | 42.0 |
+| [中国製フレームワークが20万件の詐欺サイトを支援](https://www.securityweek.com/chinese-framework-powers-200000-scam-sites/) | 28.0 | 20.0 | 42.0 |
+| [OpenAI、アクセスを制限しサイバー防御を強化したGPT-5.6 Solを公開予告](https://thehackernews.com/2026/06/openai-limits-gpt-56-rollout-as-sol.html) | 25.0 | 20.0 | 42.0 |
 
 ---
 
