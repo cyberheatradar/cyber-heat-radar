@@ -1,15 +1,15 @@
-# 📡 サイレーダー 2026-06-27 11:00 JST
+# 📡 サイレーダー 2026-06-27 17:00 JST
 
-このレポートは、2026-06-27 05:00 JST〜2026-06-27 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-27 11:00 JST〜2026-06-27 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 29
+- 観測トピック数: 26
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 5
+- [低温だが記録しておくトピック](#low-record-topics): 2
 
 今回はサマリ掲載トピックはありません。
 
@@ -36,11 +36,8 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [FBI：ロシアのハッカーがSignalのバックアップ復旧キーを標的にしている](https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/) | 28.0 | 20.0 | 42.0 |
-| [メールの整理を「Gemini Flows」に任せてみた--受信トレイを効果的にフィルタリング、ただし注意点も](https://japan.zdnet.com/article/35249491/) | 26.0 | 20.0 | 42.0 |
-| [KDDI漏えいに起因？ 国内ISPの情報悪用したとみられる詐欺メール、フィッシング対策協議会が注意喚起](https://www.itmedia.co.jp/news/articles/2606/26/news138.html) | 21.0 | 20.0 | 42.0 |
-| [「EDRがあるから安心」が崩れた半年 2026年上半期サイバー事件から見えた防御の限界](https://atmarkit.itmedia.co.jp/ait/articles/2606/26/news128.html) | 21.0 | 20.0 | 42.0 |
-| [Secret Serviceでも使わない会社支給スマートフォンの危険性](https://www.theregister.com/security/2026/06/26/even-the-secret-service-wont-use-company-issued-phones/5263356) | 20.0 | 20.0 | 42.0 |
+| [AIが隠れた脆弱性を次々発見し、セキュリティチームに厳しい夏が訪れる見通し](https://www.theregister.com/security/2026/06/27/its-looking-like-a-hot-messy-summer-for-security-teams-as-ai-finds-countless-previously-hidden-vulns/5260478) | 25.0 | 20.0 | 42.0 |
+| [OpenAI GPT-5.6シリーズを発表](https://news.yahoo.co.jp/pickup/6585874?source=rss) | 25.0 | 20.0 | 42.0 |
 
 ---
 
