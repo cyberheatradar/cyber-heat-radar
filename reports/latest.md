@@ -1,15 +1,15 @@
-# 📡 サイレーダー 2026-06-28 17:00 JST
+# 📡 サイレーダー 2026-06-29 05:00 JST
 
-このレポートは、2026-06-28 11:00 JST〜2026-06-28 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-28 17:00 JST〜2026-06-29 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 26
+- 観測トピック数: 27
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 3
 
 今回はサマリ掲載トピックはありません。
 
@@ -36,8 +36,9 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [無料でAI最適化「AEO」をChatGPT・Google AI Overviews・Perplexity・Gemini・Copilot・Grokなどで確認できる「Elmo」、オープンソースで開発されセルフホスト可能](https://gigazine.net/news/20260628-elmo/) | 27.0 | 20.0 | 42.0 |
-| [「HTTPステータスコード百人一首」や“社長として情報漏えいを防ぐゲーム”も 日本屈指のボードゲーム即売会で見つけた“IT卓ゲ”たち](https://www.itmedia.co.jp/news/articles/2606/28/news013.html) | 21.0 | 20.0 | 42.0 |
+| [6つのISPで最大1420万件のメールログイン情報が漏えい](https://www.bleepingcomputer.com/news/security/data-breach-exposes-up-to-142-million-email-logins-at-six-isps/) | 28.0 | 20.0 | 42.0 |
+| [Week in review: Fortibleedキャンペーンの影響とCisco Unified CMの脆弱性悪用](https://www.helpnetsecurity.com/2026/06/28/week-in-review-fortibleed-campaigns-impact-on-orgs-cisco-unified-cm-flaw-exploited/) | 28.0 | 20.0 | 42.0 |
+| [OpenAIのサム・アルトマンCEOとAnthropicのダリオ・アモデイCEOの間には10年にもわたる確執がある](https://gigazine.net/news/20260628-dario-amodei-sam-altman/) | 27.0 | 20.0 | 42.0 |
 
 ---
 
