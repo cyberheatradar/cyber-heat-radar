@@ -1,20 +1,26 @@
-# 📡 サイレーダー 2026-06-30 17:00 JST
+# 📡 サイレーダー 2026-07-01 05:00 JST
 
-このレポートは、2026-06-30 11:00 JST〜2026-06-30 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-30 17:00 JST〜2026-07-01 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 61
-- [音声で扱う想定のトピック](#audio-topics): 2
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 35
+- 観測トピック数: 96
+- [音声で扱う想定のトピック](#audio-topics): 7
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 63
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the Wild](#topic-20074) | 37.0 | 46.0 | 51.0 | 音声 | 温度感上位枠 |
-| 2 | [Appleの主要サプライヤーから機密リストやiPhone 18 Proのテスト映像などがダークウェブに流出、ロジックボードの回路図も含まれていることが明らかに](#topic-20094) | 30.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [CISA: Windows BlueHammer flaw now exploited by ransomware gangs](#topic-20211) | 47.0 | 60.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [Oracle E-Business Suite Payments flaw under attack (CVE-2026-46817)](#topic-20074) | 45.0 | 56.0 | 56.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
+| 3 | [Nissan Discloses Employee Data Breach Linked to Oracle Zero-Day](#topic-20128) | 45.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 4 | [Nissan employee data exposed in Oracle PeopleSoft zero-day attacks](#topic-20126) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 5 | [BlueHammer Vulnerability Exploited in Ransomware Attacks](#topic-1324) | 35.0 | 88.0 | 78.0 | 音声 | 温度感上位枠 |
+| 6 | [Securing AI agents: When AI tools move from reading to acting](#topic-20129) | 35.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 7 | [Langflow RCE Exploited to Deploy Monero Miner on Exposed AI App Endpoints](#topic-20130) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 8 | [SimpleHelp vulnerability exploited to deliver mighty Djinn Stealer (CVE-2026-48558)](#topic-20187) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
 
 ---
 
@@ -22,28 +28,165 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-20074"></a>
+<a id="topic-20211"></a>
 
-### 1. Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the Wild
+### 1. CISA: Windows BlueHammer flaw now exploited by ransomware gangs
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>K⁠E⁠V</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>T⁠T⁠P</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
-| <nobr>確⁠度</nobr> | 51.0 |
+| <nobr>温⁠度⁠感</nobr> | 47.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 60.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-Oracle E-Business Suiteに影響する重大な脆弱性CVE-2026-46817について、実際の悪用が観測されていると報じられています。
-公表情報では、Oracle Paymentsに関する権限管理や認証の不備が関係し、影響を受ける環境では不正利用につながるおそれがあります。
-基幹業務で使われる可能性がある製品の脆弱性であり、悪用観測があるため優先度が高い事案です。
-認証や権限に関わる問題は、侵入後の不正操作やアカウント乗っ取りにつながるリスクがあります。
+CISAは、Microsoft Defenderに関係する権限昇格の脆弱性「BlueHammer」が、ランサムウェア समूहによって悪用されていると確認したとされています。
+これまでゼロデイ攻撃で使われていた文脈もあり、継続的な悪用リスクが注目されています。
+権限昇格の脆弱性は、侵入後に被害を拡大させる足がかりになりやすく、ランサムウェア被害の深刻化につながります。
+公的機関が悪用観測を示している点から、優先度を上げて確認すべき案件です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+- 権限昇格系。
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Microsoft Defender関連の更新状況と影響範囲を確認し、適用漏れがないか点検する。
+- 権限昇格の兆候や不審な管理者権限取得の痕跡がないか、監査ログを確認する。
+- ランサムウェア対策として、バックアップの分離保管と復旧手順の再点検を行う。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| ベンダー | Microsoft | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [CISA: Windows BlueHammer flaw now exploited by ransomware gangs](https://www.bleepingcomputer.com/news/security/cisa-windows-bluehammer-flaw-now-exploited-by-ransomware-gangs/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-20128"></a>
+
+### 2. Nissan Discloses Employee Data Breach Linked to Oracle Zero-Day
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 45.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+日産は、Oracle PeopleSoft のゼロデイ脆弱性に関連した攻撃キャンペーンを通じて、従業員データが流出したと公表しました。
+公開情報ベースでは、今回の件は個別企業への被害報告であり、ゼロデイ悪用の文脈で注目されています。
+ゼロデイ脆弱性が実際の情報流出につながった可能性が示されており、利用中の業務システムの緊急確認が必要になるためです。
+人事・従業員情報のような機微データが対象になると、二次被害や対応負荷も大きくなります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- Oracle PeopleSoft を含む関連システムについて、ベンダー情報と適用可能な修正・回避策の有無を確認する。
+- 従業員情報を扱う周辺システムのアクセス権、監査ログ、異常な通信や認証失敗の有無を点検する。
+- 対象システムを利用していない場合でも、同種のゼロデイ悪用キャンペーンを前提に監視・脆弱性管理の優先度を見直す。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-35273 | 関連CVE | 1.00 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Nissan Discloses Employee Data Breach Linked to Oracle Zero-Day](https://www.infosecurity-magazine.com/news/nissan-oracle-peoplesoft-zero-day/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-20126"></a>
+
+### 3. Nissan employee data exposed in Oracle PeopleSoft zero-day attacks
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+日産に関連する従業員データが、Oracle PeopleSoftのゼロデイ攻撃により露出したと報じられています。
+現時点で確認できる範囲では、同社は現従業員・元従業員に対し、銀行関連のパスワード変更とフィッシングメールへの警戒を呼びかけています。
+人事・給与などの従業員情報は、なりすましやフィッシングに悪用されやすく、組織外への影響も広がりやすい分野です。
+ゼロデイ攻撃が絡むため、既知の対策だけでは十分でない可能性があり、早期の確認と注意喚起が重要です。
 
 #### 温度感の理由
 
@@ -54,6 +197,88 @@ Oracle E-Business Suiteに影響する重大な脆弱性CVE-2026-46817につい�
 - 悪用情報あり。
 
 ##### 確度
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- PeopleSoftなど業務基盤の脆弱性情報を継続監視し、影響有無を速やかに確認する。
+- 従業員向けに、銀行口座情報や認証情報の変更・確認を促し、フィッシング警戒を再周知する。
+- 人事・給与系データに関するアクセス権限、ログ監視、異常送信の検知体制を点検する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Nissan employee data exposed in Oracle PeopleSoft zero-day attacks](https://www.itpro.com/security/data-breaches/nissan-employee-data-exposed-in-oracle-peoplesoft-zero-day-attacks) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-1324"></a>
+
+### 4. BlueHammer Vulnerability Exploited in Ransomware Attacks
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
+| <nobr>温⁠度⁠感</nobr> | 35.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 88.0 |
+| <nobr>確⁠度</nobr> | 78.0 |
+
+#### 概要
+
+CVE-2026-33825は、Microsoft Defenderにおけるアクセス制御の粒度不足に関する脆弱性とされ、認証済みの攻撃者がローカルで権限を昇格できる可能性があります。
+公開情報では、ランサムウェア攻撃の文脈で悪用が観測されたとされ、CISAのKnown Exploited Vulnerabilitiesにも掲載されています。
+防御製品そのものに関わる脆弱性であり、端末や管理環境の権限悪用につながるおそれがあるため、影響範囲の確認が重要です。
+すでに実悪用が示唆されているため、通常の脆弱性より優先度を上げて対応を検討する必要があります。
+
+#### CISA KEV詳細
+
+- **CVE**: CVE-2026-33825
+- **Vendor / Project**: Microsoft
+- **Product**: Defender
+- **Vulnerability Name**: Microsoft Defender Insufficient Granularity of Access Control Vulnerability
+- **Date Added**: 2026-04-22
+- **Due Date**: 2026-05-06
+- **Known Ransomware Use**: Known
+
+**Required Action**
+
+> Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 2 sources。
+- CISA KEV関連。
+- 実悪用・ゼロデイ文脈。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- 悪用済み脆弱性として優先確認が必要。
+- 悪用情報あり。
+- ランサムウェア文脈。
+
+##### 確度
+- 複数ソース確認。
+- 公的機関情報あり。
 - CVE IDあり。
 - 一次・公的系ソースあり。
 
@@ -66,9 +291,280 @@ Oracle E-Business Suiteに影響する重大な脆弱性CVE-2026-46817につい�
 
 #### 担当者向け確認ポイント
 
-- Oracle E-Business Suiteの利用有無を確認し、該当バージョンや影響範囲を早急に棚卸しする。
-- Oracleからの修正情報や推奨対策を確認し、適用可否と緊急度を判断する。
-- 認証関連の異常、想定外の権限変更、Payments周辺の不審な操作ログを重点的に点検する。
+- Microsoft Defenderの該当バージョン・構成を特定し、修正状況を確認する。
+- CISA KEV掲載の有無を踏まえ、パッチ適用や緩和策を優先度高く進める。
+- 権限昇格や不審な管理操作の痕跡がないか、端末・管理ログを点検する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-33825 | 関連CVE | 1.00 |
+| ベンダー | Microsoft | 影響ベンダー | 1.00 |
+| 製品 | Defender | 影響製品 | 1.00 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-33825](https://nvd.nist.gov/vuln/detail/CVE-2026-33825) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>公的機関</nobr> | [CISA KEV: CVE-2026-33825](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-33825) | <nobr>KEV掲載内容、Date Added、Due Date、Required Action</nobr> |
+| <nobr>公的機関データ</nobr> | [CISA KEV JSON](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) | <nobr>CISA公式の機械可読データ。CVE IDで検索して確認</nobr> |
+| <nobr>出典</nobr> | [BlueHammer Vulnerability Exploited in Ransomware Attacks](https://www.securityweek.com/bluehammer-vulnerability-exploited-in-ransomware-attacks/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-20129"></a>
+
+### 5. Securing AI agents: When AI tools move from reading to acting
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>A⁠I</nobr> / <nobr>M⁠C⁠P</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 35.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Microsoft Security Blogは、AIエージェントが「読む」だけでなく外部ツールを「実行する」段階に入ることで、信頼していたツール記述が悪用されるリスクを取り上げています。
+記事では、MCPに関連するツールポイズニングにより、AIエージェントが意図しない操作を行い、データ損失につながり得る点が示されています。
+AIエージェントの利用が広がるほど、単なる情報参照ではなく実行権限の扱いが重要になります。
+ツール連携の設計や監視が不十分だと、正規機能を起点にした不正操作の影響が大きくなり得ます。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AIエージェントに与えるツール権限を最小化し、実行系操作は明確な承認や分離を設ける。
+- ツール説明やメタデータの信頼前提を見直し、変更検知やレビューの仕組みを入れる。
+- エージェントの実行ログと異常なツール呼び出しを監視し、想定外の操作を早期に検知できるようにする。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| ベンダー | Microsoft | 言及あり | 0.80 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Securing AI agents: When AI tools move from reading to acting](https://www.microsoft.com/en-us/security/blog/2026/06/30/securing-ai-agents-ai-tools-move-from-reading-acting/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
+
+<a id="topic-20130"></a>
+
+### 6. Langflow RCE Exploited to Deploy Monero Miner on Exposed AI App Endpoints
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>R⁠C⁠E</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>A⁠I</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+公開情報によると、AIアプリ基盤のLangflowに存在する未認証のリモートコード実行脆弱性が悪用され、Moneroマイナーの配布に使われているとされています。
+対象は外部に公開されたAIアプリのエンドポイントで、攻撃者が露出した環境を継続的に探索している可能性が示されています。
+AI関連の業務アプリや開発基盤が、暗号資産マイニングを含む侵害の入口になり得る点が注目されます。
+認証なしで実行される脆弱性は、公開範囲の広い環境ほど被害につながりやすいため、早急な確認が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Langflowを含むAIアプリ基盤の公開状況を確認し、不要なインターネット露出を減らす。
+- 該当バージョンや脆弱性情報を確認し、ベンダーの修正や回避策を適用する。
+- リソース使用量の急増や不審なプロセス、予期しない外向き通信がないか監視する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-33017 | 関連CVE | 1.00 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Langflow RCE Exploited to Deploy Monero Miner on Exposed AI App Endpoints](https://thehackernews.com/2026/06/langflow-rce-exploited-to-deploy-monero.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-20187"></a>
+
+### 7. SimpleHelp vulnerability exploited to deliver mighty Djinn Stealer (CVE-2026-48558)
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>認⁠証⁠バ⁠イ⁠パ⁠ス</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>A⁠I</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+SimpleHelp RMMの認証回避の脆弱性CVE-2026-48558が、修正後も攻撃に悪用されていると報告されています。
+攻撃では、新たに確認されたDjinn Stealerが配布され、Windows、macOS、Linux環境を対象に各種認証情報や開発・運用系の情報を狙うとされています。
+RMM製品は管理対象が広いため、1件の脆弱性が複数端末や運用基盤に波及する可能性があります。
+クラウドやソース管理、AI開発支援ツールに関する認証情報が狙われる点も、被害の範囲を広げやすい要因です。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- SimpleHelpの該当バージョン利用有無を確認し、ベンダー案内に沿って速やかに修正・更新する。
+- RMM経由の不審な認証失敗、未承認の操作、配布物の変化などを重点的に監視する。
+- 端末だけでなく、クラウド、ソース管理、SSH、ウォレット関連の資格情報の保護と再発行手順を確認する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-48558 | 関連CVE | 1.00 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [SimpleHelp vulnerability exploited to deliver mighty Djinn Stealer (CVE-2026-485](https://www.helpnetsecurity.com/2026/06/30/simplehelp-vulnerability-exploited-cve-2026-48558/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
+
+<a id="github-only-topics"></a>
+
+## 📌 GitHubのみ掲載の注目トピック
+
+<a id="topic-20074"></a>
+
+### 1. Oracle E-Business Suite Payments flaw under attack (CVE-2026-46817)
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | GitHub |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>P⁠o⁠C</nobr> |
+| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
+| <nobr>温⁠度⁠感</nobr> | 45.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 56.0 |
+| <nobr>確⁠度</nobr> | 56.0 |
+
+#### 概要
+
+Oracle E-Business Suite の決済機能に関する脆弱性 CVE-2026-46817 について、実環境での悪用が確認されたと複数の情報源が伝えています。
+対象は Oracle Payments における権限管理や認証の不備とされ、CVSS 9.8 の深刻な問題として扱われています。
+業務基盤として使われる可能性がある E-Business Suite に関わるため、影響範囲が大きくなり得ます。
+公開PoCや悪用情報が出ている点から、修正適用の遅れがそのまま侵害リスクにつながりやすい状況です。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 2 sources。
+- 実悪用・ゼロデイ文脈。
+- 公開PoC・検証コード言及あり。
+- 技術・開発者系ソース観測: 観測あり。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- 悪用情報あり。
+- 公開PoCにより再現・悪用可能性が上がる。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 公開PoC・検証コード言及あり。
+- 公開PoC/Exploitコード: 確認あり。
+- 直接PoCリンク: 掲載しません。
+- 確認方針: NVD、ベンダー公式、公的機関、信頼できる技術分析を優先し、GitHub等のコードは防御・検証目的で別途確認します。
+
+#### 担当者向け確認ポイント
+
+- Oracle E-Business Suite の該当バージョンとパッチ適用状況を優先確認する。
+- 外部公開された管理・決済関連の入口がないか、不要な露出を見直す。
+- 侵害兆候の有無を監視し、関連ログや認証イベントを重点的に確認する。
 
 #### 関連する対象
 
@@ -81,6 +577,7 @@ Oracle E-Business Suiteに影響する重大な脆弱性CVE-2026-46817につい�
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
 | <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-46817](https://nvd.nist.gov/vuln/detail/CVE-2026-46817) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Oracle E-Business Suite Payments flaw under attack (CVE-2026-46817)](https://www.helpnetsecurity.com/2026/06/30/oracle-payments-cve-2026-46817-exploitation/) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the Wild](https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
@@ -88,70 +585,9 @@ Oracle E-Business Suiteに影響する重大な脆弱性CVE-2026-46817につい�
 - SNS反応: 観測あり・信頼度: 高。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
+- 技術・開発者系ソース観測: 観測あり。
 
 ---
-
-<a id="topic-20094"></a>
-
-### 2. Appleの主要サプライヤーから機密リストやiPhone 18 Proのテスト映像などがダークウェブに流出、ロジックボードの回路図も含まれていることが明らかに
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>i⁠O⁠S</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Appleの主要サプライヤーとされる企業から流出した機密データに、次期iPhoneに関する部品リストや基板設計図、試験中の端末に関する資料が含まれていたと報じられています。
-報道ベースでは、こうした情報がダークウェブ上に公開され、製品構成や供給網の一部がうかがえる状況とされています。
-製品未発表段階の技術情報や供給網情報が漏れると、企業の開発・調達・秘密保持の観点で影響が出る可能性があります。
-サプライチェーン経由の情報漏えいは、端末メーカー本体だけでなく取引先全体の管理強化が問われやすい点でも注目されます。
-
-#### 温度感の理由
-
-##### 温度感
-- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 委託先・サプライヤーを含めた機密データ管理とアクセス権限の棚卸しを確認する。
-- 設計図、部品表、試験資料などの保管場所と持ち出し制御、ログ監査の運用を見直す。
-- 漏えい時の連絡体制、影響範囲の特定、外部公表の判断基準を事前に整理しておく。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Appleの主要サプライヤーから機密リストやiPhone 18 Proのテスト映像などがダークウェブに流出、ロジックボードの回路図も含まれていることが明らかに](https://gigazine.net/news/20260630-apple-tata-a20-pro-leaked/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
-今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -162,41 +598,69 @@ Appleの主要サプライヤーとされる企業から流出した機密デー
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ランサムウェア被害の約6割は中小企業 セキュリティ対策は何から始めるべきか](https://news.mynavi.jp/techplus/article/20260630-4562750/) | 29.0 | 30.0 | 42.0 |
-| [AirDropとQuick Shareの脆弱性、50億台のデバイスに影響し修正開始](https://www.helpnetsecurity.com/2026/06/30/apple-airdrop-google-samsung-quick-share-vulnerabilities/) | 28.0 | 20.0 | 42.0 |
-| [Googleが「自分の好みを知っている画像生成AI」を無料提供、アメリカからスタート](https://gigazine.net/news/20260630-google-personal-intelligence-nano-banana/) | 27.0 | 20.0 | 42.0 |
-| [日印「防衛用AIドローン」共同開発へ 首脳会談で確認、対中念頭に安保協力深化](https://www.itmedia.co.jp/news/articles/2606/30/news141.html) | 26.0 | 20.0 | 42.0 |
-| [花王、AI-OCR導入で帳票のシステム入力工数を7割削減](https://japan.zdnet.com/article/35249779/) | 26.0 | 20.0 | 42.0 |
-| [「AIエージェントに認証情報を渡してはならない」 1PasswordがOpenAIと協業](https://atmarkit.itmedia.co.jp/ait/articles/2606/30/news074.html) | 26.0 | 20.0 | 42.0 |
-| [OpenAI、Codex向けデバイスを予告 7月15日に発表か キーボードメーカーと協業](https://www.itmedia.co.jp/news/articles/2606/30/news123.html) | 26.0 | 20.0 | 42.0 |
-| [OpenClaw for iOS：オープンソースのAIエージェントがiPhoneとiPadに登場](https://www.helpnetsecurity.com/2026/06/30/openclaw-ios-app-iphone-ipad/) | 25.0 | 20.0 | 42.0 |
-| [Apple、iOS、macOS、Safariの30件超の脆弱性を修正、AIが発見したWebKitの不具合も含む](https://thehackernews.com/2026/06/apple-patches-30-ios-macos-safari-flaws.html) | 25.0 | 20.0 | 42.0 |
-| [英国の経営者はAIが雇用をより多く生み出すと考えているが、現実はその中間にある](https://www.itpro.com/security/uk-business-leaders-think-ai-will-create-more-jobs-that-it-destroys-the-reality-lies-somewhere-in-between) | 25.0 | 20.0 | 42.0 |
-| [AIサイバー攻撃との戦いに勝つのはシンプルさと統一性](https://www.itpro.com/security/cyber-attacks/simplicity-and-unity-will-win-the-fight-against-ai-cyberattacks) | 25.0 | 20.0 | 42.0 |
-| [QuantifindがAIネイティブなリスクインテリジェンス向けに2億ドルを調達](https://www.securityweek.com/quantifind-raises-200-million-for-ai-native-risk-intelligence/) | 25.0 | 20.0 | 42.0 |
-| [2026年6月の注目サイバーセキュリティOSSツールまとめ](https://www.helpnetsecurity.com/2026/06/30/hottest-cybersecurity-open-source-tools-of-the-month-june-2026/) | 25.0 | 20.0 | 42.0 |
-| [WSLコンテナでWindows上のLinuxワークロードのビルドと実行が可能に](https://www.helpnetsecurity.com/2026/06/30/microsoft-linux-wsl-containers/) | 25.0 | 20.0 | 42.0 |
-| [今すぐ応募できるサイバーセキュリティの求人情報：2026年6月30日](https://www.helpnetsecurity.com/2026/06/30/cybersecurity-jobs-available-right-now-june-30-2026/) | 25.0 | 20.0 | 42.0 |
-| [メモリ価格の高騰で中小電子機器メーカーが存続の危機、利益率の低さ・サプライチェーンにおける交渉力の弱さ・価格引き上げの余地の少なさが浮き彫りに](https://gigazine.net/news/20260630-memory-price-small-makers/) | 22.0 | 20.0 | 42.0 |
-| [中学校でサポート詐欺被害、端末内部に個人情報 - 石垣市](https://www.security-next.com/186441) | 22.0 | 20.0 | 42.0 |
-| [サーバ管理ソフトの脆弱性突かれ、不正アクセス被害 - アイコムソフト](https://www.security-next.com/186399) | 22.0 | 20.0 | 42.0 |
-| [国内ISPのメールアカウント乗っ取りに注意 - 便乗攻撃にも警戒を](https://www.security-next.com/186580) | 22.0 | 20.0 | 42.0 |
-| [アメリカ政府がSignalとWhatsAppのハッキングに関与したグループの情報に1000万ドルの懸賞金をかける](https://gigazine.net/news/20260630-rfj-signal-whatsapp/) | 22.0 | 20.0 | 42.0 |
-| [「過剰な通信遮断」を引き起こした権利者に責任を求めるようISPが要求](https://gigazine.net/news/20260630-isp-rightsholder-overblocking/) | 22.0 | 20.0 | 42.0 |
-| [アフラックに不正アクセス、約438万人分の個人情報漏えい 口座情報23万件も](https://www.itmedia.co.jp/news/articles/2606/30/news133.html) | 21.0 | 20.0 | 42.0 |
-| [NRIセキュア、SCS評価制度の対応状況を可視化するサービスを提供](https://japan.zdnet.com/article/35249778/) | 21.0 | 20.0 | 42.0 |
-| [iPhone18Proの機密情報流出 報道](https://news.yahoo.co.jp/pickup/6586236?source=rss) | 20.0 | 20.0 | 42.0 |
-| [AVG Mobile Securityで学ぶ、詐欺電話・フィッシング・データ漏えい対策](https://www.helpnetsecurity.com/2026/06/30/product-showcase-avg-mobile-security-ios/) | 20.0 | 20.0 | 42.0 |
-| [三菱電機製MELSOFT Update Managerに7-Zipに起因する複数の脆弱性](https://jvn.jp/vu/JVNVU95990609/) | 20.0 | 20.0 | 42.0 |
-| [GitHubのレビュー速度を上回って脆弱性報告が届く状況](https://www.helpnetsecurity.com/2026/06/30/github-advisory-database-review/) | 20.0 | 20.0 | 42.0 |
-| [「アフラック よりそうネット」への不正アクセス、顧客情報約438万件が漏えい](https://internet.watch.impress.co.jp/docs/news/2121158.html) | 20.0 | 20.0 | 42.0 |
-| [新たなコントローラの欠陥により高速道路標識や看板が遠隔ハッキングの危険にさらされる](https://www.securityweek.com/new-controller-flaws-expose-highway-signs-and-billboards-to-remote-hacking/) | 20.0 | 20.0 | 42.0 |
-| [リコー製Web Image Monitorを実装している複数のレーザープリンタおよび複合機（MFP）における反射型クロスサイトスクリプティングの脆弱性](https://jvn.jp/jp/JVN48718197/) | 20.0 | 20.0 | 42.0 |
-| [RPGツクールMVおよびMZにおけるOSコマンドインジェクションの脆弱性](https://jvn.jp/jp/JVN69681784/) | 20.0 | 20.0 | 42.0 |
-| [防衛基盤の半数は依然としてコンプライアンスを中心にセキュリティを構築している](https://www.helpnetsecurity.com/2026/06/30/federal-cybersecurity-compliance-report/) | 20.0 | 20.0 | 42.0 |
-| [DGM3103SCTにおけるOSコマンドインジェクションの脆弱性](https://jvn.jp/jp/JVN28979424/) | 20.0 | 20.0 | 42.0 |
-| [インド中央銀行が信頼向上のため.bankドメインの使用を義務化、しかし登録情報漏えいで機密情報が流出](https://www.theregister.com/security/2026/06/30/indias-central-bank-mandated-use-of-bank-domains-to-enhance-trust-but-its-registry-leaked-sensitive-info/5264152) | 20.0 | 20.0 | 42.0 |
-| [Claude Fable 5とAI支援の第三者リスクの新たな現実](https://www.bitsight.com/de/blog/claude-fable-5-und-die-neue-realitaet-von-ki-gestuetztem-drittparteirisiko) | 15.0 | 20.0 | 42.0 |
+| [ランサム被害から復活したアスクル、AI駆動開発でゼロから基盤を再構築](https://xtech.nikkei.com/atcl/nxt/column/18/03664/062900004/) | 29.0 | 30.0 | 42.0 |
+| [Edge拡張機能119件からマルウェア、260万人に影響か](https://news.mynavi.jp/techplus/article/20260630-4647101/) | 29.0 | 20.0 | 42.0 |
+| [Huntress CEO、脅威ハンターがランサムウェア犯罪者に捜査情報を警告した件で「判断ミス」と認める](https://www.theregister.com/security/2026/06/30/huntress-ceo-says-threat-hunter-used-poor-judgment-in-alerting-ransomware-crim-about-law-enforcement-probe/5264532) | 28.0 | 30.0 | 42.0 |
+| [BYOVDの流行：攻撃者が信頼されたWindowsドライバを武器化してセキュリティを無効化する方法](https://www.security.com/threat-intelligence/byovd-vulnerable-drivers) | 28.0 | 30.0 | 42.0 |
+| [BlackfieldランサムウェアがNidec Corporationに200万ドルの身代金を要求](https://www.bleepingcomputer.com/news/security/blackfield-ransomware-asks-nidec-corporation-for-2-million-ransom/) | 28.0 | 30.0 | 42.0 |
+| [ランサムウェア組織が企業風の組織運営を武器化する手口](https://cyberscoop.com/ransomware-syndicates-corporate-organization-op-ed/) | 28.0 | 30.0 | 42.0 |
+| [EU・アジアの宿泊業組織でフィッシャーが永続化を獲得](https://www.darkreading.com/cyberattacks-data-breaches/phishers-persistence-eu-asia-hospitality-orgs) | 28.0 | 20.0 | 42.0 |
+| [Rustで再構築されたRustDuckボットネットがルーターとサーバーを乗っ取りDDoSに悪用](https://thehackernews.com/2026/06/rustduck-botnet-rebuilds-in-rust-to.html) | 28.0 | 20.0 | 42.0 |
+| [Silent Swap Crypto Clipper、偽のGoogle Notes拡張機能を使ってウォレットアドレスを置き換え](https://thehackernews.com/2026/06/silent-swap-crypto-clipper-uses-fake.html) | 28.0 | 20.0 | 42.0 |
+| [SimpleHelpの深刻な脆弱性がマルウェア配布に悪用される](https://www.infosecurity-magazine.com/news/simplehelp-rmm-vulnerability/) | 28.0 | 20.0 | 42.0 |
+| [SimpleHelpの重大な脆弱性が機密資格情報を狙う攻撃で悪用される](https://www.cybersecuritydive.com/news/critical-flaw-simplehelp-exploited-attacks-credentials/824105/) | 28.0 | 20.0 | 42.0 |
+| [Aikido Security、Rootを買収しオープンソース脆弱性のバックポート修正を拡充](https://www.helpnetsecurity.com/2026/06/30/aikido-security-root-acquisition/) | 28.0 | 20.0 | 42.0 |
+| [ClickFixがサイバー犯罪者に好まれるマルウェア配布手法に](https://www.infosecurity-magazine.com/news/clickfix-cybercriminals-favorite/) | 28.0 | 20.0 | 42.0 |
+| [FIFA 2026のサイバーリスクが示す数値分析](https://thehackernews.com/2026/06/what-numbers-say-about-fifa-2026-cyber.html) | 28.0 | 20.0 | 42.0 |
+| [ハッカーがBlockchainを悪用し、Booking.comのフィッシングで日本のホテルを標的にする](https://www.infosecurity-magazine.com/news/hackers-blockchain-japan-hotels/) | 28.0 | 20.0 | 42.0 |
+| [中国関連マルウェアを運ぶUSBドライブが日本の軍事ネットワークに約1年間感染させていた](https://www.bitdefender.com/en-us/blog/hotforsecurity/usb-drives-carrying-china-linked-malware-infected-japanese-military-networks-for-nearly-a-year) | 28.0 | 20.0 | 42.0 |
+| [ToddyCat：隠されたメールアシスタントの実態 第2部](https://securelist.com/toddycat-apt-umbrij-tool-and-oauth/120251/) | 28.0 | 20.0 | 42.0 |
+| [AirDropとQuick Shareの脆弱性により近隣の攻撃者がクラッシュや検証回避を引き起こせる問題](https://thehackernews.com/2026/06/airdrop-and-quick-share-flaws-let.html) | 28.0 | 20.0 | 42.0 |
+| [Nissan従業員データがOracle PeopleSoftの侵害で流出](https://www.securityweek.com/nissan-employee-data-breached-in-oracle-peoplesoft-hack/) | 28.0 | 20.0 | 42.0 |
+| [Microsoft Securityの最新情報：2026年6月](https://www.microsoft.com/en-us/security/blog/2026/06/30/whats-new-in-microsoft-security-june-2026/) | 27.0 | 20.0 | 42.0 |
+| [Microsoft、毒されたMCPツール説明でAIエージェントがデータ漏えいする恐れを警告](https://thehackernews.com/2026/06/microsoft-warns-poisoned-mcp-tool.html) | 25.0 | 20.0 | 42.0 |
+| [GuardFallがオープンソースAIコーディングエージェントを古いシェルインジェクションの脆弱性にさらす](https://thehackernews.com/2026/06/guardfall-exposes-open-source-ai-coding.html) | 25.0 | 20.0 | 42.0 |
+| [282件のiOS向けAIアプリでAPIキーとOpenAIプロキシアクセスがネットワーク通信から漏えいしていることが判明](https://thehackernews.com/2026/06/282-ios-apps-found-leaking-llm-api-keys.html) | 25.0 | 20.0 | 42.0 |
+| [JamfがMac向けにAIガバナンスとシャドーAI検知を提供](https://www.helpnetsecurity.com/2026/06/30/jamf-enables-ai-governance-and-shadow-ai-detection-on-mac/) | 25.0 | 20.0 | 42.0 |
+| [OpenMatter NetworkがAIガバナンスに検証可能な信頼をもたらす](https://www.helpnetsecurity.com/2026/06/30/openmatter-network-cryptographically-verifiable-platform/) | 25.0 | 20.0 | 42.0 |
+| [数十年前のBashの手口がAIコーディングエージェントをサプライチェーン攻撃にさらす](https://www.securityweek.com/decades-old-bash-tricks-expose-ai-coding-agents-to-supply-chain-attacks/) | 25.0 | 20.0 | 42.0 |
+| [AI生成ワークフローは静かなセキュリティ危機です](https://www.darkreading.com/cyber-risk/ai-generated-workflows-silent-security-disaster) | 25.0 | 20.0 | 42.0 |
+| [Train, triage, repeat: フィッシング対策を変えるAIエージェント](https://redcanary.com/blog/threat-detection/phishing-ai-agent/) | 25.0 | 20.0 | 42.0 |
+| [Schneider Electric EcoStruxure IT Data Center Expertの脆弱性情報](https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-03) | 25.0 | 20.0 | 42.0 |
+| [Apple、AIセキュリティ懸念でソフトウェア修正を迅速化](https://www.itpro.com/software/apple-is-speeding-up-software-updates-due-to-ai-security-concerns-heres-what-you-need-to-know) | 25.0 | 20.0 | 42.0 |
+| [AIのトークンコストがサイバーセキュリティを脅かす理由](https://www.securityweek.com/the-ai-token-costs-that-can-break-cybersecurity/) | 25.0 | 20.0 | 42.0 |
+| [AIブラウザをだましてユーザー認証情報を漏えいさせる新たなBioShocking攻撃](https://thehackernews.com/2026/06/new-bioshocking-attack-tricks-ai.html) | 25.0 | 20.0 | 42.0 |
+| [StoneFly Storage Concentratorの脆弱性情報](https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06) | 24.0 | 46.0 | 50.0 |
+| [Schneider Electric EasyLogic T150およびSaitel DP RTUの脆弱性](https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-04) | 24.0 | 46.0 | 50.0 |
+| [Delta Electronics DVP12SE PLC の脆弱性](https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07) | 24.0 | 46.0 | 50.0 |
+| [Frangoteam FUXA SCADA/HMIの脆弱性](https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-02) | 24.0 | 46.0 | 50.0 |
+| [OFFIS DCMTK Toolkitの脆弱性とセキュリティ対策](https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-181-01) | 24.0 | 46.0 | 50.0 |
+| [Oracle E-Business Suiteの最新脆弱性の悪用が始まる](https://www.securityweek.com/exploitation-of-recent-oracle-e-business-suite-vulnerability-begins/) | 24.0 | 38.0 | 42.0 |
+| [量子安全移行の加速](https://www.microsoft.com/en-us/security/blog/2026/06/30/microsoft-advances-quantum-safe-security-as-the-risk-timeline-shifts/) | 22.0 | 20.0 | 42.0 |
+| [中国のオープンウェイトモデル「GLM-5.2」が脆弱性検出ベンチマークでClaude Codeを上回る](https://gigazine.net/news/20260630-glm-5-2-beats-claude-cyber-benchmarks/) | 22.0 | 20.0 | 42.0 |
+| [人口ゼロの孤島から送られたDMCA申請により記事がGoogleのインデックスから削除される](https://gigazine.net/news/20260630-pollen-google-dmca/) | 22.0 | 20.0 | 42.0 |
+| [本の雑誌社のXアカウントが乗っ取り被害 - 注意を呼びかけ](https://www.security-next.com/186570) | 22.0 | 20.0 | 42.0 |
+| [アフラック契約者サイトなどで顧客約438万人の個人情報が流出](https://www.security-next.com/186597) | 22.0 | 20.0 | 42.0 |
+| [労働力調査の調査世帯一覧表を紛失 - 栃木県](https://www.security-next.com/186510) | 22.0 | 20.0 | 42.0 |
+| [iOS/iPadOS 26.5.2提供開始、多数の不具合修正 macOSアップデートも](https://news.mynavi.jp/techplus/article/20260630-4647496/) | 21.0 | 20.0 | 42.0 |
+| [アフラック生命保険に不正アクセス、438万人分の個人情報漏洩](https://xtech.nikkei.com/atcl/nxt/news/24/03280/) | 21.0 | 20.0 | 42.0 |
+| [XZ Utilsの脆弱性がB&R製品に与える影響](https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-05) | 20.0 | 28.0 | 50.0 |
+| [Mitsubishi Electric MELSOFT Update Manager SW1DND-UDM-Mの脆弱性](https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-01) | 20.0 | 28.0 | 50.0 |
+| [Chrome Web Store上の偽Perplexity拡張機能が検索を追跡](https://www.bleepingcomputer.com/news/security/fake-perplexity-extension-on-chrome-web-store-tracked-searches/) | 20.0 | 20.0 | 42.0 |
+| [DHS、重要インフラのサイバーセキュリティ向け後継評議会を発表へ](https://cyberscoop.com/dhs-anchor-ci-cybersecurity-information-sharing/) | 20.0 | 20.0 | 42.0 |
+| [Apple、iOS・macOS Tahoe・Safari向けにセキュリティ更新を公開](https://www.malwarebytes.com/blog/news/2026/06/update-time-apple-releases-security-patches-for-ios-macos-tahoe-safari) | 20.0 | 20.0 | 42.0 |
+| [DHSが官民のインフラセキュリティ連携のための新システムを提案](https://www.cybersecuritydive.com/news/critical-infrastructure-collaboration-dhs-anchor-ci/824081/) | 20.0 | 20.0 | 42.0 |
+| [地下社会からの教訓：Business Email Compromiseへの対策方法](https://www.bleepingcomputer.com/news/security/lessons-from-the-underground-how-to-combat-business-email-compromise/) | 20.0 | 20.0 | 42.0 |
+| [Microsoft 365のハードニングとHuntress Managed ISPM](https://www.huntress.com/blog/microsoft-365-identity-security-five-minute-admin) | 20.0 | 20.0 | 42.0 |
+| [Aflac Japanのデータ侵害、438万人に影響](https://www.securityweek.com/aflac-japan-data-breach-impacts-4-38-million/) | 20.0 | 20.0 | 42.0 |
+| [Hacker Conversations: Chris Thompson、元IBM X-Force Red責任者でRemoteThreat共同創業者](https://www.securityweek.com/hacker-conversations-chris-thompson-former-head-of-ibm-x-force-red-co-founder-of-remotethreat/) | 20.0 | 20.0 | 42.0 |
+| [最高裁、携帯電話利用者の位置情報履歴にも憲法上のプライバシー保護が適用されると判断](https://www.securityweek.com/supreme-court-rules-constitutional-privacy-protections-apply-to-cellphone-users-location-history/) | 20.0 | 20.0 | 42.0 |
+| [保険大手Aflac、子会社への不正アクセス後にデータ侵害を公表](https://www.bleepingcomputer.com/news/security/insurance-giant-aflac-discloses-data-breach-after-subsidiary-hack/) | 20.0 | 20.0 | 42.0 |
+| [米国メーカーがサプライヤーのセキュリティギャップを解消し、第三者リスクを半減してSOCトリアージ速度を2倍にした方法](https://any.run/cybersecurity-blog/us-manufacturer-security-risk/) | 20.0 | 20.0 | 42.0 |
+| [US、SignalとWhatsApp攻撃の背後にいるロシア関連ハッカーの情報に1000万ドルの報奨金を提示](https://www.itpro.com/security/cyber-crime/us-offers-usd10m-bounty-for-info-on-russia-linked-hackers-behind-signal-and-whatsapp-attacks) | 20.0 | 20.0 | 42.0 |
+| [英国の医療分野でサイバー攻撃が10倍に増加](https://www.infosecurity-magazine.com/news/uk-healthcare-tenfold-increase/) | 20.0 | 20.0 | 42.0 |
+| [Kali Linux 2026.2、VM起動時間を短縮しデスクトップ環境を刷新](https://www.helpnetsecurity.com/2026/06/30/kali-linux-2026-2-release/) | 20.0 | 20.0 | 42.0 |
+| [Claude Fable 5とAI支援型サードパーティリスクの新たな現実](https://www.bitsight.com/de/blog/claude-fable-5-und-die-neue-realitaet-von-ki-gestuetztem-drittparteirisiko) | 10.0 | 20.0 | 42.0 |
 
 ---
 
