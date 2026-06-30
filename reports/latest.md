@@ -1,24 +1,22 @@
-# 📡 サイレーダー 2026-06-30 05:00 JST
+# 📡 サイレーダー 2026-06-30 11:00 JST
 
-このレポートは、2026-06-29 17:00 JST〜2026-06-30 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-06-30 05:00 JST〜2026-06-30 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 84
-- [音声で扱う想定のトピック](#audio-topics): 6
+- 観測トピック数: 54
+- [音声で扱う想定のトピック](#audio-topics): 4
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 53
+- [低温だが記録しておくトピック](#low-record-topics): 26
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Modernizing Global Vulnerability Standards For The Age Of AI](#topic-19940) | 45.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [29th June – Threat Intelligence Report](#topic-15753) | 43.0 | 58.0 | 66.0 | 音声 | 温度感上位枠 |
-| 3 | [JSP webshells being dropped on unpatched PTC Windchill instances](#topic-19909) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 4 | [US Federal Insurance Regulator Confirms Data Breach Via Oracle Flaw](#topic-19967) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 5 | [⚡ Weekly Recap: Linux Kernel Flaws, AI Malware Tricks, Turla Backdoor, Infostealers and More](#topic-19921) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
-| 6 | [The Bear Necessities: A Look at the Drivers, Dynamics, and Applications of the Pro-Russia Influence Ecosystem](#topic-19927) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Nissan discloses employee data breach linked to Oracle zero-day attacks](#topic-20040) | 45.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [サポートツール「SimpleHelp」の脆弱性悪用を確認 - 米当局が注意喚起](#topic-20002) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 3 | [Anonymous researcher drops 0-day 'exploitarium' repo](#topic-20042) | 37.0 | 46.0 | 51.0 | 音声 | 温度感上位枠 |
+| 4 | [NAIC says public data stolen in ShinyHunters' PeopleSoft breach](#topic-20041) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -26,16 +24,16 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-19940"></a>
+<a id="topic-20040"></a>
 
-### 1. Modernizing Global Vulnerability Standards For The Age Of AI
+### 1. Nissan discloses employee data breach linked to Oracle zero-day attacks
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>A⁠I</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>C⁠I⁠S⁠O⁠・⁠組⁠織⁠運⁠営</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
 | <nobr>温⁠度⁠感</nobr> | 45.0 |
@@ -44,17 +42,16 @@
 
 #### 概要
 
-AIによる脆弱性発見が高速化するなかで、既存のCVEやCVSS、NVD、KEV、EPSSといった脆弱性管理の仕組みが追いつかなくなりつつある、という問題提起です。
-特に、単体の深刻度よりも「実際に到達可能か」「複数の脆弱性をつなげて悪用できるか」といった観点での優先順位付けが重要だとされています。
-脆弱性の件数や発見速度がAIで大きく伸びると、守る側は評価・トリアージ・修正の負荷に直面します。
-従来の指標だけでは実リスクを見誤るおそれがあるため、運用や調達、政策面を含めた見直しが注目されています。
+日産は、現役・元従業員のデータに影響する情報漏えいが発生したと公表しました。
+背景には、Oracle PeopleSoftの脆弱性を悪用したデータ窃取攻撃があり、これまでShinyHuntersと関連づけられてきた事案と同様の文脈で語られています。
+人事・従業員情報は、なりすましや追加の標的型攻撃に悪用されやすく、組織への二次被害につながるおそれがあります。
+加えて、業務基盤として広く使われる業務アプリケーションの脆弱性が、実際の情報窃取につながった点が注目されています。
 
 #### 温度感の理由
 
 ##### 温度感
 - 実悪用・ゼロデイ文脈。
 - 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
 
 ##### 実務影響
 - 悪用情報あり。
@@ -70,126 +67,173 @@ AIによる脆弱性発見が高速化するなかで、既存のCVEやCVSS、NV
 
 #### 担当者向け確認ポイント
 
-- CVSSなどの数値だけでなく、自組織で到達可能か、既知の悪用や連鎖リスクがあるかを合わせて確認する。
-- NVDやKEV、EPSSの更新遅延や限界を前提に、社内の優先順位付け基準を見直す。
-- AIで見つかった脆弱性については、検証済みかどうか、再現性や影響範囲の情報が十分かを慎重に扱う。
+- Oracle PeopleSoftなど業務アプリケーションの脆弱性情報と適用状況を早急に確認する。
+- 従業員・退職者データを含むシステムのアクセスログ、異常な取得・持ち出しの兆候を点検する。
+- 影響を受ける可能性がある従業員向けに、フィッシングや不審連絡への注意喚起を行う。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Modernizing Global Vulnerability Standards For The Age Of AI](https://www.rapid7.com/blog/post/ai-modernizing-global-vulnerability-standards) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Nissan discloses employee data breach linked to Oracle zero-day attacks](https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
-- SNS反応: 観測あり・信頼度: 低。
+- SNS反応: 観測あり・信頼度: 高。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
+- 技術・開発者系ソース観測: 観測なし。
 
 ---
 
-<a id="topic-15753"></a>
+<a id="topic-20002"></a>
 
-### 2. 29th June – Threat Intelligence Report
+### 2. サポートツール「SimpleHelp」の脆弱性悪用を確認 - 米当局が注意喚起
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>I⁠o⁠C</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 43.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 58.0 |
-| <nobr>確⁠度</nobr> | 66.0 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 39.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-Cisco Catalyst SD-WAN Managerに関する権限昇格の脆弱性CVE-2026-20245が、ゼロデイとして悪用された可能性が複数の情報源で報告されています。
-Ciscoはこの脆弱性について、影響を受ける環境で有効な認証情報が必要とし、限定的な悪用事例を把握しているとしています。
-ネットワーク機器の管理系コンポーネントが標的になると、侵害後の権限拡大や不正な管理操作につながるおそれがあります。
-パッチ提供前の悪用観測があるため、該当環境では早急な状況確認が重要です。
+米当局が、リモートサポートツール「SimpleHelp」の脆弱性について、実際の悪用が確認されているとして注意喚起を行いました。
+公開情報では、脆弱性の存在だけでなく悪用観測がある点が示されており、利用組織は影響確認を急ぐ必要があります。
+リモートサポート製品は業務上広く使われるため、侵入や不正操作の足がかりになりやすい点が懸念されます。
+悪用が確認されている脆弱性は、未対策環境に対するリスクが高いことを意味します。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 8 sources。
 - 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
-- 権限昇格系。
 
 ##### 確度
-- 複数ソース確認。
+- 一次・公的系ソースあり。
+
+#### 攻撃・悪用観測シグナル
+
+- シグナル種別: 悪用観測あり。
+- 公開PoC/Exploitコード: 未確認。
+- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
+
+#### 担当者向け確認ポイント
+
+- SimpleHelpの利用有無と適用バージョンを確認し、ベンダーや公的機関の案内に沿って更新・緩和策を適用する。
+- 管理画面や関連サービスへのアクセス状況を点検し、不審な接続・設定変更・アカウント操作がないか確認する。
+- リモートサポート製品の公開範囲、認証設定、MFAの有無を見直し、必要最小限のアクセスに絞る。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
+|---|---|---|---:|
+| 脆弱性 | CVE-2026-48558 | 関連CVE | 1.00 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [サポートツール「SimpleHelp」の脆弱性悪用を確認 - 米当局が注意喚起](https://www.security-next.com/186553) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-20042"></a>
+
+### 3. Anonymous researcher drops 0-day 'exploitarium' repo
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
+| <nobr>確⁠度</nobr> | 51.0 |
+
+#### 概要
+
+匿名の研究者が、0-day脆弱性に関する「exploitarium」リポジトリを公開したとされています。
+材料ではCVE-2026-55200が主題として示されており、少なくとも2件の脆弱性がすでに攻撃対象になっている可能性が示唆されていますが、詳細は未確認です。
+ゼロデイや実際の悪用が絡む話題は、脆弱性の公開情報が出た直後から防御側の対応が急がれやすいため注目されます。
+特に攻撃観測があるとされる場合は、資産の影響確認や検知強化の優先度が上がります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
 - CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 攻撃・悪用観測シグナル
 
 - シグナル種別: 悪用観測あり。
-- PoC/検証コード候補: 候補あり（該当CVE 3件 / URL 7件以上）。
+- PoC/検証コード候補: 候補あり（該当CVE 1件 / URL 2件以上）。
 - 直接PoCリンク: 掲載しません。
 - 注意: 対象CVE・製品・バージョンとの一致確認が必要です。
 
 #### 担当者向け確認ポイント
 
-- CVE-2026-20245の影響範囲にCisco Catalyst SD-WAN Manager関連製品が含まれるか確認する。
-- 管理者アカウントや認証情報の利用状況を見直し、不審なログインや権限変更の痕跡を確認する。
-- Ciscoの公式勧告と更新情報を継続監視し、適用可能な緩和策や修正版が出たら速やかに対応する。
+- CVE-2026-55200に関連する影響範囲を確認し、該当製品やバージョンの棚卸しを行う。
+- ベンダー情報や公的な注意喚起を継続監視し、修正パッチや緩和策が出た場合は速やかに適用する。
+- 関連ログやEDR/IDSの検知ルールを見直し、異常な挙動や侵入兆候がないかを点検する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
 |---|---|---|---:|
-| 脆弱性 | CVE-2026-20127 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-20182 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-20245 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-33017 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-34908 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-34909 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-34910 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-41947 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-41948 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-55255 | 関連CVE | 1.00 |
+| 脆弱性 | CVE-2026-20896 | 関連CVE | 1.00 |
+| 脆弱性 | CVE-2026-55200 | 関連CVE | 1.00 |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20245](https://nvd.nist.gov/vuln/detail/CVE-2026-20245) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [29th June – Threat Intelligence Report](https://research.checkpoint.com/2026/29th-june-threat-intelligence-report-2/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco SD-WAN Zero-Day Exploited Months Before Patching](https://www.securityweek.com/cisco-sd-wan-zero-day-exploited-months-before-patching/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco Catalyst SD-WAN Zero-Day CVE-2026-20245 Exploited to Gain Root Access](https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Mandiant reveals how Cisco SD-WAN zero-day attacks gained root access](https://www.bleepingcomputer.com/news/security/mandiant-reveals-how-cisco-sd-wan-zero-day-attacks-gained-root-access/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN](https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco Catalyst SD-WAN Controller, Catalyst SD-WAN Manager, and Catalyst SD-WAN V](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-privesc-4uxFrdzx) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco customers encounter another SD-WAN zero-day under attack](https://cyberscoop.com/cisco-sdwan-zero-day-vulnerability-exploited-cve202620245/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-55200](https://nvd.nist.gov/vuln/detail/CVE-2026-55200) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Anonymous researcher drops 0-day 'exploitarium' repo](https://www.theregister.com/security/2026/06/29/anonymous-researcher-drops-0-day-exploitarium-repo/5263961) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 高。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
+- 技術・開発者系ソース観測: 観測なし。
 
 ---
 
-<a id="topic-19909"></a>
+<a id="topic-20041"></a>
 
-### 3. JSP webshells being dropped on unpatched PTC Windchill instances
+### 4. NAIC says public data stolen in ShinyHunters' PeopleSoft breach
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>I⁠o⁠C</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
 | <nobr>温⁠度⁠感</nobr> | 37.0 |
@@ -198,10 +242,10 @@ Ciscoはこの脆弱性について、影響を受ける環境で有効な認証
 
 #### 概要
 
-CISAは、PTCのWindchillおよびFlexPLMに関する脆弱性をKnown Exploited Vulnerabilities（KEV）カタログに追加しました。
-PTCの注意喚起では、影響を受ける環境に対してJSP webshellが配置されていることを示す情報が更新されており、実際の悪用が疑われる状況です。
-PLMソフトウェアは製品情報や設計情報を扱うことが多く、侵害されると業務影響が大きくなり得ます。
-KEV入りしているため、単なる理論上の脆弱性ではなく、優先度を上げて対応すべき案件と見られます。
+NAICは、ShinyHuntersによる侵害で盗まれたのは、公開情報、古いログ、設定ファイルに限られると説明しています。
+報道によれば、侵入にはOracle PeopleSoftサーバーのゼロデイ脆弱性が悪用されたとされますが、被害内容は公開情報中心だったとされています。
+公共性の高い組織で、ゼロデイ文脈の侵害が発生したとされる点が注目されています。
+実際の漏えい範囲が限定的でも、認証情報や設定情報の取り扱い、脆弱性対応の重要性を改めて示す事例です。
 
 #### 温度感の理由
 
@@ -222,82 +266,15 @@ KEV入りしているため、単なる理論上の脆弱性ではなく、優�
 
 #### 担当者向け確認ポイント
 
-- Windchill / FlexPLMの該当バージョンを確認し、ベンダー修正の適用状況を点検する。
-- PTCが公開している侵害指標や防御向け注意喚起を参照し、対象環境で整合する痕跡がないか確認する。
-- 外部公開された管理画面や関連サービスの露出を見直し、暫定的にアクセス制限を強化する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-12569 | 関連CVE | 1.00 |
+- PeopleSoftなど基幹システムの脆弱性情報と適用状況を早急に確認する。
+- 設定ファイルやログに機微情報が含まれていないか、保管・公開範囲を見直す。
+- 侵害の有無にかかわらず、関連システムのアクセス監査とインシデント対応手順を点検する。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [JSP webshells being dropped on unpatched PTC Windchill instances](https://www.helpnetsecurity.com/2026/06/29/ptc-windchill-cve-2026-12569-exploited/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 高。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-19967"></a>
-
-### 4. US Federal Insurance Regulator Confirms Data Breach Via Oracle Flaw
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-米国の保険関連の標準設定団体NAICが、Oracle PeopleSoftの脆弱性を悪用された可能性のある侵害を確認したと報じられています。
-現時点では、ゼロデイの悪用により同団体のITシステムへ不正アクセスがあったとされますが、被害の全容や影響範囲は限定的にしか分かっていません。
-保険業界の中核に近い組織が影響を受けた可能性があり、同種の業務システムを使う組織にとっても関連性があります。
-ゼロデイの悪用が示唆されるため、修正状況の確認や周辺システムの点検が重要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- Oracle PeopleSoftの適用状況と関連ベンダー情報を確認し、保護策や修正の有無を点検する。
-- 認証ログ、管理操作ログ、外部からの不審なアクセス痕跡を優先的に確認する。
-- 影響が想定される場合は、関連アカウントの見直しと、機微情報へのアクセス制御を強化する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [US Federal Insurance Regulator Confirms Data Breach Via Oracle Flaw](https://www.infosecurity-magazine.com/news/us-insurance-regulator-confirms/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [NAIC says public data stolen in ShinyHunters' PeopleSoft breach](https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -305,119 +282,6 @@ KEV入りしているため、単なる理論上の脆弱性ではなく、優�
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
 - 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-19921"></a>
-
-### 5. ⚡ Weekly Recap: Linux Kernel Flaws, AI Malware Tricks, Turla Backdoor, Infostealers and More
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-今週の脅威動向のまとめでは、Linuxカーネルの脆弱性、AIを悪用したマルウェアの手口、Turlaのバックドア、情報窃取型マルウェアなど複数の話題が取り上げられています。
-個別の詳細はまだ整理途上でも、既知の脆弱性対応や初期侵入後の活動への備えが改めて重要だと示しています。
-AI関連の話題だけでなく、従来型の脆弱性やマルウェアが並行して注目されており、守る側は複数の攻撃面を同時に見る必要があります。
-特定の単発事案ではなく、運用上の見落としやパッチ遅延が被害につながりやすい点が注目されています。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Linux環境では、該当する脆弱性情報と保守適用状況を早めに確認する。
-- AIを使った不審な文面・挙動があっても、従来の検知基盤やログ監視と突き合わせて判断する。
-- 情報窃取型マルウェアやバックドアを想定し、認証情報の保護、権限の最小化、端末の異常通信監視を見直す。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [⚡ Weekly Recap: Linux Kernel Flaws, AI Malware Tricks, Turla Backdoor, Infosteal](https://thehackernews.com/2026/06/weekly-recap-linux-kernel-flaws-ai.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-19927"></a>
-
-### 6. The Bear Necessities: A Look at the Drivers, Dynamics, and Applications of the Pro-Russia Influence Ecosystem
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>地⁠政⁠学⁠・⁠サ⁠イ⁠バ⁠ー⁠紛⁠争</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>A⁠I</nobr> / <nobr>D⁠D⁠o⁠S</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>サ⁠ー⁠ド⁠パ⁠ー⁠テ⁠ィ⁠リ⁠ス⁠ク</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-公開情報によると、ロシア寄りの情報工作エコシステムは、ウクライナ戦争向けの動きから、より広い対外・国内向けの影響工作へ再び軸足を戻しつつあるとみられます。
-記事は、生成AIの活用、ハクティビズム、偽装メディア、漏えい情報の拡散など、複数の手口が相互に結びついている点を指摘しています。
-影響工作は単独のキャンペーンではなく、政府系・準政府系・第三者の活動が重なって拡張性と持続性を持つため、発見や切り分けが難しくなります。
-選挙、国際イベント、地域紛争などに合わせて話題が切り替わる可能性があり、広報・脅威対応・レピュテーション管理の両面で注意が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 生成AIを使った偽情報生成や下書き作成が増える前提で、社内外の情報の真偽確認プロセスを強化する。
-- 選挙・国際情勢・大規模イベントに便乗した偽装メディアや漏えい主張に備え、一次情報と公式発表の確認導線を明確にする。
-- DDoSや改ざん、情報漏えいを装う影響工作が同時に起きうるため、広報、SOC、法務の連携体制を事前に整える。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [The Bear Necessities: A Look at the Drivers, Dynamics, and Applications of the P](https://cloud.google.com/blog/topics/threat-intelligence/pro-russia-influence-ecosystem/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 高。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
 
 ---
 
@@ -436,59 +300,32 @@ AI関連の話題だけでなく、従来型の脆弱性やマルウェアが並
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [VPN経由でサイバー攻撃、ランサム被害が発生 - D&M](https://www.security-next.com/186393) | 30.0 | 30.0 | 42.0 |
-| [Mozillaが警告するAIコーディングエージェントにおける間接的プロンプトインジェクションのリスク](https://www.helpnetsecurity.com/2026/06/29/mozilla-warns-of-indirect-prompt-injection-risk-in-ai-coding-agents/) | 29.0 | 20.0 | 43.0 |
-| [「Gentlemen」と名乗る攻撃者によるカスタムバックドアと進化する戦術](https://securelist.com/the-gentlemen-raas/120447/) | 28.0 | 30.0 | 42.0 |
-| [Russian HackersによるJaguar Land Roverへの破壊的サイバー攻撃疑惑](https://www.infosecurity-magazine.com/news/russian-hackers-destructive-jaguar/) | 28.0 | 30.0 | 42.0 |
-| [イラン、ロシア、中国が水道システムを妨害対象に](https://www.darkreading.com/ics-ot-security/iran-russia-china-target-water-systems-sabotage) | 28.0 | 20.0 | 42.0 |
-| [Mistic：アクセスブローカー向けツールの進化を示す新たなマルウェア](https://blog.polyswarm.io/mistic-new-malware-may-signal-evolution-in-access-broker-tooling) | 28.0 | 20.0 | 42.0 |
-| [米国、SignalやWhatsAppを標的としたロシアのサイバー攻撃キャンペーンに1,000万ドルの報奨金を提示](https://therecord.media/10million-reward-us-russian-hackers-unc4221-unc5792) | 28.0 | 20.0 | 42.0 |
-| [Mustang Panda、インド政府機関への攻撃でZoho WorkDriveをコマンドチャネルに悪用](https://thehackernews.com/2026/06/mustang-panda-uses-zoho-workdrive-as.html) | 28.0 | 20.0 | 42.0 |
-| [119個のEdge拡張機能が便利なツールを装い、実際にはマルウェアをダウンロードしていた](https://www.malwarebytes.com/blog/news/2026/06/119-edge-extensions-promised-useful-tools-instead-downloaded-malware) | 28.0 | 20.0 | 42.0 |
-| [Telegramを利用したMillenium RATキャンペーンで6万台のデバイスが感染](https://www.infosecurity-magazine.com/news/millenium-rat-telegram-60000/) | 28.0 | 20.0 | 42.0 |
-| [なぜ耐量子暗号は認証情報から始まるのか](https://thehackernews.com/2026/06/why-post-quantum-cryptography-starts.html) | 28.0 | 20.0 | 42.0 |
-| [Gamaredon、Ukraineへの攻撃を新たなマルウェアとクラウドサービス悪用で拡大](https://thehackernews.com/2026/06/gamaredon-expands-ukraine-attacks-with.html) | 28.0 | 20.0 | 42.0 |
-| [Microsoft、画像やフォントにマルウェアを隠した119件のEdge拡張機能を削除](https://thehackernews.com/2026/06/microsoft-removes-119-edge-extensions.html) | 28.0 | 20.0 | 42.0 |
-| [神話から現実へ：2026年のペネトレーションテスト実態レポートが示すプログラム的防御の必要性](https://www.cybersecuritydive.com/spons/from-mythos-to-reality-why-the-2026-state-of-pentesting-report-proves-the/823726/) | 27.0 | 20.0 | 43.0 |
-| [Chromium拡張機能がAI関連のブランディングを使ってブラウザ検索をリダイレクト](https://www.microsoft.com/en-us/security/blog/2026/06/29/chromium-extension-uses-airelated-branding-redirect-browser-search/) | 27.0 | 20.0 | 42.0 |
-| [リコーとライズ・コンサルティング・グループが新会社、AI活用を伴走支援](https://xtech.nikkei.com/atcl/nxt/news/24/03278/) | 26.0 | 20.0 | 42.0 |
-| [見た目は無害なリポジトリを悪用して開発者端末を乗っ取る新たなClaude Code攻撃を研究者が実証](https://www.securityweek.com/new-attack-abuses-claude-code-and-harmless-looking-repositories-to-hijack-developer-machines/) | 25.0 | 45.0 | 42.0 |
-| [WordPressプラグイン・テーマの脆弱性最新情報 第31回 WordPress脆弱性16件、UpdraftPlus PremiumのRCEに注意【6月11日～6月17日】](https://news.mynavi.jp/techplus/article/wordpressvulnerability-31/) | 25.0 | 38.0 | 42.0 |
-| [Claude Fable 5とAI活用型サードパーティリスクの新たな現実](https://www.bitsight.com/de/blog/claude-fable-5-und-die-neue-realitaet-von-ki-gestuetztem-drittparteirisiko) | 25.0 | 20.0 | 42.0 |
-| [OpenAI、GPT-5.6 Solサイバーセキュリティモデルを公開し、早期アクセスを制限](https://www.infosecurity-magazine.com/news/openai-gpt-5-6-sol-limited-preview/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIが政府の要請を受けて新AIモデルの提供を自主的に制限](https://www.cybersecuritydive.com/news/openai-model-government-limit-request/823966/) | 25.0 | 20.0 | 42.0 |
-| [Straiker、AIセキュリティプラットフォーム向けに6400万ドルを調達](https://www.securityweek.com/straiker-raises-64-million-for-ai-security-platform/) | 25.0 | 20.0 | 42.0 |
-| [Agentic AIはアイデンティティに問題を抱えており、攻撃者はそれを知っている](https://www.bleepingcomputer.com/news/security/agentic-ai-has-an-identity-problem-and-attackers-know-it/) | 25.0 | 20.0 | 42.0 |
-| [AIは脆弱性の発見に優れるが、人間の愚かさには勝てない](https://www.theregister.com/security/2026/06/29/ai-may-be-good-at-finding-security-vulnerabilities-but-it-cant-beat-human-stupidity/5263262) | 25.0 | 20.0 | 42.0 |
-| [PrivacyHawk EnterpriseでシャドーITを発見し、第三者リスクを最小化する方法](https://www.helpnetsecurity.com/2026/06/29/privacyhawk-enterprise/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIとAnthropic、新AIモデルをトランプ承認済み顧客に限定しサイバーセキュリティ審査を実施](https://www.securityweek.com/openai-and-anthropic-limit-new-ai-models-to-trump-approved-customers-during-cybersecurity-review/) | 25.0 | 20.0 | 42.0 |
-| [メルアカに不正アクセス、個人情報流出の可能性 - オークション事業者](https://www.security-next.com/186446) | 22.0 | 20.0 | 42.0 |
-| [CISOsに本当に求められるポスト量子時代の大統領令対応](https://cyberscoop.com/post-quantum-cryptography-readiness-ciso-deadlines-op-ed/) | 20.0 | 20.0 | 48.0 |
-| [悪意のあるPerplexity Chrome拡張機能が検索内容とアドレスバー入力を盗み見](https://thehackernews.com/2026/06/malicious-perplexity-chrome-extension.html) | 20.0 | 20.0 | 42.0 |
-| [WhatsApp、電話番号を隠せるユーザー名機能を導入](https://www.bleepingcomputer.com/news/security/whatsapp-rolls-out-usernames-to-help-users-hide-their-phone-number/) | 20.0 | 20.0 | 42.0 |
-| [最高裁、選挙日後に到着する郵便投票を承認](https://cyberscoop.com/supreme-court-rules-legal-mail-in-ballots-after-election-day/) | 20.0 | 20.0 | 42.0 |
-| [Chatrie判決でテック企業のプライバシーに大きな追い風、最高裁が判断](https://cyberscoop.com/supreme-court-geofence-warrant-ruling-phone-privacy-chatrie/) | 20.0 | 20.0 | 42.0 |
-| [Advisoryデータベースの内部と、脆弱性件数が記録を更新すると何が起こるか](https://github.blog/security/supply-chain-security/inside-the-advisory-database-and-what-happens-when-vulnerability-volume-breaks-records/) | 20.0 | 20.0 | 42.0 |
-| [WhatsApp、電話番号のプライバシー強化に向けてユーザー名機能を段階的に展開](https://www.securityweek.com/whatsapp-rolling-out-username-feature-to-bolster-phone-number-privacy/) | 20.0 | 20.0 | 42.0 |
-| [保険業界団体がOracle PeopleSoft侵害データの投稿を確認](https://www.cybersecuritydive.com/news/insurance-body-hackers-oracle-peoplesoft-breach-data/823978/) | 20.0 | 20.0 | 42.0 |
-| [米国、WhatsAppとSignalの利用者を標的にするハッカーに1000万ドルの報奨金を提供](https://www.bleepingcomputer.com/news/security/us-offers-10-million-for-hackers-targeting-whatsapp-signal-users/) | 20.0 | 20.0 | 42.0 |
-| [この賃金格差はプログラムされている（Lock and Code S07E13）](https://www.malwarebytes.com/blog/podcast/2026/06/this-pay-gap-is-programmed-lock-and-code-s07e13) | 20.0 | 20.0 | 42.0 |
-| [攻撃に悪用されるOracle E-Businessの重大な脆弱性](https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/) | 20.0 | 20.0 | 42.0 |
-| [NAICがOracle PeopleSoft侵害の標的に](https://www.securityweek.com/insurance-regulators-group-naic-hit-in-oracle-peoplesoft-hack/) | 20.0 | 20.0 | 42.0 |
-| [ウクライナ、サイバー犯罪グループから押収した暗号資産で戦時国債を購入へ](https://therecord.media/ukraine-uses-seized-crypto-cybercrime-for-war-bonds) | 20.0 | 20.0 | 42.0 |
-| [ハイブリッドクラウドチームのための統合セキュリティ運用モデルによる可視性ギャップの解消](https://www.wiz.io/blog/sensor-wls-for-on-prem) | 20.0 | 20.0 | 42.0 |
-| [23万6000件のDCloud Uni-Appサイトが暗号資産詐欺、フィッシング、ウォレットドレイナーに悪用される](https://thehackernews.com/2026/06/236000-dcloud-uni-app-sites-used-in.html) | 20.0 | 20.0 | 42.0 |
-| [Amazon Q VS拡張機能の欠陥によりクラウド認証情報が窃取される](https://www.darkreading.com/cloud-security/amazon-q-vs-extension-flaw-leads-cloud-credential-theft) | 20.0 | 20.0 | 42.0 |
-| [Web PKIの透明性と保証の向上：Mozillaルートストアポリシーv3.1](https://blog.mozilla.org/security/2026/06/29/improving-transparency-and-assurance-in-the-web-pki-mozilla-root-store-policy-v3-1/) | 20.0 | 20.0 | 42.0 |
-| [ハッキンググループが交通ネットワークを標的に ネットワーク・レールがサイバー脅威の猛攻と対峙](https://www.itpro.com/security/cyber-attacks/hacking-groups-have-the-transport-network-firmly-in-their-sights-network-rail-is-battling-a-torrent-of-cyber-threats) | 20.0 | 20.0 | 42.0 |
-| [米国当局がFIFAワールドカップの違法配信ドメイン数百件を差し押さえ](https://www.bleepingcomputer.com/news/security/us-seizes-hundreds-of-fifa-world-cup-illegal-streaming-domains/) | 20.0 | 20.0 | 42.0 |
-| [DirtyCloneによるLinuxカーネルの脆弱性がroot権限奪取につながる](https://www.securityweek.com/dirtyclone-linux-kernel-vulnerability-leads-to-root-access/) | 20.0 | 20.0 | 42.0 |
-| [Nissan、Oracle PeopleSoftへの侵入で給与記録とSSNが流出した可能性を公表](https://www.theregister.com/security/2026/06/29/nissan-says-oracle-peoplesoft-break-in-may-have-spilled-payroll-records-ssns/5263534) | 20.0 | 20.0 | 42.0 |
-| [境界のない攻撃対象領域：公共部門のハイブリッド環境を守る](https://www.wiz.io/blog/wiz-xm-securing-public-sector-hybrid-environments) | 20.0 | 20.0 | 42.0 |
-| [Red Agentの視点：航空会社のGraphQL APIにおけるBroken Object-Level Authorizationの悪用](https://www.wiz.io/blog/red-agent-pov-bola) | 20.0 | 20.0 | 42.0 |
-| [米国、ロシアの国家関与ハッカーに1000万ドルの報奨金を提示、メッセージングアプリ攻撃は進化](https://www.securityweek.com/us-offers-10-million-bounty-for-russian-state-hackers-as-messaging-app-attacks-evolve/) | 20.0 | 20.0 | 42.0 |
-| [GPT-5.6のサイバーセキュリティ性能が向上](https://www.helpnetsecurity.com/2026/06/29/openai-gpt-5-6-models-preview/) | 20.0 | 20.0 | 42.0 |
-| [FBIが警告、ロシア諜報機関によるスピアフィッシング攻撃](https://www.infosecurity-magazine.com/news/fbi-alarm-russian-intelligence/) | 20.0 | 20.0 | 42.0 |
+| [陸自USBからマルウェア検知 防衛省の運用ルール未徹底が明らかに](https://atmarkit.itmedia.co.jp/ait/articles/2606/30/news061.html) | 29.0 | 20.0 | 42.0 |
+| [kintoneをDifyにつなげてみる CData Connect AIならノーコードでOK](https://ascii.jp/elem/000/004/414/4414472/?rss=) | 26.0 | 20.0 | 42.0 |
+| [「Claude Mythos」が突きつける、IT業界の転換点 われわれが置かれている状況を「姉歯事件」から読み解く](https://www.itmedia.co.jp/enterprise/articles/2606/30/news019.html) | 26.0 | 20.0 | 42.0 |
+| [AIエージェントのセキュリティー設計](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/061700249/061700001/) | 26.0 | 20.0 | 42.0 |
+| [第3回：AI導入の成否を決める「接続」--アーキテクチャー原則とは](https://japan.zdnet.com/article/35249343/) | 26.0 | 20.0 | 42.0 |
+| [セキュリティ研究者がプロンプトインジェクションでLLMをだましてコカインの作り方を引き出す](https://www.theregister.com/ai-and-ml/2026/06/30/security-researchers-tricked-llms-into-giving-them-cocaine-recipes-by-abusing-role-models-for-prompt-injection/5264115) | 25.0 | 20.0 | 42.0 |
+| [Djinn StealerがクラウドとAIの認証情報を標的にする](https://www.darkreading.com/cyberattacks-data-breaches/djinn-stealer-targets-cloud-ai-credentials) | 25.0 | 20.0 | 42.0 |
+| [Warner法案、信頼できるAIエージェントの連邦認定リストを創設へ](https://cyberscoop.com/ai-agent-act-senate-draft-bill-mark-warner/) | 25.0 | 20.0 | 42.0 |
+| [メッセージアプリが標的、要人狙う露フィッシング - 米当局](https://www.security-next.com/186560) | 22.0 | 20.0 | 42.0 |
+| [AIによる攻撃は静的制御が適応できない速さで進化（「2026年Webアプリケーションセキュリティレポート」より）](https://ascii.jp/elem/000/004/414/4414175/?rss=) | 21.0 | 20.0 | 42.0 |
+| [タイ支社のサイバーリスクにどう備えるか？ 日本企業向け2ヶ国語対応ウェビナーをHENNGEが 7/15 開催](https://scan.netsecurity.ne.jp/article/2026/06/30/55599.html) | 21.0 | 20.0 | 42.0 |
+| [アクサ生命の元営業社員（故人）が金銭詐取の可能性、偽造保険証券を顧客に手渡す](https://scan.netsecurity.ne.jp/article/2026/06/30/55598.html) | 21.0 | 20.0 | 42.0 |
+| [「村瀬鞄行 オンラインショップ」に不正アクセス、個人情報の一部流出を懸念](https://scan.netsecurity.ne.jp/article/2026/06/30/55597.html) | 21.0 | 20.0 | 42.0 |
+| [廃棄したPC端末が一部データが残存する状態で流通、第三者が取得し発覚](https://scan.netsecurity.ne.jp/article/2026/06/30/55596.html) | 21.0 | 20.0 | 42.0 |
+| [悪質 EC サイトへの流入、最多は今も「ネット検索」JC3 報告](https://scan.netsecurity.ne.jp/article/2026/06/30/55595.html) | 21.0 | 20.0 | 42.0 |
+| [一律期限の限界 事例から考える脆弱性対応の優先順位](https://scan.netsecurity.ne.jp/article/2026/06/30/55594.html) | 21.0 | 20.0 | 42.0 |
+| [学校教育機関の個人情報漏えい、令和 7 年度は 190件 のべ 31万人超に](https://scan.netsecurity.ne.jp/article/2026/06/30/55593.html) | 21.0 | 20.0 | 42.0 |
+| [「防御に回るころには、すでに手遅れ」“Mythos以後”のサイバー脅威のリアルにどう立ち向かうか](https://ascii.jp/elem/000/004/414/4414512/?rss=) | 21.0 | 20.0 | 42.0 |
+| [日経225企業の96％が情報漏えいを経験 最も漏えい率の高い業界は](https://www.itmedia.co.jp/enterprise/articles/2606/30/news043.html) | 21.0 | 20.0 | 42.0 |
+| [CalendlyもGoogleも「正規」なのに危険 Microsoftが暴いた多段階侵入キャンペーンの全貌](https://atmarkit.itmedia.co.jp/ait/articles/2606/30/news066.html) | 21.0 | 20.0 | 42.0 |
+| [毎年実行すべきスマホのセキュリティチェック--10のステップとその理由](https://japan.zdnet.com/article/35249361/) | 21.0 | 20.0 | 42.0 |
+| [機械より人をだます方が早い 巧妙化する「二段階フィッシング」にご注意](https://www.itmedia.co.jp/enterprise/articles/2606/30/news037.html) | 21.0 | 20.0 | 42.0 |
+| [Claude Fable 5とAI支援型サードパーティリスクの新たな現実](https://www.bitsight.com/de/blog/claude-fable-5-und-die-neue-realitaet-von-ki-gestuetztem-drittparteirisiko) | 20.0 | 20.0 | 42.0 |
+| [ロシア、ウクライナ侵攻4年で対米・欧州向け影響工作を再強化](https://www.theregister.com/security/2026/06/29/four-years-into-ukraine-invasion-russia-turns-influence-ops-back-to-us-and-europe/5264011) | 20.0 | 20.0 | 42.0 |
+| [未納料金の支払いを装う「PayPay送金詐欺」が2月の22倍以上に、日常的に使われる支払い手段を悪用する狙いか トビラシステムズ「特殊詐欺・フィッシング詐欺に関するレポート（2026年5月）」](https://internet.watch.impress.co.jp/docs/news/2120860.html) | 20.0 | 20.0 | 42.0 |
+| [インド政府システムにおける脆弱性で個人データが漏えいリスクにさらされる](https://www.darkreading.com/vulnerabilities-threats/vulnerabilities-private-data-indian-government-systems) | 20.0 | 20.0 | 42.0 |
 
 ---
 
