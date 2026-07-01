@@ -1,20 +1,17 @@
-# 📡 サイレーダー 2026-07-01 11:00 JST
+# 📡 サイレーダー 2026-07-01 17:00 JST
 
-このレポートは、2026-07-01 05:00 JST〜2026-07-01 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
-
-
+このレポートは、2026-07-01 11:00 JST〜2026-07-01 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 72
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 49
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 46
+- [低温だが記録しておくトピック](#low-record-topics): 24
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Citrix patches a new NetScaler flaw with echoes of CitrixBleed](#topic-20288) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [「Adobe Campaign Classic」に悪用リスクが高い脆弱性](#topic-20243) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Why Ask Credentials If There Are Secret Codes?, (Wed, Jul 1st)](#topic-20323) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -22,85 +19,16 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-20288"></a>
+<a id="topic-20323"></a>
 
-### 1. Citrix patches a new NetScaler flaw with echoes of CitrixBleed
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-CitrixはNetScalerに関する6件の問題を含む修正情報を公表し、その中でも過去に悪用された「CitrixBleed」に似た挙動があるとされる高深刻度の不具合が注目されています。
-材料上ではCVE-2026-8451とCVE-2026-3055が関連付けられていますが、詳細な影響範囲は公表情報を踏まえて慎重に確認する必要があります。
-NetScalerは境界機器として利用されることが多く、脆弱性があると認証情報やセッションに関わるリスクが広がりやすいためです。
-過去の類似事例との比較で早期対応が求められています。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 攻撃・悪用観測シグナル
-
-- シグナル種別: 悪用観測あり。
-- 公開PoC/Exploitコード: 未確認。
-- 確認方針: 公開PoCの有無とは分けて、悪用観測、IoC、緩和策、ベンダー公式情報を確認します。
-
-#### 担当者向け確認ポイント
-
-- 該当するNetScaler製品とバージョンを確認し、Citrixの修正適用状況を点検する。
-- インターネット公開面の管理画面や不要な露出がないかを見直し、アクセス制御を強化する。
-- 認証関連の異常、想定外のセッション挙動、ログイン失敗の増加などを監視し、必要に応じてセッション無効化や資格情報の再確認を検討する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> |
-|---|---|---|---:|
-| 脆弱性 | CVE-2026-3055 | 関連CVE | 1.00 |
-| 脆弱性 | CVE-2026-8451 | 関連CVE | 1.00 |
-| ベンダー | Citrix | 言及あり | 0.80 |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Citrix patches a new NetScaler flaw with echoes of CitrixBleed](https://cyberscoop.com/citrix-netscaler-flaw-cve-2026-8451-citrixbleed/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 高。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-20243"></a>
-
-### 2. 「Adobe Campaign Classic」に悪用リスクが高い脆弱性
+### 1. Why Ask Credentials If There Are Secret Codes?, (Wed, Jul 1st)
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
 | <nobr>温⁠度⁠感</nobr> | 30.0 |
@@ -109,39 +37,41 @@ NetScalerは境界機器として利用されることが多く、脆弱性が�
 
 #### 概要
 
-Adobe Campaign Classic に、悪用リスクが高い脆弱性があることが公表されました。Adobe は利用者に対し、早急な対策を取るよう呼びかけています。
-対象製品を利用している組織では、脆弱性が放置されると不正アクセスや情報漏えいなどのリスクが高まる可能性があります。
-現時点では詳細な悪用状況は断定できませんが、優先度の高い確認対象といえます。
+MetaMaskを狙うフィッシングメールが観測されたという内容で、暗号資産ウォレット利用者を標的にした注意喚起です。
+MetaMaskはブラウザ拡張やモバイルアプリとして広く使われており、過去にも関連するキャンペーンが言及されています。
+暗号資産ウォレットは一度被害が出ると資産流出につながりやすく、利用者への影響が大きい点が注目されます。
+フィッシングは正規サービスを装って認証情報をだまし取るため、利用者と運用側の両方で警戒が必要です。
 
 #### 温度感の理由
 
 ##### 温度感
 - 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
 
 ##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- Adobe の案内を確認し、対象バージョンかどうかを早急に点検する。
-- 影響を受ける環境では、修正適用や回避策の実施を優先する。
-- 外部公開されている関連システムがあれば、アクセス制御と監視を強化する。
+- MetaMaskや暗号資産関連を装うメール・通知の真偽を慎重に確認する。
+- 利用者に対し、秘密情報や復旧フレーズの入力を求める誘導への注意喚起を行う。
+- 不審な送信元や類似ドメイン、文面の不自然さを検知・報告できる体制を整える。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [「Adobe Campaign Classic」に悪用リスクが高い脆弱性](https://www.security-next.com/186621) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Why Ask Credentials If There Are Secret Codes?, (Wed, Jul 1st)](https://isc.sans.edu/diary/rss/33118) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
+- 技術・開発者系ソース観測: 観測あり。
 
 ---
 
@@ -160,52 +90,30 @@ Adobe Campaign Classic に、悪用リスクが高い脆弱性があることが
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [世界の被害件数は減少傾向もまだ高水準 「Coinbase Cartel」の攻撃が活発に](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041600214/061700017/) | 29.0 | 30.0 | 42.0 |
-| [悪意のあるPyPIパッケージがTelegramボットサーバーを乗っ取る](https://www.bleepingcomputer.com/news/security/malicious-pypi-packages-give-hackers-control-of-telegram-bot-servers/) | 28.0 | 40.0 | 42.0 |
-| [Anthropic、「Claude Sonnet 5」をリリース--最も自律的なモデル](https://japan.zdnet.com/article/35249796/) | 26.0 | 20.0 | 42.0 |
-| [プルーフポイントが OpenAI Daybreak Cyber Partner Program に参画](https://scan.netsecurity.ne.jp/article/2026/07/01/55601.html) | 26.0 | 20.0 | 42.0 |
-| [AIで“ゲームキャラの出産二次創作”を何千回と生成する人も……ChatGPTの会話57万件から見えたヘビーな利用実態](https://www.itmedia.co.jp/news/articles/2607/01/news027.html) | 26.0 | 20.0 | 42.0 |
-| [Google、高速で低価格な画像生成AI「Nano Banana 2 Lite」と動画生成モデル「Gemini Omni Flash」公開](https://www.itmedia.co.jp/news/articles/2607/01/news060.html) | 26.0 | 20.0 | 42.0 |
-| [「大企業を恐れず、機会にフォーカスせよ」Okta CEOが説くAI時代の勝機とセキュリティ](https://www.itmedia.co.jp/enterprise/articles/2607/01/news018.html) | 26.0 | 20.0 | 42.0 |
-| [生成AIの請求書、人件費と並べる時代へ 国内5社のAI責任者が語る「トークンマネジメント」の現在地](https://www.itmedia.co.jp/news/articles/2606/30/news027.html) | 26.0 | 20.0 | 42.0 |
-| [Anthropic、「Claude Sonnet 5」公開──停止中のミュトスとは別にOpus級の性能を低価格で](https://www.itmedia.co.jp/news/articles/2607/01/news057.html) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントで企業変革を成功させる12のルール](https://japan.zdnet.com/article/35249445/) | 26.0 | 20.0 | 42.0 |
-| [Anthropic、Claude Fableへのアクセスを水曜に復旧へ](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-to-restore-claude-fable-access-on-wednesday/) | 25.0 | 20.0 | 42.0 |
-| [Anthropic、Sonnet 5を提供開始　Opus 4.8に迫る性能を低価格で実現](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-rolls-out-sonnet-5-with-near-opus-48-performance-at-a-lower-price/) | 25.0 | 20.0 | 42.0 |
-| [LINEヤフーのAIエージェント「Agent i」に、投資判断をサポートする「ファイナンス」エージェントを追加](https://internet.watch.impress.co.jp/docs/news/2121287.html) | 25.0 | 20.0 | 42.0 |
-| [ProtonのLumo 2.0提案：データ収集に頼らないフロンティアAI](https://www.helpnetsecurity.com/2026/07/01/proton-lumo-2-0-ai/) | 25.0 | 20.0 | 42.0 |
-| [AIに「公式」と認識される企業サイトになれる？ 「ブランドTLD」にはAIOの期待も “信頼の証明”としてブランドTLDが担う役割を考える＜前編＞](https://internet.watch.impress.co.jp/docs/special/2119357.html) | 25.0 | 20.0 | 42.0 |
-| [New BioShocking攻撃がAIブラウザを操作し、データを窃取](https://www.bleepingcomputer.com/news/security/new-bioshocking-attack-manipulates-ai-browser-into-data-theft/) | 25.0 | 20.0 | 42.0 |
-| [偽のバグ報告でAIコーディングエージェントを大規模に乗っ取る](https://www.darkreading.com/cyber-risk/fake-bug-report-hijacks-ai-coding-agents) | 25.0 | 20.0 | 42.0 |
-| [公開されたAIエンドポイントを乗っ取り攻撃に悪用する攻撃者](https://www.darkreading.com/cloud-security/attackers-hijack-exposed-ai-endpoints-power-offensive-ops) | 25.0 | 20.0 | 42.0 |
-| [Linuxカーネル2.6～7.1系に重大な脆弱性 PoC公開で高まるroot奪取リスク](https://atmarkit.itmedia.co.jp/ait/articles/2607/01/news041.html) | 23.0 | 20.0 | 42.0 |
-| [「NetScaler ADC/Gateway」に複数脆弱性 - アップデートで修正](https://www.security-next.com/186634) | 22.0 | 20.0 | 42.0 |
-| [「iOS/iPadOS 26.5.2」を公開、脆弱性37件を修正](https://www.security-next.com/186631) | 22.0 | 20.0 | 42.0 |
-| [「Chrome」にアップデート - 382件の脆弱性に対応](https://www.security-next.com/186626) | 22.0 | 20.0 | 42.0 |
-| [「Adobe ColdFusion」に複数の深刻な脆弱性 - 早急に対応を](https://www.security-next.com/186615) | 22.0 | 20.0 | 42.0 |
-| [HENNGE、「PPAP」の利用比率は直近2年で半減--例外としての併用が残る](https://japan.zdnet.com/article/35249816/) | 21.0 | 20.0 | 42.0 |
-| [アップル、29件の脆弱性を前倒しで修正--その理由とは](https://japan.zdnet.com/article/35249799/) | 21.0 | 20.0 | 42.0 |
-| [「レガシーで魅力を感じない領域。のはずだった」Tenable 阿部淳平が語るエクスポージャーマネジメント](https://scan.netsecurity.ne.jp/article/2026/07/01/55611.html) | 21.0 | 20.0 | 42.0 |
-| [アフラック生命保険に不正アクセス、約438万人の顧客情報が漏えい](https://scan.netsecurity.ne.jp/article/2026/07/01/55610.html) | 21.0 | 20.0 | 42.0 |
-| [2りんかんイエローハットに不正アクセス、310万名分の個人情報が漏えい](https://scan.netsecurity.ne.jp/article/2026/07/01/55609.html) | 21.0 | 20.0 | 42.0 |
-| [不正アクセス障害対応費3,034万円に対し保険金3,540万円を受給 特別利益計上](https://scan.netsecurity.ne.jp/article/2026/07/01/55608.html) | 21.0 | 20.0 | 42.0 |
-| [大阪有機化学工業ウェブサイトに不正アクセス、アクセスしにくい事象が発生](https://scan.netsecurity.ne.jp/article/2026/07/01/55607.html) | 21.0 | 20.0 | 42.0 |
-| [権威DNSサーバNSDに複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/01/55606.html) | 21.0 | 20.0 | 42.0 |
-| [Fluentdに複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/01/55605.html) | 21.0 | 20.0 | 42.0 |
-| [Windows 10 サポート終了、コンシューマー向けESUを2027年10月12日まで提供](https://scan.netsecurity.ne.jp/article/2026/07/01/55604.html) | 21.0 | 20.0 | 42.0 |
-| [ExpressUpdate Agent for Windows に名前付きパイプに対するアクセス制御不備の脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/01/55603.html) | 21.0 | 20.0 | 42.0 |
-| [「OCNメール」BIMI 対応](https://scan.netsecurity.ne.jp/article/2026/07/01/55602.html) | 21.0 | 20.0 | 42.0 |
-| [HENNGE One、ID統合管理サービス「KDDI Business ID」と SSO 連携](https://scan.netsecurity.ne.jp/article/2026/07/01/55600.html) | 21.0 | 20.0 | 42.0 |
-| [「Excelを開くだけ」でコード実行 Officeの脆弱性を悪用する攻撃手口を解説](https://atmarkit.itmedia.co.jp/ait/articles/2607/01/news046.html) | 21.0 | 20.0 | 42.0 |
-| [DDoS攻撃対策やエッジAI、PQC 「仲介」機能を新たな局面にフル活用](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/061600248/061600003/) | 21.0 | 20.0 | 42.0 |
-| [具体的な演習手法と今後の展望](https://japan.zdnet.com/article/35249506/) | 21.0 | 20.0 | 42.0 |
-| [Weekly Report: Google Chromeに複数の脆弱性](https://www.jpcert.or.jp/wr/2026/wr260701.html) | 20.0 | 20.0 | 42.0 |
-| [TP-Link、製品知識・提案スキルの向上を目的とした「VIGI Expert認定プログラム」、販売店・代理店向けに開始](https://internet.watch.impress.co.jp/docs/news/2121204.html) | 20.0 | 20.0 | 42.0 |
-| [Microsoft、リスク拡大を受け量子耐性ロードマップを加速](https://www.bleepingcomputer.com/news/microsoft/microsoft-accelerates-quantum-safe-roadmap-as-risks-grow/) | 20.0 | 20.0 | 42.0 |
-| [ベネズエラ地震の被災に便乗して急増する詐欺行為](https://www.bitdefender.com/en-us/blog/hotforsecurity/scammers-cash-in-venezuela-earthquake) | 20.0 | 20.0 | 42.0 |
-| [Trump政権の予算責任者Russell Vought、CISAの人員再配置に前向き](https://cyberscoop.com/russell-vought-cisa-staffing-trump-budget-cuts/) | 20.0 | 20.0 | 42.0 |
-| [「高収入・低労力」をうたうAmazonの求人テキストに注意](https://www.malwarebytes.com/blog/scams/2026/06/watch-out-for-high-paying-low-effort-amazon-job-texts) | 20.0 | 20.0 | 42.0 |
-| [Claude Fable 5とAI支援の第三者リスクの新たな現実](https://www.bitsight.com/de/blog/claude-fable-5-und-die-neue-realitaet-von-ki-gestuetztem-drittparteirisiko) | 10.0 | 20.0 | 42.0 |
+| [ランサムで売上95％減──アスクルの“システム再構築”支えた生成AI活用 復旧までの3.5カ月、社長が語る舞台裏](https://www.itmedia.co.jp/news/articles/2607/01/news098.html) | 29.0 | 30.0 | 42.0 |
+| [Anthropicが科学者向けAIアプリ「Claude Science」を公開、文献調査や図表作成を単一アプリで実行可能](https://gigazine.net/news/20260701-anthropic-claude-science/) | 29.0 | 20.0 | 42.0 |
+| [Adobe、ColdFusionとCampaignの最大深刻度の脆弱性7件を修正](https://www.bleepingcomputer.com/news/security/adobe-patches-seven-max-severity-coldfusion-campaign-flaws/) | 28.0 | 20.0 | 42.0 |
+| [Researcherが3,000件のLive ClickFixペイロードを分析し、API駆動型マルウェア配信の実態を明らかにする](https://thehackernews.com/2026/07/researcher-analyzes-3000-live-clickfix.html) | 28.0 | 20.0 | 42.0 |
+| [Microsoft Teams会議への不要なボットの参加を防止へ](https://www.helpnetsecurity.com/2026/07/01/microsoft-teams-bot-detection-and-protection/) | 28.0 | 20.0 | 42.0 |
+| [Protonがプライバシー重視チャットAI「Lumo 2.0」を発表、Claude Sonnet 4.6を超える性能](https://gigazine.net/news/20260701-proton-lumo-2-0/) | 27.0 | 20.0 | 42.0 |
+| [Googleがより高速で安価な画像生成モデル「Nano Banana 2 Lite」と動画生成モデル「Gemini Omni Flash」を発表](https://gigazine.net/news/20260701-google-nano-banana-2-lite-gemini-omni-flash/) | 27.0 | 20.0 | 42.0 |
+| [「Claude Sonnet 5」が登場、Opus 4.8に近い性能で安価＆無料プランでも使用可能](https://gigazine.net/news/20260701-claude-sonnet-5/) | 27.0 | 20.0 | 42.0 |
+| [ミクシィが動画生成AIのRunwayと戦略的パートナーシップを締結、すでにモンストの映像制作などでRunwayのAIを使用](https://gigazine.net/news/20260701-mixi-runway-strategic-partnership/) | 27.0 | 20.0 | 42.0 |
+| [パナソニック コネクト、金融商品を取引するAIエージェントの課題を共同で検討](https://japan.zdnet.com/article/35249802/) | 26.0 | 20.0 | 42.0 |
+| [米国の解除を受けAnthropicがClaude Fable 5を復旧](https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html) | 25.0 | 20.0 | 42.0 |
+| [AI生成コードのリスクがセキュリティ、法務、コンプライアンス部門に広がる](https://www.helpnetsecurity.com/2026/07/01/ai-generated-code-risks-security/) | 25.0 | 20.0 | 42.0 |
+| [NVIDIAのAIチップを使わずにGemini 3.1 Pro並みの性能を実現した1.6兆パラメーターの中国製AIモデル「LongCat-2.0」が登場](https://gigazine.net/news/20260701-longcat-2-0/) | 22.0 | 20.0 | 42.0 |
+| [Citrixがファイル読み取りとサービス妨害を可能にするNetScalerの6件の脆弱性を修正](https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html) | 20.0 | 28.0 | 50.0 |
+| [Apache Tomcatにおける複数の脆弱性（2026年6月29日）](https://jvn.jp/vu/JVNVU93304382/) | 20.0 | 28.0 | 50.0 |
+| [ファイナンシャルプランナーから学んだサイバーセキュリティ](https://www.helpnetsecurity.com/2026/07/01/raising-cybersecurity-awareness-for-non-experts/) | 20.0 | 20.0 | 42.0 |
+| [Google、Chromeの382件の脆弱性を修正](https://www.securityweek.com/google-patches-382-chrome-vulnerabilities/) | 20.0 | 20.0 | 42.0 |
+| [Nika: オープンソースのコード解析ツール](https://www.helpnetsecurity.com/2026/07/01/nika-open-source-code-analysis-tool/) | 20.0 | 20.0 | 42.0 |
+| [Azure CLIを悪用したパスワードスプレー攻撃、81万回超の試行で少なくとも78件のMicrosoftアカウントに命中](https://thehackernews.com/2026/07/azure-cli-password-spray-hits-at-least.html) | 20.0 | 20.0 | 42.0 |
+| [このスーパーコンピューターは、実行中のデータも暗号化する](https://www.helpnetsecurity.com/2026/07/01/confidential-computing-hpc-research/) | 20.0 | 20.0 | 42.0 |
+| [セイコーソリューションズ製SkyBridge MB-A100/MB-A110におけるOSコマンドインジェクションの脆弱性](https://jvn.jp/jp/JVN20721579/) | 20.0 | 20.0 | 42.0 |
+| [Google Chromeの複数の脆弱性により任意のコードが実行される可能性](https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-google-chrome-could-allow-for-arbitrary-code-execution_2026-064) | 20.0 | 20.0 | 42.0 |
+| [取締役会にERM予算を承認させるには、彼らの価値基準で語ることが重要です](https://www.helpnetsecurity.com/2026/07/01/erm-the-board-funds-video/) | 20.0 | 20.0 | 42.0 |
+| [Claude Fable 5とAI支援の第三者リスクにおける新たな現実](https://www.bitsight.com/de/blog/claude-fable-5-und-die-neue-realitaet-von-ki-gestuetztem-drittparteirisiko) | 10.0 | 20.0 | 42.0 |
 
 ---
 
