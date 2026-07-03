@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-07-03 11:00 JST
+# 📡 サイレーダー 2026-07-03 17:00 JST
 
-このレポートは、2026-07-03 05:00 JST〜2026-07-03 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-03 11:00 JST〜2026-07-03 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 54
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 39
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 29
+- [低温だが記録しておくトピック](#low-record-topics): 13
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [史上初の「エージェント型ランサムウェア」感染事例の報告](#topic-20748) | 30.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,60 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-20748"></a>
+
+### 1. 史上初の「エージェント型ランサムウェア」感染事例の報告
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+公開情報では、ランサムウェア攻撃の一連の動作を自動で進めるAIエージェントが確認されたと報告されています。
+侵入や破壊の途中で失敗した手順を見直し、再試行する様子も示唆されており、攻撃の自律化が話題になっています。
+人手に依存していた攻撃の一部が自動化されると、攻撃の継続性や適応性が高まりうるため注目されています。
+防御側にとっては、従来の手口前提の検知・封じ込めだけでは十分でない可能性があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・インシデント関連の公開情報として観測しています。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 異常な侵入試行や権限昇格の連鎖を、単発ではなく連続した挙動として監視する。
+- バックアップの隔離保管や復旧手順を再点検し、暗号化・破壊を前提にした復旧性を確認する。
+- EDRやID管理のアラート相関を見直し、短時間で繰り返される失敗試行や再試行を検知しやすくする。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [史上初の「エージェント型ランサムウェア」感染事例の報告](https://gigazine.net/news/20260703-ai-agent-ransomware/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,35 +89,19 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [「AI駆動型ソフトウェア開発の時代」にスタートアップのCognition AIは飛躍できるか](https://japan.zdnet.com/article/35249936/) | 26.0 | 20.0 | 42.0 |
-| [AI時代、攻撃者は「ID」を狙う 企業が見直すべきセキュリティの原則](https://news.mynavi.jp/techplus/article/20260703-4647298/) | 26.0 | 20.0 | 42.0 |
-| [サイバー犯罪者が犯行現場に残した「セルフィー」1,500 万枚を LLM 分析](https://scan.netsecurity.ne.jp/article/2026/07/03/55632.html) | 26.0 | 20.0 | 42.0 |
-| [AIで巧妙化するフィッシング 件数は20％減でも被害額は3倍](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100113/063000189/) | 26.0 | 20.0 | 42.0 |
-| [Claude Codeの"見えないシステムプロンプト改変"が物議 その目的とは？](https://atmarkit.itmedia.co.jp/ait/articles/2607/03/news033.html) | 26.0 | 20.0 | 42.0 |
-| [“開かずの基幹システム”、450人月→実質2カ月で解読 創業100年のカクヤス、生成AIで挑む「転生」](https://www.itmedia.co.jp/news/articles/2607/03/news050.html) | 26.0 | 20.0 | 42.0 |
-| [Claude Fable 5はサブスクリプションを恒久的に終了するわけではないとAnthropicが説明](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-isnt-permanently-leaving-subscriptions-anthropic-says/) | 25.0 | 20.0 | 42.0 |
-| [Claude Fableの再始動、性能低下にユーザー落胆](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-relaunch-disappoints-users-with-nerfed-performance/) | 25.0 | 20.0 | 42.0 |
-| [StartupがPalo Alto Networks傘下のKoi Securityを提訴、AIの幻覚を含む報告書が中国のスパイ活動との誤った関連付けをしたと主張](https://www.theregister.com/legal/2026/07/02/startup-sues-palo-alto-networks-koi-security-saying-an-ai-hallucinated-report-falsely-linked-it-to-chinese-espionage/5266201) | 25.0 | 20.0 | 42.0 |
-| [リコー製 Web Image Monitor を実装している複数のレーザープリンタおよび複合機（MFP）に反射型 XSS の脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/03/55624.html) | 22.0 | 26.0 | 42.0 |
-| [セイコーSOL製IoT向け一部ルータに脆弱性 - 修正予定なし](https://www.security-next.com/186747) | 22.0 | 20.0 | 42.0 |
-| [「NVIDIA Container Toolkit」に権限昇格の脆弱性 - 「GPU Operator」も影響](https://www.security-next.com/186740) | 22.0 | 20.0 | 42.0 |
-| [コンテナ管理ツール「Rancher」に脆弱性 - アップデートを公開](https://www.security-next.com/186734) | 22.0 | 20.0 | 42.0 |
-| [サイバー防御の未来を構築し勝ち取るには官民連携が重要 世界経済フォーラムの最新ガイダンスより](https://ascii.jp/elem/000/004/414/4414189/?rss=) | 21.0 | 20.0 | 42.0 |
-| [市の男性職員（40代）が住民記録システムを操作して元親族の個人情報を閲覧し懲戒処分に](https://scan.netsecurity.ne.jp/article/2026/07/03/55631.html) | 21.0 | 20.0 | 42.0 |
-| [現代仏壇に不正アクセス、親会社である株式会社はせがわが保有する個人情報には影響無し](https://scan.netsecurity.ne.jp/article/2026/07/03/55630.html) | 21.0 | 20.0 | 42.0 |
-| [保護者連絡アプリ「ミマモルメ」で個人情報を誤配信、教頭 データ誤認](https://scan.netsecurity.ne.jp/article/2026/07/03/55629.html) | 21.0 | 20.0 | 42.0 |
-| [メールサーバへ不正アクセス、佐渡トキファンクラブ会員4,111名のメールアドレスが漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/07/03/55628.html) | 21.0 | 20.0 | 42.0 |
-| [Apache Tomcat に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/03/55627.html) | 21.0 | 20.0 | 42.0 |
-| [セイコーソリューションズ製 SkyBridge MB-A100/MB-A110 に OSコマンドインジェクションの脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/03/55626.html) | 21.0 | 20.0 | 42.0 |
-| [PowerDNS Recursor に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/03/55625.html) | 21.0 | 20.0 | 42.0 |
-| [セキュリティインシデント体験ツール「ZANSIN」の構築方法について解説](https://scan.netsecurity.ne.jp/article/2026/07/03/55623.html) | 21.0 | 20.0 | 42.0 |
-| [日経225構成企業の217社で情報漏えいを確認](https://scan.netsecurity.ne.jp/article/2026/07/03/55622.html) | 21.0 | 20.0 | 42.0 |
-| [サイバーレジリエンスの実装戦略--技術アーキテクチャーとエンドポイント保護が生む事業価値](https://japan.zdnet.com/article/35249862/) | 21.0 | 20.0 | 42.0 |
-| [ClamAVの脆弱性がCisco製品に影響：2026年7月](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-clamav-88cFYyxR) | 20.0 | 28.0 | 50.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年07月02日）](https://jvn.jp/vu/JVNVU97594085/) | 20.0 | 20.0 | 42.0 |
-| [Googleからアカウント乗っ取りの警告を受けた開発者、にもかかわらず1万1000ドルを請求される](https://www.theregister.com/cyber-crime/2026/07/03/dev-says-google-warned-him-about-account-hijack-then-charged-him-11000-anyway/5266234) | 20.0 | 20.0 | 42.0 |
-| [オーストラリアではサイバー犯罪リスクが低下し、SMBへの圧力が高まる](https://www.darkreading.com/cybersecurity-analytics/aussies-face-reduced-cybercrime-risk-pressure-shifts-smbs) | 20.0 | 20.0 | 42.0 |
-| [英国の国家サイバー行動計画の開始、労働党指導部危機の中で延期](https://therecord.media/launch-of-uk-national-cyber-action-plan-delayed) | 20.0 | 20.0 | 42.0 |
+| [「AIエージェントの進歩は期待していたほど速くなかった」とMetaのマーク・ザッカーバーグCEOが語る](https://gigazine.net/news/20260703-meta-zuckerberg-ai-agent-tech-progressing-slower/) | 27.0 | 20.0 | 42.0 |
+| [AIがIoTを作り、運用する SORACOM Agentは総合格闘技だったIoTを変革するか？](https://ascii.jp/elem/000/004/416/4416184/?rss=) | 26.0 | 20.0 | 42.0 |
+| [Anthropic、Samsungと独自AIチップで協議か 報道受けNVIDIAなど半導体関連株が下落](https://www.itmedia.co.jp/news/articles/2607/03/news101.html) | 26.0 | 20.0 | 42.0 |
+| [「Claude」を活用した開発とセキュリティのセミナーを開催](https://japan.zdnet.com/article/35249986/) | 26.0 | 20.0 | 42.0 |
+| [防災メールサービスが迷惑メール送信に悪用 - 和歌山県](https://www.security-next.com/186707) | 22.0 | 20.0 | 42.0 |
+| [会合で患者の個人情報を示唆、職員を処分 - 佐賀県医療センター好生館](https://www.security-next.com/186646) | 22.0 | 20.0 | 42.0 |
+| [グループ会社に不正アクセス、業務関連情報が流出か - ABCテレビ](https://www.security-next.com/186702) | 22.0 | 20.0 | 42.0 |
+| [ログイン後に非対話型SSH攻撃が主流に](https://www.helpnetsecurity.com/2026/07/03/research-non-interactive-ssh-attacks/) | 20.0 | 20.0 | 42.0 |
+| [地政学的なサイバー脅威でHRがセキュリティの最前線に立つ](https://www.helpnetsecurity.com/2026/07/03/geopolitical-cyber-threats-video/) | 20.0 | 20.0 | 42.0 |
+| [スパイウェア監視担当者がスパイウェアに感染させられる](https://cyberscoop.com/pegasus-spyware-pega-committee-member-targeted/) | 20.0 | 20.0 | 42.0 |
+| [既知のサイバーリスクの優先順位付けに苦慮する組織](https://www.helpnetsecurity.com/2026/07/03/cyber-risk-exposure-report/) | 20.0 | 20.0 | 42.0 |
+| [Little Orbit製GamersFirst Anti-Cheatにおける複数のローカル特権昇格の脆弱性](https://jvn.jp/vu/JVNVU98406800/) | 20.0 | 20.0 | 42.0 |
+| [「怪しいメールを見破った人」がだまされる、社内注意喚起を装う「二段階式フィッシングメール」に注意！【読めば身に付くネットリテラシー】](https://internet.watch.impress.co.jp/docs/column/netliteracy/2117321.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
