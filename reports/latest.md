@@ -1,17 +1,15 @@
-# 📡 サイレーダー 2026-07-04 11:00 JST
+# 📡 サイレーダー 2026-07-04 17:00 JST
 
-このレポートは、2026-07-04 05:00 JST〜2026-07-04 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-04 11:00 JST〜2026-07-04 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 28
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 25
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 0
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Weekly Metasploit Update: Modules for SMB-to-Meterpreter, Peyara Remote Mouse RCE exploit, and more](#topic-20845) | 35.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -19,68 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-20845"></a>
-
-### 1. Weekly Metasploit Update: Modules for SMB-to-Meterpreter, Peyara Remote Mouse RCE exploit, and more
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>M⁠C⁠P</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 35.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Metasploitの週次更新で、Windows向けのSMBセッションをMeterpreterへ昇格させる機能や、Peyara Remote Mouse 1.0.1に対する認証不要のRCE用モジュールが追加されたとされています。
-あわせて、Linux向けの新しいペイロードや、MCPサーバーのHTTP通信に認証対応を入れる改善、いくつかの不具合修正も含まれています。
-広く使われる検証・開発基盤に新しい攻撃検証モジュールが追加されると、対象製品のリスク評価や防御側の確認項目に直結します。
-特に認証不要RCEとして案内されている項目は、当該製品の利用有無を早めに確認する材料になります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Peyara Remote Mouse 1.0.1の利用有無と公開範囲を確認し、必要に応じて更新や無効化を検討する。
-- Windows環境では、SMB経由の管理セッションや遠隔操作系の利用状況を点検し、権限分離と監査ログを見直す。
-- Metasploitや関連ツールを使う検証環境では、最新更新に含まれる機能追加・挙動変更が運用手順に影響しないか確認する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| マルウェア | Metasploit | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Weekly Metasploit Update: Modules for SMB-to-Meterpreter, Peyara Remote Mouse RC](https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-07-03-2026/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -92,13 +29,7 @@ Metasploitの週次更新で、Windows向けのSMBセッションをMeterpreter�
 
 ## ❄️ 低温だが記録しておくトピック
 
-音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
-重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
-
-| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
-|---|---:|---:|---:|
-| [Microsoft Defenderに保護回避の重大脆弱性、回避策なく修正プログラム開発中](https://news.mynavi.jp/techplus/article/20260704-4655713/) | 21.0 | 20.0 | 42.0 |
-| [数百万台の組み込み機器に搭載されたファイルシステムの未修正脆弱性が公開される](https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html) | 20.0 | 20.0 | 42.0 |
+今回は低温記録トピックはありません。
 
 ---
 
