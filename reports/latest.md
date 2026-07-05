@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-07-05 17:00 JST
+# 📡 サイレーダー 2026-07-06 05:00 JST
 
-このレポートは、2026-07-05 11:00 JST〜2026-07-05 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-05 17:00 JST〜2026-07-06 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 26
+- 観測トピック数: 28
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 3
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,7 +34,9 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Week in review: SimpleHelpの脆弱性が悪用され、Oracle EBS Paymentsの欠陥が攻撃対象に](https://www.helpnetsecurity.com/2026/07/05/week-in-review-simplehelp-vulnerability-exploited-oracle-ebs-payments-flaw-under-attack/) | 20.0 | 20.0 | 42.0 |
+| [無料でスマホ・デスクトップPC・ターミナルからありとあらゆるコーディングAIエージェントを一気にまとめて管理しコントロールする「Paseo」、セルフホスト可能でオープンソース](https://gigazine.net/news/20260705-paseo/) | 27.0 | 20.0 | 42.0 |
+| [MFAが任意の銀行では、安全な扉も口座も泥棒に狙われやすい状態にある](https://www.theregister.com/security/2026/07/05/mfa-optional-banks-leave-safe-doors-and-accounts-wide-open-for-thieves-to-pillage/5266161) | 20.0 | 20.0 | 42.0 |
+| [Flipper Zeroのファームウェア開発、コミュニティの支援で継続](https://www.bleepingcomputer.com/news/security/flipper-zero-firmware-development-continues-with-community-help/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
