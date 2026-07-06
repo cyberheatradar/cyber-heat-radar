@@ -1,17 +1,17 @@
-# 📡 サイレーダー 2026-07-06 11:00 JST
+# 📡 サイレーダー 2026-07-06 17:00 JST
 
-このレポートは、2026-07-06 05:00 JST〜2026-07-06 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-06 11:00 JST〜2026-07-06 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 50
+- 観測トピック数: 43
 - [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 24
+- [低温だが記録しておくトピック](#low-record-topics): 17
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [生成AIで履歴書も顔も偽装 北朝鮮ITワーカー、日本企業への潜入工作の実態](#topic-20959) | 34.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [SkillCloak Lets Malicious AI Agent Skills Evade Static Scanners with Self-Extracting Packing](#topic-20976) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,50 +19,52 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-20959"></a>
+<a id="topic-20976"></a>
 
-### 1. 生成AIで履歴書も顔も偽装 北朝鮮ITワーカー、日本企業への潜入工作の実態
+### 1. SkillCloak Lets Malicious AI Agent Skills Evade Static Scanners with Self-Extracting Packing
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 34.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
 | <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-韓国のセキュリティ企業S2Wの分析として、北朝鮮系のITワーカーが生成AIを使って履歴書や顔写真などを偽装し、日本企業への潜入を狙う実態が紹介されています。
-従来のランサムウェアや暗号資産窃取とは異なる、人的な侵入を通じた新たな脅威として位置づけられています。
-採用や業務委託の入口で本人確認が不十分だと、攻撃者に組織内部へ入られるリスクが高まります。技術的な防御だけでなく、採用・委託審査や継続的な本人確認の運用が重要になります。
+研究者による報告で、AIコーディングエージェント向けの不正な追加機能「skills」が、静的スキャナを回避しうることが示されました。
+公開情報によれば、いくつかの単純な変更でも機能を保ったまま検知をすり抜ける例があり、最も強い手法は試したスキャナの多くで高い回避率を示したとされています。
+AI開発支援ツールの利用が広がる中で、拡張機能や追加スキルの安全確認が難しいことを示すため、供給網や開発環境の防御設計に影響します。
+静的解析だけに依存しない検査や、実行時の監視をどう組み合わせるかが重要になります。
 
 #### 温度感の理由
 
 ##### 温度感
 - AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
 
 ##### 実務影響
-- ランサムウェア文脈。
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 採用・委託時の本人確認を、書類だけでなく追加の検証を含めて見直す。
-- リモート前提の雇用・外部委託について、端末・アカウント付与前の審査手順を整備する。
-- 不自然なプロフィールや身元情報の食い違いを検知するため、採用部門とセキュリティ部門の連携を強化する。
+- AIエージェント向けの追加スキルや拡張機能は、導入前の静的検査だけでなく実行時の挙動確認も併用する。
+- 配布元や署名、変更履歴などの信頼性確認を強め、未審査のアドオンを安易に許可しない。
+- 社内でAI開発支援ツールを使う場合は、検知の限界を前提に、アクセス権限や実行環境の分離を見直す。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [生成AIで履歴書も顔も偽装　北朝鮮ITワーカー、日本企業への潜入工作の実態](https://atmarkit.itmedia.co.jp/ait/articles/2607/06/news022.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [SkillCloak Lets Malicious AI Agent Skills Evade Static Scanners with Self-Extrac](https://thehackernews.com/2026/07/new-skillcloak-technique-lets-malicious.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -88,30 +90,23 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [日本資産総研へランサムウェア攻撃、専門家調査で安全性を確認](https://scan.netsecurity.ne.jp/article/2026/07/06/55639.html) | 29.0 | 30.0 | 42.0 |
-| [「FortiOS」のLDAP認証バイパス脆弱性、仮想パッチが公開](https://www.security-next.com/186841) | 26.0 | 46.0 | 50.0 |
-| [ChatGPTからkintoneを操作 CData Connect AIならアプリディレクトリから追加するだけ](https://ascii.jp/elem/000/004/414/4414794/?rss=) | 26.0 | 20.0 | 42.0 |
-| [Tenable Blog 第2回「Tenable が Anthropic の Project Glasswing に参加し、AI 時代におけるサイバー防御の強化を推進」](https://scan.netsecurity.ne.jp/article/2026/07/06/55642.html) | 26.0 | 20.0 | 42.0 |
-| [北九州市が PDF 黒塗り処理の自主点検実施 ～ 再発防止策として AI 活用のチェック機能導入も](https://scan.netsecurity.ne.jp/article/2026/07/06/55638.html) | 26.0 | 20.0 | 42.0 |
-| [トレンドマイクロ、デジタルツインを活用した脆弱性の検証など最新のソリューションを紹介～TrendAI Spark 2026](https://internet.watch.impress.co.jp/docs/news/2122296.html) | 23.0 | 20.0 | 43.0 |
-| [HTTP通信ライブラリ「Apache HttpComponents」に複数のDoS脆弱性](https://www.security-next.com/186836) | 22.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年6月28日〜2026年7月4日）](https://www.security-next.com/186828) | 22.0 | 20.0 | 42.0 |
-| [ウェブメール「Roundcube」、アップデートで複数脆弱性を修正](https://www.security-next.com/186824) | 22.0 | 20.0 | 42.0 |
-| [ExpressVPN、「ExpressKeys」を大幅アップグレード--パスキー対応など](https://japan.zdnet.com/article/35250063/) | 21.0 | 20.0 | 42.0 |
-| [最強の防御力と最高の使い勝手、ウチの会社で欲しいのは？ ゆるーくセキュリティのホンネが聞ける交流会再び](https://ascii.jp/elem/000/004/414/4414154/?rss=) | 21.0 | 20.0 | 42.0 |
-| [エーアイセキュリティラボ共催でオンラインセミナー「組織・人・システムの死角をなくす セキュリティリスクの可視化」を 7 / 8 開催](https://scan.netsecurity.ne.jp/article/2026/07/06/55641.html) | 21.0 | 20.0 | 42.0 |
-| [常石グループへのフィッシングメールで認証情報が漏えい、再発防止策を発表](https://scan.netsecurity.ne.jp/article/2026/07/06/55640.html) | 21.0 | 20.0 | 42.0 |
-| [スリーシェイクのエンジニア 2 名が「2026 Japan AWSアワード」に選出](https://scan.netsecurity.ne.jp/article/2026/07/06/55637.html) | 21.0 | 20.0 | 42.0 |
-| [国内 ISP の認証情報を不正利用して送信されたフィッシングメールに注意呼びかけ](https://scan.netsecurity.ne.jp/article/2026/07/06/55635.html) | 21.0 | 20.0 | 42.0 |
-| [Little Orbit 製 GamersFirst Anti-Cheat に複数のローカル特権昇格の脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/06/55634.html) | 21.0 | 20.0 | 42.0 |
-| [ブロードコム 独占禁止法違反と認定するに足る事実認められず ～ 公正取引委員会](https://scan.netsecurity.ne.jp/article/2026/07/06/55633.html) | 21.0 | 20.0 | 42.0 |
-| [4人に1人が「AIに仕事を奪われつつある」と認識／パスワードを使い回すのは社員より経営層／データセンター建設に供給制約の課題、ほか](https://ascii.jp/elem/000/004/416/4416308/?rss=) | 21.0 | 20.0 | 42.0 |
-| [コード管理基盤から個人情報漏洩か 銀行口座との連携機能が一斉停止に](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600011/070200210/) | 21.0 | 20.0 | 42.0 |
-| [「Mythos」の衝撃 脆弱性の嵐に備えよ](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600014/070200231/) | 21.0 | 20.0 | 42.0 |
-| [たった1件の不備でマイナス1万点 AIの物量攻撃に耐える“基礎の強度”](https://www.itmedia.co.jp/enterprise/articles/2607/03/news012.html) | 21.0 | 20.0 | 42.0 |
-| [ClamAVの新たなセキュリティパッチ、20年前にさかのぼる7件のスキャナー不具合を修正](https://www.helpnetsecurity.com/2026/07/06/clamav-security-patch-versions/) | 20.0 | 20.0 | 42.0 |
-| [大手事業者を装う、「安くなる」と嘘をつくなど、悪質な光回線の電話勧誘トラブル、国民生活センターが注意喚起 トラブル相談の3割は70歳以上の高齢者](https://internet.watch.impress.co.jp/docs/news/2122256.html) | 20.0 | 20.0 | 42.0 |
-| [【2018年のINTERNET Watch】「漫画村」被害が深刻化、海賊版サイトの「ブロッキング」を求める動きに。IEEE 802.11axを「Wi-Fi 6」と呼ぶことが決まる](https://internet.watch.impress.co.jp/docs/special/30th/2122233.html) | 20.0 | 20.0 | 42.0 |
+| [31秒で失敗を修正 考えながらランサムを仕掛けるAI攻撃者の実態](https://atmarkit.itmedia.co.jp/ait/articles/2607/06/news032.html) | 29.0 | 30.0 | 42.0 |
+| [Malwarebytes Mobile Securityでそのメッセージが詐欺か確認する方法](https://www.helpnetsecurity.com/2026/07/06/product-showcase-malwarebytes-mobile-security-ios/) | 28.0 | 20.0 | 42.0 |
+| [中国のAIアプリから「人間っぽい相棒」が消える、ByteDanceとAlibabaが規制対応で機能停止へ](https://gigazine.net/news/20260706-disable-custom-agents/) | 27.0 | 20.0 | 42.0 |
+| [画像生成AIを開発するMidjourneyが係争中のハリウッドの映画スタジオに対してAIの利用状況の詳細を明らかにするよう要求](https://gigazine.net/news/20260706-midjourney-hollywood-studios-ai-usage/) | 27.0 | 20.0 | 42.0 |
+| [Sakana AI、敬語もネットスラングも“温度感そのまま”で訳す無料翻訳機能「Sakana Translate」 日英中に対応](https://www.itmedia.co.jp/news/articles/2607/06/news089.html) | 26.0 | 20.0 | 42.0 |
+| [公開3日で停止した「Claude Fable 5」が復活 AI脱獄の採点ルールも稼働](https://atmarkit.itmedia.co.jp/ait/articles/2607/06/news036.html) | 26.0 | 20.0 | 42.0 |
+| [ビジネス影響で優先するAIエージェントのセキュリティ対策](https://www.helpnetsecurity.com/2026/07/06/prioritize-ai-agent-security-business-impact/) | 25.0 | 20.0 | 42.0 |
+| [Omnigent：オープンソースのAIエージェントフレームワークとメタハーネス](https://www.helpnetsecurity.com/2026/07/06/omnigent-open-source-ai-agent-framework/) | 25.0 | 20.0 | 42.0 |
+| [決済詐欺の未来は自動化される可能性がある](https://www.helpnetsecurity.com/2026/07/06/key-payment-fraud-trends-report/) | 25.0 | 20.0 | 42.0 |
+| [「WinRAR」に脆弱性、過去の問題に類似 - 修正版をリリース](https://www.security-next.com/186847) | 22.0 | 20.0 | 42.0 |
+| [Flipper Zeroのファームウェア開発、コミュニティ向け新ルールを策定](https://www.helpnetsecurity.com/2026/07/06/flipper-zero-firmware-development-update/) | 22.0 | 20.0 | 42.0 |
+| [KDDI、パスワード760万人分漏えい メアドも1220万人分 ISP事業者向けシステムへの不正アクセスで](https://www.itmedia.co.jp/news/articles/2607/06/news109.html) | 21.0 | 20.0 | 42.0 |
+| [KDDI、ISP向けメールシステムへの不正アクセスで続報。1223万件のメールアドレス、762万件のパスワードが漏えい](https://internet.watch.impress.co.jp/docs/news/2122740.html) | 20.0 | 20.0 | 42.0 |
+| [Opera GXの脆弱性により悪意あるサイトが閲覧ページのデータを盗む改造機能を自動インストール可能に](https://thehackernews.com/2026/07/opera-gx-flaw-let-malicious-sites-auto.html) | 20.0 | 20.0 | 42.0 |
+| [セキュリティの1週間（6月29日～7月5日）](https://www.malwarebytes.com/blog/news/2026/07/a-week-in-security-june-29-july-5) | 20.0 | 20.0 | 42.0 |
+| [受信トレイの保護：アイデンティティ、ブランド、セキュリティの交差点](https://www.helpnetsecurity.com/2026/07/06/ciso-email-security-strategy/) | 20.0 | 20.0 | 42.0 |
+| [OAuth、ゲストアカウント、脆弱なMFAがSaaSのリスクを高める](https://www.helpnetsecurity.com/2026/07/06/saas-environments-security-risks-report/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
