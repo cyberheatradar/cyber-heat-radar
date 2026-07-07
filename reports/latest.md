@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-07-07 11:00 JST
+# 📡 サイレーダー 2026-07-07 17:00 JST
 
-このレポートは、2026-07-07 05:00 JST〜2026-07-07 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-07 11:00 JST〜2026-07-07 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 51
+- 観測トピック数: 43
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 25
+- [低温だが記録しておくトピック](#low-record-topics): 18
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,31 +34,24 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [セキュリティ企業の脅威ハンターがランサムウェア犯に FBI の捜査情報を漏洩](https://scan.netsecurity.ne.jp/article/2026/07/07/55651.html) | 29.0 | 30.0 | 42.0 |
-| [GMOサイバーセキュリティ byイエラエ、オンラインセミナー「年 1 回の脆弱性診断だけで大丈夫？ ランサムウェア対策で見直すべきASMと継続的な脆弱性診断」を 7 / 24 開催](https://scan.netsecurity.ne.jp/article/2026/07/07/55650.html) | 29.0 | 30.0 | 42.0 |
-| [フェースでシステム障害、不正アクセスに起因するランサムウェア被害の可能性](https://scan.netsecurity.ne.jp/article/2026/07/07/55648.html) | 29.0 | 30.0 | 42.0 |
-| [バックアップで復旧・運営に支障無し・データ流出確認されず・金銭支払も無し ～ 武蔵野大学がランサムウェア感染](https://scan.netsecurity.ne.jp/article/2026/07/07/55646.html) | 29.0 | 30.0 | 42.0 |
-| [世界のランサムウェア攻撃、4217件に データ流出規模の上位5件を占めた国は？](https://www.itmedia.co.jp/enterprise/articles/2607/07/news046.html) | 29.0 | 30.0 | 42.0 |
-| [Canadian spy agency、2025年に3つの犯罪グループへのハッキングを報告](https://therecord.media/canada-cse-2025-cyber-operations-ransomware-drugs-extremism) | 28.0 | 30.0 | 42.0 |
-| [大手ブランドの採用面接を装ったフィッシングでGoogleアカウントを窃取](https://www.bleepingcomputer.com/news/security/phishing-poses-as-big-brand-job-interview-to-steal-google-accounts/) | 28.0 | 20.0 | 42.0 |
-| [Microsoft Teamsの偽ITサポート通話でEtherRATマルウェアを配布](https://www.bleepingcomputer.com/news/security/fake-it-support-calls-on-microsoft-teams-push-etherrat-malware/) | 28.0 | 20.0 | 42.0 |
-| [「Claude Fable 5」が復活しても「Claude Opus 4.8」を使い続ける5つの理由](https://japan.zdnet.com/article/35250175/) | 26.0 | 20.0 | 42.0 |
-| [生成 AI で巧妙化する脅威に対抗、東京都がチェック・ポイントやマイクロソフトら登壇のセミナー開催](https://scan.netsecurity.ne.jp/article/2026/07/07/55643.html) | 26.0 | 20.0 | 42.0 |
-| [組織もSaaSも変革 AIが壊す3つの常識](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/070100558/070100005/) | 26.0 | 20.0 | 42.0 |
-| [「AIの暴走を止められない」 CISO座談会で見えたAIセキュリティの限界](https://www.itmedia.co.jp/enterprise/articles/2607/07/news035.html) | 26.0 | 20.0 | 42.0 |
-| [AIの利用費の高額化を回避する「OpenAI API」の賢い使い方](https://japan.zdnet.com/article/35249965/) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントがあなたの新しい同僚に--最良の結果を得る方法](https://japan.zdnet.com/article/35249873/) | 26.0 | 20.0 | 42.0 |
-| [「IBM WebSphere Application Server」の管理画面に複数脆弱性](https://www.security-next.com/186863) | 22.0 | 20.0 | 42.0 |
-| [CitrixBleed再来？NetScalerの脆弱性が攻撃対象に](https://www.darkreading.com/vulnerabilities-threats/citrixbleed-ing-again-netscaler-vulnerability-under-attack) | 22.0 | 20.0 | 42.0 |
-| [ハンズホールディングスの社内システムでウイルス感染の疑い](https://scan.netsecurity.ne.jp/article/2026/07/07/55649.html) | 21.0 | 20.0 | 42.0 |
-| [マネーフォワードが利用する「GitHub」への不正アクセス、流出した可能性が判明した個人データの詳細公表](https://scan.netsecurity.ne.jp/article/2026/07/07/55647.html) | 21.0 | 20.0 | 42.0 |
-| [公益財団法人国際文化会館、「地経学研究所」研究員を騙るメールに注意を呼びかけ](https://scan.netsecurity.ne.jp/article/2026/07/07/55645.html) | 21.0 | 20.0 | 42.0 |
-| [セキュリティの新指標「日本度」公開発表会を開催](https://scan.netsecurity.ne.jp/article/2026/07/07/55644.html) | 21.0 | 20.0 | 42.0 |
-| [アクセンチュア、重要インフラのセキュリティ事業強化へ またもや3社買収の狙いは？](https://www.itmedia.co.jp/enterprise/articles/2607/07/news017.html) | 21.0 | 20.0 | 42.0 |
-| [MSに百度、日本企業 業務の活用支援競う](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/070100558/070100003/) | 21.0 | 20.0 | 42.0 |
-| [悪用成功率99％、Linuxカーネルに新ゼロデイ「Bad Epoll」が見つかる](https://atmarkit.itmedia.co.jp/ait/articles/2607/07/news048.html) | 21.0 | 20.0 | 42.0 |
-| [BusySnakeが重要インフラネットワークに侵入する情報窃取型マルウェアを展開](https://www.darkreading.com/cyberattacks-data-breaches/busysnake-infostealer-critical-infrastructure-networks) | 20.0 | 20.0 | 42.0 |
-| [攻撃者がBONK暗号資産で2,000万ドルを自分たちに投票で割り当てる](https://therecord.media/attackers-vote-themselves-20-million-bonk-crypto) | 20.0 | 20.0 | 42.0 |
+| [国連事務総長がAI技術開発で世界に呼びかけ、「革新的な技術」を利用できない数十億の人々に提供する必要性を強調](https://gigazine.net/news/20260707-un-chief-call-ai/) | 27.0 | 20.0 | 42.0 |
+| [複数のAIモデルを一元管理できる「Otari」がMozilla.aiによって開発される](https://gigazine.net/news/20260707-mozilla-ai-otari/) | 27.0 | 20.0 | 42.0 |
+| [サイバーセキュリティ分野におけるAIサイエンティストの可能性を示す研究者の提言](https://www.helpnetsecurity.com/2026/07/07/cybersecurity-ai-scientist-research/) | 25.0 | 20.0 | 42.0 |
+| [あなたの会社はすでにAIを導入しているのに、誰もアクセスを管理していない](https://www.helpnetsecurity.com/2026/07/07/ai-attack-surface-video/) | 25.0 | 20.0 | 42.0 |
+| [Microsoft、AIエージェントの暴走を防ぐ新機能を提供へ](https://www.helpnetsecurity.com/2026/07/07/microsoft-execution-containers-ai-agents-constraints/) | 25.0 | 20.0 | 42.0 |
+| [AIデータセンター拡大を電力不足が鈍化させる](https://www.helpnetsecurity.com/2026/07/07/ai-data-centers-demand-expansion/) | 25.0 | 20.0 | 42.0 |
+| [BeyondTrust Remote SupportおよびPRAの重大な認証回避脆弱性を修正](https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth.html) | 24.0 | 46.0 | 50.0 |
+| [職員が執務室内の撮影してネット投稿、顧客情報も - 益田信組](https://www.security-next.com/186817) | 22.0 | 20.0 | 42.0 |
+| [「JetBrains」の複数製品に脆弱性 - 「クリティカル」など修正](https://www.security-next.com/186901) | 22.0 | 20.0 | 42.0 |
+| [人類の歴史上「戦争のない時期」はあったのか？](https://gigazine.net/news/20260707-period-human-history-without-war/) | 22.0 | 20.0 | 42.0 |
+| [「全東信の端末使用を即時停止して」――食団連が飲食店へ注意喚起 全東信の破産受け](https://www.itmedia.co.jp/news/articles/2607/07/news118.html) | 21.0 | 20.0 | 42.0 |
+| [レビュー：Feature Store を活用した機械学習システムの構築](https://www.helpnetsecurity.com/2026/07/07/review-building-machine-learning-systems-with-a-feature-store/) | 20.0 | 20.0 | 42.0 |
+| [Apple Container：Mac上でLinuxコンテナを扱うオープンソースツール](https://www.helpnetsecurity.com/2026/07/07/apple-container-open-source-linux-mac/) | 20.0 | 20.0 | 42.0 |
+| [複数のセイコーエプソン製プリンターおよびスキャナーのWeb Configにおけるクロスサイトリクエストフォージェリの脆弱性](https://jvn.jp/jp/JVN87285119/) | 20.0 | 20.0 | 42.0 |
+| [IPA、26年度内に開始予定の「SCS評価制度」（サプライチェーン強化に向けたセキュリティ対策評価制度）に関するメールニュース配信](https://internet.watch.impress.co.jp/docs/news/2123015.html) | 20.0 | 20.0 | 42.0 |
+| [今すぐ応募できるサイバーセキュリティ求人：2026年7月7日](https://www.helpnetsecurity.com/2026/07/07/cybersecurity-jobs-available-right-now-july-7-2026/) | 20.0 | 20.0 | 42.0 |
+| [Tenda製品の複数のファームウェアにおけるセキュリティ上問題のある隠し機能の脆弱性](https://jvn.jp/vu/JVNVU93316066/) | 20.0 | 20.0 | 42.0 |
+| [HP Deskjet 2800プリンターシリーズにおける認証不備の脆弱性](https://jvn.jp/vu/JVNVU90409906/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
