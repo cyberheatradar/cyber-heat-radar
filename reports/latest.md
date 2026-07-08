@@ -1,17 +1,18 @@
-# 📡 サイレーダー 2026-07-08 11:00 JST
+# 📡 サイレーダー 2026-07-08 17:00 JST
 
-このレポートは、2026-07-08 05:00 JST〜2026-07-08 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-08 11:00 JST〜2026-07-08 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 57
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 54
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 31
+- [低温だが記録しておくトピック](#low-record-topics): 26
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [「ColdFusion」や「Langflow」の脆弱性悪用に注意喚起 - 米当局](#topic-21334) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [CISA orders feds to patch max severity ColdFusion flaw by Friday](#topic-21384) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [CISA Adds 4 Actively Exploited Adobe, Joomla, and Langflow Flaws to KEV](#topic-21403) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,9 +20,9 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-21334"></a>
+<a id="topic-21384"></a>
 
-### 1. 「ColdFusion」や「Langflow」の脆弱性悪用に注意喚起 - 米当局
+### 1. CISA orders feds to patch max severity ColdFusion flaw by Friday
 
 #### スコアカード
 
@@ -31,15 +32,15 @@
 | <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
 | <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-米当局は、Adobe ColdFusion、Langflow、Joomla向け拡張機能に関連する脆弱性が悪用されているとして、速やかな対応を呼びかけています。
-現時点では、どの脆弱性が対象かの詳細は材料内で特定されていませんが、少なくとも悪用観測がある点が注意点です。
-対象製品が業務システムや社内運用で使われている場合、影響が広がる可能性があります。脆弱性の悪用が確認されている以上、通常の予定対応ではなく、優先度を上げた確認が必要です。
+CISAが、Adobe ColdFusionに存在する重大な脆弱性について、米連邦機関に対し期限付きで修正対応を求めたとされています。
+公開情報では、この問題はすでに悪用が観測されているとされ、優先的な対応が必要な扱いになっています。
+政府機関向けに強い対応期限が設定されている点から、影響の大きさと緊急性がうかがえます。ColdFusionを利用している組織にとっても、同様の脆弱性管理を急ぐべきシグナルです。
 
 #### 温度感の理由
 
@@ -54,17 +55,79 @@
 
 #### 担当者向け確認ポイント
 
-- ColdFusion、Langflow、Joomla拡張機能の利用有無を棚卸しし、該当環境を優先確認する。
-- ベンダーや公的機関の続報を確認し、修正版の適用や緩和策を早めに進める。
-- 外部公開している管理画面や関連サービスのログを確認し、不審なアクセスや改ざんの兆候がないか点検する。
+- Adobe ColdFusionの利用有無と対象バージョンを確認し、ベンダー情報に沿って早急に修正を適用する。
+- 外部公開しているColdFusion関連の機能や管理画面がないか点検し、アクセス制御と露出範囲を見直す。
+- 侵害の兆候がないか、認証ログやWebアクセスログを優先して確認する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-48908 | 関連CVE | 1.00 | 候補あり（URL 7件以上） |
-| 脆弱性 | CVE-2026-55255 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
-| 脆弱性 | CVE-2026-56290 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
+| 脆弱性 | CVE-2026-34621 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
+| 脆弱性 | CVE-2026-48282 | 関連CVE | 1.00 | 候補あり（URL 2件以上） |
+| ベンダー | Adobe | 言及あり | 0.80 | — |
+| 製品 | Adobe ColdFusion | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [CISA orders feds to patch max severity ColdFusion flaw by Friday](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-max-severity-coldfusion-flaw-by-friday/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-21403"></a>
+
+### 2. CISA Adds 4 Actively Exploited Adobe, Joomla, and Langflow Flaws to KEV
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+CISAは、Adobe、Joomla、Langflowに関連する4件の脆弱性をKnown Exploited Vulnerabilities（KEV）カタログに追加しました。
+公的な情報として実際の悪用が確認されているとして扱われており、少なくとも一部は深刻度の高い影響が想定されます。
+KEVへの追加は、現実に攻撃で使われている可能性が高いことを示すため、優先度を上げて対応すべきサインです。
+対象製品を運用している組織では、露出資産の把握と修正状況の確認が急務になります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 対象製品の利用有無を確認し、該当バージョンや公開状況を洗い出す。
+- ベンダー告知とCISAのKEV掲載状況を照合し、修正パッチや回避策の適用を優先する。
+- 外部公開されている管理画面や関連サービスの監視を強化し、不審な挙動がないか確認する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-48282 | 関連CVE | 1.00 | 候補あり（URL 2件以上） |
 | ベンダー | Adobe | 言及あり | 0.80 | — |
 | 製品 | Adobe ColdFusion | 言及あり | 0.80 | — |
 | 製品 | Langflow | 言及あり | 0.80 | — |
@@ -74,11 +137,11 @@
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [「ColdFusion」や「Langflow」の脆弱性悪用に注意喚起 - 米当局](https://www.security-next.com/186957) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds 4 Actively Exploited Adobe, Joomla, and Langflow Flaws to KEV](https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
-- SNS反応: 観測あり・信頼度: 低。
+- SNS反応: 観測あり・信頼度: 高。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
 - 技術・開発者系ソース観測: 観測なし。
@@ -100,37 +163,32 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [「完全自律型ランサムウェア攻撃」が発生か、セキュリティ研究者を悩ませる恐れ](https://japan.zdnet.com/article/35250316/) | 29.0 | 30.0 | 42.0 |
-| [スペイン、ロシア系ハクティビストキャンペーンに関与したとみられるハッカーを逮捕](https://cyberscoop.com/spain-arrests-alleged-cyber-army-of-russia-reborn-member/) | 28.0 | 20.0 | 48.0 |
-| [Accenture、ハッカーが盗んだデータを売りに出した後に侵害を確認](https://www.bleepingcomputer.com/news/security/accenture-confirms-breach-after-hacker-offers-stolen-data-for-sale/) | 28.0 | 20.0 | 42.0 |
-| [Vidar Stealerの正体を暴く：コード署名の悪用、Goローダー、ファイル肥大化](https://unit42.paloaltonetworks.com/vidar-stealer-xmrig-miner-campaign-analysis/) | 28.0 | 20.0 | 42.0 |
-| [大手ブランドを装った求人詐欺がマーケティング担当者のGoogleアカウントを標的にする](https://www.darkreading.com/cyberattacks-data-breaches/big-brand-jobs-scam-marketing-pros-google-accounts) | 28.0 | 20.0 | 42.0 |
-| [無料でWord・Excel・PowerPointをあらゆるAIエージェントに完全制御させることができる「OfficeCLI」](https://gigazine.net/news/20260708-officecli/) | 27.0 | 20.0 | 42.0 |
-| [「Claude Fable 5」サブスク、突如5日間延長 ユーザー悲喜こもごも「寝ずに頑張ったのに」「制限リセットして」](https://www.itmedia.co.jp/news/articles/2607/08/news070.html) | 26.0 | 20.0 | 42.0 |
-| [Anthropic、「Claude Cowork」をウェブとモバイルに展開--意外な利用実態も判明](https://japan.zdnet.com/article/35250309/) | 26.0 | 20.0 | 42.0 |
-| [シャドーAIのリスクが顕在化 国内企業の7割超が対策できず](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/092400133/070100198/) | 26.0 | 20.0 | 42.0 |
-| [AIはなぜ「業務に定着しない」のかローカルAI実装の課題とその現実解](https://japan.zdnet.com/article/35250067/) | 26.0 | 20.0 | 42.0 |
-| [Dialogflow CXの「Rogue Agent」脆弱性でAIチャットボットのデータ窃取が可能に](https://www.darkreading.com/application-security/dialogflow-cx-rogue-agent-flaw-enabled-ai-chatbot-data-theft) | 25.0 | 20.0 | 42.0 |
-| [xAIとGrokの機能拡大に対するディープフェイクCSAM訴訟](https://cyberscoop.com/deepfake-csam-lawsuit-grok-xai-expands-stability-ai/) | 25.0 | 20.0 | 42.0 |
-| [自律型ペンテストプラットフォーム「Dark-Moon」ほか [Scan PREMIUM Monthly Executive Summary 2026年6月度]](https://scan.netsecurity.ne.jp/article/2026/07/08/55662.html) | 21.0 | 20.0 | 42.0 |
-| [KDDI の ISP 事業者向けメールシステムへの不正アクセス、総務省が報告を求める](https://scan.netsecurity.ne.jp/article/2026/07/08/55661.html) | 21.0 | 20.0 | 42.0 |
-| [CPI の顧客 1,250,543 名分のメールアドレスが漏えい ～ KDDI の ISP 事業者向けメールシステムへの不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/08/55660.html) | 21.0 | 20.0 | 42.0 |
-| [5,016,432 人分の BIGLOBE メールアドレスが漏えい ～ KDDI の ISP 事業者向けメールシステムへの不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/08/55659.html) | 21.0 | 20.0 | 42.0 |
-| [2,248,708 名分の ＠nifty メールアドレスが漏えい ～ KDDI の ISP 事業者向けメールシステムへの不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/08/55658.html) | 21.0 | 20.0 | 42.0 |
-| [STNet のメールサービスを利用する 397,152 名分のアドレスとパスワードが漏えい ～ KDDI の ISP 事業者向けメールシステムへの不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/08/55657.html) | 21.0 | 20.0 | 42.0 |
-| [中部テレコミュニケーションの顧客 727,176 名分のメールアドレスが漏えい ～ KDDI の ISP 事業者向けメールシステムへの不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/08/55656.html) | 21.0 | 20.0 | 42.0 |
-| [PPAP利用割合が2021年10月から4年半で4分の1以下に減少](https://scan.netsecurity.ne.jp/article/2026/07/08/55655.html) | 21.0 | 20.0 | 42.0 |
-| [能動的サイバー防御法制で民間 ICT 事業者に求められる実務対応とは？ ICT-ISAC がレポート公開](https://scan.netsecurity.ne.jp/article/2026/07/08/55654.html) | 21.0 | 20.0 | 42.0 |
-| [サーバーワークスの「HENNGE Tadrill」導入事例公開](https://scan.netsecurity.ne.jp/article/2026/07/08/55653.html) | 21.0 | 20.0 | 42.0 |
-| [ガートナー セキュリティ ＆ リスク・マネジメント サミット 2026 にエーアイセキュリティラボ 出展・登壇](https://scan.netsecurity.ne.jp/article/2026/07/08/55652.html) | 21.0 | 20.0 | 42.0 |
-| [KDDIメール漏えいの全容判明 ゼロデイ悪用で761万人分パスワードが流出](https://atmarkit.itmedia.co.jp/ait/articles/2607/08/news051.html) | 21.0 | 20.0 | 42.0 |
-| [QRコード攻撃はなぜメールセキュリティを無力化できるのか？ その理由を解説](https://atmarkit.itmedia.co.jp/ait/articles/2607/08/news048.html) | 21.0 | 20.0 | 42.0 |
-| [ClickFixから現金化へ：メキシコの銀行詐欺ツールキットの全容](https://www.elastic.co/security-labs/mexican-banking-fraud-scmbanker-ref6045) | 20.0 | 20.0 | 48.0 |
-| [Windowsが監視中：海賊版対策ツールがScattered Spiderの容疑者を特定](https://www.theregister.com/cyber-crime/2026/07/07/windows-is-watching-anti-piracy-tool-fingers-scattered-spider-suspect/5267953) | 20.0 | 20.0 | 48.0 |
-| [Weekly Report: 複数のApple製品に脆弱性](https://www.jpcert.or.jp/wr/2026/wr260708.html) | 20.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年07月07日）](https://jvn.jp/vu/JVNVU92734392/) | 20.0 | 20.0 | 42.0 |
-| [ソラコム、IoTデバイスからの通信を制御する「VPGトラフィックフィルタリング」機能を提供開始](https://internet.watch.impress.co.jp/docs/news/2123164.html) | 20.0 | 20.0 | 42.0 |
-| [「JC-STAR」とは：安全なIoT製品を選びやすくするため、セキュリティ機能を評価・可視化する制度【今週のキーワード】](https://internet.watch.impress.co.jp/docs/column/keyword/2120149.html) | 20.0 | 20.0 | 42.0 |
+| [三重県、庁内のUSBメモリ調査でマルウェア47個検知 陸自の報道受け1万個超を一斉調査](https://www.itmedia.co.jp/news/articles/2607/08/news104.html) | 29.0 | 20.0 | 42.0 |
+| [メール・会議・Slackの内容をAIが覚えて仕事を手伝う「Rowboat」、Claude Desktop代替として何が便利なのか？](https://gigazine.net/news/20260708-rowboat/) | 27.0 | 20.0 | 42.0 |
+| [スマホからPC自動操作AI「Claude Cowork」のタスク進行状況を管理できる機能が登場](https://gigazine.net/news/20260708-claude-cowork-phone/) | 27.0 | 20.0 | 42.0 |
+| [Claude Fable 5が2026年7月13日16時まで全有料プランで利用可能に](https://gigazine.net/news/20260708-anthropic-claude-fable-5-extended/) | 27.0 | 20.0 | 42.0 |
+| [Google調査で83％の組織がAIインフラ刷新を必要視、AIエージェント時代に従来基盤の限界が浮き彫りに](https://gigazine.net/news/20260708-google-state-of-ai-infrastructure/) | 27.0 | 20.0 | 42.0 |
+| [フォーティネット、SOC統合基盤の提供を開始--AIエージェントが自律的に相関分析](https://japan.zdnet.com/article/35250335/) | 26.0 | 20.0 | 42.0 |
+| [りそな、マネロン対策などにAIエージェントを適用--ネットワーク分析を活用](https://japan.zdnet.com/article/35250328/) | 26.0 | 20.0 | 42.0 |
+| [参考資料を自ら探す画像生成AI、Metaが開発 “長考”でクオリティー向上も](https://www.itmedia.co.jp/news/articles/2607/08/news097.html) | 26.0 | 20.0 | 42.0 |
+| [Metaの新AI「Muse Image」公開に伴う注意点 Instagram公開アカウントのコンテンツ再利用を防ぐには](https://www.itmedia.co.jp/news/articles/2607/08/news087.html) | 26.0 | 20.0 | 42.0 |
+| [あらゆる事態に備えるためのオープンソースサイバーセキュリティツール20選](https://www.helpnetsecurity.com/2026/07/08/20-latest-open-source-cybersecurity-tools/) | 25.0 | 20.0 | 42.0 |
+| [macOSがAIエージェントの実験場に変わりつつある](https://www.helpnetsecurity.com/2026/07/08/macos-ai-agents-automation/) | 25.0 | 20.0 | 42.0 |
+| [OpenAIとAnthropicは異なる方向へ進んでいる](https://www.helpnetsecurity.com/2026/07/08/openai-anthropic-agentic-ai-security-risk/) | 25.0 | 20.0 | 42.0 |
+| [Meta 新たな画像生成AIを発表](https://news.yahoo.co.jp/pickup/6587149?source=rss) | 25.0 | 20.0 | 42.0 |
+| [「スクリプトキディ」から転じた、AIを悪用して攻撃プログラムを生成する「プロンプトキディ」とは？【やじうまWatch】](https://internet.watch.impress.co.jp/docs/yajiuma/2123316.html) | 25.0 | 20.0 | 42.0 |
+| [MS 365アカウントや学生団体サイトの侵害が判明 - 富山県立大](https://www.security-next.com/186814) | 22.0 | 20.0 | 42.0 |
+| [紛失を隠蔽するため文書を偽造、職員を処分 - 海老名市](https://www.security-next.com/186711) | 22.0 | 20.0 | 42.0 |
+| [プリンタ「HP DeskJet 2800シリーズ」に脆弱性 - 機密情報漏洩のおそれ](https://www.security-next.com/186984) | 22.0 | 20.0 | 42.0 |
+| [NTTデータなど、フロンティアAI活用のサイバーリスク対応サービスを提供へ](https://japan.zdnet.com/article/35250337/) | 21.0 | 20.0 | 42.0 |
+| [KDDIメールシステムに不正アクセス、1223万件のアドレス流出 対象サービスと対策](https://news.mynavi.jp/techplus/article/20260708-4677297/) | 21.0 | 20.0 | 42.0 |
+| [「事後対応」中心の運用から脱却する「AIセキュリティ」の始め方 Google解説](https://atmarkit.itmedia.co.jp/ait/articles/2607/08/news059.html) | 21.0 | 20.0 | 42.0 |
+| [「セキュリティ対策証明」経験ありは8割超、だがSCS評価制度迫るも“SaaS把握率”は2割未満](https://atmarkit.itmedia.co.jp/ait/articles/2607/08/news060.html) | 21.0 | 20.0 | 42.0 |
+| [女性声優にXの“青バッジ”を勝手に送り付ける怪事案が相次ぐ 津田美波さん、黒木ほの香さん、土屋李央さんなど](https://www.itmedia.co.jp/news/articles/2607/08/news088.html) | 21.0 | 20.0 | 42.0 |
+| [マルチチャネルフィッシング攻撃のリスク管理方法](https://www.itpro.com/security/multi-channel-phishing-attacks-how-to-manage-the-risk) | 20.0 | 20.0 | 42.0 |
+| [OrbiaのCISO Miranda Ritchieが語る、持続可能なインフラにセキュリティを組み込む方法](https://www.helpnetsecurity.com/2026/07/08/miranda-ritchie-orbia-industrial-cybersecurity/) | 20.0 | 20.0 | 42.0 |
+| [継続的な攻撃的セキュリティテストプログラムの導入方法](https://www.helpnetsecurity.com/2026/07/08/picus-continuous-offensive-security-testing-program/) | 20.0 | 20.0 | 42.0 |
+| [富士電機製Pupsmanのインストーラにおける複数の脆弱性](https://jvn.jp/jp/JVN62347140/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
