@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-07-11 11:00 JST
+# 📡 サイレーダー 2026-07-11 17:00 JST
 
-このレポートは、2026-07-11 05:00 JST〜2026-07-11 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-11 11:00 JST〜2026-07-11 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 33
+- 観測トピック数: 25
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 8
+- [低温だが記録しておくトピック](#low-record-topics): 0
 
 今回はサマリ掲載トピックはありません。
 
@@ -29,19 +29,7 @@
 
 ## ❄️ 低温だが記録しておくトピック
 
-音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
-重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
-
-| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
-|---|---:|---:|---:|
-| [The Gentlemenランサムウェアの非情な台頭](https://unit42.paloaltonetworks.com/the-gentlemen-ransomware/) | 28.0 | 30.0 | 42.0 |
-| [Ryukランサムウェア攻撃でアルメニア国籍の男が有罪を認める](https://cyberscoop.com/karen-vardanyan-armenian-ryuk-ransomware-guilty/) | 28.0 | 30.0 | 42.0 |
-| [U-Bootの新たな脆弱性でステルスなファームウェア攻撃が可能に](https://www.bleepingcomputer.com/news/security/new-u-boot-flaws-could-enable-stealthy-firmware-attacks/) | 28.0 | 20.0 | 42.0 |
-| [Weekly Metasploitアップデート: FlowiseAI CSV AgentとmacOS Package Kitのエクスプロイト追加](https://www.rapid7.com/blog/post/pt-weekly-metasploit-update-exploits-for-flowiseai-csv-agent-and-macos-package-kit) | 27.0 | 20.0 | 42.0 |
-| [「Linux」で「Claude Code」のデスクトップアプリを試してみた--競合と比較した結果は](https://japan.zdnet.com/article/35250273/) | 26.0 | 20.0 | 42.0 |
-| [3つの自己免疫疾患を抱える女性が免疫系の「リセット」治療で寛解状態に](https://gigazine.net/news/20260711-car-t-therapy-remission/) | 22.0 | 20.0 | 42.0 |
-| [Apple、OpenAIと元従業員2人を提訴 「iPhoneの機密を盗んだ」と主張](https://www.itmedia.co.jp/news/articles/2607/11/news038.html) | 21.0 | 20.0 | 42.0 |
-| [Bluetooth Low Energyセキュリティテストの統合版：Caeruleusの紹介](https://www.praetorian.com/blog/ble-testing-caeruleus/) | 20.0 | 20.0 | 42.0 |
+今回は低温記録トピックはありません。
 
 ---
 
