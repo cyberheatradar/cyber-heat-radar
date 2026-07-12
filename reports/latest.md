@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-07-12 05:00 JST
+# 📡 サイレーダー 2026-07-12 11:00 JST
 
-このレポートは、2026-07-11 17:00 JST〜2026-07-12 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-12 05:00 JST〜2026-07-12 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 32
+- 観測トピック数: 26
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 7
+- [低温だが記録しておくトピック](#low-record-topics): 1
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,13 +34,7 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [複数グループのスパイ活動キャンペーンで武器化されるBalochistan Police Portal](https://thehackernews.com/2026/07/hackers-weaponize-balochistan-police.html) | 28.0 | 20.0 | 42.0 |
-| [Ghost AccountsによるGitHub APIを悪用した大規模偵察キャンペーン](https://www.securityweek.com/ghost-accounts-abuse-github-api-in-mass-recon-campaign/) | 28.0 | 20.0 | 42.0 |
-| [脆弱なCMSプラットフォームを狙う世界規模の攻撃キャンペーンに警告するオーストラリア当局](https://www.bleepingcomputer.com/news/security/australia-warns-of-global-campaign-targeting-vulnerable-cms-platforms/) | 28.0 | 20.0 | 42.0 |
-| [Ghostcommitが画像にプロンプトインジェクションを隠し、AIエージェントを騙して機密情報を盗む](https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/) | 25.0 | 20.0 | 42.0 |
-| [jscramblerのnpmパッケージがサプライチェーン攻撃で侵害される](https://socket.dev/blog/jscrambler-supply-chain-attack) | 22.0 | 30.0 | 42.0 |
-| [Wireshark 4.6.7のリリース](https://isc.sans.edu/diary/rss/33146) | 22.0 | 20.0 | 42.0 |
-| [Compromised jscrambler 8.14.0のnpmリリース、インストール時にRust製情報窃取マルウェアを配布](https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html) | 20.0 | 30.0 | 42.0 |
+| [「ChatGPT」を銀行と接続、今では定番の金融アプリに--その方法と理由](https://japan.zdnet.com/article/35250338/) | 26.0 | 20.0 | 42.0 |
 
 ---
 
