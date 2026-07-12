@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-07-12 17:00 JST
+# 📡 サイレーダー 2026-07-13 05:00 JST
 
-このレポートは、2026-07-12 11:00 JST〜2026-07-12 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-12 17:00 JST〜2026-07-13 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 26
+- 観測トピック数: 28
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 3
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,7 +34,9 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [AppleがOpenAIを企業秘密侵害で提訴](https://gigazine.net/news/20260712-apple-sues-openai/) | 22.0 | 20.0 | 42.0 |
+| [RedHook AndroidマルウェアがWireless ADBを使ってシェルアクセスを取得するように変化](https://www.bleepingcomputer.com/news/security/redhook-android-malware-now-uses-wireless-adb-for-shell-access/) | 28.0 | 20.0 | 42.0 |
+| [友人や知人の陰口をたたいたり評判を落とそうとしたりする傾向が強い人は子どもが多いとの研究結果](https://gigazine.net/news/20260712-covert-hostility-higher-fertility/) | 22.0 | 20.0 | 42.0 |
+| [Accentureのデータ侵害と優れたオープンソースサイバーセキュリティツールを振り返る1週間](https://www.helpnetsecurity.com/2026/07/12/week-in-review-accenture-data-breach-great-open-source-cybersecurity-tools/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
