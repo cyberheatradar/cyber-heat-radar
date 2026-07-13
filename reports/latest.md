@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-07-13 05:00 JST
+# 📡 サイレーダー 2026-07-13 11:00 JST
 
-このレポートは、2026-07-12 17:00 JST〜2026-07-13 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-13 05:00 JST〜2026-07-13 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 28
+- 観測トピック数: 45
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 3
+- [低温だが記録しておくトピック](#low-record-topics): 20
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,9 +34,26 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [RedHook AndroidマルウェアがWireless ADBを使ってシェルアクセスを取得するように変化](https://www.bleepingcomputer.com/news/security/redhook-android-malware-now-uses-wireless-adb-for-shell-access/) | 28.0 | 20.0 | 42.0 |
-| [友人や知人の陰口をたたいたり評判を落とそうとしたりする傾向が強い人は子どもが多いとの研究結果](https://gigazine.net/news/20260712-covert-hostility-higher-fertility/) | 22.0 | 20.0 | 42.0 |
-| [Accentureのデータ侵害と優れたオープンソースサイバーセキュリティツールを振り返る1週間](https://www.helpnetsecurity.com/2026/07/12/week-in-review-accenture-data-breach-great-open-source-cybersecurity-tools/) | 20.0 | 20.0 | 42.0 |
+| [10,757個中47個からマルウェア検出、三重県がUSBメモリの庁内調査結果公表 感染被害は無し](https://scan.netsecurity.ne.jp/article/2026/07/13/55689.html) | 29.0 | 20.0 | 42.0 |
+| [富士通のFDEがAIエージェントを10日で試作、イオン系スーパーの店長を支援](https://xtech.nikkei.com/atcl/nxt/column/18/00001/11888/) | 26.0 | 20.0 | 42.0 |
+| [OpenAIがGPT-5.6のSol利用制限を一時的に緩和](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-temporarily-relaxes-gpt-56-sol-usage-limits/) | 25.0 | 20.0 | 42.0 |
+| [Joomla向け機能拡張「iCagenda」「Balbooa Forms」の脆弱性悪用に注意](https://www.security-next.com/187193) | 24.0 | 20.0 | 43.0 |
+| [「GNU Wget」にSSRF脆弱性 - 連携利用環境なども注意](https://www.security-next.com/187195) | 22.0 | 20.0 | 42.0 |
+| [BeyondTrustのリモートアクセス製品に複数の脆弱性](https://www.security-next.com/187180) | 22.0 | 20.0 | 42.0 |
+| [先週注目された記事（2026年7月5日〜2026年7月11日）](https://www.security-next.com/187178) | 22.0 | 20.0 | 42.0 |
+| [テレビ朝日メディアプレックスに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/13/55688.html) | 21.0 | 20.0 | 42.0 |
+| [朝日放送テレビグループ会社に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/13/55687.html) | 21.0 | 20.0 | 42.0 |
+| [城西国際大学が大学推奨PCの購入先として紹介している加賀ソルネット運営のECサイトに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/13/55686.html) | 21.0 | 20.0 | 42.0 |
+| [加賀ソルネット運営の「アカデミコナビ」に不正アクセス、最大約 17 万件の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/07/13/55685.html) | 21.0 | 20.0 | 42.0 |
+| [京都芸術大学がパソコン・ソフトウェアの斡旋販売で利用している加賀ソルネット運営の「アカデミコナビ」に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/13/55684.html) | 21.0 | 20.0 | 42.0 |
+| [7 / 22 ～ 24 開催「DX 総合EXPO 2026 夏 東京」にエーアイセキュリティラボ出展・登壇](https://scan.netsecurity.ne.jp/article/2026/07/13/55683.html) | 21.0 | 20.0 | 42.0 |
+| [水道料金請求や給水停止をSMSやメールで案内することはない ～「水道料金を支払わなければ給水を停止する」メールに神奈川県が注意呼びかけ](https://scan.netsecurity.ne.jp/article/2026/07/13/55682.html) | 21.0 | 20.0 | 42.0 |
+| [富士電機製 Pupsman のインストーラに複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/13/55681.html) | 21.0 | 20.0 | 42.0 |
+| [エンドポイント管理基盤を生かし幅広いリスクに対応--エクスポージャー管理の実践](https://japan.zdnet.com/article/35250395/) | 21.0 | 20.0 | 42.0 |
+| [論文サイト「arXiv」、投稿の約9割で非公開情報が“丸見え状態”か パスワードや秘密鍵、自宅のGPS座標なども 270万件を調査](https://www.itmedia.co.jp/news/articles/2607/13/news021.html) | 21.0 | 20.0 | 42.0 |
+| [Microsoft、AIによる「Windows」の脆弱性対策へ全面的に移行](https://japan.zdnet.com/article/35250415/) | 21.0 | 20.0 | 42.0 |
+| [Debian 13.6のセキュリティ更新でtrixieの100件超の脆弱性情報を修正](https://www.helpnetsecurity.com/2026/07/13/debian-13-6-security-update-released/) | 20.0 | 20.0 | 42.0 |
+| [中小企業のセキュリティ、今から取り組むなら「SCS評価制度」を参考に 【IPAに聞く 前編】なぜ、いま新制度が？ その狙いと全体像を知る](https://internet.watch.impress.co.jp/docs/special/2121836.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
