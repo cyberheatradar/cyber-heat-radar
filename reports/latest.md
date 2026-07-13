@@ -1,15 +1,18 @@
-# 📡 サイレーダー 2026-07-13 11:00 JST
+# 📡 サイレーダー 2026-07-13 17:00 JST
 
-このレポートは、2026-07-13 05:00 JST〜2026-07-13 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-13 11:00 JST〜2026-07-13 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 45
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 48
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 20
+- [低温だが記録しておくトピック](#low-record-topics): 21
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [iCagenda and Balbooa Forms Joomla Flaws Reportedly Exploited as Zero-Days](#topic-22108) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [USBは“禁止したつもり”が一番危ない 設定ミスを可視化する新ツール公開](#topic-22114) | 32.0 | 20.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +20,123 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-22108"></a>
+
+### 1. iCagenda and Balbooa Forms Joomla Flaws Reportedly Exploited as Zero-Days
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+CISAが、Joomla向け拡張機能のiCagendaとBalbooa Formsに影響する2件の重大な脆弱性を、既知の悪用脆弱性カタログに追加したとされています。
+報道によれば、いずれも深刻度は最大級で、実環境でゼロデイとして悪用された可能性が示されています。
+Joomlaを利用しているサイトでは、拡張機能経由で管理対象の範囲が広がるため、影響確認と更新対応が急がれます。
+公的機関のKEV追加は、少なくとも悪用の懸念が高いことを示すため、優先度を上げる判断材料になります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Joomla本体だけでなく、iCagendaとBalbooa Formsの導入有無とバージョンを確認する。
+- 該当環境では、ベンダー修正の適用状況を点検し、未対応なら優先的に更新計画を立てる。
+- 外部公開中のJoomlaサイトについては、管理画面や関連ログの異常、想定外の変更の有無を確認する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-48939 | 関連CVE | 1.00 | 候補あり（URL 2件以上） |
+| 製品 | Joomla | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [iCagenda and Balbooa Forms Joomla Flaws Reportedly Exploited as Zero-Days](https://thehackernews.com/2026/07/icagenda-and-balbooa-forms-joomla-flaws.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-22114"></a>
+
+### 2. USBは“禁止したつもり”が一番危ない 設定ミスを可視化する新ツール公開
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 32.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+USBの利用制御について、「禁止設定を入れたつもり」でも実際には一部の機器が使えてしまう設定ミスがあり得るとして、その可視化を支援する新しい検証ツールが公開されました。
+USBを起点とする事故やマルウェア感染が続くなかで、設定漏れの確認を改めて促す内容です。
+端末や社内PCのUSB制御は、運用設定のわずかな抜けがそのままリスクにつながるため、机上のルールだけでは不十分です。
+実際に何が利用可能かを確認できると、制御の抜けを早期に見つけやすくなります。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- USB禁止ポリシーは、設定値だけでなく実際の利用可否まで確認する。
+- 例外設定や一部機器の許可が残っていないか、端末ごとに点検する。
+- 運用変更やOS更新の後も、定期的に制御状況を再検証する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [USBは“禁止したつもり”が一番危ない　設定ミスを可視化する新ツール公開](https://atmarkit.itmedia.co.jp/ait/articles/2607/13/news042.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,26 +153,27 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [10,757個中47個からマルウェア検出、三重県がUSBメモリの庁内調査結果公表 感染被害は無し](https://scan.netsecurity.ne.jp/article/2026/07/13/55689.html) | 29.0 | 20.0 | 42.0 |
-| [富士通のFDEがAIエージェントを10日で試作、イオン系スーパーの店長を支援](https://xtech.nikkei.com/atcl/nxt/column/18/00001/11888/) | 26.0 | 20.0 | 42.0 |
-| [OpenAIがGPT-5.6のSol利用制限を一時的に緩和](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-temporarily-relaxes-gpt-56-sol-usage-limits/) | 25.0 | 20.0 | 42.0 |
-| [Joomla向け機能拡張「iCagenda」「Balbooa Forms」の脆弱性悪用に注意](https://www.security-next.com/187193) | 24.0 | 20.0 | 43.0 |
-| [「GNU Wget」にSSRF脆弱性 - 連携利用環境なども注意](https://www.security-next.com/187195) | 22.0 | 20.0 | 42.0 |
-| [BeyondTrustのリモートアクセス製品に複数の脆弱性](https://www.security-next.com/187180) | 22.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年7月5日〜2026年7月11日）](https://www.security-next.com/187178) | 22.0 | 20.0 | 42.0 |
-| [テレビ朝日メディアプレックスに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/13/55688.html) | 21.0 | 20.0 | 42.0 |
-| [朝日放送テレビグループ会社に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/13/55687.html) | 21.0 | 20.0 | 42.0 |
-| [城西国際大学が大学推奨PCの購入先として紹介している加賀ソルネット運営のECサイトに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/13/55686.html) | 21.0 | 20.0 | 42.0 |
-| [加賀ソルネット運営の「アカデミコナビ」に不正アクセス、最大約 17 万件の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/07/13/55685.html) | 21.0 | 20.0 | 42.0 |
-| [京都芸術大学がパソコン・ソフトウェアの斡旋販売で利用している加賀ソルネット運営の「アカデミコナビ」に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/13/55684.html) | 21.0 | 20.0 | 42.0 |
-| [7 / 22 ～ 24 開催「DX 総合EXPO 2026 夏 東京」にエーアイセキュリティラボ出展・登壇](https://scan.netsecurity.ne.jp/article/2026/07/13/55683.html) | 21.0 | 20.0 | 42.0 |
-| [水道料金請求や給水停止をSMSやメールで案内することはない ～「水道料金を支払わなければ給水を停止する」メールに神奈川県が注意呼びかけ](https://scan.netsecurity.ne.jp/article/2026/07/13/55682.html) | 21.0 | 20.0 | 42.0 |
-| [富士電機製 Pupsman のインストーラに複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/13/55681.html) | 21.0 | 20.0 | 42.0 |
-| [エンドポイント管理基盤を生かし幅広いリスクに対応--エクスポージャー管理の実践](https://japan.zdnet.com/article/35250395/) | 21.0 | 20.0 | 42.0 |
-| [論文サイト「arXiv」、投稿の約9割で非公開情報が“丸見え状態”か パスワードや秘密鍵、自宅のGPS座標なども 270万件を調査](https://www.itmedia.co.jp/news/articles/2607/13/news021.html) | 21.0 | 20.0 | 42.0 |
-| [Microsoft、AIによる「Windows」の脆弱性対策へ全面的に移行](https://japan.zdnet.com/article/35250415/) | 21.0 | 20.0 | 42.0 |
-| [Debian 13.6のセキュリティ更新でtrixieの100件超の脆弱性情報を修正](https://www.helpnetsecurity.com/2026/07/13/debian-13-6-security-update-released/) | 20.0 | 20.0 | 42.0 |
-| [中小企業のセキュリティ、今から取り組むなら「SCS評価制度」を参考に 【IPAに聞く 前編】なぜ、いま新制度が？ その狙いと全体像を知る](https://internet.watch.impress.co.jp/docs/special/2121836.html) | 20.0 | 20.0 | 42.0 |
+| [MCPサーバーとAIアシスタントの認証情報を探るスキャン活動を確認](https://isc.sans.edu/diary/rss/33150) | 27.0 | 20.0 | 42.0 |
+| [AI「GLM」を開発した中国Z.ai共同創設者の唐杰氏が「最先端のAIは可能な限りオープンで広くアクセス可能な状態であるべき」と主張](https://gigazine.net/news/20260713-zhipu-ai-co-founder-stay-open/) | 27.0 | 20.0 | 42.0 |
+| [反AI運動の過激派が行方不明になって大騒動、反AI運動グループで何が起こっているのか？](https://gigazine.net/news/20260713-war-with-ai/) | 27.0 | 20.0 | 42.0 |
+| [「Claude Fable 5」のアクセス期間が全ての有料プランで7月19日まで延長、Claude Codeの週次レート制限も50％増量を維持](https://gigazine.net/news/20260713-clude-fable-5-promotion-extended/) | 27.0 | 20.0 | 42.0 |
+| [富士通、自己進化するマルチAIエージェント基盤を開発--進化し続けるAI活用へ](https://japan.zdnet.com/article/35250499/) | 26.0 | 20.0 | 42.0 |
+| [OpenAIのブラウザ「ChatGPT Atlas」終了へ 公開から1年足らずで](https://www.itmedia.co.jp/news/articles/2607/13/news090.html) | 26.0 | 20.0 | 42.0 |
+| [Anthropic、「Fable 5」またも延長 追加費用なしで7月19日まで利用可能に 「GPT-5.6」に対抗？](https://www.itmedia.co.jp/news/articles/2607/13/news081.html) | 26.0 | 20.0 | 42.0 |
+| [Grok Buildが機密情報を伏せずに送信、未読ファイルやGit履歴もアップロードしていたとの調査結果](https://gigazine.net/news/20260713-grok-build-sending-data/) | 25.0 | 20.0 | 43.0 |
+| [チップに隠れたバックドアを検出するハードウェアセキュリティAIアシスタント](https://www.helpnetsecurity.com/2026/07/13/hardware-security-ai-assistant-hidden-backdoors/) | 25.0 | 20.0 | 42.0 |
+| [修正可能なAI脆弱性の99.9%が未修正のまま残存](https://www.helpnetsecurity.com/2026/07/13/ai-infrastructure-security-risks-report/) | 25.0 | 20.0 | 42.0 |
+| [企業がAIアプリケーションをどこで実行するかを見直している理由](https://www.helpnetsecurity.com/2026/07/13/colocation-for-ai-workloads-report/) | 25.0 | 20.0 | 42.0 |
+| [分散ストレージ基盤「NVIDIA AIStore Framework」に脆弱性](https://www.security-next.com/187197) | 22.0 | 20.0 | 42.0 |
+| [「今ネットで販売されているグッズは全て非公式品」 人気ゲーム「めっちゃカメレオン」開発者が注意喚起](https://www.itmedia.co.jp/news/articles/2607/13/news107.html) | 21.0 | 20.0 | 42.0 |
+| [アクティオと日本IBM、調達業務をAIで自動化--年間23万件の購買業務改革へ](https://japan.zdnet.com/article/35250497/) | 21.0 | 20.0 | 42.0 |
+| [RHEL 8、9、10に影響 CVSS 9.8の脆弱性、「修正済み」のはずが再発](https://atmarkit.itmedia.co.jp/ait/articles/2607/13/news043.html) | 21.0 | 20.0 | 42.0 |
+| [日本交通に不正アクセス、電話でタクシー配車不能に 「GO」経由は無事](https://www.itmedia.co.jp/news/articles/2607/13/news088.html) | 21.0 | 20.0 | 42.0 |
+| [セキュリティの一週間（7月6日〜7月12日）](https://www.malwarebytes.com/blog/news/2026/07/a-week-in-security-july-6-july-12) | 20.0 | 20.0 | 42.0 |
+| [SBOM、署名、プロヴェナンスだけではソフトウェアの安全性は判断できない](https://www.helpnetsecurity.com/2026/07/13/sbom-zero-trust-for-code/) | 20.0 | 20.0 | 42.0 |
+| [Cynative: オープンソースの深層調査エージェント](https://www.helpnetsecurity.com/2026/07/13/cynative-open-source-deep-research-agent/) | 20.0 | 20.0 | 42.0 |
+| [iOS版LINEにおけるサービス運用妨害（DoS）につながる脆弱性](https://jvn.jp/vu/JVNVU94039788/) | 20.0 | 20.0 | 42.0 |
+| [GNU Wgetにおけるサーバサイドリクエストフォージェリの脆弱性](https://jvn.jp/vu/JVNVU94203999/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
