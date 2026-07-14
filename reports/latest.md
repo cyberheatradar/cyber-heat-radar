@@ -1,17 +1,15 @@
-# 📡 サイレーダー 2026-07-14 11:00 JST
+# 📡 サイレーダー 2026-07-14 17:00 JST
 
-このレポートは、2026-07-14 05:00 JST〜2026-07-14 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-14 11:00 JST〜2026-07-14 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 51
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 45
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 25
+- [低温だが記録しておくトピック](#low-record-topics): 20
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Defending SaaS-based applications against ShinyHunters OAuth abuse](#topic-22281) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -19,69 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-22281"></a>
-
-### 1. Defending SaaS-based applications against ShinyHunters OAuth abuse
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ク⁠ラ⁠ウ⁠ド</nobr> / <nobr>サ⁠プ⁠ラ⁠イ⁠チ⁠ェ⁠ー⁠ン</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Microsoft Threat Intelligenceは、ShinyHuntersと関連づけられることのある手口と重なる活動を確認したとしています。
-対象には、音声フィッシング、サプライチェーン侵害、ゲストアクセス設定の不備を悪用したSaaSアプリケーションへの攻撃が含まれるとされています。
-SaaS利用が広がる中で、認証や権限設定の不備が被害につながる可能性があるため注目されます。
-OAuthを含む連携機能は利便性が高い一方、設定や運用の弱点があると組織全体に影響が及ぶおそれがあります。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- ゲストアクセスや外部連携アプリの権限付与を定期的に点検し、不要なものは整理する。
-- 音声フィッシングを含む認証情報の詐取対策として、多要素認証や管理者向けの確認手順を徹底する。
-- SaaSの監査ログや同意済みアプリの一覧を確認し、通常と異なる連携や権限変更を早期に検知できるようにする。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| 製品 | Microsoft Defender | 言及あり | 0.80 | — |
-| 製品 | Microsoft 365 | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Defending SaaS-based applications against ShinyHunters OAuth abuse](https://www.microsoft.com/en-us/security/blog/2026/07/13/defending-saas-based-applications-against-shinyhunters-oauth-abuse/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -98,31 +34,26 @@ OAuthを含む連携機能は利便性が高い一方、設定や運用の弱点
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [GitHub Copilotは危険な指示を拒否しても止まらない 研究が暴いたAI安全評価の穴](https://atmarkit.itmedia.co.jp/ait/articles/2607/14/news045.html) | 28.0 | 20.0 | 42.0 |
-| [脆弱なセキュリティがロシアのサイバー攻撃を助長し続ける](https://www.darkreading.com/endpoint-security/weak-security-fuel-russian-cyberattacks) | 28.0 | 20.0 | 42.0 |
-| [大量に存在するAIのうちGIGAZINE読者に人気なAIは一体何なのか調査してみた](https://gigazine.net/news/20260714-gigazine-user-ai-report/) | 27.0 | 20.0 | 42.0 |
-| [「ServiceNow AI Platform」にRCE脆弱性 - 修正版を提供](https://www.security-next.com/187274) | 27.0 | 20.0 | 42.0 |
-| [AI エージェント時代における Okta の役割と「安全な接続」の未来 ～ CEO トッド・マッキノン](https://scan.netsecurity.ne.jp/article/2026/07/14/55691.html) | 26.0 | 20.0 | 42.0 |
-| [AIセキュリティレポート2026](https://research.checkpoint.com/2026/ai-security-report-2026/) | 25.0 | 20.0 | 42.0 |
-| [Dell製PCでBIOSパスワードが数ミリ秒で漏れる 明らかになった“設計上の弱点”](https://atmarkit.itmedia.co.jp/ait/articles/2607/14/news040.html) | 24.0 | 20.0 | 43.0 |
-| [iOS版「Firefox」にアップデート - 悪意あるページのPDF保存時に影響](https://www.security-next.com/187280) | 22.0 | 20.0 | 42.0 |
-| [「Django」にセキュリティ更新 - 複数の脆弱性に対応](https://www.security-next.com/187183) | 22.0 | 20.0 | 42.0 |
-| [5つの事案から見るサイバー攻撃の動向と、企業が採るべき対策](https://news.mynavi.jp/techplus/article/20260714-4533812/) | 21.0 | 20.0 | 42.0 |
-| [今日もどこかで情報漏えい 第50回「2026年6月の情報漏えい」Microsoft Excel 非表示機能による情報漏えい第二弾！](https://scan.netsecurity.ne.jp/article/2026/07/14/55698.html) | 21.0 | 20.0 | 42.0 |
-| [高速バスに乗ったら運転士から私的なショートメール ～ 予約データを運行管理者から不正取得](https://scan.netsecurity.ne.jp/article/2026/07/14/55697.html) | 21.0 | 20.0 | 42.0 |
-| [KDDI の ISP 事業者向けメールシステムへの不正アクセス、JCOM の顧客 2,593,076 名分のメールアドレスが漏えい](https://scan.netsecurity.ne.jp/article/2026/07/14/55696.html) | 21.0 | 20.0 | 42.0 |
-| [農林中央金庫が個人データ 3,176 件を誤提供、改修テストで本番データ混入](https://scan.netsecurity.ne.jp/article/2026/07/14/55695.html) | 21.0 | 20.0 | 42.0 |
-| [Amazon S3 設定不備 ～ 電子チェックインシステム「Tabiq」で 1,060,338 人分の本人確認書類画像がアクセス可能に](https://scan.netsecurity.ne.jp/article/2026/07/14/55694.html) | 21.0 | 20.0 | 42.0 |
-| [アフラック生命保険、不正アクセスのFAQ公開 CPU高負荷から発覚 原因調査中](https://scan.netsecurity.ne.jp/article/2026/07/14/55693.html) | 21.0 | 20.0 | 42.0 |
-| [アフラック不正アクセスで日本理学療法士協会が会員情報の有無を確認](https://scan.netsecurity.ne.jp/article/2026/07/14/55692.html) | 21.0 | 20.0 | 42.0 |
-| [7 / 23 ～ 25 開催「TECH BEAT Shizuoka 2026」に HENNGE が出展](https://scan.netsecurity.ne.jp/article/2026/07/14/55690.html) | 21.0 | 20.0 | 42.0 |
-| [空から数千機、24時間365日の攻撃──ウクライナ防空副司令官が語る”安いドローン”の脅威 島国・日本は耐えられるか](https://www.itmedia.co.jp/news/articles/2607/08/news027.html) | 21.0 | 20.0 | 42.0 |
-| [Windowsアップデートは「3日以内」に完了へ IT部門が工数をかけずに乗り切る方法は？](https://www.itmedia.co.jp/enterprise/articles/2607/14/news032.html) | 21.0 | 20.0 | 42.0 |
-| [多要素認証も飛び越えるフィッシング iOS 27の"新たな防波堤"](https://www.itmedia.co.jp/enterprise/articles/2607/14/news043.html) | 21.0 | 20.0 | 42.0 |
-| [「SCS評価制度」で自社のセキュリティをどう強化する？ 中小企業の情シスが今からできる備え方 【IPAに聞く 後編】取得への準備から、経営層・現場の巻き込みまで](https://internet.watch.impress.co.jp/docs/special/2121927.html) | 20.0 | 20.0 | 42.0 |
-| [日本企業も無関係ではない？ 英国の認証制度「Cyber Essentials」に重要な更新、クラウドやMFAなどで厳格化【海の向こうの“セキュリティ”】](https://internet.watch.impress.co.jp/docs/column/security/2123834.html) | 20.0 | 20.0 | 42.0 |
-| [連邦支援が失われる中、州政府が独自の選挙防衛ネットワークを構築](https://cyberscoop.com/trump-administration-eac-firings-doj-election-officials-threat/) | 20.0 | 20.0 | 42.0 |
-| [日本最大のタクシー事業者、サイバー攻撃を受けてシステム停止](https://www.bleepingcomputer.com/news/security/japans-largest-taxi-operator-shuts-systems-after-cyberattack/) | 20.0 | 20.0 | 42.0 |
+| [ランサムウェア犯も失敗したくない ホワイトハッカーが明かす“身代金ビジネス”の実態](https://www.itmedia.co.jp/enterprise/articles/2607/14/news077.html) | 29.0 | 30.0 | 42.0 |
+| [AIエージェントと人間を見分けるCloudflareの新技術「Precursor」が登場、人間っぽく振る舞うAIをサイト内の行動から見破る](https://gigazine.net/news/20260714-cloudflare-precursor/) | 29.0 | 20.0 | 42.0 |
+| [AI攻撃への最善の防御は、懐疑的な人間だった](https://www.helpnetsecurity.com/2026/07/14/ai-attacks-skeptical-human/) | 27.0 | 20.0 | 42.0 |
+| [孫正義氏が予測する2040年--「AI企業に仕事を奪われる」時代の経営戦略](https://japan.zdnet.com/article/35250537/) | 26.0 | 20.0 | 42.0 |
+| [エフサスとPFN、オンプレミス生成AI基盤で国産LLMを使用可能に](https://japan.zdnet.com/article/35250525/) | 26.0 | 20.0 | 42.0 |
+| [フィッシングURLが約4割減 - リンク使い回しも影響](https://www.security-next.com/186336) | 22.0 | 20.0 | 42.0 |
+| [EUとイギリスがロシアの政府系ハッカーらを制裁対象に追加、「ウクライナへの支援は揺るがない」とイギリス外相が明言](https://gigazine.net/news/20260714-eu-russian-cyber-spies/) | 22.0 | 20.0 | 42.0 |
+| [ネットバンキングの不正送金件数が約1.8倍に - 被害額は半減](https://www.security-next.com/186757) | 22.0 | 20.0 | 42.0 |
+| [日立システムズと三井物産セキュアディレクション、サイバーセキュリティ領域で協業](https://japan.zdnet.com/article/35250529/) | 21.0 | 20.0 | 42.0 |
+| [EDRだけでは防げない 端末の脆弱性管理はなぜセキュリティ部門ではなくIT運用部門が主導すべきなのか](https://atmarkit.itmedia.co.jp/ait/articles/2607/14/news087.html) | 21.0 | 20.0 | 42.0 |
+| [ソフトバンク、OpenAIのAIモデルを使用する脆弱性対策サービスを本格販売](https://japan.zdnet.com/article/35250524/) | 21.0 | 20.0 | 42.0 |
+| [ニチレイに不正アクセス、冷凍食品の生産や入出庫に関する業務に影響](https://xtech.nikkei.com/atcl/nxt/news/24/03305/) | 21.0 | 20.0 | 42.0 |
+| [マネフォ上方修正、売上最大623億円に GitHub不正アクセス影響は「限定的」](https://www.itmedia.co.jp/news/articles/2607/14/news070.html) | 21.0 | 20.0 | 42.0 |
+| [Pentagon、CMMCフェーズ2を停止し請負業者向けサイバーセキュリティ規則を再検討](https://www.securityweek.com/pentagon-suspends-cmmc-phase-2-as-it-rethinks-contractor-cybersecurity-rules/) | 20.0 | 20.0 | 42.0 |
+| [地下ハッキングフォーラムで新たなチュートリアルが約2倍に増加](https://www.helpnetsecurity.com/2026/07/14/underground-hacking-forums-tutorials-research/) | 20.0 | 20.0 | 42.0 |
+| [Microsoft Maps、ShinyHunters関連のSalesforceデータ窃取を3つの経路で1年にわたり追跡](https://thehackernews.com/2026/07/microsoft-maps-year-long-shinyhunters.html) | 20.0 | 20.0 | 42.0 |
+| [セキュリティ研究で本物の住人の代わりとなる偽のスマートホーム住人](https://www.helpnetsecurity.com/2026/07/14/iot-smart-home-security-research/) | 20.0 | 20.0 | 42.0 |
+| [あなたのベンダーのさらに先にいるベンダーが、実は最大の侵害リスクかもしれない](https://www.helpnetsecurity.com/2026/07/14/vendor-breach-risk-video/) | 20.0 | 20.0 | 42.0 |
+| [Chatto: プライバシーを重視したオープンソースのチームメッセージングツール](https://www.helpnetsecurity.com/2026/07/14/chatto-self-hosted-chat-app-privacy/) | 20.0 | 20.0 | 42.0 |
+| [今すぐ応募できるサイバーセキュリティ求人：2026年7月14日](https://www.helpnetsecurity.com/2026/07/14/cybersecurity-jobs-available-right-now-july-14-2026/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
