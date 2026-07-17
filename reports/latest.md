@@ -1,18 +1,18 @@
-# 📡 サイレーダー 2026-07-17 11:00 JST
+# 📡 サイレーダー 2026-07-17 17:00 JST
 
-このレポートは、2026-07-17 05:00 JST〜2026-07-17 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-17 11:00 JST〜2026-07-17 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 63
+- 観測トピック数: 53
 - [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 36
+- [低温だが記録しておくトピック](#low-record-topics): 26
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [米CISA、「FortiSandbox」「SharePoint」の脆弱性悪用を警告](#topic-22941) | 33.0 | 20.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [ACR Stealer: Two observed intrusion chains amid increased threat activity](#topic-22943) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [CVE-2026-58644: CISA KEV catalog addition](#topic-23002) | 41.0 | 64.0 | 51.0 | 音声 | 温度感上位枠 |
+| 2 | [CISA urges immediate action on actively exploited Fortinet flaws](#topic-22999) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -20,137 +20,134 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-22941"></a>
+<a id="topic-23002"></a>
 
-### 1. 米CISA、「FortiSandbox」「SharePoint」の脆弱性悪用を警告
+### 1. CVE-2026-58644: CISA KEV catalog addition
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>温⁠度⁠感</nobr> | 41.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
+| <nobr>確⁠度</nobr> | 51.0 |
+
+#### 概要
+
+CISAは、Microsoft SharePoint Serverに影響するCVE-2026-58644をKnown Exploited Vulnerabilities（KEV）カタログに追加しました。
+材料によると、この問題は重要度の高い脆弱性として扱われており、米連邦民間行政機関には2026年7月19日までの対応が求められています。
+KEVへの追加は、実際に悪用が確認されている、または少なくとも優先対応が必要な脆弱性であることを示します。
+SharePointは組織内で広く使われるため、影響範囲が大きくなりやすい点が注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 対象のSharePoint ServerがCVE-2026-58644の修正適用済みか確認する。
+- 資産管理上、公開・社内向けのSharePointインスタンスを洗い出し、未対応のものを優先する。
+- CISA KEV対象であることを踏まえ、通常より早い期限でパッチ適用と状況確認を進める。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-58644 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+| 製品 | Microsoft SharePoint | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-58644](https://nvd.nist.gov/vuln/detail/CVE-2026-58644) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds Exploited SharePoint RCE Zero-Day CVE-2026-58644 to KEV](https://thehackernews.com/2026/07/cisa-adds-exploited-sharepoint-rce-zero.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-22999"></a>
+
+### 2. CISA urges immediate action on actively exploited Fortinet flaws
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
 | <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-米CISAは、Fortinetのマルウェア解析製品「FortiSandbox」とMicrosoftの「SharePoint」に関連する脆弱性について、悪用が確認されているとして注意を呼びかけました。
-対象製品を利用している組織では、影響範囲の確認や対策状況の見直しが必要です。
-脆弱性が実際に悪用されているとされるため、単なる未修正リスクではなく、早期対応の優先度が高い話題です。
-広く使われる製品に関わるため、個別組織だけでなく多くの運用環境に影響し得ます。
+CISAが、FortinetのFortiSandboxに存在する2件の脆弱性について、政府機関に対して早急な対応を求めたと報じられています。
+これらはすでに悪用が観測されているとされ、対象環境では優先的な修正が必要な状況です。セキュリティ製品そのものの脆弱性は、保護の起点が崩れるため影響が大きくなりやすいです。
+特に悪用が確認されている場合、対応の遅れが侵害リスクの増大につながります。
 
 #### 温度感の理由
 
 ##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
+- 実悪用・ゼロデイ文脈。
 
 ##### 実務影響
-- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+- 悪用情報あり。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- FortiSandboxとSharePointの該当バージョンや構成を確認し、ベンダーの修正情報と照合する。
-- 公開状況を点検し、不要な外部露出やアクセス権の過剰付与がないか見直す。
-- 関連ログや監視アラートを確認し、異常なアクセスや改ざんの兆候がないか継続監視する。
+- FortiSandboxを利用している場合は、ベンダー情報とCISAの勧告を確認し、優先度を上げて更新・修正を適用する。
+- 公開されている影響範囲と自組織の構成を照らし合わせ、該当有無を速やかに確認する。
+- 関連機器や管理経路について、通常より厳しめに監視し、不審な挙動や設定変更の兆候を点検する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2025-61624 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2026-21643 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
+| 脆弱性 | CVE-2026-25089 | 関連CVE | 1.00 | 候補あり（URL 2件以上） |
+| 脆弱性 | CVE-2026-39808 | 関連CVE | 1.00 | 候補あり（URL 3件以上） |
+| 脆弱性 | CVE-2026-39813 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
 | ベンダー | Fortinet | 言及あり | 0.80 | — |
-| 製品 | Microsoft SharePoint | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [米CISA、「FortiSandbox」「SharePoint」の脆弱性悪用を警告](https://www.security-next.com/187509) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA urges immediate action on actively exploited Fortinet flaws](https://www.bleepingcomputer.com/news/security/cisa-warns-feds-to-patch-exploited-fortinet-fortisandbox-flaws-by-sunday/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
-- SNS反応: 観測あり・信頼度: 低。
+- SNS反応: 観測あり・信頼度: 高。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
-
-<a id="topic-22943"></a>
-
-### 2. ACR Stealer: Two observed intrusion chains amid increased threat activity
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Microsoftの観測によると、2026年4月下旬から6月中旬にかけて、ACR Stealerの活動が顧客環境で増加していました。
-報告では、ClickFixを用いた誘導を通じて、ブラウザーの認証情報やトークン、機密文書が狙われたとされています。
-認証情報やセッショントークンが盗まれると、単一端末の感染にとどまらず、クラウドや社内サービスへの不正アクセスにつながるおそれがあります。
-企業環境を対象にした事例であり、フィッシングやソーシャルエンジニアリング対策の重要性が改めて示されています。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- ブラウザー保存情報やセッショントークンの保護・無効化手順を確認し、多要素認証の有効性を点検する。
-- ClickFixのようなユーザー操作を促す誘導に対し、社内で注意喚起を行い、不審な操作要求を報告できる体制を整える。
-- EDRやSIEMで、認証情報の不自然な利用や機密文書への異常なアクセスを早期検知できるよう監視を強化する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| ベンダー | Google | 言及あり | 0.80 | — |
-| 製品 | Microsoft Defender | 言及あり | 0.80 | — |
-| 製品 | Google Chrome | 言及あり | 0.80 | — |
-| 製品 | Microsoft 365 | 言及あり | 0.80 | — |
-| 製品 | Microsoft SharePoint | 言及あり | 0.80 | — |
-| 製品 | Chromium | 言及あり | 0.80 | — |
-| マルウェア | Latrodectus | 主題 | 0.80 | — |
-| マルウェア | ZLib | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [ACR Stealer: Two observed intrusion chains amid increased threat activity](https://www.microsoft.com/en-us/security/blog/2026/07/16/acr-stealer-two-observed-intrusion-chains-amid-increased-threat-activity/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
+- 技術・開発者系ソース観測: 観測なし。
 
 ---
 
@@ -169,42 +166,32 @@ Microsoftの観測によると、2026年4月下旬から6月中旬にかけて�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [オーミケンシへのランサムウェア攻撃、外部のクラウドストレージサービスへのデータ送信を確認](https://scan.netsecurity.ne.jp/article/2026/07/17/55728.html) | 29.0 | 30.0 | 42.0 |
-| [Coca-Cola傘下のFairlifeでランサムウェア攻撃、米国の乳製品生産が停止](https://www.bleepingcomputer.com/news/security/coca-cola-says-fairlife-ransomware-attack-halts-us-dairy-production/) | 28.0 | 30.0 | 42.0 |
-| [Anubis ransomware：知っておくべきこと](https://www.fortra.com/blog/anubis-ransomware) | 28.0 | 30.0 | 42.0 |
-| [新たなClickLock macOSマルウェア、ユーザーをだましてログインパスワードを入力させる](https://www.bleepingcomputer.com/news/security/new-clicklock-macos-malware-traps-users-into-revealing-login-password/) | 28.0 | 20.0 | 42.0 |
-| [Anthropic、AIを活用する若手人材とNPOを結ぶ支援プログラム開始](https://japan.zdnet.com/article/35250710/) | 26.0 | 20.0 | 42.0 |
-| [OpenAIの新音声モデル「GPT-Live」を試してみた--スムーズな会話はほとんど人間のよう](https://japan.zdnet.com/article/35250442/) | 26.0 | 20.0 | 42.0 |
-| [生成AIバブルの崩壊は「必然」 それでも気にする必要がない訳](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600007/070700221/) | 26.0 | 20.0 | 42.0 |
-| [コーディングエージェントは不要 現場がAI活用でアプリ開発者に](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100111/071300181/) | 26.0 | 20.0 | 42.0 |
-| [AI BOM（AI Bill of Materials）](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600009/070700227/) | 26.0 | 20.0 | 42.0 |
-| [AI、自動化、そして攻撃：Unit 42の2026年グローバルインシデントレスポンスレポートを読み解く](https://unit42.paloaltonetworks.com/ai-incident-response-report/) | 25.0 | 20.0 | 42.0 |
-| [OpenAI、GPT-5.6がまれにファイルを削除する不具合を認める――「正直なミス」と説明](https://www.theregister.com/ai-and-ml/2026/07/16/openai-admits-gpt-56-occasionally-deletes-files-but-its-an-honest-mistake/5274008) | 25.0 | 20.0 | 42.0 |
-| [Agentic AIは制御困難：適切なセキュリティ質問を投げかけよ](https://www.darkreading.com/cybersecurity-operations/agentic-ai-untamable-ask-the-right-security-questions) | 25.0 | 20.0 | 42.0 |
-| [100ドル未満でオープンウェイトAIモデルを汚染する研究者](https://www.theregister.com/ai-and-ml/2026/07/16/researcher-poisons-open-weight-ai-model-for-under-100/5273880) | 25.0 | 20.0 | 42.0 |
-| [Microsoft Defenderに脆弱性、Windows PCのディスク容量を枯渇させる攻撃手法を発見](https://news.mynavi.jp/techplus/article/20260717-4705047/) | 21.0 | 20.0 | 42.0 |
-| [AIで巧妙化するフィッシング攻撃 企業に求められる「行動優先」のトレーニングとは](https://ascii.jp/elem/000/004/419/4419596/?rss=) | 21.0 | 20.0 | 42.0 |
-| [攻撃するAIと防御するAI 日本企業のセキュリティ対策にいま何が必要か？](https://ascii.jp/elem/000/004/419/4419594/?rss=) | 21.0 | 20.0 | 42.0 |
-| [欧州委員会、GoogleにAIアシスタントの相互運用と検索データ共有を命令──Googleは「安全性を損なう」と反発](https://www.itmedia.co.jp/news/articles/2607/17/news063.html) | 21.0 | 20.0 | 42.0 |
-| [Microsoftでも発生した「機械のID」を狙う攻撃とは？ NHIのリスクをNECが解説](https://news.mynavi.jp/techplus/article/20260717-4708863/) | 21.0 | 20.0 | 42.0 |
-| [2日間全科目休講 ～ 札幌国際大学のアカウントがフィッシングメール被害](https://scan.netsecurity.ne.jp/article/2026/07/17/55730.html) | 21.0 | 20.0 | 42.0 |
-| [フラウ・インターナショナル業務委託先に不正アクセス、過去に問い合わせた顧客の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/07/17/55729.html) | 21.0 | 20.0 | 42.0 |
-| [エクセルファイルに個人情報が記載されたシートがあることに気づかず公開](https://scan.netsecurity.ne.jp/article/2026/07/17/55727.html) | 21.0 | 20.0 | 42.0 |
-| [「QRでアクセスするので該当者しか閲覧できない」と思い込み ～ マラソンのボランティアの個人情報閲覧可能に](https://scan.netsecurity.ne.jp/article/2026/07/17/55726.html) | 21.0 | 20.0 | 42.0 |
-| [2026年サイバー新法とSCS制度に対し企業法務が今すべき実務対応について解説](https://scan.netsecurity.ne.jp/article/2026/07/17/55725.html) | 21.0 | 20.0 | 42.0 |
-| [マイクロソフトが 7 月のセキュリティ情報公開、悪用の事実を確認済みの脆弱性が 2 件](https://scan.netsecurity.ne.jp/article/2026/07/17/55724.html) | 21.0 | 20.0 | 42.0 |
-| [HYPER SBI 2 のインストーラに DLL 読み込みに関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/17/55723.html) | 21.0 | 20.0 | 42.0 |
-| [スリーシェイクのエンジニア 4 名が翻訳を担当『セキュアAPI【リフロー型】 設計・構築・実装を貫く原則』7 / 15発売](https://scan.netsecurity.ne.jp/article/2026/07/17/55722.html) | 21.0 | 20.0 | 42.0 |
-| [サイバー攻撃による事業停止を最小限に ～ 演習を交えて実効性を高める中小企業向け BCP 策定支援](https://scan.netsecurity.ne.jp/article/2026/07/17/55721.html) | 21.0 | 20.0 | 42.0 |
-| [鉄道係員に対する暴力行為、飲酒有りが45.9％を占め 加害者年齢は60代以上が最多](https://scan.netsecurity.ne.jp/article/2026/07/17/55720.html) | 21.0 | 20.0 | 42.0 |
-| [QRコードフィッシングが増加傾向に--身を守るために知っておくべきこと](https://japan.zdnet.com/article/35250661/) | 21.0 | 20.0 | 42.0 |
-| [Entra IDの標準認証がパスキーに SMS認証が使えなくなるのはいつ？](https://www.itmedia.co.jp/enterprise/articles/2607/17/news019.html) | 21.0 | 20.0 | 42.0 |
-| [「AI駆動型ワーム」の脅威 自律的に脆弱性を見つけて感染](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100113/070700190/) | 21.0 | 20.0 | 42.0 |
-| [GMOの在宅勤務廃止は間違っていない？ ワサビのインシデントから考える企業防衛](https://atmarkit.itmedia.co.jp/ait/articles/2607/17/news039.html) | 21.0 | 20.0 | 42.0 |
-| [トヨタの数年をかけたゼロトラスト改革、行く手を阻んだ最大の壁とは？](https://atmarkit.itmedia.co.jp/ait/articles/2607/17/news021.html) | 21.0 | 20.0 | 42.0 |
-| [Microsoft、7月の月例更新で約570件を修正 悪用済みゼロデイ2件にまず対応を](https://www.itmedia.co.jp/enterprise/articles/2607/17/news042.html) | 21.0 | 20.0 | 42.0 |
-| [ニチレイのサイバー攻撃被害、外食チェーンを直撃 KFC全店にも影響広がる](https://atmarkit.itmedia.co.jp/ait/articles/2607/17/news050.html) | 21.0 | 20.0 | 42.0 |
-| [物理的にUSB Type-Cポートを塞ぎ、情報漏えいを防ぐポートロック製品、サンワサプライが発売](https://internet.watch.impress.co.jp/docs/news/2125822.html) | 20.0 | 20.0 | 42.0 |
+| [Coca-Cola、ランサムウェア攻撃を受けて米国のFairlife生産を停止](https://www.securityweek.com/coca-cola-suspends-us-fairlife-production-due-to-ransomware-attack/) | 28.0 | 30.0 | 42.0 |
+| [NECがTNFD対応のAIサービスを26年9月に提供開始、調査の作業時間を9割削減](https://xtech.nikkei.com/atcl/nxt/column/18/03682/071500009/) | 28.0 | 20.0 | 42.0 |
+| [OpenAIのAIエージェントで中古車売買の顧客対応を自動化、サポート解決率50％向上・業務時間80％短縮・離脱顧客12％復帰などを達成した事例](https://gigazine.net/news/20260717-openai-cars24-agent/) | 27.0 | 20.0 | 42.0 |
+| [Grokを悪用して児童性的虐待画像を作成した男性をSpaceXAIが提訴](https://gigazine.net/news/20260717-grok-csam-sue/) | 27.0 | 20.0 | 42.0 |
+| [ローカルAIモデルをAIエージェントとして使える「LM Studio Bionic」が登場、コーディングやスライド作成に対応しクラウドモデルも使用可能](https://gigazine.net/news/20260717-lm-studio-bionic/) | 27.0 | 20.0 | 42.0 |
+| [GoogleのAIまとめサービス・NotebookLMが「Gemini Notebook」に改名、GoogleサービスやGeminiとの連携も強化](https://gigazine.net/news/20260717-gemini-notebook/) | 27.0 | 20.0 | 42.0 |
+| [Netflixでは生成AIが300作品でポスプロ工程などに活用されている](https://gigazine.net/news/20260717-netflix-gen-ai-title/) | 27.0 | 20.0 | 42.0 |
+| [自律するAIエージェントの本番投入に潜むリスク、PwCが示す統制保証水準「AI-CAL」](https://japan.zdnet.com/article/35250726/) | 26.0 | 20.0 | 42.0 |
+| [みずほFGがAIエージェント3000体構想、銀行業務全体をAI前提で再設計へ](https://xtech.nikkei.com/atcl/nxt/column/18/00001/11900/) | 26.0 | 20.0 | 42.0 |
+| [中国AIも“ミュトス級”に到達か Moonshot AIが「Kimi K3」発表、一部ベンチでFable 5抜き首位](https://www.itmedia.co.jp/news/articles/2607/17/news079.html) | 26.0 | 20.0 | 42.0 |
+| [AI音声フィッシングを成立させるのは声ではなくスクリプトです](https://www.helpnetsecurity.com/2026/07/17/research-ai-voice-phishing/) | 25.0 | 20.0 | 42.0 |
+| [今週の新しい情報セキュリティ製品：2026年7月17日](https://www.helpnetsecurity.com/2026/07/17/new-infosec-products-of-the-week-july-17-2026/) | 25.0 | 20.0 | 42.0 |
+| [データ分析可視化製品「Ivanti Xtraction」に複数脆弱性](https://www.security-next.com/187544) | 22.0 | 20.0 | 42.0 |
+| [「FortiOS」に複数脆弱性 - アップデートで修正](https://www.security-next.com/187537) | 22.0 | 20.0 | 42.0 |
+| [Microsoftが乗っ取られたアカウントをデータ保護のため永久停止、その後反発を受け復旧](https://gigazine.net/news/20260717-microsoft-restore-hacked-account/) | 22.0 | 20.0 | 42.0 |
+| [「Dell PowerFlex」に深刻な脆弱性 - 6月の更新で修正済み](https://www.security-next.com/187531) | 22.0 | 20.0 | 42.0 |
+| [社交不安を抱える人は「歩く人が自分の方に向かってきている」と感じやすいとの研究結果](https://gigazine.net/news/20260717-social-anxiety-perception-nearing-crowds/) | 22.0 | 20.0 | 42.0 |
+| [Webエージェント時代のXSSとなりつつあるプロンプトインジェクション](https://www.helpnetsecurity.com/2026/07/17/xss-web-agent-prompt-injection/) | 21.0 | 26.0 | 42.0 |
+| [キオクシア、約370億円の支払い命令に「到底容認できない」 控訴含む法的手段へ 米特許訴訟で](https://www.itmedia.co.jp/news/articles/2607/17/news097.html) | 21.0 | 20.0 | 42.0 |
+| [2030年代の対応では手遅れ？ 暗号化されたデータを将来暴くサイバー攻撃、対策の道筋](https://atmarkit.itmedia.co.jp/ait/articles/2607/17/news057.html) | 21.0 | 20.0 | 42.0 |
+| [公開直後に悪用された新たなSharePoint脆弱性](https://www.securityweek.com/fresh-sharepoint-vulnerability-exploited-soon-after-disclosure/) | 20.0 | 20.0 | 42.0 |
+| [アジア太平洋地域で、EC・予約サービスを狙うAIボットの攻撃が急増、Akamaiが警告](https://internet.watch.impress.co.jp/docs/news/2126090.html) | 20.0 | 20.0 | 42.0 |
+| [セキュリティ予算の無駄を削減する5つのステップ](https://www.helpnetsecurity.com/2026/07/17/security-budget-waste-video/) | 20.0 | 20.0 | 42.0 |
+| [341,263台のハードドライブを対象にした、4TBから20TB超までの信頼性調査](https://www.helpnetsecurity.com/2026/07/17/hard-drive-reliability-2026-4tb-20tb/) | 20.0 | 20.0 | 42.0 |
+| [CISA ICS Advisory / ICS Medical Advisory（2026年07月16日）](https://jvn.jp/vu/JVNVU95874748/) | 20.0 | 20.0 | 42.0 |
+| [一部のHTTP/2サーバーにおけるフロー制御に起因したサービス拒否（DoS）の脆弱性](https://jvn.jp/vu/JVNVU90338324/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
