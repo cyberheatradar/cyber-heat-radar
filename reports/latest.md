@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-07-18 17:00 JST
+# 📡 サイレーダー 2026-07-19 05:00 JST
 
-このレポートは、2026-07-18 11:00 JST〜2026-07-18 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-18 17:00 JST〜2026-07-19 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 28
+- 観測トピック数: 31
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 3
+- [低温だが記録しておくトピック](#low-record-topics): 6
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,9 +34,12 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [「Claude Fable 5」サブスクに統合 Max・Team Premiumプラン対象](https://www.itmedia.co.jp/news/articles/2607/18/news019.html) | 26.0 | 20.0 | 42.0 |
-| [佐川急便、約7万人分の個人情報漏えいか 「スマートクラブ」通知メールに別人の氏名など表示](https://www.itmedia.co.jp/news/articles/2607/18/news021.html) | 21.0 | 20.0 | 42.0 |
-| [佐川急便 7万人分の情報漏えいか](https://news.yahoo.co.jp/pickup/6588396?source=rss) | 20.0 | 20.0 | 42.0 |
+| [Microsoft、顧客を狙うACR Stealer攻撃の急増を警告](https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/) | 28.0 | 20.0 | 42.0 |
+| [WordPressの新たな高深刻度脆弱性2件、今すぐ修正を！](https://www.helpnetsecurity.com/2026/07/18/wordpress-vulnerabilities-wp2shell-cve-2026-60137-cve-2026-60137/) | 24.0 | 46.0 | 50.0 |
+| [7-Zipが悪意あるアーカイブで悪用可能なRCE脆弱性を修正、今すぐ更新を](https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/) | 24.0 | 38.0 | 42.0 |
+| [WordPress Coreの「wp2shell」RCE脆弱性に公開エクスプロイト、今すぐパッチ適用を](https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/) | 24.0 | 38.0 | 42.0 |
+| [無料でWindows・macOS・Linux用のデスクトップ同期アプリとセルフホスト可能なサーバーアプリでファイルの双方向と一方向同期・自動バックグラウンド同期などが複数ユーザーで可能な「Sync-in」](https://gigazine.net/news/20260718-sync-in/) | 22.0 | 20.0 | 42.0 |
+| [年齢確認の未来：顔データはデバイスから離れない](https://www.bleepingcomputer.com/news/security/the-future-of-age-verification-your-face-never-leaves-your-device/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
