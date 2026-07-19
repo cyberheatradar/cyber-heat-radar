@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-07-19 17:00 JST
+# 📡 サイレーダー 2026-07-20 05:00 JST
 
-このレポートは、2026-07-19 11:00 JST〜2026-07-19 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-19 17:00 JST〜2026-07-20 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 27
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 31
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 5
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [SonicWall SMA Zero-Days Exploited Before Disclosure to Gain Root Access](#topic-23229) | 45.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,70 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-23229"></a>
+
+### 1. SonicWall SMA Zero-Days Exploited Before Disclosure to Gain Root Access
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 45.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+SonicWallのSecure Mobile Access（SMA）1000シリーズVPN機器について、公開前からゼロデイとして悪用されたとみられる事案が報じられています。
+調査を行ったVolexityは、関連する活動をUTA0533として追跡しているとされています。
+VPN機器は社内アクセスの入口になりやすく、侵害されると組織内への横展開や認証情報の悪用につながるおそれがあります。
+公開前の悪用が示唆されているため、パッチ適用だけでなく監視と封じ込めの優先度が高い話題です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- SonicWall SMA 1000シリーズの利用有無を確認し、ベンダー告知や更新情報を優先的に追う。
+- 認証ログ、管理者操作、VPN接続履歴などで不審なアクセスや権限昇格の兆候を点検する。
+- 外部公開面の最小化、管理インターフェースへのアクセス制御、MFAの有効化など基本対策を再確認する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-15409 | 関連CVE | 1.00 | 候補あり（URL 4件以上） |
+| 脆弱性 | CVE-2026-15410 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
+| ベンダー | SonicWall | 言及あり | 0.80 | — |
+| 製品 | SonicWall SMA | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [SonicWall SMA Zero-Days Exploited Before Disclosure to Gain Root Access](https://thehackernews.com/2026/07/sonicwall-sma-zero-days-exploited.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,8 +99,11 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [高危険度のWordPress脆弱性と偽のOAuth IDによるサインインログ回避](https://www.helpnetsecurity.com/2026/07/19/week-in-review-oauth-client-ids-spoofed-sonicwall-sma-appliances-targeted-in-zero-day-attacks/) | 22.0 | 20.0 | 43.0 |
-| [フィッシング詐欺に異変、国内ISPのメールアカウント悪用が急増](https://news.mynavi.jp/techplus/article/20260719-4712169/) | 21.0 | 20.0 | 42.0 |
+| [HackersがViPNetソフトウェアを悪用してロシア政府機関を標的にする攻撃](https://www.bleepingcomputer.com/news/security/hackers-abuse-vipnet-software-to-target-russian-govt-agencies/) | 28.0 | 20.0 | 42.0 |
+| [UAC-0145がClickFixのCAPTCHAを悪用し、ウクライナの端末にマルウェアを感染させる](https://thehackernews.com/2026/07/uac-0145-uses-clickfix-captchas-to.html) | 28.0 | 20.0 | 42.0 |
+| [Claude Fable 5が一部のサブスクプランで使用可能に](https://gigazine.net/news/20260719-claude-fable-5-plan/) | 27.0 | 20.0 | 42.0 |
+| [AIエージェントと外部サービスの接続でリスク範囲が急拡大](https://www.theregister.com/ai-and-ml/2026/07/19/connecting-ai-agents-to-outside-services-explodes-the-risk-radius/5274640) | 25.0 | 20.0 | 42.0 |
+| [Hikvision Intelligent Security APIへのスキャン活動](https://isc.sans.edu/diary/rss/33164) | 22.0 | 20.0 | 42.0 |
 
 ---
 
