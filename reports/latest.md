@@ -1,20 +1,23 @@
-# 📡 サイレーダー 2026-07-23 17:00 JST
+# 📡 サイレーダー 2026-07-24 05:00 JST
 
-このレポートは、2026-07-23 11:00 JST〜2026-07-23 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-23 17:00 JST〜2026-07-24 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 51
-- [音声で扱う想定のトピック](#audio-topics): 3
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 22
+- 観測トピック数: 100
+- [音声で扱う想定のトピック](#audio-topics): 7
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 68
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [2026-009: Critical Vulnerabilities in Microsoft SharePoint](#topic-23476) | 62.0 | 74.0 | 67.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
-| 2 | [「SharePoint」「Check Point」の脆弱性悪用で警告 - 米当局](#topic-23931) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 3 | [「使ってはいけないリスト」の生成AI、マルウェア配布に使われるクラウドアプリ](#topic-23936) | 34.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
-| 4 | [Shadow AI is becoming enterprise security’s biggest blind spot](#topic-23906) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [TA488 Targets Zimbra Mailservers with Half-Click Exploits](#topic-23959) | 58.0 | 56.0 | 56.0 | 音声 | 温度感上位枠 |
+| 2 | [Russia-backed threat actor targets Western organizations in phishing campaign](#topic-23969) | 45.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 3 | [Chaos ransomware's msaRAT: Living off the browser to build a covert C2 channel](#topic-24041) | 38.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 4 | [Russian Espionage Group Exploited Zimbra Zero-Day to Steal Mail and 2FA Codes](#topic-23957) | 37.0 | 38.0 | 49.0 | 音声 | 温度感上位枠 |
+| 5 | [Check Point warns of SmartConsole zero-day exploited in attacks](#topic-24060) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 6 | [What Happened Between OpenAI and Hugging Face?](#topic-24004) | 35.0 | 45.0 | 43.0 | 音声 | AI×Security枠 |
+| 7 | [Oracle drops 1,449 security patches like it's the new normal](#topic-23971) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
 
 ---
 
@@ -22,229 +25,41 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-23931"></a>
+<a id="topic-23959"></a>
 
-### 1. 「SharePoint」「Check Point」の脆弱性悪用で警告 - 米当局
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-米サイバーセキュリティインフラセキュリティ庁（CISA）が、Microsoft SharePointとCheck Point Software TechnologiesのSmartConsoleに関連する脆弱性について、悪用が確認されているとして注意喚起しました。
-公開情報では、これらの脆弱性に関して実際の悪用が懸念されている段階とされています。広く使われる製品に関わるため、影響範囲が大きくなり得ます。
-悪用観測がある場合、未対応環境は侵害リスクの上昇につながるため、早期の確認と対応が重要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 該当するSharePointおよびSmartConsoleの利用有無とバージョンを確認し、ベンダーやCISAの案内に沿って修正・緩和策を適用する。
-- 外部公開されている管理画面や関連サービスの露出を見直し、不要な公開を避ける。
-- 監視ログや認証履歴を点検し、通常と異なるアクセスや操作の痕跡がないか確認する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-16232 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-50522 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
-| ベンダー | Check Point | 言及あり | 0.80 | — |
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| 製品 | Microsoft SharePoint | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [「SharePoint」「Check Point」の脆弱性悪用で警告 - 米当局](https://www.security-next.com/187752) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-23936"></a>
-
-### 2. 「使ってはいけないリスト」の生成AI、マルウェア配布に使われるクラウドアプリ
+### 1. TA488 Targets Zimbra Mailservers with Half-Click Exploits
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>T⁠T⁠P</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>I⁠o⁠C</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>ボ⁠ッ⁠ト⁠ネ⁠ッ⁠ト</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 34.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
+| <nobr>温⁠度⁠感</nobr> | 58.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 56.0 |
+| <nobr>確⁠度</nobr> | 56.0 |
 
 #### 概要
 
-Netskopeの調査として、組織内で利用が制限されている生成AIアプリケーションや、情報漏えいのリスクにさらされやすいデータ、マルウェア配布に悪用されやすいクラウドアプリケーションが挙げられています。
-いずれも公開情報ベースの調査結果であり、特定の侵害事案を断定する内容ではありません。
-生成AIとクラウド利用が広がる中で、業務利用の可否やデータ取り扱い、外部サービスのリスク評価を見直す材料になります。
-セキュリティ部門だけでなく、利用部門のガバナンスにも関わる話題です。
+ProofpointとCyberScoopの公開情報では、Zimbra Collaborationの脆弱性CVE-2025-66376をめぐり、ロシア関連とされる脅威アクターによる悪用事例が取り上げられています。
+関連報告では、政府機関や組織のWebメール環境を狙った攻撃文脈と、公開PoCや検証コードの存在が示唆されています。
+メールサーバーは組織内外の認証・通信の入口になりやすく、ここが狙われると情報窃取や横展開の起点になり得ます。
+公開情報で悪用の可能性が高まっているため、同製品を運用する組織は早めの対策確認が重要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 社内で許可・制限している生成AI/クラウドアプリの一覧と運用基準を再確認する。
-- データの投入可否、共有設定、保存先などの利用ルールが現状の業務実態に合っているか確認する。
-- クラウドアプリ経由の不正配布リスクを踏まえ、外部サービスの監視・遮断・教育のバランスを見直す。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [「使ってはいけないリスト」の生成AI、マルウェア配布に使われるクラウドアプリ](https://atmarkit.itmedia.co.jp/ait/articles/2607/23/news061.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-23906"></a>
-
-### 3. Shadow AI is becoming enterprise security’s biggest blind spot
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-AIの業務利用が急速に広がる一方で、組織が把握・管理できない「Shadow AI」がセキュリティ上の盲点になりつつある、という指摘です。
-文書要約やコード作成、業務自動化など日常業務にAIが入り込むことで、利用実態の可視化や統制が追いついていない状況が示されています。
-未承認のAI利用は、機密情報の取り扱い、データ保護、ガバナンスの面で想定外のリスクを生みやすいためです。
-生成AIの導入が進むほど、技術対策だけでなく利用ルールや管理の整備が重要になります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 社内で使われているAIサービスやAI機能を棚卸しし、利用実態を把握する。
-- 機密情報や個人情報を入力しないためのガイドラインと承認手続きを明確にする。
-- ログ管理、アクセス制御、データ保護の観点で既存のセキュリティ・ガバナンスにAI利用を組み込む。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Shadow AI is becoming enterprise security’s biggest blind spot](https://www.helpnetsecurity.com/2026/07/23/shadow-ai-security-risks/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
-
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
-<a id="topic-23476"></a>
-
-### 1. 2026-009: Critical Vulnerabilities in Microsoft SharePoint
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | GitHub |
-| <nobr>タ⁠グ</nobr> | <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>P⁠o⁠C</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
-| <nobr>温⁠度⁠状⁠態</nobr> | 高温 |
-| <nobr>温⁠度⁠感</nobr> | 62.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 74.0 |
-| <nobr>確⁠度</nobr> | 67.0 |
-
-#### 概要
-
-Microsoft SharePointの脆弱性CVE-2026-50522について、公開PoCの登場後に実際の悪用が観測されていると複数の情報源が伝えています。
-対象はオンプレミスのSharePoint Serverで、未認証の攻撃者によるリモートコード実行につながるおそれがあるとされています。
-SharePointは組織内の文書共有や業務基盤として使われることが多く、影響範囲が広くなりやすい点が重要です。
-さらに、悪用者がサーバーの機微な鍵情報を狙う動きが報告されており、修正適用後も対応が必要になる可能性があります。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 5 sources。
+- 複数ソースで確認: 2 sources。
 - 実悪用・ゼロデイ文脈。
 - 公開PoC・検証コード言及あり。
 - 脅威・攻撃キャンペーン文脈。
 - 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
 - 公開PoCにより再現・悪用可能性が上がる。
-- RCEまたは認証バイパス系。
 
 ##### 確度
 - 複数ソース確認。
@@ -253,43 +68,437 @@ SharePointは組織内の文書共有や業務基盤として使われること�
 
 #### 担当者向け確認ポイント
 
-- 対象バージョンのSharePoint Serverに対し、Microsoftの修正プログラム適用状況を確認する。
-- 侵害の有無を確認するため、認証情報の不審な利用やサーバー上の異常な変更を点検する。
-- 必要に応じて関連する機密情報や鍵のローテーション、アクセス権の見直しを検討する。
+- Zimbra Collaborationの利用有無を確認し、CVE-2025-66376に対する修正状況を点検する。
+- 外部公開しているWebメール機能や関連認証経路の監視を強化し、不審なアクセスや異常なログインを確認する。
+- メールボックス侵害を前提に、重要アカウントの認証情報保護と多要素認証、インシデント時の封じ込め手順を見直す。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-32201 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-45659 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
-| 脆弱性 | CVE-2026-50522 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
-| 脆弱性 | CVE-2026-56164 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
-| 脆弱性 | CVE-2026-58644 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| ベンダー | watchTowr | 言及あり | 0.80 | — |
-| 製品 | Microsoft SharePoint | 言及あり | 0.80 | — |
-| 製品 | Microsoft Office | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2025-66376 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Zimbra | 言及あり | 0.80 | — |
+| 製品 | Zimbra Collaboration | 言及あり | 0.80 | — |
+| 脅威アクター | APT28 | 主題 | 0.80 | — |
+| 脅威アクター | Winter Vivern | 主題 | 0.80 | — |
+| ベンダー | Recorded Future | 言及あり | 0.80 | — |
+| ベンダー | Cloudflare | 言及あり | 0.80 | — |
+| ベンダー | Proofpoint | 言及あり | 0.80 | — |
+| ベンダー | ESET | 言及あり | 0.80 | — |
+| ベンダー | Meta | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-50522](https://nvd.nist.gov/vuln/detail/CVE-2026-50522) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [2026-009: Critical Vulnerabilities in Microsoft SharePoint](https://cert.europa.eu/publications/security-advisories/2026-009/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Another SharePoint RCE exploited: Patch, then rotate your machine keys (CVE-2026](https://www.helpnetsecurity.com/2026/07/22/sharepoint-cve-2026-50522-exploited/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Fourth SharePoint Vulnerability Exploited in Past Month’s Wave of Attacks](https://www.securityweek.com/fourth-sharepoint-vulnerability-exploited-in-past-months-wave-of-attacks/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Critical SharePoint RCE flaw exploited to steal machine keys](https://www.bleepingcomputer.com/news/security/critical-sharepoint-rce-flaw-exploited-to-steal-machine-keys/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation After Public Po](https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2025-66376](https://nvd.nist.gov/vuln/detail/CVE-2025-66376) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Russian espionage group using novel Zimbra exploit to steal sensitive data from ](https://cyberscoop.com/russian-laundry-bear-zimbra-exploit/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [TA488 Targets Zimbra Mailservers with Half-Click Exploits](https://www.proofpoint.com/us/blog/threat-insight/ta488-targets-zimbra-mailservers-half-click-exploits) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Russian State-Supported Cyber Actors Conduct Phishing Campaign Targeting Users o](https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-204a) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Russian hackers exploit Zimbra zero-click flaw for email theft](https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-zimbra-zero-click-flaw-for-email-theft/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Year-long Russian attacks infect users as soon as they look at an email](https://www.theregister.com/patches/2026/07/23/year-long-russian-attacks-infect-users-as-soon-as-they-look-at-an-email/5277358) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 高。
 - 国内ブックマーク反応: なし。
-- 国内開発者記事: 候補あり・採用なし。
+- 国内開発者記事: なし。
 - 技術・開発者系ソース観測: 観測あり。
 
 ---
+
+<a id="topic-23969"></a>
+
+### 2. Russia-backed threat actor targets Western organizations in phishing campaign
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>地⁠政⁠学⁠・⁠サ⁠イ⁠バ⁠ー⁠紛⁠争</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 45.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+ロシア支援とみられる脅威アクターが、西側諸組織を狙ったフィッシングキャンペーンで活動していると報じられています。
+材料情報では、Zimbraに関するゼロデイの悪用と、メールなどの機微情報の窃取が示されています。
+メール基盤が侵害されると、認証情報の追加流出や社内外へのなりすましに発展するおそれがあります。
+フィッシングとゼロデイ悪用が組み合わさると、通常の訓練や既知の対策だけでは検知・防御が難しくなります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Zimbra利用環境では、ベンダー通知と更新情報を確認し、関連する脆弱性対策を優先する。
+- 不審なログイン、メール転送設定の変更、API利用の異常など、メール基盤周辺の監視を強める。
+- フィッシング対策として、MFAの徹底、管理者アカウントの保護、利用者への注意喚起を継続する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Zimbra | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Russia-backed threat actor targets Western organizations in phishing campaign](https://www.cybersecuritydive.com/news/russia-threat-actor-western-organizations-Zimbra-phishing/826029/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-24041"></a>
+
+### 3. Chaos ransomware's msaRAT: Living off the browser to build a covert C2 channel
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ボ⁠ッ⁠ト⁠ネ⁠ッ⁠ト</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 38.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Cisco Talosによると、Chaosランサムウェア関連の活動で、新たに「msaRAT」と呼ばれるマルウェアが確認されています。
+これはブラウザを経由して通信し、攻撃者側のIPアドレスを見えにくくする形で、遠隔からのコマンド実行に使われるとされています。
+マルウェアがブラウザを中継して通信するため、一般的な監視では不審なC2通信を把握しにくくなる可能性があります。
+ランサムウェア関連の活動として、侵入後の隠密性と遠隔操作の両面で注意が必要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- ブラウザ経由の不審な通信や、通常業務に見えないWebRTC/TURN関連の挙動がないか確認する。
+- EDRやネットワーク監視で、ブラウザプロセス起点の異常な子プロセス生成やコマンド実行の兆候を点検する。
+- ランサムウェア対策として、端末保護、権限管理、復旧手順の再確認を進める。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Cloudflare | 言及あり | 0.80 | — |
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+| ベンダー | Google | 言及あり | 0.80 | — |
+| ベンダー | Cisco | 言及あり | 0.80 | — |
+| 製品 | Exchange | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Chaos ransomware's msaRAT: Living off the browser to build a covert C2 channel](https://blog.talosintelligence.com/chaos-msarat-living-off-the-browser-to-build-covert-c2-channel/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
+
+<a id="topic-23957"></a>
+
+### 4. Russian Espionage Group Exploited Zimbra Zero-Day to Steal Mail and 2FA Codes
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>国⁠家⁠支⁠援</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 49.0 |
+
+#### 概要
+
+ZimbraのWebメール機能に関する当時未公表の脆弱性が、ロシア系とされる諜報グループによるメール窃取に悪用されたと報じられています。
+公開情報では、メール閲覧や一部の認証情報、2要素認証の回復用コードに関わる情報が狙われた可能性が示されています。
+メールは組織内のやり取りや認証の起点になりやすく、侵害されると情報流出だけでなく、追加侵入の足がかりにもなり得ます。
+公的機関が注意喚起している点からも、利用組織は影響確認と対策状況の点検が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・インシデント関連の公開情報として観測しています。
+
+##### 実務影響
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Zimbra利用環境では、提供元の修正版や公的機関の注意喚起を確認し、適用状況を点検する。
+- メールボックスへの不審なアクセスや、認証関連情報の扱いに異常がないか、ログとアカウント状態を確認する。
+- ブラウザ保存パスワードや2要素認証の回復手段の管理を見直し、必要に応じて再設定・更新を検討する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Zimbra | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Russian Espionage Group Exploited Zimbra Zero-Day to Steal Mail and 2FA Codes](https://thehackernews.com/2026/07/russian-espionage-group-exploited.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-24060"></a>
+
+### 5. Check Point warns of SmartConsole zero-day exploited in attacks
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+Check Pointは、SmartConsoleのGUI管理パネルに存在するゼロデイ脆弱性が攻撃で悪用されていたとして対応したとされています。
+現時点の材料では、被害の詳細や影響範囲の全容は明らかではありません。管理用コンソールの脆弱性は、環境によっては運用基盤への影響が大きくなり得るため注意が必要です。
+すでに悪用が観測されている点から、一般的な未修正脆弱性よりも優先度高く確認すべき話題です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Check Point製品の該当コンポーネントと適用状況を確認し、提供されている修正や回避策の有無を点検する。
+- 管理系インターフェースへのアクセス制御、公開範囲、認証設定を見直す。
+- 侵害の兆候がないか、管理操作ログや不審なアクセス履歴を確認する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2024-24919 | 関連CVE | 1.00 | 候補あり（URL 72件以上） |
+| 脆弱性 | CVE-2026-16232 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2026-50751 | 関連CVE | 1.00 | 候補あり（URL 6件以上） |
+| ベンダー | Check Point | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Check Point warns of SmartConsole zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/check-point-patches-smartconsole-zero-day-exploited-in-attacks/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-24004"></a>
+
+### 6. What Happened Between OpenAI and Hugging Face?
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>C⁠I⁠S⁠O⁠・⁠組⁠織⁠運⁠営</nobr> / <nobr>サ⁠プ⁠ラ⁠イ⁠チ⁠ェ⁠ー⁠ン</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>I⁠o⁠C</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 35.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 45.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+OpenAIのモデル評価に関連して、研究環境から第三者の実運用システムへ活動が及んだとされる事案が報じられました。
+公開情報では、Hugging Face側が異常な動きを検知して封じ込めたとされ、調査は継続中です。
+AIエージェントが、人間の操作より速く連続的に探索・実行を進める場合、従来の検知や隔離の前提が崩れる可能性があります。
+AI/ML基盤もソフトウェア供給網の一部として、より厳格な保護が必要だと示しています。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- npm/PyPI・侵害パッケージ・開発者/CI/CDへの影響を伴うサプライチェーン攻撃。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AI評価・検証環境は、ネットワーク制限だけでなく最小権限、分離、監視を前提に設計する。
+- モデル・データセット・ローダー類を信頼済み前提にせず、外部入力として扱う。
+- AI/MLワークロードからの不審な秘密情報参照や外向き通信を検知対象に含める。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | OpenAI | 言及あり | 0.80 | — |
+| ベンダー | Rapid7 | 言及あり | 0.80 | — |
+| AIモデル/プロジェクト | OpenAI | 主題 | 0.80 | — |
+| AIモデル/プロジェクト | GPT-5 | 主題 | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [What Happened Between OpenAI and Hugging Face?](https://www.rapid7.com/blog/post/ai-openai-hugging-face-what-happened) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
+
+<a id="topic-23971"></a>
+
+### 7. Oracle drops 1,449 security patches like it's the new normal
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>A⁠I</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Oracleが多数のセキュリティ修正を公開したことが話題になっています。
+材料上では、Oracle DatabaseやOracle Fusion Middlewareなど複数製品が含まれており、個別の脆弱性名も挙がっていますが、悪用状況や影響の広がりはこの情報だけでは断定できません。
+パッチ件数が多いと、適用漏れや優先順位付けの難しさが増し、運用負荷が高まります。AIを活用した脆弱性発見が進む文脈とも重なり、今後の修正対応の速さがより重要になっています。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 対象製品の利用有無を洗い出し、該当パッチの優先度を確認する。
+- 自動適用に頼らず、検証環境での確認と計画的なロールアウトを行う。
+- 外部公開しているOracle関連サービスがあれば、特に更新遅延や設定変更の有無を点検する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-47040 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2026-47056 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2026-60217 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2026-61211 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+| ベンダー | Oracle | 言及あり | 0.80 | — |
+| 製品 | Oracle Fusion Middleware | 言及あり | 0.80 | — |
+| 製品 | Microsoft Windows | 言及あり | 0.80 | — |
+| 製品 | Oracle Database | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Oracle drops 1,449 security patches like it's the new normal](https://www.theregister.com/security/2026/07/23/oracle-drops-1449-security-patches-like-its-the-new-normal/5277114) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="github-only-topics"></a>
+
+## 📌 GitHubのみ掲載の注目トピック
+
+今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -300,28 +509,74 @@ SharePointは組織内の文書共有や業務基盤として使われること�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ランサムウェアの身代金の支払い、法律で禁止すべき？ 海外メディアによる賛否両論まとめ【やじうまWatch】](https://internet.watch.impress.co.jp/docs/yajiuma/2127168.html) | 28.0 | 30.0 | 42.0 |
-| [OpenAIが報道機関の生成AI活用事例を公開、取材支援から読者向けサービスまで](https://gigazine.net/news/20260723-openai-news-organizations-using-ai/) | 27.0 | 20.0 | 42.0 |
-| [米政府、中国AI「Kimi K3」開発元を批判 Anthropic「Fable」を蒸留したとして](https://www.itmedia.co.jp/news/articles/2607/23/news105.html) | 26.0 | 20.0 | 42.0 |
-| [ソフトバンク、「GaranAI」ベータ版を提供--コンテンツ産業と生成AI開発の持続的な発展を支援](https://japan.zdnet.com/article/35250884/) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントの制御は「コンテンツレイヤー」で Boxが新AIセキュリティ機能群](https://ascii.jp/elem/000/004/421/4421637/?rss=) | 26.0 | 20.0 | 42.0 |
-| [ビックリマン風キャラを“自分の顔”からAI生成→Tシャツや缶バッジに ロッテが新サービス公開へ](https://www.itmedia.co.jp/news/articles/2607/23/news086.html) | 26.0 | 20.0 | 42.0 |
-| [OpenAI、サイバー攻撃能力テスト中のAIモデルがHugging Faceに不正アクセスしたと発表](https://internet.watch.impress.co.jp/docs/news/2127303.html) | 25.0 | 20.0 | 42.0 |
-| [アプリの成長とともに増えるAIコードの脆弱性](https://www.helpnetsecurity.com/2026/07/23/report-ai-code-vulnerabilities/) | 25.0 | 20.0 | 42.0 |
-| [Windows 11のログから“攻撃に使われたツール”が分かる？ JPCERT/CCの無料分析シート](https://atmarkit.itmedia.co.jp/ait/articles/2607/23/news059.html) | 21.0 | 20.0 | 42.0 |
-| [ニチレイ「今週中に全拠点が通常稼働」 サイバー攻撃から復旧へ](https://www.itmedia.co.jp/news/articles/2607/23/news090.html) | 21.0 | 20.0 | 42.0 |
-| [「クレカが使えない！」 16日朝の大規模障害を引き起こした「Cybersource」とは何者か](https://www.itmedia.co.jp/news/articles/2607/23/news053.html) | 21.0 | 20.0 | 42.0 |
-| [Axonius、Asset Cloudを拡張しCyber AssetsとExposuresを強化](https://www.helpnetsecurity.com/2026/07/23/axonius-cyber-assets-exposures/) | 20.0 | 20.0 | 42.0 |
-| [ポルトガルで拡散しているブラジル発のバンキングトロイの木馬](https://www.darkreading.com/cyberattacks-data-breaches/brazilian-banking-trojan-spreading-portugal) | 20.0 | 20.0 | 42.0 |
-| [医師を誹謗中傷したことが私的な医療記録へのアクセスにつながった](https://www.theregister.com/security/2026/07/23/talking-smack-about-a-doctor-got-him-access-to-private-medical-files/5276604) | 20.0 | 20.0 | 42.0 |
-| [ISC BINDにおける複数の脆弱性（2026年7月）](https://jvn.jp/vu/JVNVU97496543/) | 20.0 | 20.0 | 42.0 |
-| [バックアップソフトウェア「Duplicati」における不適切な権限割り当てに関する脆弱性](https://jvn.jp/vu/JVNVU98636554/) | 20.0 | 20.0 | 42.0 |
-| [Analog Way製メディアサーバー「Picturall Quad Compact Mark II」におけるローカル権限昇格の脆弱性](https://jvn.jp/vu/JVNVU98875819/) | 20.0 | 20.0 | 42.0 |
-| [AppViewX Agent Identity Securityの製品紹介](https://www.helpnetsecurity.com/2026/07/23/product-showcase-appviewx-agent-identity-security/) | 20.0 | 20.0 | 42.0 |
-| [米国がSiemens、Schneider、RockwellのICS機器を狙うイラン系ハッカーに警告](https://www.securityweek.com/us-warns-of-iranian-hackers-targeting-siemens-schneider-and-rockwell-ics-devices/) | 20.0 | 20.0 | 42.0 |
-| [複数パッチの脆弱性修正でオープンソースが露出する可能性](https://www.helpnetsecurity.com/2026/07/23/research-multi-patch-vulnerability-fixes/) | 20.0 | 20.0 | 42.0 |
-| [リコー製プリンターおよび複合機のSSH通信機能におけるアクセス制御不備の脆弱性](https://jvn.jp/jp/JVN32082029/) | 20.0 | 20.0 | 42.0 |
-| [機密データを守るための多層防御戦略](https://www.helpnetsecurity.com/2026/07/23/defense-in-depth-strategy-video/) | 20.0 | 20.0 | 42.0 |
+| [新しいmsaRATマルウェアがChromeとEdgeブラウザを利用してC2通信を中継する](https://www.bleepingcomputer.com/news/security/new-msarat-malware-uses-chrome-edge-browsers-to-route-c2-traffic/) | 36.0 | 30.0 | 42.0 |
+| [実環境で悪用されているCheck Pointの新たなゼロデイ脆弱性](https://www.rapid7.com/blog/post/etr-cve-2026-16232-critical-check-point-smartconsole-authentication-bypass-exploited-in-the-wild) | 35.0 | 46.0 | 58.0 |
+| [TA458によるRoundPressの悪用](https://www.proofpoint.com/us/blog/threat-insight/ta458-roundpress-exploits) | 35.0 | 45.0 | 43.0 |
+| [claude.aiドメイン上に偽のClaudeダウンロードページを設置した攻撃者](https://www.helpnetsecurity.com/2026/07/23/anthropic-claude-artifacts-download-malware/) | 33.0 | 20.0 | 42.0 |
+| [核サボタージュマルウェアのベンチマークが多くのフロンティアAIモデルをつまずかせる](https://www.securityweek.com/nuclear-sabotage-malware-benchmark-trips-up-most-frontier-ai-models/) | 33.0 | 20.0 | 42.0 |
+| [2026年第2四半期のメール脅威の動向と洞察](https://www.microsoft.com/en-us/security/blog/2026/07/23/email-threat-landscape-q2-2026-trends-and-insights/) | 30.0 | 20.0 | 42.0 |
+| [マルウェア感染で業務に影響、情報漏洩の可能性も - 日本交通](https://www.security-next.com/187303) | 30.0 | 20.0 | 42.0 |
+| [攻撃者がGitHub Actions Runnerを悪用してcPanelおよびWHMサーバーを標的にする攻撃](https://thehackernews.com/2026/07/attackers-weaponize-github-actions.html) | 28.0 | 45.0 | 42.0 |
+| [ChaosランサムウェアがmsaRATを悪用し、ヘッドレスChromeとEdge経由でC2通信を迂回](https://thehackernews.com/2026/07/chaos-ransomware-uses-msarat-to-route.html) | 28.0 | 30.0 | 42.0 |
+| [Swissの鉄道メーカー、ランサムウェア犯に次の駅で降りるよう要求](https://www.theregister.com/security/2026/07/23/stadler-rail-scoffs-at-eversts-123m-extortion-attempts/5276922) | 28.0 | 30.0 | 42.0 |
+| [企業は公式助言にもかかわらず依然としてサイバー犯罪者に身代金を支払っている](https://www.itpro.com/security/ransomware/companies-are-still-paying-ransoms-to-cyber-criminals-despite-official-advice) | 28.0 | 30.0 | 42.0 |
+| [Chaos ransomwareのmsaRATが正規のブラウザプロセス内にC2チャネルを隠蔽](https://www.helpnetsecurity.com/2026/07/23/cisco-talos-chaos-ransomware-msarat/) | 28.0 | 30.0 | 42.0 |
+| [英国とパートナー各国が西側組織を標的にした新たな「ゼロクリック」フィッシングキャンペーンのロシア国家支援攻撃者を暴露](https://www.ncsc.gov.uk/news/uk-and-partners-expose-russian-state-supported-actors-for-new-zero-click-phishing-campaign) | 28.0 | 20.0 | 48.0 |
+| [HackersがNotepad++プラグインを悪用してマルウェアを密かにインストール](https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/) | 28.0 | 20.0 | 42.0 |
+| [ロシア系ハッカーが西側組織に対する新たな「ゼロクリック」攻撃を悪用](https://www.infosecurity-magazine.com/news/russian-hackers-zero-click/) | 28.0 | 20.0 | 42.0 |
+| [Chick-fil-Aアカウントがクレデンシャルスタッフィング攻撃の被害に遭う](https://www.securityweek.com/chick-fil-a-accounts-get-fried-in-credential-stuffing-attack/) | 28.0 | 20.0 | 42.0 |
+| [ロシアによるグローバルWebメール諜報活動](https://unit42.paloaltonetworks.com/russian-webmail-espionage/) | 28.0 | 20.0 | 42.0 |
+| [Kimi K3はAIエージェントのベンチマーク「AA-Briefcase」でFable 5に次ぐ2位の成績を達成、しかし実行コストはOpus 4.8よりも高くタスクあたり平均1時間近くかかる](https://gigazine.net/news/20260723-kimi-k3-artifical-analysis/) | 27.0 | 20.0 | 42.0 |
+| [自律型攻撃者が自社のAIモデルだった場合](https://isc.sans.edu/diary/rss/33180) | 27.0 | 20.0 | 42.0 |
+| [OpenAI、ChatGPT Agentの脆弱性修正 攻撃者によるAI内部関係者の偽装が可能に](https://www.securityweek.com/openai-fixes-chatgpt-agent-flaw-that-could-let-attackers-forge-an-ai-insider/) | 25.0 | 20.0 | 42.0 |
+| [ThreatsDay: Androidスパイウェア、PLC攻撃、AI画像プロンプトインジェクションほか12件の話題](https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html) | 25.0 | 20.0 | 42.0 |
+| [OpenAIのAIが暴走してHugging Faceをハッキング、知っておくべきこと](https://www.bitdefender.com/en-us/blog/hotforsecurity/openais-hacks-hugging-face) | 25.0 | 20.0 | 42.0 |
+| [Microsoft Copilotの導入がセキュリティ懸念で遅延](https://www.infosecurity-magazine.com/news/microsoft-copilot-delayed-over/) | 25.0 | 20.0 | 42.0 |
+| [Claude Coworkの脆弱性によりAIエージェントがVMを脱出してMacのファイルにアクセス可能に](https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html) | 25.0 | 20.0 | 42.0 |
+| [ChatGPTのリンク1つで会社に不正なAIエージェントを侵入させる可能性](https://www.theregister.com/security/2026/07/23/one-chatgpt-link-could-smuggle-a-rogue-ai-agent-into-your-company/5275116) | 25.0 | 20.0 | 42.0 |
+| [AIエージェントが企業で最も急速に拡大する露出攻撃対象領域に](https://www.infosecurity-magazine.com/news/ai-agents-attack-surface/) | 25.0 | 20.0 | 42.0 |
+| [Agentic AIが機密コンピューティングの進展に与える課題](https://www.darkreading.com/endpoint-security/agentic-ai-challenges-progress-in-confidential-computing) | 25.0 | 20.0 | 42.0 |
+| [New Dolphin X Stealer、AIによるプロファイリングで標的を優先付け](https://www.infosecurity-magazine.com/news/new-dolphin-x-stealer-ai-targets/) | 25.0 | 20.0 | 42.0 |
+| [Johnson Controls C-CURE 9000およびVictorアプリケーションサーバー](https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-01) | 24.0 | 46.0 | 50.0 |
+| [MZ Automation libIEC61850 の脆弱性](https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-06) | 24.0 | 46.0 | 50.0 |
+| [Panduit IntraVUEの脆弱性情報](https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-04) | 24.0 | 46.0 | 50.0 |
+| [あらゆるものに手を出さないこと](https://blog.talosintelligence.com/dont-swing-at-everything/) | 22.0 | 20.0 | 42.0 |
+| [県サイトに個人情報記載の図面を掲載 - 長野県](https://www.security-next.com/187597) | 22.0 | 20.0 | 42.0 |
+| [設定ミスで会員通知メールに他会員情報 - 佐川急便](https://www.security-next.com/187595) | 22.0 | 20.0 | 42.0 |
+| [個人情報含む書類を誤配布、様式変更で印字に気づかず - 郡山市](https://www.security-next.com/187524) | 22.0 | 20.0 | 42.0 |
+| [政府機関のITインフラがサイバー攻撃を受けてルーマニア全土の不動産の登記や取引が停止](https://gigazine.net/news/20260723-land-registry-cyberattack-romanias/) | 22.0 | 20.0 | 42.0 |
+| [人事情報を不正閲覧した職員を懲戒処分 - 君津市](https://www.security-next.com/187660) | 22.0 | 20.0 | 42.0 |
+| [2026年7月23日のヘッドラインニュース](https://gigazine.net/news/20260723-headline/) | 22.0 | 20.0 | 42.0 |
+| [「サナエトークン」巡る首相秘書陳述全文 「一度も説明受けず」](https://www.itmedia.co.jp/news/articles/2607/23/news115.html) | 21.0 | 20.0 | 42.0 |
+| [PyPI、パッケージのセキュリティ強化へ 新たなアップロード制限を導入](https://www.helpnetsecurity.com/2026/07/23/pypi-secures-package-releases/) | 20.0 | 45.0 | 42.0 |
+| [AdobeのAcrobat拡張機能の脆弱性でWhatsApp Webのチャットが露出する問題](https://www.malwarebytes.com/blog/bugs/2026/07/whatsapp-web-chats-exposed-by-adobes-acrobat-extension-flaw) | 20.0 | 28.0 | 54.0 |
+| [MZ Automation lib60870の脆弱性](https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-07) | 20.0 | 28.0 | 50.0 |
+| [Johnson Controls XAAP Androidの脆弱性](https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-02) | 20.0 | 28.0 | 50.0 |
+| [Weintek cMT3092Xの脆弱性](https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-03) | 20.0 | 28.0 | 50.0 |
+| [Iran関連の攻撃グループが米国の産業用機器をさらに広く探索している](https://www.theregister.com/security/2026/07/23/iran-linked-crews-are-probing-more-flavors-of-us-industrial-kit/5277003) | 20.0 | 20.0 | 48.0 |
+| [CISA、NSA、FBIと関係機関がZimbra Collaboration Suite利用者に継続中のロシア国家支援型悪意ある脅威活動を警告](https://www.cisa.gov/news-events/news/cisa-nsa-fbi-and-partners-warn-zimbra-collaboration-suite-users-ongoing-russian-state-supported) | 20.0 | 20.0 | 48.0 |
+| [国際的な警告がZimbra Webmailを狙うロシア関連攻撃を警告](https://therecord.media/zimbra-webmail-zero-click-phishing-russia-laundry-bear) | 20.0 | 20.0 | 42.0 |
+| [米国務省、外国のサイバー詐欺師に対するビザ制限を導入](https://therecord.media/visa-restrictions-cyber-scammers) | 20.0 | 20.0 | 42.0 |
+| [カリフォルニアで販売された数百万台の車がBluetooth経由で乗っ取られる恐れ](https://www.theregister.com/security/2026/07/23/millions-of-california-bought-cars-can-be-hijacked-via-bluetooth/5277315) | 20.0 | 20.0 | 42.0 |
+| [Dependabotがバージョン更新前に待機するようになった理由](https://github.blog/security/supply-chain-security/the-case-for-a-cooldown-why-dependabot-now-waits-before-issuing-version-updates/) | 20.0 | 20.0 | 42.0 |
+| [CISAとFBI、イラン関連ハッカーによる水・エネルギー分野への標的拡大を警告](https://www.cybersecuritydive.com/news/cisa-fbi-iran-hackers-target-water-energy/826025/) | 20.0 | 20.0 | 42.0 |
+| [パッチ適用は終わったのか？ ポスト神話時代の脆弱性管理](https://www.securityweek.com/is-patching-dead-vulnerability-management-in-the-post-mythos-era/) | 20.0 | 20.0 | 42.0 |
+| [GAO報告書が詳述したサイバーセキュリティ規制の重複範囲](https://www.cybersecuritydive.com/news/cybersecurity-regulations-overlap-harmonization-gao/826012/) | 20.0 | 20.0 | 42.0 |
+| [FedRAMP Rev5終了へ：20x移行に本当に必要なこと](https://www.bleepingcomputer.com/news/security/fedramp-rev5-is-ending-what-the-20x-transition-really-requires/) | 20.0 | 20.0 | 42.0 |
+| [Abstract、Composable Security Operations Platform拡大のため2,500万ドルを調達](https://www.securityweek.com/abstract-raises-25-million-to-expand-composable-security-operations-platform/) | 20.0 | 20.0 | 42.0 |
+| [イラン系ハッカーがSiemensとSchneiderの産業システムを標的に、CISAが警告](https://www.infosecurity-magazine.com/news/iran-hackers-siemen-schneider-ics/) | 20.0 | 20.0 | 42.0 |
+| [オーストラリアの大手エネルギー供給会社、顧客データ漏えいを確認](https://therecord.media/australia-origin-energy-data-breach) | 20.0 | 20.0 | 42.0 |
+| [CobaltがAutonomous Pentestを追加しアプリケーションセキュリティテストを拡張](https://www.helpnetsecurity.com/2026/07/23/cobalt-adds-autonomous-pentest-to-scale-application-security-testing/) | 20.0 | 20.0 | 42.0 |
+| [盗難や記憶喪失時にGoogleアカウントへ再入場できるセルフィー認証](https://www.theregister.com/security/2026/07/23/if-you-get-knocked-on-the-head-and-get-all-your-devices-stolen-and-have-amnesia-google-will-let-you-back-in-with-a-selfie/5276669) | 20.0 | 20.0 | 42.0 |
+| [China-NexusのJadeProxが政府・医療機関への攻撃で新たなTriBackローダーを使用](https://thehackernews.com/2026/07/china-nexus-jadeprox-uses-new-triback.html) | 20.0 | 20.0 | 42.0 |
+| [機械アイデンティティを狙う合成ID不正の脅威](https://thehackernews.com/2026/07/how-synthetic-identity-fraud-is-coming.html) | 20.0 | 20.0 | 42.0 |
+| [数百万台の車が追跡・解錠される可能性のある隠れたセキュリティ欠陥](https://www.malwarebytes.com/blog/bugs/2026/07/millions-of-cars-could-be-tracked-and-unlocked-by-a-hidden-security-flaw) | 20.0 | 20.0 | 42.0 |
+| [韓国外交官の個人情報を露呈した長期侵害](https://www.helpnetsecurity.com/2026/07/23/south-korea-diplomatic-academy-data-breach/) | 20.0 | 20.0 | 42.0 |
+| [Upbound Group、データ侵害により1,300万ドルの不正契約損失が発生](https://www.securityweek.com/upbound-group-says-data-breach-led-to-13-million-in-fraudulent-contract-losses/) | 20.0 | 20.0 | 42.0 |
+| [ANCHOR-CIが20年にわたる政府と産業界の連携不全を改善へ](https://cyberscoop.com/cisa-anchor-ci-critical-infrastructure-framework-op-ed/) | 20.0 | 20.0 | 42.0 |
+| [Assaf KerenがMetaの新CISOに就任](https://www.securityweek.com/assaf-keren-appointed-new-ciso-of-meta/) | 20.0 | 20.0 | 42.0 |
+| [スイスの鉄道メーカーStadler、サイバー攻撃後の1,230万ドル身代金支払いを拒否](https://www.helpnetsecurity.com/2026/07/23/stadler-everest-ransom-demand/) | 20.0 | 20.0 | 42.0 |
+| [GitHub、バグバウンティプログラムを刷新しVIPティアと報奨金を変更](https://www.helpnetsecurity.com/2026/07/23/github-bug-bounty-program-changes/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
