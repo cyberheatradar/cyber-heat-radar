@@ -1,19 +1,18 @@
-# 📡 サイレーダー 2026-07-24 11:00 JST
+# 📡 サイレーダー 2026-07-24 17:00 JST
 
-このレポートは、2026-07-24 05:00 JST〜2026-07-24 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-24 11:00 JST〜2026-07-24 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 54
-- [音声で扱う想定のトピック](#audio-topics): 3
+- 観測トピック数: 42
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 26
+- [低温だが記録しておくトピック](#low-record-topics): 15
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Russian Hackers Exploit Zimbra Zero-Day Against US, Ukraine Targets](#topic-24094) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [GitHub悪用の「FakeGit」、AIエージェントもだます新手口 マルウェア1400万回ダウンロード](#topic-24139) | 34.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
-| 3 | [New Dolphin X malware uses AI to rank high-value targets](#topic-24095) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Clop ransomware targets Windchill, FlexPLM in data theft attacks](#topic-24159) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 2 | [Ransomware in 2026: More groups, more victims, no slowdown](#topic-24181) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -21,56 +20,57 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-24094"></a>
+<a id="topic-24159"></a>
 
-### 1. Russian Hackers Exploit Zimbra Zero-Day Against US, Ukraine Targets
+### 1. Clop ransomware targets Windchill, FlexPLM in data theft attacks
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>国⁠家⁠支⁠援</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>地⁠政⁠学⁠・⁠サ⁠イ⁠バ⁠ー⁠紛⁠争</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 36.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-Zimbraを狙ったゼロデイ脆弱性の悪用が観測されたとされ、米国とウクライナの組織が標的になったと報じられています。
-関連情報では、国家支援型とみられる脅威グループが、受信者がメールを開くかプレビューするだけで成立し得るフィッシングを使っていたとされています。
-ゼロデイの悪用は、修正が広く行き渡る前に被害が拡大しやすいため注目されます。メール基盤製品が標的になると、複数組織への波及や初期侵入の入口としての影響が大きくなり得ます。
+Clop（Cl0p）とされるランサムウェアグループが、インターネットに公開されたPTC WindchillおよびFlexPLMの環境を狙い、データ窃取を伴う恐喝キャンペーンを行っていると報じられています。
+現時点の材料では、具体的な侵入手法や被害規模の詳細は確認できません。
+WindchillやFlexPLMは製品設計やPLM業務で使われることがあり、情報漏えいが起きると事業上の影響が大きくなり得ます。
+公開インスタンスが標的になっている点から、該当製品を運用する組織は設定や露出状況の点検が重要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
 
 ##### 実務影響
-- 悪用情報あり。
+- ランサムウェア文脈。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- Zimbra利用環境では、ベンダーの修正情報や緩和策の有無を早急に確認する。
-- メール本文のプレビューや自動読み込み機能を含め、受信メールの取り扱いを再点検する。
-- 標的型メールを前提に、認証情報の保護、多要素認証、監査ログの確認を強化する。
+- Windchill/FlexPLMの外部公開状況とアクセス制御を確認し、不要な公開を避ける。
+- 認証情報の強化や多要素認証の適用状況を見直し、管理者アカウントの保護を徹底する。
+- 監査ログや異常なファイルアクセス、データ持ち出しの兆候を監視し、インシデント対応手順を確認する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| ベンダー | Zimbra | 言及あり | 0.80 | — |
+| ランサムウェアグループ | Clop | 主題 | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Russian Hackers Exploit Zimbra Zero-Day Against US, Ukraine Targets](https://www.darkreading.com/cyberattacks-data-breaches/russian-hackers-zimbra-zero-day-us-ukraine-targets) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Clop ransomware targets Windchill, FlexPLM in data theft attacks](https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-windchill-flexplm-in-data-theft-attacks/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -81,108 +81,51 @@ Zimbraを狙ったゼロデイ脆弱性の悪用が観測されたとされ、�
 
 ---
 
-<a id="topic-24139"></a>
+<a id="topic-24181"></a>
 
-### 2. GitHub悪用の「FakeGit」、AIエージェントもだます新手口 マルウェア1400万回ダウンロード
+### 2. Ransomware in 2026: More groups, more victims, no slowdown
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>M⁠C⁠P</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>サ⁠プ⁠ラ⁠イ⁠チ⁠ェ⁠ー⁠ン</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 34.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>温⁠度⁠感</nobr> | 36.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
 | <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-GitHub上でAIツールやMCPサーバーを装う偽リポジトリを使い、マルウェアを配布するキャンペーン「FakeGit」が報告されました。
-報告では、AIエージェントが偽リポジトリを正規の情報として推薦するケースも確認され、関連アーカイブは1400万回以上ダウンロードされたとされています。
-開発者やAI利用者が、見た目や検索結果だけで信頼してしまうリスクを示す事例です。AI支援の導入が進むほど、生成・推薦される情報の真偽確認が重要になります。
+2026年のランサムウェア動向をまとめたレポートでは、脅威環境が少数の主導的グループ中心から、複数の攻撃グループが同時に活動するより断片化した状況へ移っているとされています。
+2025年4月から2026年3月の間に61の新規ランサムウェアグループが確認されたとされ、被害件数も減速していないと報告されています。
+攻撃グループの増加は、特定の犯行主体を前提にした防御や対策だけでは追いつきにくいことを示唆します。
+被害の裾野が広がる可能性があるため、組織側には継続的な備えの見直しが求められます。
 
 #### 温度感の理由
 
 ##### 温度感
-- AI×Security文脈。
 - 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
 
 ##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+- ランサムウェア文脈。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- AIツールやMCP関連のリポジトリを利用する際は、発行元や更新履歴、コミュニティの信頼性を確認する。
-- AIエージェントの推薦結果をそのまま採用せず、参照先の妥当性を人手で確認する運用を徹底する。
-- 開発環境で外部アーカイブや実行ファイルを扱う場合は、入手経路の検証と基本的なマルウェア対策を再点検する。
+- バックアップ、復旧手順、隔離運用が実際に機能するかを定期的に確認する。
+- リモートアクセス、認証、権限管理など侵入経路になりやすい領域の点検を継続する。
+- 検知・対応を単一グループ前提にせず、広い攻撃パターンを想定して監視ルールを見直す。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [GitHub悪用の「FakeGit」、AIエージェントもだます新手口　マルウェア1400万回ダウンロード](https://news.mynavi.jp/techplus/article/20260724-4733100/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
-
-<a id="topic-24095"></a>
-
-### 3. New Dolphin X malware uses AI to rank high-value targets
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Dolphin Xと呼ばれる新しいマルウェアについて、感染端末の利用者をAIでプロファイルし、優先度を付ける機能があると報じられています。
-報道ベースでは、攻撃者が被害者の中から重点的に狙う相手を見極める用途が想定されています。
-マルウェア側にAIを取り込んだとされる点は、脅威の選別や攻撃の効率化につながる可能性があり、従来型の大量ばらまき型とは異なる注意が必要です。
-実際の実装や効果は未確認の部分もありますが、AI悪用の具体例として注目されています。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 感染後の不審な挙動だけでなく、端末内の情報収集や権限取得の兆候も含めて監視すること。
-- 優先的に狙われやすい業務端末や管理者端末について、認証強化と多要素認証の徹底を見直すこと。
-- AIをうたう脅威情報は過大評価もあり得るため、検知・対応は実観測された挙動とログを基準に判断すること。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [New Dolphin X malware uses AI to rank high-value targets](https://www.bleepingcomputer.com/news/security/new-dolphin-x-malware-uses-ai-to-rank-high-value-targets/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Ransomware in 2026: More groups, more victims, no slowdown](https://www.helpnetsecurity.com/2026/07/24/ransomware-attack-trends-2026-report/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -208,32 +151,21 @@ Dolphin Xと呼ばれる新しいマルウェアについて、感染端末の�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [サイバー保険がランサムウェアを生み出したのか](https://scan.netsecurity.ne.jp/article/2026/07/24/55777.html) | 29.0 | 30.0 | 42.0 |
-| [ランサムウェアの主因は ID 侵害 ～ ソフォス「ランサムウェアの現状2026年版」](https://scan.netsecurity.ne.jp/article/2026/07/24/55769.html) | 29.0 | 30.0 | 42.0 |
-| [AI悪用がヤバい…メガバン・地銀・ネット銀で「セキュリティ対策水準」はどう変える？](https://www.sbbit.jp/article/fj/186176?ref=rss) | 28.0 | 30.0 | 42.0 |
-| [単一HTMLファイルでローカル動作するスライド作成ウェブアプリ「Bento/Slides」が登場、共同編集可能＆AIエージェントでの自動操作もスムーズ](https://gigazine.net/news/20260724-bento-slides-powerpoint-alternative/) | 28.0 | 20.0 | 42.0 |
-| [AIで従業員ではなくCEOを解雇すればどれほど多くのメリットがあるのか？](https://gigazine.net/news/20260724-overpaid-fire-ceo-ai/) | 27.0 | 20.0 | 42.0 |
-| [OpenAIのAIエージェント、Hugging Faceに攻撃--命令へあまりに忠実か](https://japan.zdnet.com/article/35250934/) | 26.0 | 20.0 | 42.0 |
-| [「生成AIで仕事が楽に」のはずが……IT現場を蝕む“AI疲れ・AIうつ”の正体](https://www.itmedia.co.jp/news/articles/2607/24/news017.html) | 26.0 | 20.0 | 42.0 |
-| [OpenAI-Hugging Face攻撃はエージェントが悪いことを意味しない――そう指示しない限りは](https://www.theregister.com/security/2026/07/24/openai-hugging-face-attack-doesnt-mean-agents-are-evil-unless-you-tell-them-to-be/5277881) | 25.0 | 20.0 | 42.0 |
-| [2Qのセキュ相談、「偽警告」相談が増加 - 直近2年間で最多](https://www.security-next.com/187750) | 22.0 | 20.0 | 42.0 |
-| [「Chrome」に今月5度目のセキュリティ更新 - 脆弱性4件に対処](https://www.security-next.com/187798) | 22.0 | 20.0 | 42.0 |
-| [海上ヘリ基地反対協議会に「極めて悪質なサイバー攻撃」 他団体の問合せフォーム悪用で大量自動返信](https://scan.netsecurity.ne.jp/article/2026/07/24/55776.html) | 21.0 | 20.0 | 42.0 |
-| [「かなふく評価ガイド」にサイバー攻撃か、かながわ福祉サービス振興会がシステム停止を発表](https://scan.netsecurity.ne.jp/article/2026/07/24/55775.html) | 21.0 | 20.0 | 42.0 |
-| [メールアカウントに不正アクセスの日本オークション協会、二次被害防止で会員パスワードを強制リセット](https://scan.netsecurity.ne.jp/article/2026/07/24/55774.html) | 21.0 | 20.0 | 42.0 |
-| [都民向け金融セミナー公式サイトに攻撃の痕跡、申込者情報が一時消失するも復元完了](https://scan.netsecurity.ne.jp/article/2026/07/24/55773.html) | 21.0 | 20.0 | 42.0 |
-| [Docker 設定とルータ不具合が原因 ～ ワサビの開発環境端末に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/07/24/55772.html) | 21.0 | 20.0 | 42.0 |
-| [Oracle Java に脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/24/55771.html) | 21.0 | 20.0 | 42.0 |
-| [WordPress 6.9 以降で 2 件の脆弱性の組み合わせで遠隔コード実行の可能性](https://scan.netsecurity.ne.jp/article/2026/07/24/55770.html) | 21.0 | 20.0 | 42.0 |
-| [Tenable One Cloud Exposure が米政府認証「FedRAMP High」と「IL5」を取得](https://scan.netsecurity.ne.jp/article/2026/07/24/55768.html) | 21.0 | 20.0 | 42.0 |
-| [標的型攻撃メール訓練サービス「HENNGE Tadrill」が MCP サーバ提供](https://scan.netsecurity.ne.jp/article/2026/07/24/55767.html) | 21.0 | 20.0 | 42.0 |
-| [OpenAI高性能モデル、サンドボックスを飛び出して本番環境に到達](https://atmarkit.itmedia.co.jp/ait/articles/2607/24/news044.html) | 21.0 | 20.0 | 42.0 |
-| [AI時代に「守る」はもう古い Gartnerが『五輪書』で説いた新たなセキュリティ論](https://atmarkit.itmedia.co.jp/ait/articles/2607/24/news041.html) | 21.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年07月23日）](https://jvn.jp/vu/JVNVU93636354/) | 20.0 | 20.0 | 42.0 |
-| [Silverhand製Logtoにおける認証や認可に影響する複数の脆弱性](https://jvn.jp/vu/JVNVU99418634/) | 20.0 | 20.0 | 42.0 |
-| [ダウンロードしたmacOSアプリを悪意ある偽物にすり替え、Appleは静観](https://www.theregister.com/security/2026/07/24/researchers-replace-downloaded-macos-apps-with-evil-twins-apple-shrugs/5277858) | 20.0 | 20.0 | 42.0 |
-| [オーストラリアのエネルギー供給会社Origin、データ漏えいで顧客情報が流出](https://www.bleepingcomputer.com/news/security/australian-energy-provider-origin-says-data-breach-exposes-client-data/) | 20.0 | 20.0 | 42.0 |
-| [Rubio、性的脅迫犯やサイバー詐欺犯へのビザ制限を発表](https://cyberscoop.com/us-visa-restrictions-cybercriminals-rubio/) | 20.0 | 20.0 | 42.0 |
+| [ランサムウェア集団がEMEA地域の医療サプライチェーンを標的にする](https://www.helpnetsecurity.com/2026/07/24/emea-healthcare-ransomware-activity/) | 28.0 | 30.0 | 42.0 |
+| [UAC-0099攻撃で偽のNotepad++プラグインがMATCHBOIL.V2を配布](https://thehackernews.com/2026/07/fake-notepad-plugin-delivers.html) | 28.0 | 20.0 | 42.0 |
+| [Microsoftが画像生成AI「MAI-Image-2.5-Pro」をリリース、独自開発AIをOffice製品などに統合して他社への依存を減らす](https://gigazine.net/news/20260724-microsoft-mai-image-2-5-pro/) | 27.0 | 20.0 | 42.0 |
+| [「2日かかる攻撃が25分に」生成AIで“爆速化”するサイバー攻撃、パロアルトの識者が警鐘](https://www.itmedia.co.jp/news/articles/2607/24/news070.html) | 26.0 | 20.0 | 42.0 |
+| [ヨーロッパの多言語環境が露呈させるAIセキュリティの課題](https://www.darkreading.com/cybersecurity-operations/europes-multilingual-reality-exposes-ai-security-gaps) | 25.0 | 20.0 | 42.0 |
+| [WordPress向けSSOプラグインに認証回避の脆弱性](https://www.security-next.com/187824) | 22.0 | 20.0 | 42.0 |
+| [AIが受刑者を分類するシステムが黒人受刑者を不当に厳重警備施設へ振り分けているとしてカナダ・オンタリオ州が提訴されている](https://gigazine.net/news/20260724-ai-black-prisoners/) | 22.0 | 20.0 | 42.0 |
+| [猛暑は人間のメンタルヘルスや認知機能を悪化させて攻撃的な行動を増加させるとの研究結果](https://gigazine.net/news/20260724-extreme-heat-mental-health-well-being/) | 22.0 | 20.0 | 42.0 |
+| [Googleがアカウントへのサインイン方法に「自撮り動画」を追加](https://gigazine.net/news/20260724-selfie-sign-in-google-account/) | 22.0 | 20.0 | 42.0 |
+| [「AIのセキュリティ対策をしたい」が5割超、重要なIT基盤という認識が浸透](https://ascii.jp/elem/000/004/420/4420783/?rss=) | 21.0 | 20.0 | 42.0 |
+| [ダッシュボードに潜む自動車ソフトウェアの脆弱性](https://www.helpnetsecurity.com/2026/07/24/car-research-automotive-software-vulnerabilities/) | 20.0 | 20.0 | 42.0 |
+| [大規模なAIエージェントの統治：実践者たちから学ぶ教訓](https://www.helpnetsecurity.com/2026/07/24/governing-al-agents-at-scale-video/) | 20.0 | 20.0 | 42.0 |
+| [オーストラリアのエネルギー大手Originがハッキングされデータ侵害を確認](https://www.securityweek.com/data-breach-confirmed-after-australian-energy-giant-origin-is-hacked/) | 20.0 | 20.0 | 42.0 |
+| [資金力のある企業ほどフィッシング添付ファイルを開封しやすい](https://www.helpnetsecurity.com/2026/07/24/phishing-simulation-benchmark-report/) | 20.0 | 20.0 | 42.0 |
+| [今週の新しい情報セキュリティ製品：2026年7月24日](https://www.helpnetsecurity.com/2026/07/24/new-infosec-products-of-the-week-july-24-2026/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
