@@ -1,18 +1,19 @@
-# 📡 サイレーダー 2026-07-24 17:00 JST
+# 📡 サイレーダー 2026-07-25 05:00 JST
 
-このレポートは、2026-07-24 11:00 JST〜2026-07-24 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-24 17:00 JST〜2026-07-25 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 42
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 74
+- [音声で扱う想定のトピック](#audio-topics): 3
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 15
+- [低温だが記録しておくトピック](#low-record-topics): 46
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Clop ransomware targets Windchill, FlexPLM in data theft attacks](#topic-24159) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
-| 2 | [Ransomware in 2026: More groups, more victims, no slowdown](#topic-24181) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [In Other News: Dolphin X AI-Powered Malware, Car Anti-Theft Device Hack, 400 Linux Kernel Flaws](#topic-24224) | 41.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 2 | [Zero-day flaw in Check Point SmartConsole is under exploitation](#topic-24214) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 3 | [Hermes AI agent used to automate attack on Thai Finance Ministry](#topic-24204) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -20,32 +21,33 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-24159"></a>
+<a id="topic-24224"></a>
 
-### 1. Clop ransomware targets Windchill, FlexPLM in data theft attacks
+### 1. In Other News: Dolphin X AI-Powered Malware, Car Anti-Theft Device Hack, 400 Linux Kernel Flaws
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>A⁠I</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 36.0 |
+| <nobr>温⁠度⁠感</nobr> | 41.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
 | <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-Clop（Cl0p）とされるランサムウェアグループが、インターネットに公開されたPTC WindchillおよびFlexPLMの環境を狙い、データ窃取を伴う恐喝キャンペーンを行っていると報じられています。
-現時点の材料では、具体的な侵入手法や被害規模の詳細は確認できません。
-WindchillやFlexPLMは製品設計やPLM業務で使われることがあり、情報漏えいが起きると事業上の影響が大きくなり得ます。
-公開インスタンスが標的になっている点から、該当製品を運用する組織は設定や露出状況の点検が重要です。
+公開情報では、AIを悪用したとみられるマルウェアや、Linux kernelに関する多数の脆弱性など、複数のセキュリティ話題がまとめて取り上げられています。
+あわせて、産業機器の脆弱性やメール製品を狙った諜報活動、ランサムウェアによる恐喝の話題も含まれており、幅広い領域で注意が必要な状況が示されています。
+AIを含む新しい攻撃手法と、既存の基盤ソフトウェアや業務システムの脆弱性が同時に注目されているため、守るべき範囲が広いことを示しています。
+実務では、単一製品だけでなく、端末・サーバー・産業機器まで含めた横断的な確認が必要になります。
 
 #### 温度感の理由
 
 ##### 温度感
+- AI×Security文脈。
 - 脅威・攻撃キャンペーン文脈。
 
 ##### 実務影響
@@ -56,21 +58,22 @@ WindchillやFlexPLMは製品設計やPLM業務で使われることがあり、�
 
 #### 担当者向け確認ポイント
 
-- Windchill/FlexPLMの外部公開状況とアクセス制御を確認し、不要な公開を避ける。
-- 認証情報の強化や多要素認証の適用状況を見直し、管理者アカウントの保護を徹底する。
-- 監査ログや異常なファイルアクセス、データ持ち出しの兆候を監視し、インシデント対応手順を確認する。
+- Linux kernelや関連コンポーネントの脆弱性情報を確認し、影響範囲に応じて更新計画を見直す。
+- メールやコラボレーション基盤について、侵害の兆候や不審な認証・アクセスの監視を強化する。
+- AIを使った新種の脅威は断定しすぎず、検知ルール・EDR・ログ分析の見直しを進める。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| ランサムウェアグループ | Clop | 主題 | 0.80 | — |
+| ベンダー | Zimbra | 言及あり | 0.80 | — |
+| 製品 | Linux kernel | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Clop ransomware targets Windchill, FlexPLM in data theft attacks](https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-windchill-flexplm-in-data-theft-attacks/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [In Other News: Dolphin X AI-Powered Malware, Car Anti-Theft Device Hack, 400 Lin](https://www.securityweek.com/in-other-news-dolphin-x-ai-powered-malware-car-anti-theft-device-hack-400-linux-kernel-flaws/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -81,51 +84,113 @@ WindchillやFlexPLMは製品設計やPLM業務で使われることがあり、�
 
 ---
 
-<a id="topic-24181"></a>
+<a id="topic-24214"></a>
 
-### 2. Ransomware in 2026: More groups, more victims, no slowdown
+### 2. Zero-day flaw in Check Point SmartConsole is under exploitation
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>サ⁠プ⁠ラ⁠イ⁠チ⁠ェ⁠ー⁠ン</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 36.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-2026年のランサムウェア動向をまとめたレポートでは、脅威環境が少数の主導的グループ中心から、複数の攻撃グループが同時に活動するより断片化した状況へ移っているとされています。
-2025年4月から2026年3月の間に61の新規ランサムウェアグループが確認されたとされ、被害件数も減速していないと報告されています。
-攻撃グループの増加は、特定の犯行主体を前提にした防御や対策だけでは追いつきにくいことを示唆します。
-被害の裾野が広がる可能性があるため、組織側には継続的な備えの見直しが求められます。
+Check PointのSmartConsoleにゼロデイ脆弱性があり、悪用が観測されていると報じられています。
+研究者は、この問題により攻撃者がセキュリティ設定に重要な変更を加えられる可能性があると警告しています。
+セキュリティ管理系の製品に関わる脆弱性であり、悪用されると防御設定そのものが影響を受けるおそれがあります。ゼロデイとして扱われているため、未対応環境では優先的な確認が必要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 脅威・攻撃キャンペーン文脈。
+- 実悪用・ゼロデイ文脈。
 
 ##### 実務影響
-- ランサムウェア文脈。
+- 悪用情報あり。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- バックアップ、復旧手順、隔離運用が実際に機能するかを定期的に確認する。
-- リモートアクセス、認証、権限管理など侵入経路になりやすい領域の点検を継続する。
-- 検知・対応を単一グループ前提にせず、広い攻撃パターンを想定して監視ルールを見直す。
+- Check Point SmartConsoleの利用有無と適用状況を確認し、ベンダー情報を継続監視する。
+- 管理者向けのアクセス権限や到達経路を見直し、不要な公開・露出がないか点検する。
+- 設定変更や管理操作のログを確認し、不審な変更がないか監査を強化する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-16232 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Check Point | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Ransomware in 2026: More groups, more victims, no slowdown](https://www.helpnetsecurity.com/2026/07/24/ransomware-attack-trends-2026-report/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Zero-day flaw in Check Point SmartConsole is under exploitation](https://www.cybersecuritydive.com/news/zero-day-flaw-check-point-smartconsole-exploitation/826149/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-24204"></a>
+
+### 3. Hermes AI agent used to automate attack on Thai Finance Ministry
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+公開情報によると、脅威者がオープンソースのAIエージェント「Hermes」を、監視を最小化した自動実行モードで用い、タイ財務省への侵害が疑われる事案の後続作業を自動化したとされています。
+AIを攻撃の一部に組み込む動きとして、運用の省力化や継続性の観点から注目されています。
+生成AIやAIエージェントは防御側だけでなく攻撃側にも利用されうるため、実際の侵害でどう悪用され得るかを示す事例として重要です。
+今後は、AIツールの安全な利用管理や、侵害後の不審な自動化挙動の検知がより課題になります。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AIエージェントや自動化ツールの利用状況を把握し、想定外の実行モードや権限付与がないか確認する。
+- 侵害後の横展開や情報収集を示す不自然な自動化挙動を監視し、通常業務の自動処理と区別できるようにする。
+- AI関連ツールの導入時は、ログ取得、権限最小化、実行制御を前提に運用ルールを整備する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Hermes AI agent used to automate attack on Thai Finance Ministry](https://www.bleepingcomputer.com/news/security/hermes-ai-agent-used-to-automate-attack-on-thai-finance-ministry/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -151,21 +216,52 @@ WindchillやFlexPLMは製品設計やPLM業務で使われることがあり、�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ランサムウェア集団がEMEA地域の医療サプライチェーンを標的にする](https://www.helpnetsecurity.com/2026/07/24/emea-healthcare-ransomware-activity/) | 28.0 | 30.0 | 42.0 |
-| [UAC-0099攻撃で偽のNotepad++プラグインがMATCHBOIL.V2を配布](https://thehackernews.com/2026/07/fake-notepad-plugin-delivers.html) | 28.0 | 20.0 | 42.0 |
-| [Microsoftが画像生成AI「MAI-Image-2.5-Pro」をリリース、独自開発AIをOffice製品などに統合して他社への依存を減らす](https://gigazine.net/news/20260724-microsoft-mai-image-2-5-pro/) | 27.0 | 20.0 | 42.0 |
-| [「2日かかる攻撃が25分に」生成AIで“爆速化”するサイバー攻撃、パロアルトの識者が警鐘](https://www.itmedia.co.jp/news/articles/2607/24/news070.html) | 26.0 | 20.0 | 42.0 |
-| [ヨーロッパの多言語環境が露呈させるAIセキュリティの課題](https://www.darkreading.com/cybersecurity-operations/europes-multilingual-reality-exposes-ai-security-gaps) | 25.0 | 20.0 | 42.0 |
-| [WordPress向けSSOプラグインに認証回避の脆弱性](https://www.security-next.com/187824) | 22.0 | 20.0 | 42.0 |
-| [AIが受刑者を分類するシステムが黒人受刑者を不当に厳重警備施設へ振り分けているとしてカナダ・オンタリオ州が提訴されている](https://gigazine.net/news/20260724-ai-black-prisoners/) | 22.0 | 20.0 | 42.0 |
-| [猛暑は人間のメンタルヘルスや認知機能を悪化させて攻撃的な行動を増加させるとの研究結果](https://gigazine.net/news/20260724-extreme-heat-mental-health-well-being/) | 22.0 | 20.0 | 42.0 |
-| [Googleがアカウントへのサインイン方法に「自撮り動画」を追加](https://gigazine.net/news/20260724-selfie-sign-in-google-account/) | 22.0 | 20.0 | 42.0 |
-| [「AIのセキュリティ対策をしたい」が5割超、重要なIT基盤という認識が浸透](https://ascii.jp/elem/000/004/420/4420783/?rss=) | 21.0 | 20.0 | 42.0 |
-| [ダッシュボードに潜む自動車ソフトウェアの脆弱性](https://www.helpnetsecurity.com/2026/07/24/car-research-automotive-software-vulnerabilities/) | 20.0 | 20.0 | 42.0 |
-| [大規模なAIエージェントの統治：実践者たちから学ぶ教訓](https://www.helpnetsecurity.com/2026/07/24/governing-al-agents-at-scale-video/) | 20.0 | 20.0 | 42.0 |
-| [オーストラリアのエネルギー大手Originがハッキングされデータ侵害を確認](https://www.securityweek.com/data-breach-confirmed-after-australian-energy-giant-origin-is-hacked/) | 20.0 | 20.0 | 42.0 |
-| [資金力のある企業ほどフィッシング添付ファイルを開封しやすい](https://www.helpnetsecurity.com/2026/07/24/phishing-simulation-benchmark-report/) | 20.0 | 20.0 | 42.0 |
-| [今週の新しい情報セキュリティ製品：2026年7月24日](https://www.helpnetsecurity.com/2026/07/24/new-infosec-products-of-the-week-july-24-2026/) | 20.0 | 20.0 | 42.0 |
+| [大学を標的としたランサムウェア攻撃の増加](https://www.infosecurity-magazine.com/news/university-ransomware-attacks-rise/) | 28.0 | 30.0 | 42.0 |
+| [未修正のZimbraサーバーを悪用してメールを窃取するロシアのハッカー](https://www.helpnetsecurity.com/2026/07/24/laundry-bear-zimbra-vulnerability-cve-2025-66376/) | 28.0 | 20.0 | 48.0 |
+| [Play Storeの外で広がるAndroid脅威の実態](https://www.malwarebytes.com/blog/inside-malwarebytes/2026/07/beyond-the-play-store-how-android-threats-really-spread) | 28.0 | 20.0 | 48.0 |
+| [HOLLOWGRAPH：クラウドベースのスパイ活動の新たな姿](https://blog.polyswarm.io/hollowgraph-the-new-face-of-cloud-based-espionage) | 28.0 | 20.0 | 42.0 |
+| [BlueNoroffのZoomフィッシングキット、マルウェア配信前に暗号資産ウォレットをプロファイル化](https://thehackernews.com/2026/07/bluenoroff-zoom-phishing-kit-profiles.html) | 28.0 | 20.0 | 42.0 |
+| [更新されたサイバー脅威アクター命名システム](https://cloud.google.com/blog/topics/threat-intelligence/updated-cyber-threat-actor-naming-system/) | 28.0 | 20.0 | 42.0 |
+| [ホテルのWi-Fiルーターが侵害され、訪問者の企業ログイン情報を窃取](https://www.infosecurity-magazine.com/news/hotel-wifi-dns-poisoning/) | 28.0 | 20.0 | 42.0 |
+| [Golden Chickensが4つの新たなマルウェアファミリーとモジュール型インプラントで再登場](https://thehackernews.com/2026/07/golden-chickens-resurfaces-with-four.html) | 28.0 | 20.0 | 42.0 |
+| [NCSCが企業を狙う「ゼロクリック」フィッシング攻撃に警告](https://www.itpro.com/security/phishing/ncsc-issues-alert-over-zero-click-phishing-campaign-hitting-enterprises) | 28.0 | 20.0 | 42.0 |
+| [Google、開発者向けにパッチも自動生成するAIバグハンターを提供](https://www.helpnetsecurity.com/2026/07/24/google-codemender-ai-agent-code-security/) | 27.0 | 20.0 | 43.0 |
+| [スーパーに並んだ「ごちゃごちゃ生成AIポップ」が物議 “看板王”こと、きぬた歯科院長「これはアリ」](https://www.itmedia.co.jp/news/articles/2607/24/news094.html) | 26.0 | 20.0 | 42.0 |
+| [Microsoftやテック企業、オープンソースAIの普及を後押し](https://cyberscoop.com/tech-leaders-open-source-ai-cybersecurity/) | 25.0 | 20.0 | 42.0 |
+| [OpenAIのエージェントがセキュリティテスト中にサンドボックスを脱出](https://www.malwarebytes.com/blog/news/2026/07/openais-agent-escaped-its-sandbox-during-a-security-test) | 25.0 | 20.0 | 42.0 |
+| [最も脆弱なAI製品は、オンライン上で最も広く露出している製品でもある](https://www.cybersecuritydive.com/news/industrial-control-systems-ai-internet-exposure-censys-report-preview/826133/) | 25.0 | 20.0 | 42.0 |
+| [生成AI利用経験者 24年度から倍増](https://news.yahoo.co.jp/pickup/6589191?source=rss) | 25.0 | 20.0 | 42.0 |
+| [Slopsquatting、Phantom Domains、HalluSquattingは同一のAI攻撃](https://www.bleepingcomputer.com/news/security/slopsquatting-phantom-domains-and-hallusquatting-are-the-same-ai-attack/) | 25.0 | 20.0 | 42.0 |
+| [Meta、AI生成アカウント対策でFacebookの無料認証バッジを導入](https://www.helpnetsecurity.com/2026/07/24/meta-facebook-verified-badge-selfie-verification/) | 25.0 | 20.0 | 42.0 |
+| [AegisAI、AI搭載のメールセキュリティで3600万ドルを調達](https://www.securityweek.com/aegisai-raises-36-million-for-ai-powered-email-security/) | 25.0 | 20.0 | 42.0 |
+| [ChatGPT Agentの脆弱性により、フィッシングリンク経由で不正なWorkspaceエージェントが展開される可能性](https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html) | 25.0 | 20.0 | 42.0 |
+| [AIエージェントを見守るだけでは不十分、セキュリティチームは実行可能な行動を制御すべき](https://thehackernews.com/2026/07/seeing-ai-agents-is-not-enough-security.html) | 25.0 | 20.0 | 42.0 |
+| [OpenAIモデルによるHugging Faceハッキングへの業界の反応とフィードバックフライデー](https://www.securityweek.com/industry-reactions-to-openai-models-hacking-hugging-face-feedback-friday/) | 25.0 | 20.0 | 42.0 |
+| [ChatGPTがフィッシング攻撃で最もなりすましされるブランド上位10位入り、Check Pointが報告](https://www.infosecurity-magazine.com/news/chatgpt-most-impersonated-brands/) | 25.0 | 20.0 | 42.0 |
+| [HackerがThai Finance MinistryでHermes AI Agentを無人運用し、侵害後の活動を実施](https://thehackernews.com/2026/07/hacker-runs-hermes-ai-agent-unattended.html) | 25.0 | 20.0 | 42.0 |
+| [ふるさと納税寄付者向けのメールに他寄付者の個人情報 - 太田市](https://www.security-next.com/187307) | 22.0 | 20.0 | 42.0 |
+| [従業員リスト持出、再就職先の侵害調査から発覚 - あすか製薬](https://www.security-next.com/187604) | 22.0 | 20.0 | 42.0 |
+| [アンケートフォームで不備、個人情報が閲覧可能に - 関市](https://www.security-next.com/187608) | 22.0 | 20.0 | 42.0 |
+| [「ManageEngine ADAudit Plus」に脆弱性 - 4月に修正実施](https://www.security-next.com/187840) | 22.0 | 20.0 | 42.0 |
+| [「BIND 9」にキャッシュ汚染など複数脆弱性 - 修正版を公開](https://www.security-next.com/187829) | 22.0 | 20.0 | 42.0 |
+| [「LINE広告」の一部記録など約3年半分を誤って削除 LINEヤフー](https://www.itmedia.co.jp/news/articles/2607/24/news096.html) | 21.0 | 20.0 | 42.0 |
+| [Bing Imagesの脆弱性により、細工されたSVGでMicrosoftサーバー上でSYSTEM権限のコマンド実行が可能に](https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html) | 20.0 | 28.0 | 50.0 |
+| [ハッカーがホテルのWi-FiのDNSを乗っ取りMicrosoft 365アカウントを窃取](https://www.bleepingcomputer.com/news/security/hackers-hijack-hotel-wi-fi-dns-to-steal-microsoft-365-accounts/) | 20.0 | 20.0 | 42.0 |
+| [Andy Burnham、英国のサイバー政策継続を示唆し、省廃止後も大臣を再任](https://therecord.media/andy-burnham-liz-lloyd-cyber-policy-uk) | 20.0 | 20.0 | 42.0 |
+| [暗号資産保有者を狙った「Wrench」攻撃が増加か](https://therecord.media/wrench-attacks-against-cryptocurrency-holders) | 20.0 | 20.0 | 42.0 |
+| [TikTokのレジンアート詐欺にだまされないで](https://www.malwarebytes.com/blog/scams/2026/07/dont-get-fooled-by-tiktok-resin-art-scams) | 20.0 | 20.0 | 42.0 |
+| [Call of Duty Mobileで無料ポイントを装う詐欺、プレイヤーアカウントを窃取](https://www.malwarebytes.com/blog/threat-intel/2026/07/call-of-duty-mobile-scam-uses-fake-free-points-to-steal-player-accounts) | 20.0 | 20.0 | 42.0 |
+| [Certighostの脆弱性により低権限のActive Directoryユーザーがドメインコントローラーを偽装可能に](https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html) | 20.0 | 20.0 | 42.0 |
+| [Chick-fil-Aのデータ侵害で1万3000人超の顧客に影響](https://www.bleepingcomputer.com/news/security/chick-fil-a-data-breach-affects-more-than-13-000-customers/) | 20.0 | 20.0 | 42.0 |
+| [Googleが顔の自撮り動画を保存したい理由](https://www.malwarebytes.com/blog/privacy/2026/07/google-wants-to-store-a-selfie-video-of-your-face) | 20.0 | 20.0 | 42.0 |
+| [Vatican公式祈祷アプリで70万人超の個人情報が漏えい](https://www.darkreading.com/vulnerabilities-threats/vatican-official-prayer-app-leaks-700k-pii) | 20.0 | 20.0 | 42.0 |
+| [Europolが「The Com」摘発で4,340件のURL削除を要請](https://www.bleepingcomputer.com/news/security/europol-flags-4-340-urls-for-removal-in-the-com-crackdown/) | 20.0 | 20.0 | 42.0 |
+| [Azure Automationの既定設定によりクロステナントID乗っ取りが可能に](https://www.darkreading.com/cloud-security/default-azure-automation-setting-cross-tenant-identity-takeover) | 20.0 | 20.0 | 42.0 |
+| [米国、海外のサイバー犯罪者にビザ取消を通告](https://www.theregister.com/security/2026/07/24/uncle-sam-tells-overseas-cybercrooks-their-visas-are-canceled/5278212) | 20.0 | 20.0 | 42.0 |
+| [Snapchatの女性750人分のアカウントをハッキングした男に懲役6年](https://www.bleepingcomputer.com/news/security/man-gets-six-years-for-hacking-750-womens-snapchat-accounts/) | 20.0 | 20.0 | 42.0 |
+| [Cyber Legends: The Connector](https://www.security.com/expert-perspectives/cyber-legends-connector) | 20.0 | 20.0 | 42.0 |
+| [Microsoft、Windows Enterpriseのライセンス認証セキュリティを強化](https://www.helpnetsecurity.com/2026/07/24/microsoft-kms-tpm-security-update/) | 20.0 | 20.0 | 42.0 |
+| [Googleの新しいサインイン方法はカメラを見つめるよう求める](https://www.helpnetsecurity.com/2026/07/24/google-selfie-video-sign-in-verification/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
