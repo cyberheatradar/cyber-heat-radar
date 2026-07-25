@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-07-25 11:00 JST
+# 📡 サイレーダー 2026-07-25 17:00 JST
 
-このレポートは、2026-07-25 05:00 JST〜2026-07-25 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-25 11:00 JST〜2026-07-25 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 34
+- 観測トピック数: 25
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 9
+- [低温だが記録しておくトピック](#low-record-topics): 0
 
 今回はサマリ掲載トピックはありません。
 
@@ -29,20 +29,7 @@
 
 ## ❄️ 低温だが記録しておくトピック
 
-音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
-重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
-
-| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
-|---|---:|---:|---:|
-| [「Claude Opus 5」が登場、Claude Fable 5の半額で同等性能を発揮し制限緩め](https://gigazine.net/news/20260725-claude-opus-5/) | 27.0 | 20.0 | 42.0 |
-| [Anthropic、「Claude Opus 5」公開 Fable 5に迫る性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも](https://www.itmedia.co.jp/news/articles/2607/25/news016.html) | 26.0 | 20.0 | 42.0 |
-| [「iOS 27」の過小評価されている5つの機能で「iPhone」を使いやすく--だたし「Siri AI」は含まず](https://japan.zdnet.com/article/35250804/) | 26.0 | 20.0 | 42.0 |
-| [ChatGPTがフィッシング標的トップ10入り、Microsoftが依然最多](https://news.mynavi.jp/techplus/article/20260725-4736292/) | 21.0 | 20.0 | 42.0 |
-| [「Ubuntu」系ディストロでコマンドラインからDNSを設定する方法](https://japan.zdnet.com/article/35250780/) | 21.0 | 20.0 | 42.0 |
-| [Popeの公式祈祷アプリが重大な不備、70万人超のユーザー情報を漏えい](https://www.theregister.com/security/2026/07/24/popes-official-prayer-app-commits-cardinal-sin-leaks-700k-users-info/5278603) | 20.0 | 20.0 | 42.0 |
-| [CISOsと取締役会：神話か、誤解か？](https://www.darkreading.com/cybersecurity-operations/cisos-vs-boards-myth-or-misunderstanding-) | 20.0 | 20.0 | 42.0 |
-| [CIRCIAに関する業界のメッセージ：サイバー攻撃についての質問はもっと少なくしてほしい](https://cyberscoop.com/cisa-circia-cyber-incident-reporting-rule-feedback/) | 20.0 | 20.0 | 42.0 |
-| [EuropolがThe Comに関連する4,340件の「恐ろしい」URLを特定](https://www.theregister.com/cyber-crime/2026/07/24/europol-flags-4340-horrific-urls-linked-to-the-com/5278556) | 20.0 | 20.0 | 42.0 |
+今回は低温記録トピックはありません。
 
 ---
 
