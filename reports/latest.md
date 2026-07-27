@@ -1,17 +1,15 @@
-# 📡 サイレーダー 2026-07-27 05:00 JST
+# 📡 サイレーダー 2026-07-27 11:00 JST
 
-このレポートは、2026-07-26 17:00 JST〜2026-07-27 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-07-27 05:00 JST〜2026-07-27 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 28
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 49
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 24
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Week in review: ServiceNow pre-auth RCE exploited in the wild, Hugging Face breached](#topic-24366) | 41.0 | 56.0 | 43.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -19,61 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-24366"></a>
-
-### 1. Week in review: ServiceNow pre-auth RCE exploited in the wild, Hugging Face breached
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>R⁠C⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> / <nobr>A⁠I</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 41.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 56.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-ServiceNowの認証前RCEが実際に悪用されたとされ、関連する話題としてHugging Faceの侵害も取り上げられています。
-公開情報ベースでは、少なくとも一部の脆弱性が実環境で利用された可能性が示されており、注意喚起の対象になっています。
-認証前でリモートコード実行に至る脆弱性は、侵入口としての危険度が高く、早期対応が重要です。悪用観測がある場合は、公開済み情報だけでも優先度を上げて点検する必要があります。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- ServiceNow関連の製品・構成で、該当する脆弱性情報やベンダーの修正状況を確認する。
-- 外部公開されている管理画面や関連サービスについて、不要な露出がないか棚卸しする。
-- 侵害の兆候確認として、認証失敗の増加、想定外のプロセス起動、設定変更の痕跡を点検する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Week in review: ServiceNow pre-auth RCE exploited in the wild, Hugging Face brea](https://www.helpnetsecurity.com/2026/07/26/week-in-review-servicenow-pre-auth-rce-exploited-in-the-wild-hugging-face-breached/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -90,8 +34,30 @@ ServiceNowの認証前RCEが実際に悪用されたとされ、関連する話�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ESAFENET CDG 3文書管理システムの弱いログイン認証を狙ったスキャン](https://isc.sans.edu/diary/rss/33184) | 22.0 | 20.0 | 42.0 |
-| [GitHubとPyPI、サプライチェーン攻撃に対する時間ベースの防御を導入](https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/) | 20.0 | 45.0 | 42.0 |
+| [日本テレネットにランサムウェア型サイバー攻撃、データが外部に転送された痕跡は検出されず](https://scan.netsecurity.ne.jp/article/2026/07/27/55786.html) | 29.0 | 30.0 | 42.0 |
+| [Pendo、プロダクトでのユーザーの行動データをAIエージェントに連携させる仕組みを提供](https://japan.zdnet.com/article/35250951/) | 26.0 | 20.0 | 42.0 |
+| [Anthropic、「Claude Opus 5」をリリース](https://japan.zdnet.com/article/35250976/) | 26.0 | 20.0 | 42.0 |
+| [日立、SI全工程をAIエージェントが担う「Agentic AI Integration Platform」を発表](https://japan.zdnet.com/article/35250968/) | 26.0 | 20.0 | 42.0 |
+| [Claude Opus 5、AWS上でのコーディングおよびサイバーセキュリティ業務を強化](https://www.helpnetsecurity.com/2026/07/27/claude-opus-5-aws-coding-cybersecurity-work/) | 25.0 | 20.0 | 42.0 |
+| [【本日7月27日 20時配信】「JC-STAR★1」付きのWi-Fiルーターってなにが違う？ NEC Aterm 7200D8BEで検証して見えたその違いをライブで解説【清水理史の「イニシャルB」チャンネル】](https://internet.watch.impress.co.jp/docs/column/shimizumovie/2127809.html) | 23.0 | 20.0 | 43.0 |
+| [先週注目された記事（2026年7月19日〜2026年7月25日）](https://www.security-next.com/187869) | 22.0 | 20.0 | 42.0 |
+| [「OpenAM」に深刻な脆弱性 - アップデートを公開](https://www.security-next.com/187871) | 22.0 | 20.0 | 42.0 |
+| [福岡大学の委託先ノストラムに不正アクセス、攻撃者のサイト上に窃取したデータを公開する旨の告知](https://scan.netsecurity.ne.jp/article/2026/07/27/55787.html) | 21.0 | 20.0 | 42.0 |
+| [リンドスポーツ、12 年前の顧客情報 3,075 件が流出の可能性 元 FAX 送信委託先へのサイバー攻撃で](https://scan.netsecurity.ne.jp/article/2026/07/27/55785.html) | 21.0 | 20.0 | 42.0 |
+| [ヴェレダ・ジャパン、公式オンラインショップへの不正アクセスを発表 個人情報流出の懸念でカード決済を一時停止](https://scan.netsecurity.ne.jp/article/2026/07/27/55784.html) | 21.0 | 20.0 | 42.0 |
+| [7 / 28 パシフィコ横浜開催「Japan Community Day」にスリーシェイクエンジニアが参加](https://scan.netsecurity.ne.jp/article/2026/07/27/55783.html) | 21.0 | 20.0 | 42.0 |
+| [7 / 30・31開催の「第11回 関西教育ICT展」にHENNGEが出展 登壇](https://scan.netsecurity.ne.jp/article/2026/07/27/55782.html) | 21.0 | 20.0 | 42.0 |
+| [圧縮ソフト「7-Zip」を装った偽ソフトウェアの裏に潜む巨大不正プロキシ事業](https://scan.netsecurity.ne.jp/article/2026/07/27/55781.html) | 21.0 | 20.0 | 42.0 |
+| [ISC BIND に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/27/55780.html) | 21.0 | 20.0 | 42.0 |
+| [バックアップソフトウェア「Duplicati」に不適切な権限割り当てに関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/07/27/55779.html) | 21.0 | 20.0 | 42.0 |
+| [HENNGE One 「ITreview Grid Award 2026 Summer」 7 部門で最高位 Leader 受賞](https://scan.netsecurity.ne.jp/article/2026/07/27/55778.html) | 21.0 | 20.0 | 42.0 |
+| [6割超の企業で「セキュリティは取引条件」 SCS対応も進む／パワハラと指導の違い、あなたの基準は？／AIへの危機感か 転職希望のIT人材が増加、ほか](https://ascii.jp/elem/000/004/422/4422226/?rss=) | 21.0 | 20.0 | 42.0 |
+| [回避策なし、「BIND 9」に高深刻度7件の脆弱性 DNSキャッシュ汚染やDoSの恐れ](https://atmarkit.itmedia.co.jp/ait/articles/2607/27/news033.html) | 21.0 | 20.0 | 42.0 |
+| [UPSIDERに不正アクセス サプライチェーン攻撃に遭う](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/031800050/071600089/) | 21.0 | 20.0 | 42.0 |
+| [急速に変化するセキュリティの現場 AI化に乗り遅れるな](https://www.itmedia.co.jp/enterprise/articles/2607/27/news007.html) | 21.0 | 20.0 | 42.0 |
+| [「フロンティアAI」の脅威にどう立ち向かう？ Gartnerが次世代セキュリティを提言](https://www.itmedia.co.jp/enterprise/articles/2607/27/news027.html) | 21.0 | 20.0 | 42.0 |
+| [営業秘密侵害が過去最多に。社内不正の4割を占める「情報持ち出し」について、デジタルデータソリューションに聞く](https://internet.watch.impress.co.jp/docs/special/2127602.html) | 20.0 | 20.0 | 42.0 |
+| [発売後にIoTセキュリティ基準“JC-STAR”に適合したNEC「Aterm 7200D8BE」の対応状況をチェック。別型番も適合？ 実際の対策状況は？【イニシャルB】](https://internet.watch.impress.co.jp/docs/column/shimizu/2126670.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
