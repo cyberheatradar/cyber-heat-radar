@@ -1,17 +1,15 @@
-# 📡 サイレーダー 2026-08-01 17:00 JST
+# 📡 サイレーダー 2026-08-02 05:00 JST
 
-このレポートは、2026-08-01 11:00 JST〜2026-08-01 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-01 17:00 JST〜2026-08-02 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 25
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 29
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 5
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Phishing Campaigns Targeting AI Solutions Providers, (Sat, Aug 1st)](#topic-25497) | 35.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -19,62 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-25497"></a>
-
-### 1. Phishing Campaigns Targeting AI Solutions Providers, (Sat, Aug 1st)
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 35.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-AI関連サービスの提供者を狙うフィッシングキャンペーンが観測されたとされています。
-材料では、ChatGPTのようなAIサービスを題材にした偽装メールが含まれていたことが示されています。
-AIサービスは利用者や事業者の数が増えており、偽装先として悪用されると認証情報やアカウントへの被害につながるおそれがあります。
-AI関連の運用担当やサポート窓口は、通常のブランドなりすまし以上に問い合わせや誘導文面への注意が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- AIサービス名をかたるメールやログイン誘導の真偽確認を徹底する。
-- 認証情報の再入力を促す連絡は、送信元やリンク先を必ず確認する。
-- 従業員向けにAI関連ブランドを使ったフィッシングの注意喚起を行う。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Phishing Campaigns Targeting AI Solutions Providers, (Sat, Aug 1st)](https://isc.sans.edu/diary/rss/33206) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -86,7 +29,16 @@ AI関連の運用担当やサポート窓口は、通常のブランドなりす
 
 ## ❄️ 低温だが記録しておくトピック
 
-今回は低温記録トピックはありません。
+音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
+重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
+
+| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
+|---|---:|---:|---:|
+| [2026年版 AIエージェントセキュリティベンダーのトップ企業：バイヤーズガイド](https://securityboulevard.com/2026/08/top-ai-agent-security-vendors-of-2026-buyers-guide-kovrr/) | 25.0 | 20.0 | 42.0 |
+| [RailsのActive StorageにRCEにつながる重大な脆弱性を修正](https://www.bleepingcomputer.com/news/security/rails-patches-critical-active-storage-flaw-with-rce-potential/) | 24.0 | 38.0 | 42.0 |
+| [Coldcardハードウェアウォレットの欠陥、41分で7,000万ドル相当のビットコイン盗難と関連](https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html) | 20.0 | 20.0 | 42.0 |
+| [Balance Theory、サイバーセキュリティ投資管理のために1900万ドルを調達](https://www.securityweek.com/balance-theory-raises-19-million-to-help-enterprises-manage-cybersecurity-investments/) | 20.0 | 20.0 | 42.0 |
+| [技術チームのための自動フォレンジックと迅速な証拠収集技術](https://securityboulevard.com/2026/08/automated-forensics-and-rapid-evidence-collection-techniques-for-technical-teams/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
