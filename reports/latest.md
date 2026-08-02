@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-08-02 05:00 JST
+# 📡 サイレーダー 2026-08-02 11:00 JST
 
-このレポートは、2026-08-01 17:00 JST〜2026-08-02 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-02 05:00 JST〜2026-08-02 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 29
+- 観測トピック数: 25
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 5
+- [低温だが記録しておくトピック](#low-record-topics): 1
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,11 +34,7 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [2026年版 AIエージェントセキュリティベンダーのトップ企業：バイヤーズガイド](https://securityboulevard.com/2026/08/top-ai-agent-security-vendors-of-2026-buyers-guide-kovrr/) | 25.0 | 20.0 | 42.0 |
-| [RailsのActive StorageにRCEにつながる重大な脆弱性を修正](https://www.bleepingcomputer.com/news/security/rails-patches-critical-active-storage-flaw-with-rce-potential/) | 24.0 | 38.0 | 42.0 |
-| [Coldcardハードウェアウォレットの欠陥、41分で7,000万ドル相当のビットコイン盗難と関連](https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html) | 20.0 | 20.0 | 42.0 |
-| [Balance Theory、サイバーセキュリティ投資管理のために1900万ドルを調達](https://www.securityweek.com/balance-theory-raises-19-million-to-help-enterprises-manage-cybersecurity-investments/) | 20.0 | 20.0 | 42.0 |
-| [技術チームのための自動フォレンジックと迅速な証拠収集技術](https://securityboulevard.com/2026/08/automated-forensics-and-rapid-evidence-collection-techniques-for-technical-teams/) | 20.0 | 20.0 | 42.0 |
+| [OpenAI、アクティブユーザー10億人超に 導入企業は200万社超](https://www.itmedia.co.jp/news/article/2608/02/2000000346/) | 26.0 | 20.0 | 42.0 |
 
 ---
 
