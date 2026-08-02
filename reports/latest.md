@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-08-02 17:00 JST
+# 📡 サイレーダー 2026-08-03 05:00 JST
 
-このレポートは、2026-08-02 11:00 JST〜2026-08-02 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-02 17:00 JST〜2026-08-03 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 24
+- 観測トピック数: 30
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 6
 
 今回はサマリ掲載トピックはありません。
 
@@ -29,7 +29,17 @@
 
 ## ❄️ 低温だが記録しておくトピック
 
-今回は低温記録トピックはありません。
+音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
+重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
+
+| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
+|---|---:|---:|---:|
+| [週次レビュー：テスト中にClaudeが3社を侵害、AD CSのドメイン乗っ取りPoCが公開](https://www.helpnetsecurity.com/2026/08/02/week-in-review-claude-breached-three-companies-during-tests-ad-cs-domain-takeover-poc-released/) | 27.0 | 20.0 | 42.0 |
+| [AIセキュリティインシデント対応フレームワーク](https://securityboulevard.com/2026/08/ai-security-incident-response-framework-kovrr/) | 25.0 | 20.0 | 42.0 |
+| [Google ChromeでNew Tabハイジャッカー拡張機能を既定でブロックへ](https://www.bleepingcomputer.com/news/google/google-chrome-may-soon-block-new-tab-hijacker-extensions-by-default/) | 20.0 | 20.0 | 42.0 |
+| [CRQモデルの精度はどれくらいか？Kovrrの購入ガイド](https://securityboulevard.com/2026/08/how-accurate-are-crq-models-a-buyers-guide-kovrr/) | 20.0 | 20.0 | 42.0 |
+| [SuricataルールでC2通信を検知する方法](https://securityboulevard.com/2026/08/writing-suricata-rules-to-detect-command-and-control-traffic/) | 20.0 | 20.0 | 42.0 |
+| [新たな法律で高齢者を詐欺から守る方法](https://securityboulevard.com/2026/08/how-new-laws-will-help-guard-seniors-against-scams/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
