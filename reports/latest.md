@@ -1,17 +1,15 @@
-# 📡 サイレーダー 2026-08-03 11:00 JST
+# 📡 サイレーダー 2026-08-03 17:00 JST
 
-このレポートは、2026-08-03 05:00 JST〜2026-08-03 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-03 11:00 JST〜2026-08-03 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 55
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 45
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 29
+- [低温だが記録しておくトピック](#low-record-topics): 19
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [7月のマイクロソフトセキュリティ更新プログラム、SharePoint におけるリモートコード実行の脆弱性の悪用を確認](#topic-25579) | 42.0 | 56.0 | 43.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -19,67 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-25579"></a>
-
-### 1. 7月のマイクロソフトセキュリティ更新プログラム、SharePoint におけるリモートコード実行の脆弱性の悪用を確認
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 42.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 56.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-マイクロソフトの7月のセキュリティ更新プログラムに関連して、SharePoint のリモートコード実行の脆弱性が実際に悪用されていることが確認されたと報じられています。
-現時点の材料では、対象となる具体的な脆弱性番号や被害範囲は明示されていませんが、実運用環境への影響が懸念される状況です。
-SharePoint は企業内で広く使われるため、RCE 脆弱性の悪用が確認されると、情報漏えいや不正操作につながるおそれがあります。
-更新適用の遅れがある環境では、優先的な対応が必要になります。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 該当する7月のMicrosoft更新プログラムを適用済みか確認し、未適用なら優先対応する。
-- SharePoint サーバーの監視を強化し、不審なプロセス起動やアクセス痕跡がないか点検する。
-- 公開状況や影響範囲の追加情報を確認し、必要に応じて関連システムのリスク評価を見直す。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 製品 | Microsoft SharePoint | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [7月のマイクロソフトセキュリティ更新プログラム、SharePoint におけるリモートコード実行の脆弱性の悪用を確認](https://scan.netsecurity.ne.jp/article/2026/08/03/55842.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -96,35 +34,25 @@ SharePoint は企業内で広く使われるため、RCE 脆弱性の悪用が�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [金子農機にランサムウェア攻撃、サーバに保存していた各種業務データへの不正アクセスを確認](https://scan.netsecurity.ne.jp/article/2026/08/03/55845.html) | 29.0 | 30.0 | 42.0 |
-| [Anthropicの「Claude」もハッキング行為--「理想的な振る舞いとは言い難い」](https://japan.zdnet.com/article/35251210/) | 26.0 | 20.0 | 42.0 |
-| [“Mythos超え”AIモデルを搭載 Microsoft新セキュリティ基盤の実力とは？](https://atmarkit.itmedia.co.jp/ait/articles/2608/03/news027.html) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントのリスク ID管理とログで統制](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600014/072800233/) | 26.0 | 20.0 | 42.0 |
-| [Shadow AI（シャドーAI）](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600009/072800228/) | 26.0 | 20.0 | 42.0 |
-| [AIデータセンターの拡大はどこまで--広がる巨大市場の光と影](https://japan.zdnet.com/article/35251082/) | 26.0 | 20.0 | 42.0 |
-| [OpenAI、次期主力モデル「Astra」の存在を明らかに――未解決の数学問題10件を「解決」と発表](https://www.itmedia.co.jp/news/article/2608/03/2000000348/) | 26.0 | 20.0 | 42.0 |
-| [OpenAIが次期主要AIモデル「Astra」を予告、10の長年の数学問題を解決](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-teases-astra-its-next-major-ai-model-after-it-solves-10-long-standing-math-problems/) | 25.0 | 20.0 | 42.0 |
-| [【2022年のINTERNET Watch】「ChatGPT」の登場で生成AIブームが到来、イーロン・マスク氏のTwitter買収で混乱も](https://internet.watch.impress.co.jp/docs/special/30th/2127719.html) | 25.0 | 20.0 | 42.0 |
-| [「pgAdmin 4」に深刻な脆弱性 - 前回修正の不備も](https://www.security-next.com/188205) | 22.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年7月26日〜2026年8月1日）](https://www.security-next.com/188202) | 22.0 | 20.0 | 42.0 |
-| [プロアクティブDNSでDNSをセキュリティ基盤へ 福岡大学でも「運用課題なし」の実績](https://ascii.jp/elem/000/004/424/4424178/?rss=) | 21.0 | 20.0 | 42.0 |
-| [ハッキングカンファレンス DEF CON、Meta式「変態メガネ」全面禁止(度付きもNG)広がるスマートグラス締め出し](https://scan.netsecurity.ne.jp/article/2026/08/03/55849.html) | 21.0 | 20.0 | 42.0 |
-| [セコムトラストシステムズ、SASE・EDR選定の「失敗しない判断軸」解説セミナーを 8 / 24・25・26 開催](https://scan.netsecurity.ne.jp/article/2026/08/03/55848.html) | 21.0 | 20.0 | 42.0 |
-| [日産化学への不正アクセス、システムで不審な活動を検知し発覚](https://scan.netsecurity.ne.jp/article/2026/08/03/55847.html) | 21.0 | 20.0 | 42.0 |
-| [海外貨物検査と契約する有機JAS認証審査員がサポート詐欺被害](https://scan.netsecurity.ne.jp/article/2026/08/03/55846.html) | 21.0 | 20.0 | 42.0 |
-| [停職処分 ～ 消防士長31歳が不正アクセスし人事関連内部情報閲覧](https://scan.netsecurity.ne.jp/article/2026/08/03/55844.html) | 21.0 | 20.0 | 42.0 |
-| [Ruby on Rails の Active Storage にリモートコード実行につながる脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/03/55843.html) | 21.0 | 20.0 | 42.0 |
-| [てがろぐ -Fumy Otegaru Memo Logger- に制限が不十分な正規表現を使用している脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/03/55841.html) | 21.0 | 20.0 | 42.0 |
-| [エレコム製無線LANルータおよび無線アクセスポイントに複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/03/55839.html) | 21.0 | 20.0 | 42.0 |
-| [Knot Resolver にリモートコード実行が可能になる問題を含む複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/03/55838.html) | 21.0 | 20.0 | 42.0 |
-| [セコム安否確認サービス、「ITreview Grid Award 2026 Summer」安否確認システム部門で26期連続「Leader」を受賞](https://scan.netsecurity.ne.jp/article/2026/08/03/55837.html) | 21.0 | 20.0 | 42.0 |
-| [Copilot悪用の新たなサイバー攻撃、Word文書からAIワーム拡散](https://news.mynavi.jp/techplus/article/20260803-4760611/) | 21.0 | 20.0 | 42.0 |
-| [WAFを89％すり抜ける事例も──AIが休みなく仕掛けるWeb攻撃、予防策はあるか](https://www.itmedia.co.jp/news/article/2608/03/2000000287/) | 21.0 | 20.0 | 42.0 |
-| [AIが「プロキシを突破する」時代へ OpenAIの評価用AI、ゼロデイ脆弱性を自律悪用](https://www.itmedia.co.jp/enterprise/articles/2608/03/news014.html) | 21.0 | 20.0 | 42.0 |
-| [SBOMの最小要素が5年ぶり改訂 何が必須になるのか](https://www.itmedia.co.jp/enterprise/articles/2608/03/news018.html) | 21.0 | 20.0 | 42.0 |
-| [フロンティアAIモデル登場で企業が理解すべきセキュリティのこと--ガートナーに聞く](https://japan.zdnet.com/article/35250996/) | 21.0 | 20.0 | 42.0 |
-| [北朝鮮のIT労働者が身分を偽り就労する実態への注意喚起、日米韓ほか11カ国が共同署名 稼いだ資金は不法な核兵器や弾道ミサイル計画の資金源に](https://internet.watch.impress.co.jp/docs/news/2129769.html) | 20.0 | 20.0 | 42.0 |
-| [COLDCARDウォレットのRNG欠陥が8800万ドル相当のBitcoin盗難と関連か](https://www.bleepingcomputer.com/news/security/coldcard-wallet-rng-flaw-likely-linked-to-88-million-bitcoin-theft/) | 20.0 | 20.0 | 42.0 |
+| [単一のアラートでは見えないマルウェアの影響範囲の可視化](https://www.helpnetsecurity.com/2026/08/03/mike-wiacek-stairwell-backstory-malware-blast-radius/) | 28.0 | 20.0 | 42.0 |
+| [Guardio Mobile Securityが侵害アラートを復旧計画に変える製品紹介](https://www.helpnetsecurity.com/2026/08/03/product-showcase-guardio-mobile-security/) | 28.0 | 20.0 | 42.0 |
+| [TikTokのフォロワー購入で詐欺やアカウント乗っ取りのリスクが高まる](https://www.helpnetsecurity.com/2026/08/03/malwarebytes-tiktok-followers-scam-risks-report/) | 28.0 | 20.0 | 42.0 |
+| [最新のサイバー攻撃の波でAIが「攻撃手段」と「標的」の両方に](https://www.theregister.com/cyber-crime/2026/08/03/ai-is-both-the-weapon-and-the-target-in-latest-wave-of-cyberattacks/5281534) | 25.0 | 20.0 | 42.0 |
+| [CrowdStrike：AIはサイバー攻撃における武器であり標的でもある](https://cyberscoop.com/crowdstrike-annual-threat-hunting-report-2026/) | 25.0 | 20.0 | 42.0 |
+| [SkillSpector: NVIDIAのAIエージェントスキル向けオープンソースセキュリティスキャナー](https://www.helpnetsecurity.com/2026/08/03/skillspector-open-source-agent-skill-security-scanner/) | 25.0 | 20.0 | 42.0 |
+| [AIでフィッシングを数秒に短縮、そこでDMARCとBIMIが重要になる](https://www.helpnetsecurity.com/2026/08/03/dmarc-and-bimi-video/) | 25.0 | 20.0 | 42.0 |
+| [CrowdStrike 2026脅威ハンティングレポート：AI活用が加速する中で悪用の機会は縮小](https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-threat-hunting-report/) | 25.0 | 20.0 | 42.0 |
+| [三菱電機製複数製品で使用しているCC-Link IE TSN通信プロトコルにおける通信チャネルで送受信するメッセージに対する完全性の検証不備に起因する脆弱性](https://jvn.jp/vu/JVNVU98879231/) | 23.0 | 20.0 | 43.0 |
+| [「MongoDB Server」に24件の脆弱性 - 「クリティカル」も](https://www.security-next.com/188223) | 22.0 | 20.0 | 42.0 |
+| [ハードウェアウォレット「COLDCARD」の脆弱性悪用による3波の攻撃で合計140億円相当のビットコインが盗まれる](https://gigazine.net/news/20260803-coldcard-wallet-flaw-bitcoin-theft/) | 22.0 | 20.0 | 42.0 |
+| [AppleがAIによる報告が殺到していることを受けバグ報告の提出件数に上限を設定](https://gigazine.net/news/20260803-apple-ai-bug-reports/) | 22.0 | 20.0 | 42.0 |
+| [「Apache Kyuubi」に3件の脆弱性 - 修正版が公開](https://www.security-next.com/188213) | 22.0 | 20.0 | 42.0 |
+| [講談社、最大3812件の個人情報流出 社員がフィッシングメールに騙される](https://www.itmedia.co.jp/news/article/2608/03/2000000357/) | 21.0 | 20.0 | 42.0 |
+| [個人情報含む約3300万件のデータ漏えいか 整体院予約など手掛けるEPARKリラク＆エステ システムに不正アクセス](https://www.itmedia.co.jp/news/article/2608/03/2000000354/) | 21.0 | 20.0 | 42.0 |
+| [BASE子会社、最大885万件漏えいか カード番号の一部も ECサイト構築サービスに不正アクセス](https://www.itmedia.co.jp/news/article/2608/03/2000000355/) | 21.0 | 20.0 | 42.0 |
+| [エルヴィン団長「とりあえず再起動しろ！」──NTT東日本×「進撃の巨人」の“情シスあるある”広告が話題](https://www.itmedia.co.jp/news/article/2608/03/2000000344/) | 21.0 | 20.0 | 42.0 |
+| [セキュリティの一週間（7月27日～8月2日）](https://www.malwarebytes.com/blog/news/2026/08/a-week-in-security-july-27-august-2) | 20.0 | 20.0 | 42.0 |
+| [サイボウズ Garoonにおけるクロスサイトスクリプティングの脆弱性](https://jvn.jp/jp/JVN72334274/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
