@@ -1,15 +1,18 @@
-# 📡 サイレーダー 2026-08-04 11:00 JST
+# 📡 サイレーダー 2026-08-04 17:00 JST
 
-このレポートは、2026-08-04 05:00 JST〜2026-08-04 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-04 11:00 JST〜2026-08-04 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 58
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 47
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 33
+- [低温だが記録しておくトピック](#low-record-topics): 21
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [RedisのRCE脆弱性、PoC公開で危険度増す 修正済み脆弱性の“抜け穴”が判明](#topic-25844) | 30.0 | 41.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [「Adobe Campaign Classic」に脆弱性 - 直前の修正版にも影響、再度更新を](#topic-25863) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +20,124 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-25844"></a>
+
+### 1. RedisのRCE脆弱性、PoC公開で危険度増す 修正済み脆弱性の“抜け穴”が判明
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>R⁠C⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>P⁠o⁠C</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 41.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+Redisで任意コード実行（RCE）につながる脆弱性について、攻撃再現のPoCが公開されたと報じられています。
+公開資料では複数バージョンで検証が成功したとされ、実用性のある問題として受け止められています。
+RCEにつながる脆弱性は、条件次第でサーバー侵害や情報流出、サービス停止につながるおそれがあります。
+PoCの公開により、修正の有無だけでなく、実際の影響評価と迅速な対応の重要性が高まっています。
+
+#### 温度感の理由
+
+##### 温度感
+- 技術詳細・再現情報あり。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- 技術詳細により影響確認が進みやすい。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Redisの利用有無とバージョンを確認し、影響を受ける構成か点検する。
+- 提供元の修正情報や更新版を確認し、適用可能なものは速やかに反映する。
+- Redisを外部公開している場合は、アクセス制御や到達範囲の見直しを行う。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [RedisのRCE脆弱性、PoC公開で危険度増す　修正済み脆弱性の“抜け穴”が判明](https://atmarkit.itmedia.co.jp/ait/articles/2608/03/news047.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
+
+<a id="topic-25863"></a>
+
+### 2. 「Adobe Campaign Classic」に脆弱性 - 直前の修正版にも影響、再度更新を
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Adobeは「Adobe Campaign Classic」に複数の深刻な脆弱性が見つかったとして、緊急の修正版を公開しました。
+直前の7月29日にも更新がありましたが、今回は別の脆弱性への対応とされており、利用者に早急な適用が求められています。
+業務で同製品を運用している組織では、短期間に再度の更新対応が必要になるため、保守計画や検証作業への影響が出やすい点が注目されます。
+深刻な脆弱性と案内されているため、対応の遅れはリスクにつながり得ます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 対象バージョンと適用済み修正版を確認し、最新更新の適用状況を点検する。
+- 本番反映前に検証環境で影響を確認し、業務停止を避けるための適用手順を整理する。
+- 関連製品や連携基盤も含め、ベンダーの追加案内や再修正版の有無を継続監視する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Adobe | 言及あり | 0.80 | — |
+| 製品 | Adobe Campaign Classic | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [「Adobe Campaign Classic」に脆弱性 - 直前の修正版にも影響、再度更新を](https://www.security-next.com/188299) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,39 +154,27 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ファイブフォックスのサーバがランサムウェア感染の可能性、通常のセキュリティ調査過程で発覚](https://scan.netsecurity.ne.jp/article/2026/08/04/55857.html) | 29.0 | 30.0 | 42.0 |
-| [ランサムウェア攻撃「減少」もデータが示す真実--企業が実施すべき4つの最善防御策](https://japan.zdnet.com/article/35251055/) | 29.0 | 30.0 | 42.0 |
-| [ホテルのWi-Fi攻撃でカスタムマルウェアを用いてMicrosoft 365アカウントを侵害](https://www.bleepingcomputer.com/news/security/hotel-wi-fi-attacks-use-custom-malware-to-breach-microsoft-365-accounts/) | 28.0 | 20.0 | 42.0 |
-| [New Pass-ta-key攻撃によりマルウェアがGoogle同期パスキーを乗っ取る](https://www.bleepingcomputer.com/news/security/new-pass-ta-key-attacks-let-malware-hijack-google-synced-passkeys/) | 28.0 | 20.0 | 42.0 |
-| [新しいDOUBLECUP ClickFixサービスがブラウザキャッシュ画像にマルウェアを隠蔽](https://www.bleepingcomputer.com/news/security/new-doublecup-clickfix-service-hides-malware-in-browser-cache-images/) | 28.0 | 20.0 | 42.0 |
-| [EU、AIの透明性義務の適用を開始 生成コンテンツにラベルとマーク義務、違反に最大1500万ユーロ](https://www.itmedia.co.jp/news/article/2608/04/2000000366/) | 26.0 | 20.0 | 42.0 |
-| [「Gemini Enterprise」に大規模導入の波 ― SOMPO・NTTデータ・Skyが描く“エージェント企業”への進化](https://ascii.jp/elem/000/004/424/4424449/?rss=) | 26.0 | 20.0 | 42.0 |
-| [Claude暴走、企業に侵入 AnthropicとOpenAIの事例から学ぶ3つの教訓](https://atmarkit.itmedia.co.jp/ait/articles/2608/03/news041.html) | 26.0 | 20.0 | 42.0 |
-| [25ドルで見つかったWordPressの脆弱性 生成AIが変えた攻防の時間軸](https://www.itmedia.co.jp/enterprise/articles/2608/04/news019.html) | 26.0 | 20.0 | 42.0 |
-| [サツドラが切り開くOMO戦略と生成AI活用--DXは「熱意とインハウス」で加速する](https://japan.zdnet.com/article/35250350/) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントはいかに脱出したのか--人間の判断によって防げた一連の出来事](https://japan.zdnet.com/article/35251203/) | 26.0 | 20.0 | 42.0 |
-| [キーボードの「Copilot」キーにもっと便利な機能に割り当てる方法](https://japan.zdnet.com/article/35251059/) | 26.0 | 20.0 | 42.0 |
-| [公益団体連合がCongressにOpenAIとHugging Faceの侵害調査を要請](https://fedscoop.com/public-interest-coalition-urges-congress-investigate-openai-hugging-face-hack/) | 25.0 | 20.0 | 42.0 |
-| [Anthropic、「Claude」のサイバー攻撃能力テスト中に3件の不正アクセスが発生したと発表](https://internet.watch.impress.co.jp/docs/news/2130096.html) | 25.0 | 20.0 | 42.0 |
-| [AI Actが施行、企業にAIチャットボットの明示を義務付け](https://www.malwarebytes.com/blog/news/2026/08/the-ai-act-kicks-into-action-forces-companies-to-be-clear-about-ai-bots) | 25.0 | 20.0 | 42.0 |
-| [AI動画の出どころを追跡する新ツール](https://www.darkreading.com/cyber-risk/new-tool-advances-ai-generated-video-detection) | 25.0 | 20.0 | 42.0 |
-| [Anthropic：Claudeへの攻撃はモデルの問題ではなくセキュリティの不備が原因](https://www.darkreading.com/cyber-risk/anthropic-ai-issues-result-security-gaps) | 25.0 | 20.0 | 42.0 |
-| [米当局、N-able「N-central」の脆弱性悪用に注意喚起](https://www.security-next.com/188277) | 22.0 | 20.0 | 42.0 |
-| [シフトレフトや内製化も解説 ～ エーアイセキュリティラボが脆弱性対策動画を 8 月限定週替わり公開](https://scan.netsecurity.ne.jp/article/2026/08/04/55859.html) | 21.0 | 20.0 | 42.0 |
-| [アイダエンジニアリングに不正アクセス、アジア拠点における決算手続に遅延](https://scan.netsecurity.ne.jp/article/2026/08/04/55858.html) | 21.0 | 20.0 | 42.0 |
-| [支払対象は計 16.3 億円 ～ プルデンシャル・グループ、社員の不適切金銭行為に関する補償進捗を発表](https://scan.netsecurity.ne.jp/article/2026/08/04/55856.html) | 21.0 | 20.0 | 42.0 |
-| [Oktaグローバル調査レポート「Global CISO Insights 2026」公開、日本はガバナンスツール導入で深刻な遅れ](https://scan.netsecurity.ne.jp/article/2026/08/04/55855.html) | 21.0 | 20.0 | 42.0 |
-| [BaserCMS に CSVファイルインジェクションの脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/04/55854.html) | 21.0 | 20.0 | 42.0 |
-| [ロボット掃除機 DEEBOT PRO M1、DEEBOT PRO K1VAC およびスマートフォンアプリ ECOVACS PRO に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/04/55853.html) | 21.0 | 20.0 | 42.0 |
-| [SGLang に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/04/55852.html) | 21.0 | 20.0 | 42.0 |
-| [トレンドマイクロ製 TrendAI Vision One に脆弱性、セキュリティアップデート公開](https://scan.netsecurity.ne.jp/article/2026/08/04/55851.html) | 21.0 | 20.0 | 42.0 |
-| [Apache Tomcat の WebSocket chat サンプルにサービス運用妨害（DoS）の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/04/55850.html) | 21.0 | 20.0 | 42.0 |
-| [休暇中の自社機器が攻撃に加担する？ IPAが夏季休暇前に求める備え](https://www.itmedia.co.jp/enterprise/articles/2608/04/news028.html) | 21.0 | 20.0 | 42.0 |
-| [VMware管理基盤に“認証突破”の穴 Broadcom「回避策を用意せず」](https://atmarkit.itmedia.co.jp/ait/articles/2608/03/news048.html) | 21.0 | 20.0 | 42.0 |
-| [「Adult TikTok」検索が詐欺につながる](https://www.malwarebytes.com/blog/scams/2026/08/adult-tiktok-searches-lead-to-scams) | 20.0 | 20.0 | 42.0 |
-| [カリフォルニア州民はデータブローカーに自分の情報削除を求められる](https://www.malwarebytes.com/blog/news/2026/08/californians-can-tell-data-brokers-to-drop-their-information) | 20.0 | 20.0 | 42.0 |
-| [Google dev kitが初のagent-on-agent攻撃を誘発](https://www.theregister.com/security/2026/08/03/google-dev-kit-spurs-first-ever-agent-on-agent-violence/5282496) | 20.0 | 20.0 | 42.0 |
-| [Bitcoinハードウェアウォレットメーカー、8800万ドル超の盗難後に一部在庫を廃棄](https://therecord.media/bitcoin-theft-coldcard-cyberattack) | 20.0 | 20.0 | 42.0 |
+| [CEOにとってデジタル・エグゼクティブ・プロテクションは戦略上の必須事項](https://www.helpnetsecurity.com/2026/08/04/brian-hill-blackcloak-digital-executive-protection/) | 28.0 | 20.0 | 42.0 |
+| [Cloudflareが大型AIモデルの高速推論サービスを展開するための効率化手法を公開](https://gigazine.net/news/20260804-cloudflare-ai-kimi-glm/) | 27.0 | 20.0 | 42.0 |
+| [AIエージェントごとに専用コンピューターを割り当てる「@cloudflare/computer」が登場、ファイル編集やコマンド実行を1つの作業環境で行えるように](https://gigazine.net/news/20260804-cloudflare-computer/) | 27.0 | 20.0 | 42.0 |
+| [中国・Alibabaが2.4兆パラメーターのAI「Qwen3.8-Max」を発表、Claude Fable 5に匹敵する性能で研究論文の改良や16日間の自律開発が可能](https://gigazine.net/news/20260804-alibaba-qwen-3-8-max/) | 27.0 | 20.0 | 42.0 |
+| [ホンダ、ID統制基盤「Saviynt」を導入--AIエージェント管理も視野に](https://japan.zdnet.com/article/35251262/) | 26.0 | 20.0 | 42.0 |
+| [Googleは社内のエージェントを「脅威」と見なす――なぜ「AIを信じない」のか？](https://atmarkit.itmedia.co.jp/ait/articles/2608/04/news039.html) | 26.0 | 20.0 | 42.0 |
+| [EUがAI法の適用を開始、AIモデルへの監視を強化](https://www.helpnetsecurity.com/2026/08/04/eu-ai-act-enforcement-ai-models/) | 25.0 | 20.0 | 42.0 |
+| [freo2におけるアップロードするファイルの検証が不十分な脆弱性](https://jvn.jp/jp/JVN52865575/) | 23.0 | 20.0 | 43.0 |
+| [従業員がフィッシング被害、連絡先情報が流出 - 講談社](https://www.security-next.com/188284) | 22.0 | 20.0 | 42.0 |
+| [米当局「脆弱性悪用リスト」、7月に26件 - 8割超が3日以内対応](https://www.security-next.com/188282) | 22.0 | 20.0 | 42.0 |
+| [変化を先導するAIとセキュリティの新基準（「情シス Update Day 2026 in 名古屋」イベントレポート）](https://ascii.jp/elem/000/004/422/4422573/?rss=) | 21.0 | 20.0 | 42.0 |
+| [サイバーセキュリティ2026決定、対策強化を「日本成長戦略」の大前提に](https://xtech.nikkei.com/atcl/nxt/news/24/03328/) | 21.0 | 20.0 | 42.0 |
+| [Device Codeフィッシングが2026年に1500％増加、Vishingも倍増](https://www.darkreading.com/cybersecurity-analytics/device-code-phishing-vishing-doubles) | 20.0 | 20.0 | 42.0 |
+| [WhatsAppアカウント乗っ取りを狙う「友人に投票して」と求める詐欺](https://www.malwarebytes.com/blog/scams/2026/08/whatsapp-account-takeover-scam-asks-you-to-vote-for-my-friend) | 20.0 | 20.0 | 42.0 |
+| [ビジネスメール詐欺やフィッシングなど、企業を狙うメールを悪用した攻撃について解説するレポートをIPAが公開](https://internet.watch.impress.co.jp/docs/news/2130354.html) | 20.0 | 20.0 | 42.0 |
+| [OWASPのSubtractive Securityプロジェクトが消去した攻撃経路を測定する方法](https://www.helpnetsecurity.com/2026/08/04/owasp-subtractive-security/) | 20.0 | 20.0 | 42.0 |
+| [Microsoft Bug Bounty Program：500人の研究者に2000万ドルを支払った実績](https://www.securityweek.com/microsoft-bug-bounty-program-20-million-paid-to-500-researchers/) | 20.0 | 20.0 | 42.0 |
+| [Stellar Cyberのエージェント型自動トリアージ試験で毎時19分を節約](https://www.helpnetsecurity.com/2026/08/04/stellar-cyber-agentic-auto-triage/) | 20.0 | 20.0 | 42.0 |
+| [Cloudflareは第三者セキュリティツールをほぼ廃止、他社は安易に真似すべきでないと示唆](https://www.theregister.com/security/2026/08/04/cloudflare-has-mostly-ditched-third-party-security-tools-suggests-not-trying-that-at-home/5282600) | 20.0 | 20.0 | 42.0 |
+| [偽のIRS通知で暗号資産保有者を偽コンプライアンス पोर्टルへ誘導](https://www.helpnetsecurity.com/2026/08/04/fake-irs-crypto-letters-compliance-portal-scam/) | 20.0 | 20.0 | 42.0 |
+| [現在募集中のサイバーセキュリティ求人：2026年8月4日](https://www.helpnetsecurity.com/2026/08/04/cybersecurity-jobs-available-right-now-august-4-2026/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
