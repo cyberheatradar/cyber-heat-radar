@@ -1,17 +1,17 @@
-# 📡 サイレーダー 2026-08-05 11:00 JST
+# 📡 サイレーダー 2026-08-05 17:00 JST
 
-このレポートは、2026-08-05 05:00 JST〜2026-08-05 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-05 11:00 JST〜2026-08-05 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 61
+- 観測トピック数: 43
 - [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 36
+- [低温だが記録しておくトピック](#low-record-topics): 18
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [「Langflow」「Tomcat」など脆弱性3件の悪用に注意喚起 - 米当局](#topic-26048) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [合計月間インストール数20億回超の人気npmパッケージ群を狙った大規模サプライチェーン攻撃が発生](#topic-26134) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,68 +19,59 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-26048"></a>
+<a id="topic-26134"></a>
 
-### 1. 「Langflow」「Tomcat」など脆弱性3件の悪用に注意喚起 - 米当局
+### 1. 合計月間インストール数20億回超の人気npmパッケージ群を狙った大規模サプライチェーン攻撃が発生
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>サ⁠プ⁠ラ⁠イ⁠チ⁠ェ⁠ー⁠ン</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-米サイバーセキュリティインフラストラクチャセキュリティ庁（CISA）は、「Apache Tomcat」や「Langflow」を含む、悪用が確認されている3件の既知脆弱性について注意喚起しました。
-公開情報上は、これらの脆弱性が実際の攻撃に利用されている文脈で扱われています。悪用観測がある脆弱性は、対応の優先度が高くなります。
-対象製品を使っている組織では、影響有無の確認と修正適用の進捗管理が重要です。
+JavaScript向けのnpmで、広く使われている多数のパッケージに不正なコードが混入された大規模なサプライチェーン攻撃が報じられました。
+公開情報では、少なくとも434パッケージの1381バージョンが影響を受けたとされ、合計月間インストール数は20億回を超える規模とされています。
+依存関係として取り込まれるパッケージが汚染されると、個別の利用者だけでなく多数の開発・運用環境へ影響が広がる可能性があります。
+認証情報の窃取が示唆されているため、ビルドや配布の信頼性確認が重要になります。
 
 #### 温度感の理由
 
 ##### 温度感
-- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
 
 ##### 実務影響
-- 悪用情報あり。
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 対象製品・該当バージョンの利用有無を速やかに確認する。
-- ベンダーや公的機関の案内に沿って修正・緩和策を適用する。
-- 関連システムの監視を強め、不審な挙動がないか点検する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-18556 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-18577 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
-| 脆弱性 | CVE-2026-34486 | 関連CVE | 1.00 | 候補あり（URL 2件以上） |
-| 脆弱性 | CVE-2026-9198 | 関連CVE | 1.00 | 候補あり（URL 3件以上） |
-| 製品 | Apache Tomcat | 言及あり | 0.80 | — |
-| 製品 | Langflow | 言及あり | 0.80 | — |
+- 依存しているnpmパッケージのバージョンを点検し、影響対象に含まれていないか確認する。
+- CI/CD、開発端末、秘密情報管理の設定を見直し、認証情報の漏えいがないか監視する。
+- ロックファイルと依存更新の手順を確認し、信頼できるバージョンへの更新を優先する。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [「Langflow」「Tomcat」など脆弱性3件の悪用に注意喚起 - 米当局](https://www.security-next.com/188342) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [合計月間インストール数20億回超の人気npmパッケージ群を狙った大規模サプライチェーン攻撃が発生](https://gigazine.net/news/20260805-npm-supply-chain-attack/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
+- 技術・開発者系ソース観測: 観測あり。
 
 ---
 
@@ -99,42 +90,24 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [オーミケンシへのランサムウェア攻撃、リークサイト上に社名等が掲載されるも盗取されたとされる実データは公開されず](https://scan.netsecurity.ne.jp/article/2026/08/05/55868.html) | 29.0 | 30.0 | 42.0 |
-| [4時間以内に440件のパッケージが侵害された大規模サプライチェーン攻撃](https://cyberscoop.com/supply-chain-attack-malware-mini-shai-hulud-teampcp/) | 28.0 | 30.0 | 42.0 |
-| [AIによる「冤罪」は避けられない？](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/040900481/072800034/) | 28.0 | 20.0 | 42.0 |
-| [「Terraform MCP Server」に深刻な脆弱性 - 修正版が公開](https://www.security-next.com/188333) | 27.0 | 20.0 | 42.0 |
-| [AI が未知の攻撃クラスを発明する日 ～ FFRI 鵜飼裕司の Black Hat USA 2026 今年の見どころ](https://scan.netsecurity.ne.jp/article/2026/08/05/55871.html) | 26.0 | 20.0 | 42.0 |
-| [OpenAI、Appleの提訴に全面反論――「営業秘密は持っていないし、欲しくもない」](https://www.itmedia.co.jp/news/article/2608/05/2000000387/) | 26.0 | 20.0 | 42.0 |
-| [半導体にAIモデルも 異次元の投資合戦](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/072800563/072800002/) | 26.0 | 20.0 | 42.0 |
-| [トークン予算を超過せずにAIエージェントを使う方法](https://japan.zdnet.com/article/35251037/) | 26.0 | 20.0 | 42.0 |
-| [Agentic SOCのベンチマーク：セキュリティワークフローにおけるLLMの評価方法](https://www.elastic.co/security-labs/llm-benchmarking-agentic-soc) | 25.0 | 20.0 | 42.0 |
-| [OpenAIとAnthropicのAIエージェントがサイバー試験で実在の人物とシステムを標的にした件](https://www.bleepingcomputer.com/news/security/openai-anthropic-ai-agents-targeted-real-people-and-systems-in-cyber-tests/) | 25.0 | 20.0 | 42.0 |
-| [AISIとOpenAIが報告した「無断」モデルハッキング](https://cyberscoop.com/aisi-openai-report-unsanctioned-ai-model-hacks/) | 25.0 | 20.0 | 42.0 |
-| [IPA、AIの信頼できる社会実装を支える「デジタル＆AIシステムズ・デザインセンター」新設](https://internet.watch.impress.co.jp/docs/news/2130401.html) | 25.0 | 20.0 | 42.0 |
-| [OpenAI：カンボジアの詐欺拠点がChatGPTを使い、インド国籍者を誘い込んで投資詐欺を実行](https://therecord.media/openai-chatgpt-cambodia-scam-centers-disruption) | 25.0 | 20.0 | 42.0 |
-| [TP-LinkがOmada ZTPの脆弱性を修正、ネットワーク侵入の恐れ](https://www.bleepingcomputer.com/news/security/tp-link-patches-omada-ztp-flaws-allowing-hackers-to-breach-networks/) | 24.0 | 38.0 | 42.0 |
-| [ブラウザの再起動は不要になる？ Chromeが模索する「週2リリース」と「無停止アップデート」](https://www.itmedia.co.jp/enterprise/articles/2608/05/news027.html) | 24.0 | 20.0 | 43.0 |
-| [ChainDropのサプライチェーン侵害：自己伝播型ワームの解剖](https://www.microsoft.com/en-us/security/blog/2026/08/04/chaindrop-supply-chain-compromise-anatomy-self-propagating-worm/) | 22.0 | 45.0 | 42.0 |
-| [バックアップ運用管理製品「Veeam ONE」に深刻な脆弱性](https://www.security-next.com/188335) | 22.0 | 20.0 | 42.0 |
-| [VMware製品にCVSS 9.8の脆弱性、回避策なし 速やかなアップデートを推奨](https://www.itmedia.co.jp/enterprise/articles/2608/05/news036.html) | 21.0 | 20.0 | 42.0 |
-| [ANAグループ 株式会社OCSの「OCS FAMILY LINK SERVICE」に不正アクセス、一部の個人情報・データが流出した可能性](https://scan.netsecurity.ne.jp/article/2026/08/05/55870.html) | 21.0 | 20.0 | 42.0 |
-| [セシール、再発防止のため業務委託先の見直しを完了し選定基準と管理も強化](https://scan.netsecurity.ne.jp/article/2026/08/05/55869.html) | 21.0 | 20.0 | 42.0 |
-| [調査データの加工や転用 ～ 大和ハウス工業子会社が受託した地盤調査業務で不適切行為](https://scan.netsecurity.ne.jp/article/2026/08/05/55867.html) | 21.0 | 20.0 | 42.0 |
-| [VPS.org の one-click deployment テンプレートに複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/05/55866.html) | 21.0 | 20.0 | 42.0 |
-| [総務省が10月に全国でCTF開催 ～ 全国9会場とオンライン](https://scan.netsecurity.ne.jp/article/2026/08/05/55865.html) | 21.0 | 20.0 | 42.0 |
-| [経営幹部や役員がサイバー攻撃後に処分を受けたと50%が回答 ～ フォーティネット調査](https://scan.netsecurity.ne.jp/article/2026/08/05/55864.html) | 21.0 | 20.0 | 42.0 |
-| [クルーズ船で「勇者」が船出 ～ 52社100名が参加、Cloudbaseユーザー会開催報告](https://scan.netsecurity.ne.jp/article/2026/08/05/55862.html) | 21.0 | 20.0 | 42.0 |
-| [GMOサイバーセキュリティ byイエラエが「DEF CON 34」の宇宙サイバーセキュリティ専門エリア「Aerospace Village」にブース出展](https://scan.netsecurity.ne.jp/article/2026/08/05/55861.html) | 21.0 | 20.0 | 42.0 |
-| [Ruby on Rails の重大脆弱性「KindaRails2Shell」への「GMOサイバー攻撃ネットde診断 ASM」の対応、Rails の利用を検出した顧客に個別案内](https://scan.netsecurity.ne.jp/article/2026/08/05/55860.html) | 21.0 | 20.0 | 42.0 |
-| [AIが新たなサイバー兵器で巨大な標的でもある--クラウドストライクの報告書](https://japan.zdnet.com/article/35251237/) | 21.0 | 20.0 | 42.0 |
-| [オープンソースの「BleachBit」でディスク容量を空けたり機密データを完消去する方法](https://japan.zdnet.com/article/35251166/) | 21.0 | 20.0 | 42.0 |
-| [脆弱性の物量に圧倒される前に 地殻変動の中だからこそ押さえておきたい3つの対策](https://www.itmedia.co.jp/enterprise/articles/2608/05/news007.html) | 21.0 | 20.0 | 42.0 |
-| [Weekly Report: VeloCloud Orchestratorに複数の脆弱性](https://www.jpcert.or.jp/wr/2026/wr260805.html) | 20.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年08月04日）](https://jvn.jp/vu/JVNVU92898025/) | 20.0 | 20.0 | 42.0 |
-| [CMMC第2フェーズは停止、MSPに生じた責任は消えず](https://www.itpro.com/security/cmmc-phase-2-is-suspended-the-liability-it-created-for-msps-isnt) | 20.0 | 20.0 | 42.0 |
-| [RingCentralを装ったフィッシングサービスによるMicrosoft 365アカウント窃取](https://www.bleepingcomputer.com/news/security/phishing-service-spoofs-ringcentral-to-steal-microsoft-365-accounts/) | 20.0 | 20.0 | 42.0 |
-| [総務省、学生や若手社会人向けのサイバーセキュリティ競技会「全国型CTFコンテスト」を10月に開催、参加受付中 ワークショップ形式で基本から学べる](https://internet.watch.impress.co.jp/docs/news/2130405.html) | 20.0 | 20.0 | 42.0 |
-| [Apple、暗号化されたiCloudアクセスを巡って英国と再び対立](https://www.malwarebytes.com/blog/news/2026/08/apple-battles-it-out-again-with-uk-over-encrypted-icloud-access) | 20.0 | 20.0 | 42.0 |
+| [Claude Mythos 5やGPT-5.6 Solが無許可でハッキングをする事例を確認したとイギリス政府機関が報告](https://gigazine.net/news/20260805-aisi-unsanctioned-agent-behaviour/) | 27.0 | 20.0 | 42.0 |
+| [スマホで動作するエージェント対応小型AIモデル「LFM2.5-2.6B」が登場、ローカル環境でAIエージェントを実行可能](https://gigazine.net/news/20260805-lfm2-5-2-6b/) | 27.0 | 20.0 | 42.0 |
+| [キユーピー、工場のシミュレーションモデルをAIエージェントで完全自動生成](https://japan.zdnet.com/article/35251288/) | 26.0 | 20.0 | 42.0 |
+| [英AI研究所、評価中のAIが実在の開発者を標的に──偽アカウント使い悪意あるコードの承認迫る](https://www.itmedia.co.jp/news/article/2608/05/2000000391/) | 26.0 | 20.0 | 42.0 |
+| [Future AGI：自己改善するAIエージェントを提供するオープンソースプラットフォーム](https://www.helpnetsecurity.com/2026/08/05/future-agi-open-source-platform-shipping-self-improving-ai-agents/) | 25.0 | 20.0 | 42.0 |
+| [企業のAIフットプリントはモデル一覧の約3倍に及ぶ](https://www.helpnetsecurity.com/2026/08/05/snyk-growing-agentic-ai-adoption-report/) | 25.0 | 20.0 | 42.0 |
+| [ホワイトハウスの国家サイバー担当、AIを新たな規則なしで保護する方針を表明](https://cyberscoop.com/trump-ai-executive-order-open-source-strategy-sean-cairncross/) | 25.0 | 20.0 | 42.0 |
+| [不正アクセスで関係者情報が流出か、電力供給への影響なし - 中部電力](https://www.security-next.com/188338) | 22.0 | 20.0 | 42.0 |
+| [夏季休暇に向けて準備を - 盆休み週のパッチチューズデーに注意](https://www.security-next.com/188162) | 22.0 | 20.0 | 42.0 |
+| [最大6万件の個人情報流出か 「ITトレンド」など運営のイノベーション、GitHubの認証情報漏えいで](https://www.itmedia.co.jp/news/article/2608/05/2000000396/) | 21.0 | 20.0 | 42.0 |
+| [Googleパスワードマネジャーに脆弱性 パスキーで守られたアカウント乗っ取る3つの攻撃手法、米パロアルトが警鐘](https://www.itmedia.co.jp/news/article/2608/05/2000000395/) | 21.0 | 20.0 | 42.0 |
+| [885万件超の情報漏えいが発覚 BASE子会社のEストアーが不正アクセス被害](https://atmarkit.itmedia.co.jp/ait/articles/2608/05/news066.html) | 21.0 | 20.0 | 42.0 |
+| [中部電力で個人情報漏洩の可能性、グループ役職員や取引先など7万人超](https://xtech.nikkei.com/atcl/nxt/news/24/03331/) | 21.0 | 20.0 | 42.0 |
+| [少なくとも12州に及ぶ水道分野へのサイバー攻撃報告](https://www.securityweek.com/water-sector-cyberattacks-reportedly-hit-at-least-12-states/) | 20.0 | 20.0 | 42.0 |
+| [QuickFoxのサプライチェーン攻撃、トロイ化されたWindowsインストーラー経由でFDMTPバックドアを配布](https://thehackernews.com/2026/08/quickfox-supply-chain-attack-delivers.html) | 20.0 | 20.0 | 42.0 |
+| [Google Workspaceのメール・ファイル・OAuth防御を統合するMaterialの製品紹介](https://www.helpnetsecurity.com/2026/08/05/product-showcase-material-security-platform/) | 20.0 | 20.0 | 42.0 |
+| [攻撃者が産業プラントを破壊するのを防ぐには、その手口を知ることだ](https://www.helpnetsecurity.com/2026/08/05/ai-industrial-cyberattacks-know-how/) | 20.0 | 20.0 | 42.0 |
+| [NetKids iMarkにおける複数の脆弱性](https://jvn.jp/jp/JVN28045338/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
