@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-08-07 11:00 JST
+# 📡 サイレーダー 2026-08-07 17:00 JST
 
-このレポートは、2026-08-07 05:00 JST〜2026-08-07 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-07 11:00 JST〜2026-08-07 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 61
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 45
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 37
+- [低温だが記録しておくトピック](#low-record-topics): 20
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Microsoft 2026年8月 Patch Tuesday 関連まとめ](#topic-26601) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,69 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-26601"></a>
+
+### 1. Microsoft 2026年8月 Patch Tuesday 関連まとめ
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 39.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+Microsoftの2026年8月 Patch Tuesdayに関する話題として、前月の更新ではMicrosoft製品全体で大量の脆弱性修正が行われ、Windows 11だけでも多数のCVEが報告されたとされています。
+加えて、悪用が報告されたゼロデイや公開済み脆弱性が含まれていたことから、今後の更新対応への警戒感が高まっています。
+広範な製品群に影響する更新は、適用遅れがそのままリスクにつながるため、管理部門・運用部門の注目度が高い विषयです。
+特に悪用観測がある脆弱性が含まれる場合、通常の定期更新としてではなく優先度を上げて扱う必要があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Microsoftの更新内容と、特に悪用が確認された脆弱性の有無を確認する。
+- Windows 11を含む主要端末とサーバーで、適用状況と未適用資産を早めに把握する。
+- 業務影響を見ながら、検証済みの範囲から順次パッチ適用を進める。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-50522 | 関連CVE | 1.00 | 候補あり（URL 5件以上） |
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+| 製品 | Microsoft Windows | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | 未整理 | <nobr>参⁠照リンクは今後の処理で追加予定</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,43 +98,26 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ADサーバ上のデータが外部へ転送されたと判断 ～ 精電舎電子工業にランサムウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/08/07/55886.html) | 29.0 | 30.0 | 42.0 |
-| [平和ボケの代償？ ニチレイショックの裏で進行する“ド級のデータ漏えい”](https://atmarkit.itmedia.co.jp/ait/articles/2608/07/news041.html) | 29.0 | 30.0 | 42.0 |
-| [開発者を狙う“自己拡散型npmワーム”の全貌 400超のパッケージに感染拡大](https://atmarkit.itmedia.co.jp/ait/articles/2608/07/news038.html) | 29.0 | 20.0 | 42.0 |
-| [ClickFix攻撃でmacOS向け情報窃取型マルウェアを配布し、暗号資産窃取を狙う攻撃](https://www.bleepingcomputer.com/news/security/clickfix-attack-pushes-macos-infostealer-for-crypto-theft-attacks/) | 28.0 | 20.0 | 42.0 |
-| [攻撃者が法執行機関を上回る「連携の空白」](https://www.darkreading.com/cyberattacks-data-breaches/coordination-gap-attackers-outpacing-law-enforcement) | 28.0 | 20.0 | 42.0 |
-| [BlackFile関連のUNC6671恐喝グループに関連付けられたヘッジファンドへのサイバー攻撃](https://www.bleepingcomputer.com/news/security/hedge-fund-cyberattacks-tied-to-blackfile-linked-unc6671-extortion-group/) | 28.0 | 20.0 | 42.0 |
-| [Researcher Claims Control of ChatGPT Secure Sandbox](https://www.darkreading.com/cloud-security/researcher-claims-control-chatgpt-secure-sandbox) | 27.0 | 20.0 | 42.0 |
-| [味の素、AI・サーバ向け半導体基板材好調で1Q業績過去最高に 通期上方修正](https://www.itmedia.co.jp/news/article/2608/07/2000000437/) | 26.0 | 20.0 | 42.0 |
-| [AI で網羅検知 × 人で深掘り ～ GMOイエラエが「AIホワイトハッカー ペネトレーションテスト」提供開始](https://scan.netsecurity.ne.jp/article/2026/08/07/55882.html) | 26.0 | 20.0 | 42.0 |
-| [「AI主権」の前に「IT主権」の確立が不可欠--日本TCS、AI主導型テクノロジーサービス企業へ](https://japan.zdnet.com/article/35251378/) | 26.0 | 20.0 | 42.0 |
-| [アドビ、「ChatGPT」内で制作が完結するプラグインを発表--「リサイズして」で自動適用](https://japan.zdnet.com/article/35251369/) | 26.0 | 20.0 | 42.0 |
-| [「ChatGPT」のデフォルトモデル、PlusとProは「Sol」に、無料版は「Luna」でテキストチャット無制限に](https://www.itmedia.co.jp/news/article/2608/07/2000000435/) | 26.0 | 20.0 | 42.0 |
-| [AI時代に論文急増へ対応するUSENIX Securityカンファレンスの取り組み](https://www.theregister.com/ai-and-ml/2026/08/07/how-the-famed-usenix-security-conf-is-managing-a-flood-of-papers-in-the-ai-era/5284374) | 25.0 | 20.0 | 42.0 |
-| [OpenAIがChatGPTの大規模アップグレードを提供、無料ユーザーにも展開](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-rolls-out-a-major-chatgpt-upgrade-even-if-you-dont-pay-for-it/) | 25.0 | 20.0 | 42.0 |
-| [従来型テストの限界があらわに 3915件のOSSを解析して判明した「99.4％未報告」の実態](https://www.itmedia.co.jp/enterprise/articles/2608/07/news026.html) | 24.0 | 20.0 | 43.0 |
-| [SonicWallの「SonicOS」に脆弱性 - 任意サイト誘導のおそれ](https://www.security-next.com/188454) | 22.0 | 20.0 | 42.0 |
-| [「Firefox for Android」に情報漏洩の脆弱性 - 修正版が公開](https://www.security-next.com/188465) | 22.0 | 20.0 | 42.0 |
-| [「WordPress」のログイン画面にXSS脆弱性 - 修正版を公開](https://www.security-next.com/188520) | 22.0 | 20.0 | 42.0 |
-| [「Chrome」にセキュリティ更新 - クリティカル6件含む脆弱性を修正](https://www.security-next.com/188474) | 22.0 | 20.0 | 42.0 |
-| [AI生成の脆弱性パッチの7割以上に問題あり--過信の危険性](https://japan.zdnet.com/article/35251389/) | 21.0 | 20.0 | 42.0 |
-| [外部脅威、組織がセキュリティ意識向上とトレーニングに投資する主な理由のひとつ](https://ascii.jp/elem/000/004/424/4424896/?rss=) | 21.0 | 20.0 | 42.0 |
-| [今日もどこかで情報漏えい 第51回「2026年7月の情報漏えい」三重県、陸自インシデントを他山の石として USB メモリ 1 万個チェック](https://scan.netsecurity.ne.jp/article/2026/08/07/55892.html) | 21.0 | 20.0 | 42.0 |
-| [人事異動から退職処理までの実務を体験 ～「Okta」ハンズオンワークショップ 9月11日 大阪で開催](https://scan.netsecurity.ne.jp/article/2026/08/07/55891.html) | 21.0 | 20.0 | 42.0 |
-| [宇都宮病院職員の患者情報利用による別医療機関のダイレクトメール郵送、調査の結果 直接的金銭的利益の受領が無いことを確認](https://scan.netsecurity.ne.jp/article/2026/08/07/55890.html) | 21.0 | 20.0 | 42.0 |
-| [「東京アプリ」の運営に係るコールセンター業務で1名の個人情報漏えい](https://scan.netsecurity.ne.jp/article/2026/08/07/55889.html) | 21.0 | 20.0 | 42.0 |
-| [Axcelead Drug Discovery Partners社員のメールアカウントに不正アクセス、約7,000通のメールで痕跡を確認](https://scan.netsecurity.ne.jp/article/2026/08/07/55888.html) | 21.0 | 20.0 | 42.0 |
-| [LINE GAMEでユーザー内部識別子を外部の広告ツールに送信、総務省から行政指導](https://scan.netsecurity.ne.jp/article/2026/08/07/55887.html) | 21.0 | 20.0 | 42.0 |
-| [スリーシェイクのエンジニア 4 名が翻訳『実践 プラットフォームエンジニアリング』8 / 24 発売](https://scan.netsecurity.ne.jp/article/2026/08/07/55885.html) | 21.0 | 20.0 | 42.0 |
-| [Okta が Permiso Security を買収、Identity Security Fabric の脅威検出・対応を強化](https://scan.netsecurity.ne.jp/article/2026/08/07/55884.html) | 21.0 | 20.0 | 42.0 |
-| [令和8(2026)年上半期の特殊詐欺、被害総額1,816億円 ～ 投資詐欺（797.9億）やニセ警察詐欺（507.9億）など手口別被害額](https://scan.netsecurity.ne.jp/article/2026/08/07/55883.html) | 21.0 | 20.0 | 42.0 |
-| [パスキー神話崩壊 Google Password Managerの同期機能を狙う新攻撃手法](https://atmarkit.itmedia.co.jp/ait/articles/2608/07/news030.html) | 21.0 | 20.0 | 42.0 |
-| [米FCCが外国製ロボット掃除機に禁止措置--「Roomba」にとって何を意味するのか](https://japan.zdnet.com/article/35251175/) | 21.0 | 20.0 | 42.0 |
-| [セキュリティ人材の実践的育成に強み--英Hack The Box、日本市場で展開強化](https://japan.zdnet.com/article/35251217/) | 21.0 | 20.0 | 42.0 |
-| [AIは人間が脆弱性を修正する速度を超えて動く--企業が直面する試練](https://japan.zdnet.com/article/35251305/) | 21.0 | 20.0 | 42.0 |
-| [ChainDrop: 自己伝播型npmワームの内部分析](https://unit42.paloaltonetworks.com/chaindrop-npm-worm-analysis/) | 20.0 | 45.0 | 42.0 |
-| [消費者庁、希少な商品を安く販売すると見せかける偽通販サイトに注意喚起、サイト名とドメイン名を公表](https://internet.watch.impress.co.jp/docs/news/2131148.html) | 20.0 | 20.0 | 42.0 |
-| [米連邦政府と同盟国は詐欺対策で十分に連携しているのか、議会が調査へ](https://cyberscoop.com/senate-hearing-transnational-scam-task-force/) | 20.0 | 20.0 | 42.0 |
+| [ここ1年で7倍に増えたn8nを悪用したデバイス追跡とマルウェア配布の手口](https://atmarkit.itmedia.co.jp/ait/articles/2608/07/news049.html) | 29.0 | 20.0 | 42.0 |
+| [OpenAIのテストAIが「AI同士の掲示板」を勝手に構築して情報共有しHugging Faceへの攻撃を実行していたことが判明、掲示板を閉鎖されてもこっそり建てなおす](https://gigazine.net/news/20260807-openai-hugging-face-explain/) | 27.0 | 20.0 | 42.0 |
+| [AIエージェントのスキルやMCPサーバーを持ち運べる「Agent Plugins」にGoogleが参加、OpenAI・Microsoft・Amazonなどと共同推進](https://gigazine.net/news/20260807-agent-plugins/) | 27.0 | 20.0 | 42.0 |
+| [OpenSSLのOCSPレスポンス検証におけるクライアント側のメモリリークの脆弱性（CVE-2026-54876）](https://jvn.jp/vu/JVNVU92139835/) | 25.0 | 31.0 | 51.0 |
+| [Keepit AI Truth Cloudが企業AIの背後にあるデータを保護](https://www.helpnetsecurity.com/2026/08/07/keepit-ai-truth-cloud-data-protection/) | 25.0 | 20.0 | 42.0 |
+| [EU AI Actの透明性規制執行の初年度に何が起こり得るか](https://www.helpnetsecurity.com/2026/08/07/edwin-weijdema-veeam-eu-ai-act-transparency/) | 25.0 | 20.0 | 42.0 |
+| [ShieldFontがAIスクレイピング対策でクローラーに誤った単語を返す](https://www.helpnetsecurity.com/2026/08/07/shieldfont-ai-scraping-protection/) | 25.0 | 20.0 | 42.0 |
+| [AIによる標的型フィッシング文面には直感では対抗できない](https://www.helpnetsecurity.com/2026/08/07/ai-spear-phishing-research/) | 25.0 | 20.0 | 42.0 |
+| [企業社員を標的に音声フィッシングを繰り返し、複数のデータ漏えいサイトを使い分けて恐喝する脅威アクター「UNC6671」についてGoogleのサイバーセキュリティ部門が報告](https://gigazine.net/news/20260807-multi-brand-vishing-extortion-unc6671-rebrands/) | 22.0 | 20.0 | 42.0 |
+| [「パスワードを使い回している人」が6割超 情シスが“特に警戒すべき人”は？](https://atmarkit.itmedia.co.jp/ait/articles/2608/07/news048.html) | 21.0 | 20.0 | 42.0 |
+| [GitHubリポジトリの「侵入口」をどうふさぐ？ 無料で使える6つのセキュリティ設定](https://atmarkit.itmedia.co.jp/ait/articles/2608/07/news062.html) | 21.0 | 20.0 | 42.0 |
+| [Unlimited Technology Systemsのデータ侵害で380万人に影響](https://www.securityweek.com/3-8-million-impacted-by-unlimited-technology-systems-data-breach/) | 20.0 | 20.0 | 42.0 |
+| [なぜ量子対応データ保護がチャネルポートフォリオに必要なのか](https://www.itpro.com/security/data-protection/why-quantum-ready-data-protection-belongs-in-the-channel-portfolio) | 20.0 | 20.0 | 42.0 |
+| [Chrome 151更新で修正された重大な脆弱性](https://www.securityweek.com/critical-vulnerabilities-patched-with-chrome-151-update/) | 20.0 | 20.0 | 42.0 |
+| [米国の燃料ゲージの露出が3か月で半減以上](https://www.helpnetsecurity.com/2026/08/07/automatic-fuel-tank-gauge-exposure/) | 20.0 | 20.0 | 42.0 |
+| [China、Palo Alto Networks製品のセキュリティに関する謎の調査を開始](https://www.theregister.com/security/2026/08/07/china-launches-mysterious-probe-into-security-of-palo-alto-networks-products/5284453) | 20.0 | 20.0 | 42.0 |
+| [Google Chromeの複数の脆弱性により、任意のコード実行が可能になるおそれ](https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-google-chrome-could-allow-for-arbitrary-code-execution_2026-078) | 20.0 | 20.0 | 42.0 |
+| [国内の銀行・信金386行のうち、なりすましメールを遮断できる状態だったのは26.7％にとどまる～GMOブランドセキュリティ調査](https://internet.watch.impress.co.jp/docs/news/2131394.html) | 20.0 | 20.0 | 42.0 |
+| [CISA ICS Advisory / ICS Medical Advisory（2026年08月06日）](https://jvn.jp/vu/JVNVU92842469/) | 20.0 | 20.0 | 42.0 |
+| [Alinto SOGo v5.12.7における不正な形式のICSカレンダー招待を介したクロスサイトスクリプティングの脆弱性](https://jvn.jp/vu/JVNVU96816564/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
