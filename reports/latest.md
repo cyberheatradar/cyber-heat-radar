@@ -1,17 +1,15 @@
-# 📡 サイレーダー 2026-08-08 11:00 JST
+# 📡 サイレーダー 2026-08-08 17:00 JST
 
-このレポートは、2026-08-08 05:00 JST〜2026-08-08 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-08 11:00 JST〜2026-08-08 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 33
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 24
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 7
+- [低温だが記録しておくトピック](#low-record-topics): 0
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Metabase SQLi zero-day exploited in customer data-theft attacks](#topic-26753) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -19,60 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-26753"></a>
-
-### 1. Metabase SQLi zero-day exploited in customer data-theft attacks
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-Metabaseに存在するSQLインジェクション脆弱性が、ゼロデイとして実際の攻撃に悪用され、顧客環境への侵入やデータ窃取につながったと報じられています。
-影響を受けた事例としてFrameworkやTallyが挙げられていますが、現時点で確認できる範囲の情報に基づく記述です。
-ゼロデイとして悪用された可能性があるため、単なる脆弱性情報にとどまらず、実被害の観点で注目されています。
-対象製品を利用する組織は、公開情報の確認と迅速な対策の必要性が高いと考えられます。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Metabaseを利用している環境では、該当バージョンや公開状況を確認し、ベンダー情報に基づいて更新・緩和策を適用する。
-- 認証情報や管理画面へのアクセス権限、外部公開設定を点検し、不要な露出を最小化する。
-- ログを確認して、不審なクエリ実行や想定外のデータアクセスの兆候がないかを確認する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Metabase SQLi zero-day exploited in customer data-theft attacks](https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -84,18 +29,7 @@ Metabaseに存在するSQLインジェクション脆弱性が、ゼロデイと
 
 ## ❄️ 低温だが記録しておくトピック
 
-音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
-重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
-
-| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
-|---|---:|---:|---:|
-| [コーディングエージェントの悪用：トンネルとLaunchAgentsの二つの事例](https://www.elastic.co/security-labs/coding-agent-launchagent-tunnel-detection) | 28.0 | 20.0 | 42.0 |
-| [OpenAI、次期モデル「Astra」の一部開発を停止 「Critical」級サイバー能力の可能性否定できず](https://www.itmedia.co.jp/news/article/2608/08/2000000459/) | 28.0 | 20.0 | 42.0 |
-| [Anthropic、「Fable 5」の生物学の制限を緩和 誤検知によるフォールバックを約85％削減](https://www.itmedia.co.jp/news/article/2608/08/2000000460/) | 26.0 | 20.0 | 42.0 |
-| [OpenAIがAstraのセキュリティを強化へ、AnthropicはFableの制限を緩和](https://www.theregister.com/ai-and-ml/2026/08/08/openai-pledges-to-add-astra-security-as-anthropic-loosens-fables-leash/5285161) | 25.0 | 20.0 | 42.0 |
-| [AIチャットボットがLeague of Legendsのフレンド申請に紛れ込む](https://www.malwarebytes.com/blog/ai/2026/08/ai-chat-bots-are-sliding-into-league-of-legends-friend-requests) | 25.0 | 20.0 | 42.0 |
-| [現代のSOC内部：IDを守る最前線](https://unit42.paloaltonetworks.com/soc-identity-front-door/) | 20.0 | 20.0 | 42.0 |
-| [Meta、児童への被害で9億4200万ドルの賠償命令を受ける](https://www.malwarebytes.com/blog/uncategorized/2026/08/meta-ordered-to-pay-942-million-over-harm-to-children) | 20.0 | 20.0 | 42.0 |
+今回は低温記録トピックはありません。
 
 ---
 
