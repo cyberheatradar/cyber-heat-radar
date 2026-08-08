@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-08-08 17:00 JST
+# 📡 サイレーダー 2026-08-09 05:00 JST
 
-このレポートは、2026-08-08 11:00 JST〜2026-08-08 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-08 17:00 JST〜2026-08-09 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 24
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 29
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 4
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [New CSS Attacks Can Break Webmail Defenses to Steal Passwords and Tokens](#topic-26781) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,62 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-26781"></a>
+
+### 1. New CSS Attacks Can Break Webmail Defenses to Steal Passwords and Tokens
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>T⁠T⁠P</nobr> / <nobr>A⁠I</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+新しい研究では、メール本文内のコンテンツがメッセージ境界を越えてWebメールの画面に干渉しうることが示されています。
+対象にはOutlook、Gmail、Fastmail、Proton Mail、Yahoo Mail、AOL Mailなどが含まれており、パスワードやトークンの漏えい、UI操作の乗っ取り、メールを読むAIツールへの影響が指摘されています。
+Webメールは業務利用が広く、認証情報やセッション情報が関わるため、表示やレンダリングの弱点がそのままアカウント侵害につながる可能性があります。
+AIがメール内容を処理する環境でも影響が及ぶ可能性があるため、従来のメール防御だけでは不十分になり得ます。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Webメールの表示制御やテンプレート処理で、外部コンテンツの隔離とレンダリング安全性を再確認する。
+- 認証情報やトークンをメール本文・UI経由で扱わない設計を徹底し、権限の高い操作には追加確認を入れる。
+- メールを読むAIや自動処理を使う場合は、入力サニタイズと出力の信頼境界を見直す。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [New CSS Attacks Can Break Webmail Defenses to Steal Passwords and Tokens](https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -29,7 +86,15 @@
 
 ## ❄️ 低温だが記録しておくトピック
 
-今回は低温記録トピックはありません。
+音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
+重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
+
+| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
+|---|---:|---:|---:|
+| [DevsからAnthropic、OpenAI、Cursorなどへ：セキュリティとプライバシーをデフォルトにせよ](https://www.theregister.com/ai-and-ml/2026/08/08/devs-to-anthropic-openai-cursor-and-friends-make-security-and-privacy-the-default/5285107) | 25.0 | 20.0 | 42.0 |
+| [Atlassian Rovo AIにおける企業データを露出させる重大なワンクリック脆弱性](https://www.securityweek.com/critical-one-click-vulnerability-in-atlassians-rovo-ai-exposed-enterprise-data/) | 25.0 | 20.0 | 42.0 |
+| [HackersがTrueConfに侵入し、クライアントインストーラーをバックドア付きトロイの木馬化](https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/) | 20.0 | 20.0 | 42.0 |
+| [Atlassian Rovoを騙してJiraとConfluenceのデータを攻撃者に送信させることが可能](https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
