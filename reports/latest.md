@@ -1,17 +1,17 @@
-# 📡 サイレーダー 2026-08-10 11:00 JST
+# 📡 サイレーダー 2026-08-10 17:00 JST
 
-このレポートは、2026-08-10 05:00 JST〜2026-08-10 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-10 11:00 JST〜2026-08-10 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 50
+- 観測トピック数: 48
 - [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 25
+- [低温だが記録しておくトピック](#low-record-topics): 23
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [「Progress Kemp LoadMaster」の脆弱性が標的に - 米当局が注意喚起](#topic-26827) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [How to report an AI Act violation in the EU](#topic-26887) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,57 +19,52 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-26827"></a>
+<a id="topic-26887"></a>
 
-### 1. 「Progress Kemp LoadMaster」の脆弱性が標的に - 米当局が注意喚起
+### 1. How to report an AI Act violation in the EU
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-Progress Softwareのアプリケーションデリバリ製品「Progress Kemp LoadMaster」に関して、既知の脆弱性が悪用されていることが報じられました。
-米当局が注意喚起を行っており、利用組織には早急な対応が求められています。公開製品が標的になっているため、該当環境では侵入や機器悪用につながるおそれがあります。
-脆弱性の悪用が確認されている点から、通常の更新待ちではなく優先度を上げた対応が必要です。
+EUではAI Actの執行が始まり、AIシステムの提供・利用に関する違反が問題になり得る段階に入りました。
+今回の話題は、EU域内でAI Act違反を見つけた際に、どのように通報・報告するかを整理するものです。
+AIの安全性や基本権への影響を監督する枠組みが実運用に入ることで、事業者側には法令順守の確認がより重要になります。
+AIをEU向けに提供する企業は、違反報告への対応体制や社内エスカレーションの整備が必要になります。
 
 #### 温度感の理由
 
 ##### 温度感
-- 実悪用・ゼロデイ文脈。
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
 
 ##### 実務影響
-- 悪用情報あり。
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 該当するLoadMasterの導入有無とバージョンを確認し、ベンダーの案内に従って速やかに修正を適用する。
-- 外部公開している管理面や関連インターフェースの露出状況を点検し、不要な公開を見直す。
-- 認証ログやアクセスログを確認し、不審な操作や想定外の通信がないかを監視する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Progress Software | 言及あり | 0.80 | — |
-| 製品 | Progress Kemp LoadMaster | 言及あり | 0.80 | — |
+- EU向けのAI提供・運用がある場合、AI Actの適用範囲と社内責任分担を確認する。
+- 違反の指摘を受けた際に、事実確認・記録保存・法務/コンプライアンス連携を迅速に回せる窓口を用意する。
+- モデルやサービスの変更履歴、リスク評価、利用条件など、説明責任に関わる文書を整理しておく。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [「Progress Kemp LoadMaster」の脆弱性が標的に - 米当局が注意喚起](https://www.security-next.com/188591) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [How to report an AI Act violation in the EU](https://www.helpnetsecurity.com/2026/08/10/eu-ai-act-enforcement-how-to-report-violation/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -95,31 +90,29 @@ Progress Softwareのアプリケーションデリバリ製品「Progress Kemp L
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ランサム被害、主因は脆弱性より「人」 34％がメールで感染、「本物に見えた」で疑わず](https://www.itmedia.co.jp/news/article/2608/10/2000000432/) | 29.0 | 30.0 | 42.0 |
-| [情シスは「フィジカルAI」にどう向き合うべきか 実用化に不可欠な“現場×AI×経営”の橋渡し役に](https://ascii.jp/elem/000/004/425/4425959/?rss=) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントの暴走をどう防ぐ？ Microsoftが「DevSecOps」専用のゼロトラスト統制策を発表](https://www.itmedia.co.jp/enterprise/articles/2608/10/news017.html) | 26.0 | 20.0 | 42.0 |
-| [AI「暴走」自律的攻撃に米危機感](https://news.yahoo.co.jp/pickup/6591142?source=rss) | 25.0 | 20.0 | 42.0 |
-| [OpenSSL の OCSPレスポンス検証にクライアント側のメモリリークの脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55898.html) | 24.0 | 20.0 | 43.0 |
-| [freo2 にアップロードするファイルの検証が不十分な脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55893.html) | 24.0 | 20.0 | 43.0 |
-| [Alinto SOGo v5.12.7 に不正な形式の ICSカレンダー招待を介した XSS の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55897.html) | 22.0 | 26.0 | 42.0 |
-| [海外子会社に不正アクセス、影響範囲など調査 - ヨネックス](https://www.security-next.com/188594) | 22.0 | 20.0 | 42.0 |
-| [「Dell VSI」において「クリティカル」含む脆弱性70件を修正](https://www.security-next.com/188600) | 22.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年8月2日〜2026年8月8日）](https://www.security-next.com/188587) | 22.0 | 20.0 | 42.0 |
-| [彼だけが知るソフトウェアサポートのために引退生活から呼び戻されたエンジニア](https://scan.netsecurity.ne.jp/article/2026/08/10/55903.html) | 21.0 | 20.0 | 42.0 |
-| [KDDI の ISP 事業者向けメールシステムに不正アクセス、総務省が行政指導](https://scan.netsecurity.ne.jp/article/2026/08/10/55902.html) | 21.0 | 20.0 | 42.0 |
-| [シミックヘルスケア・インスティテュートが運営を受託している患者支援サービスに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/08/10/55901.html) | 21.0 | 20.0 | 42.0 |
-| [ナカバヤシ製品紹介サイト「REVEX」に不正アクセス、意図しない不審な画面が表示される事象](https://scan.netsecurity.ne.jp/article/2026/08/10/55900.html) | 21.0 | 20.0 | 42.0 |
-| [ジェイアール東海高島屋のアルバイトスタッフ管理システムに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/08/10/55899.html) | 21.0 | 20.0 | 42.0 |
-| [miChecker に XML 外部実体参照（XXE）に関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55896.html) | 21.0 | 20.0 | 42.0 |
-| [NetKids iMark に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55895.html) | 21.0 | 20.0 | 42.0 |
-| [Veeam Service Provider Console に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55894.html) | 21.0 | 20.0 | 42.0 |
-| [年収1500万円以上の半数が「AI時代でキャリアの見直し」今後の戦略は？／カスハラ対策義務化まで2ヶ月、対策の遅れと被害の実態、ほか](https://ascii.jp/elem/000/004/426/4426031/?rss=) | 21.0 | 20.0 | 42.0 |
-| [1時間で損失3億 企業が見落とす「ダウンタイム」の真実](https://atmarkit.itmedia.co.jp/ait/articles/2608/10/news036.html) | 21.0 | 20.0 | 42.0 |
-| [デジタル庁から個人情報漏えい 手順書ミスが原因、団体職員150人分の氏名など誤送付](https://www.itmedia.co.jp/news/article/2608/10/2000000467/) | 21.0 | 20.0 | 42.0 |
-| [Mythos 5、サプライチェーン攻撃を仕掛ける 19件の無許可行動はなぜ起きたか？](https://atmarkit.itmedia.co.jp/ait/articles/2608/10/news032.html) | 21.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年08月07日）](https://jvn.jp/vu/JVNVU91804527/) | 20.0 | 20.0 | 42.0 |
-| [nothingsのstb TrueTypeライブラリにおけるヒープベースのバッファオーバーフローの脆弱性](https://jvn.jp/vu/JVNVU95261826/) | 20.0 | 20.0 | 42.0 |
-| [ベトナムで日本の映画・アニメなどを無断配信していた「Phim Nè」の運営者3人を刑事立件](https://internet.watch.impress.co.jp/docs/news/2131570.html) | 20.0 | 20.0 | 42.0 |
+| [GitHub Dependabotのマルウェア警告が8つのエコシステムに対応](https://www.helpnetsecurity.com/2026/08/10/github-dependabot-malware-alerts/) | 28.0 | 20.0 | 42.0 |
+| [Grokの画像生成AIが「Imagine Image 2.0」にアップデートされたので使ってみた、実写風もイラスト風も対応し文字も描写可能](https://gigazine.net/news/20260810-grok-imagine-image-2/) | 27.0 | 20.0 | 42.0 |
+| [ByteDanceが「Claude Mythos 5」を上回る可能性があるAIモデルを開発中との報道](https://gigazine.net/news/20260810-bytedance-mega-ai-model/) | 27.0 | 20.0 | 42.0 |
+| [動画生成AI「MiniMax H3」の開発チームが「画像生成・編集モデル」「動画アップスケールモデル」「低ステップ版MiniMax H3」を準備中であることを明言](https://gigazine.net/news/20260810-minimax-h3-team-ama/) | 27.0 | 20.0 | 42.0 |
+| [AIが変えた震災支援……熊本の被災者がスマホで作った「イマココナビ」活況 “乱立”に課題も](https://www.itmedia.co.jp/news/article/2608/10/2000000486/) | 26.0 | 20.0 | 42.0 |
+| [OpenAI、次世代AI「Astra」の開発を一部停止 高いサイバー攻撃能力を懸念](https://xtech.nikkei.com/atcl/nxt/column/18/00001/11960/) | 26.0 | 20.0 | 42.0 |
+| [生成AIとの融合で進む画像認識のビジネス活用](https://ascii.jp/elem/000/004/422/4422587/?rss=) | 26.0 | 20.0 | 42.0 |
+| [避難所でAI使ってサービス開発「イマココナビ」 ニッチな生活情報も被災者主導で共有](https://www.itmedia.co.jp/news/article/2608/10/2000000481/) | 26.0 | 20.0 | 42.0 |
+| [NEC、国内大企業“初”のAI自律型組織を設置--人間が管理役](https://japan.zdnet.com/article/35251459/) | 26.0 | 20.0 | 42.0 |
+| [OpenAI、Astraの潜在的な重大サイバー能力を受けて利用を制限](https://www.helpnetsecurity.com/2026/08/10/openai-astra-critical-cyber-capabilities/) | 25.0 | 20.0 | 42.0 |
+| [広告主が秘密の広告でAIボットに影響を与えようとしている](https://www.theregister.com/ai-and-ml/2026/08/10/advertisers-are-trying-to-influence-ai-bots-with-secret-ads/5285093) | 25.0 | 20.0 | 42.0 |
+| [最高のIEC 62443セキュリティレベル4で検証されたサイバーセキュリティソリューション「FortiOS v7.6.x」](https://ascii.jp/elem/000/004/426/4426048/?rss=) | 24.0 | 20.0 | 43.0 |
+| [作業手順が曖昧、個人情報を誤って他省庁に送付 - デジタル庁](https://www.security-next.com/188603) | 22.0 | 20.0 | 42.0 |
+| [OpenAIが開発中の次期主力AIモデル「Astra」について「強力すぎる」ことを理由にサイバーリスク重大に指定して安全措置を開発中](https://gigazine.net/news/20260810-astra-cyber-capabilities/) | 22.0 | 20.0 | 42.0 |
+| [トルコで新たなサイバーセキュリティ法施行、大統領指揮下の当局機関が裁判所の命令を飛ばしてコンテンツを削除可能に](https://gigazine.net/news/20260810-turkeys-cybersecurity-law/) | 22.0 | 20.0 | 42.0 |
+| [Googleがハッカー集団の命名規則を刷新、中国系は「CASTLE」ロシア系は「RELIC」で識別しやすく](https://gigazine.net/news/20260810-google-hacker-codename/) | 22.0 | 20.0 | 42.0 |
+| [「Jenkins」に脆弱性 - 一部プラグインは修正版が未提供](https://www.security-next.com/188486) | 22.0 | 20.0 | 42.0 |
+| [防衛省、リチェルカセキュリティに指名停止措置 研究事業で水増し請求か](https://www.itmedia.co.jp/news/article/2608/10/2000000479/) | 21.0 | 20.0 | 42.0 |
+| [5週間で340超の企業が被害に Microsoft 365のアクセスを奪う新型フィッシングに注意](https://atmarkit.itmedia.co.jp/ait/articles/2608/10/news018.html) | 21.0 | 20.0 | 42.0 |
+| [LINE PC版（Windows版）のインストーラにおけるDLL読み込みに関する脆弱性](https://jvn.jp/jp/JVN40467227/) | 20.0 | 20.0 | 42.0 |
+| [Chainloop：ソフトウェアサプライチェーン向けのオープンソース証跡ストアとポリシーエンジン](https://www.helpnetsecurity.com/2026/08/10/chainloop-open-source-supply-chain-security/) | 20.0 | 20.0 | 42.0 |
+| [2万人が利用するベルギーのeIDソフトウェアで重大な脆弱性を発見](https://www.securityweek.com/critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-people/) | 20.0 | 20.0 | 42.0 |
+| [CISOsの71%が取締役会向け報告書に10時間以上費やしている実態](https://www.helpnetsecurity.com/2026/08/10/ciso-board-communication-gap-report/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
