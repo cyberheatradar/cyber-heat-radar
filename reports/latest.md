@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-08-10 05:00 JST
+# 📡 サイレーダー 2026-08-10 11:00 JST
 
-このレポートは、2026-08-09 17:00 JST〜2026-08-10 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-10 05:00 JST〜2026-08-10 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 26
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 50
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 25
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [「Progress Kemp LoadMaster」の脆弱性が標的に - 米当局が注意喚起](#topic-26827) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,66 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-26827"></a>
+
+### 1. 「Progress Kemp LoadMaster」の脆弱性が標的に - 米当局が注意喚起
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 39.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+Progress Softwareのアプリケーションデリバリ製品「Progress Kemp LoadMaster」に関して、既知の脆弱性が悪用されていることが報じられました。
+米当局が注意喚起を行っており、利用組織には早急な対応が求められています。公開製品が標的になっているため、該当環境では侵入や機器悪用につながるおそれがあります。
+脆弱性の悪用が確認されている点から、通常の更新待ちではなく優先度を上げた対応が必要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 該当するLoadMasterの導入有無とバージョンを確認し、ベンダーの案内に従って速やかに修正を適用する。
+- 外部公開している管理面や関連インターフェースの露出状況を点検し、不要な公開を見直す。
+- 認証ログやアクセスログを確認し、不審な操作や想定外の通信がないかを監視する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Progress Software | 言及あり | 0.80 | — |
+| 製品 | Progress Kemp LoadMaster | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [「Progress Kemp LoadMaster」の脆弱性が標的に - 米当局が注意喚起](https://www.security-next.com/188591) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,8 +95,31 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ランサムウェア攻撃者はCEOを飛ばし、40代のIT管理者を直接狙う](https://www.theregister.com/security/2026/08/09/ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-manager/5284499) | 28.0 | 30.0 | 42.0 |
-| [CiscoのIMCバグ修正、Patch Tuesday予測、Black Hat USA 2026を振り返る1週間](https://www.helpnetsecurity.com/2026/08/09/week-in-review-cisco-fixes-imc-bug-patch-tuesday-forecast-black-hat-usa-2026/) | 28.0 | 20.0 | 42.0 |
+| [ランサム被害、主因は脆弱性より「人」 34％がメールで感染、「本物に見えた」で疑わず](https://www.itmedia.co.jp/news/article/2608/10/2000000432/) | 29.0 | 30.0 | 42.0 |
+| [情シスは「フィジカルAI」にどう向き合うべきか 実用化に不可欠な“現場×AI×経営”の橋渡し役に](https://ascii.jp/elem/000/004/425/4425959/?rss=) | 26.0 | 20.0 | 42.0 |
+| [AIエージェントの暴走をどう防ぐ？ Microsoftが「DevSecOps」専用のゼロトラスト統制策を発表](https://www.itmedia.co.jp/enterprise/articles/2608/10/news017.html) | 26.0 | 20.0 | 42.0 |
+| [AI「暴走」自律的攻撃に米危機感](https://news.yahoo.co.jp/pickup/6591142?source=rss) | 25.0 | 20.0 | 42.0 |
+| [OpenSSL の OCSPレスポンス検証にクライアント側のメモリリークの脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55898.html) | 24.0 | 20.0 | 43.0 |
+| [freo2 にアップロードするファイルの検証が不十分な脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55893.html) | 24.0 | 20.0 | 43.0 |
+| [Alinto SOGo v5.12.7 に不正な形式の ICSカレンダー招待を介した XSS の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55897.html) | 22.0 | 26.0 | 42.0 |
+| [海外子会社に不正アクセス、影響範囲など調査 - ヨネックス](https://www.security-next.com/188594) | 22.0 | 20.0 | 42.0 |
+| [「Dell VSI」において「クリティカル」含む脆弱性70件を修正](https://www.security-next.com/188600) | 22.0 | 20.0 | 42.0 |
+| [先週注目された記事（2026年8月2日〜2026年8月8日）](https://www.security-next.com/188587) | 22.0 | 20.0 | 42.0 |
+| [彼だけが知るソフトウェアサポートのために引退生活から呼び戻されたエンジニア](https://scan.netsecurity.ne.jp/article/2026/08/10/55903.html) | 21.0 | 20.0 | 42.0 |
+| [KDDI の ISP 事業者向けメールシステムに不正アクセス、総務省が行政指導](https://scan.netsecurity.ne.jp/article/2026/08/10/55902.html) | 21.0 | 20.0 | 42.0 |
+| [シミックヘルスケア・インスティテュートが運営を受託している患者支援サービスに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/08/10/55901.html) | 21.0 | 20.0 | 42.0 |
+| [ナカバヤシ製品紹介サイト「REVEX」に不正アクセス、意図しない不審な画面が表示される事象](https://scan.netsecurity.ne.jp/article/2026/08/10/55900.html) | 21.0 | 20.0 | 42.0 |
+| [ジェイアール東海高島屋のアルバイトスタッフ管理システムに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/08/10/55899.html) | 21.0 | 20.0 | 42.0 |
+| [miChecker に XML 外部実体参照（XXE）に関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55896.html) | 21.0 | 20.0 | 42.0 |
+| [NetKids iMark に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55895.html) | 21.0 | 20.0 | 42.0 |
+| [Veeam Service Provider Console に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/10/55894.html) | 21.0 | 20.0 | 42.0 |
+| [年収1500万円以上の半数が「AI時代でキャリアの見直し」今後の戦略は？／カスハラ対策義務化まで2ヶ月、対策の遅れと被害の実態、ほか](https://ascii.jp/elem/000/004/426/4426031/?rss=) | 21.0 | 20.0 | 42.0 |
+| [1時間で損失3億 企業が見落とす「ダウンタイム」の真実](https://atmarkit.itmedia.co.jp/ait/articles/2608/10/news036.html) | 21.0 | 20.0 | 42.0 |
+| [デジタル庁から個人情報漏えい 手順書ミスが原因、団体職員150人分の氏名など誤送付](https://www.itmedia.co.jp/news/article/2608/10/2000000467/) | 21.0 | 20.0 | 42.0 |
+| [Mythos 5、サプライチェーン攻撃を仕掛ける 19件の無許可行動はなぜ起きたか？](https://atmarkit.itmedia.co.jp/ait/articles/2608/10/news032.html) | 21.0 | 20.0 | 42.0 |
+| [CISA ICS Advisory / ICS Medical Advisory（2026年08月07日）](https://jvn.jp/vu/JVNVU91804527/) | 20.0 | 20.0 | 42.0 |
+| [nothingsのstb TrueTypeライブラリにおけるヒープベースのバッファオーバーフローの脆弱性](https://jvn.jp/vu/JVNVU95261826/) | 20.0 | 20.0 | 42.0 |
+| [ベトナムで日本の映画・アニメなどを無断配信していた「Phim Nè」の運営者3人を刑事立件](https://internet.watch.impress.co.jp/docs/news/2131570.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
