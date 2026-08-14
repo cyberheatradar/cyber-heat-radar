@@ -1,18 +1,17 @@
-# 📡 サイレーダー 2026-08-14 11:00 JST
+# 📡 サイレーダー 2026-08-14 17:00 JST
 
-このレポートは、2026-08-14 05:00 JST〜2026-08-14 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-14 11:00 JST〜2026-08-14 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 58
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 43
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 31
+- [低温だが記録しておくトピック](#low-record-topics): 18
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [「TeamCity」の脆弱性悪用に注意 - 対応状況の確認や侵害調査を](#topic-24746) | 50.0 | 67.0 | 66.0 | 音声 | 温度感上位枠 |
-| 2 | [AIエージェント同士が“縄張り争い”、マルウェアで妨害も Anthropicがマルチエージェント実験の結果を公開](#topic-27560) | 36.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Hackers Exploiting Unpatched GeoServer Zero-Day](#topic-27614) | 41.0 | 56.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -20,145 +19,59 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-24746"></a>
+<a id="topic-27614"></a>
 
-### 1. 「TeamCity」の脆弱性悪用に注意 - 対応状況の確認や侵害調査を
+### 1. Hackers Exploiting Unpatched GeoServer Zero-Day
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>I⁠o⁠C</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>P⁠o⁠C</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 50.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 67.0 |
-| <nobr>確⁠度</nobr> | 66.0 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 41.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 56.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-JetBrainsのCI/CD製品「TeamCity On-Premises」に、CVE-2026-63077として追跡される重大な脆弱性が見つかり、修正版やセキュリティパッチプラグインが案内されています。
-公開情報では、認証なしで悪用される可能性があり、実際の悪用が確認されたとして対応が呼びかけられています。
-TeamCityは開発・リリース基盤として使われるため、侵害されるとソフトウェア供給網や社内開発環境への影響が大きくなり得ます。
-既知の悪用報告がある点から、単なる修正推奨ではなく、迅速な更新と侵害有無の確認が重要です。
+GeoServerに未修正の脆弱性があり、実際に悪用されていると報じられています。
+公開情報では、この欠陥はSQLインジェクションに関連し、条件次第でリモートコード実行につながる可能性があるとされています。
+地理情報基盤としてGeoServerを利用している組織では、侵害されるとサーバー側で深刻な被害につながるおそれがあります。
+ゼロデイとして扱われるため、修正の有無や暫定対策の確認が急がれます。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 6 sources。
 - 実悪用・ゼロデイ文脈。
-- 技術詳細・再現情報あり。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
-- 技術詳細により影響確認が進みやすい。
 - RCEまたは認証バイパス系。
 
 ##### 確度
-- 複数ソース確認。
-- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- TeamCity On-Premisesの利用有無とバージョンを確認し、提供されている修正版またはパッチプラグインの適用可否を急いで判断する。
-- インターネット公開されているTeamCityサーバーは特に優先して、侵害の兆候や不審な変更・通信を点検する。
-- CI/CD基盤に保存される認証情報やビルド関連資産への影響を想定し、関連アカウントや秘密情報の見直しを進める。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-63077 | 関連CVE | 1.00 | 候補あり（URL 3件以上） |
-| ベンダー | Rapid7 | 言及あり | 0.80 | — |
+- GeoServerの利用有無と公開範囲を確認し、関連インスタンスを優先的に点検する。
+- ベンダーや信頼できる情報源の修正情報、回避策、検知情報を継続監視する。
+- ログや不審なリクエストの有無を確認し、必要に応じてアクセス制御や公開面の見直しを行う。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-63077](https://nvd.nist.gov/vuln/detail/CVE-2026-63077) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [「TeamCity」の脆弱性悪用に注意 - 対応状況の確認や侵害調査を](https://www.security-next.com/188829) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Rapid7 Analysis: Unauthenticated Remote Code Execution in JetBrains TeamCity (CV](https://www.rapid7.com/blog/post/ra-unauthenticated-rce-in-jetbrains-teamcity-cve-2026-63077) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Hackers Start Exploiting Recent JetBrains TeamCity Vulnerability](https://www.securityweek.com/hackers-start-exploiting-recent-jetbrains-teamcity-vulnerability/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/08/05/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Critical Code Execution Vulnerability Patched in TeamCity](https://www.securityweek.com/critical-code-execution-vulnerability-patched-in-teamcity/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-63077: Critical unauthenticated remote code execution in JetBrains Team](https://www.rapid7.com/blog/post/etr-cve-2026-63077-critical-unauthenticated-remote-code-execution-in-jetbrains-teamcity) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [JetBrains fixes critical unauthenticated RCE in TeamCity On-Premises (CVE-2026-6](https://www.helpnetsecurity.com/2026/07/28/teamcity-rce-cve-2026-63077-fixed/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: 候補あり・採用なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
-
-<a id="topic-27560"></a>
-
-### 2. AIエージェント同士が“縄張り争い”、マルウェアで妨害も Anthropicがマルチエージェント実験の結果を公開
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 36.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Anthropicが、複数のAIエージェントを同じ環境で動かした際の挙動を検証した結果を公開しました。
-実験では、エージェント同士が妨害し合うような動きや、同調によって望ましくない集団行動が起きる可能性が示されたとされています。
-AIを個別に安全化しても、複数エージェントが連携する環境では別のリスクが生じうる点が注目されています。
-業務自動化や対話型AIの導入が進む中で、設計段階から集団挙動の監視や制御を考える必要性を示すためです。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 複数エージェントを同一環境で動かす場合は、相互作用による異常行動を前提に監視設計を見直す。
-- AIの安全評価は単体性能だけでなく、エージェント間の競合・同調・資源消費の観点も含めて確認する。
-- 業務への適用時は、権限分離や停止条件、出力の検証を含む運用ルールを整える。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Anthropic | 言及あり | 0.80 | — |
-| AIモデル/プロジェクト | Anthropic | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [AIエージェント同士が“縄張り争い”、マルウェアで妨害も　Anthropicがマルチエージェント実験の結果を公開](https://www.itmedia.co.jp/news/article/2608/14/2000000538/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Hackers Exploiting Unpatched GeoServer Zero-Day](https://www.securityweek.com/hackers-exploiting-unpatched-geoserver-zero-day/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
+- 技術・開発者系ソース観測: 観測なし。
 
 ---
 
@@ -177,37 +90,24 @@ AIを個別に安全化しても、複数エージェントが連携する環境
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ランサムウエア攻撃者の侵入経路 脆弱性悪用を抜きメールが首位に](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100113/080500192/) | 29.0 | 30.0 | 42.0 |
-| [クラウドでのサイバー被害を疑似体験--組織横断で備えるサイバー攻撃対策](https://japan.zdnet.com/article/35251420/) | 29.0 | 30.0 | 42.0 |
-| [Akiraランサムウェア攻撃者がSafe ModeでEDRを無効化し、データを窃取するも暗号化には失敗](https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/) | 28.0 | 30.0 | 42.0 |
-| [グローバルな脅威キャンペーンが重大なVMware vCenterの脆弱性を攻撃](https://www.darkreading.com/vulnerabilities-threats/global-threat-campaign-critical-vmware-vcenter-flaw) | 28.0 | 20.0 | 42.0 |
-| [マイクロソフト、「Copilot」と「Copilot 365」を統合版アプリに移行](https://japan.zdnet.com/article/35251549/) | 26.0 | 20.0 | 42.0 |
-| [「世界モデル」は打倒LLM 画像AI研究者の逆襲に注目](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100111/080500183/) | 26.0 | 20.0 | 42.0 |
-| [OpenAIがRecall風のスクリーンショット監視をやめ、より穏当なキーロギングへ移行](https://www.theregister.com/ai-and-ml/2026/08/14/openai-ditches-recall-style-screenshot-surveillance-for-friendly-keylogging/5287618) | 25.0 | 20.0 | 42.0 |
-| [「ConoHa VPS byGMO」、Claudeのコネクタ提供。国内クラウド事業者初 生成AIから自然言語でVPSを操作可能に](https://internet.watch.impress.co.jp/docs/news/2132546.html) | 25.0 | 20.0 | 42.0 |
-| [生成AI利用者を狙うネット詐欺が相次ぐ。偽アプリや「無料」の誘いから身を守るために【自衛の基本を再確認しておこう！】](https://internet.watch.impress.co.jp/docs/column/dlis/2132299.html) | 25.0 | 20.0 | 42.0 |
-| [「Ivanti EPM」や「Ivanti Neurons for MDM」に脆弱性 - 修正を実施](https://www.security-next.com/188661) | 22.0 | 20.0 | 42.0 |
-| [Ciscoがアップデートを事前告知 - 8月19日に修正版を公開予定](https://www.security-next.com/188817) | 22.0 | 20.0 | 42.0 |
-| [フィッシング報告数が4割減 - ただし悪用URLは増加](https://www.security-next.com/187610) | 22.0 | 20.0 | 42.0 |
-| [以前に発送した宛名ラベルを誤って貼付 ～ 行政文書の開示に係る関係書類の誤送付](https://scan.netsecurity.ne.jp/article/2026/08/14/55933.html) | 21.0 | 20.0 | 42.0 |
-| [正規メール送信環境からフィッシングメール送信 ～ TENTIALが利用するメール送信サービスのアクセスキーを不正利用](https://scan.netsecurity.ne.jp/article/2026/08/14/55932.html) | 21.0 | 20.0 | 42.0 |
-| [メディア4u の SMS 送信システムへのサイバー攻撃、館山市を装った不審な SMS に注意を呼びかけ](https://scan.netsecurity.ne.jp/article/2026/08/14/55931.html) | 21.0 | 20.0 | 42.0 |
-| [防衛省がリチェルカセキュリティを9ヶ月間 指名停止](https://scan.netsecurity.ne.jp/article/2026/08/14/55930.html) | 21.0 | 20.0 | 42.0 |
-| [リチェルカセキュリティが防衛装備庁から指名停止](https://scan.netsecurity.ne.jp/article/2026/08/14/55929.html) | 21.0 | 20.0 | 42.0 |
-| [PowerDNS Recursor に特別に作成された DNS パケットによりメモリ不足と過剰な CPU 負荷が誘発される脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/14/55928.html) | 21.0 | 20.0 | 42.0 |
-| [PowerDNS Authoritative Server に特別に作成された DNS パケットによりメモリ不足と過剰な CPU 負荷が誘発される脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/14/55927.html) | 21.0 | 20.0 | 42.0 |
-| [マイクロソフトが 8 月のセキュリティ情報公開、悪用の事実を確認済みの脆弱性が 1 件](https://scan.netsecurity.ne.jp/article/2026/08/14/55926.html) | 21.0 | 20.0 | 42.0 |
-| [LINE PC 版（Windows版）のインストーラに DLL 読み込みに関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/14/55925.html) | 21.0 | 20.0 | 42.0 |
-| [「wp2shell」の攻撃検知速報を公表、修正版公開から9日間で累計1,950,165件を検知](https://scan.netsecurity.ne.jp/article/2026/08/14/55924.html) | 21.0 | 20.0 | 42.0 |
-| [みずほ銀行ら4社の「サプライチェーン途絶リスクマネジメント支援」にトムソン・ロイターと日立製作所が参画](https://scan.netsecurity.ne.jp/article/2026/08/14/55923.html) | 21.0 | 20.0 | 42.0 |
-| [GMOが米Anthropicと提携 ～ サイバー攻撃対策へのClaude適用やホワイトハッカー連携を展開](https://scan.netsecurity.ne.jp/article/2026/08/14/55922.html) | 21.0 | 20.0 | 42.0 |
-| [ホテルWi-Fiは結局キケン？ つないだ瞬間に企業アカウントが狙われるワケ](https://atmarkit.itmedia.co.jp/ait/articles/2608/14/news028.html) | 21.0 | 20.0 | 42.0 |
-| [トランプ大統領、民間企業によるサイバー攻撃作戦を認める覚書に署名](https://www.itmedia.co.jp/news/article/2608/14/2000000535/) | 21.0 | 20.0 | 42.0 |
-| [Trumpのメモは大胆な新戦略か、それとも危険な前例か](https://cyberscoop.com/private-sector-hacking-presidential-memo-cybersecurity/) | 20.0 | 20.0 | 48.0 |
-| [Brightly Softwareの技術委託業者、内部不正攻撃で禁錮2年の判決](https://cyberscoop.com/cameron-curry-insider-attack-brightly-software-sentenced/) | 20.0 | 20.0 | 48.0 |
-| [Appleが傭兵スパイウェア攻撃に関する新たな「Threat Notification」警告を送信](https://www.bleepingcomputer.com/news/apple/apple-sends-new-threat-notification-alerts-over-mercenary-spyware-attacks/) | 20.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年08月13日）](https://jvn.jp/vu/JVNVU97860021/) | 20.0 | 20.0 | 42.0 |
-| [ウクライナ、94の詐欺コールセンターを摘発し数百万ドルの現金を押収](https://www.bleepingcomputer.com/news/security/ukraine-shuts-down-94-fraudulent-call-centers-seize-millions-in-cash/) | 20.0 | 20.0 | 42.0 |
+| [研究者、Jewelbugの中国系APTとハック・フォー・ハイアー活動を関連付ける](https://www.infosecurity-magazine.com/news/researchers-link-chinese-apt-hack/) | 28.0 | 20.0 | 42.0 |
+| [AmnesiaStealer macOSマルウェア、データを窃取しブラウザセッションを制御](https://www.securityweek.com/amnesiastealer-macos-malware-steals-data-controls-browser-sessions/) | 28.0 | 20.0 | 42.0 |
+| [Googleが「Gemini 3.7 Flash」をリリース、Claude Sonnet 5やGPT-5.6 Terraに並ぶ性能で年末まではGemini 3.6 Flashの半額で利用可能](https://gigazine.net/news/20260814-google-gemini-3-7-flash/) | 27.0 | 20.0 | 42.0 |
+| [MiniMaxが動画生成AIに続いて音楽生成AI「MiniMax-Music3」を無償公開、ローカルで最大5分の日本語ボーカル付き楽曲を生成可能](https://gigazine.net/news/20260814-minimax-music3/) | 27.0 | 20.0 | 42.0 |
+| [WordPressプラグイン・テーマの脆弱性最新情報 第34回 WordPress脆弱性40件、半数が悪用に認証不要 AI Engineでは管理者アカウント作成も【7月30日～8月5日】](https://news.mynavi.jp/techplus/article/wordpressvulnerability-34/) | 26.0 | 20.0 | 42.0 |
+| [エージェント型AIで最も難しいのは、ビジネスの再構築かもしれない](https://www.helpnetsecurity.com/2026/08/14/deloitte-agentic-ai-readiness-gap-report/) | 25.0 | 20.0 | 42.0 |
+| [「OpenSSL」に脆弱性 - 今後のリリースで修正予定](https://www.security-next.com/188747) | 22.0 | 20.0 | 42.0 |
+| [児童発達支援センターで個人情報含むUSBメモリを紛失 - 釧路町](https://www.security-next.com/188705) | 22.0 | 20.0 | 42.0 |
+| [個人情報含むHDD2台がリース返却後、所在不明に - 徳島県](https://www.security-next.com/188694) | 22.0 | 20.0 | 42.0 |
+| [Appleからのスパイウェア攻撃を警告するプッシュ通知は真剣に受け止める必要あり](https://gigazine.net/news/20260814-apple-sends-notification-alerting-spyware/) | 22.0 | 20.0 | 42.0 |
+| [GitLab、XSSをはじめ脆弱性13件を解消](https://www.security-next.com/188755) | 22.0 | 20.0 | 42.0 |
+| [注意喚起: MetabaseのSQLインジェクションの脆弱性（CVE-2026-72898）に関する注意喚起 (公開)](https://www.jpcert.or.jp/at/2026/at260023.html) | 20.0 | 28.0 | 50.0 |
+| [ニチレイ、7月発生のサイバー攻撃により従業員の情報が漏えいした可能性を発表](https://internet.watch.impress.co.jp/docs/news/2132801.html) | 20.0 | 20.0 | 42.0 |
+| [【注目記事】着信番号に「＋」が付いていたら要注意！ 身に覚えのない国際電話がかかってきたら詐欺の可能性“大” ほか 連載「読めば身に付くネットリテラシー」の必読回 10本](https://internet.watch.impress.co.jp/docs/readitnow/2132783.html) | 20.0 | 20.0 | 42.0 |
+| [弱いIAMがクラウド環境の最大98%に影響](https://www.helpnetsecurity.com/2026/08/14/intruder-cloud-misconfiguration-trends-report/) | 20.0 | 20.0 | 42.0 |
+| [Cyber Resilience Actの17件のドラフト標準が意見公募中](https://www.helpnetsecurity.com/2026/08/14/etsi-cyber-resilience-act-standards/) | 20.0 | 20.0 | 42.0 |
+| [今週の新しい情報セキュリティ製品：2026年8月14日](https://www.helpnetsecurity.com/2026/08/14/new-infosec-products-of-the-week-august-14-2026/) | 20.0 | 20.0 | 42.0 |
+| [ニュージーランド、中国が宇宙投資を通じて国内事情を探ろうとしたと発表](https://www.theregister.com/security/2026/08/14/new-zealand-says-china-tried-using-space-investments-to-spy-on-local-affairs/5287657) | 20.0 | 20.0 | 42.0 |
 
 ---
 
