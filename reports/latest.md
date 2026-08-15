@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-08-15 05:00 JST
+# 📡 サイレーダー 2026-08-15 11:00 JST
 
-このレポートは、2026-08-14 17:00 JST〜2026-08-15 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-15 05:00 JST〜2026-08-15 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 64
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 27
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 40
+- [低温だが記録しておくトピック](#low-record-topics): 2
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [ニチレイ、ランサム被害で従業員情報漏えいか 問われる「復旧後」の対応](#topic-27731) | 31.0 | 38.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,61 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-27731"></a>
+
+### 1. ニチレイ、ランサム被害で従業員情報漏えいか 問われる「復旧後」の対応
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 31.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+ニチレイは、2026年7月に公表したランサムウェア被害の影響により、従業員情報が漏えいした可能性があると発表しました。
+対象には氏名や生年月日、会社メールアドレス、従業員番号、人事・労務管理に関する情報が含まれるとされています。
+ランサムウェア被害はシステム停止だけでなく、復旧後に情報漏えいの有無や範囲の確認、関係者対応まで求められる点が注目されます。
+人事・労務関連情報が含まれる場合、従業員への影響が長期化する可能性があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・インシデント関連の公開情報として観測しています。
+
+##### 実務影響
+- 情報漏えい系。
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 漏えいの可能性がある情報の種類と対象者を早急に整理し、通知や問い合わせ対応の準備を進めること。
+- 復旧後もログ確認、アクセス権限の見直し、再侵入の兆候確認などを継続すること。
+- 人事・労務情報を扱う部門と連携し、個人情報保護法や社内規程に沿った対応を確認すること。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [ニチレイ、ランサム被害で従業員情報漏えいか　問われる「復旧後」の対応](https://atmarkit.itmedia.co.jp/ait/articles/2608/15/news011.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,46 +90,8 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [DeadLockランサムウェア、分散型インフラを活用して運用の耐障害性を強化](https://blog.polyswarm.io/deadlock-ransomware-leverages-decentralized-infrastructure-to-increase-operational-resilience) | 28.0 | 30.0 | 42.0 |
-| [Shell、Clopによるデータ窃取主張を受け「潜在的なインシデント」を調査](https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/) | 28.0 | 30.0 | 42.0 |
-| [新たなMirai系Linuxボットネット「Evooo1Bot」が被害端末をプロキシ化](https://www.infosecurity-magazine.com/news/new-linux-botnet-evooo1bot-victims/) | 28.0 | 20.0 | 42.0 |
-| [被害者が手元にある間に銀行カード情報を詐欺師へ中継する新たなAndroidマルウェア](https://www.helpnetsecurity.com/2026/08/14/windrelay-android-nfc-relay-malware/) | 28.0 | 20.0 | 42.0 |
-| [期限切れドメインはハッカーにとって宝の山──一部のサイバー犯罪グループは「ドロップキャッチ」詐欺に数百万ドルを投じ、マルウェアを配布している](https://www.itpro.com/security/cyber-crime/expired-domains-are-a-goldmine-for-hackers-and-some-cyber-crime-groups-are-investing-millions-in-dropcatch-scams-to-deliver-malware) | 28.0 | 20.0 | 42.0 |
-| [APTグループHoneyMyteがCoolClientを強化、バックドアにWindowsカーネルレベルのルートキットを追加](https://securelist.com/honeymyte-coolclient-driver-rootkit/121028/) | 28.0 | 20.0 | 42.0 |
-| [AI主導のバグ急増の中、NISTはAIに注目する](https://www.darkreading.com/vulnerabilities-threats/ai-driven-bug-tsunami-nist-looks-to-ai) | 25.0 | 20.0 | 42.0 |
-| [AI時代におけるGoogle Workspaceセキュリティの再考と現代的な攻撃チェーン](https://www.bleepingcomputer.com/news/security/the-modern-attack-chain-rethinking-google-workspace-security-in-the-age-of-ai/) | 25.0 | 20.0 | 42.0 |
-| [自律型AI攻撃は重要インフラに「明白かつ差し迫った危険」をもたらす](https://www.theregister.com/security/2026/08/14/autonomous-ai-attacks-pose-clear-and-present-danger-to-critical-infrastructure/5287594) | 25.0 | 20.0 | 42.0 |
-| [AI時代におけるデータ保護](https://www.wiz.io/blog/securing-data-in-the-ai-era) | 25.0 | 20.0 | 42.0 |
-| [CyeraによるOasis Security買収の焦点はAIエージェント制御にある](https://www.darkreading.com/identity-access-management-security/cyera-oasis-security-acquisition-ai-agent-control) | 25.0 | 20.0 | 42.0 |
-| [OWASP Top 10 for LLM Applications 2026：モデルリスクからエージェント型セキュリティまで](https://www.akamai.com/blog/ai/2026/aug/owasp-top-10-llm-applications-2026-realistic-security-model) | 25.0 | 20.0 | 42.0 |
-| [OpenAIのGPT-5.6 Sol、Ultrafastモードで最大14倍高速化](https://www.helpnetsecurity.com/2026/08/14/openais-gpt-5-6-sol-runs-up-to-14x-faster-with-ultrafast-mode/) | 25.0 | 20.0 | 42.0 |
-| [攻撃者がmacOSのScreen Sharingの脆弱性を悪用してMoneroマイナーを展開](https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/) | 24.0 | 38.0 | 42.0 |
-| [Beacon CRMのデータ侵害で1,000以上の慈善団体が被害](https://www.securityweek.com/over-1000-charities-hit-by-beacon-crm-data-breach/) | 21.0 | 20.0 | 43.0 |
-| [「浸水した家電の使用で火災の恐れ」――経産省が千葉の記録的豪雨で注意喚起](https://www.itmedia.co.jp/news/article/2608/14/2000000550/) | 21.0 | 20.0 | 42.0 |
-| [サービスプロバイダーの脆弱性を悪用した3,000万ユーロ超の銀行詐欺でハッカー逮捕](https://www.bleepingcomputer.com/news/security/hackers-arrested-over-30m-bank-fraud-exploiting-service-provider-flaw/) | 20.0 | 20.0 | 42.0 |
-| [ShinyHuntersによる恐喝攻撃後に160万件のRingCentralアカウント情報が流出](https://www.theregister.com/cyber-crime/2026/08/14/16m-ringcentral-accounts-data-dumped-after-shinyhunters-extortion-attack/5288003) | 20.0 | 20.0 | 42.0 |
-| [スコットランド政府、検察局で拡大の可能性があるデータ侵害に見舞われる](https://www.darkreading.com/cyberattacks-data-breaches/scottish-govt-data-breach-prosecutors-office) | 20.0 | 20.0 | 42.0 |
-| [データ恐喝グループによる侵害主張を研究者が確認](https://www.cybersecuritydive.com/news/researchers-confirm-breach-claims-data-extortion/827926/) | 20.0 | 20.0 | 42.0 |
-| [ResearchersがExfilSquadによる13組織にわたる機密データアクセスを確認](https://www.infosecurity-magazine.com/news/exfilsquads-13-organizations/) | 20.0 | 20.0 | 42.0 |
-| [ニチレイ 従業員の個人情報流出か](https://news.yahoo.co.jp/pickup/6591754?source=rss) | 20.0 | 20.0 | 42.0 |
-| [フランス税務当局、2百万件の記録流出を犯行グループが公表後に情報窃取を認める](https://www.theregister.com/security/2026/08/14/french-tax-authority-admits-data-heist-after-crook-touts-2m-records/5287885) | 20.0 | 20.0 | 42.0 |
-| [取締役会が知っておくべきテックリスク](https://www.darkreading.com/cyber-risk/what-boards-must-know-tech-risk) | 20.0 | 20.0 | 42.0 |
-| [Max severityのSAP Commerce Cloud脆弱性、現在攻撃で悪用中](https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/) | 20.0 | 20.0 | 42.0 |
-| [ハッカーが60万人の被害を主張、フランス税務当局への侵害を調査](https://therecord.media/french-tax-authority-dgfip-confirms-data-breach) | 20.0 | 20.0 | 42.0 |
-| [AppleがiPhone通知で傭兵スパイウェアの標的に警告へ](https://www.malwarebytes.com/blog/news/2026/08/apple-now-uses-iphone-alerts-for-targets-of-mercenary-spyware) | 20.0 | 20.0 | 42.0 |
-| [Rapid7の人員削減、Boeing 737のハッキング、冷凍システムの脆弱性](https://www.securityweek.com/in-other-news-rapid7-layoffs-hacking-a-boeing-737-refrigeration-system-vulnerabilities/) | 20.0 | 20.0 | 42.0 |
-| [TrivyではなくLiteLLMが関与した2,500組織侵害](https://www.securityweek.com/trivy-not-litellm-behind-the-2500-org-compromise/) | 20.0 | 20.0 | 42.0 |
-| [あなたを追跡しているのは誰？ 新しいサービスで確認する方法](https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/) | 20.0 | 20.0 | 42.0 |
-| [Google Cloud、2029年の準備完了を目標にポスト量子ロードマップを策定](https://www.securityweek.com/google-cloud-sets-out-post-quantum-roadmap-with-2029-readiness-goal/) | 20.0 | 20.0 | 42.0 |
-| [RingCentralのデータ侵害で160万件のアカウント情報が流出](https://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/) | 20.0 | 20.0 | 42.0 |
-| [ClickFixを通じて拡散する新たなmacOS情報窃取マルウェアAmnesiaStealer](https://www.infosecurity-magazine.com/news/macos-infostealer-spread-clickfix/) | 20.0 | 20.0 | 42.0 |
-| [Trezor、物流システム侵害で1万3000人の顧客情報流出を確認](https://www.theregister.com/security/2026/08/14/crypto-wallet-maker-trezor-confirms-13000-customers-details-exposed-in-logistics-breach/5287734) | 20.0 | 20.0 | 42.0 |
-| [RingCentralのデータ漏えいで約160万人に影響か](https://www.securityweek.com/1-6-million-likely-impacted-by-ringcentral-data-breach/) | 20.0 | 20.0 | 42.0 |
-| [サプライチェーン攻撃の阻止](https://www.itpro.com/security/cyber-attacks/stopping-supply-chain-attacks) | 20.0 | 20.0 | 42.0 |
-| [Scottish prosecutors、職員データ漏えいを受けて漏えいのある供給業者を調査](https://www.theregister.com/security/2026/08/14/scottish-prosecutors-cast-eye-over-leaky-supplier-after-staff-data-exposed/5287479) | 20.0 | 20.0 | 42.0 |
-| [データアナリストがデータを盗み、勤務先を恐喝して服役へ](https://www.bleepingcomputer.com/news/security/data-analyst-sent-to-prison-for-stealing-data-extorting-employer/) | 20.0 | 20.0 | 42.0 |
-| [AWS Certificate Manager、メール検証済み証明書の更新期限を2027年に設定](https://www.helpnetsecurity.com/2026/08/14/aws-certificate-manager-email-validation/) | 20.0 | 20.0 | 42.0 |
-| [ShipMonkのデータ侵害で14,000人のTrezor顧客に影響](https://www.securityweek.com/14000-trezor-customers-impacted-by-data-breach-at-shipmonk/) | 20.0 | 20.0 | 42.0 |
+| [AIの「分かったふり」を見続けていると人間も「分からない」と言えなくなるという研究結果](https://gigazine.net/news/20260815-ai-advice-suppresses-people-willingness-idk/) | 27.0 | 20.0 | 42.0 |
+| [AnthropicがClaudeのAI生成テキストにウォーターマークを導入する計画](https://www.bleepingcomputer.com/news/artificial-intelligence/how-anthropic-plans-to-watermark-claudes-ai-generated-text/) | 25.0 | 20.0 | 42.0 |
 
 ---
 
