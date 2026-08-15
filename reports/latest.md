@@ -1,6 +1,6 @@
-# 📡 サイレーダー 2026-08-15 17:00 JST
+# 📡 サイレーダー 2026-08-16 05:00 JST
 
-このレポートは、2026-08-15 11:00 JST〜2026-08-15 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-15 17:00 JST〜2026-08-16 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
@@ -34,8 +34,8 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [「カードをスマホにかざして」――遠隔地から不正決済、Android狙う新たな攻撃](https://news.mynavi.jp/techplus/article/20260815-4818346/) | 29.0 | 20.0 | 42.0 |
-| [注意喚起: NetScaler ADCおよびNetScaler Gatewayにおけるリモートコード実行につながる脆弱性（CVE-2026-8452）に関する注意喚起 (公開)](https://www.jpcert.or.jp/at/2026/at260024.html) | 24.0 | 46.0 | 50.0 |
+| [New Evooo1Bot Linuxボットネットがルーターをトラフィック中継ノードに変える](https://www.bleepingcomputer.com/news/security/new-evooo1bot-linux-botnet-turns-routers-into-traffic-relay-nodes/) | 28.0 | 20.0 | 42.0 |
+| [npmサプライチェーンに侵入し標準的な防御を回避するChainDropワーム](https://www.theregister.com/security/2026/08/15/chaindrop-worm-crawls-into-npm-supply-chain-evades-standard-defenses/5287958) | 20.0 | 40.0 | 42.0 |
 
 ---
 
