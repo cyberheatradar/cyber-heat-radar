@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-08-16 17:00 JST
+# 📡 サイレーダー 2026-08-17 05:00 JST
 
-このレポートは、2026-08-16 11:00 JST〜2026-08-16 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-16 17:00 JST〜2026-08-17 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 25
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 28
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 3
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Week in review: Salesforce and ServiceNow portals exposed for 17 months, exploited Metabase 0-day](#topic-27798) | 45.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,62 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-27798"></a>
+
+### 1. Week in review: Salesforce and ServiceNow portals exposed for 17 months, exploited Metabase 0-day
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 45.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+公開情報のまとめでは、SalesforceとServiceNowのポータルが約17か月にわたって露出していた件と、Metabaseのゼロデイ脆弱性が悪用された件が取り上げられています。
+いずれも、攻撃者による実利用や長期の未検知状態が示唆されており、組織側の可視性と対応の遅れが課題として浮き彫りになっています。
+ゼロデイの悪用や長期放置された露出は、侵害の発生や情報流出につながる可能性があり、影響範囲が広がりやすい点が注目されています。
+SaaS連携ポータルや分析基盤は業務への影響が大きいため、設定不備や監視不足の見直しが重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 対象ポータルや分析基盤の公開範囲、認証設定、権限設定を点検する。
+- 既知の脆弱性情報とベンダー告知を確認し、該当する場合は優先的に更新・緩和策を適用する。
+- アクセスログや管理操作ログを確認し、不審な公開・アクセス・設定変更の有無を洗い出す。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Week in review: Salesforce and ServiceNow portals exposed for 17 months, exploit](https://www.helpnetsecurity.com/2026/08/16/week-in-review-salesforce-and-servicenow-portals-exposed-for-17-months-exploited-metabase-0-day/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,7 +91,9 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [格安かつコンパクトでUPS・雷サージ機能を有する「CyberPower ST425JP」レビュー](https://gigazine.net/news/20260816-cyberpower-st425jp/) | 22.0 | 20.0 | 42.0 |
+| [新たなAmnesiaStealerのmacOSマルウェア、リモート操作でブラウザセッションを乗っ取る](https://www.bleepingcomputer.com/news/security/new-amnesiastealer-macos-malware-hijacks-browser-sessions-via-remote-control/) | 28.0 | 20.0 | 42.0 |
+| [散歩中でも止められるサイバー攻撃：防御AIのセキュリティCEOが語る対策の要点](https://www.theregister.com/security/2026/08/16/stopping-a-cyberattack-while-walking-your-dog-defensive-ai-security-ceo-says-its-not-ruff-to-do/5288126) | 25.0 | 20.0 | 42.0 |
+| [Threemaの安全なメッセージングサービスを妨害した大規模DDoS攻撃](https://www.bleepingcomputer.com/news/security/large-scale-ddos-attacks-disrupted-threema-secure-messaging-service/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
