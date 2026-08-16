@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-08-16 05:00 JST
+# 📡 サイレーダー 2026-08-16 11:00 JST
 
-このレポートは、2026-08-15 17:00 JST〜2026-08-16 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-16 05:00 JST〜2026-08-16 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 26
+- 観測トピック数: 28
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 4
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,8 +34,10 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [New Evooo1Bot Linuxボットネットがルーターをトラフィック中継ノードに変える](https://www.bleepingcomputer.com/news/security/new-evooo1bot-linux-botnet-turns-routers-into-traffic-relay-nodes/) | 28.0 | 20.0 | 42.0 |
-| [npmサプライチェーンに侵入し標準的な防御を回避するChainDropワーム](https://www.theregister.com/security/2026/08/15/chaindrop-worm-crawls-into-npm-supply-chain-evades-standard-defenses/5287958) | 20.0 | 40.0 | 42.0 |
+| [「3日」で戻る企業、「73日」かかる企業 ランサム被害の明暗を分ける“ある要素”](https://atmarkit.itmedia.co.jp/ait/articles/2608/16/news003.html) | 29.0 | 30.0 | 42.0 |
+| [「Claude」の“見えない透かし”、Anthropicが仕組みを説明 「完全な書き直しなら消える」](https://www.itmedia.co.jp/news/article/2608/16/2000000555/) | 26.0 | 20.0 | 42.0 |
+| [ゼロトラストの壁は「製品」ではなかった トヨタが4年以上かけて見直したもの](https://atmarkit.itmedia.co.jp/ait/articles/2608/16/news007.html) | 21.0 | 20.0 | 42.0 |
+| [Microsoftが8月の月例更新を公開 優先すべきは「緊急」ではない](https://www.itmedia.co.jp/enterprise/articles/2608/16/news004.html) | 21.0 | 20.0 | 42.0 |
 
 ---
 
