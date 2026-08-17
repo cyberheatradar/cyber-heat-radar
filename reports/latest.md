@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-08-17 11:00 JST
+# 📡 サイレーダー 2026-08-17 17:00 JST
 
-このレポートは、2026-08-17 05:00 JST〜2026-08-17 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-17 11:00 JST〜2026-08-17 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 46
+- 観測トピック数: 44
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 22
+- [低温だが記録しておくトピック](#low-record-topics): 20
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,28 +34,26 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [アスクルへのランサムウェア攻撃、外部への漏えいの可能性を否定できない個人情報を追加で特定](https://scan.netsecurity.ne.jp/article/2026/08/17/55938.html) | 29.0 | 30.0 | 42.0 |
-| [管理職がランサムウェアの最大のターゲットに--6つの防衛策](https://japan.zdnet.com/article/35251484/) | 29.0 | 30.0 | 42.0 |
-| [SafePalのデータ侵害で39,798人の顧客情報が流出、盗まれた情報が販売中](https://www.bleepingcomputer.com/news/security/safepal-data-breach-impacts-39-798-customers-stolen-info-for-sale/) | 28.0 | 20.0 | 42.0 |
-| [主要国の動向から考えるフロンティアAIがもたらすサイバーリスクとの向き合い方](https://japan.zdnet.com/article/35251493/) | 26.0 | 20.0 | 42.0 |
-| [設立から1年バーティブ・ジャパンが描く「AIデータセンター」最前線と冷却・電力の最適解](https://japan.zdnet.com/article/35251184/) | 26.0 | 20.0 | 42.0 |
-| [Anthropic、Claudeの大規模障害を確認 複数サービスに影響](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-services/) | 25.0 | 20.0 | 42.0 |
-| [データベース同期製品「IBM Db2 Mirror for i」に深刻な脆弱性](https://www.security-next.com/188896) | 22.0 | 20.0 | 42.0 |
-| [シークレット管理製品「Vault Secrets Operator」に深刻な脆弱性](https://www.security-next.com/188867) | 22.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年8月9日〜2026年8月15日）](https://www.security-next.com/188887) | 22.0 | 20.0 | 42.0 |
-| [Wireshark 4.6.8リリース](https://isc.sans.edu/diary/rss/33248) | 22.0 | 20.0 | 42.0 |
-| [「うんこミュージアム」公式サイト改ざん被害、個人情報4人分流出のおそれ](https://www.itmedia.co.jp/news/article/2608/17/2000000556/) | 21.0 | 20.0 | 42.0 |
-| [HENNGE、「第2回 IT・情シス DXPO」で HENNGE One を出展 ～ ウルトラヒーロー限定ノベルティも配布](https://scan.netsecurity.ne.jp/article/2026/08/17/55943.html) | 21.0 | 20.0 | 42.0 |
-| [8 / 20・21開催「IT・情シス DXPO 東京 2026 夏」にエーアイセキュリティラボが出展 登壇](https://scan.netsecurity.ne.jp/article/2026/08/17/55942.html) | 21.0 | 20.0 | 42.0 |
-| [兵庫県「さわやか提案箱」の提案者92人の個人情報が閲覧可能に ～ 公文書公開のPDF作成手順に誤り](https://scan.netsecurity.ne.jp/article/2026/08/17/55941.html) | 21.0 | 20.0 | 42.0 |
-| [連絡先情報が窃取されフィッシングメール大量送信 ～ 取引先を偽装したフィッシングメールのリンクを講談社社員がクリック](https://scan.netsecurity.ne.jp/article/2026/08/17/55940.html) | 21.0 | 20.0 | 42.0 |
-| [テレビ朝日メディアプレックスに不正アクセス、マイナンバー含む従業員情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/08/17/55939.html) | 21.0 | 20.0 | 42.0 |
-| [イエラエと Flatt のエンジニアが参加するチーム Blue Water が DEF CON 34 CTF Finals でついに世界 1 位獲得](https://scan.netsecurity.ne.jp/article/2026/08/17/55937.html) | 21.0 | 20.0 | 42.0 |
-| [GMOサイバーセキュリティ byイエラエ「地方公共団体向けペネトレーションテスト・パッケージ」の提供](https://scan.netsecurity.ne.jp/article/2026/08/17/55936.html) | 21.0 | 20.0 | 42.0 |
-| [ECプラットフォーム「Opencart」にディレクトリトラバーサルの脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/17/55935.html) | 21.0 | 20.0 | 42.0 |
-| [Tenable、セキュリティ担当者向けの無料AIコミュニティ「CyberAgents Exchange」公開](https://scan.netsecurity.ne.jp/article/2026/08/17/55934.html) | 21.0 | 20.0 | 42.0 |
-| [「AI部品表」に注目--EUサイバーセキュリティ規制対応が背景](https://japan.zdnet.com/article/35251566/) | 21.0 | 20.0 | 42.0 |
-| [【2024年のINTERNET Watch】KADOKAWAへのサイバー攻撃でニコニコが長期停止、SNSを悪用した「闇バイト」「偽広告」が深刻な社会問題に](https://internet.watch.impress.co.jp/docs/special/30th/2132725.html) | 20.0 | 20.0 | 42.0 |
+| [ランサムウェアを「経営リスク」と8割が認識、だが「侵入後の被害を評価できる」のは2割 なぜなのか](https://atmarkit.itmedia.co.jp/ait/articles/2608/15/news015.html) | 29.0 | 30.0 | 42.0 |
+| [Fortune 500企業を標的にしたAzureデータ窃取キャンペーン](https://www.securityweek.com/fortune-500-companies-hit-in-azure-data-theft-campaign/) | 28.0 | 20.0 | 42.0 |
+| [怪しい通話や不審なリンクの警告サインを検知する ScamNet の製品紹介](https://www.helpnetsecurity.com/2026/08/17/product-showcase-scamnet-consumer-security-app/) | 28.0 | 20.0 | 42.0 |
+| [Z.aiがコーディング能力に優れたオープンウェイトAIモデル「GLM-5.3」リリース、前モデル比で50％の性能向上](https://gigazine.net/news/20260817-z-ai-glm-5-3/) | 27.0 | 20.0 | 42.0 |
+| [Hazmat: AIエージェント向けオープンソース封じ込め基盤](https://www.helpnetsecurity.com/2026/08/17/hazmat-open-source-ai-coding-agent-containment/) | 25.0 | 20.0 | 42.0 |
+| [企業がAIを具体化すると、売上成長の見え方は変わる](https://www.helpnetsecurity.com/2026/08/17/ai-adoption-revenue-growth-research/) | 25.0 | 20.0 | 42.0 |
+| [Microsoft、AIを理由にExchange更新の遅延を認めるも配信時期は未定](https://www.theregister.com/software/2026/08/17/microsoft-blames-ai-for-delayed-exchange-update-cant-say-when-it-will-arrive/5288227) | 25.0 | 20.0 | 42.0 |
+| [日本のアニメを韓国語で解説するYouTubeチャンネルが「フェアユース」の主張を退けられる](https://gigazine.net/news/20260817-fair-use-anime/) | 22.0 | 20.0 | 42.0 |
+| [「制御システムセキュリティカンファレンス2027」、2月に開催](https://www.security-next.com/188864) | 22.0 | 20.0 | 42.0 |
+| [「SonicWall Email Security」に脆弱性 - 更新を強く推奨](https://www.security-next.com/188892) | 22.0 | 20.0 | 42.0 |
+| [両毛システムズ、社内システムに不正アクセス被害](https://www.itmedia.co.jp/news/article/2608/17/2000000566/) | 21.0 | 20.0 | 42.0 |
+| [「ただのアプリ」がroot権限を取得？ macOSの脆弱性を研究者が実演](https://atmarkit.itmedia.co.jp/ait/articles/2608/17/news039.html) | 21.0 | 20.0 | 42.0 |
+| [「さくらのレンタルサーバ」に不正アクセス 583アカウントが不正ログイン被害、個人データなど漏えいのおそれ](https://www.itmedia.co.jp/news/article/2608/17/2000000563/) | 21.0 | 20.0 | 42.0 |
+| [「さくらのレンタルサーバ」で不正アクセス--一部顧客情報が閲覧・取得された可能性](https://japan.zdnet.com/article/35251607/) | 21.0 | 20.0 | 42.0 |
+| [アカマイ、AIガバナンスを搭載した「Workforce Protector」で安全なウェブ利用へ](https://japan.zdnet.com/article/35251599/) | 21.0 | 20.0 | 42.0 |
+| [Windows 11の最強のセキュリティ防御はドライバーなしで回避可能](https://www.helpnetsecurity.com/2026/08/17/windows-11-security-bypass-research/) | 20.0 | 20.0 | 42.0 |
+| [F-RevoCRMにおけるクロスサイトスクリプティングの脆弱性](https://jvn.jp/jp/JVN58692577/) | 20.0 | 20.0 | 42.0 |
+| [「さくらのレンタルサーバ」で不正アクセス、583アカウントへの不正ログインを確認](https://internet.watch.impress.co.jp/docs/news/2133082.html) | 20.0 | 20.0 | 42.0 |
+| [miCheckerにおけるXML外部実体参照（XXE）に関する脆弱性](https://jvn.jp/jp/JVN40688603/) | 20.0 | 20.0 | 42.0 |
+| [Synology Assistantにおける不適切なファイルアクセス権設定の脆弱性](https://jvn.jp/jp/JVN91713656/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
