@@ -1,17 +1,15 @@
-# 📡 サイレーダー 2026-08-19 11:00 JST
+# 📡 サイレーダー 2026-08-19 17:00 JST
 
-このレポートは、2026-08-19 05:00 JST〜2026-08-19 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-19 11:00 JST〜2026-08-19 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 57
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 42
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 32
+- [低温だが記録しておくトピック](#low-record-topics): 18
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [米当局、悪用脆弱性リストに新規4件 - 「macOS」「SharePoint」など](#topic-28165) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -19,70 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-28165"></a>
-
-### 1. 米当局、悪用脆弱性リストに新規4件 - 「macOS」「SharePoint」など
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-米当局は、macOS、Microsoft SharePoint、VMware vCenter Serverなどに関連する4件の脆弱性について、実際の攻撃で悪用されているとして注意喚起を行いました。
-米行政機関に対しては、短期間での対応が求められています。実際の悪用が確認されている脆弱性は、放置すると被害拡大につながるため優先度が高いと考えられます。
-広く使われる製品が含まれている点から、民間組織でも影響確認が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 対象製品の利用有無と適用済み更新を早急に確認する。
-- ベンダーや公的機関の注意喚起を継続監視し、追加情報に応じて対応を見直す。
-- 該当システム周辺のログを点検し、不審な挙動がないか確認する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-65400 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| ベンダー | Broadcom | 言及あり | 0.80 | — |
-| 製品 | Microsoft SharePoint | 言及あり | 0.80 | — |
-| 製品 | VMware vCenter Server | 言及あり | 0.80 | — |
-| 製品 | Apple macOS | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [米当局、悪用脆弱性リストに新規4件 - 「macOS」「SharePoint」など](https://www.security-next.com/189024) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -99,38 +34,24 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [AIが喚起するナレッジ循環と組織学習--思考プロセスやノウハウを資産に変えるには](https://japan.zdnet.com/article/35251591/) | 28.0 | 20.0 | 42.0 |
-| [米国を標的としたイラン支援のハッキング活動で17人を司法省が起訴](https://www.cybersecuritydive.com/news/doj-charges-17-iran-hacking-campaign-us-university/828212/) | 28.0 | 20.0 | 42.0 |
-| [Mabna Instituteのイラン人ハッカー容疑者に対し、連邦当局が8年越しで再び起訴状を提出](https://cyberscoop.com/mabna-institute-iranian-hackers-indictment/) | 28.0 | 20.0 | 42.0 |
-| [HRTech プラットフォームは「身元保証とセキュリティ」の時代へ ～ Deel が AI セキュリティ企業 Clarity を買収](https://scan.netsecurity.ne.jp/article/2026/08/19/55955.html) | 26.0 | 20.0 | 42.0 |
-| [OpenAI、「ChatGPT for Teens」発表──宿題の“丸投げ”検知、自傷や摂食障害などの保護も強化](https://www.itmedia.co.jp/news/article/2608/19/2000000606/) | 26.0 | 20.0 | 42.0 |
-| [OpenAI、フロンティアAIの強化学習を一部停止 安全対策を強化](https://www.itmedia.co.jp/news/article/2608/19/2000000605/) | 26.0 | 20.0 | 42.0 |
-| [GitLabの重大なゼロクリック脆弱性がもたらす対策上の課題](https://www.darkreading.com/application-security/critical-gitlab-zero-click-flaw-mitigation-challenges) | 25.0 | 46.0 | 58.0 |
-| [中国系ハッカー、APAC攻撃でAI機能を示す](https://www.darkreading.com/cyberattacks-data-breaches/china-linked-hacker-ai-capabilities-apac-attack) | 25.0 | 20.0 | 42.0 |
-| [OpenAIが一部ワークロードでセキュリティ強化に伴いオーバーヘッドを20％増加へ](https://www.theregister.com/ai-and-ml/2026/08/19/openais-overhead-will-rise-20-percent-for-some-workloads-as-it-hardens-security/5289303) | 25.0 | 20.0 | 42.0 |
-| [CoSnitch攻撃でCopilotを騙し、アーキテクチャの可視化を誘導](https://www.darkreading.com/vulnerabilities-threats/cosnitch-attack-copilot-mapping-out-architecture) | 25.0 | 20.0 | 42.0 |
-| [macOSの画面共有関連の脆弱性を悪用した深刻度の高い攻撃が頻発している](https://gigazine.net/news/20260819-macos-screen-sharing-vulnerability/) | 24.0 | 20.0 | 43.0 |
-| [Apple、「macOS Tahoe 26.6.2」を公開 - 脆弱性28件に対処](https://www.security-next.com/189018) | 22.0 | 20.0 | 42.0 |
-| [「Chrome」にセキュリティアップデート - 脆弱性15件を修正](https://www.security-next.com/189013) | 22.0 | 20.0 | 42.0 |
-| [楽天、“攻撃型ドローン”報道で問い合わせフォーム設置 ただし「返信はしない」](https://www.itmedia.co.jp/news/article/2608/19/2000000607/) | 21.0 | 20.0 | 42.0 |
-| [アップル、29件の脆弱性を修正した「iOS 26.6.1」をリリース](https://japan.zdnet.com/article/35251672/) | 21.0 | 20.0 | 42.0 |
-| [最新のフィッシング攻撃に注意、文面やブランドを数日単位で変更](https://news.mynavi.jp/techplus/article/20260819-4834879/) | 21.0 | 20.0 | 42.0 |
-| [セキュリティの世界に“人間”が飛び込む今が最高の時 ～ CTF 生まれ CTF 育ち モヒカン准教授が教えるエージェント時代の脆弱性発見](https://scan.netsecurity.ne.jp/article/2026/08/19/55964.html) | 21.0 | 20.0 | 42.0 |
-| [要配慮個人情報が漏えい ～ 産業廃棄物業者へ破砕処分を委託したハードディスクがネットオークションに](https://scan.netsecurity.ne.jp/article/2026/08/19/55963.html) | 21.0 | 20.0 | 42.0 |
-| [ポケモンカードゲーム専門店「晴れる屋2」で個人情報が閲覧可能な状態に](https://scan.netsecurity.ne.jp/article/2026/08/19/55962.html) | 21.0 | 20.0 | 42.0 |
-| [生命保険契約照会システムで利用者の一部情報が閲覧可能な状態](https://scan.netsecurity.ne.jp/article/2026/08/19/55961.html) | 21.0 | 20.0 | 42.0 |
-| [杉並区が郵便宛名ラベルに「国籍」を記載 ～ データ出力時の項目選択誤り](https://scan.netsecurity.ne.jp/article/2026/08/19/55960.html) | 21.0 | 20.0 | 42.0 |
-| [NetScaler ADC および NetScaler Gateway にリモートコード実行につながる脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/19/55959.html) | 21.0 | 20.0 | 42.0 |
-| [Metabase に SQLインジェクションの脆弱性、ゼロデイ攻撃も確認](https://scan.netsecurity.ne.jp/article/2026/08/19/55958.html) | 21.0 | 20.0 | 42.0 |
-| [Windows DNS に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/19/55957.html) | 21.0 | 20.0 | 42.0 |
-| [日本のサイバーセキュリティ市場 2025年3兆円 2034年には7兆円規模へ ～ 年平均9.5%成長予測](https://scan.netsecurity.ne.jp/article/2026/08/19/55956.html) | 21.0 | 20.0 | 42.0 |
-| [HENNGE One と WowTalk が SSO 連携開始、複数 ID 管理の負担を軽減](https://scan.netsecurity.ne.jp/article/2026/08/19/55954.html) | 21.0 | 20.0 | 42.0 |
-| [改正個人情報保護法の啓発急務 医療データ活用阻害の恐れ](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/092400133/081000201/) | 21.0 | 20.0 | 42.0 |
-| [BINDも「LLMによる終末」をすべきなのか……“脆弱性報告”急増で9.20系列にメンテナンス一本化、セキュリティアップデートは「毎月出すからよろしく」!?【DNS Summer Day 2026】](https://internet.watch.impress.co.jp/docs/event/2133579.html) | 20.0 | 20.0 | 42.0 |
-| [Weekly Report: 複数のElastic製品に脆弱性](https://www.jpcert.or.jp/wr/2026/wr260819.html) | 20.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年08月18日）](https://jvn.jp/vu/JVNVU90536447/) | 20.0 | 20.0 | 42.0 |
-| [期限切れクレジットカードを研究者が復活させ、不正決済に利用可能であることを実証](https://www.theregister.com/security/2026/08/18/expired-credit-cards-revived-by-researchers-to-make-unauthorized-payments/5289229) | 20.0 | 20.0 | 42.0 |
-| [ComcastがXfinity WiFiを家庭用モーション検知器に変える](https://www.bleepingcomputer.com/news/security/comcast-turns-your-xfinity-wifi-into-a-home-motion-detector/) | 20.0 | 20.0 | 42.0 |
+| [AIエージェントは「記憶」が多いほど賢くなるわけではない、IBM Researchが8モデルで検証](https://gigazine.net/news/20260819-ai-agent-memory/) | 29.0 | 20.0 | 42.0 |
+| [CISOが物理セキュリティも担う時代、その意味とは](https://www.itpro.com/security/the-ciso-now-owns-physical-security-heres-what-that-means-for-the-channel) | 28.0 | 20.0 | 42.0 |
+| [NEC、ウェブ操作自動化AIエージェントをMicrosoft Marketplaceで販売開始](https://japan.zdnet.com/article/35251678/) | 26.0 | 20.0 | 42.0 |
+| [クラウドカメラの映像からAIでクマを検知して通知、セーフィーが「AI-App クマ検知」提供開始](https://internet.watch.impress.co.jp/docs/news/2133933.html) | 25.0 | 20.0 | 42.0 |
+| [F5、AI Gatewayを強化しAIコスト、アクセス、セキュリティを制御可能に](https://www.helpnetsecurity.com/2026/08/19/f5-ai-gateway-enhancements/) | 25.0 | 20.0 | 42.0 |
+| [Copilotが騙されて自分自身のハッキング方法を教えてしまう](https://gigazine.net/news/20260819-copilot-leak-own-vulnerability/) | 22.0 | 20.0 | 42.0 |
+| [「iOS/iPadOS 26.6.1」を公開、脆弱性29件を修正 - 「同18」向けの更新も](https://www.security-next.com/189045) | 22.0 | 20.0 | 42.0 |
+| [OpenAIが「安全のためにAIの強化学習を2週間停止した」と自社の安全対策をアピール](https://gigazine.net/news/20260819-openai-pacing-model/) | 22.0 | 20.0 | 42.0 |
+| [「NVIDIA Triton Inference Server」に深刻な脆弱性 - 修正版を公開](https://www.security-next.com/189032) | 22.0 | 20.0 | 42.0 |
+| [「ポケモンセンター」で顧客情報流出、物流会社へのサイバー攻撃で](https://news.mynavi.jp/techplus/article/20260819-4838741/) | 21.0 | 20.0 | 42.0 |
+| [氏名・住所など16万人分漏えい 学生向けPC販売サイト、不正アクセスの影響判明 明大・帝京など利用](https://www.itmedia.co.jp/news/article/2608/19/2000000625/) | 21.0 | 20.0 | 42.0 |
+| [iOS 26.6.1 / iOS 18.7.10配信開始、新旧iPhoneの脆弱性に対処 macOS「画面共有」の脆弱性修正も](https://news.mynavi.jp/techplus/article/20260819-4838453/) | 21.0 | 20.0 | 42.0 |
+| [陸自個人情報収集「任務の範囲」](https://news.yahoo.co.jp/pickup/6592291?source=rss) | 20.0 | 20.0 | 42.0 |
+| [CareCloudのデータ侵害、影響が370万人に拡大](https://www.securityweek.com/carecloud-data-breach-impact-grows-to-3-7-million-individuals/) | 20.0 | 20.0 | 42.0 |
+| [「被災地支援」うたうSNSのダイレクトメッセージから金銭をだまし取られるトラブルに国民生活センターが注意喚起 寄付を入口に、多く支払った分を○○Payで返金すると言ってくる返金詐欺の事例も](https://internet.watch.impress.co.jp/docs/news/2133892.html) | 20.0 | 20.0 | 42.0 |
+| [銀行が顧客行動から不正の兆候を探る](https://www.helpnetsecurity.com/2026/08/19/threatmark-banking-fraud-prevention-report/) | 20.0 | 20.0 | 42.0 |
+| [acmailerにおける複数の脆弱性](https://jvn.jp/jp/JVN47716829/) | 20.0 | 20.0 | 42.0 |
+| [オーストラリアのホテルチェーン、第三者データベース運営会社への侵害後に宿泊客のPIIが流出](https://www.theregister.com/cyber-crime/2026/08/19/australian-hotel-chain-leaks-guests-pii-after-breach-at-third-party-database-operator/5289341) | 20.0 | 20.0 | 42.0 |
 
 ---
 
