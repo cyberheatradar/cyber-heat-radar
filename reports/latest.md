@@ -1,17 +1,17 @@
-# 📡 サイレーダー 2026-08-20 11:00 JST
+# 📡 サイレーダー 2026-08-20 17:00 JST
 
-このレポートは、2026-08-20 05:00 JST〜2026-08-20 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-20 11:00 JST〜2026-08-20 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 72
+- 観測トピック数: 41
 - [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 47
+- [低温だが記録しておくトピック](#low-record-topics): 16
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [「MLflow」脆弱性の悪用を確認 - 米当局が注意喚起](#topic-28417) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [AI agent suggested installing a malware package. Engineer almost took its advice](#topic-28494) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,63 +19,66 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-28417"></a>
+<a id="topic-28494"></a>
 
-### 1. 「MLflow」脆弱性の悪用を確認 - 米当局が注意喚起
+### 1. AI agent suggested installing a malware package. Engineer almost took its advice
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>ボ⁠ッ⁠ト⁠ネ⁠ッ⁠ト</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-米サイバーセキュリティインフラセキュリティ庁（CISA）が、機械学習基盤「MLflow」に関する脆弱性について、悪用が確認されているとして注意喚起を行いました。
-公開情報では、対象脆弱性の詳細や影響範囲の全容はこの材料だけでは断定できませんが、実際の悪用が示唆されている点が重要です。
-実際の悪用が確認されている脆弱性は、優先度を上げて対応すべき対象になります。MLflowを利用している組織では、影響確認や緩和策の適用を急ぐ必要があります。
+AIエージェントが、マルウェアに関連する可能性のあるパッケージの導入を提案し、エンジニアがそれを実行しかけた事例が報じられました。
+最終的には、事前にGitHub上のソースコードを確認する社内ルールがあったため、問題のある導入は避けられたとされています。
+生成AIやAIエージェントの提案が、ソフトウェア調達や依存関係管理の判断に影響しうることを示す事例です。
+特に、パッケージ導入時の確認不足が供給網リスクにつながるため、実務上のレビュー体制が改めて重要になります。
 
 #### 温度感の理由
 
 ##### 温度感
-- 実悪用・ゼロデイ文脈。
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
 
 ##### 実務影響
-- 悪用情報あり。
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- MLflowの利用有無と公開状況を確認し、影響を受ける環境がないか点検する。
-- ベンダーや公的機関の案内を確認し、該当する更新や緩和策を適用する。
-- 外部公開された関連サービスについて、ログ監視や不審なアクセスの有無を確認する。
+- AIの提案はそのまま採用せず、パッケージの出所や保守状況を別途確認する。
+- 依存ライブラリの導入前に、ソースコードや公開履歴をレビューする運用を徹底する。
+- AI支援を使う開発フローでも、最終判断は人手の承認と既存の調達ルールで行う。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-64849 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
+| C2フレームワーク | Havoc | 主題 | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [「MLflow」脆弱性の悪用を確認 - 米当局が注意喚起](https://www.security-next.com/189114) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [AI agent suggested installing a malware package. Engineer almost took its advice](https://www.theregister.com/security/2026/08/20/ai-agent-suggested-installing-a-malware-package-engineer-almost-took-its-advice/5289849) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
+- 技術・開発者系ソース観測: 観測あり。
 
 ---
 
@@ -94,53 +97,22 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [REXTにランサムウェア攻撃、RIZAP「APORITO」事業でシステム障害](https://scan.netsecurity.ne.jp/article/2026/08/20/55979.html) | 29.0 | 30.0 | 42.0 |
-| [REXTへのランサムウェア攻撃、JEANS MATE店舗での支払いは原則として現金のみに](https://scan.netsecurity.ne.jp/article/2026/08/20/55978.html) | 29.0 | 30.0 | 42.0 |
-| [シーイーシーのデータセンターにランサムウェア攻撃、障害が発生](https://scan.netsecurity.ne.jp/article/2026/08/20/55973.html) | 29.0 | 30.0 | 42.0 |
-| [Rogue ransomware affiliateが復旧企業を装い支払いを盗む](https://www.bleepingcomputer.com/news/security/rogue-ransomware-affiliate-ransom-busters-poses-as-recovery-firm/) | 28.0 | 30.0 | 42.0 |
-| [Rogue ransomware affiliateがデータ復旧企業を装い、支払いを詐取](https://www.bleepingcomputer.com/news/security/rogue-ransomware-affiliate-ransom-busters-poses-as-data-recovery-firm/) | 28.0 | 30.0 | 42.0 |
-| [AIによるディープフェイクがミステリー小説にも影響を与えていると推理小説家が解説](https://gigazine.net/news/20260820-ai-deepfakes-changing-rules-crime-fiction/) | 27.0 | 20.0 | 42.0 |
-| [「令和8年版 情報通信白書」から読み解く「生成AIのリスク対策」](https://japan.zdnet.com/article/35251700/) | 26.0 | 20.0 | 42.0 |
-| [医療・製造の「使いたいけど使えない」壁を壊す 社内に置ける生成AI「Sovereign GaiXer」](https://ascii.jp/elem/000/004/427/4427348/?rss=) | 26.0 | 20.0 | 42.0 |
-| [Okta Blog 第18回 そのAPI費用、実は「ツール税」かも ～ AIエージェントのトークン消費を90%削る方法](https://scan.netsecurity.ne.jp/article/2026/08/20/55982.html) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントがつまずく「見えないデータ」の正体](https://japan.zdnet.com/article/35251710/) | 26.0 | 20.0 | 42.0 |
-| [日立製作所がAI駆動開発を加速 開発全工程で生産性3割向上へ](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/080701485/) | 26.0 | 20.0 | 42.0 |
-| [アンソロピックのAIも他社に侵入 設定ミスでネットアクセス可能に](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/080701483/) | 26.0 | 20.0 | 42.0 |
-| [NECがTNFD対応のAIサービス 社内実践で調査の作業時間が9割減](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/080701480/) | 26.0 | 20.0 | 42.0 |
-| [みずほがAIエージェント3000体構想 銀行業務全体をAI前提で再設計へ](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/080701481/) | 26.0 | 20.0 | 42.0 |
-| [AIに足りなかったのは「能力」ではなく「文脈」だった--AI前提の環境へ](https://japan.zdnet.com/article/35251600/) | 26.0 | 20.0 | 42.0 |
-| [「Claude Code vs. Codex」、両方を使う場合と必要に応じて選ぶ方法](https://japan.zdnet.com/article/35251534/) | 26.0 | 20.0 | 42.0 |
-| [OpenAIがChatGPTのログインと新規登録に失敗しサービス停止を確認](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-confirms-chatgpt-is-down-as-logins-and-signups-fail/) | 25.0 | 20.0 | 42.0 |
-| [「理論上のリスクではない」と連邦当局、攻撃者がAI生成コードで重要インフラの制御装置をハッキング](https://www.theregister.com/security/2026/08/19/not-a-theoretical-risk-feds-warn-as-attackers-use-ai-made-code-to-hack-critical-infrastructure-controllers/5289960) | 25.0 | 20.0 | 42.0 |
-| [Claude・GPT公開に「待った」連発…米トランプ政権が目論む“中国封じ”のAI戦略](https://www.sbbit.jp/article/cont1/186502?ref=rss) | 25.0 | 20.0 | 42.0 |
-| [フィルターなしの「Kriminal」AIプラットフォームがサイバー犯罪への懸念を高める](https://www.darkreading.com/application-security/no-filter-kriminal-ai-platform-cybercrime-concerns) | 25.0 | 20.0 | 42.0 |
-| [F-RevoCRM に XSS の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/20/55967.html) | 22.0 | 26.0 | 42.0 |
-| [「Cisco Secure Workload」に複数の深刻な脆弱性 - 修正版を公開](https://www.security-next.com/189109) | 22.0 | 20.0 | 42.0 |
-| [Oracle、月例パッチを公開 - 900件以上の脆弱性に対処](https://www.security-next.com/189101) | 22.0 | 20.0 | 42.0 |
-| [「NetScaler ADC/Gateway」に認証回避の脆弱性 - 重要度「クリティカル」](https://www.security-next.com/189093) | 22.0 | 20.0 | 42.0 |
-| [トランプ大統領は民間のセキュリティ企業にサイバー犯罪組織への「ハックバック」を許可したい](https://scan.netsecurity.ne.jp/article/2026/08/20/55983.html) | 21.0 | 20.0 | 42.0 |
-| [8 / 21 原宿で開催「Go UP SUCCCESS 2026」に「Reckoner」をブース出展](https://scan.netsecurity.ne.jp/article/2026/08/20/55981.html) | 21.0 | 20.0 | 42.0 |
-| [8 / 21開催「Developers Summit 2026 Kansai」にスリーシェイクが「Sreake」のブース出展](https://scan.netsecurity.ne.jp/article/2026/08/20/55980.html) | 21.0 | 20.0 | 42.0 |
-| [ニデックWebサイトにソフトウェアの脆弱性を悪用した不正アクセス](https://scan.netsecurity.ne.jp/article/2026/08/20/55977.html) | 21.0 | 20.0 | 42.0 |
-| [徳島県で住基ネット機器更改、マイナンバー含む個人情報を保存した外付ハードディスクをデータ未消去のまま廃棄した可能性](https://scan.netsecurity.ne.jp/article/2026/08/20/55976.html) | 21.0 | 20.0 | 42.0 |
-| [イノベーションが利用する GitHub への不正アクセス、62,691名分の顧客情報が漏えい](https://scan.netsecurity.ne.jp/article/2026/08/20/55975.html) | 21.0 | 20.0 | 42.0 |
-| [さくらインターネットに不正アクセス、会員情報 1,360,563 アカウントが影響を受けた可能性](https://scan.netsecurity.ne.jp/article/2026/08/20/55974.html) | 21.0 | 20.0 | 42.0 |
-| [アフラック生命保険に不正アクセス、短時間に大量のデータ照会があった際に監視・制御する機能が不足](https://scan.netsecurity.ne.jp/article/2026/08/20/55972.html) | 21.0 | 20.0 | 42.0 |
-| [「はいチーズ！フォト」に不正アクセス、漏えい件数の公表は顧客の保護と二次被害防止の観点から差し控える](https://scan.netsecurity.ne.jp/article/2026/08/20/55971.html) | 21.0 | 20.0 | 42.0 |
-| [Apache Allura にサーバサイドリクエストフォージェリの脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/20/55970.html) | 21.0 | 20.0 | 42.0 |
-| [miChecker に XML 外部実体参照（XXE）に関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/20/55969.html) | 21.0 | 20.0 | 42.0 |
-| [Synology Assistant に不適切なファイルアクセス権設定の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/20/55968.html) | 21.0 | 20.0 | 42.0 |
-| [DMARC強制適用はメガバンク100％に対し信用金庫11.8％](https://scan.netsecurity.ne.jp/article/2026/08/20/55966.html) | 21.0 | 20.0 | 42.0 |
-| [HENNGE One、パスワードマネージャー「Privaco」と SSO 連携](https://scan.netsecurity.ne.jp/article/2026/08/20/55965.html) | 21.0 | 20.0 | 42.0 |
-| [さくらインターネット、不正アクセス第二報 販管システムにも被害及ぶ](https://atmarkit.itmedia.co.jp/ait/articles/2608/20/news036.html) | 21.0 | 20.0 | 42.0 |
-| [能動的サイバー防御のススメ--Infobloxが語る「プロテクティブDNS」の価値](https://japan.zdnet.com/article/35251717/) | 21.0 | 20.0 | 42.0 |
-| [「8文字」ではもう守れない パスワード依存から抜け出す条件](https://www.itmedia.co.jp/enterprise/articles/2608/20/news008.html) | 21.0 | 20.0 | 42.0 |
-| [「人がミスするから事故が起きる」はもう古い？ NISTが仕掛けるセキュリティ新構想](https://atmarkit.itmedia.co.jp/ait/articles/2608/20/news033.html) | 21.0 | 20.0 | 42.0 |
-| [RDK-BのWebUにおける複数の脆弱性](https://jvn.jp/vu/JVNVU91551881/) | 20.0 | 20.0 | 42.0 |
-| [Smashing Security podcast #481: ロボット犬にこれだけは言うな](https://grahamcluley.com/smashing-security-podcast-481/) | 20.0 | 20.0 | 42.0 |
-| [「TrendLife Kaleida」提供開始、セキュリティ機能をベースに「家族で使えるAI」をコンセプトとしたトレンドマイクロの新サービス](https://internet.watch.impress.co.jp/docs/news/2133918.html) | 20.0 | 20.0 | 42.0 |
-| [Sakura Internetの不正アクセスで最大136万アカウントの情報が流出](https://www.bleepingcomputer.com/news/security/sakura-internet-hack-exposes-data-of-up-to-136-million-accounts/) | 20.0 | 20.0 | 42.0 |
-| [Healthtech企業CareCloudのデータ侵害で370万人の患者に影響](https://www.bleepingcomputer.com/news/security/healthtech-firm-carecloud-data-breach-impacts-37-million-patients/) | 20.0 | 20.0 | 42.0 |
+| [「パスワードを変えてもまだ危ない」 Cookie盗難524億件超え、必要な“もう一つ”の対策](https://atmarkit.itmedia.co.jp/ait/articles/2608/20/news034.html) | 29.0 | 20.0 | 42.0 |
+| [米国、31テラバイトの学術データ窃取でイラン人ハッカー17人を起訴](https://www.helpnetsecurity.com/2026/08/20/us-iranian-hackers-mabna-institute-charged/) | 28.0 | 20.0 | 42.0 |
+| [OpenAI、フロンティアモデルの安全対策強化のため強化学習トレーニングを一時停止](https://news.mynavi.jp/techplus/article/20260820-4842179/) | 26.0 | 20.0 | 42.0 |
+| [CloudflareがリモートSpectre攻撃に成功、Workersから機密情報を最大12bit/秒で読み出す](https://gigazine.net/news/20260820-cloudflare-remote-spectre/) | 25.0 | 20.0 | 43.0 |
+| [ハッカーがAIを用いて米国の重要分野にあるSiemens PLCを標的にしている](https://www.securityweek.com/hackers-using-ai-to-target-siemens-plcs-in-critical-us-sectors/) | 25.0 | 20.0 | 42.0 |
+| [AIによって詐欺の見抜きが難しくなり、本人確認がより困難に](https://www.helpnetsecurity.com/2026/08/20/experian-digital-identity-fraud-risks-report/) | 25.0 | 20.0 | 42.0 |
+| [Elementor Proの欠陥により未認証の攻撃者がPHPをアップロードしてコード実行可能に](https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html) | 24.0 | 46.0 | 50.0 |
+| [地域を超えるサイバー攻撃、日チェコ協力で高まるレジリエンス](https://www.security-next.com/187403) | 22.0 | 20.0 | 42.0 |
+| [「Cisco Crosswork」にクリティカル脆弱性 - アップデートを公開](https://www.security-next.com/189122) | 22.0 | 20.0 | 42.0 |
+| [不正アクセスで一部停止中のNTT西子会社レンタルサーバ、復旧見通しを公表 調査完了は8月末見込み](https://www.itmedia.co.jp/news/article/2608/20/2000000651/) | 21.0 | 20.0 | 42.0 |
+| [さくらインターネットで不正アクセス 583件不正ログインから「136万件影響の恐れ」に拡大](https://www.itmedia.co.jp/enterprise/articles/2608/20/news078.html) | 21.0 | 20.0 | 42.0 |
+| [ウェブライフ、OEM向けホームページ作成サービスで不正アクセス、情報漏えいの可能性](https://internet.watch.impress.co.jp/docs/news/2134205.html) | 20.0 | 20.0 | 42.0 |
+| [失効したクレジットカードで不正決済を可能にする抜け穴を研究者が発見](https://www.helpnetsecurity.com/2026/08/20/zombie-credit-card-attack-expired/) | 20.0 | 20.0 | 42.0 |
+| [解約手続き後も請求が続くファッションレンタル事業者のトラブル、国民生活センターが事業者名を挙げて注意喚起](https://internet.watch.impress.co.jp/docs/news/2134181.html) | 20.0 | 20.0 | 42.0 |
+| [NTTスマートコネクト、レンタルサーバーサービス「スマイルサーバ」の一部で不正アクセスを確認](https://internet.watch.impress.co.jp/docs/news/2134182.html) | 20.0 | 20.0 | 42.0 |
+| [8,539件の脆弱性修正から見直すべきパッチ適用のあり方](https://www.helpnetsecurity.com/2026/08/20/rapid7-vulnerability-patch-cycles-report/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
