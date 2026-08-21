@@ -1,17 +1,18 @@
-# 📡 サイレーダー 2026-08-21 11:00 JST
+# 📡 サイレーダー 2026-08-21 17:00 JST
 
-このレポートは、2026-08-21 05:00 JST〜2026-08-21 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-21 11:00 JST〜2026-08-21 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 49
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 47
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 23
+- [低温だが記録しておくトピック](#low-record-topics): 21
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Socket Now Protects the Firefox Extension Ecosystem](#topic-28699) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execution](#topic-28716) | 41.0 | 64.0 | 51.0 | 音声 | 温度感上位枠 |
+| 2 | [YouTubeの有料動画広告がマルウェア配布に悪用されていた事例をセキュリティ企業が報告](#topic-28709) | 33.0 | 20.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,28 +20,95 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-28699"></a>
+<a id="topic-28716"></a>
 
-### 1. Socket Now Protects the Firefox Extension Ecosystem
+### 1. Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execution
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>ク⁠ラ⁠ウ⁠ド</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>K⁠E⁠V</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
+| <nobr>温⁠度⁠感</nobr> | 41.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
+| <nobr>確⁠度</nobr> | 51.0 |
 
 #### 概要
 
-SocketがMozilla Firefoxの拡張機能エコシステム向けに、悪意ある拡張や危険な更新を検知する試験的な保護を提供するとしています。
-Mozillaの公式ディレクトリにある9万7000件超の拡張機能を対象に、マルウェアやリスクの高い変更をスキャンする取り組みと説明されています。
-ブラウザ拡張機能は利用者数が多く、侵害されると広い範囲に影響が及ぶ可能性があります。
-配布後の更新も含めて監視する仕組みは、利用者保護とエコシステム全体の安全性向上に関わるため注目されます。
+Microsoftは、Entra IDに関する深刻度10.0の脆弱性CVE-2026-69836について、実際の悪用が確認されたと警告しました。
+対象はクラウド型のID・アクセス管理サービスで、報告内容ではリモートコード実行の可能性が示されています。一方で、現時点では利用者側に追加対応は不要とされています。
+ID基盤は認証・権限管理の中核であり、影響範囲が広くなりやすいため注目されています。実際の悪用が示されている点から、関連情報の更新や周辺サービスへの影響確認が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Microsoftの案内と更新情報を継続監視し、追加の緩和策や修正の有無を確認する。
+- Entra IDを認証基盤として使うシステムで、異常なサインインや権限変更などの兆候を点検する。
+- 関連するクラウド管理設定や連携アプリの棚卸しを行い、影響範囲を把握しておく。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-69836 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+| 製品 | Microsoft Entra ID | 言及あり | 0.80 | — |
+| 製品 | Active Directory | 言及あり | 0.80 | — |
+| 製品 | Microsoft Azure | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-69836](https://nvd.nist.gov/vuln/detail/CVE-2026-69836) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execut](https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-28709"></a>
+
+### 2. YouTubeの有料動画広告がマルウェア配布に悪用されていた事例をセキュリティ企業が報告
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+YouTube上の有料動画広告が、株式チャートサービス「TradingView」の無料利用をうたってユーザーを偽アプリへ誘導し、マルウェア配布に悪用されていた事例がセキュリティ企業により報告されました。
+報告では、確認された感染端末はMacでしたが、同種の偽広告を使ったWindows向けマルウェア配布も以前から確認されているとされています。
+正規サービスを装う広告は見分けにくく、利用者が信頼しやすい導線を悪用できる点が問題です。
+広告配信プラットフォーム経由の誘導は被害範囲が広がりやすく、企業の端末利用にも影響し得ます。
 
 #### 温度感の理由
 
@@ -56,23 +124,15 @@ Mozillaの公式ディレクトリにある9万7000件超の拡張機能を対�
 
 #### 担当者向け確認ポイント
 
-- Firefox拡張機能の導入・運用では、配布元や更新履歴の確認を従来以上に重視する。
-- 拡張機能の権限、更新頻度、レビュー内容に不自然な点がないか継続的に点検する。
-- 組織内端末では、業務に不要な拡張機能の許可制・棚卸しを行い、リスクを抑える。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Mozilla | 言及あり | 0.80 | — |
-| 製品 | Chromium | 言及あり | 0.80 | — |
-| 製品 | Mozilla Firefox | 言及あり | 0.80 | — |
+- 広告経由のダウンロードや外部アプリ導入を前提にした案内は、配布元の正当性を個別に確認する。
+- MacとWindowsの双方で偽アプリ配布が起こり得るため、端末種別を問わず警戒する。
+- 広告・Web経由の初回実行を抑えるため、EDRやブラウザ保護、許可リスト運用を点検する。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Socket Now Protects the Firefox Extension Ecosystem](https://socket.dev/blog/firefox-extension-security) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [YouTubeの有料動画広告がマルウェア配布に悪用されていた事例をセキュリティ企業が報告](https://gigazine.net/news/20260821-youtube-malware/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -98,29 +158,27 @@ Mozillaの公式ディレクトリにある9万7000件超の拡張機能を対�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [青山財産ネットワークス グループ会社にランサムウェア攻撃、日本資産総研と日東不動産以外での影響は確認されず](https://scan.netsecurity.ne.jp/article/2026/08/21/55988.html) | 29.0 | 30.0 | 42.0 |
-| [Rustのサプライチェーン攻撃、2億4500万ダウンロードのCratesにビルド時マルウェアを仕込む](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html) | 28.0 | 45.0 | 42.0 |
-| [ロシア系攻撃者、標的型フィッシングでOAuth悪用を追加](https://www.theregister.com/security/2026/08/21/russian-snoops-add-oauth-abuse-to-targeted-phishing-campaigns/5290706) | 28.0 | 20.0 | 42.0 |
-| [裁判の提出書類に「原告有利の出力を生成するようAIに指示するテキスト」が隠されていたことが発覚](https://gigazine.net/news/20260821-hides-prompt-injection-legal-filing-ai/) | 27.0 | 20.0 | 42.0 |
-| [Zendesk日本法人・森社長が語る「成果ベース課金」とAIカスタマーサポートの未来](https://japan.zdnet.com/article/35251302/) | 26.0 | 20.0 | 42.0 |
-| [企業のAIエージェント導入が3倍増加--投資対効果が明確に、顧客からも信頼](https://japan.zdnet.com/article/35251756/) | 26.0 | 20.0 | 42.0 |
-| [もはや専門職が不要に？ AIエージェント化する職場で価値を維持する方法](https://japan.zdnet.com/article/35251537/) | 26.0 | 20.0 | 42.0 |
-| [ネットワーク内でAIエージェントを制御する新たなCUSTODYフレームワーク](https://www.darkreading.com/perimeter/new-custody-framework-constrains-ai-agents-inside-network) | 25.0 | 20.0 | 42.0 |
-| [米当局、「TrueConf Server」の脆弱性2件を悪用リストへ追加](https://www.security-next.com/189174) | 24.0 | 20.0 | 43.0 |
-| [「Docker Desktop」などに脆弱性 - ファイル作成や上書きのおそれ](https://www.security-next.com/189158) | 24.0 | 20.0 | 42.0 |
-| [NVIDIAのネットワークOSに複数の脆弱性 - アップデートを提供](https://www.security-next.com/189049) | 22.0 | 20.0 | 42.0 |
-| [サプライチェーン対策評価制度「SCS」令和8年度末に運用開始へ ～ 経産省、★3・★4 取得を後押しする新サービス整備](https://scan.netsecurity.ne.jp/article/2026/08/21/55992.html) | 21.0 | 20.0 | 42.0 |
-| [エーアイセキュリティラボ、ビール片手に語るWebセキュリティ交流会「納涼ビアセキュ」を 8 / 26 開催](https://scan.netsecurity.ne.jp/article/2026/08/21/55991.html) | 21.0 | 20.0 | 42.0 |
-| [価格転嫁・賃上げ支援事業の公式サイトに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/08/21/55990.html) | 21.0 | 20.0 | 42.0 |
-| [EPARKリラク&エステの予約管理・顧客管理プラットフォーム「PeakManager」に不正アクセス、個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/08/21/55989.html) | 21.0 | 20.0 | 42.0 |
-| [藤倉コンポジットのメールアカウントに不正アクセス、すべての受信メールを社外の不明なメールアドレスに転送](https://scan.netsecurity.ne.jp/article/2026/08/21/55987.html) | 21.0 | 20.0 | 42.0 |
-| [国立国際医療センターで心機能の検査機器付属のハードディスク紛失](https://scan.netsecurity.ne.jp/article/2026/08/21/55986.html) | 21.0 | 20.0 | 42.0 |
-| [セントラルコンサルタント コーポレートサイトに不正アクセス、お問い合わせフォームの情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/08/21/55985.html) | 21.0 | 20.0 | 42.0 |
-| [Cloudbase が DEF CON Cloud Village CTF 挑戦二年目で準優勝 日本チーム首位](https://scan.netsecurity.ne.jp/article/2026/08/21/55984.html) | 21.0 | 20.0 | 42.0 |
-| [うんこミュージアム情報漏れに学ぶ 「DBに保存しない」設計でどう安全を守るか](https://atmarkit.itmedia.co.jp/ait/articles/2608/21/news033.html) | 21.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年08月20日）](https://jvn.jp/vu/JVNVU97889580/) | 20.0 | 20.0 | 42.0 |
-| [テクニカルサポート詐欺が前年同期比2.5倍に急増！ 新手の詐欺としてAIの回答が入口になる事例も〜トレンドマイクロ「個人セキュリティ脅威動向レポート 2026 上半期」](https://internet.watch.impress.co.jp/docs/news/2134335.html) | 20.0 | 20.0 | 42.0 |
-| [千葉県警がサイバー犯罪に関わった少年の立ち直り支援、「今の時代、インターネットを取り上げるわけにもいかない」と全国初の取り組み](https://internet.watch.impress.co.jp/docs/interview/2132234.html) | 20.0 | 20.0 | 42.0 |
+| [ランサムウェアによる平均業務停止期間が36日に長期化--「セキュリティ成熟度と被害の実態調査」](https://japan.zdnet.com/article/35251804/) | 29.0 | 30.0 | 42.0 |
+| [CISA、悪用中のTrueConf脆弱性に対し直ちに修正適用を呼びかけ](https://www.securityweek.com/cisa-urges-immediate-patching-of-exploited-trueconf-vulnerabilities/) | 28.0 | 20.0 | 42.0 |
+| [今週の新しい情報セキュリティ製品：2026年8月21日](https://www.helpnetsecurity.com/2026/08/21/new-infosec-products-of-the-week-august-21-2026/) | 28.0 | 20.0 | 42.0 |
+| [AIエージェント「Grok Build」がスマホアプリやウェブ版Grokでも利用可能に、アプリを作って固有URLで公開する機能もあり](https://gigazine.net/news/20260821-grok-build-web-mobile/) | 27.0 | 20.0 | 42.0 |
+| [Claudeの使い方を学べる公式チュートリアル「Claude Academy」が登場、単純なチャットからエージェントまで網羅](https://gigazine.net/news/20260821-anthropic-claude-academy/) | 27.0 | 20.0 | 42.0 |
+| [ChatGPTやGeminiの回答から詐欺サイトへ、「AIを信じすぎる」リスクに注意](https://news.mynavi.jp/techplus/article/20260821-4847784/) | 26.0 | 20.0 | 42.0 |
+| [コードが書けない筆者が愛車用にアプリを2本自作 「AI製アプリで起業」の夢膨らむも、見えた有料化の壁](https://www.itmedia.co.jp/news/article/2608/19/2000000598/) | 26.0 | 20.0 | 42.0 |
+| [GitLab 19.3が企業のエージェント開発を安全に拡張可能にする](https://www.helpnetsecurity.com/2026/08/21/gitlab-19-3-updates/) | 25.0 | 20.0 | 42.0 |
+| [ポケモンセンター関連の物流業者がハッキングされイギリスとドイツの顧客情報が流出](https://gigazine.net/news/20260821-pokemon-center-data-breach/) | 22.0 | 20.0 | 42.0 |
+| [「PostgreSQL」が脆弱性28件や多数バグを修正](https://www.security-next.com/189206) | 22.0 | 20.0 | 42.0 |
+| [MFA導入で見落とされた対象は誰か？さらにPowerShell・Graph・Entraスクリプト活用も](https://isc.sans.edu/diary/rss/33272) | 22.0 | 20.0 | 42.0 |
+| [Mozilla、ブラウザ「Firefox 154」を公開 - 脆弱性58件に対応](https://www.security-next.com/189191) | 22.0 | 20.0 | 42.0 |
+| [クラウド最大の脅威は「設定ミス」──最新調査と実際の漏えい事例から学ぶ対策](https://ascii.jp/elem/000/004/422/4422703/?rss=) | 21.0 | 20.0 | 42.0 |
+| [2.5次元アイドル「いれいす」事務所への不正アクセス、最大17万人に影響 “推し”情報や購買履歴も漏えいか](https://www.itmedia.co.jp/news/article/2608/21/2000000677/) | 21.0 | 20.0 | 42.0 |
+| [特殊詐欺被害は右肩上がり、日本が詐欺の先進国に--トレンドマイクロ調査](https://japan.zdnet.com/article/35251800/) | 21.0 | 20.0 | 42.0 |
+| [エプソンのプリンタ・スキャナー多数に脆弱性、対象機種を確認し更新を](https://news.mynavi.jp/techplus/article/20260821-4846753/) | 21.0 | 20.0 | 42.0 |
+| [Ciscoのバグ重要度警告はオリンピックの体操採点のように「10、10、9.9、9.6、7.5」だった](https://www.theregister.com/security/2026/08/21/cisco-bug-severity-warning-reads-like-olympic-gymnastics-scores-10-10-99-96-and-75/5290838) | 20.0 | 28.0 | 50.0 |
+| [25ドルのテンプレートで詐欺師が数百の架空銀行ドメインを構築](https://www.helpnetsecurity.com/2026/08/21/phantom-bank-websites-fraud-research/) | 20.0 | 20.0 | 42.0 |
+| [UNIVERGE IX-R/IX-Vシリーズルータにおける重要な機能に対する認証の欠如の脆弱性](https://jvn.jp/jp/JVN81414813/) | 20.0 | 20.0 | 42.0 |
+| [企業の約半数はPQC移行の責任者が不在](https://www.helpnetsecurity.com/2026/08/21/axiad-pqc-migration-readiness-gaps-report/) | 20.0 | 20.0 | 42.0 |
+| [スマートフォンアプリ「日本科学未来館アシストアプリ」におけるクロスサイトスクリプティングの脆弱性](https://jvn.jp/jp/JVN09266484/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
