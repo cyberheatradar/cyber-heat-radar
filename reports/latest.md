@@ -1,18 +1,21 @@
-# 📡 サイレーダー 2026-08-21 17:00 JST
+# 📡 サイレーダー 2026-08-22 05:00 JST
 
-このレポートは、2026-08-21 11:00 JST〜2026-08-21 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-21 17:00 JST〜2026-08-22 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 47
-- [音声で扱う想定のトピック](#audio-topics): 2
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 21
+- 観測トピック数: 80
+- [音声で扱う想定のトピック](#audio-topics): 4
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 51
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execution](#topic-28716) | 41.0 | 64.0 | 51.0 | 音声 | 温度感上位枠 |
-| 2 | [YouTubeの有料動画広告がマルウェア配布に悪用されていた事例をセキュリティ企業が報告](#topic-28709) | 33.0 | 20.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [CVE-2026-73570: CISA KEV catalog addition](#topic-28581) | 45.0 | 64.0 | 55.0 | 音声 | 温度感上位枠 |
+| 2 | [Critical Microsoft Entra ID vulnerability exploited in the wild (CVE-2026-69836)](#topic-28716) | 42.0 | 64.0 | 55.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
+| 3 | [CISA orders feds to patch actively exploited TrueConf Server flaws](#topic-28805) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 4 | [In Other News: Zombie Card Attack, T-Mobile Cut Cable to Stop Hackers, GitHub Denies AI Caused Bug](#topic-28773) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 5 | [Attackers impersonate popular AI brands to spread malware](#topic-28811) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -20,63 +23,67 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-28716"></a>
+<a id="topic-28581"></a>
 
-### 1. Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execution
+### 1. CVE-2026-73570: CISA KEV catalog addition
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>ク⁠ラ⁠ウ⁠ド</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>K⁠E⁠V</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 41.0 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 温度上昇中 |
+| <nobr>温⁠度⁠感</nobr> | 45.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 51.0 |
+| <nobr>確⁠度</nobr> | 55.0 |
 
 #### 概要
 
-Microsoftは、Entra IDに関する深刻度10.0の脆弱性CVE-2026-69836について、実際の悪用が確認されたと警告しました。
-対象はクラウド型のID・アクセス管理サービスで、報告内容ではリモートコード実行の可能性が示されています。一方で、現時点では利用者側に追加対応は不要とされています。
-ID基盤は認証・権限管理の中核であり、影響範囲が広くなりやすいため注目されています。実際の悪用が示されている点から、関連情報の更新や周辺サービスへの影響確認が重要です。
+CISAは、Zimbra Collaboration（ZCS）に影響するCVE-2026-73570をKnown Exploited Vulnerabilities（KEV）カタログに追加しました。
+公開情報では、この脆弱性はすでに実環境で悪用が確認されているとされ、コマンドインジェクションを通じてリモートコード実行につながるおそれがあります。
+KEVへの追加は、単なる理論上の脆弱性ではなく、優先度を上げて対処すべき実害のある問題であることを示します。
+メール基盤として広く使われるZimbraの脆弱性であるため、影響範囲が大きくなりやすい点も注目されています。
 
 #### 温度感の理由
 
 ##### 温度感
+- 複数ソースで確認: 2 sources。
 - 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
 - RCEまたは認証バイパス系。
 
 ##### 確度
+- 複数ソース確認。
 - CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- Microsoftの案内と更新情報を継続監視し、追加の緩和策や修正の有無を確認する。
-- Entra IDを認証基盤として使うシステムで、異常なサインインや権限変更などの兆候を点検する。
-- 関連するクラウド管理設定や連携アプリの棚卸しを行い、影響範囲を把握しておく。
+- Zimbra Collaboration（ZCS）の利用有無と対象バージョンを確認し、ベンダーの修正適用状況を点検する。
+- KEV掲載を踏まえ、資産管理・脆弱性管理の優先順位を引き上げる。
+- 関連システムの不審な挙動や管理操作の痕跡を確認し、必要に応じて監視を強化する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-69836 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| 製品 | Microsoft Entra ID | 言及あり | 0.80 | — |
-| 製品 | Active Directory | 言及あり | 0.80 | — |
-| 製品 | Microsoft Azure | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2026-73570 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Zimbra | 言及あり | 0.80 | — |
+| 製品 | Zimbra Collaboration | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-69836](https://nvd.nist.gov/vuln/detail/CVE-2026-69836) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execut](https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-73570](https://nvd.nist.gov/vuln/detail/CVE-2026-73570) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution](https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -87,52 +94,108 @@ ID基盤は認証・権限管理の中核であり、影響範囲が広くなり
 
 ---
 
-<a id="topic-28709"></a>
+<a id="topic-28805"></a>
 
-### 2. YouTubeの有料動画広告がマルウェア配布に悪用されていた事例をセキュリティ企業が報告
+### 2. CISA orders feds to patch actively exploited TrueConf Server flaws
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
 | <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-YouTube上の有料動画広告が、株式チャートサービス「TradingView」の無料利用をうたってユーザーを偽アプリへ誘導し、マルウェア配布に悪用されていた事例がセキュリティ企業により報告されました。
-報告では、確認された感染端末はMacでしたが、同種の偽広告を使ったWindows向けマルウェア配布も以前から確認されているとされています。
-正規サービスを装う広告は見分けにくく、利用者が信頼しやすい導線を悪用できる点が問題です。
-広告配信プラットフォーム経由の誘導は被害範囲が広がりやすく、企業の端末利用にも影響し得ます。
+CISAは、TrueConf Serverに存在する2件の脆弱性について、米連邦機関に対し優先的な修正を求めました。
+これらの問題は実際に悪用されているとされ、自己ホスト型の通信基盤を運用する組織では早急な対応が必要です。
+公的機関が対応を促している点から、単なる理論上の脆弱性ではなく、現実のリスクとして扱う必要があります。
+通信基盤は業務影響が大きいため、影響範囲の確認と修正の優先度判断が重要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
+- 実悪用・ゼロデイ文脈。
 
 ##### 実務影響
-- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+- 悪用情報あり。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 広告経由のダウンロードや外部アプリ導入を前提にした案内は、配布元の正当性を個別に確認する。
-- MacとWindowsの双方で偽アプリ配布が起こり得るため、端末種別を問わず警戒する。
-- 広告・Web経由の初回実行を抑えるため、EDRやブラウザ保護、許可リスト運用を点検する。
+- TrueConf Serverを利用中の環境では、対象バージョンや適用状況を確認し、ベンダー案内に沿って速やかに修正する。
+- 外部公開されている管理画面や関連サービスがある場合は、アクセス制御や到達性を見直し、不要な露出を減らす。
+- 修正までの間は、認証失敗や不審な管理操作などのログを重点的に監視し、影響の有無を確認する。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [YouTubeの有料動画広告がマルウェア配布に悪用されていた事例をセキュリティ企業が報告](https://gigazine.net/news/20260821-youtube-malware/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA orders feds to patch actively exploited TrueConf Server flaws](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-trueconf-server-flaws/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-28773"></a>
+
+### 3. In Other News: Zombie Card Attack, T-Mobile Cut Cable to Stop Hackers, GitHub Denies AI Caused Bug
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>A⁠I</nobr> / <nobr>D⁠D⁠o⁠S</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>ボ⁠ッ⁠ト⁠ネ⁠ッ⁠ト</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+SecurityWeekが、複数の注目トピックをまとめた「In Other News」の一部として、T-Mobileの対応やGitHubのAI起因とされる不具合否定などを取り上げました。
+材料からは個別事案の詳細や影響範囲までは断定できませんが、AIとセキュリティを巡る話題の一つとして注目されています。
+AI関連の不具合や説明責任をめぐる話題は、開発・運用の現場で判断を誤ると影響が広がりやすいためです。
+加えて、通信事業者や主要プラットフォームの対応は、同種事案への備えや社内説明の参考になります。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AI起因と断定されているか、未確認かを切り分けて扱う。
+- 障害・不具合時の社内外説明を、事実ベースで更新できる体制を確認する。
+- 主要サービスや通信経路の変更・遮断が必要になるケースを想定し、代替手順を見直す。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [In Other News: Zombie Card Attack, T-Mobile Cut Cable to Stop Hackers, GitHub De](https://www.securityweek.com/in-other-news-zombie-card-attack-t-mobile-cut-cable-to-stop-hackers-github-denies-ai-caused-bug/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -143,11 +206,145 @@ YouTube上の有料動画広告が、株式チャートサービス「TradingVie
 
 ---
 
+<a id="topic-28811"></a>
+
+### 4. Attackers impersonate popular AI brands to spread malware
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Sophosの分析によると、Perplexity、Claude、ChatGPT、Copilotなどの人気AIブランドを装って、情報窃取型マルウェアやバックドア、悪意あるブラウザ拡張機能などを広める動きが確認されています。
+AI関連として分類された事案の中から、実際に悪意ある活動と確認されたケースがあったとされています。
+AIサービスの知名度を悪用したなりすましは、利用者の警戒を下げやすく、フィッシングやマルウェア配布の入口になり得ます。
+AIツールの導入や案内を装う偽サイト・偽配布物への注意が必要です。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AIブランド名を含む配布物や拡張機能は、提供元の真正性を厳密に確認する。
+- 利用者に対し、検索広告・SNS・メール経由の“公式風”案内を安易に開かないよう周知する。
+- 端末保護では、ブラウザ拡張機能の許可管理とEDR/AVでの不審な挙動監視を強化する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Sophos X-Ops | 言及あり | 0.80 | — |
+| ベンダー | Sophos | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Attackers impersonate popular AI brands to spread malware](https://www.helpnetsecurity.com/2026/08/21/ai-brand-impersonation-malware-malware-research/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
 <a id="github-only-topics"></a>
 
 ## 📌 GitHubのみ掲載の注目トピック
 
-今回はGitHubのみ掲載の注目トピックはありません。
+<a id="topic-28716"></a>
+
+### 1. Critical Microsoft Entra ID vulnerability exploited in the wild (CVE-2026-69836)
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | GitHub |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>ク⁠ラ⁠ウ⁠ド</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> |
+| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
+| <nobr>温⁠度⁠感</nobr> | 42.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
+| <nobr>確⁠度</nobr> | 55.0 |
+
+#### 概要
+
+Microsoft Entra IDにおける重大な脆弱性CVE-2026-69836が報告され、初期情報では実環境での悪用が示唆されました。
+もっとも、その後に一部報道ではMicrosoftが「悪用なし」に修正したとされており、現時点では悪用状況について情報が食い違っています。
+Entra IDはMicrosoft 365やAzureなどの認証・アクセス制御の中核であり、影響範囲が広い点が注目されています。
+CVSS 10.0のRCE脆弱性として扱われているため、誤検知や情報更新も含めて継続監視が必要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 2 sources。
+- 実悪用・ゼロデイ文脈。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- 悪用情報あり。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Microsoftの公式アドバイザリと関連通知を確認し、悪用有無の更新を追う。
+- Entra ID関連の認証・アクセスログで不審な挙動がないか、通常より優先度を上げて確認する。
+- Microsoft 365やAzureを含む依存サービスへの影響を整理し、インシデント対応の連絡系統を明確にしておく。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-69836 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+| 製品 | Microsoft Entra ID | 言及あり | 0.80 | — |
+| 製品 | Active Directory | 言及あり | 0.80 | — |
+| 製品 | Microsoft Azure | 言及あり | 0.80 | — |
+| 製品 | Microsoft 365 | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-69836](https://nvd.nist.gov/vuln/detail/CVE-2026-69836) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Critical Microsoft Entra ID vulnerability exploited in the wild (CVE-2026-69836)](https://www.helpnetsecurity.com/2026/08/21/microsoft-entra-id-vulnerability-cve-2026-69836/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Patches Severe Entra ID Flaw (CVSS 10.0) Allowing Remote Code Executio](https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft confirms maximum severity flaw in Entra ID targeted for exploitation](https://www.cybersecuritydive.com/news/microsoft-maximum-severity-flaw-entra-id-exploitation/828501/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 高。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
 
 <a id="low-record-topics"></a>
 
@@ -158,27 +355,57 @@ YouTube上の有料動画広告が、株式チャートサービス「TradingVie
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ランサムウェアによる平均業務停止期間が36日に長期化--「セキュリティ成熟度と被害の実態調査」](https://japan.zdnet.com/article/35251804/) | 29.0 | 30.0 | 42.0 |
-| [CISA、悪用中のTrueConf脆弱性に対し直ちに修正適用を呼びかけ](https://www.securityweek.com/cisa-urges-immediate-patching-of-exploited-trueconf-vulnerabilities/) | 28.0 | 20.0 | 42.0 |
-| [今週の新しい情報セキュリティ製品：2026年8月21日](https://www.helpnetsecurity.com/2026/08/21/new-infosec-products-of-the-week-august-21-2026/) | 28.0 | 20.0 | 42.0 |
-| [AIエージェント「Grok Build」がスマホアプリやウェブ版Grokでも利用可能に、アプリを作って固有URLで公開する機能もあり](https://gigazine.net/news/20260821-grok-build-web-mobile/) | 27.0 | 20.0 | 42.0 |
-| [Claudeの使い方を学べる公式チュートリアル「Claude Academy」が登場、単純なチャットからエージェントまで網羅](https://gigazine.net/news/20260821-anthropic-claude-academy/) | 27.0 | 20.0 | 42.0 |
-| [ChatGPTやGeminiの回答から詐欺サイトへ、「AIを信じすぎる」リスクに注意](https://news.mynavi.jp/techplus/article/20260821-4847784/) | 26.0 | 20.0 | 42.0 |
-| [コードが書けない筆者が愛車用にアプリを2本自作 「AI製アプリで起業」の夢膨らむも、見えた有料化の壁](https://www.itmedia.co.jp/news/article/2608/19/2000000598/) | 26.0 | 20.0 | 42.0 |
-| [GitLab 19.3が企業のエージェント開発を安全に拡張可能にする](https://www.helpnetsecurity.com/2026/08/21/gitlab-19-3-updates/) | 25.0 | 20.0 | 42.0 |
-| [ポケモンセンター関連の物流業者がハッキングされイギリスとドイツの顧客情報が流出](https://gigazine.net/news/20260821-pokemon-center-data-breach/) | 22.0 | 20.0 | 42.0 |
-| [「PostgreSQL」が脆弱性28件や多数バグを修正](https://www.security-next.com/189206) | 22.0 | 20.0 | 42.0 |
-| [MFA導入で見落とされた対象は誰か？さらにPowerShell・Graph・Entraスクリプト活用も](https://isc.sans.edu/diary/rss/33272) | 22.0 | 20.0 | 42.0 |
-| [Mozilla、ブラウザ「Firefox 154」を公開 - 脆弱性58件に対応](https://www.security-next.com/189191) | 22.0 | 20.0 | 42.0 |
-| [クラウド最大の脅威は「設定ミス」──最新調査と実際の漏えい事例から学ぶ対策](https://ascii.jp/elem/000/004/422/4422703/?rss=) | 21.0 | 20.0 | 42.0 |
-| [2.5次元アイドル「いれいす」事務所への不正アクセス、最大17万人に影響 “推し”情報や購買履歴も漏えいか](https://www.itmedia.co.jp/news/article/2608/21/2000000677/) | 21.0 | 20.0 | 42.0 |
-| [特殊詐欺被害は右肩上がり、日本が詐欺の先進国に--トレンドマイクロ調査](https://japan.zdnet.com/article/35251800/) | 21.0 | 20.0 | 42.0 |
-| [エプソンのプリンタ・スキャナー多数に脆弱性、対象機種を確認し更新を](https://news.mynavi.jp/techplus/article/20260821-4846753/) | 21.0 | 20.0 | 42.0 |
-| [Ciscoのバグ重要度警告はオリンピックの体操採点のように「10、10、9.9、9.6、7.5」だった](https://www.theregister.com/security/2026/08/21/cisco-bug-severity-warning-reads-like-olympic-gymnastics-scores-10-10-99-96-and-75/5290838) | 20.0 | 28.0 | 50.0 |
-| [25ドルのテンプレートで詐欺師が数百の架空銀行ドメインを構築](https://www.helpnetsecurity.com/2026/08/21/phantom-bank-websites-fraud-research/) | 20.0 | 20.0 | 42.0 |
-| [UNIVERGE IX-R/IX-Vシリーズルータにおける重要な機能に対する認証の欠如の脆弱性](https://jvn.jp/jp/JVN81414813/) | 20.0 | 20.0 | 42.0 |
-| [企業の約半数はPQC移行の責任者が不在](https://www.helpnetsecurity.com/2026/08/21/axiad-pqc-migration-readiness-gaps-report/) | 20.0 | 20.0 | 42.0 |
-| [スマートフォンアプリ「日本科学未来館アシストアプリ」におけるクロスサイトスクリプティングの脆弱性](https://jvn.jp/jp/JVN09266484/) | 20.0 | 20.0 | 42.0 |
+| [人気のRustクレートを汚染し開発者の認証情報を窃取する攻撃者](https://www.theregister.com/security/2026/08/21/hackers-poison-popular-rust-crates-to-steal-developers-credentials/5291075) | 28.0 | 45.0 | 42.0 |
+| [カナダのSickKids病院、再びサイバー攻撃を受け職員データが窃取される](https://therecord.media/canada-hospital-for-sick-children-attacked-again-employee-data) | 28.0 | 30.0 | 42.0 |
+| [AmnesiaStealerがmacOSに対話型ブラウザセッションハイジャックを導入](https://blog.polyswarm.io/amnesiastealer-introduces-interactive-browser-session-hijacking-to-macos) | 28.0 | 20.0 | 42.0 |
+| [Microsoft Teamsを悪用したフィッシングキャンペーンで新たなSynkLoaderマルウェアが配布される](https://www.bleepingcomputer.com/news/security/new-synkloader-malware-pushed-in-microsoft-teams-phishing-campaign/) | 28.0 | 20.0 | 42.0 |
+| [Androidの車載マルウェアが内蔵アップデータを悪用してAd FraudとProxy Botnetを拡散](https://thehackernews.com/2026/08/android-car-malware-spreads-through.html) | 28.0 | 20.0 | 42.0 |
+| [Agent Teslaの新たなマルウェア亜種、回避能力を強化](https://www.infosecurity-magazine.com/news/agent-tesla-malware-evasion/) | 28.0 | 20.0 | 42.0 |
+| [HackersがFTPサーバーのバナーを悪用して新たなWindowsマルウェアを配布](https://www.bleepingcomputer.com/news/security/hackers-abuse-ftp-server-banners-to-deliver-new-windows-malware/) | 28.0 | 20.0 | 42.0 |
+| [車内に潜む見えない乗客](https://securelist.com/android-head-unit-malware/121106/) | 28.0 | 20.0 | 42.0 |
+| [使い込むほど成長するAIエージェント「Hermes Agent」で実際に行った作業をスキル化して再利用してみた](https://gigazine.net/news/20260821-hermes-agent-skill/) | 27.0 | 20.0 | 42.0 |
+| [AIの回答をコピペしないでくれと頼む運動「Don’t paste the AI, please.(AIが書いたものをコピペしないでください)」](https://gigazine.net/news/20260821-dont-paste-the-ai-please/) | 27.0 | 20.0 | 42.0 |
+| [Anthropic、8月末にもIPO申請書類を公開か 調達額はSpaceXの過去最大に匹敵と米報道](https://www.itmedia.co.jp/news/article/2608/21/2000000688/) | 26.0 | 20.0 | 42.0 |
+| [Cisco Crossworkのセキュリティ強化リリース（2026年8月）](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-crosswork-UzDTU9Vh) | 25.0 | 46.0 | 51.0 |
+| [OWASPが新たなセキュリティ青写真でAIスキルの主要リスクを指摘](https://www.darkreading.com/application-security/owasp-flags-top-ai-skill-risks-security-blueprint) | 25.0 | 20.0 | 42.0 |
+| [AI時代における新たな脅威インテリジェンス戦略](https://securityboulevard.com/2026/08/rethinking-threat-intelligence-new-tactics-for-the-age-of-ai/) | 25.0 | 20.0 | 42.0 |
+| [GrokとGeminiで暗号化されたプロンプトがAI安全ガードレールを回避する問題](https://www.securityweek.com/encrypted-prompts-bypass-ai-safety-guardrails-in-grok-and-gemini/) | 25.0 | 20.0 | 42.0 |
+| [OpenAIが本来あるべきだった制御機能を追加](https://www.darkreading.com/application-security/openai-adds-controls-already) | 25.0 | 20.0 | 42.0 |
+| [WazuhとAIによるSOCワークフローの強化](https://thehackernews.com/2026/08/wazuh-and-ai-for-enhanced-soc-workflows.html) | 25.0 | 20.0 | 42.0 |
+| [Isolated-vmの重大な脆弱性によりホスト上でRCEが発生](https://www.securityweek.com/critical-isolated-vm-vulnerability-leads-to-rce-on-host/) | 24.0 | 38.0 | 42.0 |
+| [Microsoftが悪用されたEntra IDの脆弱性を修正](https://www.securityweek.com/microsoft-rolls-out-22-fresh-security-patches/) | 22.0 | 32.0 | 42.0 |
+| [企業サイト侵害か、問い合わせ情報流出の可能性 - セントラルコンサルタント](https://www.security-next.com/188363) | 22.0 | 20.0 | 42.0 |
+| [アクセス制限に不備、個人情報流出の可能性 - エリッツHD子会社](https://www.security-next.com/189196) | 22.0 | 20.0 | 42.0 |
+| [委託先の患者支援システムで個人情報流出 - 旭化成セラピューティクス](https://www.security-next.com/187860) | 22.0 | 20.0 | 42.0 |
+| [広報紙配布の宛名シール、別人宛名に重ね貼り - 大阪市](https://www.security-next.com/189129) | 22.0 | 20.0 | 42.0 |
+| [調査票発送時の宛名に本来不要な国籍を記載 - 杉並区](https://www.security-next.com/188970) | 22.0 | 20.0 | 42.0 |
+| [Homeland security cybercopsがTrueConf（Russia's Zoom）利用者にパッチ適用を呼びかけ](https://www.theregister.com/patches/2026/08/21/homeland-security-cybercops-say-patch-trueconf-russias-zoom-if-youre-using-it/5291156) | 20.0 | 20.0 | 42.0 |
+| [元NSA長官ポール・ナカソネ氏、国家安全保障アドバイザリー会社を設立](https://www.securityweek.com/former-nsa-director-paul-nakasone-launches-national-security-advisory-firm/) | 20.0 | 20.0 | 42.0 |
+| [U.S. Bank、第四者インシデントに関連する侵害主張を否定](https://therecord.media/us-bank-says-breach-claims-related-to-fourth-party-incident) | 20.0 | 20.0 | 42.0 |
+| [流出した数百件のAWSキーにより企業アカウントを完全制御可能に](https://www.bleepingcomputer.com/news/security/hundreds-of-leaked-aws-keys-give-full-control-over-corporate-accounts/) | 20.0 | 20.0 | 42.0 |
+| [Microsoft Defenderのドライバが起動時にセキュリティソフトを削除可能に悪用される](https://thehackernews.com/2026/08/microsoft-defenders-own-driver-can-be.html) | 20.0 | 20.0 | 42.0 |
+| [今週の主な10件の情報漏えい事件](https://securityboulevard.com/2026/08/top-10-breaches-of-the-week-7/) | 20.0 | 20.0 | 42.0 |
+| [米国民への政府によるハッキングについて監視機関による調査を議員が要請](https://cyberscoop.com/watchdog-review-federal-government-hacking-americans/) | 20.0 | 20.0 | 42.0 |
+| [Palo AltoとNTT Dataが拡大するセキュリティ提携で10億ドル目標を設定](https://securityboulevard.com/2026/08/palo-alto-ntt-data-set-1b-goal-for-expanded-security-partnership/) | 20.0 | 20.0 | 42.0 |
+| [防衛請負業者のCMMCへの自信は低迷、自己評価は改善しているものの](https://www.cybersecuritydive.com/news/defense-contractors-cmmc-cybersecurity-confidence-gap/828494/) | 20.0 | 20.0 | 42.0 |
+| [Passkeyを悪用する新たなフィッシングツールキット、パスワードリセット後もアクセスを維持](https://www.securityweek.com/new-phishing-toolkit-uses-passkeys-to-maintain-access-after-password-resets/) | 20.0 | 20.0 | 42.0 |
+| [Zombie Card: 期限切れのVisaクレジットカードが購入に利用される](https://www.malwarebytes.com/blog/news/2026/08/zombie-card-an-expired-visa-credit-card-can-be-used-for-purchases) | 20.0 | 20.0 | 42.0 |
+| [オンラインプライバシーは可能か？ デジタルアイデンティティが役立つ方法](https://www.bleepingcomputer.com/news/security/is-online-privacy-possible-how-digital-identities-can-help/) | 20.0 | 20.0 | 42.0 |
+| [Cyberプロに市庁舎防衛への協力を呼びかける](https://www.darkreading.com/cyber-risk/cyber-pros-help-city-hall) | 20.0 | 20.0 | 42.0 |
+| [親ウクライナ派ハッカーが主張したサイバー攻撃をロシアのネットワーク監視企業が確認](https://therecord.media/russian-network-monitoring-firm-confirms-cyberattack-claimed-by-pro-ukraine-group) | 20.0 | 20.0 | 42.0 |
+| [Copilotが「Meta-Hacking」で自らの脆弱性を露呈：Varonis](https://securityboulevard.com/2026/08/copilot-revealed-its-own-vulnerability-through-meta-hacking-varonis/) | 20.0 | 20.0 | 42.0 |
+| [PCI DSS v4.0の期限迫る：5ステップのギャップ評価を今すぐ実施](https://securityboulevard.com/2026/08/pci-dss-v4-0-deadline-5-step-gap-assessments-now/) | 20.0 | 20.0 | 42.0 |
+| [Data Privacy Regulations: Continuum GRCによる統合コンプライアンス](https://securityboulevard.com/2026/08/data-privacy-regulations-unified-compliance-by-continuum-grc/) | 20.0 | 20.0 | 42.0 |
+| [北朝鮮系ハッカーと関連付けられたRustサプライチェーン攻撃](https://www.infosecurity-magazine.com/news/north-korean-rust-supply-chain/) | 20.0 | 20.0 | 42.0 |
+| [CareCloudのデータ侵害で医療記録、SSN、銀行口座情報が流出](https://securityboulevard.com/2026/08/medical-records-ssns-and-bank-details-exposed-in-carecloud-data-breach/) | 20.0 | 20.0 | 42.0 |
+| [HealthTechスタートアップにおけるSOC 2とHIPAAのペネトレーションテスト要件比較](https://securityboulevard.com/2026/08/soc-2-vs-hipaa-pentest-requirements-for-healthtech-startups/) | 20.0 | 20.0 | 42.0 |
+| [Microsoftが警告するEntra IDの重大な脆弱性、攻撃で悪用を確認](https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/) | 20.0 | 20.0 | 42.0 |
+| [SickKidsのデータ侵害で従業員と採用応募者の情報が流出](https://www.bleepingcomputer.com/news/security/sickkids-data-breach-exposes-employee-and-job-applicant-info/) | 20.0 | 20.0 | 42.0 |
+| [Cisco、CrossworkとSecure Workloadの9件の脆弱性を修正、うち5件はCVSS 10.0](https://thehackernews.com/2026/08/cisco-patches-nine-crosswork-and-secure.html) | 20.0 | 20.0 | 42.0 |
+| [North Korean Hackersに関連するRustのサプライチェーン攻撃](https://www.securityweek.com/rust-supply-chain-attack-linked-to-north-korean-hackers/) | 20.0 | 20.0 | 42.0 |
+| [DEF CONイベント後にサイバー犯罪者の標的となったとセキュリティ研究者らが警告](https://www.itpro.com/security/be-careful-who-you-talk-to-at-conferences-security-researchers-claim-they-were-targeted-by-cyber-criminals-after-def-con-event) | 20.0 | 20.0 | 42.0 |
+| [契約業者のCMMCへの自信は高まる一方、実証能力は遅れがちに](https://www.securityweek.com/contractors-cmmc-confidence-rises-as-ability-to-prove-it-falls-behind/) | 20.0 | 20.0 | 42.0 |
+| [楽天ブックス関係会社のPCに不正アクセス、ユーザー3万3333人分の個人情報などが漏えいの可能性](https://internet.watch.impress.co.jp/docs/news/2134682.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
