@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-08-23 17:00 JST
+# 📡 サイレーダー 2026-08-24 05:00 JST
 
-このレポートは、2026-08-23 11:00 JST〜2026-08-23 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-23 17:00 JST〜2026-08-24 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 24
+- 観測トピック数: 30
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 6
 
 今回はサマリ掲載トピックはありません。
 
@@ -29,7 +29,17 @@
 
 ## ❄️ 低温だが記録しておくトピック
 
-今回は低温記録トピックはありません。
+音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
+重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
+
+| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
+|---|---:|---:|---:|
+| [AIエージェントが実際にどのように動いてトークンを使っているかが後から見てわかるようにできる「Langfuse」、オープンソースでセルフホスト可能](https://gigazine.net/news/20260823-langfuse/) | 27.0 | 20.0 | 42.0 |
+| [オープンモデルの「Gemma 4 31B」がタスクによっては「Claude Sonnet 5」と同じ品質を40分の1のコストで実現可能](https://gigazine.net/news/20260823-gemma-4-benchmark/) | 27.0 | 20.0 | 42.0 |
+| [Enterprise向けPasskey移行の意思決定フレームワーク：デバイス固定型と同期型Passkeyが実際に重要になる場面](https://securityboulevard.com/2026/08/the-enterprise-passkey-migration-decision-framework-when-device-bound-vs-synced-passkeys-actually-matter/) | 20.0 | 20.0 | 42.0 |
+| [BSidesCharm 2026 – セキュリティツールが多すぎる？ ASHが参戦しました](https://securityboulevard.com/2026/08/bsidescharm-2026-too-many-security-tools-ash-has-entered-the-chat/) | 20.0 | 20.0 | 42.0 |
+| [英国中小企業における検知カバレッジと盲点の理解](https://securityboulevard.com/2026/08/understanding-detection-coverage-and-blind-spots-for-uk-smes/) | 20.0 | 20.0 | 42.0 |
+| [高リスク企業向けSaaSのアクセス制御：Board PortalとData Roomに学ぶこと](https://securityboulevard.com/2026/08/access-control-for-high-stakes-enterprise-saas-what-board-portals-and-data-rooms-get-right/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
