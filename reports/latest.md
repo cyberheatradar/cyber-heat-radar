@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-08-23 05:00 JST
+# 📡 サイレーダー 2026-08-23 11:00 JST
 
-このレポートは、2026-08-22 17:00 JST〜2026-08-23 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-23 05:00 JST〜2026-08-23 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 35
+- 観測トピック数: 25
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 11
+- [低温だが記録しておくトピック](#low-record-topics): 1
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,17 +34,7 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Android車載ヘッドユニットをプロキシボットネットマルウェアに感染させるハッカー](https://www.bleepingcomputer.com/news/security/hackers-infect-android-car-head-units-with-proxy-botnet-malware/) | 28.0 | 20.0 | 42.0 |
-| [Banking TrojanのManic、Grandoreiro、ToxicPanda 2.0に注目](https://www.securityweek.com/banking-trojans-manic-grandoreiro-toxicpanda-2-0-in-the-spotlight/) | 28.0 | 20.0 | 42.0 |
-| [無料でAIエージェントに最適化されたオープンソースのメモ帳アプリ「Hubble.md」、MarkdownとHTMLをベースにして保存・編集・操作が可能](https://gigazine.net/news/20260822-hubble-md/) | 27.0 | 20.0 | 42.0 |
-| [GoogleのAIエージェント「Antigravity」が別デバイスからのリモートコントロールに対応](https://gigazine.net/news/20260822-antigravity-remote-control/) | 27.0 | 20.0 | 42.0 |
-| [AIを自社システムへの攻撃に活用しなければ、敵対者に先を越される](https://www.theregister.com/security/2026/08/22/if-youre-not-using-ai-to-attack-your-own-systems-your-adversaries-will/5291346) | 25.0 | 20.0 | 42.0 |
-| [英国の中小企業向けAIサプライヤー保証とガバナンス要件](https://securityboulevard.com/2026/08/ai-supplier-assurance-and-governance-expectations-for-uk-smes/) | 25.0 | 20.0 | 42.0 |
-| [郵便公社、SCOTUS判決前に郵便投票規則の最終化へ](https://cyberscoop.com/postal-service-finalizes-mail-in-ballot-rules-before-scotus-ruling/) | 20.0 | 20.0 | 42.0 |
-| [BSidesCharm 2026 キーノート](https://securityboulevard.com/2026/08/bsidescharm-2026-keynote/) | 20.0 | 20.0 | 42.0 |
-| [BSidesCharm 2026 開会式](https://securityboulevard.com/2026/08/bsidescharm-2026-opening-ceremonies/) | 20.0 | 20.0 | 42.0 |
-| [Named Pipesへの攻撃：Windowsのプロセス間通信を保護する方法](https://www.bleepingcomputer.com/news/security/named-pipes-under-attack-securing-windows-interprocess-communication/) | 20.0 | 20.0 | 42.0 |
-| [金融機関向けの6つのNISTソフトウェア基準](https://securityboulevard.com/2026/08/6-nist-software-criteria-for-financial-institutions/) | 20.0 | 20.0 | 42.0 |
+| [TikTok、児童プライバシー訴訟で4億ドル支払いへ 米司法省と和解](https://www.itmedia.co.jp/news/article/2608/23/2000000701/) | 21.0 | 20.0 | 42.0 |
 
 ---
 
