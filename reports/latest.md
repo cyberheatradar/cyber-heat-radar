@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-08-24 05:00 JST
+# 📡 サイレーダー 2026-08-24 11:00 JST
 
-このレポートは、2026-08-23 17:00 JST〜2026-08-24 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-24 05:00 JST〜2026-08-24 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 30
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 47
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 6
+- [低温だが記録しておくトピック](#low-record-topics): 22
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [米当局、「Zimbra」脆弱性の悪用を警告 - 2026年5件目のKEV登録](#topic-28935) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,67 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-28935"></a>
+
+### 1. 米当局、「Zimbra」脆弱性の悪用を警告 - 2026年5件目のKEV登録
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 39.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+米当局は、組織向けコラボレーションツール「Zimbra Collaboration Suite（ZCS）」の脆弱性について、実際に悪用されているとして注意喚起を行いました。
+関連する脆弱性は、米政府の既知悪用脆弱性リスト（KEV）にも登録されています。実際の悪用が確認されているため、放置すると侵害リスクが高まる可能性があります。
+Zimbraを業務で利用している組織は、優先的な点検と対応が求められます。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Zimbra ZCSの利用有無と対象バージョンを確認し、ベンダーや公的機関の案内に沿って速やかに修正・更新を検討する。
+- 外部公開されている関連システムについて、異常な認証や不審なアクセスの有無を確認する。
+- KEV登録の対象であることを踏まえ、一般的な脆弱性対応よりも優先度を上げてトリアージする。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-73570 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Zimbra | 言及あり | 0.80 | — |
+| 製品 | Zimbra Collaboration | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [米当局、「Zimbra」脆弱性の悪用を警告 - 2026年5件目のKEV登録](https://www.security-next.com/189268) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,12 +96,28 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [AIエージェントが実際にどのように動いてトークンを使っているかが後から見てわかるようにできる「Langfuse」、オープンソースでセルフホスト可能](https://gigazine.net/news/20260823-langfuse/) | 27.0 | 20.0 | 42.0 |
-| [オープンモデルの「Gemma 4 31B」がタスクによっては「Claude Sonnet 5」と同じ品質を40分の1のコストで実現可能](https://gigazine.net/news/20260823-gemma-4-benchmark/) | 27.0 | 20.0 | 42.0 |
-| [Enterprise向けPasskey移行の意思決定フレームワーク：デバイス固定型と同期型Passkeyが実際に重要になる場面](https://securityboulevard.com/2026/08/the-enterprise-passkey-migration-decision-framework-when-device-bound-vs-synced-passkeys-actually-matter/) | 20.0 | 20.0 | 42.0 |
-| [BSidesCharm 2026 – セキュリティツールが多すぎる？ ASHが参戦しました](https://securityboulevard.com/2026/08/bsidescharm-2026-too-many-security-tools-ash-has-entered-the-chat/) | 20.0 | 20.0 | 42.0 |
-| [英国中小企業における検知カバレッジと盲点の理解](https://securityboulevard.com/2026/08/understanding-detection-coverage-and-blind-spots-for-uk-smes/) | 20.0 | 20.0 | 42.0 |
-| [高リスク企業向けSaaSのアクセス制御：Board PortalとData Roomに学ぶこと](https://securityboulevard.com/2026/08/access-control-for-high-stakes-enterprise-saas-what-board-portals-and-data-rooms-get-right/) | 20.0 | 20.0 | 42.0 |
+| [青山財産ネットワークスの日本資産総研へランサムウェア攻撃、1 ％未満のデータ量が外部に送信された可能性](https://scan.netsecurity.ne.jp/article/2026/08/24/55996.html) | 29.0 | 30.0 | 42.0 |
+| [【2025年のINTERNET Watch】アサヒグループHDやアスクルなど大企業へのランサムウェア攻撃が相次ぐ。IoT製品のセキュリティラベリング制度「JC-STAR」運用開始](https://internet.watch.impress.co.jp/docs/special/30th/2133822.html) | 28.0 | 30.0 | 42.0 |
+| [Copilot Cowork の内側を覗いてみた ハーネスの設計はこうなっている](https://ascii.jp/elem/000/004/428/4428523/?rss=) | 26.0 | 20.0 | 42.0 |
+| [首都高が「AIの高利用者」を1年で10倍に 非IT人材に刺さったGemini Notebookと“泥臭い”浸透策](https://ascii.jp/elem/000/004/427/4427588/?rss=) | 26.0 | 20.0 | 42.0 |
+| [「AIが答えたURL」も信用できない 公式サイトや警察まで偽装する新たな詐欺](https://atmarkit.itmedia.co.jp/ait/articles/2608/24/news035.html) | 26.0 | 20.0 | 42.0 |
+| [スマートフォンアプリ「日本科学未来館アシストアプリ」に XSS の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/24/55994.html) | 22.0 | 26.0 | 42.0 |
+| [IBMの「AIX」「PowerVM VIOS」に多数脆弱性 - 修正版を提供](https://www.security-next.com/189155) | 22.0 | 20.0 | 42.0 |
+| [先週注目された記事（2026年8月16日〜2026年8月22日）](https://www.security-next.com/189265) | 22.0 | 20.0 | 42.0 |
+| [証券 カード会社の最新被害事例と対策を解説 ～ TwoFive、Webセミナーを 8 / 25・9/15 開催](https://scan.netsecurity.ne.jp/article/2026/08/24/56005.html) | 21.0 | 20.0 | 42.0 |
+| [オンデマンド学習サイト「KYO育tv.」で個人情報が閲覧可能に](https://scan.netsecurity.ne.jp/article/2026/08/24/56004.html) | 21.0 | 20.0 | 42.0 |
+| [「いじめ問題調査委員会による調査報告書」の個人情報処理に不備、和泊町が削除・再掲載](https://scan.netsecurity.ne.jp/article/2026/08/24/56003.html) | 21.0 | 20.0 | 42.0 |
+| [共同通信社の職員アカウントが第三者に不正利用された可能性、外部から情報提供があり発覚](https://scan.netsecurity.ne.jp/article/2026/08/24/56002.html) | 21.0 | 20.0 | 42.0 |
+| [加賀ソルネット運営の「アカデミコナビ」に不正アクセス、合計165,587名分の個人情報漏えいを確認](https://scan.netsecurity.ne.jp/article/2026/08/24/56001.html) | 21.0 | 20.0 | 42.0 |
+| [KDDI の ISP 事業者向けメールシステムに不正アクセス、個人情報保護委員会が行政指導](https://scan.netsecurity.ne.jp/article/2026/08/24/56000.html) | 21.0 | 20.0 | 42.0 |
+| [学研メディカルサポート管理の Web サイトに WordPress の脆弱性を狙った不正アクセス](https://scan.netsecurity.ne.jp/article/2026/08/24/55999.html) | 21.0 | 20.0 | 42.0 |
+| [手順書に管理者権限を有するアカウント情報を誤記載 ～ 東芝テックの「ShopCraft」で他のユーザーの情報が閲覧可能に](https://scan.netsecurity.ne.jp/article/2026/08/24/55998.html) | 21.0 | 20.0 | 42.0 |
+| [ソディックのサーバへの不正アクセス最終報 ～ ネットワーク機器の脆弱性を悪用、情報流出の痕跡は確認されず](https://scan.netsecurity.ne.jp/article/2026/08/24/55997.html) | 21.0 | 20.0 | 42.0 |
+| [ヤマハ製 VOCALOID6 Editor に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/24/55995.html) | 21.0 | 20.0 | 42.0 |
+| [Zabbix 7.4 にセッションキーのハードコーディング](https://scan.netsecurity.ne.jp/article/2026/08/24/55993.html) | 21.0 | 20.0 | 42.0 |
+| [2026年度始動の「SCS評価制度」--相次ぐ大規模サイバー攻撃を受け](https://japan.zdnet.com/article/35251778/) | 21.0 | 20.0 | 42.0 |
+| [アドバンストサイバーハイジーン--最後の10％を埋めスレットハンティングで能動的防御に踏み出す](https://japan.zdnet.com/article/35251722/) | 21.0 | 20.0 | 42.0 |
+| [AIと人間の戦争は始まったのか？ 最先端モデルが見せた“悪意なき攻撃”の正体](https://www.sbbit.jp/article/fj/186463?ref=rss) | 20.0 | 20.0 | 42.0 |
 
 ---
 
