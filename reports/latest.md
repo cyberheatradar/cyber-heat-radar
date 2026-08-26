@@ -1,17 +1,17 @@
-# 📡 サイレーダー 2026-08-26 11:00 JST
+# 📡 サイレーダー 2026-08-26 17:00 JST
 
-このレポートは、2026-08-26 05:00 JST〜2026-08-26 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-26 11:00 JST〜2026-08-26 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 59
-- [音声で扱う想定のトピック](#audio-topics): 1
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 34
+- 観測トピック数: 47
+- [音声で扱う想定のトピック](#audio-topics): 0
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 22
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [「Adobe Campaign Classic」に深刻な脆弱性3件 - 早急に更新を](#topic-29367) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [CISA Warns of Exploited Gitea Vulnerability](#topic-29270) | 55.0 | 64.0 | 59.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
 
 ---
 
@@ -19,73 +19,82 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-29367"></a>
+今回は音声で扱う想定のトピックはありません。
 
-### 1. 「Adobe Campaign Classic」に深刻な脆弱性3件 - 早急に更新を
+<a id="github-only-topics"></a>
+
+## 📌 GitHubのみ掲載の注目トピック
+
+<a id="topic-29270"></a>
+
+### 1. CISA Warns of Exploited Gitea Vulnerability
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
+| <nobr>区⁠分</nobr> | GitHub |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
+| <nobr>温⁠度⁠感</nobr> | 55.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
+| <nobr>確⁠度</nobr> | 59.0 |
 
 #### 概要
 
-Adobe Campaign Classic に、任意のコード実行につながるおそれがある深刻な脆弱性3件が確認されたとされています。
-Adobe は修正版アップデートを提供しており、早急な適用が求められています。
-対象製品を運用している組織では、公開状態の脆弱性が残ると不正アクセスやシステム侵害のリスクが高まります。
-複数件の深刻な不具合が同時に案内されているため、通常の定期更新より優先度を上げて確認すべき話題です。
+CISAは、Giteaに関するCVE-2026-60004をKnown Exploited Vulnerabilities（KEV） Catalog に追加し、実際の悪用が確認されているとして注意を呼びかけました。
+報道では、この脆弱性はコードインジェクションまたはRCEに関係し、Gitea側では2026年7月下旬に修正版が公開されたとされています。
+KEV入りは、単なる脆弱性情報ではなく、実際に攻撃で使われている可能性が高いことを示します。Giteaを利用する組織では、公開資産を含めて優先度を上げて対応する必要があります。
 
 #### 温度感の理由
 
 ##### 温度感
+- 複数ソースで確認: 3 sources。
+- 実悪用・ゼロデイ文脈。
 - 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+- 悪用情報あり。
+- RCEまたは認証バイパス系。
 
 ##### 確度
+- 複数ソース確認。
+- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- Adobe Campaign Classic の利用有無と影響範囲をすぐ確認し、該当環境は提供済みアップデートの適用可否を点検する。
-- 本番・検証・周辺連携を含め、対象バージョンが残っていないか棚卸しする。
-- 外部公開面や管理系アクセスの監視を強め、異常な挙動がないか確認する。
+- Giteaの導入環境で、該当バージョンの使用有無を確認し、更新状況を点検する。
+- インターネット公開しているGiteaインスタンスや関連リポジトリ設定を見直し、不要な権限付与がないか確認する。
+- KEV掲載脆弱性として、影響範囲の棚卸しと対応優先度の引き上げを行う。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| ベンダー | Adobe | 言及あり | 0.80 | — |
-| 製品 | Adobe Campaign Classic | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2026-60004 | 関連CVE | 1.00 | 候補あり（URL 9件以上） |
+| 製品 | Gitea | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [「Adobe Campaign Classic」に深刻な脆弱性3件 - 早急に更新を](https://www.security-next.com/189392) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-60004](https://nvd.nist.gov/vuln/detail/CVE-2026-60004) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Critical Gitea RCE Actively Exploited as Reported Attack Drops Miner-Like Payloa](https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Warns of Exploited Gitea Vulnerability](https://www.securityweek.com/cisa-warns-of-exploited-gitea-vulnerability/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [米当局、「Gitea」のRCE脆弱性に注意喚起 - 悪用確認](https://www.security-next.com/189416) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
+- 技術・開発者系ソース観測: 観測あり。
 
 ---
-
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
-今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -96,40 +105,28 @@ Adobe は修正版アップデートを提供しており、早急な適用が�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [名鉄協商にランサムウェア攻撃、カーシェア「カリテコ」の顧客情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/08/26/56030.html) | 29.0 | 30.0 | 42.0 |
-| [社内システムが使えない ランサム攻撃者がデータ暗号化](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041800004/081800104/) | 29.0 | 30.0 | 42.0 |
-| [Hackersがnpmミラーを悪用してフィッシング誘導ページをホストする問題](https://www.bleepingcomputer.com/news/security/hackers-abuse-npm-mirrors-to-host-phishing-redirect-pages/) | 28.0 | 20.0 | 42.0 |
-| [Perplexity、ローカルAIエージェント「Portable Computer」を発表](https://japan.zdnet.com/article/35251917/) | 26.0 | 20.0 | 42.0 |
-| [Anthropicによる「Claude」への電子透かし導入を巡る議論--その本質とは](https://japan.zdnet.com/article/35251694/) | 26.0 | 20.0 | 42.0 |
-| [AWSのマーケットプレイスで進むAIエージェントの活用--高い需要への対応策](https://japan.zdnet.com/article/35251841/) | 26.0 | 20.0 | 42.0 |
-| [Nucleus Security、エクスポージャー管理ポートフォリオにAgentic AIエンジンを追加](https://securityboulevard.com/2026/08/nucleus-security-adds-agentic-ai-engine-to-exposure-management-portfolio/) | 25.0 | 20.0 | 42.0 |
-| [Hidden PromptsでAIが誤ったメール要約に誘導される問題](https://www.darkreading.com/cyber-risk/hidden-prompts-trick-ai-false-email-summaries) | 25.0 | 20.0 | 42.0 |
-| [AnonyMousKIT PhaaSが音声AIエージェントを使ってiPhoneのパスコードをフィッシングする](https://www.bleepingcomputer.com/news/security/anonymouskit-phaas-uses-voice-ai-agents-to-phish-iphone-passcodes/) | 25.0 | 20.0 | 42.0 |
-| [SonicWallのLinux向けVPNクライアントに複数の脆弱性](https://www.security-next.com/189404) | 22.0 | 20.0 | 42.0 |
-| [Google、「Chrome 152」をリリース - 脆弱性327件を修正](https://www.security-next.com/189409) | 22.0 | 20.0 | 42.0 |
-| [「Veeam ONE」にアップデート - クリティカル脆弱性を解消](https://www.security-next.com/189396) | 22.0 | 20.0 | 42.0 |
-| [データ連携ツール、8つの軸で比較する](https://ascii.jp/elem/000/004/428/4428569/?rss=) | 21.0 | 20.0 | 42.0 |
-| [セコムトラストシステムズ、EDR 導入 運用の「しくじり事例 8 選」を解説する無料セミナーを 9 / 16・17 開催](https://scan.netsecurity.ne.jp/article/2026/08/26/56035.html) | 21.0 | 20.0 | 42.0 |
-| [ECサイト「ビールの縁側」に不正アクセス、一部顧客の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/08/26/56034.html) | 21.0 | 20.0 | 42.0 |
-| [「虫退治ドットコム」に不正アクセス、カード情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/08/26/56033.html) | 21.0 | 20.0 | 42.0 |
-| [ヨネックス 台湾子会社に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/08/26/56032.html) | 21.0 | 20.0 | 42.0 |
-| [シンアイ産業が利用を予定していたWebシステムに不正アクセス、一部の顧客情報が閲覧された可能性を否定できず](https://scan.netsecurity.ne.jp/article/2026/08/26/56031.html) | 21.0 | 20.0 | 42.0 |
-| [「東海大学山中湖セミナーハウス」ウェブサイトに不正アクセス「宿泊予約に関する情報」が漏えいした可能性を否定できず](https://scan.netsecurity.ne.jp/article/2026/08/26/56029.html) | 21.0 | 20.0 | 42.0 |
-| [メディア4u の SMS 送信システムにサイバー攻撃、連携していたブロードリーフの「.cシリーズ」「.NSシリーズ」にも影響](https://scan.netsecurity.ne.jp/article/2026/08/26/56028.html) | 21.0 | 20.0 | 42.0 |
-| [VoiceTra に接続先の制限が不適切な脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/26/56027.html) | 21.0 | 20.0 | 42.0 |
-| [HENNGE One、連結会計システム「DivaSystem LCA Cloud」と SSO 連携](https://scan.netsecurity.ne.jp/article/2026/08/26/56026.html) | 21.0 | 20.0 | 42.0 |
-| [日額20,000～22,300円 ～ 消費者庁が最高情報セキュリティアドバイザー（非常勤一般職国家公務員）1 名募集](https://scan.netsecurity.ne.jp/article/2026/08/26/56025.html) | 21.0 | 20.0 | 42.0 |
-| [SKYSEA Client View および SKYMEC IT Manager に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/26/56024.html) | 21.0 | 20.0 | 42.0 |
-| [Gmail のメールを誤って消しても大丈夫？ Google Workspace での復元条件とは](https://scan.netsecurity.ne.jp/article/2026/08/26/56023.html) | 21.0 | 20.0 | 42.0 |
-| [プルーフポイントがOEMプログラムを開始、自社製品へのセキュリティ統合と差別化を支援](https://scan.netsecurity.ne.jp/article/2026/08/26/56022.html) | 21.0 | 20.0 | 42.0 |
-| [映画「さとこはいつも」公式アカウント騙る詐欺で高額金銭被害発生、マイナンバーカード画像含む個人情報も詐取](https://scan.netsecurity.ne.jp/article/2026/08/26/56021.html) | 21.0 | 20.0 | 42.0 |
-| [警察庁が注意呼びかけ、不正送金手口の44%が「レジデンシャルプロキシ」の悪用 ～ ストリーミング端末などの確認を](https://scan.netsecurity.ne.jp/article/2026/08/26/56020.html) | 21.0 | 20.0 | 42.0 |
-| [P2P分散型ネットワーク技術でGPU不足とサイバー攻撃の課題解決図るシンガポール発スタートアップ](https://japan.zdnet.com/article/35251871/) | 21.0 | 20.0 | 42.0 |
-| [GTA VIのリークがネットを騒がせる中、セキュリティ研究者は同様の事態を見てきた](https://cyberscoop.com/grand-theft-auto-6-data-theft-extortion-leaks/) | 20.0 | 20.0 | 48.0 |
-| [Weekly Report: 複数のSplunk製品に脆弱性](https://www.jpcert.or.jp/wr/2026/wr260826.html) | 20.0 | 20.0 | 42.0 |
-| [LACMAの昨年のデータ侵害で社会保障番号と医療データが流出](https://www.bleepingcomputer.com/news/security/lacma-data-breach-last-year-exposed-social-security-and-medical-data/) | 20.0 | 20.0 | 42.0 |
-| [自由のアーキテクチャ](https://securityboulevard.com/2026/08/the-architecture-of-liberty/) | 20.0 | 20.0 | 42.0 |
-| [国際的なサイバー犯罪摘発で58人を逮捕](https://therecord.media/58-arrested-international-cybercrime-crackdown-interpol) | 20.0 | 20.0 | 42.0 |
+| [Okta、AIエージェント向けシングルサインオン機能の一般提供を開始](https://japan.zdnet.com/article/35251936/) | 26.0 | 20.0 | 42.0 |
+| [AI導入への意欲とセキュリティ対策に大きなギャップ--F5調査](https://japan.zdnet.com/article/35251932/) | 26.0 | 20.0 | 42.0 |
+| [いま本当に使えるSaaS 100選【情シス・セキュリティ編】 エントリー77～80は攻撃遮断くんやCData Connect AI【Tier付け】](https://ascii.jp/elem/000/004/429/4429461/?rss=) | 26.0 | 20.0 | 42.0 |
+| [偽のAppleサポートAI通話が盗難端末の所有者を狙いパスコードと2FAコードを窃取](https://thehackernews.com/2026/08/fake-apple-support-ai-calls-target.html) | 25.0 | 20.0 | 42.0 |
+| [AI脆弱性発見が20の新興リスクで最大の影響を記録](https://www.helpnetsecurity.com/2026/08/26/ai-vulnerability-discovery-emerging-risks/) | 25.0 | 20.0 | 42.0 |
+| [今月注目のサイバーセキュリティオープンソースツール：2026年8月](https://www.helpnetsecurity.com/2026/08/26/hottest-cybersecurity-open-source-tools-august-2026/) | 25.0 | 20.0 | 42.0 |
+| [「Next.<wbr>js」に複数の深刻な脆弱性 - リリース予定を前倒し](https://www.security-next.com/189430) | 22.0 | 20.0 | 42.0 |
+| [いま本当に使えるSaaS 100選【情シス・セキュリティ編】 エントリー73～76はASTERIA Warp CloudやHULFT Square【Tier付け】](https://ascii.jp/elem/000/004/429/4429456/?rss=) | 21.0 | 20.0 | 42.0 |
+| [いま本当に使えるSaaS 100選【情シス・セキュリティ編】 エントリー69～72はZscalerやCato SASE Cloud【Tier付け】](https://ascii.jp/elem/000/004/429/4429454/?rss=) | 21.0 | 20.0 | 42.0 |
+| [いま本当に使えるSaaS 100選【情シス・セキュリティ編】 エントリー65～68はOktaやServiceNow【Tier付け】](https://ascii.jp/elem/000/004/429/4429452/?rss=) | 21.0 | 20.0 | 42.0 |
+| [いま本当に使えるSaaS 100選【情シス・セキュリティ編】 エントリー61～64はSKYSEA Client ViewやLANSCOPE【Tier付け】](https://ascii.jp/elem/000/004/429/4429450/?rss=) | 21.0 | 20.0 | 42.0 |
+| [ANA子会社のデジタルギフト「選べるe-GIFT」に不正アクセス 担当者情報漏えいか、不正交換も](https://www.itmedia.co.jp/news/article/2608/26/2000000798/) | 21.0 | 20.0 | 42.0 |
+| [Appleの「スパイウェア警告」とは何か？ なぜ今、110カ国に通知が広がっているのか](https://news.mynavi.jp/techplus/article/20260826-4862594/) | 21.0 | 20.0 | 42.0 |
+| [Diffie-Hellman鍵交換におけるサービス運用妨害（DoS）の脆弱性](https://jvn.jp/vu/JVNVU96423082/) | 20.0 | 20.0 | 42.0 |
+| [GNU C Libraryにおける複数の脆弱性](https://jvn.jp/vu/JVNVU92836377/) | 20.0 | 20.0 | 42.0 |
+| [テスト環境での本番データ利用は依然として一般的で、TricentisのCISOはその排除を求めている](https://www.helpnetsecurity.com/2026/08/26/erika-dean-tricentis-production-data-in-testing/) | 20.0 | 20.0 | 42.0 |
+| [スクショの共有時に便利、Amazonの画面上の個人情報を自動的に非表示にする神ツールが刷新【やじうまWatch】](https://internet.watch.impress.co.jp/docs/yajiuma/2135662.html) | 20.0 | 20.0 | 42.0 |
+| [Androidアプリ「マイナポイント」におけるアクセス制限不備の脆弱性](https://jvn.jp/jp/JVN67155805/) | 20.0 | 20.0 | 42.0 |
+| [CorvusSKKにおける複数の脆弱性](https://jvn.jp/jp/JVN18496672/) | 20.0 | 20.0 | 42.0 |
+| [Apache Tomcatにおける複数の脆弱性(2026年8月25日)](https://jvn.jp/vu/JVNVU96149019/) | 20.0 | 20.0 | 42.0 |
+| [OpenSSLにおける脆弱性に対するアップデート（2026年8月25日）](https://jvn.jp/vu/JVNVU96558110/) | 20.0 | 20.0 | 42.0 |
+| [Kaltura HTML5 Player Libraryにおける複数の脆弱性](https://jvn.jp/vu/JVNVU94434952/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
