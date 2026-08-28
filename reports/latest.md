@@ -1,15 +1,18 @@
-# 📡 サイレーダー 2026-08-28 11:00 JST
+# 📡 サイレーダー 2026-08-28 17:00 JST
 
-このレポートは、2026-08-28 05:00 JST〜2026-08-28 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-28 11:00 JST〜2026-08-28 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 61
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 49
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 37
+- [低温だが記録しておくトピック](#low-record-topics): 23
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Print management outfit PaperCut is under 0-day attack, and it’s drawing customers’ blood](#topic-29852) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [Some Malicious PE Stats, (Thu, Aug 27th)](#topic-29840) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +20,116 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-29852"></a>
+
+### 1. Print management outfit PaperCut is under 0-day attack, and it’s drawing customers’ blood
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+印刷管理製品PaperCutに対してゼロデイ攻撃が観測されていると報じられています。
+公開されている情報では、対処として非公式の緊急パッチかサーバー停止が示されていますが、詳細な技術情報は限定的です。
+印刷管理サーバーは社内ネットワークの要所になりやすく、侵害されると業務影響が広がる可能性があります。
+ゼロデイかつ悪用観測ありとされているため、対象環境では早急な確認と緩和策の検討が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- PaperCutを利用している環境では、提供元の最新情報と修正状況を確認する。
+- 公式対応が整うまでの間、公開範囲の見直しや一時停止など、業務影響とリスクを比較して暫定対策を検討する。
+- 認証ログや管理画面への不審なアクセス、設定変更の痕跡がないかを確認する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Print management outfit PaperCut is under 0-day attack, and it’s drawing custome](https://www.theregister.com/security/2026/08/28/print-management-outfit-papercut-is-under-0-day-attack-and-its-drawing-customers-blood/5293168) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-29840"></a>
+
+### 2. Some Malicious PE Stats, (Thu, Aug 27th)
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+SANS Internet Storm Centerの記事では、悪意のあるPEファイルに含まれるヘッダ情報をもとに、コンパイラなどの統計を取った話題が紹介されています。
+PE形式には多くのメタデータが含まれており、既存ツールを使って分析できることが示されています。
+マルウェアの作成環境や傾向を把握する手がかりになり、脅威インテリジェンスの補助情報として役立ちます。
+個別の攻撃そのものよりも、サンプル群の特徴把握や分類精度の向上に関係する点が注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- PEヘッダ由来のメタデータは、検体の分類や傾向分析に使える可能性があるため、既存の解析フローに組み込めるか確認する。
+- コンパイラやビルド環境に関する統計は偏りや検体収集元の影響を受けやすいので、結果をそのまま一般化しない。
+- 単一の指標ではなく、他の静的・動的指標と組み合わせて判断する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Some Malicious PE Stats, (Thu, Aug 27th)](https://isc.sans.edu/diary/rss/33292) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,43 +146,29 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ハンズホールディングスにランサムウェア攻撃、従業員等のマイナンバー閲覧のおそれ](https://scan.netsecurity.ne.jp/article/2026/08/28/56066.html) | 29.0 | 30.0 | 42.0 |
-| [ギブリー、SalesforceのAI・データ基盤を導入し「Adaptive Websites」を稼働](https://japan.zdnet.com/article/35252016/) | 29.0 | 20.0 | 42.0 |
-| [三重県、1万2357個のUSBを調査、私物は3789個 ずさんな管理から何を学ぶ？](https://atmarkit.itmedia.co.jp/ait/articles/2608/28/news056.html) | 29.0 | 20.0 | 42.0 |
-| [9 / 8 開催「生成AIカンファレンス 2026」にスリーシェイク協賛、事前イベントに吉田拓真氏が登壇](https://scan.netsecurity.ne.jp/article/2026/08/28/56059.html) | 26.0 | 20.0 | 42.0 |
-| [大手AIベンダーで続々発生 AIの「暴走」は止められるか](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100112/082400145/) | 26.0 | 20.0 | 42.0 |
-| [「ChatGPT」の新しい「Mac」用プラグインでメッセージを分析--結果は驚くほど有益](https://japan.zdnet.com/article/35251893/) | 26.0 | 20.0 | 42.0 |
-| [SIEM：本気で集約し、必要に応じて分散連携する](https://securityboulevard.com/2026/08/siem-centralize-like-you-mean-it-federate-like-you-have-to/) | 25.0 | 20.0 | 42.0 |
-| [Hugging Faceへの攻撃で約700体の不正AIエージェントが連携](https://www.bleepingcomputer.com/news/security/nearly-700-rogue-ai-agents-coordinated-in-the-hugging-face-attack/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIとAnthropic、AIサイバー防御の「限られた時間」を警告](https://securityboulevard.com/2026/08/openai-anthropic-warn-of-limited-window-for-ai-cyber-defense/) | 25.0 | 20.0 | 42.0 |
-| [「ServiceNow」に複数のクリティカル脆弱性 - 修正版を公開](https://www.security-next.com/189522) | 22.0 | 20.0 | 42.0 |
-| [米当局、悪用カタログにLinux脆弱性など3件を追加](https://www.security-next.com/189516) | 22.0 | 20.0 | 42.0 |
-| [「2026年上半期 脅威レポート」公開--サイバー犯罪の標的「日常的に利用する正規サービス」へ](https://japan.zdnet.com/article/35252017/) | 21.0 | 20.0 | 42.0 |
-| [MCPサーバーとは？AIと業務データをセキュアに接続する構築・運用ガイド](https://ascii.jp/elem/000/004/428/4428589/?rss=) | 21.0 | 20.0 | 42.0 |
-| [企業のソフトウェア開発内製化戦略 直面する 3 つの壁 ～ ガートナーサミットレポート](https://scan.netsecurity.ne.jp/article/2026/08/28/56069.html) | 21.0 | 20.0 | 42.0 |
-| [9 / 1 ～ 4 オンライン開催「ITトレンドEXPO2026 Summer」にエーアイセキュリティラボ登壇](https://scan.netsecurity.ne.jp/article/2026/08/28/56068.html) | 21.0 | 20.0 | 42.0 |
-| [3,177件の不審メールを送信 ～ 日本大学法学部教職員への巧妙に偽装されたフィッシングメールによる「アカウント乗っ取り」](https://scan.netsecurity.ne.jp/article/2026/08/28/56067.html) | 21.0 | 20.0 | 42.0 |
-| [札幌市豊平区土木部で庁内使用に限定している住宅地図データを誤って公開、個人宅の氏名及び名字が漏えい](https://scan.netsecurity.ne.jp/article/2026/08/28/56065.html) | 21.0 | 20.0 | 42.0 |
-| [ミネラルウォーター「北海道大雪山ゆきのみず」の販売管理システム関連業務の委託先 扶桑電通のクラウドストレージに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/08/28/56064.html) | 21.0 | 20.0 | 42.0 |
-| [宇都宮市で令和8年度介護保険料の算定誤り、121名の市民が対象に](https://scan.netsecurity.ne.jp/article/2026/08/28/56063.html) | 21.0 | 20.0 | 42.0 |
-| [「宮本むなしお持ち帰り注文サイト」に不正アクセス、最大1,895件の注文情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/08/28/56062.html) | 21.0 | 20.0 | 42.0 |
-| [フラウ・インターナショナル業務委託先に不正アクセス、クレジットカード情報1件含む 問い合わせ情報3,560件が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/08/28/56061.html) | 21.0 | 20.0 | 42.0 |
-| [「ショップサーブ」に不正アクセス、不正なプログラムを実行し購入者情報を外部に送信](https://scan.netsecurity.ne.jp/article/2026/08/28/56060.html) | 21.0 | 20.0 | 42.0 |
-| [Android アプリ「マイナポイント」にアクセス制限不備の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/28/56058.html) | 21.0 | 20.0 | 42.0 |
-| [CorvusSKK に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/28/56057.html) | 21.0 | 20.0 | 42.0 |
-| [Apache Tomcat に10件の脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/28/56056.html) | 21.0 | 20.0 | 42.0 |
-| [OpenSSL に脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/28/56055.html) | 21.0 | 20.0 | 42.0 |
-| [9 / 3開催の「情報システムCAMP 2026 秋」に HENNGE が協賛 河合柚樹氏が登壇](https://scan.netsecurity.ne.jp/article/2026/08/28/56054.html) | 21.0 | 20.0 | 42.0 |
-| [ホテルニューオータニで「IPAフォーラム2026」を 9 / 14 開催 ～ 応募受付9月2日まで](https://scan.netsecurity.ne.jp/article/2026/08/28/56053.html) | 21.0 | 20.0 | 42.0 |
-| [Android の「高度な保護機能モード（AAPM）」とは？ JSSEC がセキュリティガイド第16回を公開](https://scan.netsecurity.ne.jp/article/2026/08/28/56052.html) | 21.0 | 20.0 | 42.0 |
-| [パスワードの先へ Microsoft、Googleが変える認証と情報保護の新常識](https://www.itmedia.co.jp/enterprise/articles/2608/28/news047.html) | 21.0 | 20.0 | 42.0 |
-| [ホテルからのM365が危ない 公衆Wi-Fi機器への侵害を警告](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100113/082600193/) | 21.0 | 20.0 | 42.0 |
-| [狙われるGitHub](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041800012/081800336/) | 21.0 | 20.0 | 42.0 |
-| [ネットワーク機器利用実態調査2026](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/081800254/081800001/) | 21.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年08月27日）](https://jvn.jp/vu/JVNVU99593741/) | 20.0 | 20.0 | 42.0 |
-| [NRIセキュア、発注企業向けのSCS評価制度対応支援メニューを提供](https://internet.watch.impress.co.jp/docs/news/2135783.html) | 20.0 | 20.0 | 42.0 |
-| [【EDR選定術】3割が乗り換え検討…ガートナーが明かす“決め手”と4つの運用改善](https://www.sbbit.jp/article/cont1/186597?ref=rss) | 20.0 | 20.0 | 42.0 |
-| [CRPx0ハッキングサービス、被害者数が5倍超に増加と主張](https://www.theregister.com/cyber-crime/2026/08/27/crpx0-hacking-service-for-dummies-claims-victim-count-more-than-quintupled/5293097) | 20.0 | 20.0 | 42.0 |
+| [90日と少額予算で実現できるAIエージェントセキュリティ](https://www.helpnetsecurity.com/2026/08/28/prasad-tharippala-versa-securing-ai-agents/) | 27.0 | 20.0 | 43.0 |
+| [学生がAIを使うと論理が明確で専門家に近い回答になることがOpenAIの実験で判明](https://gigazine.net/news/20260828-student-gain-from-ai/) | 27.0 | 20.0 | 42.0 |
+| [Googleが動画生成AI「Gemini Omni 1.1 Flash」をリリース、「最大4Kアップスケール」「動画の続きを生成」「低解像度で高速プレビュー」など](https://gigazine.net/news/20260828-gemini-omni-1-1-flash/) | 27.0 | 20.0 | 42.0 |
+| [OpenAI・Anthropic・GoogleなどがAIによるサイバー攻撃の防御に関する共同声明を発表](https://gigazine.net/news/20260828-ai-frontier-companies-signed-cyber-defense/) | 27.0 | 20.0 | 42.0 |
+| [NEC、サプライチェーン管理業務を行うAIエージェントを発売](https://japan.zdnet.com/article/35252037/) | 26.0 | 20.0 | 42.0 |
+| [「ライザAI」、配信開始2日で不正利用を警告 生成AIによる“偽画像”拡散も](https://www.itmedia.co.jp/news/article/2608/28/2000000892/) | 26.0 | 20.0 | 42.0 |
+| [避けるのか、とことん使いこなすのか──明治のCMに生成AIを取り入れた映像監督の本音](https://www.itmedia.co.jp/news/article/2608/28/2000000633/) | 26.0 | 20.0 | 42.0 |
+| [OpenAI、AI時代のサイバー防御で共同声明 - MicrosoftやGoogleら120超の企業・団体が賛同](https://news.mynavi.jp/techplus/article/20260828-4880258/) | 26.0 | 20.0 | 42.0 |
+| [NVIDIA「NemoClaw」「OpenShell」に複数脆弱性 - アップデートを公開](https://www.security-next.com/189544) | 22.0 | 20.0 | 42.0 |
+| [Ubiquitiの「UniFi OS」などに脆弱性22件 - 21件が「クリティカル」](https://www.security-next.com/189538) | 22.0 | 20.0 | 42.0 |
+| [トランプ大統領が国家安全保障上のリスクありとみなす外国製電力機器・ソフトウェアを禁止する大統領令に署名、電力会社が設備を交換しなければならない可能性も](https://gigazine.net/news/20260828-us-ban-foreign-power-system/) | 22.0 | 20.0 | 42.0 |
+| [アイドルの宮本佳林さんが登壇したCloudflare開発者イベント、アーカイブ配信中](https://www.itmedia.co.jp/news/article/2608/28/2000000895/) | 21.0 | 20.0 | 42.0 |
+| [やはり古い「Windows」端末が攻撃されている--サイバーリーズン調査](https://japan.zdnet.com/article/35252032/) | 21.0 | 20.0 | 42.0 |
+| [Salesforceの株価急伸 「SaaSの死」再燃を招いたAnthropicと提携拡大](https://xtech.nikkei.com/atcl/nxt/column/18/00001/11998/) | 21.0 | 20.0 | 42.0 |
+| [大学入試センター、公式サイトの資料一覧ページが公開状態に 非公開化は「誤解を避けるため」](https://www.itmedia.co.jp/news/article/2608/28/2000000890/) | 21.0 | 20.0 | 42.0 |
+| [8月30日まで72時間限定で500円！ 『サイバー術 プロに学ぶサイバーセキュリティ』がセール中](https://news.mynavi.jp/techplus/article/20260828-4880665/) | 21.0 | 20.0 | 42.0 |
+| [NISA口座「もぬけの殻」に 不正アクセス被害者らが証券4社に原状回復求め調停](https://www.itmedia.co.jp/news/article/2608/28/2000000891/) | 21.0 | 20.0 | 42.0 |
+| [チューリッヒ保険、最大1668件の個人情報漏えいか ドラレコデータのシステムに不正アクセス](https://www.itmedia.co.jp/news/article/2608/28/2000000888/) | 21.0 | 20.0 | 42.0 |
+| [GROWIにおける複数の脆弱性](https://jvn.jp/jp/JVN42348352/) | 20.0 | 20.0 | 42.0 |
+| [チューリッヒ保険会社で不正アクセス、ドライブレコーダーのデータをアップロードした利用者の個人情報漏えいの可能性](https://internet.watch.impress.co.jp/docs/news/2136482.html) | 20.0 | 20.0 | 42.0 |
+| [豪州警察、TeamPCPの首謀者とされる人物を逮捕](https://www.theregister.com/security/2026/08/28/australian-cops-cuff-alleged-teampcp-masterminds/5293157) | 20.0 | 20.0 | 42.0 |
+| [SOYシリーズにおける複数の脆弱性](https://jvn.jp/jp/JVN04485476/) | 20.0 | 20.0 | 42.0 |
+| [Zabbix agentにおけるDLL読み込みに関する脆弱性](https://jvn.jp/jp/JVN42011956/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
