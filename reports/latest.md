@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-08-29 11:00 JST
+# 📡 サイレーダー 2026-08-29 17:00 JST
 
-このレポートは、2026-08-29 05:00 JST〜2026-08-29 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-29 11:00 JST〜2026-08-29 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 35
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 25
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 11
+- [低温だが記録しておくトピック](#low-record-topics): 0
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [TerminalFix campaign deploys a reverse tunnel through multistage intrusion](#topic-30006) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,72 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-30006"></a>
+
+### 1. TerminalFix campaign deploys a reverse tunnel through multistage intrusion
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Microsoft Threat Intelligenceは、ClickFix型のキャンペーンに関する分析を公開し、偽のCAPTCHA表示やDLLサイドローディング、逆方向トンネルの利用が確認されたとしています。
+併せて、検知やハンティングのための指針も示されています。複数段階の侵入手法が組み合わさっているため、単一の検知だけでは見逃される可能性があります。
+実務上は、初期侵入から内部展開までを通しで監視する必要がある点で注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 偽のCAPTCHAや不審なユーザー操作誘導を起点にした侵入の兆候を点検する。
+- DLLサイドローディングや不自然なプロセス起動、通信先の異常を合わせて確認する。
+- Microsoft Defenderなどの検知・ハンティング指針を参照し、関連ログの相関分析を行う。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Cloudflare | 言及あり | 0.80 | — |
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+| 製品 | Microsoft Defender | 言及あり | 0.80 | — |
+| 製品 | Active Directory | 言及あり | 0.80 | — |
+| 製品 | Microsoft Windows | 言及あり | 0.80 | — |
+| 製品 | Microsoft 365 | 言及あり | 0.80 | — |
+| 製品 | Mozilla Firefox | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [TerminalFix campaign deploys a reverse tunnel through multistage intrusion](https://www.microsoft.com/en-us/security/blog/2026/08/28/terminalfix-campaign-deploys-reverse-tunnel-through-multistage-intrusion/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -29,22 +96,7 @@
 
 ## ❄️ 低温だが記録しておくトピック
 
-音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
-重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
-
-| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
-|---|---:|---:|---:|
-| [ATF、捜査対象情報を含むシステムへのサイバー攻撃を確認](https://cyberscoop.com/atf-doj-cyberattack-qilin-ransomware/) | 28.0 | 30.0 | 42.0 |
-| [「ChatGPT Work」の使い方--AIエージェントを始める10のヒント](https://japan.zdnet.com/article/35251897/) | 26.0 | 20.0 | 42.0 |
-| [AIを"守る"セキュリティ市場が68.7％増加、最も伸びる「4つの分野」は？](https://www.itmedia.co.jp/enterprise/articles/2608/27/news039.html) | 26.0 | 20.0 | 42.0 |
-| [LLMの安全性の脆弱性を診断する新手法「Perturbation Probing」](https://unit42.paloaltonetworks.com/perturbation-probing-llm-safety/) | 25.0 | 20.0 | 42.0 |
-| [ResearcherがClaude Codeを騙してWebサイトの要約をさせる手口を公開](https://www.theregister.com/research/2026/08/28/researcher-shows-how-claude-code-can-be-tricked-simply-by-asking-it-to-summarize-a-website/5293372) | 25.0 | 20.0 | 42.0 |
-| [OpenAIの多数のエージェントがHugging Faceのサーバーに侵入](https://www.darkreading.com/cyberattacks-data-breaches/hundreds-openai-agents-invaded-hugging-face-servers) | 25.0 | 20.0 | 42.0 |
-| [OpenAPI React Query CodegenがMini Shai-Huludのnpmサプライチェーン攻撃で侵害される](https://socket.dev/blog/openapi-react-query-codegen-npm-compromise) | 22.0 | 30.0 | 42.0 |
-| [シルバーウィーク前に見直したい「パスワード運用の"当たり前"」 NIST新要件から管理ソフトの穴まで](https://www.itmedia.co.jp/enterprise/articles/2608/29/news006.html) | 21.0 | 20.0 | 42.0 |
-| [ShinyHuntersによる患者データ窃取主張を受けMcKessonが侵害を公表](https://www.bleepingcomputer.com/news/security/mckesson-discloses-breach-after-shinyhunters-claims-patient-data-theft/) | 20.0 | 20.0 | 42.0 |
-| [ベルリン、市の州ネットワークからデータを盗んだハッカーへの支払いを拒否](https://thehackernews.com/2026/08/berlin-refuses-to-pay-hackers-who-stole.html) | 20.0 | 20.0 | 42.0 |
-| [Cosmos EVMの欠陥を悪用、Cosmos Labsは採用全ブロックチェーンの脆弱性を把握済み](https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html) | 20.0 | 20.0 | 42.0 |
+今回は低温記録トピックはありません。
 
 ---
 
