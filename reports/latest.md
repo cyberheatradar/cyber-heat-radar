@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-08-30 05:00 JST
+# 📡 サイレーダー 2026-08-30 11:00 JST
 
-このレポートは、2026-08-29 17:00 JST〜2026-08-30 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-30 05:00 JST〜2026-08-30 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 28
+- 観測トピック数: 29
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 4
+- [低温だが記録しておくトピック](#low-record-topics): 5
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,10 +34,11 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [WordPressプラグインとテーマの5つの重大な脆弱性によりサイト乗っ取りやRCEが可能に](https://thehackernews.com/2026/08/five-critical-wordpress-plugin-and.html) | 24.0 | 46.0 | 50.0 |
-| [無料でDiscordのようなチャットサーバーをセルフホストできる「Chatto」、消費リソースが極めて少なく軽快な動作でチャットデータは暗号化されているのが特徴](https://gigazine.net/news/20260829-chatto/) | 22.0 | 20.0 | 42.0 |
-| [Brave browser、追跡回避を支援するメールエイリアス機能を追加](https://www.bleepingcomputer.com/news/security/brave-browser-adds-email-aliases-to-help-users-evade-tracking/) | 20.0 | 20.0 | 42.0 |
-| [Hasbroのデータ侵害で従業員の個人情報が流出](https://www.securityweek.com/hasbro-data-breach-exposed-employee-personal-information/) | 20.0 | 20.0 | 42.0 |
+| [OpenAI、Cursorへのモデル提供を11月12日に終了 SpaceXによる買収が理由](https://www.itmedia.co.jp/news/article/2608/30/2000000945/) | 26.0 | 20.0 | 42.0 |
+| [「FANZAスタジオ」爆誕へ 成人向けAIマンガに違和感を覚えるマンガ家も期待する部分とは？](https://www.itmedia.co.jp/news/article/2608/30/2000000911/) | 26.0 | 20.0 | 42.0 |
+| [Anthropic、Claude Codeの現行週次利用上限を17%引き下げ](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/) | 25.0 | 20.0 | 42.0 |
+| [セキュリティチームの明暗を分けたのは“あれ”だった 同じ手口で正反対の結果に](https://www.itmedia.co.jp/enterprise/articles/2608/27/news088.html) | 21.0 | 20.0 | 42.0 |
+| [AIシステム侵害の行き着く先 Microsoftが突き止めた攻撃者の「真の目的」](https://www.itmedia.co.jp/enterprise/articles/2608/30/news005.html) | 21.0 | 20.0 | 42.0 |
 
 ---
 
