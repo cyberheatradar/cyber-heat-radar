@@ -1,18 +1,15 @@
-# 📡 サイレーダー 2026-08-31 05:00 JST
+# 📡 サイレーダー 2026-08-31 11:00 JST
 
-このレポートは、2026-08-30 17:00 JST〜2026-08-31 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-31 05:00 JST〜2026-08-31 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 30
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 55
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 4
+- [低温だが記録しておくトピック](#low-record-topics): 31
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Week in review: Compromised Zimbra servers, previously patched Citrix NetScaler flaw exploited](#topic-28581) | 45.0 | 64.0 | 63.0 | 音声 | 温度感上位枠 |
-| 2 | [Anthropic warns infostealer malware is hijacking Claude sessions to drain usage](#topic-30044) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -20,146 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-28581"></a>
-
-### 1. Week in review: Compromised Zimbra servers, previously patched Citrix NetScaler flaw exploited
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>サ⁠プ⁠ラ⁠イ⁠チ⁠ェ⁠ー⁠ン</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 45.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 63.0 |
-
-#### 概要
-
-Zimbra Collaboration（ZCS）の脆弱性CVE-2026-73570について、実際の悪用が観測されており、未更新のインターネット公開サーバーが被害に遭っていると報じられています。
-既に修正済みの脆弱性ですが、公開情報では少なくとも複数の外部ソースで悪用状況が確認されています。
-この脆弱性はコマンド注入からリモートコード実行につながる可能性があり、メール・グループウェア環境の侵害は情報漏えいや認証情報の悪用に直結しやすい点が懸念されます。
-CISAのKEVにも掲載されており、優先的な対応が求められる種類の事案です。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 4 sources。
-- 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 複数ソース確認。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Zimbra Collaborationの該当バージョンを確認し、修正済み版への更新状況を点検する。
-- インターネット公開しているZimbraサーバーを優先して監視し、異常な管理操作や不審なプロセス起動の有無を確認する。
-- 関連アカウントの認証情報保護を強化し、必要に応じて監査ログとメール設定の変更履歴を確認する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-73570 | 関連CVE | 1.00 | 候補あり（URL 4件以上） |
-| ベンダー | Zimbra | 言及あり | 0.80 | — |
-| 製品 | Zimbra Collaboration | 言及あり | 0.80 | — |
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| ベンダー | Google | 言及あり | 0.80 | — |
-| 製品 | Microsoft 365 | 言及あり | 0.80 | — |
-| ベンダー | Citrix | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-73570](https://nvd.nist.gov/vuln/detail/CVE-2026-73570) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Week in review: Compromised Zimbra servers, previously patched Citrix NetScaler ](https://www.helpnetsecurity.com/2026/08/30/week-in-review-compromised-zimbra-servers-previously-patched-citrix-netscaler-flaw-exploited/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Unpatched Zimbra servers are falling to CVE-2026-73570 attacks](https://www.helpnetsecurity.com/2026/08/25/zimbra-cve-2026-73570-compromised/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Exploited Zimbra Flaw Highlights Shrinking Window to Patch](https://www.darkreading.com/vulnerabilities-threats/zimbra-flaw-exploitation-shrinking-window-patch) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution](https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-30044"></a>
-
-### 2. Anthropic warns infostealer malware is hijacking Claude sessions to drain usage
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Anthropicは、一部のClaude利用者について、端末上のインフォスティーラー型マルウェアにより有効なログインセッションが盗まれ、攻撃者がアカウントにアクセスして利用量を消費していると注意喚起しています。
-現時点では、被害の詳細や影響範囲は公開材料の範囲で限定的です。AIサービスのアカウント侵害が、情報窃取だけでなく利用枠の消費や業務影響につながる点が注目されています。
-端末側の感染が、クラウド上のAI利用にも直接波及しうることを示しています。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Claudeや類似SaaSのセッション保護を見直し、多要素認証や再認証の運用を確認する。
-- 利用者端末のマルウェア対策と、ブラウザ保存情報・セッションの漏えい対策を徹底する。
-- 異常な利用量やログイン挙動を監視し、アカウントのセッション無効化手順を整備する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Anthropic | 言及あり | 0.80 | — |
-| AIモデル/プロジェクト | Anthropic | 主題 | 0.80 | — |
-| AIモデル/プロジェクト | Claude | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Anthropic warns infostealer malware is hijacking Claude sessions to drain usage](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -176,10 +34,37 @@ Anthropicは、一部のClaude利用者について、端末上のインフォ�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Chrome Web Storeの拡張機能が暗号資産とブラウザデータを窃取](https://www.bleepingcomputer.com/news/security/chrome-web-store-extensions-caught-stealing-crypto-browser-data/) | 28.0 | 20.0 | 42.0 |
-| [Hugging Face侵害事件、OpenAIとMETRが最終報告書公開──約1200体のAIエージェントが“闇掲示板”で結託し700体が攻撃に参加](https://www.itmedia.co.jp/news/article/2608/30/2000000949/) | 26.0 | 20.0 | 42.0 |
-| [FulcrumSecがManchester Airportsへのハッキングと86GBのデータ窃取を主張](https://www.bleepingcomputer.com/news/security/fulcrumsec-claims-manchester-airports-hack-theft-of-86-gb-of-data/) | 20.0 | 20.0 | 42.0 |
-| [英国人はプライベートメッセージをプライベートのままにしておきたいようだ](https://www.theregister.com/security/2026/08/30/turns-out-brits-would-quite-like-their-private-messages-to-stay-private/5292994) | 20.0 | 20.0 | 42.0 |
+| [ランサムグループ「INC」の存在感が強まる Citrix Bleedを悪用して侵入](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041600214/081800019/) | 29.0 | 30.0 | 42.0 |
+| [AIが生成した“存在しない病名”、研修医の44％が信用 見抜けた医師との差は？ 仏大学病院が検証](https://www.itmedia.co.jp/news/article/2608/31/2000000865/) | 28.0 | 20.0 | 42.0 |
+| [GitHubで使われる言葉がAIの影響で変化している可能性を示す「The load-bearing vocabulary of Claude」](https://gigazine.net/news/20260831-load-bearing-ai-vocabulary-github/) | 27.0 | 20.0 | 42.0 |
+| [フィッシングのクリック率 ～ 従来型は 12 %、AI 生成は 54 %](https://scan.netsecurity.ne.jp/article/2026/08/31/56075.html) | 26.0 | 20.0 | 42.0 |
+| [AIエージェントが「トクリュウ」化？ 目的達成のために手段を選ばず](https://atmarkit.itmedia.co.jp/ait/articles/2608/31/news036.html) | 26.0 | 20.0 | 42.0 |
+| [ドメスティックなフィジカルAI 過剰な外資警戒で競争力喪失](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600007/082400224/) | 26.0 | 20.0 | 42.0 |
+| [経営変革にAI生かせ 人事とシステム開発](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600014/082600234/) | 26.0 | 20.0 | 42.0 |
+| [Anthropicの「Claude」と「Cowork」、あなたの記憶を共有へ--オプトアウトしなければ](https://japan.zdnet.com/article/35251946/) | 26.0 | 20.0 | 42.0 |
+| [LINEヤフー、AIエージェントを「10倍量産」へ。新たなプロトタイプの体験会を実施](https://internet.watch.impress.co.jp/docs/news/2136699.html) | 25.0 | 20.0 | 42.0 |
+| [「Langflow」に複数の深刻な脆弱性 - 修正版が公開](https://www.security-next.com/189600) | 22.0 | 20.0 | 42.0 |
+| [先週注目された記事（2026年8月23日〜2026年8月29日）](https://www.security-next.com/189598) | 22.0 | 20.0 | 42.0 |
+| [ソニー・ミュージックパブリッシングとワーナー・チャペル、Anthropicを著作権侵害で提訴](https://www.itmedia.co.jp/news/article/2608/31/2000000950/) | 21.0 | 20.0 | 42.0 |
+| [Googleが経営破綻した航空会社のデータをAIのために購入 ～ メール1億件 Teamsレコード5億件 OneDriveファイル1,700万件 SharePointデータ2,050万件 カスタマーサービス通話録音3,000万件 カスタマーサービスチャット記録1,500万件：支払額15億円](https://scan.netsecurity.ne.jp/article/2026/08/31/56083.html) | 21.0 | 20.0 | 42.0 |
+| [GMOサイバーセキュリティ byイエラエ、9 / 10 オンラインセミナー開催 ～ VPN・シャドーITのリスク可視化と継続診断を解説](https://scan.netsecurity.ne.jp/article/2026/08/31/56082.html) | 21.0 | 20.0 | 42.0 |
+| [一正蒲鉾社員のメールアカウントに不正アクセス、取引先と社員の個人情報が閲覧された可能性](https://scan.netsecurity.ne.jp/article/2026/08/31/56081.html) | 21.0 | 20.0 | 42.0 |
+| [国立研究開発法人科学技術振興機構（JST）に不正アクセス、外部機関からの情報提供で発覚](https://scan.netsecurity.ne.jp/article/2026/08/31/56080.html) | 21.0 | 20.0 | 42.0 |
+| [アンビションDXホールディングスに不正アクセス、ログの消失を確認](https://scan.netsecurity.ne.jp/article/2026/08/31/56079.html) | 21.0 | 20.0 | 42.0 |
+| [ギグワークスのサーバに不正アクセス、攻撃者に目視で個人情報が閲覧された可能性を否定できず](https://scan.netsecurity.ne.jp/article/2026/08/31/56078.html) | 21.0 | 20.0 | 42.0 |
+| [大仙のシステムに不正アクセス、社内全システム遮断し受注出荷業務に影響](https://scan.netsecurity.ne.jp/article/2026/08/31/56077.html) | 21.0 | 20.0 | 42.0 |
+| [KDDI の ISP 事業者向けメールシステムへの不正アクセス、レンタルサーバCPIへの影響が明らかに](https://scan.netsecurity.ne.jp/article/2026/08/31/56076.html) | 21.0 | 20.0 | 42.0 |
+| [「クラウドネイティブ教科書PDF版・EPUB版：Ver. 1.0.0」にスリーシェイクの羽山公平氏がレビュアーとして参加](https://scan.netsecurity.ne.jp/article/2026/08/31/56074.html) | 21.0 | 20.0 | 42.0 |
+| [インシデント対応やフォレンジックの実践力を強化 ～ NRIセキュアが新研修「セキュアWings」提供](https://scan.netsecurity.ne.jp/article/2026/08/31/56073.html) | 21.0 | 20.0 | 42.0 |
+| [SmartHRのグループ会社がSCS評価制度支援サービス開始](https://scan.netsecurity.ne.jp/article/2026/08/31/56072.html) | 21.0 | 20.0 | 42.0 |
+| [11 / 25・26 開催「東北サイバーセキュリティシンポジウム2026」聴講参加者募集開始](https://scan.netsecurity.ne.jp/article/2026/08/31/56071.html) | 21.0 | 20.0 | 42.0 |
+| [楽天Koboデスクトップアプリ（Windows版）のインストーラに DLL 読み込みに関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/31/56070.html) | 21.0 | 20.0 | 42.0 |
+| [「原則出社」命じる企業とテレワーク社員の意識ギャップ／“推し活依存”自覚するZ世代が2割／シニアの利用が盛んな○○アプリ、ほか](https://ascii.jp/elem/000/004/430/4430471/?rss=) | 21.0 | 20.0 | 42.0 |
+| [フロンティアAI対策を国内組織はどう捉えているか “内製化への意欲”と待ち望む“政府主導のガイドライン”](https://ascii.jp/elem/000/004/430/4430406/?rss=) | 21.0 | 20.0 | 42.0 |
+| [EDRを入れても侵入される 405社調査が示す日本企業の「構造的欠陥」](https://www.itmedia.co.jp/enterprise/articles/2608/31/news027.html) | 21.0 | 20.0 | 42.0 |
+| [AIで「スクリプトキディ」のサイバー攻撃力倍増--組織が取るべき4つの対策](https://japan.zdnet.com/article/35252010/) | 21.0 | 20.0 | 42.0 |
+| [米軍が攻撃 原油先物が2%超上昇](https://news.yahoo.co.jp/pickup/6593704?source=rss) | 20.0 | 20.0 | 42.0 |
+| [QRコード悪用のフィッシング「クイッシング」検出増加、攻撃者は“使い慣れた技術への信頼”を悪用 ESET脅威レポート 2026年上半期版](https://internet.watch.impress.co.jp/docs/news/2136621.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
