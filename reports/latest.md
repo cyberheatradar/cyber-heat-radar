@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-08-31 11:00 JST
+# 📡 サイレーダー 2026-08-31 17:00 JST
 
-このレポートは、2026-08-31 05:00 JST〜2026-08-31 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-08-31 11:00 JST〜2026-08-31 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 55
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 47
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 31
+- [低温だが記録しておくトピック](#low-record-topics): 22
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Anthropicがマルウェア感染の疑いがあるユーザーを強制ログアウトさせ支払い方法を削除し返金処理を実施](#topic-30165) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,68 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-30165"></a>
+
+### 1. Anthropicがマルウェア感染の疑いがあるユーザーを強制ログアウトさせ支払い方法を削除し返金処理を実施
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Anthropicは、ユーザーの端末がマルウェアに感染している疑いがあるケースについて、強制ログアウトや支払い方法の削除、返金処理を実施したとされています。
+公開情報では、ユーザーのPCを乗っ取ってClaudeを不正利用するようなマルウェアが確認された旨が伝えられています。
+生成AIサービスのアカウントや課金情報が、端末侵害を起点に不正利用される可能性があることを示しています。
+利用者側の端末保護だけでなく、サービス提供側の不正検知やアカウント保護の重要性も改めて注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AIサービスのアカウント不正利用に備え、端末感染の兆候がある環境からのログインを重点的に監視する。
+- 支払い情報の異常変更や予期しないログアウト、返金関連の通知を確認し、アカウント保護手順を周知する。
+- 利用者に対して、端末のマルウェア対策と認証強化を促し、被害拡大を防ぐ。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Anthropic | 言及あり | 0.80 | — |
+| AIモデル/プロジェクト | Anthropic | 主題 | 0.80 | — |
+| AIモデル/プロジェクト | Claude | 主題 | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Anthropicがマルウェア感染の疑いがあるユーザーを強制ログアウトさせ支払い方法を削除し返金処理を実施](https://gigazine.net/news/20260831-anthropic-warn-malware/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,37 +97,28 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ランサムグループ「INC」の存在感が強まる Citrix Bleedを悪用して侵入](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041600214/081800019/) | 29.0 | 30.0 | 42.0 |
-| [AIが生成した“存在しない病名”、研修医の44％が信用 見抜けた医師との差は？ 仏大学病院が検証](https://www.itmedia.co.jp/news/article/2608/31/2000000865/) | 28.0 | 20.0 | 42.0 |
-| [GitHubで使われる言葉がAIの影響で変化している可能性を示す「The load-bearing vocabulary of Claude」](https://gigazine.net/news/20260831-load-bearing-ai-vocabulary-github/) | 27.0 | 20.0 | 42.0 |
-| [フィッシングのクリック率 ～ 従来型は 12 %、AI 生成は 54 %](https://scan.netsecurity.ne.jp/article/2026/08/31/56075.html) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントが「トクリュウ」化？ 目的達成のために手段を選ばず](https://atmarkit.itmedia.co.jp/ait/articles/2608/31/news036.html) | 26.0 | 20.0 | 42.0 |
-| [ドメスティックなフィジカルAI 過剰な外資警戒で競争力喪失](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600007/082400224/) | 26.0 | 20.0 | 42.0 |
-| [経営変革にAI生かせ 人事とシステム開発](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600014/082600234/) | 26.0 | 20.0 | 42.0 |
-| [Anthropicの「Claude」と「Cowork」、あなたの記憶を共有へ--オプトアウトしなければ](https://japan.zdnet.com/article/35251946/) | 26.0 | 20.0 | 42.0 |
-| [LINEヤフー、AIエージェントを「10倍量産」へ。新たなプロトタイプの体験会を実施](https://internet.watch.impress.co.jp/docs/news/2136699.html) | 25.0 | 20.0 | 42.0 |
-| [「Langflow」に複数の深刻な脆弱性 - 修正版が公開](https://www.security-next.com/189600) | 22.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年8月23日〜2026年8月29日）](https://www.security-next.com/189598) | 22.0 | 20.0 | 42.0 |
-| [ソニー・ミュージックパブリッシングとワーナー・チャペル、Anthropicを著作権侵害で提訴](https://www.itmedia.co.jp/news/article/2608/31/2000000950/) | 21.0 | 20.0 | 42.0 |
-| [Googleが経営破綻した航空会社のデータをAIのために購入 ～ メール1億件 Teamsレコード5億件 OneDriveファイル1,700万件 SharePointデータ2,050万件 カスタマーサービス通話録音3,000万件 カスタマーサービスチャット記録1,500万件：支払額15億円](https://scan.netsecurity.ne.jp/article/2026/08/31/56083.html) | 21.0 | 20.0 | 42.0 |
-| [GMOサイバーセキュリティ byイエラエ、9 / 10 オンラインセミナー開催 ～ VPN・シャドーITのリスク可視化と継続診断を解説](https://scan.netsecurity.ne.jp/article/2026/08/31/56082.html) | 21.0 | 20.0 | 42.0 |
-| [一正蒲鉾社員のメールアカウントに不正アクセス、取引先と社員の個人情報が閲覧された可能性](https://scan.netsecurity.ne.jp/article/2026/08/31/56081.html) | 21.0 | 20.0 | 42.0 |
-| [国立研究開発法人科学技術振興機構（JST）に不正アクセス、外部機関からの情報提供で発覚](https://scan.netsecurity.ne.jp/article/2026/08/31/56080.html) | 21.0 | 20.0 | 42.0 |
-| [アンビションDXホールディングスに不正アクセス、ログの消失を確認](https://scan.netsecurity.ne.jp/article/2026/08/31/56079.html) | 21.0 | 20.0 | 42.0 |
-| [ギグワークスのサーバに不正アクセス、攻撃者に目視で個人情報が閲覧された可能性を否定できず](https://scan.netsecurity.ne.jp/article/2026/08/31/56078.html) | 21.0 | 20.0 | 42.0 |
-| [大仙のシステムに不正アクセス、社内全システム遮断し受注出荷業務に影響](https://scan.netsecurity.ne.jp/article/2026/08/31/56077.html) | 21.0 | 20.0 | 42.0 |
-| [KDDI の ISP 事業者向けメールシステムへの不正アクセス、レンタルサーバCPIへの影響が明らかに](https://scan.netsecurity.ne.jp/article/2026/08/31/56076.html) | 21.0 | 20.0 | 42.0 |
-| [「クラウドネイティブ教科書PDF版・EPUB版：Ver. 1.0.0」にスリーシェイクの羽山公平氏がレビュアーとして参加](https://scan.netsecurity.ne.jp/article/2026/08/31/56074.html) | 21.0 | 20.0 | 42.0 |
-| [インシデント対応やフォレンジックの実践力を強化 ～ NRIセキュアが新研修「セキュアWings」提供](https://scan.netsecurity.ne.jp/article/2026/08/31/56073.html) | 21.0 | 20.0 | 42.0 |
-| [SmartHRのグループ会社がSCS評価制度支援サービス開始](https://scan.netsecurity.ne.jp/article/2026/08/31/56072.html) | 21.0 | 20.0 | 42.0 |
-| [11 / 25・26 開催「東北サイバーセキュリティシンポジウム2026」聴講参加者募集開始](https://scan.netsecurity.ne.jp/article/2026/08/31/56071.html) | 21.0 | 20.0 | 42.0 |
-| [楽天Koboデスクトップアプリ（Windows版）のインストーラに DLL 読み込みに関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/08/31/56070.html) | 21.0 | 20.0 | 42.0 |
-| [「原則出社」命じる企業とテレワーク社員の意識ギャップ／“推し活依存”自覚するZ世代が2割／シニアの利用が盛んな○○アプリ、ほか](https://ascii.jp/elem/000/004/430/4430471/?rss=) | 21.0 | 20.0 | 42.0 |
-| [フロンティアAI対策を国内組織はどう捉えているか “内製化への意欲”と待ち望む“政府主導のガイドライン”](https://ascii.jp/elem/000/004/430/4430406/?rss=) | 21.0 | 20.0 | 42.0 |
-| [EDRを入れても侵入される 405社調査が示す日本企業の「構造的欠陥」](https://www.itmedia.co.jp/enterprise/articles/2608/31/news027.html) | 21.0 | 20.0 | 42.0 |
-| [AIで「スクリプトキディ」のサイバー攻撃力倍増--組織が取るべき4つの対策](https://japan.zdnet.com/article/35252010/) | 21.0 | 20.0 | 42.0 |
-| [米軍が攻撃 原油先物が2%超上昇](https://news.yahoo.co.jp/pickup/6593704?source=rss) | 20.0 | 20.0 | 42.0 |
-| [QRコード悪用のフィッシング「クイッシング」検出増加、攻撃者は“使い慣れた技術への信頼”を悪用 ESET脅威レポート 2026年上半期版](https://internet.watch.impress.co.jp/docs/news/2136621.html) | 20.0 | 20.0 | 42.0 |
+| [Claude利用者に警告、マルウェアがログイン状態を盗み不正利用](https://news.mynavi.jp/techplus/article/20260831-4894921/) | 29.0 | 20.0 | 42.0 |
+| [無料で国産AIサービスを一般市民に提供するプロジェクト「AI for All」を韓国政府が推進中](https://gigazine.net/news/20260831-south-koreas-public-ai-service/) | 27.0 | 20.0 | 42.0 |
+| [中国におけるAIアニメ・ドラマが急増、中国版TikTokのDouyinでトップ100のアニメとドラマのうち89作品がAIによるもの](https://gigazine.net/news/20260831-chinese-ai-movie/) | 27.0 | 20.0 | 42.0 |
+| [AnthropicがSlackとの会話でClaudeを使える「Claude Tag」の社内活用事例を公開](https://gigazine.net/news/20260831-claude-tag-example/) | 27.0 | 20.0 | 42.0 |
+| [導入速度はクラウド以上--「高度で複雑なシステム」なAIエージェントはどう選ぶべきか](https://japan.zdnet.com/article/35251771/) | 26.0 | 20.0 | 42.0 |
+| [AIエージェントがデータにもたらす2つの脅威 Veeamが「保護レイヤー」の必要性を強調](https://ascii.jp/elem/000/004/430/4430551/?rss=) | 26.0 | 20.0 | 42.0 |
+| [AIとシステム連携で実現する「顧客接点の高度化」--コンタクトセンター変革の最前線](https://japan.zdnet.com/article/35251718/) | 26.0 | 20.0 | 42.0 |
+| [1200体のAIが「裏技」で情報共有、700体が攻撃に参加 OpenAIの侵入事案](https://xtech.nikkei.com/atcl/nxt/column/18/00001/12000/) | 26.0 | 20.0 | 42.0 |
+| [Halo-record: AIエージェント向けのオープンソース監査ログ](https://www.helpnetsecurity.com/2026/08/31/halo-record-open-source-ai-agent-audit-trail/) | 25.0 | 20.0 | 42.0 |
+| [AI AppSecツールはセキュリティ指摘のわずか5％で一致](https://www.helpnetsecurity.com/2026/08/31/contrast-security-ai-appsec-tools-security-findings-report/) | 25.0 | 20.0 | 42.0 |
+| [Top security teamsはAIエージェントを活用しているとHack The Boxが発表](https://www.itpro.com/security/top-security-teams-use-ai-agents-says-hack-the-box) | 25.0 | 20.0 | 42.0 |
+| [無料のChatGPTユーザーに、直前の質問内容に基づく広告が表示される](https://www.helpnetsecurity.com/2026/08/31/chatgpt-ads-privacy-policy/) | 25.0 | 20.0 | 42.0 |
+| [「作業予約システム」で侵害、会員情報流出か - イエローハット](https://www.security-next.com/189589) | 22.0 | 20.0 | 42.0 |
+| [米政府の脆弱性悪用リスト、前週に11件登録 - 半数超は対応期限3日以内](https://www.security-next.com/189606) | 22.0 | 20.0 | 42.0 |
+| [Steamからゲーム史上最大規模の12TBものゲーム関連ファイルが流出](https://gigazine.net/news/20260831-12tb-steam-leak/) | 22.0 | 20.0 | 42.0 |
+| [フロンティアAI対策に企業が苦慮、6割が「人材不足」「パッチ適用」に課題](https://news.mynavi.jp/techplus/article/20260831-4895450/) | 21.0 | 20.0 | 42.0 |
+| [米国の水道インフラ100件超がサイバー攻撃の標的に、7月だけで - PLC狙う](https://news.mynavi.jp/techplus/article/20260831-4880630/) | 21.0 | 20.0 | 42.0 |
+| [フィジカルAIを支える「攻めのIoT基盤」と「守りのOTセキュリティ」](https://ascii.jp/elem/000/004/430/4430549/?rss=) | 21.0 | 20.0 | 42.0 |
+| [悪用されたPaperCutの脆弱性に関する詳細が明らかに](https://www.securityweek.com/more-details-emerge-on-exploited-papercut-vulnerabilities/) | 20.0 | 28.0 | 50.0 |
+| [OpenClaw 2.0リリースでセッションをSQLiteへ移行](https://www.helpnetsecurity.com/2026/08/31/openclaw-2-0-released/) | 20.0 | 20.0 | 42.0 |
+| [KEV、EPSS、CVSSが食い違うときの脆弱性優先順位付け](https://www.helpnetsecurity.com/2026/08/31/joye-purser-cohesity-kev-epss-cvss-conflicts/) | 20.0 | 20.0 | 42.0 |
+| [米軍が攻撃 原油先物が2%超上昇](https://news.yahoo.co.jp/pickup/6593732?source=rss) | 20.0 | 20.0 | 42.0 |
 
 ---
 
