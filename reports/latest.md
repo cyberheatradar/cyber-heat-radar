@@ -1,18 +1,17 @@
-# 📡 サイレーダー 2026-09-01 11:00 JST
+# 📡 サイレーダー 2026-09-01 17:00 JST
 
-このレポートは、2026-09-01 05:00 JST〜2026-09-01 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-01 11:00 JST〜2026-09-01 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 59
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 48
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 33
+- [低温だが記録しておくトピック](#low-record-topics): 23
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Anthropic Users Hit by Infostealer Attacks, Session Thefts](#topic-30310) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
-| 2 | [Guildma (Astaroth) malware infection from Brazilian Portuguese email, (Tue, Sep 1st)](#topic-30263) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [From a Stolen Login to a Ransomware Leak Site: What Our Telemetry Shows About the Path Threat Actors Take](#topic-30339) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -20,91 +19,28 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-30310"></a>
+<a id="topic-30339"></a>
 
-### 1. Anthropic Users Hit by Infostealer Attacks, Session Thefts
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-AnthropicのClaude利用者を対象に、情報窃取型マルウェアによってセッション情報が取得され、アカウントへの不正アクセスにつながった可能性があるとされています。
-影響を受けたユーザー数は明らかにされていませんが、正規の認証情報そのものではなく、セッションの悪用が問題になっている点が特徴です。
-AIサービスのアカウントは、会話履歴や業務情報など機微なデータに結びつくことがあり、セッション奪取はそのまま利用権限の乗っ取りにつながり得ます。
-利用者側の端末感染が起点となるため、SaaSやAIサービスの保護をアプリ側だけでなくエンドポイント対策まで含めて考える必要があります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Claudeや類似のSaaSでは、セッション管理の見直しや不審なログインの監視を強化する。
-- 端末側の情報窃取型マルウェア対策として、EDR/AV、ブラウザ保護、OS・アプリの更新を徹底する。
-- 万一の漏えいを想定し、セッション失効、再認証、MFAの再確認を含むインシデント対応手順を整備する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Anthropic | 言及あり | 0.80 | — |
-| AIモデル/プロジェクト | Anthropic | 主題 | 0.80 | — |
-| AIモデル/プロジェクト | Claude | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Anthropic Users Hit by Infostealer Attacks, Session Thefts](https://www.darkreading.com/cyberattacks-data-breaches/anthropic-users-infostealer-attacks-session-thefts) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-30263"></a>
-
-### 2. Guildma (Astaroth) malware infection from Brazilian Portuguese email, (Tue, Sep 1st)
+### 1. From a Stolen Login to a Ransomware Leak Site: What Our Telemetry Shows About the Path Threat Actors Take
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>温⁠度⁠感</nobr> | 36.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
 | <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-SANS Internet Storm Centerは、ブラジル・ポルトガル語のメールを起点としたGuildma（Astaroth）関連のマルウェア感染について取り上げています。
-現時点で材料JSONからは、詳細な影響範囲や被害規模までは確認できません。メールを起点にしたマルウェア感染は、組織内の利用者が最初の接点になりやすいため、注意が必要です。
-脅威インテリジェンスの観点では、特定言語を用いた誘導が観測されている点が、フィルタリングや利用者教育の見直しに関係します。
+公開された分析では、盗まれた1件のログイン情報が、ランサムウェアの情報流出サイトにつながる初期要因になり得るという、攻撃の進み方が示されています。
+個別の事例というより、認証情報の流出が侵害拡大の入口になりやすいという傾向を説明する内容です。
+ランサムウェア被害は、必ずしも高度な初期侵入から始まるとは限らず、単一の認証情報の漏えいが大きな侵害に発展する可能性があります。
+ID・認証の管理状況が、被害抑止の重要な分岐点になるため注目されています。
 
 #### 温度感の理由
 
@@ -113,28 +49,22 @@ SANS Internet Storm Centerは、ブラジル・ポルトガル語のメールを
 - 技術・開発者系ソース観測: 観測あり。
 
 ##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+- ランサムウェア文脈。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 日本語以外の業務メールを含め、件名・送信者表示・添付やリンクの不自然さを確認できる運用にする。
-- メール経由の初期侵入を想定し、端末保護製品の検知状況と隔離・通報手順を再確認する。
-- ブラジル・ポルトガル語の不審メールや、関連する通信・実行痕跡がないかを確認する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| マルウェア | Astaroth | 主題 | 0.80 | — |
+- 認証情報の漏えい検知と、該当アカウントの早期無効化・パスワード変更を徹底する。
+- 多要素認証の適用範囲を広げ、特権アカウントや外部アクセス経路を優先的に見直す。
+- 侵入後の横展開を前提に、異常なログイン地点・時間帯・認証失敗の増加を継続監視する。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Guildma (Astaroth) malware infection from Brazilian Portuguese email, (Tue, Sep ](https://isc.sans.edu/diary/rss/33300) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [From a Stolen Login to a Ransomware Leak Site: What Our Telemetry Shows About th](https://securityboulevard.com/2026/09/from-a-stolen-login-to-a-ransomware-leak-site-what-our-telemetry-shows-about-the-path-threat-actors-take/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -160,39 +90,29 @@ SANS Internet Storm Centerは、ブラジル・ポルトガル語のメールを
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Black HatでAppSec CTO 6人が語るオープンソースのサプライチェーンセキュリティ](https://socket.dev/blog/oss-supplyl-chain-security-blackhat) | 30.0 | 20.0 | 42.0 |
-| [サンコーテクノのベトナム子会社にランサムウェア攻撃、サーバ及びパソコン内の各種ファイルの暗号化を確認](https://scan.netsecurity.ne.jp/article/2026/09/01/56095.html) | 29.0 | 30.0 | 42.0 |
-| [「TerminalFix」キャンペーンがPowerShellを悪用した企業向け攻撃](https://www.darkreading.com/threat-intelligence/terminalfix-campaign-weaponizes-powershell-enterprise-attacks) | 28.0 | 20.0 | 42.0 |
-| [「ChatGPT Work」の仕組みに関する考察](https://gigazine.net/news/20260901-understanding-chatgpt-work/) | 27.0 | 20.0 | 42.0 |
-| [「無料」のLLMエンドポイントが敵になる、コーディングエージェントの罠](https://isc.sans.edu/diary/rss/33298) | 27.0 | 20.0 | 42.0 |
-| [kintone公式のMCPサーバーとCData Connect AIを徹底比較 コスト、正確性、使える場面まで](https://ascii.jp/elem/000/004/428/4428591/?rss=) | 26.0 | 20.0 | 42.0 |
-| [「ChatGPT」広告、年換算の売上高10億ドルに 開始200日足らずで達成](https://www.itmedia.co.jp/news/article/2609/01/2000000997/) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントでBPR](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/041700482/082600019/) | 26.0 | 20.0 | 42.0 |
-| [連覇と奪回が拮抗 自由回答で「AI」浮上](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/082600566/082600001/) | 26.0 | 20.0 | 42.0 |
-| [日本企業が向き合う次のAI課題--「AIエージェントのインターネット」とは何か](https://japan.zdnet.com/article/35252093/) | 26.0 | 20.0 | 42.0 |
-| [Microsoft、セキュリティ製品の8月更新を公開 AIエージェント拡大に伴いDefenderやEntraなど機能拡張](https://www.itmedia.co.jp/enterprise/articles/2609/01/news033.html) | 26.0 | 20.0 | 42.0 |
-| [生成AI](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/091900172/081800036/) | 26.0 | 20.0 | 42.0 |
-| [エスケーアイマネージメントへのサポート詐欺、Lanscope によるログ解析を実施し約4,000ファイルの削除を確認](https://scan.netsecurity.ne.jp/article/2026/09/01/56092.html) | 24.0 | 20.0 | 43.0 |
-| [IPA、「東北サイバーセキュリティシンポジウム2026」を開催 - 机上演習なども](https://www.security-next.com/189658) | 22.0 | 20.0 | 42.0 |
-| [「NCA Annual Conference 2026」が12月に開催 - AI時代のCSIRTを議論](https://www.security-next.com/189655) | 22.0 | 20.0 | 42.0 |
-| [印刷管理ソフト「PaperCut NG/MF」に深刻な脆弱性 - 悪用も確認](https://www.security-next.com/189650) | 22.0 | 20.0 | 42.0 |
-| [AeyeScan blog 第15回 なぜ米国サイバーセキュリティ株は V 字回復したのか？](https://scan.netsecurity.ne.jp/article/2026/09/01/56097.html) | 21.0 | 20.0 | 42.0 |
-| [データセンター閉鎖時代を乗り切る選定＆移行ポイント解説 ～ セコムトラストシステムズ、9 / 24・25 Web セミナー開催](https://scan.netsecurity.ne.jp/article/2026/09/01/56096.html) | 21.0 | 20.0 | 42.0 |
-| [チューリッヒ保険に不正アクセス、ドライブレコーダーのデータをアップロードした最大1,668名の顧客の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/09/01/56094.html) | 21.0 | 20.0 | 42.0 |
-| [ホワイトエッセンスの予約サイトおよび基幹システムに不正アクセス、Webサイト・アプリ等からの予約等を一時停止](https://scan.netsecurity.ne.jp/article/2026/09/01/56093.html) | 21.0 | 20.0 | 42.0 |
-| [「ヨネックス公式オンラインショップ」にリスト型攻撃、3 件の不正ログイン確認](https://scan.netsecurity.ne.jp/article/2026/09/01/56091.html) | 21.0 | 20.0 | 42.0 |
-| [公益財団法人日産財団Webサイトに不正アクセス、情報が外部から閲覧され得る状態にあったことが判明](https://scan.netsecurity.ne.jp/article/2026/09/01/56090.html) | 21.0 | 20.0 | 42.0 |
-| [いさぼうネットに不正アクセス、個人情報が外部から閲覧 取得された可能性](https://scan.netsecurity.ne.jp/article/2026/09/01/56089.html) | 21.0 | 20.0 | 42.0 |
-| [独立行政法人医薬品医療機器総合機構で使用していたUSBメモリが紛失、今後は使用禁止に](https://scan.netsecurity.ne.jp/article/2026/09/01/56088.html) | 21.0 | 20.0 | 42.0 |
-| [産総研と経産省が登壇、AIとサイバーセキュリティ対策のセミナーを9月30日に高松＆オンライン開催](https://scan.netsecurity.ne.jp/article/2026/09/01/56087.html) | 21.0 | 20.0 | 42.0 |
-| [Zabbix agent に DLL 読み込みに関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/01/56086.html) | 21.0 | 20.0 | 42.0 |
-| [SOYシリーズに複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/01/56085.html) | 21.0 | 20.0 | 42.0 |
-| [GROWI に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/01/56084.html) | 21.0 | 20.0 | 42.0 |
-| [実在のCVEをかたるフィッシングが筆者に届いた 「詳しい人」ほど危ないのはなぜ？](https://www.itmedia.co.jp/enterprise/articles/2609/01/news030.html) | 21.0 | 20.0 | 42.0 |
-| [医療機関へのサイバー攻撃でペースメーカーと数百万件の患者記録が被害](https://www.theregister.com/cyber-crime/2026/08/31/healthcare-cyberattacks-hit-pacemakers-and-millions-of-patient-records/5293537) | 20.0 | 20.0 | 42.0 |
-| [McKesson、データ窃取を伴う恐喝攻撃の影響に対応](https://cyberscoop.com/mckesson-data-theft-extortion-attack-shinyhunters/) | 20.0 | 20.0 | 42.0 |
-| [総務省、「pixiv」「note」など情プラ法の「大規模プラットフォーム事業者」に追加、誹謗中傷への迅速な対応など求める 「ガールズちゃんねる」「好き嫌い.com」含む4者が対象](https://internet.watch.impress.co.jp/docs/news/2137041.html) | 20.0 | 20.0 | 42.0 |
-| [Cronosブロックチェーン、Tectonicの7400万ドル流出を受けて再始動](https://www.bleepingcomputer.com/news/security/cronos-blockchain-restarts-after-74-million-tectonic-exploit/) | 20.0 | 20.0 | 42.0 |
+| [Active Directoryがサイバー攻撃の標的となる理由とその対策](https://ascii.jp/elem/000/004/430/4430129/?rss=) | 29.0 | 30.0 | 42.0 |
+| [約1,200のAIエージェントはなぜ「集団暴走」したのか OpenAIの事故で何が起きた？](https://news.mynavi.jp/techplus/article/20260901-4895380/) | 28.0 | 20.0 | 42.0 |
+| [AIとやり取りし続けると人間が「ロボットのように」振る舞い始めてしまう可能性](https://gigazine.net/news/20260901-interacting-ai-people-act-like-robots/) | 27.0 | 20.0 | 42.0 |
+| [「このままでは中国が世界の知能工場に」、AIリーダーズ会議で問題提起](https://xtech.nikkei.com/atcl/nxt/news/24/03367/) | 26.0 | 20.0 | 42.0 |
+| [Instagram、「AIクリエイター」ラベルを「AI生成プロフィール」に改称 未設定なら表示を制限](https://www.itmedia.co.jp/news/article/2609/01/2000001010/) | 26.0 | 20.0 | 42.0 |
+| [AIに人生相談、約8割が言われた通り行動 でも幸福度上がらず 英研究機関が6000人調査](https://www.itmedia.co.jp/news/article/2609/01/2000000987/) | 26.0 | 20.0 | 42.0 |
+| [生成AI画像はなぜ“キショい”のか 消費者が抱く違和感の正体 広報のプロが解説](https://www.itmedia.co.jp/news/article/2609/01/2000000743/) | 26.0 | 20.0 | 42.0 |
+| [「Dell PowerStore」のアドバイザリ更新 - アップデート対象を拡大](https://www.security-next.com/189686) | 22.0 | 20.0 | 42.0 |
+| [廃棄文書の不正持出で職員処分、裏面に小説コピー - 長泉町](https://www.security-next.com/189426) | 22.0 | 20.0 | 42.0 |
+| [pnpm 12のRust再実装でインストール時間を最大90%短縮](https://socket.dev/blog/pnpm-12) | 22.0 | 20.0 | 42.0 |
+| [AppleがOpenAIとの企業秘密侵害訴訟で元従業員のMacBookから衝撃的な証拠を発見](https://gigazine.net/news/20260901-apple-reveals-shocking-evidence-openai-suit/) | 22.0 | 20.0 | 42.0 |
+| [イエローハットで不正アクセス 最大180万人が情報漏えいの対象](https://www.itmedia.co.jp/enterprise/articles/2609/02/news027.html) | 21.0 | 20.0 | 42.0 |
+| [まんだらけ、不正アクセスで個人情報漏えいの恐れ 通販サイト停止で「大オークション大会」も延期に](https://www.itmedia.co.jp/news/article/2609/01/2000001024/) | 21.0 | 20.0 | 42.0 |
+| [「当選した」自虐投稿も……さくら136万件漏えい可能性、対象者へ通知メール続々](https://www.itmedia.co.jp/news/article/2609/01/2000001017/) | 21.0 | 20.0 | 42.0 |
+| [PaperCutの悪用が活発な侵入へと拡大](https://www.securityweek.com/papercut-exploitation-escalates-to-active-intrusions/) | 20.0 | 28.0 | 50.0 |
+| [2026年8月の主なサイバー攻撃：米国とEUの企業がセッションハイジャック、リモートアクセス、内部不正の被害に遭う](https://any.run/cybersecurity-blog/major-cyber-attacks-august-2026/) | 20.0 | 20.0 | 42.0 |
+| [TDL 029 \| デジタルアイデンティティの分離：キャリアレベル防御を超えて](https://securityboulevard.com/2026/09/tdl-029-decoupling-digital-identity-beyond-carrier-level-defense-mark-kreitzman/) | 20.0 | 20.0 | 42.0 |
+| [CrowdSec 1.8.0でBot検知機能が追加、2件のDoS修正も実施](https://www.helpnetsecurity.com/2026/09/01/crowdsec-1-8-0-bot-detection/) | 20.0 | 20.0 | 42.0 |
+| [NIS2準拠：2026年監査前にIAMとアクセス制御を見直す](https://www.helpnetsecurity.com/2026/09/01/nis2-credential-compliance-before-audit/) | 20.0 | 20.0 | 42.0 |
+| [ベンダーのPQC対応状況から分かる準備度合い](https://www.helpnetsecurity.com/2026/09/01/yaakov-stein-allot-telecom-pqc-migration/) | 20.0 | 20.0 | 42.0 |
+| [今すぐ応募可能なサイバーセキュリティ職：2026年9月1日](https://www.helpnetsecurity.com/2026/09/01/cybersecurity-jobs-available-right-now-september-1-2026/) | 20.0 | 20.0 | 42.0 |
+| [今年のDEF CONで特に印象に残ったこと](https://securityboulevard.com/2026/08/what-stood-out-to-me-at-this-years-def-con/) | 20.0 | 20.0 | 42.0 |
+| [PALLET CONTROL製品におけるアクセス制御不備の脆弱性](https://jvn.jp/jp/JVN84094853/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
