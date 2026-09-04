@@ -1,17 +1,19 @@
-# 📡 サイレーダー 2026-09-04 11:00 JST
+# 📡 サイレーダー 2026-09-04 17:00 JST
 
-このレポートは、2026-09-04 05:00 JST〜2026-09-04 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-04 11:00 JST〜2026-09-04 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 52
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 46
+- [音声で扱う想定のトピック](#audio-topics): 3
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 27
+- [低温だが記録しておくトピック](#low-record-topics): 19
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Attackers exploit zero-days in consistently besieged SonicWall product](#topic-30963) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [September 2026 Patch Tuesday forecast: All we need is more time](#topic-30991) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [Cisco searched for IOS XR bugs and found so many it rolled them into an update release](#topic-30627) | 33.0 | 46.0 | 55.0 | 音声 | 温度感上位枠 |
+| 3 | [環境放射線モニタリングシステムの一部がランサム被害 - 鳥取県](#topic-31002) | 30.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,32 +21,33 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-30963"></a>
+<a id="topic-30991"></a>
 
-### 1. Attackers exploit zero-days in consistently besieged SonicWall product
+### 1. September 2026 Patch Tuesday forecast: All we need is more time
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>K⁠E⁠V</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>A⁠I</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>温⁠度⁠感</nobr> | 39.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
 | <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-SonicWallのSMA製品をめぐり、ゼロデイ脆弱性の悪用が観測されたと報じられています。
-材料では、CVE-2026-83548とCVE-2026-83549が関連づけられており、SonicWallのSMA 1000アプライアンスは以前から攻撃対象になりやすい状況にあるとされています。
-認証基盤やリモートアクセス機器が狙われると、社内ネットワークへの侵入口になり得るため注意が必要です。悪用観測がある場合は、一般的な脆弱性情報よりも迅速な対応が求められます。
+9月のPatch Tuesdayに向けた予測記事で、8月の更新では398件のCVEが修正されるなど、パッチ数の多さが続いていると伝えています。
+直近の傾向として、実際に悪用が確認された脆弱性は少数ながら、公開前に明らかになった脆弱性も含まれており、更新対応の重要性が示されています。
+修正件数が高水準で推移しているため、運用現場では優先度付けと適用計画の見直しが必要になります。公開前情報や既知の悪用状況がある場合は、通常以上に迅速な評価が求められます。
 
 #### 温度感の理由
 
 ##### 温度感
 - 実悪用・ゼロデイ文脈。
+- 技術・開発者系ソース観測: 観測あり。
 
 ##### 実務影響
 - 悪用情報あり。
@@ -54,25 +57,145 @@ SonicWallのSMA製品をめぐり、ゼロデイ脆弱性の悪用が観測さ�
 
 #### 担当者向け確認ポイント
 
-- SonicWall SMAを利用している環境では、ベンダー案内や追加の注意喚起を確認し、適用可能な対策を優先する。
-- 外部公開している管理・アクセス経路について、不要な露出や制限不足がないか点検する。
-- 侵害の兆候に備え、ログ確認や監視強化、関連アラートの見直しを行う。
+- 月次更新の対象範囲が広いため、資産ごとの影響確認と適用順の整理を早めに行う。
+- 実際の悪用が確認された項目や公開済み情報があるかを別途確認し、優先度を上げて対応する。
+- パッチ適用だけでなく、関連サービスの監視強化や一時的な緩和策の要否も併せて点検する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| ランサムウェアグループ | INC Ransom | 主題 | 0.80 | — |
-| ベンダー | SonicWall | 言及あり | 0.80 | — |
-| ベンダー | watchTowr | 言及あり | 0.80 | — |
-| ベンダー | Rapid7 | 言及あり | 0.80 | — |
-| 製品 | SonicWall SMA | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2026-62911 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
+| 脆弱性 | CVE-2026-69414 | 関連CVE | 1.00 | 未確認 |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Attackers exploit zero-days in consistently besieged SonicWall product](https://cyberscoop.com/sonicwall-sma1000-zero-days-actively-exploited/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [September 2026 Patch Tuesday forecast: All we need is more time](https://www.helpnetsecurity.com/2026/09/04/september-2026-patch-tuesday-forecast/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
+
+<a id="topic-30627"></a>
+
+### 2. Cisco searched for IOS XR bugs and found so many it rolled them into an update release
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>i⁠O⁠S</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
+| <nobr>確⁠度</nobr> | 55.0 |
+
+#### 概要
+
+CiscoはIOS XR Softwareの内部セキュリティレビューで複数の脆弱性を見つけ、まとめて修正版を公開しました。
+公表時点では、これらの問題が実際に悪用されている兆候はないとされていますが、深刻度は高く、対応版への更新が案内されています。
+ネットワーク基盤を担うCisco IOS XRの脆弱性は、影響範囲が広がりやすく、運用への影響も大きくなり得ます。
+しかも今回の更新は複数件を含み、個別対処よりも計画的な適用が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 2 sources。
+- 実悪用・ゼロデイ文脈。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Cisco IOS XRの利用有無と対象バージョンを確認し、該当する修正版の適用計画を立てる。
+- ワークアラウンドは案内されていないため、回避策よりも更新優先で進める。
+- 同一製品群で複数のCVEが出ているため、関連する通知をまとめて確認し、影響機器を漏れなく洗い出す。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Cisco | 言及あり | 0.80 | — |
+| 製品 | Cisco IOS XR | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20274](https://nvd.nist.gov/vuln/detail/CVE-2026-20274) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Cisco searched for IOS XR bugs and found so many it rolled them into an update r](https://www.theregister.com/security/2026/09/04/cisco-searched-for-ios-xr-bugs-and-found-so-many-it-rolled-them-into-an-update-release/5294410) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Cisco IOS XR Software Security Hardening Release: September 2026](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-iosxr-qg64NcM) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-31002"></a>
+
+### 3. 環境放射線モニタリングシステムの一部がランサム被害 - 鳥取県
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | - |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+鳥取県は、環境放射線モニタリングシステムの一部がランサム被害を受け、停止したことを公表しました。
+現時点ではバックアップ環境への同様の被害は確認されておらず、モニタリング業務への影響はないとされています。
+環境放射線の監視は公共性が高く、システム停止が起きると住民対応や運用判断に影響し得ます。
+今回は影響が限定的とされていますが、自治体の重要インフラに対するランサムウェア被害として注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・インシデント関連の公開情報として観測しています。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 重要システムとバックアップ環境を分離し、バックアップ側の改ざんや停止も含めて点検する。
+- 復旧時に必要な監視・通知・手動運用の手順を確認し、障害時でも継続できる体制を整える。
+- 自治体・委託先を含めたアカウント管理、端末保護、ログ監視を再点検し、再発防止策を優先する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [環境放射線モニタリングシステムの一部がランサム被害 - 鳥取県](https://www.security-next.com/189858) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -98,33 +221,25 @@ SonicWallのSMA製品をめぐり、ゼロデイ脆弱性の悪用が観測さ�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [大手企業を狙った偽の合併・買収詐欺](https://www.darkreading.com/cyberattacks-data-breaches/large-enterprises-fake-merger-acquisition-scams) | 28.0 | 20.0 | 42.0 |
-| [AIの検索を強化する「RAG」をシンプルに始めて高度化する6つの方法](https://gigazine.net/news/20260904-rag-is-simple/) | 27.0 | 20.0 | 42.0 |
-| [AIエージェントが「想定外の経路」で攻撃？ Black Hat・DEF CONで見えた新たなセキュリティリスク](https://ascii.jp/elem/000/004/431/4431682/?rss=) | 26.0 | 20.0 | 42.0 |
-| [OpenAI、「GPT-6 Astra」を一部組織向けに公開 サイバー能力が初の「Critical」に](https://www.itmedia.co.jp/news/article/2609/04/2000001153/) | 26.0 | 20.0 | 42.0 |
-| [なぜ経営陣に危機感が伝わらない？ CISOの半数以上が苦悩する「AIエージェント制御」のリアル](https://atmarkit.itmedia.co.jp/ait/articles/2609/04/news042.html) | 26.0 | 20.0 | 42.0 |
-| [3つの調査が示したAIエージェント導入における不都合な真実](https://japan.zdnet.com/article/35252062/) | 26.0 | 20.0 | 42.0 |
-| [OpenAIが最前線のサイバー防御者に10億ドル相当のAIクレジットを提供](https://www.theregister.com/security/2026/09/04/openai-commits-1b-in-ai-credits-to-frontline-cyber-defenders/5294382) | 25.0 | 20.0 | 42.0 |
-| [Cloudflare Managed DefenseとOpenAI Daybreakモデルによるコンテキスト対応の脆弱性発見と修正の導入](https://blog.cloudflare.com/vulnerability-discovery-remediation/) | 25.0 | 20.0 | 42.0 |
-| [ネットワーク管理製品「SonicWall NSM」に深刻な脆弱性 - 修正版を公開](https://www.security-next.com/189848) | 22.0 | 20.0 | 42.0 |
-| [「VMware Workstation」「Fusion」に「クリティカル」脆弱性](https://www.security-next.com/189843) | 22.0 | 20.0 | 42.0 |
-| [「Chrome」が脆弱性12件を修正 - ゼロデイ脆弱性に対応](https://www.security-next.com/189837) | 22.0 | 20.0 | 42.0 |
-| [首都直下地震７０％時代のＢＣＰ再設計](https://scan.netsecurity.ne.jp/article/2026/09/04/56133.html) | 21.0 | 20.0 | 42.0 |
-| [日本交通への不正アクセス、保有ファイルの一部が外部流出](https://scan.netsecurity.ne.jp/article/2026/09/04/56132.html) | 21.0 | 20.0 | 42.0 |
-| [イベントECサイト「machicon JAPAN」でシステム不具合による個人情報表示](https://scan.netsecurity.ne.jp/article/2026/09/04/56131.html) | 21.0 | 20.0 | 42.0 |
-| [学生による不適切な行い「患者様を特定できる情報が映ってはいなかったものの SNS に投稿する行為は医療従事者として極めて不適切」京都府立医科大学](https://scan.netsecurity.ne.jp/article/2026/09/04/56130.html) | 21.0 | 20.0 | 42.0 |
-| [メール配信システム「める配くん」の一部サーバに不正アクセス、配信先情報の一部が外部に取得されていた事実を確認](https://scan.netsecurity.ne.jp/article/2026/09/04/56129.html) | 21.0 | 20.0 | 42.0 |
-| [東京都管工事工業協同組合ウェブサイトが改ざん、CMS の脆弱性を悪用](https://scan.netsecurity.ne.jp/article/2026/09/04/56128.html) | 21.0 | 20.0 | 42.0 |
-| [セントラルコンサルタント コーポレートサイトに不正アクセス、外部との不正な通信も確認](https://scan.netsecurity.ne.jp/article/2026/09/04/56127.html) | 21.0 | 20.0 | 42.0 |
-| [東京都助成金 ～ ISMS 認証のほか自社開発ソフト改良の人件費を最大350万円まで](https://scan.netsecurity.ne.jp/article/2026/09/04/56126.html) | 21.0 | 20.0 | 42.0 |
-| [ShizenBox2 に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/04/56125.html) | 21.0 | 20.0 | 42.0 |
-| [Hugging Face 製 Transformers にユーザー同意確認前のリモートコード不正キャッシュの脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/04/56124.html) | 21.0 | 20.0 | 42.0 |
-| [離れて暮らす家族をリモートサポート ～ リモートデスクトップサービス「Splashtop Shield 5 台用」提供開始](https://scan.netsecurity.ne.jp/article/2026/09/04/56123.html) | 21.0 | 20.0 | 42.0 |
-| [Cato × HENNGE × Cybereason 共催、ゼロトラスト実装ウェビナーを9月16日に開催](https://scan.netsecurity.ne.jp/article/2026/09/04/56122.html) | 21.0 | 20.0 | 42.0 |
-| [LINE WORKS が Okta Integration Network に SCIM 連携で登録](https://scan.netsecurity.ne.jp/article/2026/09/04/56121.html) | 21.0 | 20.0 | 42.0 |
-| [フランスの病院、侵害で72万7,000人のデータ流出後に50万ユーロの罰金](https://www.bleepingcomputer.com/news/security/french-hospital-fined-500-000-after-breach-exposes-data-of-727-000/) | 20.0 | 20.0 | 42.0 |
-| [GMOナショナルセキュリティ、国家レベルのサイバー脅威やリスクを分析する専門部署「インテリジェンス課」新設](https://internet.watch.impress.co.jp/docs/news/2138040.html) | 20.0 | 20.0 | 42.0 |
-| [Coderのレジストリ基盤が侵害され悪意のあるモジュールが配布された](https://www.bleepingcomputer.com/news/security/coders-registry-infrastructure-compromised-to-push-malicious-modules/) | 20.0 | 20.0 | 42.0 |
+| [詐欺師があなたにメッセージを送る最適な時間を見つけ出した](https://www.helpnetsecurity.com/2026/09/04/scam-texts-peak-research/) | 28.0 | 20.0 | 42.0 |
+| [Microsoftが文字起こしAI「MAI-Transcribe-2」をリリース、Gemini 3.5 Transcribeより5倍高速＆GPT-Transcribeより10倍高速](https://gigazine.net/news/20260904-mai-transcribe-2/) | 27.0 | 20.0 | 42.0 |
+| [ELYZAの「業務AIアプリをAIで作成」特許、「新規性ない」と批判殺到→謝罪後も収まらず](https://www.itmedia.co.jp/news/article/2609/04/2000001167/) | 26.0 | 20.0 | 42.0 |
+| [草加市が全国自治体初、オンプレミス型生成AI「Sovereign GaiXer」を導入](https://ascii.jp/elem/000/004/432/4432328/?rss=) | 26.0 | 20.0 | 42.0 |
+| [OpenAIが「GPT-6 Astra」を提供開始、サイバー攻撃能力懸念で一時開発停止](https://xtech.nikkei.com/atcl/nxt/news/24/03373/) | 26.0 | 20.0 | 42.0 |
+| [RIZAP社員、私用AIに顧客の個人情報入力 氏名や疾患、保険証番号など……同社が謝罪](https://www.itmedia.co.jp/news/article/2609/04/2000001161/) | 26.0 | 20.0 | 42.0 |
+| [AIエージェントの認証情報に関する5つの管理項目](https://www.helpnetsecurity.com/2026/09/04/ai-agent-credentials-video/) | 25.0 | 20.0 | 42.0 |
+| [OpenAI、企業予算なしで防御に取り組むDaybreakに10億ドルを支援](https://www.helpnetsecurity.com/2026/09/04/openai-daybreak-frontline-defenders-access/) | 25.0 | 20.0 | 42.0 |
+| [「Cisco Nexus 9000」に深刻なRCE脆弱性 - 修正版を提供](https://www.security-next.com/189869) | 22.0 | 20.0 | 42.0 |
+| [世界的化学大手のBASFが顔認証システムFace IDが特許を侵害しているとしてAppleを提訴](https://gigazine.net/news/20260904-apple-face-id-lawsuit-basf/) | 22.0 | 20.0 | 42.0 |
+| [HPEのネットワークOS「AOS-CX」に34件の脆弱性 - 修正版を公開](https://www.security-next.com/189854) | 22.0 | 20.0 | 42.0 |
+| [“攻撃の民主化”が進むAI時代、Rubrikが説く「データとAIの守り方」](https://japan.zdnet.com/article/35252310/) | 21.0 | 20.0 | 42.0 |
+| [Tesla、ハンドルもペダルもない2人乗り「Cybercab」の配車を開始 オースティンの一部地域で](https://www.itmedia.co.jp/news/article/2609/04/2000001175/) | 21.0 | 20.0 | 42.0 |
+| [OpenAIが重要インフラ向けサイバー防御に10億ドル投じる「Daybreak for Frontline Defenders」を発表](https://news.mynavi.jp/techplus/article/20260904-4915178/) | 21.0 | 20.0 | 42.0 |
+| [Synology、「ActiveProtect Manager 2.0」発表 - クロスプラットフォーム復元とAI脅威対策に対応](https://news.mynavi.jp/techplus/article/20260904-4915030/) | 21.0 | 20.0 | 42.0 |
+| [AI攻撃の脅威は「これから数カ月」で変わる OpenAIらが共同声明](https://atmarkit.itmedia.co.jp/ait/articles/2609/04/news027.html) | 21.0 | 20.0 | 42.0 |
+| [日立がHMAXを拡充、DC運用やサイバー防御など フィジカルAI専門FDEも提供](https://xtech.nikkei.com/atcl/nxt/column/18/00001/12015/) | 21.0 | 20.0 | 42.0 |
+| [Claude Mythosが発見したバグのほとんどは人間によって未検証でした](https://www.helpnetsecurity.com/2026/09/04/echo-claude-mythos-vulnerability-findings/) | 20.0 | 20.0 | 42.0 |
+| [エクシングCPTrans-ME-Xにおける複数の脆弱性](https://jvn.jp/jp/JVN32505330/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
