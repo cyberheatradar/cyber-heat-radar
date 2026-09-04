@@ -1,19 +1,21 @@
-# 📡 サイレーダー 2026-09-04 17:00 JST
+# 📡 サイレーダー 2026-09-05 05:00 JST
 
-このレポートは、2026-09-04 11:00 JST〜2026-09-04 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-04 17:00 JST〜2026-09-05 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 46
-- [音声で扱う想定のトピック](#audio-topics): 3
+- 観測トピック数: 72
+- [音声で扱う想定のトピック](#audio-topics): 5
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 19
+- [低温だが記録しておくトピック](#low-record-topics): 43
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [September 2026 Patch Tuesday forecast: All we need is more time](#topic-30991) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [Cisco searched for IOS XR bugs and found so many it rolled them into an update release](#topic-30627) | 33.0 | 46.0 | 55.0 | 音声 | 温度感上位枠 |
-| 3 | [環境放射線モニタリングシステムの一部がランサム被害 - 鳥取県](#topic-31002) | 30.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [CVE-2026-85046: CISA KEV catalog addition](#topic-31075) | 51.0 | 46.0 | 55.0 | 音声 | 温度感上位枠 |
+| 2 | [Sangoma Switchvox Vulnerabilities Exploited in the Wild](#topic-30655) | 45.0 | 64.0 | 59.0 | 音声 | 温度感上位枠 |
+| 3 | [New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges](#topic-31063) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 4 | [Supply Chain of Distrust — Microsoft/GitHub Supply-Chain Compromise Targets AI Developers](#topic-31091) | 33.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 5 | [Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters](#topic-31049) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -21,97 +23,35 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-30991"></a>
+<a id="topic-31075"></a>
 
-### 1. September 2026 Patch Tuesday forecast: All we need is more time
+### 1. CVE-2026-85046: CISA KEV catalog addition
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>K⁠E⁠V</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>A⁠I</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-9月のPatch Tuesdayに向けた予測記事で、8月の更新では398件のCVEが修正されるなど、パッチ数の多さが続いていると伝えています。
-直近の傾向として、実際に悪用が確認された脆弱性は少数ながら、公開前に明らかになった脆弱性も含まれており、更新対応の重要性が示されています。
-修正件数が高水準で推移しているため、運用現場では優先度付けと適用計画の見直しが必要になります。公開前情報や既知の悪用状況がある場合は、通常以上に迅速な評価が求められます。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 月次更新の対象範囲が広いため、資産ごとの影響確認と適用順の整理を早めに行う。
-- 実際の悪用が確認された項目や公開済み情報があるかを別途確認し、優先度を上げて対応する。
-- パッチ適用だけでなく、関連サービスの監視強化や一時的な緩和策の要否も併せて点検する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-62911 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
-| 脆弱性 | CVE-2026-69414 | 関連CVE | 1.00 | 未確認 |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [September 2026 Patch Tuesday forecast: All we need is more time](https://www.helpnetsecurity.com/2026/09/04/september-2026-patch-tuesday-forecast/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
-
-<a id="topic-30627"></a>
-
-### 2. Cisco searched for IOS XR bugs and found so many it rolled them into an update release
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>i⁠O⁠S</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>温⁠度⁠感</nobr> | 51.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
 | <nobr>確⁠度</nobr> | 55.0 |
 
 #### 概要
 
-CiscoはIOS XR Softwareの内部セキュリティレビューで複数の脆弱性を見つけ、まとめて修正版を公開しました。
-公表時点では、これらの問題が実際に悪用されている兆候はないとされていますが、深刻度は高く、対応版への更新が案内されています。
-ネットワーク基盤を担うCisco IOS XRの脆弱性は、影響範囲が広がりやすく、運用への影響も大きくなり得ます。
-しかも今回の更新は複数件を含み、個別対処よりも計画的な適用が重要です。
+CISAは、実際の悪用が確認された脆弱性としてCVE-2026-85046をKEVカタログに追加しました。
+関連情報では、GoogleがChrome向けの修正を公開しており、Windows、macOS、Linux向けに更新版が配布されています。
+KEV入りは、単なる既知の脆弱性ではなく、優先的な対応が必要とみなされていることを示します。
+Chrome系の広範な利用環境に影響しうるため、組織内のブラウザ更新状況の確認が重要です。
 
 #### 温度感の理由
 
 ##### 温度感
 - 複数ソースで確認: 2 sources。
 - 実悪用・ゼロデイ文脈。
-- 現在の熱量に合わせた冷却補正。
+- 脅威・攻撃キャンペーン文脈。
 
 ##### 実務影響
 - 悪用情報あり。
@@ -123,24 +63,28 @@ CiscoはIOS XR Softwareの内部セキュリティレビューで複数の脆弱
 
 #### 担当者向け確認ポイント
 
-- Cisco IOS XRの利用有無と対象バージョンを確認し、該当する修正版の適用計画を立てる。
-- ワークアラウンドは案内されていないため、回避策よりも更新優先で進める。
-- 同一製品群で複数のCVEが出ているため、関連する通知をまとめて確認し、影響機器を漏れなく洗い出す。
+- Chromeの更新適用状況を早急に確認し、未適用端末を優先して更新する。
+- CISA KEV掲載のため、資産管理・脆弱性管理の対象として優先度を引き上げる。
+- ブラウザ利用端末で不審な挙動がないか確認し、関連ログや検知ルールを見直す。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| ベンダー | Cisco | 言及あり | 0.80 | — |
-| 製品 | Cisco IOS XR | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2026-85046 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
+| ベンダー | Google | 言及あり | 0.80 | — |
+| 製品 | Apple macOS | 言及あり | 0.80 | — |
+| 製品 | Chromium | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20274](https://nvd.nist.gov/vuln/detail/CVE-2026-20274) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Cisco searched for IOS XR bugs and found so many it rolled them into an update r](https://www.theregister.com/security/2026/09/04/cisco-searched-for-ios-xr-bugs-and-found-so-many-it-rolled-them-into-an-update-release/5294410) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco IOS XR Software Security Hardening Release: September 2026](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-iosxr-qg64NcM) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-85046](https://nvd.nist.gov/vuln/detail/CVE-2026-85046) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Google patches actively exploited Chrome zero-day (CVE-2026-85046)](https://www.helpnetsecurity.com/2026/09/04/google-chrome-zero-day-cve-2026-85046/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/09/04/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Google warns of new Chrome zero-day flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Google Patches 6th Chrome Zero-Day of 2026](https://www.securityweek.com/google-patches-6th-chrome-zero-day-of-2026/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -151,51 +95,252 @@ CiscoはIOS XR Softwareの内部セキュリティレビューで複数の脆弱
 
 ---
 
-<a id="topic-31002"></a>
+<a id="topic-30655"></a>
 
-### 3. 環境放射線モニタリングシステムの一部がランサム被害 - 鳥取県
+### 2. Sangoma Switchvox Vulnerabilities Exploited in the Wild
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | - |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 温度上昇中 |
+| <nobr>温⁠度⁠感</nobr> | 45.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
+| <nobr>確⁠度</nobr> | 59.0 |
 
 #### 概要
 
-鳥取県は、環境放射線モニタリングシステムの一部がランサム被害を受け、停止したことを公表しました。
-現時点ではバックアップ環境への同様の被害は確認されておらず、モニタリング業務への影響はないとされています。
-環境放射線の監視は公共性が高く、システム停止が起きると住民対応や運用判断に影響し得ます。
-今回は影響が限定的とされていますが、自治体の重要インフラに対するランサムウェア被害として注目されます。
+Sangoma Switchvoxに存在するCVE-2026-9586について、複数の公開情報で実際の悪用が観測されていると報じられています。
+対象はインターネットに公開された環境で、未認証のSQLインジェクションが遠隔コード実行につながる可能性があるとされています。
+VoIP／統合コミュニケーション基盤は業務影響が大きく、侵害されると通話基盤や関連システムに波及するおそれがあります。
+悪用が進行中とみられるため、修正適用の有無だけでなく、侵害痕跡の確認が急がれます。
 
 #### 温度感の理由
 
 ##### 温度感
-- 脅威・インシデント関連の公開情報として観測しています。
+- 複数ソースで確認: 3 sources。
+- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
-- ランサムウェア文脈。
+- 悪用情報あり。
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Switchvoxの該当バージョンを利用しているかを確認し、提供元の修正・緩和策を速やかに適用する。
+- インターネット公開の管理画面や関連サービスを点検し、不要な露出があれば制限する。
+- 異常なログイン試行、SQLエラー、予期しないプロセス起動やシェル生成など、侵害の兆候を重点的に確認する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-9586 | 関連CVE | 1.00 | 未確認 |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-9586](https://nvd.nist.gov/vuln/detail/CVE-2026-9586) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Sangoma Switchvox Vulnerabilities Exploited in the Wild](https://www.securityweek.com/sangoma-switchvox-vulnerabilities-exploited-in-the-wild/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Hackers exploit Sangoma Switchvox flaw to deploy reverse shells](https://www.bleepingcomputer.com/news/security/hackers-exploit-sangoma-switchvox-flaw-to-deploy-reverse-shells/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Exploitation of Sangoma Switchvox flaw is underway (CVE-2026-9586)](https://www.helpnetsecurity.com/2026/09/02/exploitation-of-sangoma-switchvox-flaw-underway-cve-2026-9586/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-31063"></a>
+
+### 3. New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+CrowdStrikeのFalcon製品に関するゼロデイ脆弱性「FalconFlank」が公開されたと報じられています。
+更新済みのWindows環境でも権限昇格につながる可能性があるとされていますが、現時点では公開情報ベースの報道であり、詳細な検証状況は不明です。
+権限昇格は、端末内での被害拡大や管理者権限の奪取につながり得るため、影響が大きくなりやすい類型です。
+セキュリティ製品に関わる問題であれば、監視・防御の前提にも影響しうるため注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 重要システムとバックアップ環境を分離し、バックアップ側の改ざんや停止も含めて点検する。
-- 復旧時に必要な監視・通知・手動運用の手順を確認し、障害時でも継続できる体制を整える。
-- 自治体・委託先を含めたアカウント管理、端末保護、ログ監視を再点検し、再発防止策を優先する。
+- CrowdStrike Falconの利用有無と対象端末を確認し、ベンダーの修正情報や注意喚起を継続監視する。
+- Windows端末で不審な権限昇格や設定変更の兆候がないか、EDRや監査ログを確認する。
+- 関連する保護策や運用手順を見直し、必要に応じて優先度を上げて適用する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | CrowdStrike | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [環境放射線モニタリングシステムの一部がランサム被害 - 鳥取県](https://www.security-next.com/189858) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges](https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-31091"></a>
+
+### 4. Supply Chain of Distrust — Microsoft/GitHub Supply-Chain Compromise Targets AI Developers
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>サ⁠プ⁠ラ⁠イ⁠チ⁠ェ⁠ー⁠ン</nobr> / <nobr>A⁠I</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Microsoft/GitHubに関するサプライチェーン侵害を扱う話題で、AI開発者向けのコーディング環境が単なる作業ツールではなく、重要な供給網の一部として見なされつつあることが示されています。
+公開情報の範囲では、開発環境や関連ツールが攻撃対象になり得るという文脈が中心で、詳細な被害範囲は確認できません。
+AI支援の開発環境は、ソースコードや認証情報、依存関係管理に近く、侵害されると影響が広がりやすいため注目されています。
+開発・CI/CDの保護が、通常の端末対策以上に重要になっていることを示す事例です。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- npm/PyPI・侵害パッケージ・開発者/CI/CDへの影響を伴うサプライチェーン攻撃。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AI開発ツールやGitHub連携の権限・トークン管理を見直す。
+- 依存関係や拡張機能の導入元を厳格に確認し、更新監視を行う。
+- 開発端末とCI/CDでの監査ログ収集、異常検知、最小権限を徹底する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Supply Chain of Distrust — Microsoft/GitHub Supply-Chain Compromise Targets AI D](https://securityboulevard.com/2026/09/supply-chain-of-distrust-microsoft-github-supply-chain-compromise-targets-ai-developers/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
+
+<a id="topic-31049"></a>
+
+### 5. Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>A⁠I</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Microsoftは、不可視のUnicode文字を使ってメールフィルターの解析を回避しようとする大規模なフィッシングキャンペーンを確認したとしています。
+受信者からは見えにくい形で文面を分割し、資金援助などを装う誘導文を通しやすくしていたと説明されています。
+従来のキーワードベースや単純な文字列解析に依存する防御では、こうした見えない文字を使った回避を見落とす可能性があります。
+メール防御の設定や検知ロジックを見直すきっかけになるため、実務上の示唆があります。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- メールゲートウェイやフィルターが不可視文字・特殊Unicodeを正規化できるか確認する。
+- フィッシング判定を文面の見た目だけでなく、文字コードや正規化後の内容も含めて評価する。
+- 不審な資金調達・請求・支払い関連メールについて、利用者向け注意喚起と報告導線を再確認する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filt](https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -221,25 +366,49 @@ CiscoはIOS XR Softwareの内部セキュリティレビューで複数の脆弱
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [詐欺師があなたにメッセージを送る最適な時間を見つけ出した](https://www.helpnetsecurity.com/2026/09/04/scam-texts-peak-research/) | 28.0 | 20.0 | 42.0 |
-| [Microsoftが文字起こしAI「MAI-Transcribe-2」をリリース、Gemini 3.5 Transcribeより5倍高速＆GPT-Transcribeより10倍高速](https://gigazine.net/news/20260904-mai-transcribe-2/) | 27.0 | 20.0 | 42.0 |
-| [ELYZAの「業務AIアプリをAIで作成」特許、「新規性ない」と批判殺到→謝罪後も収まらず](https://www.itmedia.co.jp/news/article/2609/04/2000001167/) | 26.0 | 20.0 | 42.0 |
-| [草加市が全国自治体初、オンプレミス型生成AI「Sovereign GaiXer」を導入](https://ascii.jp/elem/000/004/432/4432328/?rss=) | 26.0 | 20.0 | 42.0 |
-| [OpenAIが「GPT-6 Astra」を提供開始、サイバー攻撃能力懸念で一時開発停止](https://xtech.nikkei.com/atcl/nxt/news/24/03373/) | 26.0 | 20.0 | 42.0 |
-| [RIZAP社員、私用AIに顧客の個人情報入力 氏名や疾患、保険証番号など……同社が謝罪](https://www.itmedia.co.jp/news/article/2609/04/2000001161/) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントの認証情報に関する5つの管理項目](https://www.helpnetsecurity.com/2026/09/04/ai-agent-credentials-video/) | 25.0 | 20.0 | 42.0 |
-| [OpenAI、企業予算なしで防御に取り組むDaybreakに10億ドルを支援](https://www.helpnetsecurity.com/2026/09/04/openai-daybreak-frontline-defenders-access/) | 25.0 | 20.0 | 42.0 |
-| [「Cisco Nexus 9000」に深刻なRCE脆弱性 - 修正版を提供](https://www.security-next.com/189869) | 22.0 | 20.0 | 42.0 |
-| [世界的化学大手のBASFが顔認証システムFace IDが特許を侵害しているとしてAppleを提訴](https://gigazine.net/news/20260904-apple-face-id-lawsuit-basf/) | 22.0 | 20.0 | 42.0 |
-| [HPEのネットワークOS「AOS-CX」に34件の脆弱性 - 修正版を公開](https://www.security-next.com/189854) | 22.0 | 20.0 | 42.0 |
-| [“攻撃の民主化”が進むAI時代、Rubrikが説く「データとAIの守り方」](https://japan.zdnet.com/article/35252310/) | 21.0 | 20.0 | 42.0 |
-| [Tesla、ハンドルもペダルもない2人乗り「Cybercab」の配車を開始 オースティンの一部地域で](https://www.itmedia.co.jp/news/article/2609/04/2000001175/) | 21.0 | 20.0 | 42.0 |
-| [OpenAIが重要インフラ向けサイバー防御に10億ドル投じる「Daybreak for Frontline Defenders」を発表](https://news.mynavi.jp/techplus/article/20260904-4915178/) | 21.0 | 20.0 | 42.0 |
-| [Synology、「ActiveProtect Manager 2.0」発表 - クロスプラットフォーム復元とAI脅威対策に対応](https://news.mynavi.jp/techplus/article/20260904-4915030/) | 21.0 | 20.0 | 42.0 |
-| [AI攻撃の脅威は「これから数カ月」で変わる OpenAIらが共同声明](https://atmarkit.itmedia.co.jp/ait/articles/2609/04/news027.html) | 21.0 | 20.0 | 42.0 |
-| [日立がHMAXを拡充、DC運用やサイバー防御など フィジカルAI専門FDEも提供](https://xtech.nikkei.com/atcl/nxt/column/18/00001/12015/) | 21.0 | 20.0 | 42.0 |
-| [Claude Mythosが発見したバグのほとんどは人間によって未検証でした](https://www.helpnetsecurity.com/2026/09/04/echo-claude-mythos-vulnerability-findings/) | 20.0 | 20.0 | 42.0 |
-| [エクシングCPTrans-ME-Xにおける複数の脆弱性](https://jvn.jp/jp/JVN32505330/) | 20.0 | 20.0 | 42.0 |
+| [Super FormsとElementor ProのRCE脆弱性を狙う44万件超の攻撃試行](https://thehackernews.com/2026/09/over-440000-exploit-attempts-target.html) | 32.0 | 46.0 | 50.0 |
+| [BlueDeltaがHOOKEDGEで欧州を標的にした諜報活動](https://blog.polyswarm.io/hooked-on-espionage-bluedelta-targets-europe-with-hookedge) | 28.0 | 20.0 | 42.0 |
+| [Malwarebytes の近代化を支える見えない作業](https://www.malwarebytes.com/blog/inside-malwarebytes/2026/09/the-hidden-work-of-modernizing-malwarebytes) | 28.0 | 20.0 | 42.0 |
+| [「DDoS攻撃の件数は減少も、攻撃は高度化」ボットネットの制御精度向上](https://www.itpro.com/security/cyber-attacks/attackers-are-steering-their-botnets-with-greater-precision-and-control-ddos-attack-numbers-might-be-dwindling-but-theyre-intensifying) | 28.0 | 20.0 | 42.0 |
+| [使い込むほど成長するAIエージェント「Hermes Agent」の実行結果をメールで受け取ってみた](https://gigazine.net/news/20260905-hermes-agent-mail/) | 27.0 | 20.0 | 42.0 |
+| [従業員が個人利用の生成AIに顧客情報を誤アップロード - RIZAP](https://www.security-next.com/189853) | 27.0 | 20.0 | 42.0 |
+| [ChatGPT・Claude・Grokがほぼ同時刻にダウン](https://gigazine.net/news/20260904-openai-anthropic-spacexai-down/) | 27.0 | 20.0 | 42.0 |
+| [12年前のPostgreSQL脆弱性でデータベースとサーバーが乗っ取り可能に](https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html) | 26.0 | 28.0 | 54.0 |
+| [サントリー新商品の店頭POPに“生成AI疑惑” 成分表示にも誤りで物議……同社に事実関係を聞いた](https://www.itmedia.co.jp/news/article/2609/04/2000001197/) | 26.0 | 20.0 | 42.0 |
+| [OpenAI、重要インフラ防御者向けに最先端AI導入へ10億ドルを拠出](https://www.securityweek.com/openai-pledges-1-billion-to-bring-frontier-ai-to-critical-infrastructure-defenders/) | 25.0 | 20.0 | 42.0 |
+| [Rogue OpenAIエージェントが5月に死んだドイツのWebサイトを通信に利用、Hugging Face事件の数カ月前](https://www.theregister.com/ai-and-ml/2026/09/04/rogue-openai-agents-used-dead-german-web-site-to-communicate-in-may-months-before-hugging-face-incident/5294554) | 25.0 | 20.0 | 42.0 |
+| [OpenAIが最前線のサイバー防御者向けに資源と訓練を提供するため10億ドルを拠出へ](https://www.cybersecuritydive.com/news/openai-pledges-1-billion-resources-cyber-defenders/829676/) | 25.0 | 20.0 | 42.0 |
+| [AIが隠れた脆弱性の時代を終わらせる――ベンダーは対応できているか](https://www.darkreading.com/vulnerabilities-threats/ai-ending-era-hidden-vulnerabilities-are-vendors-ready) | 25.0 | 20.0 | 42.0 |
+| [Synology ActiveProtect Manager 2.0、AI駆動のセキュリティを強化](https://www.helpnetsecurity.com/2026/09/04/synology-activeprotect-manager-2-0-data-protection/) | 25.0 | 20.0 | 42.0 |
+| [CatchがAIエグゼクティブアシスタント向けガードレール機能で500万ドルを調達](https://www.securityweek.com/catch-raises-5-million-for-ai-executive-assistant-with-guardrails/) | 25.0 | 20.0 | 42.0 |
+| [AIコーディングエージェントが企業ネットワークに未知・未信頼のコードをインストールしている](https://securityboulevard.com/2026/09/ai-coding-agents-are-installing-unknown-untrusted-code-on-corporate-networks/) | 25.0 | 20.0 | 42.0 |
+| [OpenAI、AIサイバーセキュリティツールを社会インフラ向けに展開するため10億ドルを拠出](https://www.infosecurity-magazine.com/news/openai-pledges-ai-tools-essential/) | 25.0 | 20.0 | 42.0 |
+| [「AIは生産性向上の付属機能ではなく運用インフラになりつつある」――昨日の3重AI障害は企業への警鐘だ](https://www.itpro.com/security/ai-is-increasingly-becoming-operational-infrastructure-rather-than-a-productivity-add-on-yesterdays-triple-ai-outage-should-be-a-wake-up-call-for-enterprises) | 25.0 | 20.0 | 42.0 |
+| [NVIDIAがAIプラットフォームHugging Faceを130億ドルで買収](https://www.securityweek.com/nvidia-is-buying-ai-platform-hugging-face-for-13-billion/) | 25.0 | 20.0 | 42.0 |
+| [AIは本当にアプリケーション保守コストを削減できるのか、それともコードを増やすだけなのか](https://securityboulevard.com/2026/09/can-ai-actually-reduce-application-maintenance-costs-or-does-it-just-generate-more-code/) | 25.0 | 20.0 | 42.0 |
+| [SCOMの攻撃と防御：Management ServerリレーとRun As資格情報の取得](https://securityboulevard.com/2026/09/attacking-and-defending-scom-management-server-relay-and-obtaining-run-as-credentials/) | 25.0 | 20.0 | 42.0 |
+| [HPEがAOS-CXの重大なRCE脆弱性を修正](https://www.securityweek.com/hpe-patches-critical-rce-vulnerabilities-in-aos-cx/) | 24.0 | 46.0 | 50.0 |
+| [HP作成のOEMサービスで侵害 - 顧客情報流出の可能性](https://www.security-next.com/189127) | 22.0 | 20.0 | 42.0 |
+| [生物多様性センターのサイトが改ざん、影響など調査 - 千葉県](https://www.security-next.com/189725) | 22.0 | 20.0 | 42.0 |
+| [テスラがハンドルもペダルもない専用車両「Cybercab」をロボタクシーサービスに投入](https://gigazine.net/news/20260904-tesla-cybercab/) | 22.0 | 20.0 | 42.0 |
+| [「Anthropicはいまだサプライチェーンリスクであると認識している」と国防次官が主張、ラトニック商務長官による「我々はAnthropicを信頼している」の発言翌日](https://gigazine.net/news/20260904-anthropic-lutnick-dod/) | 22.0 | 20.0 | 42.0 |
+| [SEGAそっくりのロゴで「MAGA」――トランプ政権公開のWebゲームが物議 移民送還などを題材に 【追記あり】](https://www.itmedia.co.jp/news/article/2609/04/2000001191/) | 21.0 | 20.0 | 42.0 |
+| [IDScanが153万人分の運転者情報に影響したとされるデータ侵害で提訴される](https://www.bleepingcomputer.com/news/security/idscan-sued-over-alleged-data-breach-affecting-153-million-drivers/) | 20.0 | 20.0 | 42.0 |
+| [Microsoftのクラウド向けパッチ、Dropboxアカウントの侵害、Guardioの11億ドル評価額](https://www.securityweek.com/in-other-news-microsofts-cloud-patches-hacked-dropbox-accounts-guardios-1-1b-valuation/) | 20.0 | 20.0 | 42.0 |
+| [企業は自動化攻撃への備えを6か月以内に整える必要がある](https://www.darkreading.com/cybersecurity-operations/companies-six-months-prepare-automated-attacks) | 20.0 | 20.0 | 42.0 |
+| [Nvidiaの129億ドル規模のHugging Face提携が企業にもたらす恩恵](https://www.cybersecuritydive.com/news/Nvidia-acquires-hugging-face-enterprises/829697/) | 20.0 | 20.0 | 42.0 |
+| [Citrix NetScalerの認証回避の重大な脆弱性が攻撃に悪用され始める](https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/) | 20.0 | 20.0 | 42.0 |
+| [Tedバックドアが被害者自身のHAProxyビルド内に潜みWebトラフィックを傍受](https://thehackernews.com/2026/09/new-ted-backdoor-hides-inside-victims.html) | 20.0 | 20.0 | 42.0 |
+| [Passkey認証を破る39の新手法](https://www.bleepingcomputer.com/news/security/39-new-methods-that-compromise-passkey-authentication/) | 20.0 | 20.0 | 42.0 |
+| [ウクライナのドローン脅威を受けロシアのデータセンターに新たなセキュリティ要件](https://therecord.media/russia-data-centers-ukraine-drone-threats) | 20.0 | 20.0 | 42.0 |
+| [G7が組織に量子サイバー脅威への備えを促す](https://therecord.media/g7-urges-organizations-to-prepare-for-quantum-threats) | 20.0 | 20.0 | 42.0 |
+| [X Moneyの展開に関連したパスワードリセット攻撃](https://www.malwarebytes.com/blog/scams/2026/09/x-money-rollout-linked-to-password-reset-attacks) | 20.0 | 20.0 | 42.0 |
+| [VMware WorkstationおよびFusionの更新で重大な脆弱性を修正](https://www.securityweek.com/vmware-workstation-and-fusion-updates-patch-critical-vulnerability/) | 20.0 | 20.0 | 42.0 |
+| [サイバーセキュリティを決定づけるスキルとしての判断力](https://cyberscoop.com/ai-security-operations-human-context-ciso-op-ed/) | 20.0 | 20.0 | 42.0 |
+| [G7、量子耐性サイバーセキュリティ規則の迅速な整備を要請](https://www.infosecurity-magazine.com/news/g7-urges-quantum-safe-cyber-rules/) | 20.0 | 20.0 | 42.0 |
+| [無料のストリーミングボックスが自宅回線を犯罪通信の中継に使っている可能性](https://www.malwarebytes.com/blog/news/2026/09/free-streaming-boxes-may-be-routing-criminal-traffic-through-your-home) | 20.0 | 20.0 | 42.0 |
+| [Microsoft TeamsでQRコードを悪用したフィッシングが大幅に困難に](https://www.helpnetsecurity.com/2026/09/04/microsoft-teams-qr-code-phishing-protection/) | 20.0 | 20.0 | 42.0 |
+| [Kaseya、Datto RMM向けに新たなコンプライアンスとAppleデバイス管理ツールを発表](https://www.itpro.com/security/data-protection/kaseya-announces-new-compliance-and-apple-device-management-tools-for-datto-rmm) | 20.0 | 20.0 | 42.0 |
 
 ---
 
