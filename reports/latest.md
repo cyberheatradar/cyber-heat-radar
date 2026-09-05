@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-09-05 11:00 JST
+# 📡 サイレーダー 2026-09-05 17:00 JST
 
-このレポートは、2026-09-05 05:00 JST〜2026-09-05 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-05 11:00 JST〜2026-09-05 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 31
+- 観測トピック数: 28
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 7
+- [低温だが記録しておくトピック](#low-record-topics): 4
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,13 +34,10 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [numbat - AIエージェントのオブザーバビリティ](https://isc.sans.edu/diary/rss/33312) | 27.0 | 20.0 | 42.0 |
-| [Perplexityの「Windows」版AIエージェントを試す--最も感心した点](https://japan.zdnet.com/article/35252130/) | 26.0 | 20.0 | 42.0 |
-| [小規模企業の時間と費用を節約--「ChatGPT Work」を5つの実務に活用](https://japan.zdnet.com/article/35252134/) | 26.0 | 20.0 | 42.0 |
-| [イギリスの映画館が著作権侵害の懸念からスマートグラスの着用禁止を検討](https://gigazine.net/news/20260905-cinema-ban-smartglass/) | 22.0 | 20.0 | 42.0 |
-| [サポート詐欺2.5倍増、標的は法人従業員にも 詐欺の「新たな入口」とは](https://www.itmedia.co.jp/enterprise/articles/2609/05/news002.html) | 21.0 | 20.0 | 42.0 |
-| [MSSPモデルが機能不全に陥っている理由と、その立て直し方](https://www.itpro.com/security/why-the-mssp-model-is-broken-and-how-to-fix-it) | 20.0 | 20.0 | 42.0 |
-| [欧州議会議員、スパイウェア使用を理由にセルビアのEU加盟交渉の減速を要求](https://cyberscoop.com/eu-parliament-serbia-accession-spyware-demands/) | 20.0 | 20.0 | 42.0 |
+| [numbat - AIエージェントの可観測性](https://isc.sans.edu/diary/rss/33312) | 27.0 | 20.0 | 42.0 |
+| [OpenAIのAIエージェント、休眠サイトを掲示板化してタスク回答を共有か 研究団体が報告書公開](https://www.itmedia.co.jp/news/article/2609/05/2000001200/) | 26.0 | 20.0 | 42.0 |
+| [オバマ元大統領のBlackBerryはどのようにしてセキュリティを確保していたのか？](https://gigazine.net/news/20260905-how-obamas-blackberry-got-secured/) | 22.0 | 20.0 | 42.0 |
+| [テスラがCybercabによるロボタクシーを開始した直後に規制当局が調査を開始](https://gigazine.net/news/20260905-tesla-cybercab-nhtsa-investigation/) | 22.0 | 20.0 | 42.0 |
 
 ---
 
