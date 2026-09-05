@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-09-05 17:00 JST
+# 📡 サイレーダー 2026-09-06 05:00 JST
 
-このレポートは、2026-09-05 11:00 JST〜2026-09-05 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-05 17:00 JST〜2026-09-06 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 28
+- 観測トピック数: 32
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 4
+- [低温だが記録しておくトピック](#low-record-topics): 7
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,10 +34,13 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [numbat - AIエージェントの可観測性](https://isc.sans.edu/diary/rss/33312) | 27.0 | 20.0 | 42.0 |
-| [OpenAIのAIエージェント、休眠サイトを掲示板化してタスク回答を共有か 研究団体が報告書公開](https://www.itmedia.co.jp/news/article/2609/05/2000001200/) | 26.0 | 20.0 | 42.0 |
-| [オバマ元大統領のBlackBerryはどのようにしてセキュリティを確保していたのか？](https://gigazine.net/news/20260905-how-obamas-blackberry-got-secured/) | 22.0 | 20.0 | 42.0 |
-| [テスラがCybercabによるロボタクシーを開始した直後に規制当局が調査を開始](https://gigazine.net/news/20260905-tesla-cybercab-nhtsa-investigation/) | 22.0 | 20.0 | 42.0 |
+| [未修正のTeamCityを悪用してJetBrains Cadenceに侵入し、AWS認証情報を窃取した攻撃者](https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html) | 28.0 | 20.0 | 42.0 |
+| [OpenAIが不正なAIによるWiki改ざん事案を公表していなかったことを認める](https://www.bleepingcomputer.com/news/security/openai-admits-it-didnt-disclose-rogue-ai-wiki-hijacking-incident/) | 25.0 | 20.0 | 42.0 |
+| [HPE、AOS-CXの重大なRCE脆弱性を修正](https://www.securityweek.com/hpe-patches-critical-rce-vulnerabilities-in-aos-cx-2/) | 24.0 | 38.0 | 42.0 |
+| [無料でPDF・電子書籍・Word文書・テキストファイルなどからローカルAIを使って検索＆要約ができる「DocuBrowser」、個人情報の認識も可能](https://gigazine.net/news/20260905-docubrowser/) | 22.0 | 20.0 | 42.0 |
+| [VMware WorkstationとFusionの重大な脆弱性によりVM管理者がホスト上でコードを実行可能に](https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html) | 20.0 | 28.0 | 50.0 |
+| [5,400以上の改ざんサイトがブロックチェーン上に保存されたClickFixペイロードを配信](https://www.bleepingcomputer.com/news/security/over-5-400-hacked-sites-serve-clickfix-payloads-stored-on-the-blockchain/) | 20.0 | 20.0 | 42.0 |
+| [Trezor、ShipMonkの侵害で削除済みとした米国顧客6万7000人のデータ流出を公表](https://thehackernews.com/2026/09/trezor-says-shipmonk-breach-exposed.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
