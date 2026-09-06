@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-09-06 05:00 JST
+# 📡 サイレーダー 2026-09-06 11:00 JST
 
-このレポートは、2026-09-05 17:00 JST〜2026-09-06 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-06 05:00 JST〜2026-09-06 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 32
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 29
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 7
+- [低温だが記録しておくトピック](#low-record-topics): 4
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores](#topic-31184) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,67 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-31184"></a>
+
+### 1. Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+Magento Open Source と Adobe Commerce に、未修正の脆弱性が存在し、攻撃者がオンラインストアのサーバー上で不正なコードを実行できる状態が報告されています。
+公開情報では、この問題はゼロデイとして悪用が観測されているとされ、影響を受ける店舗ではバックドア設置につながる可能性が示されています。
+EC基盤への侵入は、サイト改ざんや情報窃取、運用停止など事業影響が広がりやすいため注意が必要です。しかも未修正のまま実際の悪用が観測されている点が、優先度を高めています。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Magento Open Source / Adobe Commerce を利用している場合は、ベンダーの告知と修正版の有無をすぐ確認し、適用可否を判断する。
+- 管理画面やサーバー上の不審な変更、未知のファイル・プロセス、アクセスログの異常を点検する。
+- 公開中のECサイトは、関連コンポーネントの棚卸しとバックアップの整合性確認を急ぐ。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Adobe | 言及あり | 0.80 | — |
+| 製品 | Adobe Commerce | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Store](https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,13 +96,10 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [未修正のTeamCityを悪用してJetBrains Cadenceに侵入し、AWS認証情報を窃取した攻撃者](https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html) | 28.0 | 20.0 | 42.0 |
-| [OpenAIが不正なAIによるWiki改ざん事案を公表していなかったことを認める](https://www.bleepingcomputer.com/news/security/openai-admits-it-didnt-disclose-rogue-ai-wiki-hijacking-incident/) | 25.0 | 20.0 | 42.0 |
-| [HPE、AOS-CXの重大なRCE脆弱性を修正](https://www.securityweek.com/hpe-patches-critical-rce-vulnerabilities-in-aos-cx-2/) | 24.0 | 38.0 | 42.0 |
-| [無料でPDF・電子書籍・Word文書・テキストファイルなどからローカルAIを使って検索＆要約ができる「DocuBrowser」、個人情報の認識も可能](https://gigazine.net/news/20260905-docubrowser/) | 22.0 | 20.0 | 42.0 |
-| [VMware WorkstationとFusionの重大な脆弱性によりVM管理者がホスト上でコードを実行可能に](https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html) | 20.0 | 28.0 | 50.0 |
-| [5,400以上の改ざんサイトがブロックチェーン上に保存されたClickFixペイロードを配信](https://www.bleepingcomputer.com/news/security/over-5-400-hacked-sites-serve-clickfix-payloads-stored-on-the-blockchain/) | 20.0 | 20.0 | 42.0 |
-| [Trezor、ShipMonkの侵害で削除済みとした米国顧客6万7000人のデータ流出を公表](https://thehackernews.com/2026/09/trezor-says-shipmonk-breach-exposed.html) | 20.0 | 20.0 | 42.0 |
+| [ChatGPT登場以降に公開されたウェブサイトの3分の1に「AI」の痕跡が見られることが研究で判明](https://gigazine.net/news/20260906-web-ai-signs/) | 27.0 | 20.0 | 42.0 |
+| [7割が「シャドーAI」未対策 Gartner提言・メルカリ事例に学ぶ、正攻法](https://atmarkit.itmedia.co.jp/ait/articles/2609/06/news001.html) | 26.0 | 20.0 | 42.0 |
+| [OpenAI、休眠サイトへの自社AIエージェント書き込みを認め、非公表の理由を説明](https://www.itmedia.co.jp/news/article/2609/06/2000001202/) | 26.0 | 20.0 | 42.0 |
+| [トランプ政権が公開したテトリスライクなゲームにテトリス公式が反応](https://gigazine.net/news/20260906-tetris-responds-trump-build-the-wall/) | 22.0 | 20.0 | 42.0 |
 
 ---
 
