@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-09-06 17:00 JST
+# 📡 サイレーダー 2026-09-07 05:00 JST
 
-このレポートは、2026-09-06 11:00 JST〜2026-09-06 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-06 17:00 JST〜2026-09-07 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 24
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 32
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 7
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Week in review: Claude accounts compromised through infostealer, Patch Tuesday forecast](#topic-31216) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,68 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-31216"></a>
+
+### 1. Week in review: Claude accounts compromised through infostealer, Patch Tuesday forecast
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Anthropicが、インフォスティーラーによってログインセッションが侵害された可能性があるClaude利用者のアカウントをロックしていると伝えられています。
+公開された材料では、どの範囲の利用者が影響を受けたかや侵害の詳細は確認できません。
+AIサービスのアカウントが乗っ取られると、会話内容や連携情報などの機微な情報が影響を受けるおそれがあります。
+特にセッション情報の悪用は、単純なパスワード変更だけでは十分でない場合があるため注意が必要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 利用者にはパスワード変更だけでなく、既存セッションの無効化や再認証の確認を促すこと。
+- インフォスティーラー感染の兆候がある端末では、認証情報やブラウザ保存データの扱いを見直すこと。
+- AIサービスや関連SaaSで、異常なログイン・セッションの検知と通知設定を確認すること。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Anthropic | 言及あり | 0.80 | — |
+| AIモデル/プロジェクト | Claude | 主題 | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Week in review: Claude accounts compromised through infostealer, Patch Tuesday f](https://www.helpnetsecurity.com/2026/09/06/week-in-review-claude-accounts-compromised-through-infostealer-patch-tuesday-forecast/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -29,7 +92,18 @@
 
 ## ❄️ 低温だが記録しておくトピック
 
-今回は低温記録トピックはありません。
+音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
+重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
+
+| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
+|---|---:|---:|---:|
+| [攻撃者が不可視Unicode文字を使ってフィッシング誘導を隠す手口](https://www.bleepingcomputer.com/news/security/attackers-conceal-phishing-lures-using-invisible-unicode-characters/) | 28.0 | 20.0 | 42.0 |
+| [複数のAIエージェントを1つのターミナルから統括できる「Herdr」](https://gigazine.net/news/20260906-herdr/) | 27.0 | 20.0 | 42.0 |
+| [セキュリティチームのための自動応答とSOAR設計パターン](https://securityboulevard.com/2026/09/automated-response-and-soar-design-patterns-for-security-teams/) | 20.0 | 20.0 | 42.0 |
+| [OTセキュリティニュース日報：2026年9月6日](https://securityboulevard.com/2026/09/daily-ot-security-news-september-06-2026/) | 20.0 | 20.0 | 42.0 |
+| [IT各社 サイバー防御支援に商機](https://news.yahoo.co.jp/pickup/6594458?source=rss) | 20.0 | 20.0 | 42.0 |
+| [認証なしでインターネット公開されたSSHを悪用しMikroTikルーターを乗っ取る攻撃](https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html) | 20.0 | 20.0 | 42.0 |
+| [REVSTEALER関連の4つのモジュールがWindows UpdateとDefenderを無効化して暗号資産マイナーを実行](https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
