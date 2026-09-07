@@ -1,17 +1,17 @@
-# 📡 サイレーダー 2026-09-07 05:00 JST
+# 📡 サイレーダー 2026-09-07 11:00 JST
 
-このレポートは、2026-09-06 17:00 JST〜2026-09-07 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-07 05:00 JST〜2026-09-07 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 32
+- 観測トピック数: 55
 - [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 7
+- [低温だが記録しておくトピック](#low-record-topics): 30
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Week in review: Claude accounts compromised through infostealer, Patch Tuesday forecast](#topic-31216) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [「Chromium」に脆弱性 - 「Chrome」や「Edge」など広く影響](#topic-31227) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,66 +19,64 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-31216"></a>
+<a id="topic-31227"></a>
 
-### 1. Week in review: Claude accounts compromised through infostealer, Patch Tuesday forecast
+### 1. 「Chromium」に脆弱性 - 「Chrome」や「Edge」など広く影響
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
+| <nobr>温⁠度⁠感</nobr> | 39.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-Anthropicが、インフォスティーラーによってログインセッションが侵害された可能性があるClaude利用者のアカウントをロックしていると伝えられています。
-公開された材料では、どの範囲の利用者が影響を受けたかや侵害の詳細は確認できません。
-AIサービスのアカウントが乗っ取られると、会話内容や連携情報などの機微な情報が影響を受けるおそれがあります。
-特にセッション情報の悪用は、単純なパスワード変更だけでは十分でない場合があるため注意が必要です。
+米当局は、ChromiumのスクリプトエンジンV8に見つかった脆弱性が実際に悪用されているとして注意喚起を行いました。
+Chromiumを基盤とするブラウザは広く使われているため、ChromeやEdgeなどの利用者にも影響が及ぶ可能性があります。
+基盤技術の脆弱性は、単一製品にとどまらず複数の派生ブラウザへ波及しやすい点が重要です。悪用が確認されている場合は、修正適用の優先度を高める必要があります。
 
 #### 温度感の理由
 
 ##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
+- 実悪用・ゼロデイ文脈。
 
 ##### 実務影響
-- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
+- 悪用情報あり。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 利用者にはパスワード変更だけでなく、既存セッションの無効化や再認証の確認を促すこと。
-- インフォスティーラー感染の兆候がある端末では、認証情報やブラウザ保存データの扱いを見直すこと。
-- AIサービスや関連SaaSで、異常なログイン・セッションの検知と通知設定を確認すること。
+- Chromium系ブラウザの更新状況を確認し、提供されている修正版を速やかに適用する。
+- 組織内でChrome、EdgeなどChromium派生ブラウザの利用範囲を把握し、対象端末を漏れなく洗い出す。
+- 脆弱性情報とベンダー案内を継続監視し、必要に応じて暫定的なリスク低減策を検討する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| ベンダー | Anthropic | 言及あり | 0.80 | — |
-| AIモデル/プロジェクト | Claude | 主題 | 0.80 | — |
+| 脆弱性 | CVE-2026-85046 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
+| 製品 | Chromium | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Week in review: Claude accounts compromised through infostealer, Patch Tuesday f](https://www.helpnetsecurity.com/2026/09/06/week-in-review-claude-accounts-compromised-through-infostealer-patch-tuesday-forecast/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [「Chromium」に脆弱性 - 「Chrome」や「Edge」など広く影響](https://www.security-next.com/189909) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
+- 技術・開発者系ソース観測: 観測なし。
 
 ---
 
@@ -97,13 +95,36 @@ AIサービスのアカウントが乗っ取られると、会話内容や連携
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [攻撃者が不可視Unicode文字を使ってフィッシング誘導を隠す手口](https://www.bleepingcomputer.com/news/security/attackers-conceal-phishing-lures-using-invisible-unicode-characters/) | 28.0 | 20.0 | 42.0 |
-| [複数のAIエージェントを1つのターミナルから統括できる「Herdr」](https://gigazine.net/news/20260906-herdr/) | 27.0 | 20.0 | 42.0 |
-| [セキュリティチームのための自動応答とSOAR設計パターン](https://securityboulevard.com/2026/09/automated-response-and-soar-design-patterns-for-security-teams/) | 20.0 | 20.0 | 42.0 |
-| [OTセキュリティニュース日報：2026年9月6日](https://securityboulevard.com/2026/09/daily-ot-security-news-september-06-2026/) | 20.0 | 20.0 | 42.0 |
-| [IT各社 サイバー防御支援に商機](https://news.yahoo.co.jp/pickup/6594458?source=rss) | 20.0 | 20.0 | 42.0 |
-| [認証なしでインターネット公開されたSSHを悪用しMikroTikルーターを乗っ取る攻撃](https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html) | 20.0 | 20.0 | 42.0 |
-| [REVSTEALER関連の4つのモジュールがWindows UpdateとDefenderを無効化して暗号資産マイナーを実行](https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html) | 20.0 | 20.0 | 42.0 |
+| [T&K TOKAにランサムウェア攻撃、一部の業務を停止](https://scan.netsecurity.ne.jp/article/2026/09/07/56141.html) | 29.0 | 30.0 | 42.0 |
+| [【自己採点】あなたの会社のランサムウェア対策は？ ガートナー説く60点・90点・100点](https://www.sbbit.jp/article/cont1/186746?ref=rss) | 28.0 | 30.0 | 42.0 |
+| [コスト削減のためにAIエージェントの出力を短くすると逆にコストがかさむ事例をGitHubが公開、うまくコスト効率を向上するにはどうすればいいのか](https://gigazine.net/news/20260907-ai-coding-cost-efficient/) | 27.0 | 20.0 | 42.0 |
+| [MikroTikの重大な脆弱性、今すぐパッチを適用してください](https://isc.sans.edu/diary/rss/33314) | 26.0 | 38.0 | 42.0 |
+| [OpenAI、エージェントによる研究加速と直面する安全性の壁を開示 チーフサイエンティストは「自発的減速」を提唱](https://www.itmedia.co.jp/news/article/2609/07/2000001204/) | 26.0 | 20.0 | 42.0 |
+| [SaaSに代わりAIエージェント支える“AaaS”が台頭／議事録作成AIは「意思決定支援」へ進化／生成AIの顧客満足度・1位はClaude、ほか](https://ascii.jp/elem/000/004/432/4432581/?rss=) | 26.0 | 20.0 | 42.0 |
+| [AI駆動が変えるシステム開発、生産性向上の先にある新たな課題](https://japan.zdnet.com/article/35252273/) | 26.0 | 20.0 | 42.0 |
+| [「パッチを全部当てる」時代の終焉 Check PointのCTOが語る、AI時代の脆弱性管理](https://www.itmedia.co.jp/enterprise/articles/2609/07/news015.html) | 26.0 | 20.0 | 42.0 |
+| [AIが業務システムを動かすとき、何がリスクになるのか](https://japan.zdnet.com/article/35252138/) | 26.0 | 20.0 | 42.0 |
+| [ChatGPT Astraが月額20ドルのPlusサブスクリプション向けに展開開始](https://www.bleepingcomputer.com/news/artificial-intelligence/chatgpt-astra-is-now-rolling-out-to-20-plus-subscription/) | 25.0 | 20.0 | 42.0 |
+| [ASUSの端末管理ソフトウェアに深刻な脆弱性 - 更新を強く推奨](https://www.security-next.com/189918) | 22.0 | 20.0 | 42.0 |
+| [先週注目された記事（2026年8月30日〜2026年9月5日）](https://www.security-next.com/189915) | 22.0 | 20.0 | 42.0 |
+| [AIで脆弱性を発見するAisleに注目--セキュリティ専門家らも称賛](https://japan.zdnet.com/article/35252340/) | 21.0 | 20.0 | 42.0 |
+| [WordPressの人気バックアッププラグインに重大な脆弱性、320万サイト以上が未修正](https://news.mynavi.jp/techplus/article/20260907-4915286/) | 21.0 | 20.0 | 42.0 |
+| [「ネット de 診断 Lite」が作る新しい市場 ～ 契約十数件から始まる GMO サイバーセキュリティ byイエラエの挑戦](https://scan.netsecurity.ne.jp/article/2026/09/07/56147.html) | 21.0 | 20.0 | 42.0 |
+| [HENNGE Oneが10月に刷新、新製品・新プランの全貌を明かす全9回のウェビナー開催](https://scan.netsecurity.ne.jp/article/2026/09/07/56146.html) | 21.0 | 20.0 | 42.0 |
+| [ダークウェブへの 17,559 名の情報流出を確認 ～ ロジックベインの不正アクセス被害](https://scan.netsecurity.ne.jp/article/2026/09/07/56145.html) | 21.0 | 20.0 | 42.0 |
+| [VOISING が利用する BI ツールに不正アクセス、保管されていたデータの不正取得を確認](https://scan.netsecurity.ne.jp/article/2026/09/07/56144.html) | 21.0 | 20.0 | 42.0 |
+| [名前の漢字が一文字異なる別人を同一人物と思い込む ～ 大阪府、個人情報が記載された書類を誤送付](https://scan.netsecurity.ne.jp/article/2026/09/07/56143.html) | 21.0 | 20.0 | 42.0 |
+| [01銀行のシステムに不正アクセス、最大100社の情報が漏えい](https://scan.netsecurity.ne.jp/article/2026/09/07/56142.html) | 21.0 | 20.0 | 42.0 |
+| [資格情報の不正利用でシステム閲覧被害 ～ 三井不動産、最大5.5万件の情報漏えいの可能性](https://scan.netsecurity.ne.jp/article/2026/09/07/56140.html) | 21.0 | 20.0 | 42.0 |
+| [警察庁「パスワードだけの認証はもう限界です」パスキー導入検討を呼びかけ](https://scan.netsecurity.ne.jp/article/2026/09/07/56139.html) | 21.0 | 20.0 | 42.0 |
+| [38.3％が可能なサービスには全て二段階認証を設定](https://scan.netsecurity.ne.jp/article/2026/09/07/56138.html) | 21.0 | 20.0 | 42.0 |
+| [事故報告10,633件の4割近くが要対応レベル（PMK500該当）～ Pマーク付与事業者に求められる運用再点検](https://scan.netsecurity.ne.jp/article/2026/09/07/56136.html) | 21.0 | 20.0 | 42.0 |
+| [エクシングCPTrans-ME-X に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/07/56135.html) | 21.0 | 20.0 | 42.0 |
+| [PALLET CONTROL 製品にアクセス制御不備の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/07/56134.html) | 21.0 | 20.0 | 42.0 |
+| [企業資産の「36％」が“脆弱性ゾーン”で放置 AI攻撃時代に旧来の防御モデルは限界か](https://atmarkit.itmedia.co.jp/ait/articles/2609/07/news017.html) | 21.0 | 20.0 | 42.0 |
+| [ServiceNowが「セキュリティ企業」になる理由 大型買収の裏にある勝算](https://www.itmedia.co.jp/enterprise/articles/2609/07/news027.html) | 21.0 | 20.0 | 42.0 |
+| [犬を飼うと認知症リスク48％減 東京に住む1万人以上を調査 国立環境研究所や東大など](https://www.itmedia.co.jp/news/article/2609/07/2000001178/) | 21.0 | 20.0 | 42.0 |
+| [単独のサイバー攻撃者が企業の防衛網を突破--わずか10時間の詳細経緯](https://japan.zdnet.com/article/35252229/) | 21.0 | 20.0 | 42.0 |
 
 ---
 
