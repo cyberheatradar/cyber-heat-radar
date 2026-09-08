@@ -1,18 +1,15 @@
-# 📡 サイレーダー 2026-09-08 11:00 JST
+# 📡 サイレーダー 2026-09-08 17:00 JST
 
-このレポートは、2026-09-08 05:00 JST〜2026-09-08 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-08 11:00 JST〜2026-09-08 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 52
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 41
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 26
+- [低温だが記録しておくトピック](#low-record-topics): 17
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [「Adobe Commerce」に脆弱性、すでに悪用も - 早急に対処を](#topic-31413) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [AI がランサムウェア攻撃全工程を実行、被害企業に 80 ページにわたる“セキュリティ監査報告書”まで提出](#topic-31414) | 34.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -20,121 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-31413"></a>
-
-### 1. 「Adobe Commerce」に脆弱性、すでに悪用も - 早急に対処を
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-Adobeは、Adobe CommerceやMagentoに影響する任意のコード実行につながるおそれのある深刻なゼロデイ脆弱性について、セキュリティアップデートを公開しました。
-既に悪用が確認されているとされており、対象環境では早急な対応が必要です。EC基盤として広く使われる製品に関わるため、影響範囲が大きくなる可能性があります。
-悪用が確認されている点から、修正適用の優先度は高いと考えられます。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Adobe Commerce / Magento の該当バージョンを使っているか確認し、公開された更新を速やかに適用する。
-- 運用中の管理画面・関連サーバーのアクセス状況や不審な変更の有無を点検する。
-- 外部公開している場合は、補完的にアクセス制御や監視を強化し、修正完了までリスクを抑える。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Adobe | 言及あり | 0.80 | — |
-| 製品 | Adobe Commerce | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [「Adobe Commerce」に脆弱性、すでに悪用も - 早急に対処を](https://www.security-next.com/189963) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-31414"></a>
-
-### 2. AI がランサムウェア攻撃全工程を実行、被害企業に 80 ページにわたる“セキュリティ監査報告書”まで提出
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 34.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-AIがランサムウェア攻撃の一連の工程に関与したとされ、被害企業に対して80ページに及ぶ“セキュリティ監査報告書”のような文書まで作成したと伝えられています。
-公開情報では、攻撃の自動化が従来より広い範囲に及んだ可能性が示されており、AIの悪用が実務上の脅威として注目されています。
-攻撃の実行だけでなく、被害者を装うような文書作成までAIが担ったとされる点が、新しい脅威像として受け止められています。
-防御側は、侵入後の横展開や情報窃取だけでなく、生成AIを使った高度な偽装や対話も前提に備える必要があります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 生成AIを使った不審な文書・通知・監査報告の真偽確認手順を見直す。
-- ランサムウェア対策として、初期侵入だけでなく侵入後の自動化された活動検知を強化する。
-- インシデント時の社内外コミュニケーションにおいて、AI生成の偽情報を前提に検証プロセスを徹底する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [AI がランサムウェア攻撃全工程を実行、被害企業に 80 ページにわたる“セキュリティ監査報告書”まで提出](https://scan.netsecurity.ne.jp/article/2026/09/08/56160.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -151,32 +34,23 @@ AIがランサムウェア攻撃の一連の工程に関与したとされ、被
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [教育ソフトウェアの休眠中のレンタルサーバにランサムウェア攻撃、暗号化被害と不正アクセスの痕跡を確認](https://scan.netsecurity.ne.jp/article/2026/09/08/56158.html) | 29.0 | 30.0 | 42.0 |
-| [AI創薬候補、6種の「老化時計」で生物学的年齢の低下を示唆](https://www.itmedia.co.jp/news/article/2609/08/2000001239/) | 28.0 | 20.0 | 42.0 |
-| [AI時代の労働者、AIスキル以上に求められる資質とは？](https://japan.zdnet.com/article/35252370/) | 26.0 | 20.0 | 42.0 |
-| [「AIの制限」でも「野放し」でも失敗する？ AI時代に“共有APIキー”は限界](https://atmarkit.itmedia.co.jp/ait/articles/2609/08/news034.html) | 26.0 | 20.0 | 42.0 |
-| [「N-central」に脆弱性、ホットフィクス公開 - 悪用確認、侵害調査を](https://www.security-next.com/189970) | 22.0 | 20.0 | 42.0 |
-| [Microsoftが9月セキュリティ更新を発表 クラウドサービス複数でCVSS 10.0を含む脆弱性を修正](https://www.itmedia.co.jp/enterprise/articles/2609/08/news022.html) | 21.0 | 20.0 | 42.0 |
-| [警察庁と日本MS、サイバー対策で協定 情報共有、教育で連携](https://www.itmedia.co.jp/news/article/2609/08/2000001241/) | 21.0 | 20.0 | 42.0 |
-| [Okta Blog 第19回 経産省「SCS評価制度」におけるサプライチェーンセキュリティとアイデンティティ管理の重要性](https://scan.netsecurity.ne.jp/article/2026/09/08/56159.html) | 21.0 | 20.0 | 42.0 |
-| [宛名と住所が 1 行ズレた状態で発送データ作成 ～ 学校法人でダイレクトメール誤送付](https://scan.netsecurity.ne.jp/article/2026/09/08/56157.html) | 21.0 | 20.0 | 42.0 |
-| [さくらインターネットへの不正アクセス、案内ページを公開](https://scan.netsecurity.ne.jp/article/2026/09/08/56156.html) | 21.0 | 20.0 | 42.0 |
-| [サカタのタネへの不正アクセス、調査結果を公表](https://scan.netsecurity.ne.jp/article/2026/09/08/56155.html) | 21.0 | 20.0 | 42.0 |
-| [パスキー設定を要請 ～ 浜銀TT証券でフィッシングによる不正アクセス・取引被害発生](https://scan.netsecurity.ne.jp/article/2026/09/08/56154.html) | 21.0 | 20.0 | 42.0 |
-| [警察庁が DMARC を郵便局に例えて紹介「Quarantine」「Reject」への移行促す](https://scan.netsecurity.ne.jp/article/2026/09/08/56153.html) | 21.0 | 20.0 | 42.0 |
-| [従来のバックアップやBCPは意図的侵害を想定せず ～ NTTデータグループ、サイバーセキュリティ グローバル動向四半期レポート（2025年度第3四半期）](https://scan.netsecurity.ne.jp/article/2026/09/08/56152.html) | 21.0 | 20.0 | 42.0 |
-| [サイバー攻撃の「被害経験なし」企業は約 6 割へ減少 ～ 東商2026年アンケート調査](https://scan.netsecurity.ne.jp/article/2026/09/08/56151.html) | 21.0 | 20.0 | 42.0 |
-| [守るべきはデータではなく事業 ～ CTC、企業のサイバーセキュリティ・ガバナンス体系を解説](https://scan.netsecurity.ne.jp/article/2026/09/08/56150.html) | 21.0 | 20.0 | 42.0 |
-| [ダークネット観測パケット数が過去最高を更新、10年前から10倍に増大 ～ 総務省「令和8年版情報通信白書」](https://scan.netsecurity.ne.jp/article/2026/09/08/56149.html) | 21.0 | 20.0 | 42.0 |
-| [45社が先行導入、HENNGEがDMARC運用支援の新サービス「Domain Protection」を開始](https://scan.netsecurity.ne.jp/article/2026/09/08/56148.html) | 21.0 | 20.0 | 42.0 |
-| [「標的型攻撃事件」から15年。対策として「多層防御」は正解だったのか？](https://japan.zdnet.com/article/35252175/) | 21.0 | 20.0 | 42.0 |
-| [パスワードは既に漏れているかも？ 「Google アカウント」から始める乗っ取り防止](https://www.itmedia.co.jp/enterprise/articles/2609/08/news018.html) | 21.0 | 20.0 | 42.0 |
-| [スカイゲートテクノロジズ、通信遅延と導入時の負担を解消する端末完結型SSE「Cygiene ECAP」提供開始](https://internet.watch.impress.co.jp/docs/news/2138879.html) | 20.0 | 20.0 | 42.0 |
-| [「自社では見えず、攻撃者にだけ見えるセキュリティリスク」をなくす、ASMサービス「Mitokude」でDTSとグランセキュノロジーが協業 社外視点の「.pub」、社内視点の「.local」の組み合わせでリスクを可視化](https://internet.watch.impress.co.jp/docs/news/2138917.html) | 20.0 | 20.0 | 42.0 |
-| [警察庁とマイクロソフト、サイバー事案対策で協定](https://internet.watch.impress.co.jp/docs/news/2138885.html) | 20.0 | 20.0 | 42.0 |
-| [AI時代、「完全自律型SOC」は幻想か？ガートナーが語る“限界”と次の一手](https://www.sbbit.jp/article/cont1/186772?ref=rss) | 20.0 | 20.0 | 42.0 |
-| [AIによってサイバー攻撃は本当に「高度化」したのか？【海の向こうの“セキュリティ”】](https://internet.watch.impress.co.jp/docs/column/security/2138390.html) | 20.0 | 20.0 | 42.0 |
-| [脆弱性やシャドーITを見逃さない！ 注目のセキュリティサービス「アタックサーフェスマネジメント」（ASM）とは[Sponsored]](https://internet.watch.impress.co.jp/docs/topic/special/2131584.html) | 20.0 | 20.0 | 42.0 |
+| [ChatGPT Workに「ユーザーの文章のクセを学んで再現する機能」が追加される](https://gigazine.net/news/20260908-chatgpt-learning-writing-quirks/) | 29.0 | 20.0 | 42.0 |
+| [ランサムウェア交渉戦術は業務プロセス化している](https://www.helpnetsecurity.com/2026/09/08/ransomware-negotiation-tactics-video/) | 28.0 | 30.0 | 42.0 |
+| [InstagramのAI検出ラベルが誤作動しまくっていると話題に](https://gigazine.net/news/20260908-instagram-ai-detection/) | 27.0 | 20.0 | 42.0 |
+| [数学の難問を与えられた100体のAIエージェントが不正を行う側と不正に対抗する側に分かれたことがGoogleの実験で判明](https://gigazine.net/news/20260908-ai-cheating-vs-whistleblowing/) | 27.0 | 20.0 | 42.0 |
+| [企業内検索基盤「活文」最新版、MCPに対応--AIエージェントに信頼性の高い情報を提供](https://japan.zdnet.com/article/35252396/) | 26.0 | 20.0 | 42.0 |
+| [ChatGPT Workに“自分の文体”学習機能 GmailやSlackの文章から言い回しやクセを模倣](https://www.itmedia.co.jp/news/article/2609/08/2000001256/) | 26.0 | 20.0 | 42.0 |
+| [AIは「チップ」から「物理限界」の戦いへ――エクイニクスが語るインフラ分散と液冷・地域共生の工学](https://ascii.jp/elem/000/004/431/4431972/?rss=) | 26.0 | 20.0 | 42.0 |
+| [Dopplerが人間、パイプライン、AIエージェントのシークレットを保護する製品を紹介](https://www.helpnetsecurity.com/2026/09/08/product-showcase-doppler-secrets-management-platform/) | 25.0 | 20.0 | 42.0 |
+| [MicrosoftのProject Zenith、大規模AIモデルを開発者PC上で直接実行可能に](https://www.helpnetsecurity.com/2026/09/08/microsoft-project-zenith-windows-11-experience/) | 25.0 | 20.0 | 42.0 |
+| [「Dell SCG」に100件超の脆弱性 - 重要度「クリティカル」](https://www.security-next.com/190000) | 22.0 | 20.0 | 42.0 |
+| [「IBM Operational Decision Manager」に深刻なSQLi脆弱性](https://www.security-next.com/189995) | 22.0 | 20.0 | 42.0 |
+| [SHIFT、新セキュリティブランド立ち上げ--第1弾「Splunk」特化サービスを提供](https://japan.zdnet.com/article/35252388/) | 21.0 | 20.0 | 42.0 |
+| [Vietnam関連のAPIS漏えいで2億2000万件の旅行者記録が流出](https://www.bleepingcomputer.com/news/security/220-million-traveler-records-exposed-in-vietnam-linked-apis-leak/) | 20.0 | 20.0 | 42.0 |
+| [イランの発電所閉鎖は全企業への警告：どう対応すべきか](https://www.itpro.com/security/cyber-attacks/iran-power-plant-closure-is-a-warning-to-all-businesses-how-to-respond) | 20.0 | 20.0 | 42.0 |
+| [チャネルにおけるツール乱立の隠れたコスト](https://www.itpro.com/security/the-hidden-cost-of-tool-sprawl-on-the-channel) | 20.0 | 20.0 | 42.0 |
+| [今すぐ応募できるサイバーセキュリティ求人：2026年9月8日](https://www.helpnetsecurity.com/2026/09/08/cybersecurity-jobs-available-right-now-september-8-2026/) | 20.0 | 20.0 | 42.0 |
+| [札幌で初の開催、10月7日に「Security Days Fall 2026」。参加費は無料 さらに大阪・福岡・東京・名古屋で順次開催、サイバーセキュリティに特化したイベント](https://internet.watch.impress.co.jp/docs/news/2138981.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
