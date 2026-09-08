@@ -1,22 +1,18 @@
-# 📡 サイレーダー 2026-09-08 05:00 JST
+# 📡 サイレーダー 2026-09-08 11:00 JST
 
-このレポートは、2026-09-07 17:00 JST〜2026-09-08 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-08 05:00 JST〜2026-09-08 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 84
-- [音声で扱う想定のトピック](#audio-topics): 6
+- 観測トピック数: 52
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 54
+- [低温だが記録しておくトピック](#low-record-topics): 26
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [N-able patches critical N-central zero-day exploited in the wild (CVE-2026-86218)](#topic-31338) | 47.0 | 64.0 | 55.0 | 音声 | 温度感上位枠 |
-| 2 | [7th September – Threat Intelligence Report](#topic-30622) | 44.0 | 74.0 | 64.0 | 音声 | 温度感上位枠 |
-| 3 | [N-able Issues Fourth N-central Hotfix in Five Weeks for Unauthenticated RCE Flaw](#topic-31394) | 41.0 | 56.0 | 43.0 | 音声 | 温度感上位枠 |
-| 4 | [Nightmare Eclipse Drops CrowdStrike, Nvidia, Avast Zero-Day Exploits](#topic-31341) | 41.0 | 50.0 | 43.0 | 音声 | 温度感上位枠 |
-| 5 | [Researcher Publishes CrowdStrike Privilege Escalation Zero Day](#topic-31396) | 39.0 | 50.0 | 43.0 | 音声 | 温度感上位枠 |
-| 6 | [Cyber criminals are adapting ASCII smuggling for mass phishing campaigns](#topic-31363) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 1 | [「Adobe Commerce」に脆弱性、すでに悪用も - 早急に対処を](#topic-31413) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [AI がランサムウェア攻撃全工程を実行、被害企業に 80 ページにわたる“セキュリティ監査報告書”まで提出](#topic-31414) | 34.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -24,289 +20,27 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-31338"></a>
+<a id="topic-31413"></a>
 
-### 1. N-able patches critical N-central zero-day exploited in the wild (CVE-2026-86218)
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 47.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 55.0 |
-
-#### 概要
-
-N-ableは、N-centralに存在する重大な脆弱性CVE-2026-86218に対して緊急のホットフィックスを公開しました。
-報道によると、この問題は実際に悪用が観測されたゼロデイとして扱われており、事前認証でリモートコード実行につながる可能性があるとされています。
-N-centralはMSPなどで広く使われるRMM製品とされ、影響範囲が大きくなりやすい点が注目されています。
-認証前のRCEという性質上、放置するとサーバー侵害につながるおそれがあるため、優先度の高い対応が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 2 sources。
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 複数ソース確認。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- N-centralの該当バージョンとホットフィックス適用状況を確認し、未適用なら速やかに更新する。
-- 公開情報で「実悪用」が示されているため、関連サーバーの監視ログや異常な管理操作の痕跡を点検する。
-- RMM製品は侵害時の影響が大きいので、管理面への外部公開範囲やアクセス制御もあわせて見直す。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-86218 | 関連CVE | 1.00 | 未確認 |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-86218](https://nvd.nist.gov/vuln/detail/CVE-2026-86218) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [N-able Releases Hotfix for Critical Remote Code Execution Vulnerability](https://www.infosecurity-magazine.com/news/nable-hotfix-critical-rce/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [N-able patches critical N-central zero-day exploited in the wild (CVE-2026-86218](https://www.helpnetsecurity.com/2026/09/07/n-able-n-central-hotfix-cve-2026-86218/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-30622"></a>
-
-### 2. 7th September – Threat Intelligence Report
+### 1. 「Adobe Commerce」に脆弱性、すでに悪用も - 早急に対処を
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>I⁠o⁠C</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>P⁠o⁠C</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 44.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 74.0 |
-| <nobr>確⁠度</nobr> | 64.0 |
-
-#### 概要
-
-SonicWallは、SMA1000アプライアンスに影響する2件の脆弱性を公表し、実際に悪用が確認されているとしています。
-とくにCVE-2026-83548は認証前のSSRFで、もう一方の脆弱性と組み合わさることで、影響機器で深刻な侵害につながる可能性があるとされています。
-SMA1000は外部公開されやすいリモートアクセス基盤として使われるため、影響範囲次第で組織の境界防御に直結します。
-公開前からの悪用が示されている点から、単なるパッチ適用だけでなく侵害有無の確認が重要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 4 sources。
-- 実悪用・ゼロデイ文脈。
-- 公開PoC・検証コード言及あり。
-- 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用情報あり。
-- 公開PoCにより再現・悪用可能性が上がる。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 複数ソース確認。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 対象バージョンのSMA1000を利用しているか確認し、ベンダー提供の修正版へ速やかに更新する。
-- 更新後も、すでに侵害されていた可能性を前提にログ確認やベンダー案内に沿った影響調査を行う。
-- 侵害の兆候が見つかった場合は、機器の再展開やパスワード変更、TOTPトークンの再設定を検討する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-82329 | 関連CVE | 1.00 | 候補あり（URL 6件以上） |
-| 脆弱性 | CVE-2026-83548 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
-| 脆弱性 | CVE-2026-83549 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | SonicWall | 言及あり | 0.80 | — |
-| 製品 | SonicWall SMA | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-83548](https://nvd.nist.gov/vuln/detail/CVE-2026-83548) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [7th September – Threat Intelligence Report](https://research.checkpoint.com/2026/7th-september-threat-intelligence-report/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Critical SonicWall SMA1000 Vulnerabilities CVE-2026-83548, CVE-2026-83549 Exploi](https://www.rapid7.com/blog/post/etr-critical-sonicwall-sma1000-vulnerabilities-cve-2026-83548-cve-2026-83549-exploited-in-the-wild) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Attackers Exploit Two SonicWall SMA 1000 Zero-Days That May Form an Attack Chain](https://thehackernews.com/2026/09/attackers-exploit-two-sonicwall-sma.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [SonicWall SMA 1000 appliances under attack via zero-day flaws](https://www.helpnetsecurity.com/2026/09/02/sonicwall-sma-1000-cve-2026-83548-cve-2026-83549-zero-day-attacks/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
-
-<a id="topic-31394"></a>
-
-### 3. N-able Issues Fourth N-central Hotfix in Five Weeks for Unauthenticated RCE Flaw
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>R⁠C⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 41.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 56.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-N-ableは、RMM製品「N-central」に対する新たなホットフィックスを公開しました。
-対象はオンプレミス版の広い範囲で、直前の修正を適用済みの環境でも追加対応が必要とされています。
-認証なしでのリモートコード実行につながる可能性がある不具合とされ、影響範囲が広い点が注目されています。
-実際の悪用があったとする案内と、未確認とする記述が混在しているため、運用側は公式情報に基づく早急な確認が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- N-centralのオンプレミス環境が対象かどうかを確認し、必要なホットフィックス適用状況を点検する。
-- ベンダーの最新告知とリリース नोटを確認し、適用済みの修正だけで十分かを見直す。
-- 管理系システムとして重要度が高いため、脆弱性対応中は関連ログや不審な管理操作の有無を確認する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [N-able Issues Fourth N-central Hotfix in Five Weeks for Unauthenticated RCE Flaw](https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-31341"></a>
-
-### 4. Nightmare Eclipse Drops CrowdStrike, Nvidia, Avast Zero-Day Exploits
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>P⁠o⁠C</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>T⁠T⁠P</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 41.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 50.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-SecurityWeekによると、Nightmare EclipseがCrowdStrike、Nvidia、Avastに関連するゼロデイ脆弱性のPoCを公開したとされています。
-公開情報では、これらのPoCが権限昇格につながり、System権限のシェル取得に至る可能性が示されています。
-ゼロデイかつ権限昇格に関わるため、影響を受ける環境では優先的な確認が必要です。特にセキュリティ製品や広く使われるソフトウェアが対象とされている点で注目されています。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- 悪用情報あり。
-- 権限昇格系。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 対象製品を利用している環境で、ベンダー告知や修正版の有無を確認する。
-- 管理者権限の不正取得につながる可能性を踏まえ、特権アカウントの監視と最小権限を見直す。
-- 関連する異常なプロセス起動や権限昇格の兆候を重点的に監視する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | CrowdStrike | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Nightmare Eclipse Drops CrowdStrike, Nvidia, Avast Zero-Day Exploits](https://www.securityweek.com/nightmare-eclipse-drops-crowdstrike-nvidia-avast-zero-day-exploits/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
-
-<a id="topic-31396"></a>
-
-### 5. Researcher Publishes CrowdStrike Privilege Escalation Zero Day
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>T⁠T⁠P</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
 | <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 50.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
 | <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-CrowdStrike製品に関連する権限昇格のゼロデイ脆弱性について、研究者が公開したとされています。
-公開情報では、悪用されれば権限を引き上げられる可能性があるとされますが、詳細な影響範囲や実際の被害状況は材料内では確認できません。
-権限昇格は、端末や管理環境への影響を拡大させやすく、防御側の優先度が高い脆弱性類型です。ゼロデイとして扱われるため、修正や検知の準備が間に合わない可能性があります。
+Adobeは、Adobe CommerceやMagentoに影響する任意のコード実行につながるおそれのある深刻なゼロデイ脆弱性について、セキュリティアップデートを公開しました。
+既に悪用が確認されているとされており、対象環境では早急な対応が必要です。EC基盤として広く使われる製品に関わるため、影響範囲が大きくなる可能性があります。
+悪用が確認されている点から、修正適用の優先度は高いと考えられます。
 
 #### 温度感の理由
 
@@ -315,28 +49,28 @@ CrowdStrike製品に関連する権限昇格のゼロデイ脆弱性について
 
 ##### 実務影響
 - 悪用情報あり。
-- 権限昇格系。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- CrowdStrike関連コンポーネントの利用有無を確認し、ベンダー告知や更新情報を優先的に追跡する。
-- 権限昇格の観点から、管理者権限の最小化や特権アカウントの監査を見直す。
-- 関連端末で不審な権限変更や管理操作の痕跡がないか、ログ監視を強化する。
+- Adobe Commerce / Magento の該当バージョンを使っているか確認し、公開された更新を速やかに適用する。
+- 運用中の管理画面・関連サーバーのアクセス状況や不審な変更の有無を点検する。
+- 外部公開している場合は、補完的にアクセス制御や監視を強化し、修正完了までリスクを抑える。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| ベンダー | CrowdStrike | 言及あり | 0.80 | — |
+| ベンダー | Adobe | 言及あり | 0.80 | — |
+| 製品 | Adobe Commerce | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Researcher Publishes CrowdStrike Privilege Escalation Zero Day](https://www.infosecurity-magazine.com/news/crowdstrike-privilege-escalation/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [「Adobe Commerce」に脆弱性、すでに悪用も - 早急に対処を](https://www.security-next.com/189963) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -347,52 +81,51 @@ CrowdStrike製品に関連する権限昇格のゼロデイ脆弱性について
 
 ---
 
-<a id="topic-31363"></a>
+<a id="topic-31414"></a>
 
-### 6. Cyber criminals are adapting ASCII smuggling for mass phishing campaigns
+### 2. AI がランサムウェア攻撃全工程を実行、被害企業に 80 ページにわたる“セキュリティ監査報告書”まで提出
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>温⁠度⁠感</nobr> | 34.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
 | <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-ASCII smugglingと呼ばれる手法が、これまで主に生成AIへのプロンプト注入で知られていた文脈から、メールのスパムフィルター回避に悪用されていると報じられています。
-今回の話題では、サイバー犯罪者がこの手法を大量のフィッシングキャンペーンに適応させている点が注目されています。
-メール経由のフィッシングは依然として主要な侵入経路の一つであり、検知回避の工夫が加わると防御側の見落としにつながるおそれがあります。
-AI関連の技術や概念が攻撃手法に転用される例としても、動向把握の価値があります。
+AIがランサムウェア攻撃の一連の工程に関与したとされ、被害企業に対して80ページに及ぶ“セキュリティ監査報告書”のような文書まで作成したと伝えられています。
+公開情報では、攻撃の自動化が従来より広い範囲に及んだ可能性が示されており、AIの悪用が実務上の脅威として注目されています。
+攻撃の実行だけでなく、被害者を装うような文書作成までAIが担ったとされる点が、新しい脅威像として受け止められています。
+防御側は、侵入後の横展開や情報窃取だけでなく、生成AIを使った高度な偽装や対話も前提に備える必要があります。
 
 #### 温度感の理由
 
 ##### 温度感
 - AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
 
 ##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+- ランサムウェア文脈。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- メールセキュリティ製品で、本文や表示の異常な文字表現・不可視要素に起因する見逃しがないか確認する。
-- スパム判定だけでなく、URL・添付・送信元整合性など複数のシグナルを組み合わせた検知運用を見直す。
-- 利用者向けに、見た目が自然でも不審なメールは開かない・リンクを即時に踏まないという注意喚起を継続する。
+- 生成AIを使った不審な文書・通知・監査報告の真偽確認手順を見直す。
+- ランサムウェア対策として、初期侵入だけでなく侵入後の自動化された活動検知を強化する。
+- インシデント時の社内外コミュニケーションにおいて、AI生成の偽情報を前提に検証プロセスを徹底する。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Cyber criminals are adapting ASCII smuggling for mass phishing campaigns](https://www.itpro.com/security/cyber-crime/cyber-criminals-are-adapting-ascii-smuggling-for-mass-phishing-campaigns) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [AI がランサムウェア攻撃全工程を実行、被害企業に 80 ページにわたる“セキュリティ監査報告書”まで提出](https://scan.netsecurity.ne.jp/article/2026/09/08/56160.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -418,60 +151,32 @@ AI関連の技術や概念が攻撃手法に転用される例としても、動
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Magento StyleSmugglerゼロデイ脆弱性が悪用されLinuxバックドアを展開](https://www.bleepingcomputer.com/news/security/magento-stylesmuggler-zero-day-exploited-to-deploy-linux-backdoor/) | 37.0 | 38.0 | 43.0 |
-| [Adobe Commerceのゼロデイ脆弱性が悪用されオンラインストアにバックドアが設置される](https://www.securityweek.com/adobe-commerce-zero-day-exploited-to-backdoor-online-stores/) | 37.0 | 38.0 | 43.0 |
-| [Rhysida、200万ユーロの恐喝要求が拒否されベルリン政府のデータを公開](https://www.infosecurity-magazine.com/news/rhysida-berlin-data-extortion/) | 28.0 | 30.0 | 42.0 |
-| [改変されたScreenConnectクライアントがワーム型キャンペーンに悪用される](https://www.securityweek.com/modified-screenconnect-clients-used-in-worm-like-campaign/) | 28.0 | 20.0 | 42.0 |
-| [Lenovoのログインシステムの不備で5,000件のDropboxアカウントが侵害可能に](https://www.bitdefender.com/en-us/blog/hotforsecurity/lenovo-login-system-hackers-dropbox) | 28.0 | 20.0 | 42.0 |
-| [攻撃者が不正なScreenConnectクライアントを使ってマルウェアを拡散](https://www.helpnetsecurity.com/2026/09/07/connectwise-screenconnect-file-transfer-flaw/) | 28.0 | 20.0 | 42.0 |
-| [GPT-6 AstraがAIコーディング性能でトップ級の67点、圧倒的なトークン効率を示すもFable 5.1には届かず](https://gigazine.net/news/20260907-artificial-analysis-gpt-6-astra/) | 27.0 | 20.0 | 42.0 |
-| [Telerik UIのパディングオラクル脆弱性が認証不要RCEにつながる公開エクスプロイトも公開](https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html) | 26.0 | 38.0 | 42.0 |
-| [AIはサンドボックスを突破できる。容易だ。今こそ、それを封じ込める新たな境界が必要だ。](https://securityboulevard.com/2026/09/ai-can-jump-sandboxes-easy-peasy-the-world-needs-new-borders-that-can-actually-contain-it/) | 25.0 | 20.0 | 42.0 |
-| [AI生成の漏えい認証情報の大量流出：その枯渇方法とは](https://securityboulevard.com/2026/09/ai-created-a-leaked-credentials-flood-heres-how-were-draining-it/) | 25.0 | 20.0 | 42.0 |
-| [AI搭載アプリにおける攻撃対象領域として重要なAPI](https://securityboulevard.com/2026/09/apis-are-the-attack-surface-that-matters-in-ai-powered-apps-firetail-blog/) | 25.0 | 20.0 | 42.0 |
-| [NCSCがShadow AIによる新たなセキュリティリスクを警告](https://www.infosecurity-magazine.com/news/ncsc-warns-shadow-ai-security-risks/) | 25.0 | 20.0 | 42.0 |
-| [OpenAI Agentsを悪用した別の被害者サイト乗っ取り](https://www.securityweek.com/openai-agents-hijack-another-victim-website/) | 25.0 | 20.0 | 42.0 |
-| [シャドーAIに潜む見えないリスク](https://www.ncsc.gov.uk/blogs/the-hidden-risks-of-shadow-ai) | 25.0 | 20.0 | 42.0 |
-| [開発者の自律性を損なわずに共有AIエンジニアリング基盤を構築する方法](https://securityboulevard.com/2026/09/how-to-build-a-shared-ai-engineering-framework-without-killing-developer-autonomy/) | 25.0 | 20.0 | 42.0 |
-| [X上のOnlyFansプロモーターはAIを使って人間らしく見せている可能性がある](https://www.malwarebytes.com/blog/ai/2026/09/flirty-onlyfans-promoters-on-x-may-be-using-ai-to-appear-human) | 25.0 | 20.0 | 42.0 |
-| [ChatGPTが個人向けアプリに接続して文体を模倣可能に](https://www.bleepingcomputer.com/news/artificial-intelligence/chatgpt-can-now-connect-to-your-personal-apps-to-mimic-writing-style/) | 25.0 | 20.0 | 42.0 |
-| [OpenAI、自己改善AI実現への道でマイルストーンを達成](https://www.helpnetsecurity.com/2026/09/07/openai-research-automation-intern/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIの反乱的エージェント・スウォームは短命に終わったが、その不気味なログは今も残る](https://www.theregister.com/columnists/2026/09/07/openais-rebel-agent-swarm-died-young-but-its-chilling-logs-live-on/5294446) | 25.0 | 20.0 | 42.0 |
-| [Weekly Recap: Chromeのゼロデイ、ルーター乗っ取り、Coderのサプライチェーン攻撃など](https://thehackernews.com/2026/09/weekly-recap-chrome-0-day-router.html) | 22.0 | 20.0 | 43.0 |
-| [「まんだらけ」サーバに不正侵入、情報流出か - 通販やオークションは再開](https://www.security-next.com/189663) | 22.0 | 20.0 | 42.0 |
-| [社内ファイルサーバが侵害、情報流出が判明 - アンビションDX](https://www.security-next.com/188534) | 22.0 | 20.0 | 42.0 |
-| [ヘルプデスクがスパム踏み台に、メール閲覧も - JCV](https://www.security-next.com/189860) | 22.0 | 20.0 | 42.0 |
-| [県立高体験入学申込サイトで個人情報が閲覧可能に - 福岡県](https://www.security-next.com/189480) | 22.0 | 20.0 | 42.0 |
-| [偽警官にだまされ、名刺情報をメール送信 - 安藤ハザマ](https://www.security-next.com/189678) | 22.0 | 20.0 | 42.0 |
-| [ロイヤルティポイント詐欺がハッカーの休暇資金になっている話](https://www.malwarebytes.com/blog/podcast/2026/09/loyalty-points-fraud-is-funding-hacker-holidays-lock-and-code-s07e18) | 20.0 | 20.0 | 42.0 |
-| [PEEPがChromeとEdgeをホストコマンド実行用の侵害後バックドアに変える](https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html) | 20.0 | 20.0 | 42.0 |
-| [Microsoft 365のデータ窃取・恐喝攻撃で経営層を狙う偽IT電話](https://thehackernews.com/2026/09/microsoft-365-attackers-use-help-desk.html) | 20.0 | 20.0 | 42.0 |
-| [BigBearのMicrosoft 365フィッシングサービスが258組織のMFAを回避](https://www.bleepingcomputer.com/news/security/bigbear-microsoft-365-phishing-service-bypassed-mfa-at-258-organizations/) | 20.0 | 20.0 | 42.0 |
-| [NightwingのCEOがスタッフに向けてLabor Dayのメッセージを発信、The Registerにも言及](https://www.theregister.com/security/2026/09/07/nightwing-ceo-has-a-labor-day-message-for-staff-and-apparently-the-register/5294819) | 20.0 | 20.0 | 42.0 |
-| [認証不要でMikroTikデバイスを乗っ取るRouterOSの脆弱性を悪用する攻撃者](https://www.helpnetsecurity.com/2026/09/07/mikrotik-routeros-ssh-vulnerabilities-exploited/) | 20.0 | 20.0 | 42.0 |
-| [DDoSテストベンダーの比較：Red Button、MazeBolt、RedWolf、NimbusDDoS](https://securityboulevard.com/2026/09/ddos-testing-vendor-comparison-red-button-mazebolt-redwolf-and-nimbusddos/) | 20.0 | 20.0 | 42.0 |
-| [LG TVの脆弱性により、待機中でも攻撃者に盗聴される可能性](https://www.malwarebytes.com/blog/privacy/2026/09/lg-tv-flaws-could-let-attackers-listen-in-even-in-standby-mode) | 20.0 | 20.0 | 42.0 |
-| [ハッカーがLiquid Networkから3億2000万ドル相当のBitcoinを流出、正義の味方を名乗る](https://www.theregister.com/security/2026/09/07/hackers-drain-320m-in-bitcoin-from-liquid-network-claim-theyre-the-good-guys/5294770) | 20.0 | 20.0 | 42.0 |
-| [日刊OTセキュリティニュース：2026年9月7日](https://securityboulevard.com/2026/09/daily-ot-security-news-september-07-2026/) | 20.0 | 20.0 | 42.0 |
-| [Mathspace、100万人超に影響するデータ侵害を公表](https://www.bleepingcomputer.com/news/security/mathspace-discloses-data-breach-affecting-over-1-million-people/) | 20.0 | 20.0 | 42.0 |
-| [Trezorの情報漏えいの影響、81,000人の顧客に拡大](https://www.bleepingcomputer.com/news/security/trezor-data-breach-impact-now-reaches-81-000-customers/) | 20.0 | 20.0 | 42.0 |
-| [北朝鮮のハッカーが新たなLinuxスパイ活動ツールキットを展開](https://www.securityweek.com/north-korean-hackers-deploy-new-linux-espionage-toolkit/) | 20.0 | 20.0 | 42.0 |
-| [Berlin、新たなデータ流出を調査　ハッカーが盗んだログイン認証情報を公開](https://therecord.media/germany-berlin-second-data-breach-city-agencies) | 20.0 | 20.0 | 42.0 |
-| [あなたのクラウドセキュリティチェックリストは、思っているようには機能しない](https://thehackernews.com/2026/09/your-cloud-security-checklist-doesnt.html) | 20.0 | 20.0 | 42.0 |
-| [ログインを超えて：クラウド時代のブルートフォースと認証情報悪用の検知](https://securityboulevard.com/2026/09/beyond-the-login-detecting-brute-force-and-credential-abuse-in-the-cloud-era/) | 20.0 | 20.0 | 42.0 |
-| [Rogue ScreenConnectクライアントが新規接続ホストに4段階のVBScript連鎖を拡散](https://thehackernews.com/2026/09/rogue-screenconnect-clients-spread-four.html) | 20.0 | 20.0 | 42.0 |
-| [ウェールズ環境規制当局の情報公開対応ミスで2,000人分の多様性データが流出](https://www.theregister.com/security/2026/09/07/welsh-environment-regulators-foi-blunder-exposes-diversity-data-of-2000-staff/5294748) | 20.0 | 20.0 | 42.0 |
-| [北朝鮮のLazarusは6つの異なるサイバークラスターを通じて活動している](https://www.infosecurity-magazine.com/news/north-korea-lazarus-six-cyber/) | 20.0 | 20.0 | 42.0 |
-| [ネットワーク侵入テストとは](https://securityboulevard.com/2026/09/what-is-network-penetration-testing-2/) | 20.0 | 20.0 | 42.0 |
-| [新たなMikroTik RouterOSの脆弱性を悪用してルーターを乗っ取る攻撃者](https://www.bleepingcomputer.com/news/security/hackers-exploit-new-mikrotik-routeros-flaws-to-hijack-routers/) | 20.0 | 20.0 | 42.0 |
-| [東京科学大学の情報基盤に不正アクセス、統合時の東京工業大学・東京医科歯科大学生らの個人情報が漏えいした可能性](https://internet.watch.impress.co.jp/docs/news/2138892.html) | 20.0 | 20.0 | 42.0 |
-| [ConnectWise、ScreenConnectの新たな脆弱性を警告も修正パッチは未提供](https://www.bleepingcomputer.com/news/security/connectwise-warns-of-new-screenconnect-flaw-without-patch/) | 20.0 | 20.0 | 42.0 |
-| [英国の食品サプライチェーンが敵対的攻撃の危機にさらされる](https://www.theregister.com/security/2026/09/07/uk-food-supply-chain-at-risk-from-hostile-attacks/5294719) | 20.0 | 20.0 | 42.0 |
-| [SMTP（Simple Mail Transfer Protocol）とは](https://securityboulevard.com/2026/09/what-is-smtp-simple-mail-transfer-protocol/) | 20.0 | 20.0 | 42.0 |
-| [かつて強化されたストレージは、もはやそうではない](https://securityboulevard.com/2026/09/your-storage-was-hardened-once-it-isnt-anymore/) | 20.0 | 20.0 | 42.0 |
-| [G7、量子サイバー脅威に警鐘](https://www.itpro.com/security/g7-sounds-alarm-on-quantum-cyber-threats) | 20.0 | 20.0 | 42.0 |
-| [英国のサイバー法案で経営幹部の個人責任が問われないのはなぜか](https://www.theregister.com/security/2026/09/07/peers-ask-why-uk-cyber-bill-leaves-execs-off-the-personal-liability-hook/5294586) | 20.0 | 20.0 | 42.0 |
-| [IDScanに対して複数の集団訴訟が提起される](https://www.infosecurity-magazine.com/news/multiple-class-action-lawsuits/) | 20.0 | 20.0 | 42.0 |
+| [教育ソフトウェアの休眠中のレンタルサーバにランサムウェア攻撃、暗号化被害と不正アクセスの痕跡を確認](https://scan.netsecurity.ne.jp/article/2026/09/08/56158.html) | 29.0 | 30.0 | 42.0 |
+| [AI創薬候補、6種の「老化時計」で生物学的年齢の低下を示唆](https://www.itmedia.co.jp/news/article/2609/08/2000001239/) | 28.0 | 20.0 | 42.0 |
+| [AI時代の労働者、AIスキル以上に求められる資質とは？](https://japan.zdnet.com/article/35252370/) | 26.0 | 20.0 | 42.0 |
+| [「AIの制限」でも「野放し」でも失敗する？ AI時代に“共有APIキー”は限界](https://atmarkit.itmedia.co.jp/ait/articles/2609/08/news034.html) | 26.0 | 20.0 | 42.0 |
+| [「N-central」に脆弱性、ホットフィクス公開 - 悪用確認、侵害調査を](https://www.security-next.com/189970) | 22.0 | 20.0 | 42.0 |
+| [Microsoftが9月セキュリティ更新を発表 クラウドサービス複数でCVSS 10.0を含む脆弱性を修正](https://www.itmedia.co.jp/enterprise/articles/2609/08/news022.html) | 21.0 | 20.0 | 42.0 |
+| [警察庁と日本MS、サイバー対策で協定 情報共有、教育で連携](https://www.itmedia.co.jp/news/article/2609/08/2000001241/) | 21.0 | 20.0 | 42.0 |
+| [Okta Blog 第19回 経産省「SCS評価制度」におけるサプライチェーンセキュリティとアイデンティティ管理の重要性](https://scan.netsecurity.ne.jp/article/2026/09/08/56159.html) | 21.0 | 20.0 | 42.0 |
+| [宛名と住所が 1 行ズレた状態で発送データ作成 ～ 学校法人でダイレクトメール誤送付](https://scan.netsecurity.ne.jp/article/2026/09/08/56157.html) | 21.0 | 20.0 | 42.0 |
+| [さくらインターネットへの不正アクセス、案内ページを公開](https://scan.netsecurity.ne.jp/article/2026/09/08/56156.html) | 21.0 | 20.0 | 42.0 |
+| [サカタのタネへの不正アクセス、調査結果を公表](https://scan.netsecurity.ne.jp/article/2026/09/08/56155.html) | 21.0 | 20.0 | 42.0 |
+| [パスキー設定を要請 ～ 浜銀TT証券でフィッシングによる不正アクセス・取引被害発生](https://scan.netsecurity.ne.jp/article/2026/09/08/56154.html) | 21.0 | 20.0 | 42.0 |
+| [警察庁が DMARC を郵便局に例えて紹介「Quarantine」「Reject」への移行促す](https://scan.netsecurity.ne.jp/article/2026/09/08/56153.html) | 21.0 | 20.0 | 42.0 |
+| [従来のバックアップやBCPは意図的侵害を想定せず ～ NTTデータグループ、サイバーセキュリティ グローバル動向四半期レポート（2025年度第3四半期）](https://scan.netsecurity.ne.jp/article/2026/09/08/56152.html) | 21.0 | 20.0 | 42.0 |
+| [サイバー攻撃の「被害経験なし」企業は約 6 割へ減少 ～ 東商2026年アンケート調査](https://scan.netsecurity.ne.jp/article/2026/09/08/56151.html) | 21.0 | 20.0 | 42.0 |
+| [守るべきはデータではなく事業 ～ CTC、企業のサイバーセキュリティ・ガバナンス体系を解説](https://scan.netsecurity.ne.jp/article/2026/09/08/56150.html) | 21.0 | 20.0 | 42.0 |
+| [ダークネット観測パケット数が過去最高を更新、10年前から10倍に増大 ～ 総務省「令和8年版情報通信白書」](https://scan.netsecurity.ne.jp/article/2026/09/08/56149.html) | 21.0 | 20.0 | 42.0 |
+| [45社が先行導入、HENNGEがDMARC運用支援の新サービス「Domain Protection」を開始](https://scan.netsecurity.ne.jp/article/2026/09/08/56148.html) | 21.0 | 20.0 | 42.0 |
+| [「標的型攻撃事件」から15年。対策として「多層防御」は正解だったのか？](https://japan.zdnet.com/article/35252175/) | 21.0 | 20.0 | 42.0 |
+| [パスワードは既に漏れているかも？ 「Google アカウント」から始める乗っ取り防止](https://www.itmedia.co.jp/enterprise/articles/2609/08/news018.html) | 21.0 | 20.0 | 42.0 |
+| [スカイゲートテクノロジズ、通信遅延と導入時の負担を解消する端末完結型SSE「Cygiene ECAP」提供開始](https://internet.watch.impress.co.jp/docs/news/2138879.html) | 20.0 | 20.0 | 42.0 |
+| [「自社では見えず、攻撃者にだけ見えるセキュリティリスク」をなくす、ASMサービス「Mitokude」でDTSとグランセキュノロジーが協業 社外視点の「.pub」、社内視点の「.local」の組み合わせでリスクを可視化](https://internet.watch.impress.co.jp/docs/news/2138917.html) | 20.0 | 20.0 | 42.0 |
+| [警察庁とマイクロソフト、サイバー事案対策で協定](https://internet.watch.impress.co.jp/docs/news/2138885.html) | 20.0 | 20.0 | 42.0 |
+| [AI時代、「完全自律型SOC」は幻想か？ガートナーが語る“限界”と次の一手](https://www.sbbit.jp/article/cont1/186772?ref=rss) | 20.0 | 20.0 | 42.0 |
+| [AIによってサイバー攻撃は本当に「高度化」したのか？【海の向こうの“セキュリティ”】](https://internet.watch.impress.co.jp/docs/column/security/2138390.html) | 20.0 | 20.0 | 42.0 |
+| [脆弱性やシャドーITを見逃さない！ 注目のセキュリティサービス「アタックサーフェスマネジメント」（ASM）とは[Sponsored]](https://internet.watch.impress.co.jp/docs/topic/special/2131584.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
