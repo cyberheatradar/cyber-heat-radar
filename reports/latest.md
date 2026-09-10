@@ -1,18 +1,17 @@
-# 📡 サイレーダー 2026-09-10 11:00 JST
+# 📡 サイレーダー 2026-09-10 17:00 JST
 
-このレポートは、2026-09-10 05:00 JST〜2026-09-10 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-10 11:00 JST〜2026-09-10 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 64
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 47
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 38
+- [低温だが記録しておくトピック](#low-record-topics): 22
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Chinese espionage groups swarm to exploit triple-link chain of zero-days](#topic-31075) | 36.0 | 46.0 | 59.0 | 音声 | 温度感上位枠 |
-| 2 | [Cisco confirms CVE-2026-20079 Secure FMC flaw exploited in attacks](#topic-24944) | 34.0 | 64.0 | 59.0 | 音声 | 温度感上位枠 |
+| 1 | [New ‘ShieldCrash’ Zero-Day Exploit Targets Microsoft Defender](#topic-31943) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -20,69 +19,59 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-31075"></a>
+<a id="topic-31943"></a>
 
-### 1. Chinese espionage groups swarm to exploit triple-link chain of zero-days
+### 1. New ‘ShieldCrash’ Zero-Day Exploit Targets Microsoft Defender
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>地⁠政⁠学⁠・⁠サ⁠イ⁠バ⁠ー⁠紛⁠争</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 36.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
-| <nobr>確⁠度</nobr> | 59.0 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-Google Chromeの脆弱性CVE-2026-85046は、実際の悪用が確認されており、関連する更新プログラムが配信されています。
-公開情報では、複数の中国関連とされる攻撃グループが、ゼロデイの連鎖を用いて組織を狙っていると報じられています。既知の悪用がある脆弱性は、優先度の高い対応対象になります。
-ブラウザは業務利用が広く、更新遅延がそのままリスクにつながりやすいためです。
+Microsoft Defenderを狙う新たなゼロデイ脆弱性／エクスプロイト「ShieldCrash」に関する報道があります。
+公開情報では、対象環境によってはWindows端末で高権限の取得につながる可能性が示されています。
+セキュリティ製品そのものが標的になっている点で、通常のアプリ脆弱性よりも影響範囲が広がるおそれがあります。ゼロデイかつ悪用観測ありとされるため、早期の対応判断が重要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 3 sources。
 - 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
 
 ##### 確度
-- 複数ソース確認。
-- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- ChromeおよびChromium系ブラウザの更新適用状況を至急確認する。
-- CISA KEVなどの既知悪用脆弱性リストに載る前提で、資産棚卸しと優先順位付けを行う。
-- 関連する端末で不審な挙動やブラウザ起点の侵入痕跡がないか監視を強める。
+- Microsoft Defenderおよび関連するWindows端末の適用状況を確認する。
+- ベンダー告知や更新情報を継続監視し、該当パッチ・緩和策の有無を確認する。
+- 高権限化や不審な挙動を前提に、端末監視とインシデント対応手順を点検する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-85046 | 関連CVE | 1.00 | 候補あり（URL 2件以上） |
-| 脆弱性 | CVE-2026-85880 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-87491 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | Google | 言及あり | 0.80 | — |
-| 製品 | Apple macOS | 言及あり | 0.80 | — |
-| 製品 | Chromium | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2026-50656 | 関連CVE | 1.00 | 候補あり（URL 2件以上） |
+| 脆弱性 | CVE-2026-69414 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+| 製品 | Microsoft Defender | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-85046](https://nvd.nist.gov/vuln/detail/CVE-2026-85046) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Chinese espionage groups swarm to exploit triple-link chain of zero-days](https://cyberscoop.com/china-espionage-groups-exploit-chain-zero-days/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Google patches actively exploited Chrome zero-day (CVE-2026-85046)](https://www.helpnetsecurity.com/2026/09/04/google-chrome-zero-day-cve-2026-85046/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/09/04/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [New ‘ShieldCrash’ Zero-Day Exploit Targets Microsoft Defender](https://www.securityweek.com/new-shieldcrash-zero-day-exploit-targets-microsoft-defender/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -90,77 +79,6 @@ Google Chromeの脆弱性CVE-2026-85046は、実際の悪用が確認されて�
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
 - 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-24944"></a>
-
-### 2. Cisco confirms CVE-2026-20079 Secure FMC flaw exploited in attacks
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>認⁠証⁠バ⁠イ⁠パ⁠ス</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 温度上昇中 |
-| <nobr>温⁠度⁠感</nobr> | 34.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 59.0 |
-
-#### 概要
-
-Ciscoは、Secure Firewall Management Center（FMC）ソフトウェアの認証回避の脆弱性「CVE-2026-20079」について、攻撃で悪用されていることを確認したとしています。
-影響を受ける環境では、未認証の遠隔攻撃者により認証を回避され、基盤OS上で高権限の操作につながる可能性があると説明されています。
-FMCはファイアウォール運用の中核に関わるため、影響が出ると管理面への波及が大きくなり得ます。すでに悪用が観測されているとされ、更新適用の優先度が高い事案です。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 3 sources。
-- 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 実務影響の詳細は限定的ですが、関連する利用環境・配布経路・検知観点を確認する価値があります。
-
-##### 確度
-- 複数ソース確認。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Ciscoが提供する修正済みソフトウェアへの更新を優先すること。
-- FMC管理インターフェースの公開状況を確認し、外部から到達可能な構成を見直すこと。
-- 認証回避や不審なHTTPアクセス、管理系の異常挙動がないかログを確認すること。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-20079 | 関連CVE | 1.00 | 候補あり（URL 2件以上） |
-| 脆弱性 | CVE-2026-20316 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | Cisco | 言及あり | 0.80 | — |
-| 製品 | Cisco Adaptive Security Appliance | 言及あり | 0.80 | — |
-| 製品 | Cisco Firepower Threat Defense | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-20079](https://nvd.nist.gov/vuln/detail/CVE-2026-20079) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Cisco confirms CVE-2026-20079 Secure FMC flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/cisco-confirms-cve-2026-20079-secure-fmc-flaw-exploited-in-attacks/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Active exploitation of Cisco Secure Firewall Management Center vulnerabilities](https://blog.talosintelligence.com/fmc-ongoing-exploitation/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco Secure Firewall Management Center Software Authentication Bypass Vulnerabi](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-onprem-fmc-authbypass-5JPp45V2) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
 
 ---
 
@@ -179,44 +97,28 @@ FMCはファイアウォール運用の中核に関わるため、影響が出�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [REVISIO 役職員が使用する PC がマルウェア感染、ローカル環境に保存されていた個人情報が外部漏えいした可能性を否定できず](https://scan.netsecurity.ne.jp/article/2026/09/10/56189.html) | 29.0 | 20.0 | 42.0 |
-| [AdaptHealth、7月のサイバー攻撃で410万人分の情報流出を確認](https://www.bleepingcomputer.com/news/security/adapthealth-confirms-41-million-people-exposed-in-july-cyberattack/) | 28.0 | 20.0 | 42.0 |
-| [AIエージェント管理基盤の「実行」と「運用」に新展開か--Datadogの取り組みから探る](https://japan.zdnet.com/article/35252446/) | 26.0 | 20.0 | 42.0 |
-| [「Claude」による不正アクセス、4件目が判明──Anthropic、「アライメントの失敗」と評価を修正](https://www.itmedia.co.jp/news/article/2609/10/2000001346/) | 26.0 | 20.0 | 42.0 |
-| [AI の暴走・セキュリティリスクを解消、テリロジーが業務自動化「palton AI」を発表](https://scan.netsecurity.ne.jp/article/2026/09/10/56181.html) | 26.0 | 20.0 | 42.0 |
-| [AI 時代の CSIRT のあり方を探る「NCA Annual Conference 2026」12月2日～4日 開催](https://scan.netsecurity.ne.jp/article/2026/09/10/56175.html) | 26.0 | 20.0 | 42.0 |
-| [「AI-Ready」な内製化への道 先進3社に見る3つのポイント](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/051500549/090900005/) | 26.0 | 20.0 | 42.0 |
-| [Anthropicが明らかにしたAIによる4件目の犯罪の可能性](https://www.theregister.com/ai-and-ml/2026/09/10/anthropic-reveals-fourth-likely-crime-committed-by-its-ai/5295412) | 25.0 | 20.0 | 42.0 |
-| [ChromeとWindowsを標的とする新たなBlue Moonキット、AI駆動型エクスプロイトの新現実を反映](https://www.theregister.com/research/2026/09/09/novel-blue-moon-kit-targeting-chrome-and-windows-reflects-new-reality-of-ai-driven-exploits/5295399) | 25.0 | 20.0 | 42.0 |
-| [NTTらの投資ファンド「IOWN AI Fund」、初号投資として光回路スイッチを開発するiPronicsに出資](https://internet.watch.impress.co.jp/docs/news/2139491.html) | 25.0 | 20.0 | 42.0 |
-| [「FortiOS」や「NetScaler」など脆弱性4件の悪用を警告 - 米当局](https://www.security-next.com/190122) | 24.0 | 20.0 | 43.0 |
-| [悪意のあるChromeおよびFirefox拡張機能が暗号資産トレーダーのセッションとウォレットデータを窃取](https://socket.dev/blog/chrome-firefox-crypto-data-theft) | 22.0 | 20.0 | 48.0 |
-| [「Adobe Acrobat/Reader」にセキュリティ更新 - 脆弱性32件を解消](https://www.security-next.com/190081) | 22.0 | 20.0 | 42.0 |
-| [クラウドWebアプリケーションにおける脅威マトリクス：脅威の対応関係を可視化する](https://www.microsoft.com/en-us/security/blog/2026/09/09/threat-matrix-mapping-threats-across-cloud-web-applications/) | 22.0 | 20.0 | 42.0 |
-| [民間企業をサイバー作戦へ参加させる米国の新制度 ほか [Scan PREMIUM Monthly Executive Summary 2026年8月度]](https://scan.netsecurity.ne.jp/article/2026/09/10/56192.html) | 21.0 | 20.0 | 42.0 |
-| [東京科学大学の情報基盤に不正アクセス、個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/09/10/56191.html) | 21.0 | 20.0 | 42.0 |
-| [NEXCO東日本の東京外環プロジェクトホームページで不正アクセス疑い](https://scan.netsecurity.ne.jp/article/2026/09/10/56190.html) | 21.0 | 20.0 | 42.0 |
-| [非表示のシートが含まれていることに気づかないまま掲載 ～ 大川市ホームページで公開した名簿データ](https://scan.netsecurity.ne.jp/article/2026/09/10/56188.html) | 21.0 | 20.0 | 42.0 |
-| [スプーンのウェブサイトが改ざん被害、偽のセキュリティ確認画面等が表示される事象](https://scan.netsecurity.ne.jp/article/2026/09/10/56187.html) | 21.0 | 20.0 | 42.0 |
-| [耳鼻咽喉科の廃棄予定の問診票を裏紙使用し患者に交付](https://scan.netsecurity.ne.jp/article/2026/09/10/56186.html) | 21.0 | 20.0 | 42.0 |
-| [クラウド環境の不正アクセス制限に脆弱性、入居申込者情報が流出した可能性](https://scan.netsecurity.ne.jp/article/2026/09/10/56185.html) | 21.0 | 20.0 | 42.0 |
-| [9 / 26 開催「Platform Engineering Kaigi 2026」にスリーシェイクのエンジニア 鈴木勝史氏 加藤泰隆氏が登壇](https://scan.netsecurity.ne.jp/article/2026/09/10/56184.html) | 21.0 | 20.0 | 42.0 |
-| [被害額2,108億円 前年同期比+632億円 ～ 令和8(2026)年7月末における特殊詐欺の認知検挙状況](https://scan.netsecurity.ne.jp/article/2026/09/10/56183.html) | 21.0 | 20.0 | 42.0 |
-| [弁護士が知っておくべきサイバーセキュリティ 12 のポイント ～ 東京弁護士会](https://scan.netsecurity.ne.jp/article/2026/09/10/56182.html) | 21.0 | 20.0 | 42.0 |
-| [権威 DNS サーバ Knot DNS が複数のセキュリティ修正を公開](https://scan.netsecurity.ne.jp/article/2026/09/10/56180.html) | 21.0 | 20.0 | 42.0 |
-| [GMOナショナルセキュリティが国家レベルのサイバー脅威や経済安全保障上のリスクを分析する専門部署「インテリジェンス課」を新設](https://scan.netsecurity.ne.jp/article/2026/09/10/56179.html) | 21.0 | 20.0 | 42.0 |
-| [10 / 27・28 開催「地方自治情報化推進フェア 2026」に HENNGE が出展、赤瀬礼旺氏と板垣慎介氏による講演も](https://scan.netsecurity.ne.jp/article/2026/09/10/56178.html) | 21.0 | 20.0 | 42.0 |
-| [スリーシェイクの早川大貴氏、クラウドネイティブ技術を推進する CNCF Ambassadors 2026-2028 に就任](https://scan.netsecurity.ne.jp/article/2026/09/10/56177.html) | 21.0 | 20.0 | 42.0 |
-| [GMOサイバーセキュリティ byイエラエが台湾の国立台北科技大学および電信技術センターと低軌道（LEO）衛星のサイバーセキュリティで業務提携](https://scan.netsecurity.ne.jp/article/2026/09/10/56176.html) | 21.0 | 20.0 | 42.0 |
-| [日本のセキュリティ課題は「ツール導入」から「組織とプロセス」へ移行 ～ サイバーリーズン分析](https://scan.netsecurity.ne.jp/article/2026/09/10/56174.html) | 21.0 | 20.0 | 42.0 |
-| [バックアップデータがAIの金鉱に--Cohesityが狙うセカンダリーデータの新価値](https://japan.zdnet.com/article/35252439/) | 21.0 | 20.0 | 42.0 |
-| [MariaDBに「USAGEだけ」で管理者を乗っ取れる脆弱性 認証情報を書き換えるその手口](https://atmarkit.itmedia.co.jp/ait/articles/2609/10/news016.html) | 21.0 | 20.0 | 42.0 |
-| [Smashing Security podcast #484: サイトが無音であなたを追跡する仕組み](https://grahamcluley.com/smashing-security-podcast-484/) | 20.0 | 20.0 | 42.0 |
-| [OpenSSLの新しいアルファ版ビルドでポスト量子暗号を高速化](https://www.helpnetsecurity.com/2026/09/10/openssl-4-1-0-alpha1-released/) | 20.0 | 20.0 | 42.0 |
-| [【ガートナー警鐘】サイバー保険「入っても補償なし」…？知らないと怖い「免責条項」](https://www.sbbit.jp/article/fj/186801?ref=rss) | 20.0 | 20.0 | 42.0 |
-| [CISA長官、最悪の事態を防ぐため同庁は迅速に変わる必要があると発言](https://therecord.media/cisa-hiring-nick-andersen-warning) | 20.0 | 20.0 | 42.0 |
-| [Mythosの脆弱性情報が人手による処理の限界に直面](https://www.darkreading.com/application-security/mythos-vulnerability-firehose-hits-human-bottleneck) | 20.0 | 20.0 | 42.0 |
-| [Skullcandy Dime 3イヤホンにBluetoothハイジャッキングの脆弱性が判明](https://www.bleepingcomputer.com/news/security/skullcandy-dime-3-earbuds-expose-users-to-bluetooth-hijacking/) | 20.0 | 20.0 | 42.0 |
+| [Trezor、メールサービス事業者の侵害に伴うフィッシング攻撃に注意喚起](https://www.bleepingcomputer.com/news/security/trezor-warns-users-of-email-provider-breach-phishing-attacks/) | 28.0 | 20.0 | 42.0 |
+| [サイバー犯罪者が被害者のブラウザ内にのみ存在するフィッシングページを構築している](https://www.helpnetsecurity.com/2026/09/10/browser-based-phishing-blob-urls-microsoft-oauth/) | 28.0 | 20.0 | 42.0 |
+| [GPT-6 Astraが人気すぎてOpenAIのサーバーがピンチでProプランの新規サブスク契約が一時停止されるかも](https://gigazine.net/news/20260910-openai-astra-high-growth/) | 27.0 | 20.0 | 42.0 |
+| [Anthropicが「テスト中のAIで他社を攻撃してしまったインシデント」の発生原因を報告](https://gigazine.net/news/20260910-anthropic-ai-incident/) | 27.0 | 20.0 | 42.0 |
+| [AI導入が既に逼迫したCISOにもたらす新たなセキュリティ課題](https://www.helpnetsecurity.com/2026/09/10/proofpoint-ciso-ai-security-risks-report/) | 25.0 | 20.0 | 42.0 |
+| [新しいオープン標準でAI重みを承認済みハードウェアに固定する仕組み](https://www.helpnetsecurity.com/2026/09/10/weight-custody-manifest-open-standard/) | 25.0 | 20.0 | 42.0 |
+| [PivotC2 RAT攻撃で悪用されるFortinetのコード実行脆弱性](https://www.securityweek.com/fortinet-code-execution-flaw-exploited-in-pivotc2-rat-attacks/) | 24.0 | 46.0 | 50.0 |
+| [Cisco、9月16日にセキュリティアドバイザリを公開予定](https://www.security-next.com/190149) | 22.0 | 20.0 | 42.0 |
+| [Check PointのVPN機能に深刻なRCE脆弱性 - ライブパッチや更新を提供](https://www.security-next.com/190139) | 22.0 | 20.0 | 42.0 |
+| [さくらインターネット、不正アクセスの調査が完了--データの外部流出は未確認](https://japan.zdnet.com/article/35252489/) | 21.0 | 20.0 | 42.0 |
+| [さくら不正アクセス ハッシュ化されていない初期パスワード漏えいの可能性、レンタルサーバとVPSの一部契約者で](https://www.itmedia.co.jp/news/article/2609/10/2000001360/) | 21.0 | 20.0 | 42.0 |
+| [電通総研、SCS評価制度に向けた現在評価から評価取得まで伴走支援](https://japan.zdnet.com/article/35252465/) | 21.0 | 20.0 | 42.0 |
+| [EU Cyber Resilience Act、新たな報告要件を義務化へ](https://www.darkreading.com/cybersecurity-operations/eu-cyber-resilience-act-reporting-requirements) | 20.0 | 20.0 | 42.0 |
+| [歯科請負業者が4,000件の患者記録にアクセスできる秘密アカウントを作成して退職](https://www.theregister.com/security/2026/09/10/dental-contractor-set-up-secret-account-with-access-to-4000-patient-records-then-left-the-company/5295361) | 20.0 | 20.0 | 42.0 |
+| [コンテック製CONPROSYSシリーズにおける複数の脆弱性](https://jvn.jp/vu/JVNVU96551518/) | 20.0 | 20.0 | 42.0 |
+| [コンテック製無線LAN FLEXLANシリーズにおける複数の脆弱性](https://jvn.jp/vu/JVNVU99009004/) | 20.0 | 20.0 | 42.0 |
+| [コンテック製PC-HELPERシリーズにおける複数の脆弱性](https://jvn.jp/vu/JVNVU90314828/) | 20.0 | 20.0 | 42.0 |
+| [コンテック製SolarView Compactにおける複数の脆弱性](https://jvn.jp/vu/JVNVU97753461/) | 20.0 | 20.0 | 42.0 |
+| [GitGuardian Honeytokenが資格情報窃取をリアルタイムで検知する製品紹介](https://www.helpnetsecurity.com/2026/09/10/product-showcase-gitguardian-honeytoken-decoy-service/) | 20.0 | 20.0 | 42.0 |
+| [さくらインターネット、「さくらのレンタルサーバ」および販売管理システムへの不正アクセスについて調査結果を公開 「さくらのレンタルサーバ」不正アクセス対象は951アカウントに拡大](https://internet.watch.impress.co.jp/docs/news/2139863.html) | 20.0 | 20.0 | 42.0 |
+| [SHIRASAGIにおける複数の脆弱性](https://jvn.jp/jp/JVN37476837/) | 20.0 | 20.0 | 42.0 |
+| [Kevin MandiaがAmazonの取締役会に参加、サイバーセキュリティ分野で30年以上の経験](https://www.helpnetsecurity.com/2026/09/10/kevin-mandia-joins-amazon-board/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
