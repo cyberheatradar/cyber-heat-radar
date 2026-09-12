@@ -1,10 +1,10 @@
-# 📡 サイレーダー 2026-09-12 11:00 JST
+# 📡 サイレーダー 2026-09-12 17:00 JST
 
-このレポートは、2026-09-12 05:00 JST〜2026-09-12 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-12 11:00 JST〜2026-09-12 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 32
+- 観測トピック数: 26
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
 - [低温だが記録しておくトピック](#low-record-topics): 2
@@ -34,8 +34,8 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ハッカーがClaudeを悪用し、180万件のAndroidアプリから機密情報を抽出](https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/) | 25.0 | 20.0 | 42.0 |
-| [サイバー攻撃によるフライト遅延でも航空会社にホテルや食事の補償義務なし](https://cyberscoop.com/dot-rule-airline-cyberattack-flight-delays/) | 20.0 | 20.0 | 42.0 |
+| [ランサム被害を復元 警察庁が開発](https://news.yahoo.co.jp/pickup/6595048?source=rss) | 28.0 | 30.0 | 42.0 |
+| [オンプレVDIやDaaSにしがみつく必要はもうない？ 「1人当たり月1万円安くなる」代替策の実態](https://atmarkit.itmedia.co.jp/ait/articles/2609/12/news008.html) | 21.0 | 20.0 | 42.0 |
 
 ---
 
