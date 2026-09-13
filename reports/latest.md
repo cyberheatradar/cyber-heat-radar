@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-09-13 17:00 JST
+# 📡 サイレーダー 2026-09-14 05:00 JST
 
-このレポートは、2026-09-13 11:00 JST〜2026-09-13 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-13 17:00 JST〜2026-09-14 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 25
+- 観測トピック数: 29
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 5
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,7 +34,11 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Anthropic、AIモデル「Claude」による4件目の不正アクセスを発表](https://news.mynavi.jp/techplus/article/20260913-4951131/) | 26.0 | 20.0 | 42.0 |
+| [ハッカーがTencentアプリの脆弱性を悪用してGrayRabbitマルウェアを展開](https://www.bleepingcomputer.com/news/security/hackers-exploit-tencent-app-flaw-to-deploy-grayrabbit-malware/) | 28.0 | 28.0 | 50.0 |
+| [攻撃者がパスキーを悪用したフィッシングでMicrosoftクラウドアカウントを乗っ取り、データを流出させる](https://thehackernews.com/2026/09/attackers-use-passkey-phishing-to.html) | 28.0 | 20.0 | 42.0 |
+| [Anthropic CEO Dario Amodei氏、AI業界は安全対策の整備を待つべきと発言](https://www.securityweek.com/anthropic-ceo-dario-amodei-says-ai-industry-needs-to-give-safety-measures-time-to-catch-up/) | 25.0 | 20.0 | 42.0 |
+| [Security through obscurityは終わった、そしてAIが致命的な一撃を与えた](https://www.theregister.com/security/2026/09/13/security-through-obscurity-is-dead-and-ai-delivered-the-fatal-blow/5296000) | 25.0 | 20.0 | 42.0 |
+| [F5 BIG-IP APMデバイスへのLinuxルートキット展開とCisco FMCの脆弱性悪用](https://www.helpnetsecurity.com/2026/09/13/week-in-review-linux-rootkit-deployed-on-f5-big-ip-apm-devices-cisco-fmc-bugs-exploited/) | 25.0 | 20.0 | 42.0 |
 
 ---
 
