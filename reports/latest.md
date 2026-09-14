@@ -1,18 +1,15 @@
-# 📡 サイレーダー 2026-09-14 11:00 JST
+# 📡 サイレーダー 2026-09-14 17:00 JST
 
-このレポートは、2026-09-14 05:00 JST〜2026-09-14 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-14 11:00 JST〜2026-09-14 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 56
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 42
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 30
+- [低温だが記録しておくトピック](#low-record-topics): 18
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [「GitLab」「ConnectWise」の脆弱性攻撃が発生 - 米当局が注意喚起](#topic-32386) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [AIエージェント量産＝マルウェア量産？約6割が「対策迷子」、押さえるべき6つの防御策](#topic-32414) | 33.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -20,123 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-32386"></a>
-
-### 1. 「GitLab」「ConnectWise」の脆弱性攻撃が発生 - 米当局が注意喚起
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-米CISAが、GitLabやJFrog、ConnectWiseなどの製品に関する4件の脆弱性について、実際に悪用されているとして注意を呼びかけました。
-現時点で材料からは、どの脆弱性が対象かの詳細までは確認できませんが、公開済みの脆弱性が攻撃に使われている状況が示されています。
-管理・開発系の製品が対象に含まれているため、影響が業務基盤やソフトウェア供給の周辺に及ぶ可能性があります。
-公的機関が悪用を前提に警告している点から、通常の脆弱性情報より優先度を上げて確認する価値があります。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 自組織でGitLab、ConnectWise、JFrog関連製品を使っているかを確認し、該当バージョンや公開設定を点検する。
-- CISAやベンダーの公表情報を確認し、修正パッチや回避策が出ていれば速やかに適用する。
-- ログや認証周辺の異常、想定外の操作痕跡がないかを確認し、必要に応じて監視を強化する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | ConnectWise | 言及あり | 0.80 | — |
-| ベンダー | GitLab | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [「GitLab」「ConnectWise」の脆弱性攻撃が発生 - 米当局が注意喚起](https://www.security-next.com/190258) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-32414"></a>
-
-### 2. AIエージェント量産＝マルウェア量産？約6割が「対策迷子」、押さえるべき6つの防御策
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-AIエージェントの活用が広がる一方で、自律的に動き社内システムやデータへアクセスできる性質が、悪用リスクを高めると指摘されています。
-従来型の「危険なものを事前に定義して防ぐ」対策だけでは対応しにくく、国内企業の約6割が対策の着手点を把握できていないという調査結果も示されています。
-AIエージェントは業務効率化に有用ですが、設定や権限の設計を誤ると、想定外の挙動や不正利用の入口になり得ます。
-導入が進むほど、セキュリティと運用の両面で早めの整理が重要になります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- AIエージェントに付与する権限を最小限にし、アクセス範囲と実行可能な操作を見直す。
-- 自律実行や外部連携を含む利用場面を洗い出し、監査ログや検知の対象を決めておく。
-- 導入時点で利用ルール、例外処理、停止手順を整備し、部門横断で運用責任を明確にする。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [AIエージェント量産＝マルウェア量産？約6割が「対策迷子」、押さえるべき6つの防御策](https://www.sbbit.jp/article/cont1/186863?ref=rss) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -153,36 +34,24 @@ AIエージェントは業務効率化に有用ですが、設定や権限の設
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [トランプ政権のサックス氏、AI「ペース調整」論に苦言 「規制がなければできないふりをやめろ」](https://www.itmedia.co.jp/news/article/2609/14/2000001433/) | 26.0 | 20.0 | 42.0 |
-| [Cloudbase：2,489点、Cloudbase AI：2,473点 ～ Cloudbase が自社製品の日本度スコア公開](https://scan.netsecurity.ne.jp/article/2026/09/14/56213.html) | 26.0 | 20.0 | 42.0 |
-| [契約管理プラットフォーマーとして“第2フェーズ”を加速させるドキュサイン レビューAIやAIエージェントを投入](https://ascii.jp/elem/000/004/433/4433289/?rss=) | 26.0 | 20.0 | 42.0 |
-| [本命はAIエージェントによる変革 日本企業を阻む2つの壁](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600007/090800225/) | 26.0 | 20.0 | 42.0 |
-| [バーティカルAI（Vertical AI）](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600009/090900231/) | 26.0 | 20.0 | 42.0 |
-| [AIの本格活用が進む前に企業が備えるべきこと](https://japan.zdnet.com/article/35252139/) | 26.0 | 20.0 | 42.0 |
-| [LINEヤフーの「Agent i」に、一度設定したら自動的・継続的にAIエージェントが働く「タスク機能」追加](https://internet.watch.impress.co.jp/docs/news/2140184.html) | 25.0 | 20.0 | 42.0 |
-| [NSAの大幅再編でサイバーとAIを含む5つの「ミッションセンター」を設置へ](https://therecord.media/nsa-reorganization-five-mission-centers) | 25.0 | 20.0 | 42.0 |
-| [中露・北朝鮮の関与が疑われるサイバー攻撃への言及増加、警察庁がサイバー空間の脅威情勢レポート AI、IoT機器を悪用した犯罪事例も](https://internet.watch.impress.co.jp/docs/news/2140272.html) | 25.0 | 20.0 | 42.0 |
-| [ExLlamaV3のexllamav3_extモジュールにおける不適切な入力検証の脆弱性](https://jvn.jp/vu/JVNVU94022278/) | 23.0 | 20.0 | 43.0 |
-| [Windows Defenderの脆弱性 修正からわずか数日で修正回避のPoC登場](https://atmarkit.itmedia.co.jp/ait/articles/2609/14/news031.html) | 23.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年9月6日〜2026年9月12日）](https://www.security-next.com/190254) | 22.0 | 20.0 | 42.0 |
-| [リモートアクセス製品「ConnectWise ScreenConnect」に深刻な脆弱性](https://www.security-next.com/190264) | 22.0 | 20.0 | 42.0 |
-| [国内企業の75.4％が「セキュリティ疲れ」--TD SYNNEX調査](https://japan.zdnet.com/article/35252588/) | 21.0 | 20.0 | 42.0 |
-| [クオリティア、新世代メール基盤「QUALITIA MAIL」を発表--AIとセキュリティ強化](https://japan.zdnet.com/article/35252584/) | 21.0 | 20.0 | 42.0 |
-| [Cloudbase は、もう「クラウド」のためだけのセキュリティ製品ではない ～ Lead Product Engineer 佐藤琢斗](https://scan.netsecurity.ne.jp/article/2026/09/14/56225.html) | 21.0 | 20.0 | 42.0 |
-| [SCS評価制度対応第一歩、IDアカウント管理をどう見直す？ 10 / 7 HENNGEとサイバートラストが共同ウェビナー開催](https://scan.netsecurity.ne.jp/article/2026/09/14/56224.html) | 21.0 | 20.0 | 42.0 |
-| [VPNの脆弱性を利用 ～ デジタル庁が運用するガバメントソリューションサービス（GSS）に不正アクセス、約24.6万件の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/09/14/56223.html) | 21.0 | 20.0 | 42.0 |
-| [「ファンくる」にリスト型攻撃、2 アカウントで不正なポイント交換を確認](https://scan.netsecurity.ne.jp/article/2026/09/14/56222.html) | 21.0 | 20.0 | 42.0 |
-| [税務事務システムへの入力権限を悪用し不正に還付金 ～ 市税事務所職員 懲戒免職](https://scan.netsecurity.ne.jp/article/2026/09/14/56221.html) | 21.0 | 20.0 | 42.0 |
-| [サンメッセが利用する購買発注システム「WEB 発注システム」へサイバー攻撃](https://scan.netsecurity.ne.jp/article/2026/09/14/56220.html) | 21.0 | 20.0 | 42.0 |
-| [Weverseサービスにセキュリティ脆弱性、韓国インターネット振興院から連絡](https://scan.netsecurity.ne.jp/article/2026/09/14/56219.html) | 21.0 | 20.0 | 42.0 |
-| [TRUNK 従業員のメールアカウントに不正アクセス、不審メール送信も確認](https://scan.netsecurity.ne.jp/article/2026/09/14/56218.html) | 21.0 | 20.0 | 42.0 |
-| [「jpo.go.jp」以外の差出人に注意 特許庁を装った不審メールの連絡が相次ぐ](https://scan.netsecurity.ne.jp/article/2026/09/14/56217.html) | 21.0 | 20.0 | 42.0 |
-| [SHIRASAGI に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/14/56215.html) | 21.0 | 20.0 | 42.0 |
-| [DEF CON CTF世界一への20年辿るコラム2本公開 ～ 福森大喜・小池悠生ほか当事者インタビュー](https://scan.netsecurity.ne.jp/article/2026/09/14/56214.html) | 21.0 | 20.0 | 42.0 |
-| [福山市立大学 情報工学部情報工学科 2027年4月開設、サイバーセキュリティコースも](https://scan.netsecurity.ne.jp/article/2026/09/14/56212.html) | 21.0 | 20.0 | 42.0 |
-| [不正アクセスや報告遅れを中心に民間 98 件へ指導 ～ 個人情報保護委員会が第367回会合を開催](https://scan.netsecurity.ne.jp/article/2026/09/14/56211.html) | 21.0 | 20.0 | 42.0 |
-| [AI利用の多い技術者ほど「人間の責任」も意識／AI利用を隠すのは「手抜きと思われるのがイヤ」／AIが実行するサイバー攻撃が急増、ほか](https://ascii.jp/elem/000/004/434/4434370/?rss=) | 21.0 | 20.0 | 42.0 |
-| [「全てを復旧する」から「会社を存続させる」へ--「Minimum Viable Company」とは何か](https://japan.zdnet.com/article/35252511/) | 21.0 | 20.0 | 42.0 |
+| [重要インフラ向けの「電源を入れ直す」対処法](https://www.helpnetsecurity.com/2026/09/14/ot-intrusion-response-agent/) | 28.0 | 20.0 | 42.0 |
+| [OpenAIのAIエージェントがRubyGemsへの攻撃に関与か、2000件超のパッケージ投稿やAPIキー窃取の試みが判明](https://gigazine.net/news/20260914-openai-agent-cyber-attack-rubygems/) | 27.0 | 20.0 | 42.0 |
+| [GPT-6 AstraとClaude Fableの性能を引き出すハーネス「Fusion」が登場、Claude CodeやCodexで使う場合と同等の性能を示しつつコストを最大39％削減](https://gigazine.net/news/20260914-cognition-fusion/) | 27.0 | 20.0 | 42.0 |
+| [ソニー銀行、勘定系システムの開発に生成AIを本格適用](https://japan.zdnet.com/article/35252602/) | 26.0 | 20.0 | 42.0 |
+| [パナソニック エナジー、AIデータセンター市場で放つ「一気通貫」の蓄電システム戦略--売上高1兆円へ](https://japan.zdnet.com/article/35252552/) | 26.0 | 20.0 | 42.0 |
+| [AWS、AIによる脆弱性検出を試験　誤検知が相次ぐ](https://www.helpnetsecurity.com/2026/09/14/aws-deception-benchmark-security-vulnerabilities/) | 25.0 | 20.0 | 42.0 |
+| [サーバ管理ソフト「Plesk」に複数の「クリティカル」脆弱性](https://www.security-next.com/190283) | 22.0 | 20.0 | 42.0 |
+| [「AWS SSM Agent」に深刻な脆弱性 - 7月の更新で修正済み](https://www.security-next.com/190278) | 22.0 | 20.0 | 42.0 |
+| [登山アプリ「YAMAP」のAndroid版に脆弱性 - 最新版へ更新を](https://www.security-next.com/190275) | 22.0 | 20.0 | 42.0 |
+| [「投稿した記憶のない娘の個人情報」をMeta AIが知人の投稿などから正確に推測するという恐怖体験を母親が告白](https://gigazine.net/news/20260914-meta-ai-instagram-facebook-invasive-information/) | 22.0 | 20.0 | 42.0 |
+| [LGが自社製スマートテレビがユーザーの音声を密かに録音しているという報道を公式に否定](https://gigazine.net/news/20260914-lg-officially-denies-smart-tvs-secretly-recording/) | 22.0 | 20.0 | 42.0 |
+| [CISA、攻撃者がGitLabの最高深刻度の脆弱性を悪用し始めたと警告](https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploit-max-severity-gitlab-flaw-in-attacks/) | 20.0 | 20.0 | 42.0 |
+| [Revolutのデータ侵害について現在わかっていること](https://www.helpnetsecurity.com/2026/09/14/revolut-data-breach-privacy/) | 20.0 | 20.0 | 42.0 |
+| [セキュリティの1週間（9月7日～9月13日）](https://www.malwarebytes.com/blog/news/2026/09/a-week-in-security-september-7-september-13) | 20.0 | 20.0 | 42.0 |
+| [Permify: オープンソースの認可サービス](https://www.helpnetsecurity.com/2026/09/14/permify-open-source-authorization-as-a-service/) | 20.0 | 20.0 | 42.0 |
+| [侵害後数か月でサイバーセキュリティへの関心が薄れる](https://www.helpnetsecurity.com/2026/09/14/manageengine-cybersecurity-breach-confidence-report/) | 20.0 | 20.0 | 42.0 |
+| [証明書の不備は企業に25万ドル超の損失をもたらす可能性がある](https://www.helpnetsecurity.com/2026/09/14/digicert-certificate-management-automation-report/) | 20.0 | 20.0 | 42.0 |
+| [Androidアプリ「YAMAP / ヤマップ登山地図アプリ」におけるアクセス制限不備の脆弱性](https://jvn.jp/jp/JVN69877538/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
