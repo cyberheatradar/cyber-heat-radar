@@ -1,17 +1,18 @@
-# 📡 サイレーダー 2026-09-15 11:00 JST
+# 📡 サイレーダー 2026-09-15 17:00 JST
 
-このレポートは、2026-09-15 05:00 JST〜2026-09-15 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-15 11:00 JST〜2026-09-15 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 59
-- [音声で扱う想定のトピック](#audio-topics): 0
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 34
+- 観測トピック数: 43
+- [音声で扱う想定のトピック](#audio-topics): 2
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 17
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Maximum Severity GitLab Flaw Puts Supply Chains at Risk](#topic-32206) | 37.0 | 64.0 | 66.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
+| 1 | [Root RCE Zero-Day in Cisco Secure Email Gateway Under Active Exploitation](#topic-32497) | 52.0 | 64.0 | 63.0 | 音声 | 温度感上位枠 |
+| 2 | [China-Linked Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy GRIMWEDGE](#topic-32641) | 45.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,40 +20,34 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-32497"></a>
 
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
-<a id="topic-32206"></a>
-
-### 1. Maximum Severity GitLab Flaw Puts Supply Chains at Risk
+### 1. Root RCE Zero-Day in Cisco Secure Email Gateway Under Active Exploitation
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
-| <nobr>区⁠分</nobr> | GitHub |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>サ⁠プ⁠ラ⁠イ⁠チ⁠ェ⁠ー⁠ン</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
-| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>K⁠E⁠V</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 温度上昇中 |
+| <nobr>温⁠度⁠感</nobr> | 52.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 66.0 |
+| <nobr>確⁠度</nobr> | 63.0 |
 
 #### 概要
 
-GitLab CE/EEに、CVE-2026-85706として追跡される重大な脆弱性が公表され、自己管理型の環境では速やかな更新が呼びかけられています。
-報告によると、特定条件下で未認証の利用者がサーバー上のファイルを読み取れる可能性があり、公開後まもなくインターネット上での探索も確認されています。
-GitLabはソフトウェア開発の基盤として広く使われるため、影響範囲が個別のサイト障害にとどまらず、供給網全体に波及しうる点が注目されています。
-公開直後からの探索観測は、対応の遅れがリスクを高めることを示しています。
+Cisco Secure Email GatewayのAsyncOSに存在する脆弱性（CVE-2026-76461）について、Ciscoは修正版ソフトウェアを公開しており、公開情報では実際の悪用が観測されているとされています。
+影響は未認証の遠隔攻撃者による権限昇格やリモートコマンド実行につながる可能性があると案内されています。
+メールゲートウェイは組織の入口に位置するため、影響機器がある場合は受信メール経由で攻撃の起点になり得ます。
+加えて、悪用観測がある脆弱性として扱われているため、対応の優先度が高い案件です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 6 sources。
+- 複数ソースで確認: 4 sources。
 - 実悪用・ゼロデイ文脈。
-- 技術・開発者系ソース観測: 観測あり。
 - 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
@@ -66,40 +61,107 @@ GitLabはソフトウェア開発の基盤として広く使われるため、�
 
 #### 担当者向け確認ポイント
 
-- GitLab CE/EEの自己管理環境は、該当CVEの修正版への更新状況を至急確認する。
-- 外部公開されたGitLabインスタンスは、不要な露出がないかとアクセスログの異常を点検する。
-- 関連する構成情報や機密ファイルが読まれた可能性も踏まえ、影響範囲の確認を優先する。
+- Ciscoの修正版適用状況を確認し、対象製品・対象バージョンの有無を早急に洗い出す。
+- 公開情報に基づき、当該機器が外部から到達可能な運用になっていないか、ログや監視設定を点検する。
+- 回避策がないとされているため、パッチ適用までの間は資産把握と優先順位付けを行い、監視を強化する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-85706 | 関連CVE | 1.00 | 候補あり（URL 9件以上） |
-| 脆弱性 | CVE-2026-87719 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | GitLab | 言及あり | 0.80 | — |
-| ベンダー | watchTowr | 言及あり | 0.80 | — |
-| 製品 | GitLab CE/EE | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2026-76461 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Cisco | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-85706](https://nvd.nist.gov/vuln/detail/CVE-2026-85706) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Maximum Severity GitLab Flaw Puts Supply Chains at Risk](https://www.darkreading.com/cyberattacks-data-breaches/maximum-severity-gitlab-flaw-supply-chains-risk) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Perfect-10 GitLab bug under attack days after patch lands](https://www.theregister.com/security/2026/09/14/perfect-10-gitlab-bug-under-attack-days-after-patch-lands/5296176) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-85706: Critical GitLab Path Traversal Exploited in the Wild](https://www.rapid7.com/blog/post/etr-cve-2026-85706-critical-gitlab-path-traversal-exploited-in-the-wild) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [GitLab’s critical flaw is already drawing internet-wide probes](https://cyberscoop.com/gitlab-critical-flaws-path-traversal-scans/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure](https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [GitLab urges users to patch max severity path traversal flaw](https://www.bleepingcomputer.com/news/security/gitlab-urges-users-to-patch-max-severity-path-traversal-flaw/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-76461](https://nvd.nist.gov/vuln/detail/CVE-2026-76461) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [注意喚起: Cisco Secure Email GatewayにおけるSQLインジェクションの脆弱性（CVE-2026-76461）に関する注意喚起  (公開](https://www.jpcert.or.jp/at/2026/at260027.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Cisco Secure Email Gateway Flaw Exploited in the Wild, Enables Root Command Exec](https://thehackernews.com/2026/09/cisco-secure-email-gateway-flaw.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Root RCE Zero-Day in Cisco Secure Email Gateway Under Active Exploitation](https://www.securityweek.com/root-rce-zero-day-in-cisco-secure-email-gateway-under-active-exploitation/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Cisco Secure Email Gateway SQL Injection Vulnerability](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-inj-2bLVGmhX) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Cisco patches Secure Email Gateway zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/new-cisco-secure-email-zero-day-exploited-to-execute-commands-as-root/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
+- 技術・開発者系ソース観測: 観測なし。
 
 ---
+
+<a id="topic-32641"></a>
+
+### 2. China-Linked Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy GRIMWEDGE
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>地⁠政⁠学⁠・⁠サ⁠イ⁠バ⁠ー⁠紛⁠争</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 45.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+中国に関連するとされる攻撃者が、Google ChromeとMicrosoft Windowsの修正済み脆弱性を悪用し、GRIMWEDGEと呼ばれるJavaScriptバックドアを配布したと報じられています。
+Volexityはこの活動をUTA0560として追跡しており、複数の非政府組織（NGO）が標的になったとしています。
+修正後まもない脆弱性が連鎖的に悪用された可能性があり、パッチ適用の遅れが直接的なリスクにつながります。
+NGOを含む特定組織への標的型攻撃として注目されており、同種の組織では警戒が必要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- ChromeとWindowsの最新パッチ適用状況を優先的に確認する。
+- 不審なメールや添付ファイル、リンク経由の初期侵入に対する検知・注意喚起を強化する。
+- JavaScriptベースの不審な挙動や未知のバックドア活動を前提に、端末・ブラウザの監視を見直す。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+| ベンダー | Google | 言及あり | 0.80 | — |
+| 製品 | Microsoft Windows | 言及あり | 0.80 | — |
+| 製品 | Google Chrome | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [China-Linked Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy GRIMWEDGE](https://thehackernews.com/2026/09/china-linked-hackers-exploit-chrome.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="github-only-topics"></a>
+
+## 📌 GitHubのみ掲載の注目トピック
+
+今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -110,40 +172,23 @@ GitLabはソフトウェア開発の基盤として広く使われるため、�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [IPA「経営者のためのランサムウェア対策ハンドブック」公開 ～ 脅威に立ち向かうには経営者の関与が不可欠](https://scan.netsecurity.ne.jp/article/2026/09/15/56229.html) | 29.0 | 30.0 | 42.0 |
-| [EDR、入れただけじゃダメ？ IPAのランサム教訓集が経営者に刺さる理由](https://www.itmedia.co.jp/enterprise/articles/2609/15/news019.html) | 29.0 | 30.0 | 42.0 |
-| [HBO MaxのRedditアカウントが侵害されClickFix攻撃を配布](https://www.theregister.com/cyber-crime/2026/09/14/hbo-max-reddit-account-compromised-to-serve-clickfix-attacks/5296408) | 28.0 | 20.0 | 42.0 |
-| [SandwormがCiscoの脆弱性を悪用してCyclops Blinkを展開](https://www.darkreading.com/cyberattacks-data-breaches/sandworm-chains-cisco-vulnerabilities-cyclops-blink) | 28.0 | 20.0 | 42.0 |
-| [「科学者がAIで生物兵器の設計を試みている可能性がある」とAnthropicが報告するも専門家の見解はさまざま](https://gigazine.net/news/20260915-ai-bioweapons-report-anthropic-divides-experts/) | 27.0 | 20.0 | 42.0 |
-| [AIベンチマークに数学を使うのは有害だとして数学者たちが反発](https://gigazine.net/news/20260915-misalignment-of-ai-in-mathematics/) | 27.0 | 20.0 | 42.0 |
-| [縮小しないメインフレーム市場--AIが変える「レガシー」の意味](https://japan.zdnet.com/article/35252611/) | 26.0 | 20.0 | 42.0 |
-| [次はフィジカルAIへ キーマン2人の「確信」](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/090900568/090900005/) | 26.0 | 20.0 | 42.0 |
-| [船のデータを経営に直結 AIに反証できる人材育成](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600003/090900110/) | 26.0 | 20.0 | 42.0 |
-| [今すぐ応募できるサイバーセキュリティ求人：2026年9月15日](https://www.helpnetsecurity.com/2026/09/15/cybersecurity-jobs-available-right-now-september-15-2026/) | 25.0 | 20.0 | 42.0 |
-| [ホスティング事業者向け請求管理ツール「WHMCS」に深刻な脆弱性](https://www.security-next.com/190306) | 22.0 | 20.0 | 42.0 |
-| [「Cisco Secure Email Gateway」に脆弱性、悪用も - 侵害調査を呼びかけ](https://www.security-next.com/190301) | 22.0 | 20.0 | 42.0 |
-| [「Windows 11」、9月の更新で一部のUSBオーディオデバイスに不具合](https://japan.zdnet.com/article/35252618/) | 21.0 | 20.0 | 42.0 |
-| [イギリス政府「パスワード廃止」本格開始](https://scan.netsecurity.ne.jp/article/2026/09/15/56236.html) | 21.0 | 20.0 | 42.0 |
-| [セコムトラスト、10 / 14・15 にWebセミナー開催 ～ 検査成績書や校正証明書などの「電子化と偽造・改ざん対策」解説](https://scan.netsecurity.ne.jp/article/2026/09/15/56235.html) | 21.0 | 20.0 | 42.0 |
-| [日本大学理工学部教職員のアカウントに対し巧妙に偽装されたフィッシングメール、多数の不審メールを送信](https://scan.netsecurity.ne.jp/article/2026/09/15/56234.html) | 21.0 | 20.0 | 42.0 |
-| [公益財団法人 九州先端科学技術研究所でメール誤送信、見積書を自治体 ML 宛に送信](https://scan.netsecurity.ne.jp/article/2026/09/15/56233.html) | 21.0 | 20.0 | 42.0 |
-| [MAMAMOO JAPAN OFFICIAL FANCLUB「MOOMOO JAPAN」に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/09/15/56232.html) | 21.0 | 20.0 | 42.0 |
-| [SCATが利用するクラウドが不正利用、警察に届け 発生した利用料金を巡り事業者と協議](https://scan.netsecurity.ne.jp/article/2026/09/15/56231.html) | 21.0 | 20.0 | 42.0 |
-| [町職員（57歳・女性）が廃棄対象の公文書等を持ち帰り保管、裏面に大量の小説のコピー](https://scan.netsecurity.ne.jp/article/2026/09/15/56230.html) | 21.0 | 20.0 | 42.0 |
-| [日本企業はセキュリティの「意思決定」を外部委託 ～ MM総研調査](https://scan.netsecurity.ne.jp/article/2026/09/15/56228.html) | 21.0 | 20.0 | 42.0 |
-| [HENNGE One、AI搭載型営業支援システム「DRIVE SFA」と SSO 連携](https://scan.netsecurity.ne.jp/article/2026/09/15/56227.html) | 21.0 | 20.0 | 42.0 |
-| [臼杵市特設サイト旧ドメインを第三者が取得、当時配布したチラシのQRコードからアクセスしないよう注意呼びかけ](https://scan.netsecurity.ne.jp/article/2026/09/15/56226.html) | 21.0 | 20.0 | 42.0 |
-| [人間介入ゼロで「Jiraの認証情報」が流出 Copilotが見逃した1行の改修](https://atmarkit.itmedia.co.jp/ait/articles/2609/15/news046.html) | 21.0 | 20.0 | 42.0 |
-| [セキュリティ製品を増やすほど守れなくなる？ 75.4％が実感する「セキュリティ疲れ」の正体](https://atmarkit.itmedia.co.jp/ait/articles/2609/15/news034.html) | 21.0 | 20.0 | 42.0 |
-| [「1秒も止めない」が常識だった金融システムに転換迫る カギは金融庁要請の“ある1項目”](https://www.itmedia.co.jp/enterprise/articles/2609/14/news026.html) | 21.0 | 20.0 | 42.0 |
-| [セキュリティレベルを左右するのは「関係の質」--人と組織のつながりを、最強の防御に変える](https://japan.zdnet.com/article/35252500/) | 21.0 | 20.0 | 42.0 |
-| [中国外務省、AI開発「減速論」に反応 「恐怖をあおることや対立、悪性の競争は誰の利益にもならない」](https://www.itmedia.co.jp/news/article/2609/15/2000001469/) | 21.0 | 20.0 | 42.0 |
-| [パナソニック インダストリー製MINAS A5/A6用Windows USBデバイスドライバにおけるバッファオーバーフローの脆弱性](https://jvn.jp/vu/JVNVU99837984/) | 20.0 | 20.0 | 42.0 |
-| [Homebrew 7.0.0リリース、セキュリティ面の変更点はこれです](https://www.helpnetsecurity.com/2026/09/15/homebrew-7-0-0-security-open-source/) | 20.0 | 20.0 | 42.0 |
-| [iOS 27のAppleペアレンタルコントロールで子どもが新しいWebサイトを開く前に許可を求められるように](https://www.helpnetsecurity.com/2026/09/15/apple-parental-controls-ios-27/) | 20.0 | 20.0 | 42.0 |
-| [プルデンシャル 顧客情報漏えい](https://news.yahoo.co.jp/pickup/6595306?source=rss) | 20.0 | 20.0 | 42.0 |
-| [Microsoft、RDS障害を修正する緊急Windows更新プログラムを公開](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-windows-updates-to-fix-rds-failures/) | 20.0 | 20.0 | 42.0 |
-| [Japanのデジタル庁、VPNの脆弱性で24万6000件の職員記録が流出](https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/) | 20.0 | 20.0 | 42.0 |
+| [Microsoftが「人間はAIより重要」とするAI行動規範を発表、AIの意識や権利を否定](https://gigazine.net/news/20260915-microsoft-humanist-ai-code-of-conduct/) | 27.0 | 20.0 | 42.0 |
+| [「AI・クラウド・人」が標的に--クラウドストライクが示す2026年の脅威動向](https://japan.zdnet.com/article/35252627/) | 26.0 | 20.0 | 42.0 |
+| [従業員がすでに無許可のAIツールを使用している](https://www.helpnetsecurity.com/2026/09/15/onetrust-enterprise-ai-governance-trends-report/) | 25.0 | 20.0 | 42.0 |
+| [中国の情報機関トップが語る最新のAI終末論](https://www.theregister.com/ai-and-ml/2026/09/15/the-latest-ai-doomsayer-is-chinas-intelligence-boss/5296451) | 25.0 | 20.0 | 42.0 |
+| [多くの最高監査責任者はまだAIの価値を説明できない](https://www.helpnetsecurity.com/2026/09/15/gartner-ai-in-internal-audit/) | 25.0 | 20.0 | 42.0 |
+| [ChatGPTとの会話を人間が読む「Project Lily」が進行中、個人情報がレビュー担当者に届いてしまう可能性がある](https://gigazine.net/news/20260915-chatgpt-project-lily/) | 22.0 | 20.0 | 42.0 |
+| [SAP、月例セキュリティ更新で新規アドバイザリ19件 - 4件は「Critical」](https://www.security-next.com/190311) | 22.0 | 20.0 | 42.0 |
+| [「iOS 27」「macOS 27」「iPadOS 27」など一斉リリース、ただしAI Siriの日本語対応は後日](https://gigazine.net/news/20260915-ios-27-macos-ipados/) | 22.0 | 20.0 | 42.0 |
+| [「macOS 27 Golden Gate」提供開始、210件の脆弱性を修正](https://news.mynavi.jp/techplus/article/20260915-4972450/) | 21.0 | 20.0 | 42.0 |
+| [「iOS 27」「iPadOS 27」提供開始、126件の脆弱性を修正](https://news.mynavi.jp/techplus/article/20260915-4972085/) | 21.0 | 20.0 | 42.0 |
+| [「macOS Tahoe 26.7」提供開始、画面共有など計154件の脆弱性に対処](https://news.mynavi.jp/techplus/article/20260915-4971570/) | 21.0 | 20.0 | 42.0 |
+| [不正アクセスで「当選」が「落選」に改ざん ウルトラマンショップのLINE整理券システムで被害](https://www.itmedia.co.jp/news/article/2609/15/2000001480/) | 21.0 | 20.0 | 42.0 |
+| [iPhoneのセキュリティ修正「iOS 26.7」公開、計82件の脆弱性に対処](https://news.mynavi.jp/techplus/article/20260915-4971537/) | 21.0 | 20.0 | 42.0 |
+| [mSecureが1つの保管庫でパスワード以上を管理できる理由](https://www.helpnetsecurity.com/2026/09/15/product-showcase-msecure-password-manager/) | 20.0 | 20.0 | 42.0 |
+| [Androidアプリ「【保護者専用】まなびポケット」におけるアクセス制限不備の脆弱性](https://jvn.jp/jp/JVN72918755/) | 20.0 | 20.0 | 42.0 |
+| [Lite-On製O-RU「FF-RFI079I4」および「FF-RFI078I4」における複数の脆弱性](https://jvn.jp/jp/JVN02049764/) | 20.0 | 20.0 | 42.0 |
+| [米連邦最高裁、USPSの郵便投票変更を認めない判断を下す](https://cyberscoop.com/supreme-court-denies-trump-usps-mail-ballot-changes/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
