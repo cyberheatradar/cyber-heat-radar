@@ -1,18 +1,18 @@
-# 📡 サイレーダー 2026-09-16 11:00 JST
+# 📡 サイレーダー 2026-09-16 17:00 JST
 
-このレポートは、2026-09-16 05:00 JST〜2026-09-16 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-16 11:00 JST〜2026-09-16 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 57
-- [音声で扱う想定のトピック](#audio-topics): 1
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 28
+- 観測トピック数: 48
+- [音声で扱う想定のトピック](#audio-topics): 2
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 22
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Microsoft 2026年9月 Patch Tuesday 関連まとめ](#topic-31499) | 57.0 | 60.0 | 57.0 | GitHub | audio_eligible_by_public_rules_false |
-| 2 | [Acronis warns of actively exploited flaw in its cPanel backup plugin](#topic-32859) | 39.0 | 50.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [Google fixes actively exploited Android zero-day on Pixel devices](#topic-32868) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [Attackers Exploit WooCommerce Wholesale Lead Capture Flaw to Plant PHP Web Shells](#topic-32879) | 32.0 | 38.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -20,27 +20,27 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-32859"></a>
+<a id="topic-32868"></a>
 
-### 1. Acronis warns of actively exploited flaw in its cPanel backup plugin
+### 1. Google fixes actively exploited Android zero-day on Pixel devices
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>T⁠T⁠P</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>A⁠n⁠d⁠r⁠o⁠i⁠d</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 50.0 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
 | <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-Acronisが、cPanel、WHM、Plesk向けバックアッププラグインに高深刻度のLinuxローカル権限昇格の脆弱性があると公表しました。
-公開情報では、実際に悪用されている可能性が示されていますが、詳細な影響範囲は確認が必要です。
-権限昇格の脆弱性は、侵入後の被害拡大や管理権限の奪取につながるおそれがあるため注目されます。特にサーバー運用で広く使われる製品に関わる点から、対応の優先度が高い話題です。
+GoogleはPixel端末向けに2026年9月のセキュリティ修正を公開し、合計110件の脆弱性に対応したとされています。
+その中には、標的型攻撃で実際に悪用されていたゼロデイ脆弱性が含まれていました。ゼロデイが実際に悪用されていたとされるため、影響を受ける端末では早急な更新確認が重要です。
+Pixel端末を業務利用している場合、端末管理やパッチ適用状況の把握が求められます。
 
 #### 温度感の理由
 
@@ -49,31 +49,88 @@ Acronisが、cPanel、WHM、Plesk向けバックアッププラグインに高�
 
 ##### 実務影響
 - 悪用情報あり。
-- 権限昇格系。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 該当するAcronis製バックアッププラグインの利用有無を確認し、ベンダーの修正版・回避策の案内を確認する。
-- cPanel/WHM/Pleskを含む関連サーバーで不審な権限昇格の兆候や、想定外の管理者操作履歴がないか点検する。
-- 影響が疑われる環境では、更新適用までの間にアクセス制御の強化とログ保全を優先する。
+- Pixel端末のセキュリティ更新適用状況を確認し、可能な限り早期に最新パッチへ更新する。
+- MDMなどで端末のOS・セキュリティパッチレベルを把握し、未更新端末を洗い出す。
+- 標的型攻撃が想定されるため、異常な挙動や不審なアプリ権限の有無を点検する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-87886 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | cPanel | 言及あり | 0.80 | — |
-| 製品 | cPanel | 言及あり | 0.80 | — |
-| 製品 | WHM | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2026-58704 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Google | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Acronis warns of actively exploited flaw in its cPanel backup plugin](https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Google fixes actively exploited Android zero-day on Pixel devices](https://www.bleepingcomputer.com/news/security/google-fixes-actively-exploited-android-zero-day-on-pixel-devices/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-32879"></a>
+
+### 2. Attackers Exploit WooCommerce Wholesale Lead Capture Flaw to Plant PHP Web Shells
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 32.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+WooCommerce Wholesale Lead CaptureというWordPress向け有料プラグインの脆弱性が、攻撃に悪用されていると報告されています。
+公開情報では、未認証の攻撃者が任意ファイルをアップロードし、PHPのバックドア設置やリモートコード実行につながる可能性が示されています。
+このプラグインは一定数の導入実績があり、影響範囲が広がる可能性があります。認証不要で悪用されるおそれがある点から、WordPress運用者にとって優先度の高い確認事項です。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 対象プラグインの利用有無を確認し、提供元の修正版や最新情報を早急に確認する。
+- WordPress本体、プラグイン、テーマを含めて不要なものを整理し、更新を適用する。
+- 改ざんの兆候として、見覚えのないPHPファイルや不審な管理者アカウント、想定外のアップロードを点検する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 製品 | WordPress | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Attackers Exploit WooCommerce Wholesale Lead Capture Flaw to Plant PHP Web Shell](https://thehackernews.com/2026/09/attackers-exploit-woocommerce-wholesale.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -88,71 +145,7 @@ Acronisが、cPanel、WHM、Plesk向けバックアッププラグインに高�
 
 ## 📌 GitHubのみ掲載の注目トピック
 
-<a id="topic-31499"></a>
-
-### 1. Microsoft 2026年9月 Patch Tuesday 関連まとめ
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | GitHub |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>D⁠D⁠o⁠S</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>ク⁠ラ⁠ウ⁠ド</nobr> / <nobr>I⁠o⁠C</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>A⁠I</nobr> |
-| <nobr>温⁠度⁠状⁠態</nobr> | 冷却中 |
-| <nobr>温⁠度⁠感</nobr> | 57.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 60.0 |
-| <nobr>確⁠度</nobr> | 57.0 |
-
-#### 概要
-
-Microsoftの2026年9月Patch Tuesdayでは、過去最多となる973件の脆弱性修正が公開され、うち113件が重要度「Critical」とされています。
-あわせて、2件の脆弱性が実際の悪用を受けているとされ、Windowsの権限昇格やSkype for Business、MSMQ、RRASに関する重要な修正も含まれています。
-修正件数が非常に多く、環境全体の棚卸しと優先順位付けが必要になりやすい回です。加えて、実悪用が示されている項目があるため、通常月以上に適用判断の迅速さが問われます。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 11 sources。
-- 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用情報あり。
-- 権限昇格系。
-- ランサムウェア文脈。
-
-##### 確度
-- 複数ソース確認。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 実際に悪用が示されている修正と、外部公開の影響が大きい機能・製品の修正を優先して確認する。
-- Windowsの権限昇格系の更新は、サーバー/管理端末を含めて適用漏れがないか点検する。
-- Skype for Business、MSMQ、RRASなど、利用中の機能がある環境では影響範囲と適用計画を早めに整理する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Microsoft Issues Emergency Fixes After Massive Patch Tuesday](https://www.darkreading.com/application-security/microsoft-emergency-fixes-patch-tuesday) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft Patch Tuesday inadvertently takes down copy and paste in Excel – and t](https://www.itpro.com/security/microsoft-patch-tuesday-inadvertently-takes-down-copy-and-paste-in-excel-and-theres-no-way-to-fix-it-yet) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft Shatters Patch Tuesday Record With 974 CVE Fixes in September 2026](https://www.infosecurity-magazine.com/news/microsoft-patch-tuesday-record/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft breaks Patch Tuesday record with 974-CVE deluge](https://www.theregister.com/security/2026/09/09/microsoft-breaks-patch-tuesday-record-with-974-cve-deluge/5295160) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft posts nearly 1,000 bugs for Patch Tuesday as CISA warns two being expl](https://therecord.media/microsoft-patch-tuesday-september-2026) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft Patch Tuesday for September 2026 — Snort rules and prominent vulnerabi](https://blog.talosintelligence.com/microsoft-patch-tuesday-for-september-2026/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Patch Tuesday - September 2026](https://www.rapid7.com/blog/post/em-patch-tuesday-september-2026) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: 候補あり・採用なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
+今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -163,34 +156,28 @@ Microsoftの2026年9月Patch Tuesdayでは、過去最多となる973件の脆�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [鳥取県環境放射線モニタリングシステムにランサムウェア攻撃、副サーバは被害受けず放射線モニタリングに影響なし](https://scan.netsecurity.ne.jp/article/2026/09/16/56244.html) | 29.0 | 30.0 | 42.0 |
-| [Weekly Report: 独立行政法人情報処理推進機構（IPA）が「ランサムウェア被害から学ぶ教訓集 経営者のためのランサムウェア対策ハンドブック」を公開](https://www.jpcert.or.jp/wr/2026/wr260916.html) | 28.0 | 30.0 | 42.0 |
-| [韓国のメディア業界と自動車業界を狙うサイバー攻撃](https://www.darkreading.com/cyberattacks-data-breaches/cyber-south-korean-media-automotive) | 28.0 | 20.0 | 42.0 |
-| [Malcious Admin Menu Editor Proプラグインが1,500件のWordPressサイトにバックドアを設置](https://www.bleepingcomputer.com/news/security/malcious-admin-menu-editor-pro-plugin-backdoors-1-500-wordpress-sites/) | 28.0 | 20.0 | 42.0 |
-| [攻撃モデル Red Tempest と防御モデル Blue Solano を統合 ～ 新 AI「CrowdStrike SafeMind」発表](https://scan.netsecurity.ne.jp/article/2026/09/16/56241.html) | 26.0 | 20.0 | 42.0 |
-| [ヒューマン・イン・ザ・ループ万能説崩壊 NISTが提唱するAIエージェント運用のあるべき姿](https://atmarkit.itmedia.co.jp/ait/articles/2609/16/news017.html) | 26.0 | 20.0 | 42.0 |
-| [OpenAI、AI安全性でAnthropic、Google DeepMindと協議中──Bloomberg報道](https://www.itmedia.co.jp/news/article/2609/16/2000001522/) | 26.0 | 20.0 | 42.0 |
-| [AI時代にアップルの勝機はあるか--かぎを握るのは「Mac」？](https://japan.zdnet.com/article/35252628/) | 26.0 | 20.0 | 42.0 |
-| [企業のAI内製化の実態調査 「競合他社に後れ」に危機感が約7割](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600010/090900233/) | 26.0 | 20.0 | 42.0 |
-| [Dreamforce 2026で示された、AI安全性が新たなビッグテックの主戦場であること](https://www.itpro.com/security/dreamforce-2026-showed-ai-safety-is-the-new-big-tech-battleground) | 25.0 | 20.0 | 42.0 |
-| [Microsoft、学生向けAIプライバシー規則の大幅強化を表明。ほかの巨大テック企業も追随するのか](https://www.securityweek.com/microsoft-commits-to-sweeping-ai-privacy-rules-for-students-will-other-tech-giants-follow/) | 25.0 | 20.0 | 42.0 |
-| [Appleに降り注ぐiOSの脆弱性、過去最多の修正パッチを記録](https://www.theregister.com/security/2026/09/15/the-vulnpocalypse-rains-ibugs-down-on-apple-with-record-setting-number-of-patches/5296679) | 22.0 | 28.0 | 50.0 |
-| [「Chrome 153」にセキュリティ更新 - 「クリティカル」3件含む42件](https://www.security-next.com/190364) | 22.0 | 20.0 | 42.0 |
-| [Homebrew 7.0.0リリース、パフォーマンス向上・セキュリティ強化の一方でmacOS 10.15のサポート終了・Intel MacがTier 3に移行](https://gigazine.net/news/20260916-homebrew-v700/) | 22.0 | 20.0 | 42.0 |
-| [ホテル白菊が利用する宿泊予約・販売管理システムに不正アクセス、フィッシングメール送信を確認](https://scan.netsecurity.ne.jp/article/2026/09/16/56247.html) | 21.0 | 20.0 | 42.0 |
-| [日鉄興和不動産が利用するクラウドサービスに不正アクセス、マンション販売業務等に関する顧客情報を保存](https://scan.netsecurity.ne.jp/article/2026/09/16/56246.html) | 21.0 | 20.0 | 42.0 |
-| [大阪高等裁判所で特定の事件に係る Microsoft Teams のチーム作成誤り、招待メール・通知からアクセスした際にユーザー名とメールアドレスが閲覧できる状態に](https://scan.netsecurity.ne.jp/article/2026/09/16/56245.html) | 21.0 | 20.0 | 42.0 |
-| [保育園運営のさくらさくみらいが利用するクラウドサービス事業者に不正アクセス、一部サーバのパスワード情報が流出した可能性](https://scan.netsecurity.ne.jp/article/2026/09/16/56243.html) | 21.0 | 20.0 | 42.0 |
-| [家庭児童相談記録を対象家庭に匿名で郵送、市職員 生活福祉課 主幹 50歳 逮捕](https://scan.netsecurity.ne.jp/article/2026/09/16/56242.html) | 21.0 | 20.0 | 42.0 |
-| [a-blog cms にパストラバーサルの脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/16/56240.html) | 21.0 | 20.0 | 42.0 |
-| [Windows DNSに複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/16/56239.html) | 21.0 | 20.0 | 42.0 |
-| [ツール過多・アラート・可視性ギャップ・属人化 ～ TD SYNNEX「セキュリティ疲れ」4 つの構造要因](https://scan.netsecurity.ne.jp/article/2026/09/16/56238.html) | 21.0 | 20.0 | 42.0 |
-| [北九州市、介護保険事務での特定個人情報保護評価書に対する市民意見を募集](https://scan.netsecurity.ne.jp/article/2026/09/16/56237.html) | 21.0 | 20.0 | 42.0 |
-| [社長を装った詐欺メール、3日で100万通に 経理をだます「三重の偽装」](https://www.itmedia.co.jp/enterprise/articles/2609/16/news027.html) | 21.0 | 20.0 | 42.0 |
-| [陸自個人情報収集 8月も公益通報](https://news.yahoo.co.jp/pickup/6595442?source=rss) | 20.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年09月15日）](https://jvn.jp/vu/JVNVU93448623/) | 20.0 | 20.0 | 42.0 |
-| [ドコモ 個人情報34万人分無断提供](https://news.yahoo.co.jp/pickup/6595432?source=rss) | 20.0 | 20.0 | 42.0 |
-| [SCS評価制度★3・★4取得を支援する「サイバーセキュリティお助け隊サービス（新類型）実証事業」開始、IPA 実証事業として無償で参加可能](https://internet.watch.impress.co.jp/docs/news/2141103.html) | 20.0 | 20.0 | 42.0 |
+| [Google DeepmindのAI研究者が退職し「AIが人類を絶滅させる可能性がある」と警告](https://gigazine.net/news/20260916-google-deepmind-engineer-resigned/) | 27.0 | 20.0 | 42.0 |
+| [Googleが音声会話AI「Gemini 3.8 Live」と「Gemini 3.8 Live Extended Thinking」をリリース、リアルタイムで会話しながらコーディング可能](https://gigazine.net/news/20260916-gemini-3-8-live/) | 27.0 | 20.0 | 42.0 |
+| [AIエージェントがインターネットを壊し始めているとの指摘](https://gigazine.net/news/20260916-ai-agent-ruining-internet/) | 27.0 | 20.0 | 42.0 |
+| [ChatGPT共同開発者がLLMとは異なる方法で処理するAIモデル「Jev」を開発、GPT-5.6 Terra級の性能でタスクを安価かつ超高速に実行可能](https://gigazine.net/news/20260916-system-one-jev/) | 27.0 | 20.0 | 42.0 |
+| [AI減速論に賛否、AnthropicとOpenAIまさかの協調 NVIDIAは「安全と両立」](https://xtech.nikkei.com/atcl/nxt/column/18/00001/12038/) | 26.0 | 20.0 | 42.0 |
+| [大規模環境でAIエージェントのガバナンスが欠如すると何が起こるか](https://www.helpnetsecurity.com/2026/09/16/gourab-basu-meshiq-ai-agent-governance/) | 25.0 | 20.0 | 42.0 |
+| [AI時代に見直すGoogle Workspaceのセキュリティ：現代の攻撃チェーン](https://www.helpnetsecurity.com/2026/09/16/material-google-workspace-attack-chains/) | 25.0 | 20.0 | 42.0 |
+| [Cloudflare WANとの接続検証でRTX1300/RTX840が確認、IPsecや自動切替に対応](https://ascii.jp/elem/000/004/435/4435362/?rss=) | 24.0 | 20.0 | 43.0 |
+| [HPEの「SD-WAN」関連製品に複数の深刻な脆弱性 - 修正版を提供](https://www.security-next.com/190358) | 22.0 | 20.0 | 42.0 |
+| [Oracle、月例セキュリティアップデートを公開 - のべ673件を修正](https://www.security-next.com/190394) | 22.0 | 20.0 | 42.0 |
+| [わずか約39円分のビットコインから約461億枚の「偽BTCトークン」が作られる、2つのバグでマイナス手数料を悪用](https://gigazine.net/news/20260916-bitcoin-fake-token/) | 22.0 | 20.0 | 42.0 |
+| [Apple、「iOS 27」「iPadOS 27」で多数脆弱性に対応 - 「同26.7」も公開](https://www.security-next.com/190370) | 22.0 | 20.0 | 42.0 |
+| [Zscaler Internet AccessのIKEv2接続例 ヤマハRTX1300でZIA経由の冗長IPsec VPNを構築する方法](https://ascii.jp/elem/000/004/435/4435368/?rss=) | 21.0 | 20.0 | 42.0 |
+| [ゼットスケーラー、「Agentic SOC」発表--脅威をマシンスピードで検知、対応](https://japan.zdnet.com/article/35252657/) | 21.0 | 20.0 | 42.0 |
+| [WSO2 API ManagerのJWTバイパスを狙う偽造管理者トークンによるアクティブな攻撃試行](https://thehackernews.com/2026/09/active-exploitation-attempts-target.html) | 20.0 | 28.0 | 50.0 |
+| [NISTとCISAがトークン窃取と偽造を防ぐプレイブックを策定完了](https://www.helpnetsecurity.com/2026/09/16/nist-cisa-cloud-token-security-guidance/) | 20.0 | 20.0 | 42.0 |
+| [ANY.RUNとSentinelOne: 単一ワークスペースで迅速対応を実現する即時コンテキスト](https://any.run/cybersecurity-blog/sentinelone-integration/) | 20.0 | 20.0 | 42.0 |
+| [Mythosが2026年のパッチ適用を地獄にした、2027年は楽になるかもしれない](https://www.theregister.com/security/2026/09/16/mythos-has-made-2026-patching-hell-it-might-make-2027-a-breeze/5296747) | 20.0 | 20.0 | 42.0 |
+| [DeepZero: 脆弱なWindowsドライバを探すオープンソースハンティング](https://www.helpnetsecurity.com/2026/09/16/vulnerable-windows-drivers-deepzero-open-source/) | 20.0 | 20.0 | 42.0 |
+| [MSPの顧客の約半数がCISOサービスをMSPに依存](https://www.helpnetsecurity.com/2026/09/16/msp-ciso-services-compliance/) | 20.0 | 20.0 | 42.0 |
+| [QNDにおける複数の脆弱性](https://jvn.jp/jp/JVN95825631/) | 20.0 | 20.0 | 42.0 |
+| [XikeStor製Layer3スイッチのコンフィグレーションデータダウンロード機能における認証欠如の脆弱性](https://jvn.jp/jp/JVN45281119/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
