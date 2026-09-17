@@ -1,17 +1,18 @@
-# 📡 サイレーダー 2026-09-17 11:00 JST
+# 📡 サイレーダー 2026-09-17 17:00 JST
 
-このレポートは、2026-09-17 05:00 JST〜2026-09-17 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-17 11:00 JST〜2026-09-17 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 59
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 47
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 34
+- [低温だが記録しておくトピック](#low-record-topics): 21
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Smashing Security podcast #485: These researchers got drunk to hack an LG TV](#topic-33084) | 36.0 | 30.0 | 42.0 | 音声 | AI×Security枠 |
+| 1 | [Active Exploitation Triggers Emergency Patch for Cisco ISE Zero-Day](#topic-33139) | 41.0 | 56.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [Cisco warns of max severity ISE zero-day exploited in attacks](#topic-33134) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,51 +20,122 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-33084"></a>
+<a id="topic-33139"></a>
 
-### 1. Smashing Security podcast #485: These researchers got drunk to hack an LG TV
+### 1. Active Exploitation Triggers Emergency Patch for Cisco ISE Zero-Day
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠n⁠d⁠r⁠o⁠i⁠d</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>認⁠証⁠バ⁠イ⁠パ⁠ス</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 36.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
+| <nobr>温⁠度⁠感</nobr> | 41.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 56.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-LG製スマートテレビの安全性を検証した研究の話題と、Android向けマルウェア「Awesome」に関する注意喚起が取り上げられています。
-あわせて、攻撃者が初期侵入からランサムウェア被害に至るまでを短時間で進めやすくなっているという、企業向けの脅威動向も紹介されています。
-スマートテレビのような家庭内デバイスも、設定や利用条件を含めてセキュリティ確認の対象になっていることが分かります。
-さらに、モバイル端末や企業ネットワークに対する攻撃の加速が示唆されており、対策の優先度を見直す材料になります。
+Cisco Identity Services Engine（ISE）に関するゼロデイ脆弱性について、悪用が確認されたことを受けて緊急パッチが公開されたと報じられています。
+公開情報では、認証されていない攻撃者が細工したリクエストにより認証を回避できる可能性が示されています。
+認証回避は、組織内システムへの不正アクセスにつながり得るため、影響が大きくなりやすい類型です。
+さらに、実際の悪用が観測されている点から、単なる未修正の脆弱性よりも優先度を上げて対応する必要があります。
 
 #### 温度感の理由
 
 ##### 温度感
-- 脅威・攻撃キャンペーン文脈。
+- 実悪用・ゼロデイ文脈。
 
 ##### 実務影響
-- ランサムウェア文脈。
+- 悪用情報あり。
+- RCEまたは認証バイパス系。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- IoT/スマートTVを含む社内外の接続機器について、初期設定・更新状況・不要機能の有無を定期確認する。
-- Android端末では、配布元不明のアプリや不審な権限要求への注意を徹底し、EDRやMDMで監視を強化する。
-- 初期侵入後の展開が速い前提で、認証強化、権限の最小化、重要データのバックアップと復旧手順を再点検する。
+- Cisco ISEの利用有無と対象バージョンを確認し、提供済みの修正適用を急ぐ。
+- 認証関連のログや不審なアクセスを点検し、通常と異なる挙動がないか確認する。
+- 外部公開面や管理系アクセスの制御を見直し、暫定的なリスク低減策が案内されている場合は反映する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-76460 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Cisco | 言及あり | 0.80 | — |
+| 製品 | Cisco Identity Services Engine | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Smashing Security podcast #485: These researchers got drunk to hack an LG TV](https://grahamcluley.com/smashing-security-podcast-485/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Active Exploitation Triggers Emergency Patch for Cisco ISE Zero-Day](https://www.securityweek.com/active-exploitation-triggers-emergency-patch-for-cisco-ise-zero-day/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-33134"></a>
+
+### 2. Cisco warns of max severity ISE zero-day exploited in attacks
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+Ciscoは、Identity Services Engine（ISE）に存在する深刻度最高の脆弱性について、実際の攻撃で悪用されているとして修正を公開しました。
+現時点で材料からは、対象となる脆弱性の詳細なCVE番号は確認できませんが、ゼロデイとして扱われている点が重要です。
+認証・アクセス制御に関わる製品でのゼロデイ悪用は、組織内ネットワークへの到達や権限悪用につながるおそれがあるため、影響が大きくなりやすいです。
+公開修正が出ているため、対応の遅れがリスクになります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Cisco ISEの利用有無と適用バージョンを確認し、該当する修正の適用可否を早急に点検する。
+- ベンダーのアドバイザリを確認し、回避策や一時的な緩和策が案内されていれば優先して反映する。
+- 認証・管理系ログを点検し、不審な管理操作や設定変更の有無を確認する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Cisco | 言及あり | 0.80 | — |
+| 製品 | Cisco Identity Services Engine | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Cisco warns of max severity ISE zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -89,40 +161,27 @@ LG製スマートテレビの安全性を検証した研究の話題と、Androi
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ランサムウェアは「暗号化より先にバックアップを消す」、OS標準機能の悪用が前月比7割増〜Halcyonがレポート 「ROC STARレポート：2026年8月版」](https://internet.watch.impress.co.jp/docs/news/2141536.html) | 28.0 | 30.0 | 42.0 |
-| [イランのハッカーがCHOSEN BRICK Windowsマルウェアで標的を監視](https://www.bleepingcomputer.com/news/security/iranian-hackers-use-chosen-brick-windows-malware-to-spy-on-targets/) | 28.0 | 20.0 | 42.0 |
-| [Claude Fable 5.1が370年前の未解読暗号「Cyphral Distich」を1日足らずで解読](https://gigazine.net/news/20260917-fable-solves-cyphral-distich/) | 27.0 | 20.0 | 42.0 |
-| [AI駆動型開発で生産性倍増を狙うIBM セキュリティ、トークンコスト、品質の課題をどう解決する？](https://ascii.jp/elem/000/004/435/4435559/?rss=) | 26.0 | 20.0 | 42.0 |
-| [Anthropic、Claudeの「チャット」と「Cowork」を統合 資料作成の「Docs」「Slides」も](https://www.itmedia.co.jp/news/article/2609/17/2000001565/) | 26.0 | 20.0 | 42.0 |
-| [従業員から AI エージェント・NHI まで一元管理、Okta が目指す統合アイデンティティ基盤](https://scan.netsecurity.ne.jp/article/2026/09/17/56250.html) | 26.0 | 20.0 | 42.0 |
-| [Anthropic、Claudeに銀行口座と金融データの分析機能を追加へ](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-wants-claude-to-analyze-your-bank-account-and-financial-data/) | 25.0 | 20.0 | 42.0 |
-| [AIエージェントは人の指示なしに自己改変できる](https://www.theregister.com/security/2026/09/16/ai-agents-can-modify-themselves-without-humans-telling-them-to-do-so/5296991) | 25.0 | 20.0 | 42.0 |
-| [ガートナーが警告「今後5年の最大課題」…AIエージェント「無秩序増殖」を防ぐ対策5選](https://www.sbbit.jp/article/cont1/186885?ref=rss) | 25.0 | 20.0 | 42.0 |
-| [AIセキュリティへの投資が急増、価値証明を上回る懸念が拡大](https://www.darkreading.com/cybersecurity-operations/ai-security-spending-jumps-fear-outpaces-proof-value) | 25.0 | 20.0 | 42.0 |
-| [有力議員、AI安全性法案への対応は2027年まで見送りの可能性を示唆](https://therecord.media/frontier-act-ai-bill-house-brett-guthrie) | 25.0 | 20.0 | 42.0 |
-| [「Cisco ISE」に42件の脆弱性 - 複数の深刻な脆弱性、一部で悪用確認](https://www.security-next.com/190434) | 22.0 | 20.0 | 42.0 |
-| [米当局、「Acronis」「Cisco ISE」など脆弱性3件の悪用を警告](https://www.security-next.com/190430) | 22.0 | 20.0 | 42.0 |
-| [Windows 11、RDSやHyper-V、USB音声の不具合に対応するプログラムを配信 一部未解決の問題も](https://www.itmedia.co.jp/enterprise/articles/2609/17/news041.html) | 21.0 | 20.0 | 42.0 |
-| [マイクロソフト、「Windows 11」の定例外パッチを公開--脆弱性やUSB音声問題に対処](https://japan.zdnet.com/article/35252704/) | 21.0 | 20.0 | 42.0 |
-| [さくらインターネットが不正アクセス調査結果を発表「さくらのレンタルサーバ」全サーバ再構築など再発防止策を掲げる](https://scan.netsecurity.ne.jp/article/2026/09/17/56259.html) | 21.0 | 20.0 | 42.0 |
-| [データベース内の全てのデータを削除 ～「コープやまぐちLINEミニアプリ」に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/09/17/56258.html) | 21.0 | 20.0 | 42.0 |
-| [表示された連絡先に電話 指示に従いパソコン操作 ～ 大田区民プラザでサポート詐欺被害](https://scan.netsecurity.ne.jp/article/2026/09/17/56257.html) | 21.0 | 20.0 | 42.0 |
-| [プラグインの脆弱性を悪用 ～ 「洛西進学教室」「進学館」に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/09/17/56256.html) | 21.0 | 20.0 | 42.0 |
-| [コロナが施工情報を管理するクラウドサービスに不正アクセス、最大35,000名分の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/09/17/56255.html) | 21.0 | 20.0 | 42.0 |
-| [運送業者が配送過程で紛失 ～ 厚労省の令和8年最低賃金に関する基礎調査 調査票](https://scan.netsecurity.ne.jp/article/2026/09/17/56254.html) | 21.0 | 20.0 | 42.0 |
-| [54サイトが閲覧不可に ～ 山梨大学が契約しているレンタルサーバでのWebサイト改ざん](https://scan.netsecurity.ne.jp/article/2026/09/17/56253.html) | 21.0 | 20.0 | 42.0 |
-| [求人サービス「CINRA JOB」に不正アクセス、閲覧取得がなかったことを確認するに足る記録が存在しないため漏えいのおそれがあるものと判断](https://scan.netsecurity.ne.jp/article/2026/09/17/56252.html) | 21.0 | 20.0 | 42.0 |
-| [中小企業のSCS評価制度 ★3 ★4 取得を無償で支援 ～ サイバーセキュリティお助け隊サービス（新類型）実証事業](https://scan.netsecurity.ne.jp/article/2026/09/17/56251.html) | 21.0 | 20.0 | 42.0 |
-| [M365 の上位ライセンスを購入せずに認証・メールセキュリティを強化、NSグループが「HENNGE One Pro」導入](https://scan.netsecurity.ne.jp/article/2026/09/17/56249.html) | 21.0 | 20.0 | 42.0 |
-| [SBOM最小要素、26年版で増加 日本では「推奨」、強制せず](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/091001497/) | 21.0 | 20.0 | 42.0 |
-| [セールスフォース、「AIforce」を発表--「インターフェース革命だ」とベニオフ氏](https://japan.zdnet.com/article/35252684/) | 21.0 | 20.0 | 42.0 |
-| [資格情報は依然として最短の侵入経路](https://www.praetorian.com/blog/credential-testing-brutus/) | 20.0 | 20.0 | 42.0 |
-| [MLflowのdspyとstatsmodelsフレーバーにおけるpickleのデシリアライズ制御回避の脆弱性](https://jvn.jp/vu/JVNVU94390979/) | 20.0 | 20.0 | 42.0 |
-| [Sentry Seerにおける攻撃者が制御する入力が管理者権限で実行される脆弱性](https://jvn.jp/vu/JVNVU91019649/) | 20.0 | 20.0 | 42.0 |
-| [なぜ“報告書止まり”に？ EYが明かす、金融セキュリティ評価が経営に刺さる4ステップ](https://www.sbbit.jp/article/fj/186864?ref=rss) | 20.0 | 20.0 | 42.0 |
-| [Windows 11 KB5124008更新で一部ユーザーのドメイン信頼関係に不具合発生](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5124008-update-breaks-domain-trust-for-some-users/) | 20.0 | 20.0 | 42.0 |
-| [CISA、週次の脆弱性速報の発行を不要と判断](https://www.theregister.com/security/2026/09/16/cisa-decides-weekly-vulnerability-bulletin-isnt-necessary-anymore/5296968) | 20.0 | 20.0 | 42.0 |
-| [CISAがサイバー攻撃者を欺く新手法を提唱](https://cyberscoop.com/cisa-guidance-cyber-decoys-critical-infrastructure/) | 20.0 | 20.0 | 42.0 |
+| [2025年版 ランサムウェア被害状況＆企業が取るべき対策と訓練【エスカとレンのセキュリティ通信】](https://ascii.jp/elem/000/004/430/4430144/?rss=) | 29.0 | 30.0 | 42.0 |
+| [ランサムウェア被害は過去最多 警察庁が明かした2026年上半期の異変](https://atmarkit.itmedia.co.jp/ait/articles/2609/17/news010.html) | 29.0 | 30.0 | 42.0 |
+| [OpenAIが広告スポンサードAIエージェントのテストを開始、企業がスポンサーとなるAIとチャットできる仕組み](https://gigazine.net/news/20260917-openai-sponsored-agents/) | 27.0 | 20.0 | 42.0 |
+| [ClaudeのチャットAIとCoworkが統合される](https://gigazine.net/news/20260917-claude-cowork-merged/) | 27.0 | 20.0 | 42.0 |
+| [「AIがログを取りに行く」時代、SIEMは何のためにある？ Splunkの答え](https://atmarkit.itmedia.co.jp/ait/articles/2609/17/news045.html) | 26.0 | 20.0 | 42.0 |
+| [SCSKが伴走型セキュリティーサービス開始、生成AIで増える脅威へ備え](https://xtech.nikkei.com/atcl/nxt/news/24/03389/) | 26.0 | 20.0 | 42.0 |
+| [Riverbed NPM 360、AIでネットワーク障害を予測・防止](https://www.helpnetsecurity.com/2026/09/17/riverbed-network-360-observability-solutions/) | 25.0 | 20.0 | 42.0 |
+| [経営層が本当に問うべきAIセキュリティの問いとは](https://www.helpnetsecurity.com/2026/09/17/frederic-bull-gremlin-ai-in-cybersecurity-gap/) | 25.0 | 20.0 | 42.0 |
+| [AIがオープンソースプロジェクトのレビュー負荷を増大させている、資金不足のものも多い](https://www.helpnetsecurity.com/2026/09/17/ai-and-open-source-projects/) | 25.0 | 20.0 | 42.0 |
+| [自律型AI兵器に対する世界的なレッドラインの確立](https://www.helpnetsecurity.com/2026/09/17/autonomous-ai-weapons-future/) | 25.0 | 20.0 | 42.0 |
+| [好奇心から習慣へ：コンシューマーAIで無料と速さが重要な理由](https://securityboulevard.com/2026/09/from-curiosity-to-habit-why-free-speed-matters-in-consumer-ai/) | 25.0 | 20.0 | 42.0 |
+| [中国のハッカー企業ZRONは盗んだ外国の政府情報をAIシステムを使ってより理解しやすいものにして販売している](https://gigazine.net/news/20260917-chinese-hacking-firm/) | 22.0 | 20.0 | 42.0 |
+| [隔離実行環境「Docker Sandboxes」に複数脆弱性 - 修正版を提供](https://www.security-next.com/190456) | 22.0 | 20.0 | 42.0 |
+| [「IBM Guardium Data Security Center」に脆弱性 - 早急に更新を](https://www.security-next.com/190443) | 22.0 | 20.0 | 42.0 |
+| [“ほったらかしAI動画編集”を「DaVinci Resolve」で試す これが今のベストチョイスかも](https://www.itmedia.co.jp/news/article/2609/16/2000001551/) | 22.0 | 20.0 | 42.0 |
+| [Tuskira Vector、攻撃対象領域の検証に自律的レッドチーミングを導入](https://www.helpnetsecurity.com/2026/09/17/tuskira-vector-autonomous-red-teaming/) | 20.0 | 20.0 | 42.0 |
+| [サイバーセキュリティ予算が横ばいでも対応範囲を弱めない方法](https://www.helpnetsecurity.com/2026/09/17/flat-cybersecurity-budget-video/) | 20.0 | 20.0 | 42.0 |
+| [スマートフォンアプリ「東北電力 よりそうｅねっと」におけるハードコードされた暗号鍵使用の脆弱性](https://jvn.jp/jp/JVN93985674/) | 20.0 | 20.0 | 42.0 |
+| [AWSの新しいサインアップ機能でアカウントの支出上限、メール招待、エージェント設定の権限を提供](https://www.helpnetsecurity.com/2026/09/17/aws-spend-limit-agent-set-permissions/) | 20.0 | 20.0 | 42.0 |
+| [GNOME 51にパスキー登录、オフライン地図、手描きPDF署名を追加](https://www.helpnetsecurity.com/2026/09/17/gnome-51-new-features/) | 20.0 | 20.0 | 42.0 |
+| [Salesforceで大規模障害 「夕方以降に落ちるなんて」阿鼻叫喚 PayPayのフォームにも影響](https://www.itmedia.co.jp/news/article/2609/16/2000001562/) | 17.0 | 20.0 | 42.0 |
 
 ---
 
