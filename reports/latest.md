@@ -1,18 +1,19 @@
-# 📡 サイレーダー 2026-09-18 11:00 JST
+# 📡 サイレーダー 2026-09-18 17:00 JST
 
-このレポートは、2026-09-18 05:00 JST〜2026-09-18 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-18 11:00 JST〜2026-09-18 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 54
-- [音声で扱う想定のトピック](#audio-topics): 1
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 27
+- 観測トピック数: 50
+- [音声で扱う想定のトピック](#audio-topics): 3
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 23
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Cisco alerts customers to second actively exploited zero-day in as many days](#topic-32957) | 47.0 | 64.0 | 66.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
-| 2 | [New RatHat Android malware uses AI to automate device control](#topic-33352) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 1 | [98% of fraudulent hires have company credentials by the time they’re caught](#topic-33393) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [AI Agent Breaches Spanish Organization, Modifies Personal Data](#topic-33372) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 3 | [RatHat Android Malware Abuses ADB to Retain Shell Access After Uninstall](#topic-33377) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
 
 ---
 
@@ -20,16 +21,71 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-33352"></a>
+<a id="topic-33393"></a>
 
-### 1. New RatHat Android malware uses AI to automate device control
+### 1. 98% of fraudulent hires have company credentials by the time they’re caught
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠n⁠d⁠r⁠o⁠i⁠d</nobr> / <nobr>A⁠I</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>防⁠御⁠・⁠運⁠用</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+採用からオンボーディングまでの期間に、なりすましや不正な採用が見逃されることで、結果的に社内アカウントや認証情報が渡ってしまうケースがあると報告されています。
+今回の話題では、採用時の本人確認が不十分だと、ネットワーク侵入を伴わずに正規の認証情報へ到達されうる点が指摘されています。
+人事・採用の不正は、単なる業務上の問題ではなく、ID基盤や初期アクセス管理のリスクに直結します。
+特にリモート採用が一般化した環境では、本人確認と権限付与の統制を見直す必要があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 採用プロセスとITアカウント発行の間にある確認手順を再点検し、必要に応じて二重確認を入れる。
+- オンボーディング時の認証情報付与を最小権限にし、初期アクセスの監視を強化する。
+- 採用担当・情シス・セキュリティ部門の連携を明確にし、不審な採用案件を早期に共有できる運用にする。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [98% of fraudulent hires have company credentials by the time they’re caught](https://www.helpnetsecurity.com/2026/09/18/hypr-hiring-fraud-detection-report/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-33372"></a>
+
+### 2. AI Agent Breaches Spanish Organization, Modifies Personal Data
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
 | <nobr>温⁠度⁠感</nobr> | 33.0 |
@@ -38,10 +94,10 @@
 
 #### 概要
 
-RatHatと呼ばれる新しいAndroidマルウェアが確認され、感染端末の遠隔操作を支援するAI機能を備えているとされています。
-攻撃者が端末内の操作をより効率的に進められる可能性がある点が特徴です。
-AIを悪用して端末操作を支援するマルウェアは、従来型のモバイル脅威とは異なる運用のしやすさを攻撃者に与える懸念があります。
-Android利用環境では、検知や利用者教育だけでなく、端末管理の観点でも注意が必要です。
+AIエージェントがスペインの組織に侵入し、個人データを改変したと報じられています。
+現時点で確認できる範囲では、AIを使った攻撃の一例として紹介されており、攻撃の詳細や影響範囲は限定的です。
+AIを悪用した攻撃が現実の事案として扱われ始めており、従来型の不正アクセスに加えて自動化・適応型の脅威への備えが必要になっています。
+個人データの改変は、情報漏えいだけでなく業務や信頼への影響にもつながりやすいため注目されます。
 
 #### 温度感の理由
 
@@ -57,15 +113,71 @@ Android利用環境では、検知や利用者教育だけでなく、端末管�
 
 #### 担当者向け確認ポイント
 
-- Android端末のアプリ導入元や権限付与の状況を改めて確認する。
-- モバイル端末管理（MDM/MAM）やEDRで、不審な挙動や権限の過剰要求を監視する。
-- AI機能をうたう不審なアプリや、想定外の端末制御挙動に関する注意喚起を周知する。
+- AIを含む自動化された不審挙動を想定し、認証・権限管理と監査ログの確認を強化する。
+- 個人データの変更検知や、重要データの整合性確認プロセスを見直す。
+- AI利用を前提にしたインシデント対応手順を整備し、異常時の初動確認項目を明確にする。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [New RatHat Android malware uses AI to automate device control](https://www.bleepingcomputer.com/news/security/new-rathat-android-malware-uses-ai-to-automate-device-control/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [AI Agent Breaches Spanish Organization, Modifies Personal Data](https://www.darkreading.com/cyberattacks-data-breaches/ai-agent-breaches-spanish-organization-personal-data) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-33377"></a>
+
+### 3. RatHat Android Malware Abuses ADB to Retain Shell Access After Uninstall
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠n⁠d⁠r⁠o⁠i⁠d</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>A⁠I</nobr> / <nobr>地⁠政⁠学⁠・⁠サ⁠イ⁠バ⁠ー⁠紛⁠争</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+新たに確認されたAndroid向けマルウェア「RatHat」は、端末の操作や制御にAI支援の仕組みを使うとされ、標的型のSMSフィッシングや不正広告を通じて配布される可能性が示されています。
+さらに、ADBの悪用により、アプリを削除した後もシェルアクセスを維持しうる点が特徴として挙げられています。
+単なる感染だけでなく、削除後も端末内に残る可能性が示されているため、被害の長期化や発見の遅れにつながるおそれがあります。
+Android端末を業務利用する組織では、端末管理と不審な配布経路への警戒を改めて見直す必要があります。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- SMSや広告経由の不審な配布誘導に対する注意喚起を徹底する。
+- 業務端末でADBの利用状況や不要な有効化がないか確認する。
+- 端末管理基盤で不審なアプリ導入後の挙動や権限変化を監視する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [RatHat Android Malware Abuses ADB to Retain Shell Access After Uninstall](https://thehackernews.com/2026/09/rathat-android-malware-abuses-adb-to.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -80,78 +192,7 @@ Android利用環境では、検知や利用者教育だけでなく、端末管�
 
 ## 📌 GitHubのみ掲載の注目トピック
 
-<a id="topic-32957"></a>
-
-### 1. Cisco alerts customers to second actively exploited zero-day in as many days
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | GitHub |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>認⁠証⁠バ⁠イ⁠パ⁠ス</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> |
-| <nobr>温⁠度⁠状⁠態</nobr> | 温度上昇中 |
-| <nobr>温⁠度⁠感</nobr> | 47.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 66.0 |
-
-#### 概要
-
-Cisco Identity Services Engine（ISE）のAPIに認証回避の脆弱性があり、未認証のリモート攻撃者による悪用が報告されています。
-Ciscoは修正版ソフトウェアを公開しており、現時点で有効な回避策は案内されていません。
-ISEは認証やアクセス制御の中核を担う製品であり、影響を受けると管理面への不正アクセスにつながるおそれがあります。
-さらに、短期間に別のCisco脆弱性も悪用観測が伝えられており、運用現場での優先度が高い事案です。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 5 sources。
-- 実悪用・ゼロデイ文脈。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 複数ソース確認。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Cisco ISE / ISE-PIC の影響対象バージョンを確認し、案内済みの修正版への更新を優先する。
-- 管理インターフェースや関連APIへの到達範囲を見直し、不要な露出がないか確認する。
-- 認証回避の兆候として、管理系ログや想定外のアクセスを重点的に点検する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-76460 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
-| 脆弱性 | CVE-2026-76461 | 関連CVE | 1.00 | 候補あり（URL 2件以上） |
-| ベンダー | Cisco | 言及あり | 0.80 | — |
-| 製品 | Cisco Identity Services Engine | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-76460](https://nvd.nist.gov/vuln/detail/CVE-2026-76460) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Cisco alerts customers to second actively exploited zero-day in as many days](https://cyberscoop.com/cisco-ise-zero-day-cve-2026-76460/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco drops another exploited zero-day, this time a perfect 10](https://www.theregister.com/security/2026/09/17/cisco-drops-another-exploited-zero-day-this-time-a-perfect-10/5297180) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-76460: A critical Cisco ISE authentication bypass under active exploita](https://www.bitsight.com/blog/critical-vulnerability-alert-cve-2026-76460-cisco-ise-authentication-bypass) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Unauthenticated attackers are bypassing Cisco ISE’s management interface (CVE-20](https://www.helpnetsecurity.com/2026/09/17/cisco-ise-vulnerability-exploited-cve-2026-76460/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Cisco Identity Services Engine Authentication Bypass Vulnerability](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -162,33 +203,29 @@ ISEは認証やアクセス制御の中核を担う製品であり、影響を�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ターゲットは「セッショントークンと API キー」Okta が警告する AI アクセス権の闇取引](https://scan.netsecurity.ne.jp/article/2026/09/18/56263.html) | 26.0 | 20.0 | 42.0 |
-| [レノボ・エンタープライズ・ソリューションズ張社長が語るAI推論時代とデータセンターの未来](https://japan.zdnet.com/article/35252319/) | 26.0 | 20.0 | 42.0 |
-| [「Factorio」の乱数生成器を解析して「レジェンド品質のアイテム」が出る未来を予測する試み](https://gigazine.net/news/20260918-reversing-factorio-rng/) | 25.0 | 20.0 | 43.0 |
-| [AIコーディングエージェントの0クリックRCE脆弱性で攻撃者に王国の鍵が渡る可能性](https://www.theregister.com/security/2026/09/17/ai-coding-agents-0-click-rce-flaw-could-hand-attackers-keys-to-the-kingdom/5297335) | 25.0 | 20.0 | 42.0 |
-| [DB管理ツール「pgAdmin 4」に複数の脆弱性 - 修正版が公開](https://www.security-next.com/190497) | 22.0 | 20.0 | 42.0 |
-| [塩尻警察署で個人情報が記載された「交通安全施設損壊事案報告書」等が所在不明に](https://scan.netsecurity.ne.jp/article/2026/09/18/56275.html) | 21.0 | 20.0 | 42.0 |
-| [マネジメントサービスセンターのホームページに不正アクセス、管理者権限の取得や改ざんを確認](https://scan.netsecurity.ne.jp/article/2026/09/18/56274.html) | 21.0 | 20.0 | 42.0 |
-| [フィッシング詐欺等によるものとみられる不正アクセス・不正取引を確認 ～ 静銀ティーエム証券](https://scan.netsecurity.ne.jp/article/2026/09/18/56273.html) | 21.0 | 20.0 | 42.0 |
-| [ウェブ画面設定誤りが原因「オペラ銀河鉄道の夜」合唱申込フォーム入力の個人情報が閲覧可能に](https://scan.netsecurity.ne.jp/article/2026/09/18/56272.html) | 21.0 | 20.0 | 42.0 |
-| [サーバ上にバックドア等の不正プログラムを設置 ～ 繋が運営するコーポレートサイトに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/09/18/56271.html) | 21.0 | 20.0 | 42.0 |
-| [顧客情報の一括エクスポートを確認 ～ カインドオルが利用するECプラットフォームに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/09/18/56270.html) | 21.0 | 20.0 | 42.0 |
-| [警察官を名乗る者から「捜査に必要と求められ」～ 安藤ハザマの名刺情報 5,000件が流出](https://scan.netsecurity.ne.jp/article/2026/09/18/56269.html) | 21.0 | 20.0 | 42.0 |
-| [任意の OS コマンド実行の恐れ Lite-On 製 O-RU「FF-RFI079I4」「FF-RFI078I4」に脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/18/56268.html) | 21.0 | 20.0 | 42.0 |
-| [Android アプリ「【保護者専用】まなびポケット」にアクセス制限不備の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/18/56267.html) | 21.0 | 20.0 | 42.0 |
-| [Cisco Secure Email Gateway に SQLインジェクションの脆弱性 すでに悪用も確認](https://scan.netsecurity.ne.jp/article/2026/09/18/56266.html) | 21.0 | 20.0 | 42.0 |
-| [登山アプリ「YAMAP」Android 版にアクセス制限不備の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/18/56265.html) | 21.0 | 20.0 | 42.0 |
-| [任天堂、Nintendo Switch の脆弱性を公表 ～ QRコード読み取りで情報漏えいの恐れ](https://scan.netsecurity.ne.jp/article/2026/09/18/56264.html) | 21.0 | 20.0 | 42.0 |
-| [xxx.soumu.go.jp などのサブドメインも拒否に ～ 総務省を装うフィッシングメール対策強化](https://scan.netsecurity.ne.jp/article/2026/09/18/56262.html) | 21.0 | 20.0 | 42.0 |
-| [WhatsApp セキュリティアドバイザリを公開](https://scan.netsecurity.ne.jp/article/2026/09/18/56261.html) | 21.0 | 20.0 | 42.0 |
-| [「EU CRAで考える製品セキュリティ品質」GMOイエラエ伊藤氏が「第11回 IoTセキュリティフォーラム 2026」で登壇](https://scan.netsecurity.ne.jp/article/2026/09/18/56260.html) | 21.0 | 20.0 | 42.0 |
-| [脆弱性診断の結果をどう読む？ CVSSだけで改修順を決めてはいけない理由](https://www.itmedia.co.jp/enterprise/articles/2609/18/news009.html) | 21.0 | 20.0 | 42.0 |
-| [トークンを守るには「盗まれる前提」の対策を NISTとCISAが指針を発表](https://www.itmedia.co.jp/enterprise/articles/2609/18/news019.html) | 21.0 | 20.0 | 42.0 |
-| [「システムが動けば復旧完了」ではない--「信頼できる状態」に戻すための条件](https://japan.zdnet.com/article/35252514/) | 21.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年09月17日）](https://jvn.jp/vu/JVNVU91030326/) | 20.0 | 20.0 | 42.0 |
-| [DokployにおけるOSコマンドインジェクションの脆弱性](https://jvn.jp/vu/JVNVU94707104/) | 20.0 | 20.0 | 42.0 |
-| [アドバンテック、産業用セルラールーター「EKI-1642WI-JA」の「JC-STAR」★1取得を発表](https://internet.watch.impress.co.jp/docs/news/2141952.html) | 20.0 | 20.0 | 42.0 |
-| [CISA、毎週の脆弱性まとめを廃止しリスク重視へ転換](https://www.darkreading.com/cyber-risk/cisa-ditches-weekly-vuln-roundups-risk-based-focus) | 20.0 | 20.0 | 42.0 |
+| [AI同士に共同作業をさせたら人間には読めない「独自言語」を生み出して会話し始める現象が観測される](https://gigazine.net/news/20260918-ai-agent-evolve-language/) | 27.0 | 20.0 | 42.0 |
+| [世界37カ国のうち日本を含むほとんどの国で「AIは雇用増加ではなく雇用喪失を引き起こす」と予想されていることが判明](https://gigazine.net/news/20260918-more-people-expect-ai-job-loss/) | 27.0 | 20.0 | 42.0 |
+| [「Qwen3.8-Omni-Flash」リリース、Gemini 3.8 Flashに匹敵する音声・映像処理性能を達成](https://gigazine.net/news/20260918-qwen-3-8-omni-flash/) | 27.0 | 20.0 | 42.0 |
+| [Anthropic社内で約3万体のAIエージェントが同時稼働、AI研究開発の26％をClaudeが主導](https://gigazine.net/news/20260918-anthropic-measuring-claude/) | 27.0 | 20.0 | 42.0 |
+| [Z.aiが中国製AIインフラで「GLM-5.3-Flash」の本番サービスを提供したノウハウを共有、AIエージェントでインフラを管理してNVIDIA GPUと同等まで効率化](https://gigazine.net/news/20260918-how-glm-built-inference-infrastructure/) | 27.0 | 20.0 | 42.0 |
+| [Microsoft幹部がAIによるデータスクレイピングを「人類史上最大の労働窃盗」と表現](https://gigazine.net/news/20260918-microsoft-exec-called-ai-scraping-largest-theft-labor/) | 27.0 | 20.0 | 42.0 |
+| [「上司に言いにくい」をAIが拾う 豊中市教委、職員の本音を匿名で集めるアプリを試験導入 自治体初](https://www.itmedia.co.jp/news/article/2609/18/2000001630/) | 26.0 | 20.0 | 42.0 |
+| [Cognition AI、ソフト開発エージェント「Devin」を「macOS」に対応](https://japan.zdnet.com/article/35252796/) | 26.0 | 20.0 | 42.0 |
+| [ローソン「生成AIが考えた商品」発売 「ピクルス風味のレモンタルト」など](https://www.itmedia.co.jp/news/article/2609/18/2000001621/) | 26.0 | 20.0 | 42.0 |
+| [ゲーム開発者の生成AI活用が8割超に CESAが初調査 「業務効率化」に最大の期待](https://www.itmedia.co.jp/news/article/2609/18/2000001618/) | 26.0 | 20.0 | 42.0 |
+| [KDDI、「Gemini Enterprise」でAIエージェント開発を支援--閉域網や企業データ活用](https://japan.zdnet.com/article/35252786/) | 26.0 | 20.0 | 42.0 |
+| [MIND、AI搭載DLP強化に向け7200万ドルを調達](https://www.securityweek.com/mind-secures-72-million-for-ai-powered-dlp/) | 25.0 | 20.0 | 42.0 |
+| [今週の新しい情報セキュリティ製品：2026年9月18日](https://www.helpnetsecurity.com/2026/09/18/new-infosec-products-of-the-week-september-18-2026/) | 25.0 | 20.0 | 42.0 |
+| [米国のベネズエラ関与に伴う中国製AI監視技術の露出問題](https://www.theregister.com/security/2026/09/18/usas-venezuela-takeover-comes-with-bonus-exposure-to-chinese-ai-surveillance-tech/5297357) | 25.0 | 20.0 | 42.0 |
+| [Check Point、Kaspersky、Tanium の製品脆弱性修正](https://www.securityweek.com/check-point-kaspersky-tanium-patch-product-vulnerabilities/) | 24.0 | 38.0 | 42.0 |
+| [セキュリティリリース「WordPress 7.1.1」が公開 - 脆弱性を解消](https://www.security-next.com/190525) | 22.0 | 20.0 | 42.0 |
+| [アメリカ証券取引委員会が「イノベーション免除」を発令、トークン化株式のオンチェーン取引促進のため法規制を期限付きで免除](https://gigazine.net/news/20260918-sec-innovation-exemption/) | 22.0 | 20.0 | 42.0 |
+| [Ciscoのファイアウォール製品に多数の脆弱性 - 一部で悪用も](https://www.security-next.com/190502) | 22.0 | 20.0 | 42.0 |
+| [「自動」から「自律」へ、パッチ管理はどう変わるのか](https://news.mynavi.jp/techplus/article/20260918-4982793/) | 21.0 | 20.0 | 42.0 |
+| [AIで脆弱性の発見が加速、いま「パッチ管理」が重要になる理由](https://news.mynavi.jp/techplus/article/20260918-4982758/) | 21.0 | 20.0 | 42.0 |
+| [放置されたIoTアプリが壊れたサーバーへ機密データを送信し続ける](https://www.helpnetsecurity.com/2026/09/18/abandoned-iot-apps-data-security-risks/) | 20.0 | 20.0 | 42.0 |
+| [公開GitHubファイルで見つかったハードコードされたMCP認証情報](https://www.helpnetsecurity.com/2026/09/18/hush-security-mcp-credential-exposure-report/) | 20.0 | 20.0 | 42.0 |
+| [WordPress専門家の多くはいまだ侵害復旧計画を持っていない](https://www.helpnetsecurity.com/2026/09/18/wordpress-security-survey-recovery-plan/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
