@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-09-19 11:00 JST
+# 📡 サイレーダー 2026-09-19 17:00 JST
 
-このレポートは、2026-09-19 05:00 JST〜2026-09-19 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-19 11:00 JST〜2026-09-19 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 26
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 29
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 4
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [CISA Flags Three Linux Kernel Vulnerabilities Exploited in the Wild](#topic-33530) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +19,66 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-33530"></a>
+
+### 1. CISA Flags Three Linux Kernel Vulnerabilities Exploited in the Wild
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+CISAがLinux kernelに影響する3件の脆弱性をKnown Exploited Vulnerabilities（KEV）カタログに追加し、実際に悪用されている証拠があるとしています。
+提示材料では、少なくともCVE-2025-39682が含まれており、TLS受信経路における異常条件のチェック不備とされています。
+KEVへの追加は、単なる未修正の脆弱性ではなく、実際の悪用が確認されたリスクとして扱う必要があることを示します。
+Linux kernelは広く利用されるため、影響範囲が大きくなりやすい点が注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- Linux kernelを使用する環境で、対象脆弱性の適用有無とベンダー提供の修正版を確認する。
+- KEV掲載情報を前提に、優先度を上げて資産影響と更新計画を見直す。
+- サーバーや基盤系で該当機能を使う場合は、監視強化と変更管理の周知を行う。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 製品 | Linux kernel | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [CISA Flags Three Linux Kernel Vulnerabilities Exploited in the Wild](https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,8 +95,10 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Vectra AI、AI主導の新たな攻撃時代に対応するAscentを発表](https://www.darkreading.com/cyberattacks-data-breaches/vectra-ai-launches-ascent-new-era-ai-driven-attacks) | 25.0 | 20.0 | 42.0 |
-| [Scattered Spider初期メンバー、サイバー犯罪の連続事件で有罪を認める](https://cyberscoop.com/scattered-spider-member-guilty-ahmed-elbadawy/) | 22.0 | 20.0 | 42.0 |
+| [CrowdSecが、TanStackのnpm攻撃で170件の非公開GitHubリポジトリの複製が行われたと発表](https://thehackernews.com/2026/09/crowdsec-says-tanstack-npm-attack-led.html) | 28.0 | 45.0 | 42.0 |
+| [テキストAIの透かし・ウォーターマークは技術的に困難な上に簡単に削除できる](https://gigazine.net/news/20260919-text-ai-watermarks/) | 27.0 | 20.0 | 42.0 |
+| [東京ゲームショウと生成AI ゲームの祭典で商談見込むベンダーたち](https://www.itmedia.co.jp/news/article/2609/19/2000001639/) | 26.0 | 20.0 | 42.0 |
+| [OpenAI 安保理でAI安全策説明へ](https://news.yahoo.co.jp/pickup/6595800?source=rss) | 25.0 | 20.0 | 42.0 |
 
 ---
 
