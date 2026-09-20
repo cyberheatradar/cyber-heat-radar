@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-09-20 17:00 JST
+# 📡 サイレーダー 2026-09-21 05:00 JST
 
-このレポートは、2026-09-20 11:00 JST〜2026-09-20 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-20 17:00 JST〜2026-09-21 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 24
+- 観測トピック数: 27
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 3
 
 今回はサマリ掲載トピックはありません。
 
@@ -29,7 +29,14 @@
 
 ## ❄️ 低温だが記録しておくトピック
 
-今回は低温記録トピックはありません。
+音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
+重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
+
+| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
+|---|---:|---:|---:|
+| [Cisco、悪用された電子メールゲートウェイのゼロデイ脆弱性を修正、Revolutで情報漏えい発生](https://www.helpnetsecurity.com/2026/09/20/week-in-review-cisco-patches-exploited-email-gateway-0-day-revolut-breach/) | 37.0 | 38.0 | 43.0 |
+| [悪意のあるnpmパッケージが実行時にインストールスクリプト防御を回避する](https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/) | 28.0 | 30.0 | 42.0 |
+| [ResearchersがOpenAI Codexのサンドボックスを突破しホスト上でコマンドを実行](https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/) | 25.0 | 20.0 | 42.0 |
 
 ---
 
