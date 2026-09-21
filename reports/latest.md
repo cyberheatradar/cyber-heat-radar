@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-09-21 11:00 JST
+# 📡 サイレーダー 2026-09-21 17:00 JST
 
-このレポートは、2026-09-21 05:00 JST〜2026-09-21 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-21 11:00 JST〜2026-09-21 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 30
+- 観測トピック数: 31
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 6
+- [低温だが記録しておくトピック](#low-record-topics): 7
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,12 +34,13 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [AIエージェント時代、ゼロトラストはどう変わる？ 「マシンスピード」で対抗するデータ管理とSOCの未来](https://www.itmedia.co.jp/enterprise/articles/2609/21/news007.html) | 28.0 | 20.0 | 42.0 |
-| [トランプ大統領、「AI Force」創設を表明 「AI脅威論はでっちあげだ」](https://www.itmedia.co.jp/news/article/2609/21/2000001666/) | 26.0 | 20.0 | 42.0 |
-| [Googleの「Gemini」も能力テスト中に実在企業3社に侵入──WSJ報道](https://www.itmedia.co.jp/news/article/2609/21/2000001665/) | 26.0 | 20.0 | 42.0 |
-| [ソフトウェアサプライチェーン攻撃の1年 「npm大量汚染」から「axios侵害」まで……開発現場にできる対策は？](https://atmarkit.itmedia.co.jp/ait/articles/2609/21/news008.html) | 21.0 | 20.0 | 42.0 |
-| [デジタル庁、さくらインターネット、三重県 3つの事件に共通した“盲点”](https://atmarkit.itmedia.co.jp/ait/articles/2609/21/news014.html) | 21.0 | 20.0 | 42.0 |
-| [脆弱性対応の「前提」が変わる？ 脆弱性情報データベース刷新とSBOM新要件](https://www.itmedia.co.jp/enterprise/articles/2609/21/news020.html) | 21.0 | 20.0 | 42.0 |
+| [Jade Sleetが関与したインドITプロバイダー侵害とFLATROOF・ROOFDECKバックドア](https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html) | 28.0 | 20.0 | 42.0 |
+| [Gopass：チーム向けオープンソースのコマンドライン型パスワードマネージャー](https://www.helpnetsecurity.com/2026/09/21/gopass-open-source-password-manager/) | 28.0 | 20.0 | 42.0 |
+| [MetaのAIエージェント「Muse」が許可していないはずのメッセージを勝手に読んでいるとの指摘](https://gigazine.net/news/20260921-meta-muse-ai-agent-read-private-messages/) | 27.0 | 20.0 | 42.0 |
+| [Google、Gemini AIが3社に侵害を与えたことを確認](https://www.securityweek.com/google-confirms-gemini-ai-breached-three-firms/) | 25.0 | 20.0 | 42.0 |
+| [AIネイティブ6Gネットワークにおけるintent injection攻撃という新たな懸念](https://www.helpnetsecurity.com/2026/09/21/6g-intent-injection-attacks/) | 25.0 | 20.0 | 42.0 |
+| [大企業の5社に2社でAIコンプライアンス問題、レガシーな業務フローが大きな要因](https://www.helpnetsecurity.com/2026/09/21/ai-compliance-issues-research/) | 25.0 | 20.0 | 42.0 |
+| [SAP ECC移行を本番稼働させる前に、何がテストされたかを把握する](https://www.helpnetsecurity.com/2026/09/21/guilherme-joventino-mignow-sap-ecc-migration/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
