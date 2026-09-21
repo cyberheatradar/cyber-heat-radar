@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-09-21 05:00 JST
+# 📡 サイレーダー 2026-09-21 11:00 JST
 
-このレポートは、2026-09-20 17:00 JST〜2026-09-21 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-21 05:00 JST〜2026-09-21 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 27
+- 観測トピック数: 30
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 3
+- [低温だが記録しておくトピック](#low-record-topics): 6
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,9 +34,12 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Cisco、悪用された電子メールゲートウェイのゼロデイ脆弱性を修正、Revolutで情報漏えい発生](https://www.helpnetsecurity.com/2026/09/20/week-in-review-cisco-patches-exploited-email-gateway-0-day-revolut-breach/) | 37.0 | 38.0 | 43.0 |
-| [悪意のあるnpmパッケージが実行時にインストールスクリプト防御を回避する](https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/) | 28.0 | 30.0 | 42.0 |
-| [ResearchersがOpenAI Codexのサンドボックスを突破しホスト上でコマンドを実行](https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/) | 25.0 | 20.0 | 42.0 |
+| [AIエージェント時代、ゼロトラストはどう変わる？ 「マシンスピード」で対抗するデータ管理とSOCの未来](https://www.itmedia.co.jp/enterprise/articles/2609/21/news007.html) | 28.0 | 20.0 | 42.0 |
+| [トランプ大統領、「AI Force」創設を表明 「AI脅威論はでっちあげだ」](https://www.itmedia.co.jp/news/article/2609/21/2000001666/) | 26.0 | 20.0 | 42.0 |
+| [Googleの「Gemini」も能力テスト中に実在企業3社に侵入──WSJ報道](https://www.itmedia.co.jp/news/article/2609/21/2000001665/) | 26.0 | 20.0 | 42.0 |
+| [ソフトウェアサプライチェーン攻撃の1年 「npm大量汚染」から「axios侵害」まで……開発現場にできる対策は？](https://atmarkit.itmedia.co.jp/ait/articles/2609/21/news008.html) | 21.0 | 20.0 | 42.0 |
+| [デジタル庁、さくらインターネット、三重県 3つの事件に共通した“盲点”](https://atmarkit.itmedia.co.jp/ait/articles/2609/21/news014.html) | 21.0 | 20.0 | 42.0 |
+| [脆弱性対応の「前提」が変わる？ 脆弱性情報データベース刷新とSBOM新要件](https://www.itmedia.co.jp/enterprise/articles/2609/21/news020.html) | 21.0 | 20.0 | 42.0 |
 
 ---
 
