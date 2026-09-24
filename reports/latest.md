@@ -1,15 +1,17 @@
-# 📡 サイレーダー 2026-09-24 11:00 JST
+# 📡 サイレーダー 2026-09-24 17:00 JST
 
-このレポートは、2026-09-24 05:00 JST〜2026-09-24 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-24 11:00 JST〜2026-09-24 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 68
+- 観測トピック数: 42
 - [音声で扱う想定のトピック](#audio-topics): 0
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 44
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 17
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Critical WordPress Vulnerability Exploited Immediately After Disclosure](#topic-33901) | 38.0 | 46.0 | 58.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
 
 ---
 
@@ -23,7 +25,73 @@
 
 ## 📌 GitHubのみ掲載の注目トピック
 
-今回はGitHubのみ掲載の注目トピックはありません。
+<a id="topic-33901"></a>
+
+### 1. Critical WordPress Vulnerability Exploited Immediately After Disclosure
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | GitHub |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>R⁠C⁠E</nobr> |
+| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
+| <nobr>温⁠度⁠感</nobr> | 38.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
+| <nobr>確⁠度</nobr> | 58.0 |
+
+#### 概要
+
+WordPressの脆弱性CVE-2026-87902について、公開直後から悪用が始まったと複数の報道で伝えられています。
+影響を受ける条件がそろった環境では、未認証の攻撃者による任意コード実行につながるおそれがあるとされています。
+公開後すぐに悪用が確認されている点から、修正対応が遅れると被害につながるリスクが高いと見られます。
+WordPressは利用範囲が広いため、該当環境では影響が大きくなる可能性があります。
+
+#### 温度感の理由
+
+##### 温度感
+- 複数ソースで確認: 3 sources。
+- 脅威・攻撃キャンペーン文脈。
+- 現在の熱量に合わせた冷却補正。
+
+##### 実務影響
+- RCEまたは認証バイパス系。
+
+##### 確度
+- 複数ソース確認。
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- WordPressの利用バージョンがCVE-2026-87902の影響範囲に入っていないか確認し、提供元の修正版へ速やかに更新する。
+- 外部公開中のWordPressサイトを優先して点検し、不審なファイル生成や改変の痕跡を確認する。
+- 更新までの間は管理画面や関連公開面の監視を強化し、WAFやアクセス制御でリスク低減を検討する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-87902 | 関連CVE | 1.00 | 候補あり（URL 9件以上） |
+| 製品 | WordPress | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-87902](https://nvd.nist.gov/vuln/detail/CVE-2026-87902) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Critical WordPress Vulnerability Exploited Immediately After Disclosure](https://www.securityweek.com/critical-wordpress-vulnerability-exploited-immediately-after-disclosure/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Hackers start exploiting critical WordPress flaw for code execution](https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [WordPress 7.1.2 fixes critical unauthenticated path traversal vulnerability (CVE](https://www.helpnetsecurity.com/2026/09/23/cve-2026-87902-wordpress-7-1-2-security-release/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
 
 <a id="low-record-topics"></a>
 
@@ -34,50 +102,23 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [AIでサイバー攻撃は1000倍にも拡大、TXOneが示したOT防御の新たなモデル](https://news.mynavi.jp/techplus/article/20260924-4989427/) | 28.0 | 20.0 | 42.0 |
-| [EuropeとCanadaのユーザーを狙う新たなRemControl Android銀行系マルウェア](https://www.bleepingcomputer.com/news/security/new-remcontrol-android-banking-malware-targets-users-in-europe-and-canada/) | 28.0 | 20.0 | 42.0 |
-| [自分らしさを損なわずにAIで文章を手直しするための2つのルール](https://gigazine.net/news/20260924-ai-writing-copyeditor/) | 27.0 | 20.0 | 42.0 |
-| [HENNGE One、企業向け生成 AI チャットサービス「Acompany セキュアチャット」と SSO 連携](https://scan.netsecurity.ne.jp/article/2026/09/24/56282.html) | 26.0 | 20.0 | 42.0 |
-| [デジタル化でボトルネック解消 業界特化AIが漫画産業の成長支援](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/063000556/091700004/) | 26.0 | 20.0 | 42.0 |
-| [OpenAIエージェントがオーストラリア政府のウェブサイトに侵入](https://www.theregister.com/security/2026/09/24/openai-agents-infiltrated-australian-government-website/5298702) | 25.0 | 20.0 | 42.0 |
-| [悪意のあるFirefox拡張機能がPDF本人確認ツールを装いGoogleアカウントを乗っ取る](https://socket.dev/blog/firefox-google-account-takeover) | 22.0 | 20.0 | 48.0 |
-| [「NVIDIA Infrastructure Controller」に複数の脆弱性 - 「クリティカル」も](https://www.security-next.com/190611) | 22.0 | 20.0 | 42.0 |
-| [「Chrome 154」公開、108件のセキュリティ修正 - 「クリティカル」が11件](https://www.security-next.com/190604) | 22.0 | 20.0 | 42.0 |
-| [「GitLab」がセキュリティアップデートを公開 - 深刻な脆弱性にも対処](https://www.security-next.com/190629) | 22.0 | 20.0 | 42.0 |
-| [「9.11」追悼企画アート掲載サイトがドキュメンタリー映画の影響で復活](https://gigazine.net/news/20260924-911-memorial-secret-mall-apartment/) | 22.0 | 20.0 | 42.0 |
-| [アクセンチュアの調査に見る「AIのROIで成果を出すために必要なこと」とは](https://japan.zdnet.com/article/35252877/) | 21.0 | 20.0 | 42.0 |
-| [「Windows」、9月の月例更新で「ファイル履歴」に不具合](https://japan.zdnet.com/article/35252895/) | 21.0 | 20.0 | 42.0 |
-| [ロート製薬のシステムに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/09/24/56293.html) | 21.0 | 20.0 | 42.0 |
-| [「コープやまぐちLINEミニアプリ」に不正アクセス、データベースに保存されていた内容を精査し漏えいの可能性がある情報を確定](https://scan.netsecurity.ne.jp/article/2026/09/24/56292.html) | 21.0 | 20.0 | 42.0 |
-| [「西武 旅するレストラン 『52 席の至福』」予約サイトで予約関連情報の一部が漏えい](https://scan.netsecurity.ne.jp/article/2026/09/24/56291.html) | 21.0 | 20.0 | 42.0 |
-| [関西学院大学で学生の個人情報が閲覧可能な状態に、非常勤講師が外部SNSサービス「hyocom」を利用](https://scan.netsecurity.ne.jp/article/2026/09/24/56290.html) | 21.0 | 20.0 | 42.0 |
-| [千葉県運営の「生命のにぎわい調査団」ページに不正アクセス、千葉県警からの連絡で発覚](https://scan.netsecurity.ne.jp/article/2026/09/24/56289.html) | 21.0 | 20.0 | 42.0 |
-| [「カイクラサービス紹介サイト」に複数の不正プログラム、安全が確認できる環境に移設し再開](https://scan.netsecurity.ne.jp/article/2026/09/24/56288.html) | 21.0 | 20.0 | 42.0 |
-| [「paperlogic」に不正アクセス、現時点で情報の閲覧や外部への持ち出しが行われた痕跡は見つからず](https://scan.netsecurity.ne.jp/article/2026/09/24/56287.html) | 21.0 | 20.0 | 42.0 |
-| [バーチャル音楽ライブ配信アプリ「topia」の音声サーバに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/09/24/56286.html) | 21.0 | 20.0 | 42.0 |
-| [連結子会社であるカインドオルへのフィッシング、トレジャー・ファクトリーグループ全体で再発防止に取り組む](https://scan.netsecurity.ne.jp/article/2026/09/24/56285.html) | 21.0 | 20.0 | 42.0 |
-| [攻撃の高速化にどう立ち向かうか？ エーアイセキュリティラボ、BOXIL EXPOで「AI活用型の脆弱性診断」を講演](https://scan.netsecurity.ne.jp/article/2026/09/24/56284.html) | 21.0 | 20.0 | 42.0 |
-| [ガバメントソリューションサービス（GSS）への不正アクセス、政府が自民党に説明](https://scan.netsecurity.ne.jp/article/2026/09/24/56283.html) | 21.0 | 20.0 | 42.0 |
-| [電通総研「SCS評価制度支援コンサルティング」提供開始、製造業のセキュリティ対策支援とシステム構築ノウハウを融合](https://scan.netsecurity.ne.jp/article/2026/09/24/56280.html) | 21.0 | 20.0 | 42.0 |
-| [Unbound にリモートコード実行が可能になる問題を含む複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/24/56279.html) | 21.0 | 20.0 | 42.0 |
-| [ISC BIND に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/24/56278.html) | 21.0 | 20.0 | 42.0 |
-| [スマートフォンアプリ「東北電力 よりそうｅねっと」にハードコードされた暗号鍵使用の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/24/56277.html) | 21.0 | 20.0 | 42.0 |
-| [QND に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/24/56276.html) | 21.0 | 20.0 | 42.0 |
-| [IT技術者の4割が「5年後のスキル陳腐化」に危機感／働くシニアは多いが「長く働きやすい」環境ではない日本／トークンコストの成果証明は難しい、ほか](https://ascii.jp/elem/000/004/436/4436688/?rss=) | 21.0 | 20.0 | 42.0 |
-| [AIの学習と著作権をめぐる米司法省の見解が脅威になる理由](https://japan.zdnet.com/article/35252683/) | 21.0 | 20.0 | 42.0 |
-| [DeepSeekの特徴を理解しよう 「DeepSeekMoE」と「MTP」](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/063000557/091700004/) | 21.0 | 20.0 | 42.0 |
-| [Apache Tomcatにおける複数の脆弱性（2026年9月23日）](https://jvn.jp/vu/JVNVU94625787/) | 20.0 | 20.0 | 42.0 |
-| [Imprivata製Enterprise Access ManagementにおけるRSA鍵ペアを更新できない脆弱性](https://jvn.jp/vu/JVNVU92710088/) | 20.0 | 20.0 | 42.0 |
-| [Cinnamon AI製Kotaemonのマルチユーザーチャットハンドラにおける不適切な認可の脆弱性](https://jvn.jp/vu/JVNVU91025240/) | 20.0 | 20.0 | 42.0 |
-| [ベンダによる署名済みUEFIアプリケーションにおけるセキュアブートバイパスの脆弱性](https://jvn.jp/vu/JVNVU93766760/) | 20.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年09月22日）](https://jvn.jp/vu/JVNVU96198756/) | 20.0 | 20.0 | 42.0 |
-| [CVEプログラム改善計画をCISAが示す](https://cyberscoop.com/cisa-cve-data-quality-white-paper-expert-reaction/) | 20.0 | 20.0 | 42.0 |
-| [Smashing Security podcast #486: Vibe-codedショップとハック可能なFlockカメラ](https://grahamcluley.com/smashing-security-podcast-486/) | 20.0 | 20.0 | 42.0 |
-| [開発ドキュメントで使われていたプレースホルダードメインがClickFix攻撃に悪用される](https://www.bleepingcomputer.com/news/security/placeholder-domain-used-in-dev-docs-now-serves-clickfix-attacks/) | 20.0 | 20.0 | 42.0 |
-| [米国人のデータセンターに対する見方がより否定的になっている](https://www.helpnetsecurity.com/2026/09/24/americans-views-on-data-centers/) | 20.0 | 20.0 | 42.0 |
-| [説明と実態が大きく異なる「AI講座」や「SNS運用講座」に気を付けて！ ビジネス講座トラブルに国民生活センターが注意喚起](https://internet.watch.impress.co.jp/docs/news/2142039.html) | 20.0 | 20.0 | 42.0 |
-| [EDR回避スタックがプロセスインジェクションを防御網に気付かれずに通過させる](https://www.darkreading.com/endpoint-security/edr-evasion-stack-helps-process-injection-slip-past-defenses) | 20.0 | 20.0 | 42.0 |
-| [GitLabのメールアドレスがサプライチェーン攻撃に悪用される可能性](https://www.darkreading.com/application-security/gitlab-email-addresses-supply-chain-attacks) | 20.0 | 20.0 | 42.0 |
+| [「身代金を払えば復元できる」は過去の幻想――約束を守らない攻撃者と変容するランサムエコシステム](https://ascii.jp/elem/000/004/436/4436643/?rss=) | 29.0 | 30.0 | 42.0 |
+| [AIエージェントのデータを90日で保護するために最初にやるべきこと](https://www.helpnetsecurity.com/2026/09/24/kelly-herrell-nol8-ai-agent-data-security/) | 27.0 | 20.0 | 43.0 |
+| [Metaが手のひらサイズのたまごっちっぽいAIデバイス「Muse Charm」発表、Museがローカル動作・約2インチのOLEDスクリーンやカメラを搭載で2026年末までに発売予定](https://gigazine.net/news/20260924-meta-muse-charm/) | 27.0 | 20.0 | 42.0 |
+| [Googleが音声合成AI「Gemini 3.8 Flash TTS」と「Gemini 3.8 Flash-Lite TTS」をリリース](https://gigazine.net/news/20260924-gemini-3-8-flash-tts/) | 27.0 | 20.0 | 42.0 |
+| [ネットワンシステムズ、スライド自動生成AIアプリ「SlideAgent」を開発--独自技術の知見を自動反映](https://japan.zdnet.com/article/35252921/) | 26.0 | 20.0 | 42.0 |
+| [OpenAIのAIエージェントが豪政府サイトに不正アクセス 同社の通知は3カ月後、首相「失望した」](https://www.itmedia.co.jp/news/article/2609/24/2000001694/) | 26.0 | 20.0 | 42.0 |
+| [AIエージェント 豪政府サイト侵入](https://news.yahoo.co.jp/pickup/6596342?source=rss) | 25.0 | 20.0 | 42.0 |
+| [AIが「中国船が中東で核兵器部品を輸送している」と虚偽の報告書を生成したせいでアメリカは戦争を起こしかけていた](https://gigazine.net/news/20260924-ai-report-us-attack-chinese-ship/) | 22.0 | 20.0 | 42.0 |
+| [1つのURL、3つの異なる手口](https://isc.sans.edu/diary/rss/33366) | 22.0 | 20.0 | 42.0 |
+| [「Apache Tomcat」のアップデートで脆弱性12件を解消](https://www.security-next.com/190654) | 22.0 | 20.0 | 42.0 |
+| [AIが乗っ取ったメールを読み「どうすればできるだけ多くの金をだまし取れるか」まで教える犯罪サービス「EvilTokens」が展開されていた](https://gigazine.net/news/20260924-eviltokens/) | 22.0 | 20.0 | 42.0 |
+| [MSP向け管理ツール「OpManager MSP」に深刻な脆弱性 - 8月に修正済み](https://www.security-next.com/190638) | 22.0 | 20.0 | 42.0 |
+| [量子脅威に備えるためにCISOが今すべきこと](https://www.itpro.com/security/quantum-threats-what-cisos-should-do-to-prepare) | 20.0 | 20.0 | 42.0 |
+| [セキュリティ対策はファイアウォールだけで十分ですか、エレベーターまで把握していますか](https://www.helpnetsecurity.com/2026/09/24/ot-asset-visibility-challenges/) | 20.0 | 20.0 | 42.0 |
+| [Ubuntu kernelのCVE修正は週次リリースへ移行](https://www.helpnetsecurity.com/2026/09/24/ubuntu-kernel-cve-fixes-release-schedule/) | 20.0 | 20.0 | 42.0 |
+| [欧州の技術基盤がサイバー攻撃の標的になっている](https://www.helpnetsecurity.com/2026/09/24/enisa-eu-cyber-threats-report/) | 20.0 | 20.0 | 42.0 |
+| [三菱電機製GX Works3およびモーション制御設定における認証回避の脆弱性](https://jvn.jp/vu/JVNVU99700314/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
