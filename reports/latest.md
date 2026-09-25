@@ -1,23 +1,18 @@
-# 📡 サイレーダー 2026-09-25 05:00 JST
+# 📡 サイレーダー 2026-09-25 11:00 JST
 
-このレポートは、2026-09-24 17:00 JST〜2026-09-25 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-25 05:00 JST〜2026-09-25 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 110
-- [音声で扱う想定のトピック](#audio-topics): 7
+- 観測トピック数: 63
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 78
+- [低温だが記録しておくトピック](#low-record-topics): 37
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [CVE-2024-45519: CISA KEV catalog addition](#topic-34166) | 49.0 | 64.0 | 51.0 | 音声 | 温度感上位枠 |
-| 2 | [Hackers now exploit critical Roundcube flaw in code injection attacks](#topic-34158) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 3 | [3 Cyber Threats That Defined the Summer of 2026](#topic-34143) | 36.0 | 30.0 | 42.0 | 音声 | AI×Security枠 |
-| 4 | [Symphony Risk Intelligence uses AI agents to streamline financial crime investigations](#topic-34155) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
-| 5 | [AI-Powered Campaign Targets Hundreds of Online Retailers](#topic-34171) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
-| 6 | [Botslab G980H Dashcams](#topic-34181) | 32.0 | 46.0 | 50.0 | 音声 | 温度感上位枠 |
-| 7 | [Beyond the ransomware: Tracking Storm-2570’s consistent tradecraft across deployments](#topic-34136) | 30.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [米CISA、「Adobe Commerce」「WSO2」の脆弱性悪用を警告](#topic-34246) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 2 | [New Carbonato malware uses AI agents to hijack exposed Docker hosts](#topic-34298) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
 
 ---
 
@@ -25,68 +20,9 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-34166"></a>
+<a id="topic-34246"></a>
 
-### 1. CVE-2024-45519: CISA KEV catalog addition
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>地⁠政⁠学⁠・⁠サ⁠イ⁠バ⁠ー⁠紛⁠争</nobr> / <nobr>認⁠証⁠バ⁠イ⁠パ⁠ス</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 49.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 51.0 |
-
-#### 概要
-
-CVE-2024-45519 は、Zimbra Collaboration Suite の postjournal サービスにおけるコマンドインジェクションの脆弱性として扱われており、CISA の Known Exploited Vulnerabilities（KEV）カタログに追加されました。
-材料では、実際の悪用が観測された文脈で語られており、メール環境を起点にした不正利用のリスクが高いとみられています。
-KEV への追加は、単なる脆弱性情報ではなく、実際の攻撃対象として優先度が高いことを示します。
-メールやコラボレーション基盤は業務影響が大きいため、放置すると認証情報の窃取や業務プロセスへの悪影響につながるおそれがあります。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- 悪用情報あり。
-- XSS系。
-
-##### 確度
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Zimbra の該当製品・該当バージョンを把握し、ベンダー情報に基づいて修正状況を確認する。
-- 外部公開しているメール／コラボレーション基盤について、早急にパッチ適用や緩和策の有無を点検する。
-- メール送受信や送信済みフォルダ、予定表・共有文書に不審な変更や不自然な痕跡がないか確認する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2024-45519](https://nvd.nist.gov/vuln/detail/CVE-2024-45519) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [When Business Email Compromise Starts Rewriting Reality](https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-34158"></a>
-
-### 2. Hackers now exploit critical Roundcube flaw in code injection attacks
+### 1. 米CISA、「Adobe Commerce」「WSO2」の脆弱性悪用を警告
 
 #### スコアカード
 
@@ -96,16 +32,16 @@ KEV への追加は、単なる脆弱性情報ではなく、実際の攻撃対�
 | <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>温⁠度⁠感</nobr> | 39.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
 | <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-Roundcube Webmailの高深刻度の脆弱性が、5月の修正後も攻撃に悪用されていると、カナダのサイバーセキュリティ機関が伝えています。
-公開情報では、コードインジェクション攻撃に使われているとされ、既に対策済みであることが重要です。
-Webメールは業務利用が多く、侵害されると認証情報やメール内容の漏えいにつながるおそれがあります。
-悪用観測があるため、単なる脆弱性情報ではなく、実際の防御対応が求められる段階といえます。
+米CISAは、Adobe CommerceとWSO2の脆弱性が実際に悪用されているとして注意喚起を行いました。
+米行政機関に対しては、侵害の有無を確認しつつ、速やかな対応を取るよう求めています。
+脆弱性の存在だけでなく悪用が確認されている点から、影響が現実化している可能性があるため注目されています。
+対象製品を利用する組織は、通常のパッチ対応に加えて侵害確認も意識する必要があります。
 
 #### 温度感の理由
 
@@ -120,21 +56,22 @@ Webメールは業務利用が多く、侵害されると認証情報やメー�
 
 #### 担当者向け確認ポイント
 
-- Roundcubeの該当バージョンを使っている場合は、修正適用状況を直ちに確認する。
-- 外部公開されているWebmail環境では、アクセス制御や監視を強化し、不審なログインや挙動を点検する。
-- メールアカウントの認証情報保護のため、必要に応じてパスワード変更や多要素認証の有効化を検討する。
+- 対象製品の利用有無を確認し、該当する場合はベンダーや公的機関の案内に沿って優先的に対処する。
+- 関連する侵害兆候の有無を確認し、認証情報や管理画面への不審なアクセス履歴を点検する。
+- 公開された修正情報や緩和策がある場合は適用状況を見直し、未適用なら早急に計画を立てる。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-48842 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Adobe | 言及あり | 0.80 | — |
+| 製品 | Adobe Commerce | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Hackers now exploit critical Roundcube flaw in code injection attacks](https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [米CISA、「Adobe Commerce」「WSO2」の脆弱性悪用を警告](https://www.security-next.com/190675) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -145,71 +82,16 @@ Webメールは業務利用が多く、侵害されると認証情報やメー�
 
 ---
 
-<a id="topic-34143"></a>
+<a id="topic-34298"></a>
 
-### 3. 3 Cyber Threats That Defined the Summer of 2026
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 36.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-今夏に注目されたサイバー脅威として、AIエージェントに関連する侵害、企業へのランサムウェア攻撃、そして米国の複数の水道関連システムに対する侵害が取り上げられています。
-いずれも個別の事案としてだけでなく、重要インフラや事業継続への影響が意識される内容です。
-ランサムウェアと重要インフラへの侵害が同時期に話題となっており、防御側には複数のリスクを並行して見る必要があります。
-AIを含む新しい攻撃面も示唆され、従来型の対策だけでは不十分になり得ます。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 重要インフラや外部公開システムの監視強化と、異常通信・権限変更の早期検知を見直す。
-- ランサムウェアを想定し、バックアップの隔離性、復旧手順、権限管理の有効性を定期的に確認する。
-- AI関連サービスや自動化エージェントの利用範囲を棚卸しし、連携先の認証・監査ログ・アクセス制御を点検する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [3 Cyber Threats That Defined the Summer of 2026](https://www.darkreading.com/cyberattacks-data-breaches/3-cyber-threats-defined-summer-2026) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-34155"></a>
-
-### 4. Symphony Risk Intelligence uses AI agents to streamline financial crime investigations
+### 2. New Carbonato malware uses AI agents to hijack exposed Docker hosts
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>A⁠I</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>ボ⁠ッ⁠ト⁠ネ⁠ッ⁠ト</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
 | <nobr>温⁠度⁠感</nobr> | 33.0 |
@@ -218,10 +100,10 @@ AIを含む新しい攻撃面も示唆され、従来型の対策だけでは不
 
 #### 概要
 
-SymphonyAIは、金融犯罪調査を支援するためのAIエージェント活用型プラットフォーム「Symphony Risk Intelligence」を発表しました。
-継続的にリスクを見直し、規制や脅威、業務変化に応じて管理を更新する運用を目指す点が特徴です。
-金融機関では、従来の定期的な点検だけでは変化の速いリスクに追いつきにくくなっており、継続監視への移行が注目されています。
-AIを調査業務に組み込む流れは、コンプライアンス対応の効率化と精度向上の両面で関心を集めています。
+Carbonatoと呼ばれる新しいマルウェアが、外部に露出したDockerデーモンを持つホストを狙っていると報じられています。
+報道によれば、AIエージェントの仕組みを利用して対象環境に入り込み、制御を奪う手口が確認されています。
+Dockerの公開設定や認証不備があると、コンテナ基盤がそのまま侵害されるおそれがあるため注意が必要です。
+AI関連の仕組みが攻撃に組み込まれることで、従来の自動化型マルウェアよりも対応の見極めが難しくなる可能性があります。
 
 #### 温度感の理由
 
@@ -237,15 +119,15 @@ AIを調査業務に組み込む流れは、コンプライアンス対応の効
 
 #### 担当者向け確認ポイント
 
-- AI支援の調査結果をそのまま採用せず、根拠確認と人手による最終判断を組み込むこと。
-- 継続監視を前提に、既存のルール・アラート・ケース管理との整合性を確認すること。
-- 金融犯罪対策では、運用自動化だけでなく監査証跡や説明可能性の確保も重要。
+- Dockerデーモンが外部公開されていないか、認証やアクセス制御が適切かを確認する。
+- コンテナ基盤の監査ログや不審なコンテナ作成・実行の兆候を点検する。
+- インターネット公開が必要な場合は最小権限化し、ネットワーク境界で到達性を制限する。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Symphony Risk Intelligence uses AI agents to streamline financial crime investig](https://www.helpnetsecurity.com/2026/09/24/symphonyai-risk-intelligence/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [New Carbonato malware uses AI agents to hijack exposed Docker hosts](https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -253,204 +135,6 @@ AIを調査業務に組み込む流れは、コンプライアンス対応の効
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
 - 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-34171"></a>
-
-### 5. AI-Powered Campaign Targets Hundreds of Online Retailers
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-公開情報によると、攻撃者が脆弱性調査、悪用、攻撃の進行を支援する3種類のAIハーネスを使い、オンライン小売業者を広く狙うキャンペーンが報告されています。
-現時点では詳細な手口や被害規模は限定的ですが、AIを攻撃支援に組み込む動きとして注目されています。
-AIが脅威活動の効率化や自動化に使われると、攻撃の速度や広がりが増す可能性があります。特に小売業のように公開面が広い環境では、脆弱性管理や監視の重要性が高まります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 公開Web資産、認証周辺、外部公開サービスの棚卸しと脆弱性管理を継続する。
-- 不審なアクセス増加や異常な自動化挙動を検知できるよう、ログ監視とアラート条件を見直す。
-- 攻撃支援にAIが使われる前提で、フィッシング対策やアカウント保護、インシデント対応手順を再確認する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [AI-Powered Campaign Targets Hundreds of Online Retailers](https://www.securityweek.com/ai-powered-campaign-targets-hundreds-of-online-retailers/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-34181"></a>
-
-### 6. Botslab G980H Dashcams
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>認⁠証⁠バ⁠イ⁠パ⁠ス</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>D⁠D⁠o⁠S</nobr> / <nobr>P⁠o⁠C</nobr> / <nobr>T⁠T⁠P</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 32.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
-| <nobr>確⁠度</nobr> | 50.0 |
-
-#### 概要
-
-Botslabのドライブレコーダー「G980H Dashcams」に、認証回避やセッション管理不備に関する複数の脆弱性が公表されました。
-対象となるファームウェアでは、近接ネットワークや物理アクセスを前提に、権限のある機能や機密情報に不正アクセスされるおそれがあるとされています。
-録画データやWi‑Fi認証情報、設定変更権限などが影響を受ける可能性があり、車載機器であっても情報漏えいと機器改ざんの両面で注意が必要です。
-攻撃条件は主に近接範囲ですが、複数の認証関連不備がまとまって公表されている点が実務上の警戒材料です。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- RCEまたは認証バイパス系。
-
-##### 確度
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 対象のG980H系ファームウェアが使われていないか確認し、該当する場合は更新可否を早急に確認する。
-- Wi‑Fi/Bluetooth経由での接続範囲を見直し、不要な露出を減らす。
-- 物理アクセスが想定される環境では、端末の保管・回収・廃棄時に記録媒体や診断情報の取り扱いを厳格にする。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-75558 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-77967 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-79959 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-81630 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-82566 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-82585 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-82708 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-82716 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-84399 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-84403 | 関連CVE | 1.00 | 未確認 |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-84399](https://nvd.nist.gov/vuln/detail/CVE-2026-84399) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Botslab G980H Dashcams](https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
-
-<a id="topic-34136"></a>
-
-### 7. Beyond the ransomware: Tracking Storm-2570’s consistent tradecraft across deployments
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Microsoftの公開情報によると、Storm-2570と呼ばれる活動は、Qilin、DragonForce、Anubis、BERTといったランサムウェア関連の事案で、侵害後に使う手口やツールに一貫性があるとされています。
-記事では、ランサムウェア本体の展開前に検知・阻止するための防御上の着眼点も示されています。
-ランサムウェア被害は暗号化の段階だけでなく、その前の侵入後活動をどれだけ早く見つけられるかが重要です。
-複数の事案にまたがる共通の手口が示されているため、横断的な監視や検知ルールの見直しに役立ちます。
-
-#### 温度感の理由
-
-##### 温度感
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 侵害後に共通して使われやすいツールや管理系ソフトの利用有無を点検する。
-- Active Directoryやリモート管理系の不審な操作、資格情報の扱いに関する兆候を監視する。
-- ランサムウェア展開前の段階を想定し、EDRやログ監視で早期検知の観点を強化する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ランサムウェアグループ | DragonForce | 主題 | 0.80 | — |
-| ランサムウェアグループ | Qilin | 主題 | 0.80 | — |
-| ベンダー | Cloudflare | 言及あり | 0.80 | — |
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| ベンダー | Amazon Web Services | 言及あり | 0.80 | — |
-| 製品 | Microsoft Defender | 言及あり | 0.80 | — |
-| 製品 | Active Directory | 言及あり | 0.80 | — |
-| 製品 | ConnectWise ScreenConnect | 言及あり | 0.80 | — |
-| マルウェア | Webshell | 主題 | 0.80 | — |
-| マルウェア | Anubis | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Beyond the ransomware: Tracking Storm-2570’s consistent tradecraft across deploy](https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
 
 ---
 
@@ -469,84 +153,43 @@ Microsoftの公開情報によると、Storm-2570と呼ばれる活動は、Qili
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [新興ランサムウェア・ギャングがバックアップ破壊の脅迫で被害者を圧迫](https://www.infosecurity-magazine.com/news/ransomware-gang-uses-backup/) | 28.0 | 30.0 | 42.0 |
-| [ウクライナのランサムウェア開発者、約13年の禁錮刑に](https://www.bitdefender.com/en-us/blog/hotforsecurity/ukrainian-ransomware-developer-jailed-for-nearly-13-years) | 28.0 | 30.0 | 42.0 |
-| [CISA、TeamCityの重大な脆弱性を悪用するランサムウェア攻撃者を警告](https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/) | 28.0 | 30.0 | 42.0 |
-| [ランサムウェア関連の法執行・司法措置](https://www.securityweek.com/us-court-sentences-armenian-man-to-prison-for-ryuk-ransomware-attacks/) | 28.0 | 30.0 | 42.0 |
-| [The Not So Silent Miner: 脅威アクターがエンドポイント上で暗号通貨マイナーをコンパイル](https://www.huntress.com/blog/threat-actor-compiles-cryptominer) | 28.0 | 20.0 | 42.0 |
-| [英国、ロシアの偽情報工作への対抗強化に乗り出す](https://www.helpnetsecurity.com/2026/09/24/uk-national-centre-for-information-defence-disinformation-detection/) | 28.0 | 20.0 | 42.0 |
-| [税制で脅威アクターによる米国の水道システム侵害を防ぐ方法](https://cyberscoop.com/how-federal-tax-incentives-can-protect-state-local-cybersecurity-op-ed/) | 28.0 | 20.0 | 42.0 |
-| [新しいAndroidマルウェアRemControlが銀行PINを窃取し削除阻止を試みる](https://www.helpnetsecurity.com/2026/09/24/remcontrol-android-banking-trojan-fake-tv-app/) | 28.0 | 20.0 | 42.0 |
-| [17,000のURLが明かすClickFixが信頼されたWebサイトをマルウェアの罠に変える手口：CTM360の報告](https://thehackernews.com/2026/09/17000-urls-reveal-how-clickfix-turns.html) | 28.0 | 20.0 | 42.0 |
-| [Microsoft Securityの最新情報：2026年9月](https://www.microsoft.com/en-us/security/blog/2026/09/24/whats-new-in-microsoft-security-september-2026/) | 27.0 | 20.0 | 42.0 |
-| [AmazonがMetaのAIエージェント「Muse」の買い物代行をブロック](https://gigazine.net/news/20260924-amazon-block-muse/) | 27.0 | 20.0 | 42.0 |
-| [コードパイプラインとCI/CDインフラの強化による予防的防御](https://cloud.google.com/blog/topics/threat-intelligence/hardening-code-pipelines-and-ci-cd-infrastructure/) | 25.0 | 45.0 | 42.0 |
-| [GitHub Security Lab Taskflow Agentを活用したAI駆動のファジング](https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/) | 25.0 | 20.0 | 42.0 |
-| [AI主導のハッキングに対応する連邦捜査機関を創設する新法案](https://cyberscoop.com/new-bill-would-create-federal-investigative-body-for-ai-driven-hacks/) | 25.0 | 20.0 | 42.0 |
-| [ThreatsDay: AI検索ポイズニング、AIコーディングツールによるリポジトリ漏えい、ワンクリックコード実行など13件の話題](https://thehackernews.com/2026/09/threatsday-ai-search-poisoning-ai.html) | 25.0 | 20.0 | 42.0 |
-| [CVE対応の増加でUbuntuが週次カーネルリリースへ移行](https://www.theregister.com/os-platforms/2026/09/24/cve-flood-pushes-ubuntu-onto-weekly-kernel-release-cycle/5298912) | 25.0 | 20.0 | 42.0 |
-| [Kontext Security、AIエージェントのランタイム制御に400万ドルを調達](https://www.securityweek.com/kontext-security-emerges-with-4-million-for-ai-agent-runtime-controls/) | 25.0 | 20.0 | 42.0 |
-| [WizがAIを活用して鉄道・病院など重要インフラの脆弱性を発見](https://www.cybersecuritydive.com/news/wiz-ai-critical-infrastructure-scan-for-good/831255/) | 25.0 | 20.0 | 42.0 |
-| [OpenAI Agentsが公開データ取得中にWebサイトの脆弱性を調査](https://www.securityweek.com/openai-agents-probed-websites-for-vulnerabilities-while-fetching-public-data/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIエージェントがオーストラリア政府サイトを侵害、報告までに数か月を要した](https://www.malwarebytes.com/blog/ai/2026/09/openai-agent-breached-medicare-statistics-portal-then-took-months-to-report-it) | 25.0 | 20.0 | 42.0 |
-| [AIを活用して公共サービスと重要インフラの高優先度な脆弱性を発見・修正する取り組み](https://www.wiz.io/blog/scan-for-good-critical-ai-exposures) | 25.0 | 20.0 | 42.0 |
-| [4B規模のエージェント型AIアプリ「Manus」にPrompt Injectionの脆弱性](https://www.darkreading.com/application-security/prompt-injection-bug-agentic-ai-app-manus) | 25.0 | 20.0 | 42.0 |
-| [Google、重要インフラ組織に「当社のAIスキャナーは悪用しません」と約束](https://www.theregister.com/security/2026/09/24/google-to-critical-infra-orgs-our-ai-scanners-wont-be-evil-promise/5298685) | 25.0 | 20.0 | 42.0 |
-| [OpenAIエージェントのハッキング被害がオーストラリアに拡大、政府サイトが標的に](https://www.helpnetsecurity.com/2026/09/24/openai-agent-hacking-australia/) | 25.0 | 20.0 | 42.0 |
-| [Cloud Range、SOCでAIエージェントを人間の防御者と比較評価可能に](https://www.helpnetsecurity.com/2026/09/24/cloud-range-ai-validation-range-and-cloud-range-ai-readiness-framework/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIのエージェントがオーストラリア政府の医療サイトに侵入、アルバニージー首相が発表](https://therecord.media/openai-australia-health-breach) | 25.0 | 20.0 | 42.0 |
-| [Gurucul、AIの活動をIDデータと連携し迅速な脅威対応を実現](https://www.helpnetsecurity.com/2026/09/24/gurucul-ai-risk-and-response/) | 25.0 | 20.0 | 42.0 |
-| [Azul AI AssistantでJavaのライセンスとセキュリティリスクを検出する方法](https://www.helpnetsecurity.com/2026/09/24/azul-intelligence-cloud-ai-assistant/) | 25.0 | 20.0 | 42.0 |
-| [LatticeFlow AI、企業向けAIシステムのマネージドリスク評価を提供](https://www.helpnetsecurity.com/2026/09/24/latticeflow-ai-risk-center/) | 25.0 | 20.0 | 42.0 |
-| [MetaのAIグラスでユーザーデータにアクセスできなくなる問題](https://www.helpnetsecurity.com/2026/09/24/meta-private-processing-for-ai-glasses/) | 25.0 | 20.0 | 42.0 |
-| [Secrets SprawlはID管理の問題であり、AIがそれを無視できなくした](https://thehackernews.com/2026/09/secrets-sprawl-is-identity-problem-that.html) | 25.0 | 20.0 | 42.0 |
-| [OpenAI AgentがオーストラリアのMedicareポータルをハッキング](https://www.infosecurity-magazine.com/news/openai-hacks-australian-medicare/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIがオーストラリアのMedicare政府サイトをハッキングし、データ提供者を調査](https://www.bleepingcomputer.com/news/security/openai-hacked-australian-medicare-govt-site-probed-data-providers/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIがMedicareシステム侵害の報告を遅らせたと豪首相が批判](https://www.itpro.com/security/australian-prime-minister-says-it-took-way-too-long-for-openai-to-reveal-agents-breached-medicare-systems) | 25.0 | 20.0 | 42.0 |
-| [Google、Private AI Computeにデバイス間でユーザーを追跡するメモリ機能を導入へ](https://www.helpnetsecurity.com/2026/09/24/google-private-ai-compute-server-side-memory/) | 25.0 | 20.0 | 42.0 |
-| [Barracuda Networks、MSP向けの新たなAIセキュリティソリューションを発表](https://www.itpro.com/security/barracuda-networks-launches-new-ai-security-solution-for-msps) | 25.0 | 20.0 | 42.0 |
-| [Claude.aiが3,000件超の改善で約3倍高速化](https://www.helpnetsecurity.com/2026/09/24/anthropic-claude-ai-faster/) | 25.0 | 20.0 | 42.0 |
-| [Eufy Omni C20およびOmni X10 Proの脆弱性](https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02) | 24.0 | 46.0 | 50.0 |
-| [SolarWinds、Observability Self-Hostedの重大なRCE脆弱性を修正](https://www.securityweek.com/solarwinds-patches-critical-rce-flaws-in-observability-self-hosted/) | 24.0 | 46.0 | 50.0 |
-| [IBM Concert Softwareの複数の脆弱性によりリモートコード実行が可能になる可能性](https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-ibm-concert-software-could-allow-for-remote-code-execution_2026-100) | 24.0 | 38.0 | 42.0 |
-| [信頼と魅力的なコンサルティング提案](https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/) | 22.0 | 20.0 | 48.0 |
-| [委託先事業者が地籍測量業務の図面を紛失 - つくば市](https://www.security-next.com/190516) | 22.0 | 20.0 | 42.0 |
-| [サイバー攻撃で受託業務の個人情報などが流出 - ニチレイ](https://www.security-next.com/190644) | 22.0 | 20.0 | 42.0 |
-| [ウェブサーバ「nginx」の「HTTP/3」モジュールに脆弱性](https://www.security-next.com/190619) | 22.0 | 20.0 | 42.0 |
-| [合唱出演の申込フォーム、締切後の設定ミスで個人情報流出 - 名古屋市](https://www.security-next.com/190646) | 22.0 | 20.0 | 42.0 |
-| [FBI職員数千人分の個人情報をサイバー犯罪集団ShinyHuntersが盗み出していたことが判明](https://gigazine.net/news/20260924-shinyhunters-stole-fbi-data-include-sensitive-information/) | 22.0 | 20.0 | 42.0 |
-| [「MCPのリスク対応」がCISOにとって最も低い優先度--アカマイ、脅威レポート](https://japan.zdnet.com/article/35252928/) | 21.0 | 20.0 | 42.0 |
-| [Android、Linux、macOS、Windowsで見つかった長年放置されたファイルセキュリティの脆弱性](https://www.theregister.com/security/2026/09/24/decades-old-file-security-flaws-found-in-android-linux-macos-and-windows/5298672) | 20.0 | 28.0 | 50.0 |
-| [Chromeを更新: デスクトップ向けに108件のセキュリティ修正、Android向けに新リリース](https://www.malwarebytes.com/blog/bugs/2026/09/update-chrome-108-security-fixes-for-desktop-new-release-for-android) | 20.0 | 28.0 | 50.0 |
-| [サイバー専門家が警告、FBI侵害は現実世界に深刻な影響を及ぼす可能性](https://www.itpro.com/security/this-kind-of-data-has-real-utility-in-the-wrong-hands-cyber-experts-warn-alleged-fbi-data-breach-could-have-serious-real-world-consequences) | 20.0 | 20.0 | 48.0 |
-| [Rydoxサイバー犯罪マーケットプレイス運営者、共謀した兄弟の国外退去後に有罪を認める](https://therecord.media/rydox-criminal-marketplace-operator-pleads-guilty) | 20.0 | 20.0 | 42.0 |
-| [未修正のOnePlusの脆弱性により、インストール済みAndroidアプリが権限なしでroot権限を取得可能に](https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html) | 20.0 | 20.0 | 42.0 |
-| [公開されたGitLabプロジェクトのメールアドレスから攻撃者がコードをプッシュ可能に](https://www.bleepingcomputer.com/news/security/exposed-gitlab-project-email-addresses-let-attackers-push-code/) | 20.0 | 20.0 | 42.0 |
-| [米国安全保障機関の契約を獲得した電話ハッキング企業、ロシア所有を隠していたとDOJが主張](https://cyberscoop.com/oxygen-forensics-ceo-arrested-russian-ownership-fraud/) | 20.0 | 20.0 | 42.0 |
-| [Wiz、Forrester Wave™「Proactive Security Platforms, Q3 2026」でリーダーに選出](https://www.wiz.io/blog/forrester-wave-for-proactive-security-2026) | 20.0 | 20.0 | 42.0 |
-| [Placeholder third-party[.]com が 1,700以上のリポジトリで参照され、現在は悪意あるコンテンツを配信](https://thehackernews.com/2026/09/placeholder-third-partycom-referenced.html) | 20.0 | 20.0 | 42.0 |
-| [ASUSのeShopで顧客データが流出か](https://www.theregister.com/security/2026/09/24/someone-went-shopping-in-asuss-eshop-for-customer-data/5298860) | 20.0 | 20.0 | 42.0 |
-| [現代のサイバーセキュリティのためのSASEフレームワークの構築方法](https://www.darkreading.com/cloud-security/how-to-build-sase-framework) | 20.0 | 20.0 | 42.0 |
-| [FedRAMP VDR・VER: 日次スキャンは始まりにすぎない](https://www.bleepingcomputer.com/news/security/fedramp-vdr-and-ver-daily-scans-are-only-the-beginning/) | 20.0 | 20.0 | 42.0 |
-| [Salt Typhoon攻撃を受け、通信業界のサイバーセキュリティ強化法案を超党派上院指導者が提出](https://cyberscoop.com/senate-telecom-cybersecurity-resilience-act-salt-typhoon/) | 20.0 | 20.0 | 42.0 |
-| [Ghost Service Accountsを悪用したChileにおけるM365データ窃取](https://www.darkreading.com/cyberattacks-data-breaches/ghost-service-accounts-m365-data-theft-chile) | 20.0 | 20.0 | 42.0 |
-| [Russian攻撃によるデータセンター損壊後、Kyivのインターネットプロバイダーで大規模障害が発生](https://therecord.media/kyiv-internet-providers-report-outages-after-russian-strikes) | 20.0 | 20.0 | 42.0 |
-| [Astrana、医療テック企業としてSECにデータ侵害を報告](https://therecord.media/astrana-cyberattack-sec-ransomware) | 20.0 | 20.0 | 42.0 |
-| [CISA、グローバルCVEプログラムの新たな「品質時代」を提示](https://www.infosecurity-magazine.com/news/cisa-quality-era-global-cve-program/) | 20.0 | 20.0 | 42.0 |
-| [Browser Guardの新機能、クリック前後の保護を強化](https://www.malwarebytes.com/blog/product/2026/09/new-browser-guard-features-add-protection-before-and-after-you-click) | 20.0 | 20.0 | 42.0 |
-| [Windows 11のKB5124010アップデートが公開、46件の変更と修正を実施](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5124010-update-released-with-46-changes-and-fixes/) | 20.0 | 20.0 | 42.0 |
-| [Islandが6億4000万ドルを調達し評価額64億ドルに到達](https://www.securityweek.com/island-raises-400-million-at-6-4-billion-valuation/) | 20.0 | 20.0 | 42.0 |
-| [OTセキュリティガイダンス：NISTが改訂ガイドをドラフト公開、CISA/FBIがICSインテグレーターに助言](https://www.securityweek.com/ot-security-guidance-nist-drafts-updated-guide-cisa-fbi-advise-on-ics-integrators/) | 20.0 | 20.0 | 42.0 |
-| [英国政府、痛烈な監査を受けサービス主導のサイバーガバナンスへ移行](https://www.infosecurity-magazine.com/news/uk-government-service-led-cyber/) | 20.0 | 20.0 | 42.0 |
-| [エンドから始める：エージェント型レメディエーションを実現する方法](https://www.securityweek.com/begin-at-the-end-how-to-enable-agentic-remediation/) | 20.0 | 20.0 | 42.0 |
-| [Astrana Healthのデータ侵害で機密性の高い個人情報に影響](https://www.securityweek.com/astrana-health-data-breach-impacts-private-confidential-information/) | 20.0 | 20.0 | 42.0 |
-| [75%以上の組織でMicrosoft 365のガバナンス課題が発生](https://www.infosecurity-magazine.com/news/75-organizations-microsoft-365/) | 20.0 | 20.0 | 42.0 |
-| [Googleの位置情報プライバシー違反に403百万ユーロの罰金](https://www.malwarebytes.com/blog/news/2026/09/googles-location-data-privacy-failures-draw-a-e403-million-fine) | 20.0 | 20.0 | 42.0 |
-| [SANS調査で判明した、脅威ハンティングの最大の課題はスキルよりデータ](https://www.infosecurity-magazine.com/news/data-top-bottleneck-barrier-threat/) | 20.0 | 20.0 | 42.0 |
-| [政府請負業者が移民記録への経路を公開していた](https://www.theregister.com/security/2026/09/24/government-contractor-exposed-path-to-immigration-records/5298689) | 20.0 | 20.0 | 42.0 |
-| [GNOME 50.5のセキュリティ修正、gvfsのCVEとEpiphanyのコード注入に対応](https://www.helpnetsecurity.com/2026/09/24/gnome-50-5-security-fixes/) | 20.0 | 20.0 | 42.0 |
-| [MicrosoftがWindowsのFile Historyバックアップ機能を壊す不具合を修正](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-windows-backup-feature-broken-by-september-updates/) | 20.0 | 20.0 | 42.0 |
-| [Appleの新しいiOS 27機能が詐欺の兆候を検知する](https://www.helpnetsecurity.com/2026/09/24/apple-ios-27-impersonation-risk-detection/) | 20.0 | 20.0 | 42.0 |
+| [VIP・GOLDランク顧客の情報流出の可能性 ～ ファイブフォックスへのランサムウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/09/25/56300.html) | 29.0 | 30.0 | 42.0 |
+| [実行犯が示唆したダークウェブでの情報公開は確認されず ～ ワシントンホテルにランサムウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/09/25/56299.html) | 29.0 | 30.0 | 42.0 |
+| [ランサムウェアの被害報告件数が過去最多に ～ 警察庁 サイバー警察局便り](https://scan.netsecurity.ne.jp/article/2026/09/25/56296.html) | 29.0 | 30.0 | 42.0 |
+| [カレンダーへの招待状を装うマルウェア感染攻撃が増加--身を守る方法](https://japan.zdnet.com/article/35252829/) | 29.0 | 20.0 | 42.0 |
+| [MacSyncマルウェアが公開iCloudカレンダーを悪用して新たなペイロードを配信](https://www.bleepingcomputer.com/news/security/macsync-malware-uses-public-icloud-calendars-to-deliver-new-payloads/) | 28.0 | 20.0 | 42.0 |
+| [「ServiceNow AI Platform」にSQLiなど複数脆弱性 - 修正版を提供](https://www.security-next.com/190682) | 27.0 | 20.0 | 42.0 |
+| [これがコンサルの次の勝ち方…？デロイト新設「AI実装のプロ集団」の能力がスゴイ理由](https://www.sbbit.jp/article/cont1/186092?ref=rss) | 27.0 | 20.0 | 42.0 |
+| [Google、リアルタイムで表情豊かに話すAIアバター「Gemini 3.8 Live with Live Avatar」提供開始 画像1枚で独自アバターも](https://www.itmedia.co.jp/news/article/2609/25/2000001730/) | 26.0 | 20.0 | 42.0 |
+| [シャドー AI からエージェントまで一括保護 ～ クラウドストライクが AIDR「Falcon Guardian」発表](https://scan.netsecurity.ne.jp/article/2026/09/25/56294.html) | 26.0 | 20.0 | 42.0 |
+| [AIにコードを書かせ放題で大丈夫？ 開発現場に迫る「AIコスト」の見えない問題](https://atmarkit.itmedia.co.jp/ait/articles/2609/25/news042.html) | 26.0 | 20.0 | 42.0 |
+| [メタの新AIエージェント「Muse」 機密コンピューティングに注目](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100111/092400186/) | 26.0 | 20.0 | 42.0 |
+| [AI変革に手応えあり](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/041700482/091700020/) | 26.0 | 20.0 | 42.0 |
+| [「SaaSの死」は幻想 AIが代替できるわけがない](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100112/091700147/) | 26.0 | 20.0 | 42.0 |
+| [オープンソースエージェント3種を悪用し、Fortune 500の大手ホスピタリティ企業や米国大手航空会社など25以上の組織に侵入した攻撃者](https://www.theregister.com/security/2026/09/25/crook-used-three-open-source-agents-to-break-into-a-fortune-500-hospitality-company-a-major-us-airline-and-25-other-orgs/5299012) | 25.0 | 20.0 | 42.0 |
+| [SalesbleedがSalesforce Agentsを悪用してSlackフィッシングを可能にする](https://www.darkreading.com/application-security/salesbleed-exploits-salesforce-agents-slack-phishing) | 25.0 | 20.0 | 42.0 |
+| [自律型AIによるハッキングが提起する法的責任の難問](https://www.securityweek.com/autonomous-ai-hacks-raise-thorny-questions-of-legal-accountability/) | 25.0 | 20.0 | 42.0 |
+| [再有効化された GitHub Actions により数千のリポジトリが Mini Shai-Hulud にさらされる](https://socket.dev/blog/mini-shai-hulud-actions) | 22.0 | 45.0 | 42.0 |
+| [アメリカ軍によるイランの小学校へのミサイル攻撃はデータベースの情報更新を怠りAIを過信したことが一因だったとの報道](https://gigazine.net/news/20260925-iran-school-maven-ai-kill-chain/) | 22.0 | 20.0 | 42.0 |
+| [Webアプリの乱立でリスクが見えなくなっている!?―継続的な脆弱性診断が実現する統合セキュリティ管理](https://news.mynavi.jp/techplus/kikaku/20260925-4973555/) | 21.0 | 20.0 | 42.0 |
+| [現代のサイバーセキュリティ人材戦略に不可欠な要素](https://ascii.jp/elem/000/004/436/4436701/?rss=) | 21.0 | 20.0 | 42.0 |
+| [今日もどこかで情報漏えい 第52回「2026年8月の情報漏えい」約一割で逮捕・懲戒・行政指導](https://scan.netsecurity.ne.jp/article/2026/09/25/56306.html) | 21.0 | 20.0 | 42.0 |
+| [カルビーのプロ野球チップス関連サービス「PhotoGoods」で個人情報漏えいの可能性](https://scan.netsecurity.ne.jp/article/2026/09/25/56305.html) | 21.0 | 20.0 | 42.0 |
+| [ApplyNow 提供の採用管理プラットフォームに不正アクセス、マイナンバー含む個人データが漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/09/25/56304.html) | 21.0 | 20.0 | 42.0 |
+| [極東開発工業子会社の日本トレクス、不正アクセスによるシステム障害を発表](https://scan.netsecurity.ne.jp/article/2026/09/25/56303.html) | 21.0 | 20.0 | 42.0 |
+| [社内調査で発覚 ～ ライツフォル、外部 Q&A サイトにおける過去の「広告明示なし投稿」を公表](https://scan.netsecurity.ne.jp/article/2026/09/25/56302.html) | 21.0 | 20.0 | 42.0 |
+| [京都パープルサンガでメール誤送信、ファンクラブ会員情報15,612件が漏えい](https://scan.netsecurity.ne.jp/article/2026/09/25/56301.html) | 21.0 | 20.0 | 42.0 |
+| [早稲田大学比較法研究所、10月4日に公開講演会「医療DXとサイバーセキュリティ」をハイブリッド開催](https://scan.netsecurity.ne.jp/article/2026/09/25/56298.html) | 21.0 | 20.0 | 42.0 |
+| [サイバーセキュリティ企業の「信頼と組織」を強化 ～ プルーフポイントが最高法務責任者と最高人事責任者を新任へ](https://scan.netsecurity.ne.jp/article/2026/09/25/56297.html) | 21.0 | 20.0 | 42.0 |
+| [HENNGE One、個人情報・情報資産管理プラットフォーム「Flows」と SSO 連携](https://scan.netsecurity.ne.jp/article/2026/09/25/56295.html) | 21.0 | 20.0 | 42.0 |
+| [グーグル、「Chrome」のパッチ適用を高速化する新戦略--リリース責任者に聞く狙い](https://japan.zdnet.com/article/35252785/) | 21.0 | 20.0 | 42.0 |
+| [全日空商事でギフト不正交換 原因は第三者の不正アクセス](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/031800050/091400091/) | 21.0 | 20.0 | 42.0 |
+| [ViewSonic vCastにおける複数の脆弱性](https://jvn.jp/vu/JVNVU96941087/) | 20.0 | 20.0 | 42.0 |
+| [Norwegian Cruise Lineのドアアクセスコントローラにおける認証不備の脆弱性](https://jvn.jp/vu/JVNVU96565230/) | 20.0 | 20.0 | 42.0 |
+| [CISA ICS Advisory / ICS Medical Advisory（2026年09月24日）](https://jvn.jp/vu/JVNVU93222287/) | 20.0 | 20.0 | 42.0 |
+| [CISAによるバイオテック向けサイバー防御強化を求める下院・上院議員の法案提案](https://cyberscoop.com/biotech-critical-infrastructure-cybersecurity-legislation/) | 20.0 | 20.0 | 42.0 |
+| [SectopRATが正規アプリケーションに潜伏して再来](https://www.darkreading.com/cyberattacks-data-breaches/sectoprat-returns-hiding-inside-legitimate-application) | 20.0 | 20.0 | 42.0 |
+| [Salt Typhoonハッキングを受け、通信事業者向けサイバー規則の自主導入を求める法案が提出される](https://therecord.media/lawmakers-introduce-bill-for-voluntary-telecom-cyber-rules) | 20.0 | 20.0 | 42.0 |
 
 ---
 
