@@ -1,17 +1,15 @@
-# 📡 サイレーダー 2026-09-26 11:00 JST
+# 📡 サイレーダー 2026-09-26 17:00 JST
 
-このレポートは、2026-09-26 05:00 JST〜2026-09-26 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-26 11:00 JST〜2026-09-26 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 33
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 25
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 8
+- [低温だが記録しておくトピック](#low-record-topics): 1
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw](#topic-34462) | 32.0 | 48.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -19,67 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-34462"></a>
-
-### 1. ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 32.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 48.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Clopのリークサイトが、未修正のGrav CMSの脆弱性を悪用された可能性があるとして、新しいTorアドレスへ移転したと報じられています。
-報道では、問題の脆弱性は認証なしのパストラバーサルに関係するとされていますが、詳細な検証結果は確認できていません。
-ランサムウェア運用側の公開リーク基盤が侵害されると、情報公開や脅迫の運用に影響が出る可能性があります。
-あわせて、CMSの未修正脆弱性が攻撃対象になり得ることを示す事例として注意が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・インシデント関連の公開情報として観測しています。
-
-##### 実務影響
-- RCEまたは認証バイパス系。
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Grav CMSを利用している場合は、修正版の適用状況を確認し、公開面のアクセス制御と不要機能の有無を点検する。
-- リークサイトや公開サーバーの改ざん・想定外の変更を早期に検知できるよう、監視とインシデント対応手順を見直す。
-- ランサムウェア関連の動向として、攻撃者側のインフラ変化や失敗も踏まえ、脅威情報の更新を継続的に確認する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ランサムウェアグループ | Clop | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw](https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -96,14 +34,7 @@ Clopのリークサイトが、未修正のGrav CMSの脆弱性を悪用され�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [連邦情報機関の警告を受けKiteworksが顧客にプラットフォームの使用停止を要請](https://therecord.media/kiteworks-urges-customers-to-stop-using-systems-incident) | 28.0 | 20.0 | 42.0 |
-| [「AI家庭教師と人間の専門家による指導の学習効果は同等」という研究結果、正答率の向上にかかる費用は918分の1](https://gigazine.net/news/20260926-ai-tutor-human-gre-cost/) | 27.0 | 20.0 | 42.0 |
-| [「Linux-AI OS」をレビュー--ローカルAIを内蔵したディストリビューション](https://japan.zdnet.com/article/35252832/) | 26.0 | 20.0 | 42.0 |
-| [Microsoft、「Copilot」を刷新 「仕事のための新しいOS」とナデラCEO](https://www.itmedia.co.jp/news/article/2609/26/2000001773/) | 26.0 | 20.0 | 42.0 |
-| [Kiteworksが潜在的なゼロデイ攻撃に備え6時間のサーバー停止を要請](https://www.bleepingcomputer.com/news/security/kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks/) | 22.0 | 20.0 | 43.0 |
-| [Socket、Node.<wbr>jsのセキュリティ対策強化に向けてOpenJSの新プログラムに参加](https://socket.dev/blog/openjs-nodejs-security) | 22.0 | 20.0 | 42.0 |
-| [AT&TとVerizonへの恐喝で米兵に70か月の禁錮刑](https://krebsonsecurity.com/2026/09/u-s-soldier-gets-70-months-in-prison-for-att-verizon-extortions/) | 20.0 | 28.0 | 50.0 |
-| [AT&T、Snowflakeなど大手企業への連続攻撃で軍人に有罪判決](https://cyberscoop.com/cameron-wagenius-att-snowflake-attacks-sentenced/) | 20.0 | 20.0 | 48.0 |
+| [防犯カメラを自動鳥類識別システムに変えた方法](https://gigazine.net/news/20260926-automatic-bird-identification-system/) | 22.0 | 20.0 | 42.0 |
 
 ---
 
