@@ -1,17 +1,15 @@
-# 📡 サイレーダー 2026-09-28 05:00 JST
+# 📡 サイレーダー 2026-09-28 11:00 JST
 
-このレポートは、2026-09-27 17:00 JST〜2026-09-28 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-28 05:00 JST〜2026-09-28 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 32
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 58
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 6
+- [低温だが記録しておくトピック](#low-record-topics): 34
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Citrix confirms two NetScaler RCE zero-days exploited in attacks](#topic-34525) | 41.0 | 64.0 | 51.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -19,70 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-34525"></a>
-
-### 1. Citrix confirms two NetScaler RCE zero-days exploited in attacks
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>R⁠C⁠E</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 41.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 51.0 |
-
-#### 概要
-
-Citrixが、NetScalerに存在する2件の重大なリモートコード実行脆弱性について、攻撃で悪用されていることを確認し、修正アップデートを公開したとされています。
-対象はCVE-2026-88771とCVE-2026-88772で、いずれもゼロデイとして扱われています。
-NetScalerは広く使われる製品であり、RCE脆弱性の悪用は組織内ネットワークへの侵入やサービス影響につながるおそれがあります。
-公表時点で悪用が確認されているため、通常の脆弱性公開よりも早い対応が求められます。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Citrixが提供する修正アップデートの適用状況を確認する。
-- NetScalerの公開状況や管理面の露出を見直し、不要なアクセス経路を減らす。
-- 関連する異常通信や管理操作の痕跡がないか、直近のログを確認する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-88771 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | Citrix | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-88771](https://nvd.nist.gov/vuln/detail/CVE-2026-88771) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Citrix confirms two NetScaler RCE zero-days exploited in attacks](https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -99,12 +34,40 @@ NetScalerは広く使われる製品であり、RCE脆弱性の悪用は組織�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [【特別企画】急激に進化する「AI」 - 見直すべき運用と変わらぬ防御原則](https://www.security-next.com/190251) | 27.0 | 20.0 | 42.0 |
-| [Anthropic、Claudeを2,000件超のプラグインとコネクタを備えたAIマーケットプレイスに変革](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-turns-claude-into-an-ai-marketplace-with-2-000-plus-plugins-and-connectors/) | 25.0 | 20.0 | 42.0 |
-| [Citrix NetScaler ADCおよびGatewayにおける重大な脆弱性](https://cert.europa.eu/publications/security-advisories/2026-014/) | 24.0 | 38.0 | 42.0 |
-| [Wireshark 4.6.9のリリース](https://isc.sans.edu/diary/rss/33372) | 22.0 | 20.0 | 42.0 |
-| [Cloudflare、コンテナのクロステナント脆弱性を修正し顧客データ流出を防止](https://www.bleepingcomputer.com/news/security/cloudflare-fixes-containers-cross-tenant-flaw-exposing-customer-data/) | 20.0 | 20.0 | 42.0 |
-| [Gyazoの情報漏えいで2,360万件のユーザーデータが流出、TASK#STOMPが文書を窃取](https://www.helpnetsecurity.com/2026/09/27/week-in-review-gyazo-breach-exposes-23-6m-user-data-taskstomp-steals-documents/) | 20.0 | 20.0 | 42.0 |
+| [京王グループにランサム攻撃、京王ストアの決済やホテル予約などに影響……鉄道は影響なし](https://www.itmedia.co.jp/news/article/2609/28/2000001779/) | 29.0 | 30.0 | 42.0 |
+| [REXTにランサムウェア攻撃、流出した可能性のある情報の一部がインターネット上に掲載](https://scan.netsecurity.ne.jp/article/2026/09/28/56315.html) | 29.0 | 30.0 | 42.0 |
+| [京王電鉄、ランサムウェア攻撃を受け調査中。鉄道の運行には支障なし](https://internet.watch.impress.co.jp/docs/news/2143575.html) | 28.0 | 30.0 | 42.0 |
+| [マイクロソフト、「Copilot」を刷新--主要機能は従量課金制](https://japan.zdnet.com/article/35253021/) | 26.0 | 20.0 | 42.0 |
+| [エーアイセキュリティラボなど 4 社、「AI 活用時代のセキュリティ対策」見逃し配信を 10 / 8 に実施](https://scan.netsecurity.ne.jp/article/2026/09/28/56317.html) | 26.0 | 20.0 | 42.0 |
+| [FIXER、伊賀市と共同開発した「黒塗りアプリ」をSovereign GaiXerに標準搭載](https://ascii.jp/elem/000/004/437/4437499/?rss=) | 26.0 | 20.0 | 42.0 |
+| [Microsoft IQとは？ AIエージェントが必要とする理由は？ マイクロソフトの担当幹部が解説](https://ascii.jp/elem/000/004/437/4437493/?rss=) | 26.0 | 20.0 | 42.0 |
+| [OpenAI、最上位モデルのツール使用を伴う学習・評価・推論を全て停止したと発表](https://www.itmedia.co.jp/news/article/2609/28/2000001777/) | 26.0 | 20.0 | 42.0 |
+| [ChatGPT Plusの支払い情報更新メール、偽物かも？ AIブランドを餌にした攻撃が拡大](https://www.itmedia.co.jp/enterprise/articles/2609/28/news035.html) | 26.0 | 20.0 | 42.0 |
+| [AIエージェントのシステム侵入事例に学ぶ安全対策](https://japan.zdnet.com/article/35252897/) | 26.0 | 20.0 | 42.0 |
+| [Agentic AI Foundation（AAIF）](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600009/092400232/) | 26.0 | 20.0 | 42.0 |
+| [富士通がAI時代のサイバー防衛戦略](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041800012/091400338/) | 26.0 | 20.0 | 42.0 |
+| [OpenAI、メール対応も担う常時起動のChatGPTアシスタント「o」を準備中](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-preparing-o-an-always-on-chatgpt-assistant-that-could-handle-email/) | 25.0 | 20.0 | 42.0 |
+| [「SharePoint」「WordPress」など脆弱性5件の悪用を警告 - 米当局](https://www.security-next.com/190755) | 24.0 | 20.0 | 43.0 |
+| [「Citrix NetScaler」に複数脆弱性 - 2件で悪用を確認、侵害調査を](https://www.security-next.com/190746) | 24.0 | 20.0 | 43.0 |
+| [「Gyazo」再開 不正アクセス発生前の全画像に閲覧制限](https://www.itmedia.co.jp/news/article/2609/28/2000001782/) | 21.0 | 20.0 | 42.0 |
+| [タイムズカー、会員の免許情報や本人確認書類が漏えいの可能性 不正アクセスで](https://www.itmedia.co.jp/news/article/2609/28/2000001780/) | 21.0 | 20.0 | 42.0 |
+| [東京メトロ、不正アクセスで会員メアド約5万9000件漏えいのおそれ 海外からか](https://www.itmedia.co.jp/news/article/2609/28/2000001778/) | 21.0 | 20.0 | 42.0 |
+| [CSIRT支援室 第38回 DEF CON CTF Finalsとは？ 世界最高峰と呼ばれるハッキング競技の決勝戦](https://scan.netsecurity.ne.jp/article/2026/09/28/56318.html) | 21.0 | 20.0 | 42.0 |
+| [PCデポのメールドメインの認証情報を不正利用、約1,800通の不審メールを送信](https://scan.netsecurity.ne.jp/article/2026/09/28/56316.html) | 21.0 | 20.0 | 42.0 |
+| [「@cosme」に登録した個人情報が20分間閲覧可能に、社内でのファイル受け渡し時に外部ファイル転送サービスを利用](https://scan.netsecurity.ne.jp/article/2026/09/28/56314.html) | 21.0 | 20.0 | 42.0 |
+| [画像共有サービス「Gyazo」に不正アクセス、約2,362万件のユーザーに関するデータが流出](https://scan.netsecurity.ne.jp/article/2026/09/28/56313.html) | 21.0 | 20.0 | 42.0 |
+| [JA遠州夢咲ホームページに不正アクセス、一時閉鎖](https://scan.netsecurity.ne.jp/article/2026/09/28/56312.html) | 21.0 | 20.0 | 42.0 |
+| [旭化成の元従業員が不正競争防止法違反で逮捕、機密情報持ち出し中国企業「山東聖泉」へ流出](https://scan.netsecurity.ne.jp/article/2026/09/28/56311.html) | 21.0 | 20.0 | 42.0 |
+| [baserCMS に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/28/56310.html) | 21.0 | 20.0 | 42.0 |
+| [Apache Tomcat に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/28/56309.html) | 21.0 | 20.0 | 42.0 |
+| [ネット証券等の不正取引被害が拡大、金融庁が注意喚起 2026年8月は4社で25件の不正取引](https://scan.netsecurity.ne.jp/article/2026/09/28/56308.html) | 21.0 | 20.0 | 42.0 |
+| [HENNGE One、人と組織のためのバックオフィスシステム「SmartHR」との API によるアカウント連携開始](https://scan.netsecurity.ne.jp/article/2026/09/28/56307.html) | 21.0 | 20.0 | 42.0 |
+| [開発業務へのAI適用、「品質やROIの把握」は未成熟／10月義務化のカスハラ対策、遅れる現状／AI利用で「幸福感が向上」は2割未満、ほか](https://ascii.jp/elem/000/004/437/4437467/?rss=) | 21.0 | 20.0 | 42.0 |
+| [画像を処理するだけで侵入される？ OpenAIにも侵入できた攻撃手法を解説](https://atmarkit.itmedia.co.jp/ait/articles/2609/28/news034.html) | 21.0 | 20.0 | 42.0 |
+| [フィジカルAI時代を見据え、NTTドコビジがNaaS基盤を強化 数万台のIoTデバイスをセキュアに管理](https://ascii.jp/elem/000/004/437/4437354/?rss=) | 21.0 | 20.0 | 42.0 |
+| [SCS評価制度とは何か--「星」の数が意味するものとは](https://japan.zdnet.com/article/35252904/) | 21.0 | 20.0 | 42.0 |
+| [Androidアプリ「Readwise Reader」における複数のクロスサイトスクリプティングの脆弱性](https://jvn.jp/vu/JVNVU96520526/) | 20.0 | 20.0 | 42.0 |
+| [東京メトロ、「メトポ会員向けサービス」で不正アクセス。約5.9万件のメールアドレスが漏えいの可能性](https://internet.watch.impress.co.jp/docs/news/2143576.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
