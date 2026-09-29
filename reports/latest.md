@@ -1,26 +1,18 @@
-# 📡 サイレーダー 2026-09-29 05:00 JST
+# 📡 サイレーダー 2026-09-29 11:00 JST
 
-このレポートは、2026-09-28 17:00 JST〜2026-09-29 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-29 05:00 JST〜2026-09-29 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 86
-- [音声で扱う想定のトピック](#audio-topics): 10
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 51
+- 観測トピック数: 68
+- [音声で扱う想定のトピック](#audio-topics): 1
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 42
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation](#topic-16788) | 56.0 | 77.0 | 66.0 | 音声 | 温度感上位枠 |
-| 2 | [注意喚起: NetScaler ADCおよびNetScaler Gatewayにおける複数の脆弱性（CVE-2026-88771、CVE-2026-88772等）に関する注意喚起 (公開)](#topic-34525) | 47.0 | 64.0 | 66.0 | 音声 | 温度感上位枠 |
-| 3 | [Citrix Patches Critical Zero Days Under Active Exploitation](#topic-34744) | 41.0 | 56.0 | 43.0 | 音声 | 温度感上位枠 |
-| 4 | [US, UK warn of exploited Citrix NetScaler zero-day bugs](#topic-34675) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 5 | [Citrix urges immediate upgrades of NetScaler amid widespread exploitation attempts](#topic-34679) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 6 | [FBI job portals remain offline after ShinyHunters claims breach via PeopleSoft zero-day](#topic-34688) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 7 | [Exploitation of vulnerabilities affecting Citrix NetScaler ADC and Citrix NetScaler Gateway](#topic-34707) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 8 | [JadePuffer agentic AI attacks target Azure, destroy cloud resources](#topic-34676) | 33.0 | 30.0 | 42.0 | 音声 | AI×Security枠 |
-| 9 | [RatHat Android Malware Console Uses Gemini to Identify Higher-Value Victims](#topic-34670) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
-| 10 | [CLOSEDQUORUM: Malware Puts AI in the C2 Loop](#topic-34672) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 1 | [Citrix patches actively exploited NetScaler zero-days after a weekend of unofficial warnings](#topic-34525) | 47.0 | 64.0 | 66.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
+| 2 | [Carbonato Botnet Puts an AI Agent on Hacked Docker Hosts](#topic-34819) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
 
 ---
 
@@ -28,83 +20,52 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-16788"></a>
+<a id="topic-34819"></a>
 
-### 1. Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation
+### 1. Carbonato Botnet Puts an AI Agent on Hacked Docker Hosts
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>I⁠o⁠C</nobr> / <nobr>ク⁠ラ⁠ウ⁠ド</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
-| <nobr>温⁠度⁠感</nobr> | 56.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 77.0 |
-| <nobr>確⁠度</nobr> | 66.0 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>ボ⁠ッ⁠ト⁠ネ⁠ッ⁠ト</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-オランダ警察が、ShinyHuntersに関する捜査の一環として、データ窃取や恐喝への関与が疑われる人物を逮捕したと報じられています。
-関連する動きとして、Oracle PeopleSoftの深刻な脆弱性CVE-2026-35273が悪用されているとされ、複数の組織が影響を受ける可能性が示されています。
-この件は、脅威アクターの摘発と並行して実際の攻撃活動が続いていることを示しており、被害の拡大や手口の変化に注意が必要です。
-CVE-2026-35273は既知の悪用対象として扱われているため、対象製品を使う組織にとって優先度の高い対応事項です。
+Carbonato Botnetに関する報告では、公開されたDockerホスト上でAIエージェントの仕組みが悪用され、Telegram経由でコマンド実行に使われたとされています。
+また、AI関連APIキーの窃取が狙われた可能性が示されています。AIサービスの利用拡大に伴い、APIキーや認証情報が攻撃の標的になりやすくなっています。
+Dockerの公開設定やコンテナ運用の不備があると、侵入後にAI関連資産へ波及するおそれがあります。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 10 sources。
-- 実悪用・ゼロデイ文脈。
-- 技術詳細・再現情報あり。
+- AI×Security文脈。
 - 脅威・攻撃キャンペーン文脈。
 - 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
-- 悪用情報あり。
-- 技術詳細により影響確認が進みやすい。
-- RCEまたは認証バイパス系。
-- ランサムウェア文脈。
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
 
 ##### 確度
-- 複数ソース確認。
-- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- Oracle PeopleSoft環境でCVE-2026-35273への対処状況を確認し、ベンダーの修正情報や推奨対策を適用する。
-- 外部公開されている管理系・業務系システムについて、認証不要で到達可能な経路がないか棚卸しする。
-- 侵害の兆候として、異常なアクセス、設定変更、Webシェルの存在など基本的な監視項目を再点検する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-35273 | 関連CVE | 1.00 | 候補あり（URL 3件以上） |
-| 脆弱性 | CVE-2026-41091 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-45657 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-50507 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | Cisco | 言及あり | 0.80 | — |
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| ランサムウェアグループ | Clop | 主題 | 0.80 | — |
-| ベンダー | Google | 言及あり | 0.80 | — |
-| ベンダー | Oracle | 言及あり | 0.80 | — |
-| 脅威アクター | Scattered Spider | 主題 | 0.80 | — |
+- Dockerホストの公開範囲と不要な管理ポートの露出を点検する。
+- AI APIキーや各種シークレットの保管・権限・ローテーションを見直す。
+- コンテナ内の不審な外部通信や、Telegram等を介した想定外の操作痕跡を監視する。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-35273](https://nvd.nist.gov/vuln/detail/CVE-2026-35273) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation](https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw and Deploy Web Shells](https://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [15th June – Threat Intelligence Report](https://research.checkpoint.com/2026/15th-june-threat-intelligence-report/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [ShinyHunters is actively extorting universities after exploiting an unpatched Or](https://cyberscoop.com/oracle-peoplesoft-zero-day-vulnerability-shinyhunters-extortion/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Active Exploitation of Oracle PeopleSoft Zero-Day (CVE-2026-35273)](https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/06/12/cisa-adds-one-known-exploited-vulnerability-catalog) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Google Confirms Exploitation of Oracle PeopleSoft Zero-Day by ShinyHunters](https://www.securityweek.com/google-confirms-exploitation-of-oracle-peoplesoft-zero-day-by-shinyhunters/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Carbonato Botnet Puts an AI Agent on Hacked Docker Hosts](https://www.darkreading.com/identity-access-management-security/carbonato-botnet-ai-agent-hacked-docker-hosts) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -115,17 +76,20 @@ CVE-2026-35273は既知の悪用対象として扱われているため、対象
 
 ---
 
+<a id="github-only-topics"></a>
+
+## 📌 GitHubのみ掲載の注目トピック
+
 <a id="topic-34525"></a>
 
-### 2. 注意喚起: NetScaler ADCおよびNetScaler Gatewayにおける複数の脆弱性（CVE-2026-88771、CVE-2026-88772等）に関する注意喚起 (公開)
+### 1. Citrix patches actively exploited NetScaler zero-days after a weekend of unofficial warnings
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>区⁠分</nobr> | GitHub |
 | <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>I⁠o⁠C</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
 | <nobr>温⁠度⁠感</nobr> | 47.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
@@ -133,15 +97,14 @@ CVE-2026-35273は既知の悪用対象として扱われているため、対象
 
 #### 概要
 
-Citrix NetScaler ADCおよびNetScaler Gatewayに関する複数の脆弱性について、少なくともCVE-2026-88771とCVE-2026-88772は実際に悪用されていると複数の公開情報で伝えられています。
-JPCERT/CCも注意喚起を出しており、該当製品を利用する組織では更新状況の確認と影響有無の点検が重要です。
-境界系製品に対するRCE脆弱性の悪用は、認証情報や社内ネットワークへの侵入につながるおそれがあるためです。
-公開情報上、ゼロデイとしての悪用観測が示されており、優先度の高い対応対象と見られます。
+Citrixは、NetScaler ADCおよびNetScaler Gatewayに存在する2件の重大な脆弱性（CVE-2026-88771、CVE-2026-88772）について、実際の攻撃で悪用されていることを確認し、修正更新を公開しました。
+公開情報では、これらはリモートコード実行につながるおそれがあるとされ、複数のセキュリティ組織やJPCERT/CCでも注意喚起が出ています。
+ネットワーク境界で使われやすい製品の脆弱性で、侵害されると影響範囲が広がりやすいためです。すでに悪用観測がある点から、通常の脆弱性対応よりも迅速な評価と適用が求められます。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 7 sources。
+- 複数ソースで確認: 8 sources。
 - 実悪用・ゼロデイ文脈。
 - 技術・開発者系ソース観測: 観測あり。
 - 現在の熱量に合わせた冷却補正。
@@ -157,9 +120,9 @@ JPCERT/CCも注意喚起を出しており、該当製品を利用する組織�
 
 #### 担当者向け確認ポイント
 
-- Citrixの案内に沿って、該当バージョンの影響有無と修正パッチ適用状況を確認する。
-- NetScaler ADC/Gatewayの管理画面や設定、ログに不審なアクセスや改ざんの痕跡がないか点検する。
-- 外部公開しているNetScaler環境がある場合は、暫定的な露出範囲の見直しと監視強化を検討する。
+- 対象のNetScaler ADC/Gatewayが影響を受ける版かを確認し、提供済みの修正更新を優先適用する。
+- 外部公開しているNetScaler機器については、更新前後を問わず不審なアクセスや設定変更、侵害兆候の確認を行う。
+- 資産一覧と保守窓口を整理し、同種の境界装置で今後も迅速に更新判断できる体制を見直す。
 
 #### 関連する対象
 
@@ -176,524 +139,22 @@ JPCERT/CCも注意喚起を出しており、該当製品を利用する組織�
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
 | <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-88771](https://nvd.nist.gov/vuln/detail/CVE-2026-88771) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Citrix patches actively exploited NetScaler zero-days after a weekend of unoffic](https://cyberscoop.com/citrix-zero-days-delayed-disclosure/) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Threat Brief: NetScaler Zero Days CVE-2026-88771 and CVE-2026-88772 Exploited in](https://unit42.paloaltonetworks.com/netscaler-zero-days-exploited/) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [CVE-2026-88771 and CVE-2026-88772: Two Critical Citrix NetScaler Flaws Under Act](https://www.bitsight.com/blog/critical-vulnerability-alert-cve-2026-88771-cve-2026-88772-citrix-netscaler-flaws-under-exploitation) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Zero-Day Exploitation of Citrix NetScaler ADC and Gateway: CVE-2026-88771 and CV](https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Citrix NetScaler RCE zero-days exploited globally for weeks (CVE-2026-88771, CVE](https://www.helpnetsecurity.com/2026/09/28/citrix-netscaler-rce-zero-days-exploited-for-weeks-cve-2026-88771-cve-2026-88772/) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [注意喚起: NetScaler ADCおよびNetScaler Gatewayにおける複数の脆弱性（CVE-2026-88771、CVE-2026-88772等](https://www.jpcert.or.jp/at/2026/at260029.html) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Citrix Confirms 2 NetScaler Zero-Days After Admins Pulled the Plug](https://www.securityweek.com/citrix-confirms-2-netscaler-zero-days-after-admins-pulled-the-plug/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Citrix confirms two NetScaler RCE zero-days exploited in attacks](https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: あり（1件）。
+- 国内ブックマーク反応: あり（2件）。
 - 国内開発者記事: なし。
 - 技術・開発者系ソース観測: 観測あり。
 
 ---
-
-<a id="topic-34744"></a>
-
-### 3. Citrix Patches Critical Zero Days Under Active Exploitation
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>R⁠C⁠E</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 41.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 56.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-Citrixが、実際に悪用されている2件の重大なゼロデイ脆弱性に対する修正を公表しました。
-公開情報では、いずれもRCEに関わる問題とされていますが、影響範囲や詳細な悪用状況は確認できる範囲に限られています。
-ゼロデイかつ実悪用が確認されているため、放置すると侵入や侵害につながる可能性があります。Citrix製品を利用する組織では、緊急度の高い対応対象として扱う必要があります。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 対象となるCitrix製品とバージョンを確認し、修正パッチの適用状況を点検する。
-- 公開情報に基づき、関連ログや不審な認証・接続・管理操作の有無を確認する。
-- 外部公開しているCitrix関連サービスがあれば、暫定的な保護策やアクセス制御の見直しを優先する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Citrix | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Citrix Patches Critical Zero Days Under Active Exploitation](https://www.infosecurity-magazine.com/news/citrix-patches-critical-zero-days/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-34675"></a>
-
-### 4. US, UK warn of exploited Citrix NetScaler zero-day bugs
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-Citrix NetScaler Gatewayに関する新たな脆弱性について、各国のサイバー当局が注意喚起を出し、Citrixも複数の脆弱性を確認したとされています。
-報告内容では、ゼロデイとして悪用された可能性がある文脈で扱われており、運用中の製品利用者は影響確認が必要です。
-認証やリモート接続の入口に使われやすい製品での脆弱性は、侵入の足がかりになりやすいため注目されています。公的機関が注意喚起している点からも、対応の優先度が高い話題です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 該当するCitrix NetScaler Gatewayの利用有無と、バージョン・構成を早急に確認する。
-- Citrixおよび各国当局の修正・緩和策の案内を確認し、適用可否を判断する。
-- 認証ログや管理系アクセスの異常、想定外の設定変更など、周辺の不審兆候を点検する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Citrix | 言及あり | 0.80 | — |
-| 製品 | Citrix NetScaler Gateway | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [US, UK warn of exploited Citrix NetScaler zero-day bugs](https://therecord.media/us-uk-warn-of-citrix-netscaler-zero-day-bug) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-34679"></a>
-
-### 5. Citrix urges immediate upgrades of NetScaler amid widespread exploitation attempts
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠I⁠S⁠O⁠・⁠組⁠織⁠運⁠営</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-CitrixがNetScalerの更新を急ぐよう呼びかけており、関連製品に対する広範な悪用試行が観測されているとされています。
-公的な確認が進む前から、セキュリティチームに対して迅速な対応が求められる状況です。NetScalerは組織の外部公開面に置かれることが多く、侵害されると影響が大きくなり得ます。
-悪用観測がある段階では、未修正環境のリスク評価と優先対応が重要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 対象のNetScaler環境を棚卸しし、ベンダー案内に沿って優先度高く更新状況を確認する。
-- 外部公開している装置について、異常な認証失敗や不審なアクセス傾向を監視し、必要に応じて一時的な保護策を検討する。
-- 公式の修正情報や注意喚起を継続監視し、影響範囲がある場合は関連サービスへの波及を確認する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Citrix | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Citrix urges immediate upgrades of NetScaler amid widespread exploitation attemp](https://www.cybersecuritydive.com/news/citrix-upgrades-netscaler-exploitation/831502/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-34688"></a>
-
-### 6. FBI job portals remain offline after ShinyHunters claims breach via PeopleSoft zero-day
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-FBIの採用関連ポータルが、ShinyHuntersによる侵害主張の後も停止したままであると報じられています。
-ShinyHuntersは、Oracle PeopleSoftの未確認のゼロデイ脆弱性を使ったと主張していますが、現時点ではその詳細は確認されていません。
-米国の捜査機関に関連する公開向けサービスが影響を受けている可能性があり、信頼性や可用性の観点で注目されています。
-ゼロデイを伴うとされる主張は、関連製品を利用する組織にとっても警戒材料になります。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- PeopleSoftなど外部公開システムの停止・異常を監視し、業務継続手順を確認する。
-- ベンダーの更新情報や公的機関の続報を追い、未確認情報を前提にした判断を避ける。
-- 採用・申請ポータルのような公開系システムでは、認証、ログ監視、権限管理の点検を改めて行う。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-35273 | 関連CVE | 1.00 | 候補あり（URL 3件以上） |
-| ベンダー | Oracle | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [FBI job portals remain offline after ShinyHunters claims breach via PeopleSoft z](https://www.helpnetsecurity.com/2026/09/28/fbi-job-portals-offline-shinyhunters-breach/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-34707"></a>
-
-### 7. Exploitation of vulnerabilities affecting Citrix NetScaler ADC and Citrix NetScaler Gateway
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-英国NCSCは、Citrix NetScaler ADCおよびCitrix NetScaler Gatewayに影響する脆弱性について、組織に速やかな対処を呼びかけています。
-公表内容では、少なくとも2件の脆弱性が実際に悪用されているとされています。境界機器にあたる製品での脆弱性は、影響範囲が広くなりやすく、対応の遅れがそのままリスクにつながります。
-悪用観測があるため、通常の定期対応ではなく優先度を上げて確認する必要があります。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 該当するCitrix NetScaler ADC / Gatewayの導入有無を確認し、ベンダーの修正情報と影響範囲を至急照合する。
-- 公開情報で悪用観測があるため、パッチ適用や緩和策の適用を前倒しで進める。
-- 外部公開面の監視、認証・管理系ログの確認、異常なアクセスの有無を点検する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Citrix | 言及あり | 0.80 | — |
-| 製品 | Citrix NetScaler Gateway | 言及あり | 0.80 | — |
-| 製品 | Citrix NetScaler ADC | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Exploitation of vulnerabilities affecting Citrix NetScaler ADC and Citrix NetSca](https://www.ncsc.gov.uk/news/exploitation-of-vulnerabilities-affecting-citrix-netscaler-adc-and-citrix-netscaler-gateway) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-34676"></a>
-
-### 8. JadePuffer agentic AI attacks target Azure, destroy cloud resources
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ク⁠ラ⁠ウ⁠ド</nobr> / <nobr>A⁠I</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-JadePufferと呼ばれる脅威アクターが、Azure環境を狙ったAIエージェント型の攻撃を行っているとされています。
-公開情報では、偵察、認証情報の窃取、クラウドの中核コンポーネント破壊につながる活動が示唆されています。
-クラウド環境に対する攻撃が、従来の侵入やランサムウェアに加えてAIの自動化で加速する可能性があるためです。
-Azure利用組織にとっては、アカウント保護とリソース保全の重要性を改めて示す事例です。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Azureの特権アカウントと認証情報の保護を優先し、多要素認証や権限最小化を確認する。
-- クラウド管理操作や重要リソースの変更を監視し、異常な偵察・削除・権限変更の兆候を検知できるようにする。
-- ランサムウェアを含む破壊的事象を想定し、バックアップと復旧手順が実際に機能するか定期的に検証する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脅威アクター | JadePuffer | 主題 | 0.80 | — |
-| 製品 | Microsoft Azure | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [JadePuffer agentic AI attacks target Azure, destroy cloud resources](https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-ai-attacks-target-azure-destroy-cloud-resources/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-34670"></a>
-
-### 9. RatHat Android Malware Console Uses Gemini to Identify Higher-Value Victims
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠n⁠d⁠r⁠o⁠i⁠d</nobr> / <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Android向け銀行系トロイの木馬とされるRatHatの運用で、攻撃者側のWebコンソールにGeminiが使われ、収集情報からより価値の高い被害者を見分ける用途が示されたと報じられています。
-Security企業Cleafyは、このコンソールの展開が複数確認されており、MaaS型の運用形態に近いとしています。
-AIが脅威運用の効率化に使われる例として、検知や被害評価の難しさが増す可能性があります。
-モバイル端末や銀行系認証情報を狙うマルウェアの運用が、より組織的・継続的になっている点も注目されます。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- モバイル端末向けの不審な権限要求や配布経路を点検し、導入アプリの監視を強化する。
-- 端末上の情報収集や外部送信の兆候を前提に、EDR/MDMや通信監視のルールを見直す。
-- 銀行系・認証系の利用者に対して、多要素認証や取引確認の手順を再周知する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| AIモデル/プロジェクト | Gemini | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [RatHat Android Malware Console Uses Gemini to Identify Higher-Value Victims](https://thehackernews.com/2026/09/rathat-android-malware-console-uses.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-34672"></a>
-
-### 10. CLOSEDQUORUM: Malware Puts AI in the C2 Loop
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>ボ⁠ッ⁠ト⁠ネ⁠ッ⁠ト</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Cisco Talosの分析によると、CLOSEDQUORUMはWindows向けのマルウェアで、攻撃の一部に商用LLMを組み込み、C2の判断を外部AIに委ねる設計が確認されています。
-報告では、複数のLLM提供元を参照してあらかじめ用意された悪性動作を選択し、結果や取得情報をDiscordに送る構成が示されています。
-従来型の攻撃者管理サーバーに依存しない形で、AIサービスを攻撃チェーンの一部に使う例として注目されます。
-実運用の有無は未確認でも、脅威の自動化と運用負荷の低減という観点で示唆があります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- AIサービスを悪用した通信や不審な連携先がないか、エンドポイントとプロキシの監視観点を見直す。
-- LLM利用を前提にした新しい手口として、既存のC2検知だけでなく挙動ベースの検知を強化する。
-- 外部サービスとのやり取りが増えた際に備え、アプリケーション制御と権限管理を点検する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | DeepSeek | 言及あり | 0.80 | — |
-| ベンダー | Mistral AI | 言及あり | 0.80 | — |
-| ベンダー | Google | 言及あり | 0.80 | — |
-| ベンダー | Cisco | 言及あり | 0.80 | — |
-| ベンダー | Qwen | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [CLOSEDQUORUM: Malware Puts AI in the C2 Loop](https://blog.polyswarm.io/closedquorum-malware-puts-ai-in-the-c2-loop) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
-今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -704,57 +165,48 @@ Cisco Talosの分析によると、CLOSEDQUORUMはWindows向けのマルウェ�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [JadePufferによるAzureテナント侵害と破壊的クラウド攻撃](https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack) | 33.0 | 20.0 | 42.0 |
-| [CarbonatoボットネットがDockerホストを侵害しTelegram制御のHermes AIエージェントを展開](https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html) | 33.0 | 20.0 | 42.0 |
-| [NeedyMantis：標的型攻撃で使用された侵害後マルウェアファミリーの解明](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) | 30.0 | 20.0 | 42.0 |
-| [元兵士の通信会社ハッキング連発で70か月の実刑](https://www.theregister.com/cyber-crime/2026/09/28/ex-soldiers-telecom-hacking-spree-earns-him-70-months/5299440) | 28.0 | 20.0 | 42.0 |
-| [Googleが警告したShinyHuntersによるOracle PeopleSoftへの新たな攻撃キャンペーン](https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/) | 28.0 | 20.0 | 42.0 |
-| [JADEPUFFER関連の攻撃者が侵害されたサービス プリンシパルを使ってAzureリソースを削除した件](https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html) | 28.0 | 20.0 | 42.0 |
-| [OpenAIはAIトレーニングに違法な海賊版書籍を使うことが危険であり作家の生活を脅かすと認識していたと裁判文書で明らかに](https://gigazine.net/news/20260928-openai-microsoft-know-book-piracy-illegal/) | 27.0 | 20.0 | 42.0 |
-| [次期指導要領の全体像固まる 情報学習強化、英語でAI導入が柱](https://www.itmedia.co.jp/news/article/2609/28/2000001818/) | 26.0 | 20.0 | 42.0 |
-| [OpenAI、研究用AIエージェントがDNSの抜け穴を利用して外部チャットボットに接続](https://news.mynavi.jp/techplus/article/20260928-5041662/) | 26.0 | 20.0 | 42.0 |
-| [NTTドコモビジネス、「AI-Centric ICTプラットフォーム」による実装力を訴求](https://japan.zdnet.com/article/35253043/) | 26.0 | 20.0 | 42.0 |
-| [オープンソースのAIセキュリティエージェントで24件のAndroid脆弱性を発見した方法](https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/) | 25.0 | 20.0 | 42.0 |
-| [AIエージェントは特権ユーザー：そのアクセスは誰が監査しているのか](https://www.darkreading.com/vulnerabilities-threats/ai-agents-are-privileged-users-who-is-auditing-their-access) | 25.0 | 20.0 | 42.0 |
-| [AIの安全性が議論される中、NVIDIAがエージェント向けのオープンソースツールを公開](https://cyberscoop.com/nvidia-open-agent-safety-platform/) | 25.0 | 20.0 | 42.0 |
-| [AIエージェント向けIAMの実践的なエンタープライズフレームワーク](https://thehackernews.com/2026/09/iam-for-ai-agent.html) | 25.0 | 20.0 | 42.0 |
-| [ModulateがDeepfake検出の高度化に向けて2500万ドルを調達](https://www.securityweek.com/modulate-raises-25-million-to-advance-deepfake-detection/) | 25.0 | 20.0 | 42.0 |
-| [ニッチなAIツールがインフラ運用者にもたらす重大なサイバーセキュリティリスク](https://www.cybersecuritydive.com/news/ai-apps-niche-cybersecurity-risk-trendai/831486/) | 25.0 | 20.0 | 42.0 |
-| [Weekly Recap: 3億8700万ドル規模の暗号資産ハック、Citrixの脆弱性悪用、AIエージェントの逸脱行動などの脅威まとめ](https://thehackernews.com/2026/09/weekly-recap-387m-crypto-hack-citrix.html) | 25.0 | 20.0 | 42.0 |
-| [80,000以上の組織でAIログイン情報が窃取される：Shadow AIからLLMjackingへ](https://www.bleepingcomputer.com/news/security/80-000-plus-organizations-had-ai-logins-stolen-from-shadow-ai-to-llmjacking/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIがインターネット制御をすり抜けたagentを受け、最上位AIモデルの開発を一時停止](https://www.malwarebytes.com/blog/ai/2026/09/openai-pauses-work-on-top-ai-models-after-agent-slips-past-internet-controls) | 25.0 | 20.0 | 42.0 |
-| [NVIDIAがAIエージェントの安全性をソフトウェア任せにせずシリコンで強制することを提唱](https://www.helpnetsecurity.com/2026/09/28/nvidia-open-agent-safety-platform/) | 25.0 | 20.0 | 42.0 |
-| [酔っぱらい”AIは秘密保持が苦手である](https://www.helpnetsecurity.com/2026/09/28/drunk-ai-models-jailbreak-research/) | 25.0 | 20.0 | 42.0 |
-| [Nvidia、ハードウェアベースの監視機能を備えたAIエージェント安全性プラットフォームを発表](https://www.securityweek.com/nvidia-unveils-ai-agent-safety-platform-with-hardware-based-watchdog/) | 25.0 | 20.0 | 42.0 |
-| [MCPが重大なガバナンス上の空白を生んでいると研究者が警告](https://www.infosecurity-magazine.com/news/mcp-creating-major-governance-gaps/) | 25.0 | 20.0 | 42.0 |
-| [サイバーセキュリティにおけるエージェント型運用モデルは文脈が重要](https://www.cybersecuritydive.com/spons/context-matters-when-it-comes-to-cybersecuritys-agentic-operating-model/830973/) | 25.0 | 20.0 | 42.0 |
-| [AI主導の攻撃者に追いつくためのセキュリティテストの進化](https://www.cybersecuritydive.com/spons/security-testing-has-to-keep-pace-with-ai-driven-attackers/830603/) | 25.0 | 20.0 | 42.0 |
-| [Kiteworksが顧客にシステム停止を促した予防的警告を解除](https://www.cybersecuritydive.com/news/kiteworks-lifts-advisory-warning-shut-zero-day/831508/) | 22.0 | 20.0 | 43.0 |
-| [教員5人のアカウントに不正アクセス、スパムの踏み台に - 日大](https://www.security-next.com/190319) | 22.0 | 20.0 | 42.0 |
-| [最先端AIモデルの「思考しすぎてコスト増加」を解決するべくKimi K3ベースで開発されたAIモデル「Ember-1」が登場](https://gigazine.net/news/20260928-ember-1-fireworks/) | 22.0 | 20.0 | 42.0 |
-| [事業所担当者向けの説明会連絡メールで誤送信 - 愛媛労働基準協会](https://www.security-next.com/190739) | 22.0 | 20.0 | 42.0 |
-| [FBI職員の血液検査結果と診断メモが漏えい後に流出](https://www.malwarebytes.com/blog/data-breaches/2026/09/fbi-agents-blood-tests-and-doctors-notes-surface-after-breach) | 20.0 | 20.0 | 48.0 |
-| [設定不備のSupabaseアプリで1万6000件超のデータベースがデータ公開状態に](https://www.bleepingcomputer.com/news/security/misconfigured-supabase-apps-expose-data-in-over-16-000-databases/) | 20.0 | 20.0 | 42.0 |
-| [Bitget、第三者セキュリティ製品の欠陥を悪用され3億8800万ドルを盗まれる](https://thehackernews.com/2026/09/bitget-says-attacker-exploited-third.html) | 20.0 | 20.0 | 42.0 |
-| [Chrome Storeで「Poper Blocker」を装うスパイウェアが数百万回ダウンロードされる](https://www.darkreading.com/application-security/chrome-store-poper-blocker-spyware-downloaded-millions) | 20.0 | 20.0 | 42.0 |
-| [2026 CISO Forum Virtual Summitの講演募集開始](https://www.securityweek.com/call-for-presentations-open-for-2026-ciso-forum-virtual-summit/) | 20.0 | 20.0 | 42.0 |
-| [Bitget、3億8750万ドルのウォレット侵害後にBitcoin出金を再開](https://www.infosecurity-magazine.com/news/bitget-restarts-withdrawals-387-5m/) | 20.0 | 20.0 | 42.0 |
-| [ShinyHunters、FBIとの無謀な意地の張り合いへと方針転換し金銭恐喝から離脱](https://cyberscoop.com/fbi-data-breach-shinyhunters-agent-safety-risk/) | 20.0 | 20.0 | 42.0 |
-| [NetScaler ADCおよびNetScaler Gatewayの複数の脆弱性によりリモートコード実行が可能になるおそれ](https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-netscaler-adc-and-netscaler-gateway-could-allow-for-remote-code-execution_2026-103) | 20.0 | 20.0 | 42.0 |
-| [16歳の研究者がMicrosoftの分析サービスに侵入し、17兆行のデータにアクセス](https://www.helpnetsecurity.com/2026/09/28/microsoft-titan-jwt-signature-flaw/) | 20.0 | 20.0 | 42.0 |
-| [ポーランドの医療ソフトウェア提供企業へのサイバー攻撃で患者データが流出](https://therecord.media/poland-cyberattack-medical-medyc) | 20.0 | 20.0 | 42.0 |
-| [Deepfakeが企業にもたらす高額な現実、報告書が警告](https://www.infosecurity-magazine.com/news/deepfakes-costly-reality-for/) | 20.0 | 20.0 | 42.0 |
-| [Akamai、Athena Coalitionに参加し新たな脆弱性から利用者を保護](https://www.akamai.com/blog/security-research/2026/sep/akamai-joins-athena-coalition-shield-users-vulnerabilities) | 20.0 | 20.0 | 42.0 |
-| [元米軍兵士がAT&TとVerizonをハッキングし懲役刑に処される](https://www.securityweek.com/prison-sentence-for-former-us-soldier-who-hacked-att-and-verizon/) | 20.0 | 20.0 | 42.0 |
-| [OSのファイル通知を通じて他のユーザーが閲覧内容を監視し、キー入力のタイミングを推測できる問題](https://www.helpnetsecurity.com/2026/09/28/cve-2025-68788-file-notification-attacks/) | 20.0 | 20.0 | 42.0 |
-| [DC Health Agency、40万件の受給者記録を公開状態にしていた](https://www.securityweek.com/dc-health-agency-exposes-400000-beneficiary-records/) | 20.0 | 20.0 | 42.0 |
-| [New Mexico陪審、Facebookのプライバシー保護に関する欺瞞を認定](https://www.securityweek.com/new-mexico-jury-finds-facebook-liable-for-deceiving-users-about-privacy-protections/) | 20.0 | 20.0 | 42.0 |
-| [画像ではない画像—SVGを悪用した攻撃を防ぐ](https://www.security.com/expert-perspectives/image-isnt-stopping-svg-borne-attacks) | 20.0 | 20.0 | 42.0 |
-| [Kiteworksがサーバー停止を要請、Advanced Formsの脆弱性を確認](https://www.securityweek.com/kiteworks-urges-server-shutdown-finds-advanced-forms-vulnerability/) | 20.0 | 20.0 | 42.0 |
-| [Bitget、3億8750万ドル規模の暗号資産流出後にBitcoin出金を再開](https://www.bleepingcomputer.com/news/security/bitget-resumes-bitcoin-withdrawals-after-3875-million-crypto-heist/) | 20.0 | 20.0 | 42.0 |
-| [攻撃対象領域は思っているより広く、ハッカーはそれを知っている](https://www.cybersecuritydive.com/spons/your-attack-surface-is-bigger-than-you-think-and-hackers-know-that/830809/) | 20.0 | 20.0 | 42.0 |
-| [元米兵、AT&TとSnowflakeのデータ窃取への関与で70か月の刑に](https://www.helpnetsecurity.com/2026/09/28/us-army-soldier-snowflake-breaches-extortion/) | 20.0 | 20.0 | 42.0 |
-| [LinkedInがつながりによる職歴確認機能をテスト](https://www.helpnetsecurity.com/2026/09/28/linkedin-profile-verification-features/) | 20.0 | 20.0 | 42.0 |
+| [Keioがランサムウェア攻撃を受け、業務システムに障害発生](https://www.bleepingcomputer.com/news/security/japans-keio-confirms-ransomware-attack-disrupted-business-systems/) | 28.0 | 30.0 | 42.0 |
+| [JadePufferがAzure IDを乗っ取り、クラウドリソースを破壊した](https://www.theregister.com/security/2026/09/28/jadepuffer-crims-hijacked-azure-identities-and-used-them-to-blow-up-cloud-resources/5299591) | 28.0 | 30.0 | 42.0 |
+| [数カ月で消えるAI予算とシャドーAIの脅威--Datadog CPOに聞く「AI本格運用」を支えるIT戦略](https://japan.zdnet.com/article/35252559/) | 28.0 | 20.0 | 42.0 |
+| [AI同士をターン制のバトルゲームで対決させて能力を測る「Tiny AI Arena」](https://gigazine.net/news/20260929-tiny-ai-arena/) | 27.0 | 20.0 | 42.0 |
+| [M365 のメールや Teams を直接分析 ～ プルーフポイントが AI 活用調査機能を拡張、内部リスクの可視性を強化](https://scan.netsecurity.ne.jp/article/2026/09/29/56319.html) | 26.0 | 20.0 | 42.0 |
+| [AIエージェント暴走 本番データを全削除](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/091700571/091700001/) | 26.0 | 20.0 | 42.0 |
+| [日立が目指すAIエージェントを駆使する次世代SIへの変革](https://japan.zdnet.com/article/35252912/) | 26.0 | 20.0 | 42.0 |
+| [生成AIで変革と内製化を一体推進 紙や手作業を相次ぎ撤廃](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600004/092400218/) | 26.0 | 20.0 | 42.0 |
+| [Anthropic、「Claude Sonnet 5.5」公開 料金据え置きで30％以上高速化、タスク当たりコスト最大3割減](https://www.itmedia.co.jp/news/article/2609/29/2000001823/) | 26.0 | 20.0 | 42.0 |
+| [Authlibライブラリにおける署名検証が回避される脆弱性](https://jvn.jp/vu/JVNVU99151548/) | 23.0 | 20.0 | 43.0 |
+| [Apple、iOS 26・macOS 26・macOS 15向け緊急パッチを公開（CVE-2026-86950）](https://isc.sans.edu/diary/rss/33376) | 22.0 | 28.0 | 50.0 |
+| [1パケットで産業分野のOTサーバーをクラッシュさせる問題](https://www.darkreading.com/ics-ot-security/one-packet-crash-servers-tdengine) | 22.0 | 20.0 | 43.0 |
+| [「macOS」にアップデート - iOSで悪用の可能性ある脆弱性に対処](https://www.security-next.com/190787) | 22.0 | 20.0 | 42.0 |
+| [ニッポンレンタカーでも会員41人の情報漏えいのおそれ 免許証番号やクレカ下4ケタも](https://www.itmedia.co.jp/news/article/2609/29/2000001827/) | 21.0 | 20.0 | 42.0 |
+| [サイバー犯罪対策は、背後にある人物やインフラストラクチャ、サービスを破壊する新たな戦略へ](https://ascii.jp/elem/000/004/436/4436707/?rss=) | 21.0 | 20.0 | 42.0 |
+| [CSIRT支援室 第39回 魚の骨が、抜けた日。DEF CON CTF世界一までの20年](https://scan.netsecurity.ne.jp/article/2026/09/29/56335.html) | 21.0 | 20.0 | 42.0 |
+| [負担を抑えた ISMS 運用と脆弱性診断とは？ エーアイセキュリティラボと SecureNavi が 9 / 30 セミナー開催](https://scan.netsecurity.ne.jp/article/2026/09/29/56334.html) | 21.0 | 20.0 | 42.0 |
+| [不正プログラム設置 ～ 東京大学大学院医学系研究科公共健康医学専攻ウェブサイトに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/09/29/56333.html) | 21.0 | 20.0 | 42.0 |
+| [モンベル・グローバルサイトに不正アクセス、最大15名分の個人情報が第三者に不正に取得された可能性](https://scan.netsecurity.ne.jp/article/2026/09/29/56332.html) | 21.0 | 20.0 | 42.0 |
+| [「スマレジEC・リピート」「スマレジEC・B2B」に不正アクセス、一部の個人データが閲覧・取得された可能性](https://scan.netsecurity.ne.jp/article/2026/09/29/56331.html) | 21.0 | 20.0 | 42.0 |
+| [問題発生後の報告体制に改善すべき点 ～ 選挙ドットコム運営のイチニで「個別お打合せのご提案」と題するメールを誤送信](https://scan.netsecurity.ne.jp/article/2026/09/29/56330.html) | 21.0 | 20.0 | 42.0 |
+| [扶桑電通が社外関係者と利用していた共有フォルダに不正アクセス、26,489件の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/09/29/56329.html) | 21.0 | 20.0 | 42.0 |
+| [商船三井クルーズで営業情報を保存した外部記憶媒体を紛失、就航準備中のクルーズ船「MITSUI OCEAN SAKURA」の船内で保管](https://scan.netsecurity.ne.jp/article/2026/09/29/56328.html) | 21.0 | 20.0 | 42.0 |
+| [不開示情報のマスキングが不完全で個人情報が閲覧可能に、周知の徹底が不十分](https://scan.netsecurity.ne.jp/article/2026/09/29/56327.html) | 21.0 | 20.0 | 42.0 |
+| [「ワンストップジョブサイトくまもと」が改ざん被害、フェイクアラートが表示される状態に](https://scan.netsecurity.ne.jp/article/2026/09/29/56326.html) | 21.0 | 20.0 | 42.0 |
+| [非公開情報であることに気付かず承認 ～ 愛知県の出会いサポートポータルサイト「あいこんナビ」で個人情報を誤掲載](https://scan.netsecurity.ne.jp/article/2026/09/29/56325.html) | 21.0 | 20.0 | 42.0 |
+| [eLTAXを騙る不審メールやQRコード経由の詐欺サイト確認](https://scan.netsecurity.ne.jp/article/2026/09/29/56324.html) | 21.0 | 20.0 | 42.0 |
+| [感染したスマートフォンによる不正な商品購入も確認 ～ NTTドコモ、不正なアプリのインストールに注意を呼びかけ](https://scan.netsecurity.ne.jp/article/2026/09/29/56323.html) | 21.0 | 20.0 | 42.0 |
+| [baserCMS 用プラグイン「アドオンマイグレーター」 に信頼できない制御領域からの機能の組み込みに関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/09/29/56322.html) | 21.0 | 20.0 | 42.0 |
+| [統合セキュリティプラットフォーム「Securify」のデモ展示、スリーシェイクが情報セキュリティ EXPO に出展](https://scan.netsecurity.ne.jp/article/2026/09/29/56321.html) | 21.0 | 20.0 | 42.0 |
+| [求職者やエンジニアを狙うヘッドハンティング型攻撃 ～ 警察庁が注意喚起する「WaterPlum」の手口](https://scan.netsecurity.ne.jp/article/2026/09/29/56320.html) | 21.0 | 20.0 | 42.0 |
+| [ネットワークも認証サーバも要らない「多要素認証」、Windows端末でどう実現？](https://atmarkit.itmedia.co.jp/ait/articles/2609/29/news030.html) | 21.0 | 20.0 | 42.0 |
+| [AIの闇落ちを防ぐ 弱点をあぶり出せ](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/091700571/091700005/) | 21.0 | 20.0 | 42.0 |
+| [脆弱性の嵐が始まる 担当者が燃え尽きる](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/091700571/091700003/) | 21.0 | 20.0 | 42.0 |
+| [★取得はゴールではなく入口 IPAお助け隊“新類型”で自社の穴を先に見つけよう](https://www.itmedia.co.jp/enterprise/articles/2609/29/news020.html) | 21.0 | 20.0 | 42.0 |
+| [新たに観測されるドメインの約20％は「中古」--攻撃者が引き継ぐ「信頼」の中身](https://japan.zdnet.com/article/35252907/) | 21.0 | 20.0 | 42.0 |
+| [どうするSCS評価制度](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041800013/091400107/) | 21.0 | 20.0 | 42.0 |
+| [タイムズカー情報漏えい 識者警鐘](https://news.yahoo.co.jp/pickup/6596915?source=rss) | 20.0 | 20.0 | 42.0 |
+| [不正アクセスにより情報漏えい発生の「Gyazo」、サービスを再開 画像はすべて本人のみ閲覧可能な状態に](https://internet.watch.impress.co.jp/docs/news/2143888.html) | 20.0 | 20.0 | 42.0 |
+| [富士通、ダークウェブ監視・ASM、脅威ハンティングを組み合わせた法人向けセキュリティサービスを提供](https://internet.watch.impress.co.jp/docs/news/2143675.html) | 20.0 | 20.0 | 42.0 |
+| [バッファロー「WSR-300HP」「WEX-G300」に複数の深刻な脆弱性、ファームウェア更新が提供中](https://internet.watch.impress.co.jp/docs/news/2143894.html) | 20.0 | 20.0 | 42.0 |
+| [Times Car、660万件のユーザーアカウントに影響するデータ侵害を確認](https://www.bleepingcomputer.com/news/security/times-car-confirms-data-breach-affecting-66-million-user-accounts/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
