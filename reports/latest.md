@@ -1,20 +1,18 @@
-# 📡 サイレーダー 2026-09-30 11:00 JST
+# 📡 サイレーダー 2026-09-30 17:00 JST
 
-このレポートは、2026-09-30 05:00 JST〜2026-09-30 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-09-30 11:00 JST〜2026-09-30 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 64
-- [音声で扱う想定のトピック](#audio-topics): 4
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 35
+- 観測トピック数: 57
+- [音声で扱う想定のトピック](#audio-topics): 1
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 30
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [CVE-2026-41940: cPanel & WHM authentication bypass exploited in ransomware attacks](#topic-216) | 72.0 | 99.0 | 92.0 | 音声 | AI×Security枠 |
-| 2 | [Apple Zero-Day Vulnerability Weaponized in Targeted Attacks](#topic-34785) | 45.0 | 46.0 | 66.0 | 音声 | 温度感上位枠 |
-| 3 | [Custom ChatGPTs push ClickFix attacks to deploy RAT malware](#topic-35111) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
-| 4 | [Phishing Abuses RMM Tools for Persistent Access](#topic-35101) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [Citrix NetScaler CVE-2026-88772 Exploit Details Show Pre-Auth Path to Shellcode Execution](#topic-34889) | 56.0 | 46.0 | 63.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
+| 2 | [Most open critical and high flaws are over 90 days old](#topic-35146) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -22,222 +20,50 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-216"></a>
+<a id="topic-35146"></a>
 
-### 1. CVE-2026-41940: cPanel & WHM authentication bypass exploited in ransomware attacks
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>C⁠I⁠S⁠O⁠・⁠組⁠織⁠運⁠営</nobr> / <nobr>A⁠I</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 72.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 99.0 |
-| <nobr>確⁠度</nobr> | 92.0 |
-
-#### 概要
-
-cPanel & WHMに関する認証回避の脆弱性「CVE-2026-41940」について、実際の悪用事例やランサムウェア攻撃との関連が報告されています。
-公開PoCや検証コードへの言及もあり、サーバー管理基盤を狙う攻撃として注目されています。
-cPanel & WHMはホスティング環境で広く使われるため、影響を受けると複数のサイトや顧客環境に波及するおそれがあります。
-認証を回避される性質上、放置すると侵害の初動を許しやすく、優先的な確認が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 12 sources。
-- CISA KEV関連。
-- 実悪用・ゼロデイ文脈。
-- 公開PoC・検証コード言及あり。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用済み脆弱性として優先確認が必要。
-- 悪用情報あり。
-- 公開PoCにより再現・悪用可能性が上がる。
-- RCEまたは認証バイパス系。
-- ランサムウェア文脈。
-
-##### 確度
-- 複数ソース確認。
-- 公的機関情報あり。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- cPanel & WHMの利用有無と対象バージョンを確認し、ベンダーの修正情報を適用する。
-- 管理画面や関連アカウントの不審なログイン履歴、設定変更、追加されたユーザーやキーの有無を点検する。
-- ホスティング基盤や関連サーバーで、認証周辺の異常・不審な通信・侵入後の持続化の兆候を監視する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-40473 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-41940 | 関連CVE | 1.00 | 候補あり（URL 40件以上） |
-| 脆弱性 | CVE-2026-42208 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-76460 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | cPanel | 言及あり | 0.80 | — |
-| 製品 | WHM | 言及あり | 0.80 | — |
-| 製品 | cPanel | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-41940](https://nvd.nist.gov/vuln/detail/CVE-2026-41940) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Weekly Report: Acronis Backup plugin for cPanel & WHMに権限昇格の脆弱性](https://www.jpcert.or.jp/wr/2026/wr260930.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Ransomware incidents in Japan in the first half of 2026: Investigation of The Ge](https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Large-Scale GitHub Actions Abuse Powers a Distributed cPanel and WHM Exploitatio](https://socket.dev/blog/github-actions-abuse-powers-cpanel-and-whm-exploitation) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [What’s New in Rapid7 Products and Services: Q2 2026 in Review](https://www.rapid7.com/blog/post/pt-new-products-services-q2-2026-mdr) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Weekly Report: Apache Camelに複数の脆弱性](https://www.jpcert.or.jp/wr/2026/wr260513.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Stealthy hackers exploit cPanel flaw in active backdoor campaign (CVE-2026-41940](https://www.helpnetsecurity.com/2026/05/12/cpanel-vulnerability-exploited-backdoor-cve-2026-41940/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [cPanel CVE-2026-41940 Under Active Exploitation to Deploy Filemanager Backdoor](https://thehackernews.com/2026/05/cpanel-cve-2026-41940-under-active.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: 採用あり（1件）。
-- 技術・開発者系ソース観測: 観測あり。
-
----
-
-<a id="topic-34785"></a>
-
-### 2. Apple Zero-Day Vulnerability Weaponized in Targeted Attacks
+### 1. Most open critical and high flaws are over 90 days old
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>i⁠O⁠S</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>C⁠I⁠S⁠O⁠・⁠組⁠織⁠運⁠営</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 温度上昇中 |
-| <nobr>温⁠度⁠感</nobr> | 45.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
-| <nobr>確⁠度</nobr> | 66.0 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-Appleは、iOSやmacOSの複数の旧バージョン向けにセキュリティ修正を含む更新を公開し、CVE-2026-86950を修正しました。
-報道によると、この脆弱性は標的型攻撃で悪用されていたとされ、Appleも特定の個人を狙った非常に高度な攻撃に使われた可能性を認めています。
-ゼロデイとして悪用が確認・示唆される脆弱性は、一般ユーザーよりも特定組織や高リスク端末への影響が先に広がるおそれがあります。
-対象バージョンが限られていても、更新の優先度は高い事案です。
+Detectifyの分析では、米国・英国・北欧の顧客1,293社のインターネット公開資産に残る重大度の高い脆弱性の多くが、90日以上放置されていることが示されました。
+時点観測では、北欧で97%、英国で92%、米国で86%が90日超の状態だったとされています。
+重大・高リスクの脆弱性が長期未対応のままだと、攻撃対象として露出し続ける時間が長くなります。継続的な脆弱性管理や修正の優先順位付けが、実害の抑制に直結することを示す内容です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 6 sources。
 - 実悪用・ゼロデイ文脈。
-- 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
 
 ##### 確度
-- 複数ソース確認。
-- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- iOS/macOSの該当する旧バージョンを使っている端末は、優先して最新の修正版へ更新する。
-- Appleが言及している通り、標的型攻撃の文脈があるため、端末の不審なファイル受信や外部共有を含む周辺の監視を強める。
-- 資産棚卸しでApple端末のOSバージョンを確認し、更新漏れ端末が残っていないかを点検する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-86950 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | Apple | 言及あり | 0.80 | — |
-| 製品 | Apple macOS | 言及あり | 0.80 | — |
-| 製品 | Apple iOS | 言及あり | 0.80 | — |
-| ベンダー | Meta | 言及あり | 0.80 | — |
+- インターネット公開資産の重大・高リスク脆弱性について、年齢（放置期間）を含めて棚卸しする。
+- 検出後の修正だけでなく、再検出・再発防止まで含めた運用フローを確認する。
+- 修正待ちが長期化している項目を優先度順に見直し、例外扱いの妥当性を定期的に点検する。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-86950](https://nvd.nist.gov/vuln/detail/CVE-2026-86950) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Apple Zero-Day Vulnerability Weaponized in Targeted Attacks](https://www.darkreading.com/cyberattacks-data-breaches/apple-zero-day-vulnerability-weaponized-targeted-attacks) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Apple patches CoreGraphics zero-day already exploited in targeted attacks](https://www.theregister.com/security/2026/09/29/apple-patches-coregraphics-zero-day-already-exploited-in-targeted-attacks/5299721) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Update your iPhone, iPad, or Mac: Flaw could run attackers’ code](https://www.malwarebytes.com/blog/bugs/2026/09/update-your-iphone-ipad-or-mac-flaw-could-run-attackers-code) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Apple squashes zero-day bug exploited in “extremely sophisticated” attack (CVE-2](https://www.helpnetsecurity.com/2026/09/29/apple-core-graphics-zero-day-cve-2026-86950-fixed/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Apple Patches Zero-Day Linked to ‘Extremely Sophisticated Attack’](https://www.securityweek.com/apple-patches-meta-reported-zero-day-linked-to-extremely-sophisticated-attack/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Apple Emergency Patch for iOS 26, macOS26, macOS15 (CVE-2026-86950), (Mon, Sep 2](https://isc.sans.edu/diary/rss/33376) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
-
-<a id="topic-35111"></a>
-
-### 3. Custom ChatGPTs push ClickFix attacks to deploy RAT malware
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-公開情報によると、OpenAIのChatGPTを装ったカスタム版がスポンサー広告経由で案内され、利用者を不審なサイトへ誘導する事例が報告されています。
-誘導先ではClickFix型の手口が使われ、最終的にRATマルウェアの配布につながるとされています。
-生成AI関連の見た目や名称を悪用して、正規サービスに見せかけた誘導が行われる点が注意材料です。検索広告やAIサービス利用時の信頼性確認が、従来以上に重要になっています。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- スポンサー広告経由の遷移先を含め、AI関連サービス名をうたうページの正当性を確認する。
-- 利用者向けに、Web上での不自然な操作要求や手動入力を促す画面への警戒を周知する。
-- エンドポイントやメール、Webプロキシで不審なダウンロードや不審サイトへのアクセスを監視する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Google | 言及あり | 0.80 | — |
-| ベンダー | OpenAI | 言及あり | 0.80 | — |
-| AIモデル/プロジェクト | ChatGPT | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Custom ChatGPTs push ClickFix attacks to deploy RAT malware](https://www.bleepingcomputer.com/news/security/custom-chatgpts-push-clickfix-attacks-to-deploy-rat-malware/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Most open critical and high flaws are over 90 days old](https://www.helpnetsecurity.com/2026/09/30/research-unpatched-vulnerabilities-backlog/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -248,82 +74,80 @@ Appleは、iOSやmacOSの複数の旧バージョン向けにセキュリティ�
 
 ---
 
-<a id="topic-35101"></a>
+<a id="github-only-topics"></a>
 
-### 4. Phishing Abuses RMM Tools for Persistent Access
+## 📌 GitHubのみ掲載の注目トピック
+
+<a id="topic-34889"></a>
+
+### 1. Citrix NetScaler CVE-2026-88772 Exploit Details Show Pre-Auth Path to Shellcode Execution
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>ク⁠ラ⁠ウ⁠ド</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
+| <nobr>区⁠分</nobr> | GitHub |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>国⁠家⁠支⁠援</nobr> |
+| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
+| <nobr>温⁠度⁠感</nobr> | 56.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
+| <nobr>確⁠度</nobr> | 63.0 |
 
 #### 概要
 
-Microsoftは、フィッシング攻撃でRMM（リモート監視・管理）ツールが悪用され、MSP360経由でScreenConnectが展開される事例を観測したとしています。
-これにより、攻撃者が後続活動のための遠隔操作手段を複数確保していた可能性が示されています。
-正規の管理ツールが悪用されると、検知や遮断が難しくなり、侵害後の滞在期間が長引くおそれがあります。
-遠隔管理系ツールの利用実態と、想定外の導入・接続を継続監視する重要性を示す事例です。
+Citrix NetScaler ADC/Gatewayの脆弱性CVE-2026-88772について、公開された技術情報から、事前認証での悪用につながる可能性が示されています。
+複数の報道では、実際にゼロデイとして悪用され、Webシェルやトンネリング系マルウェアの展開、認証情報の窃取、内部ネットワークへの横展開が確認されたとされています。
+境界機器であるNetScalerが影響を受けるため、外部公開資産への到達性が高く、侵入の起点になりやすい点が注目されています。
+すでに悪用観測があるため、未対策環境では早急な確認と対応が重要です。
 
 #### 温度感の理由
 
 ##### 温度感
+- 複数ソースで確認: 4 sources。
+- 実悪用・ゼロデイ文脈。
 - 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
+- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
+- 悪用情報あり。
 
 ##### 確度
+- 複数ソース確認。
+- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- RMMツールや遠隔操作ツールの導入・更新・接続先を棚卸しし、未承認の利用がないか確認する。
-- フィッシング起点の侵入を想定し、メール経由の初期侵入対策と多要素認証、権限管理を強化する。
-- 正規ツールに見える通信でも、異常な認証失敗・新規端末・不審な永続化の兆候を監視する。
+- Citrix NetScaler ADC/Gatewayの該当バージョンと修正状況を確認し、適用可能な更新を優先して反映する。
+- インターネット公開されている管理・VPN系インターフェースを点検し、想定外の改変や不審なファイル・プロセスの有無を確認する。
+- 認証情報の不正利用や横展開の兆候に備え、関連ログの保全と監視強化を行う。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| ベンダー | ConnectWise | 言及あり | 0.80 | — |
-| ベンダー | Cloudflare | 言及あり | 0.80 | — |
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| ベンダー | Amazon Web Services | 言及あり | 0.80 | — |
-| ベンダー | GitLab | 言及あり | 0.80 | — |
-| ベンダー | Google | 言及あり | 0.80 | — |
-| ベンダー | Adobe | 言及あり | 0.80 | — |
-| 製品 | Microsoft Defender | 言及あり | 0.80 | — |
-| 製品 | ConnectWise ScreenConnect | 言及あり | 0.80 | — |
-| 製品 | Adobe Acrobat | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2026-88772 | 関連CVE | 1.00 | 候補あり（URL 2件以上） |
+| ベンダー | Citrix | 言及あり | 0.80 | — |
+| 製品 | Citrix NetScaler ADC | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Phishing Abuses RMM Tools for Persistent Access](https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-88772](https://nvd.nist.gov/vuln/detail/CVE-2026-88772) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Citrix NetScaler CVE-2026-88772 Exploit Details Show Pre-Auth Path to Shellcode ](https://thehackernews.com/2026/09/citrix-netscaler-cve-2026-88772-exploit.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Attackers exploited Citrix NetScaler zero-day for at least three weeks undetecte](https://cyberscoop.com/citrix-netscaler-zero-day-attacks-three-weeks-undetected/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Hackers exploit Citrix NetScaler zero-day to deploy web shells](https://www.bleepingcomputer.com/news/security/hackers-exploit-citrix-netscaler-zero-day-to-deploy-web-shells/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Custom malware used in Citrix 0-day attacks targeting govt, banks, professional ](https://www.theregister.com/security/2026/09/29/custom-malware-used-in-citrix-0-day-attacks-targeting-govt-banks-professional-services/5299867) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
+- 技術・開発者系ソース観測: 観測なし。
 
 ---
-
-<a id="github-only-topics"></a>
-
-## 📌 GitHubのみ掲載の注目トピック
-
-今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -334,41 +158,36 @@ Microsoftは、フィッシング攻撃でRMM（リモート監視・管理）�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [佐賀大学のNASにランサムウェア攻撃、ファイルが暗号化される被害](https://scan.netsecurity.ne.jp/article/2026/09/30/56346.html) | 29.0 | 30.0 | 42.0 |
-| [京王電鉄にランサムウェア攻撃](https://scan.netsecurity.ne.jp/article/2026/09/30/56345.html) | 29.0 | 30.0 | 42.0 |
-| [ランサムウェア被害件数が過去最多の123件に、警察庁が対策情報を紹介](https://scan.netsecurity.ne.jp/article/2026/09/30/56339.html) | 29.0 | 30.0 | 42.0 |
-| [ランサム攻撃者の侵入経路に異変](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041800012/091400342/) | 29.0 | 30.0 | 42.0 |
-| [OpenAI、豪政府サイトへの不正アクセスで謝罪 最先端AI学習の安全指針も公開](https://www.itmedia.co.jp/news/article/2609/30/2000001869/) | 28.0 | 20.0 | 42.0 |
-| [「AIによる人間支配」の危機を検証](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/040900481/092400038/) | 28.0 | 20.0 | 42.0 |
-| [Russian hackers Star Blizzardがウクライナとその先を狙い、標的拡大と戦術変更](https://cyberscoop.com/microsoft-star-blizzard-redflick-phishing-campaigns/) | 28.0 | 20.0 | 42.0 |
-| [OpenAI、常時稼働型エージェント「Dots」を発表--慎重にすべき理由](https://japan.zdnet.com/article/35253086/) | 26.0 | 20.0 | 42.0 |
-| [AI企業トップらと昼食会のトランプ米大統領、政府内で「AI」を「SI」と呼び替える大統領令に署名](https://www.itmedia.co.jp/news/article/2609/30/2000001871/) | 26.0 | 20.0 | 42.0 |
-| [AI コーディングやローコード開発の落とし穴を解説 ～ GMOイエラエ、10 / 6 に Web アプリ脆弱性診断のオンラインセミナー開催](https://scan.netsecurity.ne.jp/article/2026/09/30/56347.html) | 26.0 | 20.0 | 42.0 |
-| [GMOイエラエ、AI 活用で最短 3 営業日納品の「クイック診断」など Webアプリ脆弱性診断 3 プランを提供開始](https://scan.netsecurity.ne.jp/article/2026/09/30/56336.html) | 26.0 | 20.0 | 42.0 |
-| [AIで購入商品を提案 成約率を1.5倍に](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/092400572/092400002/) | 26.0 | 20.0 | 42.0 |
-| [シャドーAIへの機密流出をブロック Microsoftがセキュリティ製品群をアップデート](https://www.itmedia.co.jp/enterprise/articles/2609/29/news035.html) | 26.0 | 20.0 | 42.0 |
-| [Google、日本オフィスの設立25周年を記念し、特設サイトとブランドムービーを公開 AI活用のアイデアを表彰する「Google AI Challenge」も開催](https://internet.watch.impress.co.jp/docs/news/2144208.html) | 25.0 | 20.0 | 42.0 |
-| [AIの悪夢に新たな懸念：自己複製するプロンプトインジェクション](https://www.theregister.com/security/2026/09/29/add-one-more-ai-worry-to-the-nightmare-scenario-self-replicating-prompt-injections/5299922) | 25.0 | 20.0 | 42.0 |
-| [OpenAI CEOが開発者会議で新しいAIエージェントを発表し、セキュリティ懸念には言及せず](https://www.securityweek.com/openai-ceo-announces-new-ai-agent-and-avoids-mention-of-security-concerns-at-developer-conference/) | 25.0 | 20.0 | 42.0 |
-| [ブラウザ「Chrome」にセキュリティ更新 - 脆弱性32件を修正](https://www.security-next.com/190829) | 22.0 | 20.0 | 42.0 |
-| [AI利用料金の急増を招く「LLMジャッキング」をセキュリティ専門家が警告](https://japan.zdnet.com/article/35253085/) | 21.0 | 20.0 | 42.0 |
-| [恐喝集団 ShinyHunters かく語りき「我々の収益は合法的な企業をも大きく上回る」](https://scan.netsecurity.ne.jp/article/2026/09/30/56348.html) | 21.0 | 20.0 | 42.0 |
-| [日本郵便 調査請求 Web受付サービスに不正アクセス、一時的に受付を停止](https://scan.netsecurity.ne.jp/article/2026/09/30/56344.html) | 21.0 | 20.0 | 42.0 |
-| [ID・パスワードが窃取が原因 ～「HALMEK up」に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/09/30/56343.html) | 21.0 | 20.0 | 42.0 |
-| [長野県大町市デジタルアーカイブサイトに不正アクセス、オンラインカジノサイト誘導ページに改ざん](https://scan.netsecurity.ne.jp/article/2026/09/30/56342.html) | 21.0 | 20.0 | 42.0 |
-| [保育上の不適切な対応も確認 ～ 鎌倉市児童発達支援センターあおぞら園で個人情報を誤送付](https://scan.netsecurity.ne.jp/article/2026/09/30/56341.html) | 21.0 | 20.0 | 42.0 |
-| [山口東京理科大チームが優勝 ～ 県警ら主催「サイバー攻撃共同対処訓練」で約 90 名が Micro Hardening 演習](https://scan.netsecurity.ne.jp/article/2026/09/30/56340.html) | 21.0 | 20.0 | 42.0 |
-| [11 / 2 までエントリー受付「セキュリティ・キャンプ2026オンライン」初級・中級コースをオンライン開催](https://scan.netsecurity.ne.jp/article/2026/09/30/56338.html) | 21.0 | 20.0 | 42.0 |
-| [HENNGE One、コンテンツプラットフォーム「riclink」と SSO 連携](https://scan.netsecurity.ne.jp/article/2026/09/30/56337.html) | 21.0 | 20.0 | 42.0 |
-| [タイムズカーで不正アクセス 「退会済み」含む約660万件の情報が流出](https://atmarkit.itmedia.co.jp/ait/articles/2609/30/news038.html) | 21.0 | 20.0 | 42.0 |
-| [1万件超のドメインを保有する攻撃者--悪用される「中古」ドメインの実態](https://japan.zdnet.com/article/35252932/) | 21.0 | 20.0 | 42.0 |
-| [国産セキュリティー製品の勝ち筋](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/091400256/091400001/) | 21.0 | 20.0 | 42.0 |
-| [企業のセキュリティー対策動向 外部委託と内製で方針二分](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600010/092400234/) | 21.0 | 20.0 | 42.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年09月29日）](https://jvn.jp/vu/JVNVU93754811/) | 20.0 | 20.0 | 42.0 |
-| [Signal、iOSとデスクトップアプリに暗号化されたローカルバックアップ機能を追加](https://www.bleepingcomputer.com/news/security/signal-adds-encypted-local-backup-support-to-ios-desktop-apps/) | 20.0 | 20.0 | 42.0 |
-| [Unsloth Studioの欠陥により、通常のモデル検査がコード実行に変わる](https://www.darkreading.com/application-security/unsloth-studio-flaw-model-inspection-code-execution) | 20.0 | 20.0 | 42.0 |
-| [米空軍関係者、200万ドル超のサイバー窃盗で6年以上の実刑判決](https://therecord.media/us-air-force-members-given-6-year-sentence-cyber) | 20.0 | 20.0 | 42.0 |
-| [FBIがShinyHuntersメンバーに最近の逮捕を受け出頭を呼びかけ](https://www.bleepingcomputer.com/news/security/fbi-tells-shinyhunters-members-to-turn-themselves-in-after-recent-arrest/) | 20.0 | 20.0 | 42.0 |
+| [南アフリカ、航空管制を狙ったサイバー攻撃後に支援を要請](https://www.darkreading.com/cyberattacks-data-breaches/south-africa-help-cyberattack-air-traffic-control) | 28.0 | 30.0 | 42.0 |
+| [WindowsでWSLコンテナが一般提供開始](https://www.helpnetsecurity.com/2026/09/30/microsoft-wsl-containers-available/) | 28.0 | 20.0 | 42.0 |
+| [AIエージェントが「画像を貼れない」問題を勝手に解決、343組織の機密スクショ1万3000枚超をGitHubの公開リポジトリに保存していたことが判明](https://gigazine.net/news/20260930-pixelleak/) | 27.0 | 20.0 | 42.0 |
+| [トランプ大統領とGoogle・Anthropic・Meta・OpenAI・SpaceXAI・NVIDIAがAIの安全管理を目指す「ホワイトハウス・超知能協定」に署名](https://gigazine.net/news/20260930-white-house-super-intelligence/) | 27.0 | 20.0 | 42.0 |
+| [トランプ大統領が連邦政府内で「AI(人工知能)」表記の代わりに「SI(超知能)」表記を義務化する大統領令に署名](https://gigazine.net/news/20260930-trump-says-ai-renamed-super-intelligence/) | 27.0 | 20.0 | 42.0 |
+| [OpenAIが常時稼働型のAIアシスタント「Dots」を公開、GPT‑6 Astra を搭載して専用のクラウドコンピューターで稼働](https://gigazine.net/news/20260930-openai-dots/) | 27.0 | 20.0 | 42.0 |
+| [OpenAIがゲームボーイカラーっぽいゲーム機「Chromatic」とコラボしてCodexでレトロゲームを作成可能に](https://gigazine.net/news/20260930-chromatic-codex/) | 27.0 | 20.0 | 42.0 |
+| [「声」もパブリシティー権の保護対象に 津田健次郎さんのAI声模倣訴訟で東京地裁が判断──削除請求自体は棄却](https://www.itmedia.co.jp/news/article/2609/30/2000001892/) | 26.0 | 20.0 | 42.0 |
+| [たった4人で10カ国超を担当、飲食チェーンの海外進出を支える生成AI活用](https://www.itmedia.co.jp/news/article/2609/30/2000001789/) | 26.0 | 20.0 | 42.0 |
+| [マネーフォワード、「Notion」と「Notion AI」を導入--AIネイティブな組織体制の構築と働き⽅を推進](https://japan.zdnet.com/article/35253101/) | 26.0 | 20.0 | 42.0 |
+| [NTTドコモビジネス、「Oracle Autonomous AI Database」を導入--ライセンス費を43％削減](https://japan.zdnet.com/article/35253106/) | 26.0 | 20.0 | 42.0 |
+| [生成AI動画巡り 声優の請求棄却](https://news.yahoo.co.jp/pickup/6597056?source=rss) | 25.0 | 20.0 | 42.0 |
+| [新しい中小企業向けサイバーセキュリティサービスでAIが支援しコンサルタントが判断する仕組み](https://www.helpnetsecurity.com/2026/09/30/bh-haven-sme-cybersecurity-service/) | 25.0 | 20.0 | 42.0 |
+| [税務署やe-Tax装うフィッシング、控除や還付など口実 - アプリへ不正誘導](https://www.security-next.com/190860) | 22.0 | 20.0 | 42.0 |
+| [GitLab、旧ブランチ向けにセキュリティ更新 - クリティカル脆弱性を修正](https://www.security-next.com/190854) | 22.0 | 20.0 | 42.0 |
+| [Mozilla、ブラウザ最新版「Firefox 157」を公開 - 脆弱性76件を解消](https://www.security-next.com/190850) | 22.0 | 20.0 | 42.0 |
+| [「中国のGLM-5.3はClaude Mythos Preview級のサイバー攻撃能力を持つ一方で安全対策が不十分」とAnthropicが警告](https://gigazine.net/news/20260930-anthropic-warned-about-glm-5-3-risk/) | 22.0 | 20.0 | 42.0 |
+| [GPT-6 Astraを8倍速で動かすUltrafastモードが登場＆トークン上限を引き上げた月額8万4000円のPro 500プランも登場](https://gigazine.net/news/20260930-gpt-6-astra-ultrafast/) | 22.0 | 20.0 | 42.0 |
+| [アイデンティティ管理製品「SailPoint IdentityIQ」に深刻な脆弱性](https://www.security-next.com/190833) | 22.0 | 20.0 | 42.0 |
+| [トークン消費85％減 Googleが脆弱性を自動修正するオープンソースハーネス「Mantis」公開](https://atmarkit.itmedia.co.jp/ait/articles/2609/30/news056.html) | 21.0 | 20.0 | 42.0 |
+| [クオカードのLINEキャンペーンシステムに不正アクセス 当選情報など流出の恐れ](https://www.itmedia.co.jp/news/article/2609/30/2000001878/) | 21.0 | 20.0 | 42.0 |
+| [「郵便局アプリ」に不正アクセス 氏名や送り先住所など漏えい 19人分・69件](https://www.itmedia.co.jp/news/article/2609/30/2000001881/) | 21.0 | 20.0 | 42.0 |
+| [Spectreバグが再来、今度はJITエンジンを悩ませる](https://www.theregister.com/security/2026/09/30/spectre-bug-is-back-this-time-to-haunt-jit-engines/5299937) | 20.0 | 28.0 | 50.0 |
+| [OpenSSLとwolfSSLで修正された高深刻度の脆弱性](https://www.securityweek.com/high-severity-vulnerabilities-patched-in-openssl-wolfssl/) | 20.0 | 20.0 | 42.0 |
+| [Security toolsがClaude Enterpriseのチャットとアップロードを機密データ向けにスキャン可能に](https://www.helpnetsecurity.com/2026/09/30/claude-compliance-api-integrations/) | 20.0 | 20.0 | 42.0 |
+| [OWASP Noir：オープンソースの静的解析ツール](https://www.helpnetsecurity.com/2026/09/30/owasp-noir-open-source-static-analysis-tool/) | 20.0 | 20.0 | 42.0 |
+| [EU Cyber Resilience ActにおけるコンテナとKubernetesの要件](https://www.helpnetsecurity.com/2026/09/30/rapidfort-cra-container-compliance/) | 20.0 | 20.0 | 42.0 |
+| [多くの組織は新たなセキュリティ対策の展開に6カ月以上を要する](https://www.helpnetsecurity.com/2026/09/30/relentless-defense-cisco-cybersecurity-survey/) | 20.0 | 20.0 | 42.0 |
+| [富士フイルムビジネスイノベーション製およびシャープ製複合機（MFP）におけるパストラバーサルの脆弱性](https://jvn.jp/vu/JVNVU90160989/) | 20.0 | 20.0 | 42.0 |
+| [Cloudflareの耐量子ウェブサイト証明書は2027年初頭に提供予定](https://www.helpnetsecurity.com/2026/09/30/cloudflare-certificate-authority-2027/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
