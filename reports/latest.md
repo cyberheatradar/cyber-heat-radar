@@ -1,18 +1,15 @@
-# 📡 サイレーダー 2026-10-05 11:00 JST
+# 📡 サイレーダー 2026-10-05 17:00 JST
 
-このレポートは、2026-10-05 05:00 JST〜2026-10-05 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-05 11:00 JST〜2026-10-05 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 52
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 43
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 26
+- [低温だが記録しておくトピック](#low-record-topics): 18
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [Citrix patches NetScaler SAML zero-day exploited in attacks](#topic-35828) | 41.0 | 64.0 | 51.0 | 音声 | 温度感上位枠 |
-| 2 | [TTY Logs and the Data it Captures, (Sun, Oct 4th)](#topic-35793) | 30.0 | 20.0 | 42.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -20,125 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-35828"></a>
-
-### 1. Citrix patches NetScaler SAML zero-day exploited in attacks
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 41.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 51.0 |
-
-#### 概要
-
-Citrixは、NetScalerに存在する新たな脆弱性CVE-2026-88779について緊急アップデートを公開しました。
-公開情報では、この問題はゼロデイ攻撃で悪用されたとされており、現時点では主にサービス妨害の脆弱性として扱われていますが、リモートコード実行への関与可能性も調査対象になっています。
-NetScalerは境界防御や認証基盤に使われることが多く、影響範囲が広がりやすい点が注目されています。
-実際の悪用観測があるため、単なる理論上の脆弱性よりも優先度の高い対応が求められます。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 該当するNetScaler環境がある場合は、Citrixの修正適用状況を至急確認する。
-- インターネット公開中の機器や認証連携の構成を重点的に点検し、異常な挙動やログの兆候を監視する。
-- CVE-2026-88779に関する追加情報や影響範囲の更新を継続的に追い、必要に応じて対応優先度を見直す。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-88779 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | Citrix | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-88779](https://nvd.nist.gov/vuln/detail/CVE-2026-88779) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Citrix patches NetScaler SAML zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-35793"></a>
-
-### 2. TTY Logs and the Data it Captures, (Sun, Oct 4th)
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>防⁠御⁠・⁠運⁠用</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 30.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-SANS Internet Storm Centerの記事では、DShieldセンサーにログインした攻撃者やボットが実行したコマンドのTTYログを収集し、日次でSIEMに送って相関分析する取り組みが紹介されています。
-TTYログがどのような操作履歴を含みうるかを観察する実験的な内容で、侵入後の行動把握に役立つ可能性があります。
-攻撃者がログイン後に何を行うかの可視化は、侵入の把握や検知ルールの改善に直結します。端末操作の痕跡がどの程度残るかを理解することは、監視・調査の実務で重要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-
-##### 実務影響
-- 影響範囲、標的、TTP、検知観点を確認する価値があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- TTYや端末監査ログが有効に取得・保全されているか確認する。
-- ログイン後の操作を他のテレメトリと相関できるよう、SIEM側の整理方法を見直す。
-- 不審なログイン後アクティビティの検知・追跡に使えるログ項目を把握しておく。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [TTY Logs and the Data it Captures, (Sun, Oct 4th)](https://isc.sans.edu/diary/rss/33396) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -155,32 +34,24 @@ TTYログがどのような操作履歴を含みうるかを観察する実験�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [「GitLab AI Gateway」にサンドボックス回避の脆弱性 - コマンド実行のおそれ](https://www.security-next.com/191010) | 27.0 | 20.0 | 42.0 |
-| [見えないAIはガバナンスできない](https://japan.zdnet.com/article/35252975/) | 26.0 | 20.0 | 42.0 |
-| [バイトダンス、AIエージェントスマホで中国のネット力学を壊しにいく](https://japan.zdnet.com/article/35253185/) | 26.0 | 20.0 | 42.0 |
-| [データセンターは「建てる」から「置く」に--AI時代で注目のコンテナー型](https://japan.zdnet.com/article/35253113/) | 26.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年9月27日〜2026年10月3日）](https://www.security-next.com/191003) | 22.0 | 20.0 | 42.0 |
-| [「Chrome」がアップデート - 脆弱性11件を解消](https://www.security-next.com/191005) | 22.0 | 20.0 | 42.0 |
-| [講談社子会社、従業員のメールに不正アクセス 不審メール50件送信](https://www.itmedia.co.jp/news/article/2610/05/2000001992/) | 21.0 | 20.0 | 42.0 |
-| [MicrosoftのXアカウント「@Microsoft」が不正アクセス、暗号資産詐欺に悪用される](https://news.mynavi.jp/techplus/article/20261005-5077021/) | 21.0 | 20.0 | 42.0 |
-| [日経社員アカウントからなりすましメール9000件 「Microsoft 365」に不正ログインか](https://www.itmedia.co.jp/news/article/2610/05/2000001991/) | 21.0 | 20.0 | 42.0 |
-| [「気づけない脅威」にどう向き合うか ～ KISIA 後援、韓国 3 社が挑む合同セッションの見どころ](https://scan.netsecurity.ne.jp/article/2026/10/05/56387.html) | 21.0 | 20.0 | 42.0 |
-| [「ドズル社ストア」で不正なページに誘導、カード情報を入力した場合はカード会社への連絡を呼びかけ](https://scan.netsecurity.ne.jp/article/2026/10/05/56386.html) | 21.0 | 20.0 | 42.0 |
-| [池上通信機にサイバー攻撃の可能性、外部から情報提供あり調査](https://scan.netsecurity.ne.jp/article/2026/10/05/56385.html) | 21.0 | 20.0 | 42.0 |
-| [池上通信機にサイバー攻撃、サーバ内の一部ファイルが暗号化](https://scan.netsecurity.ne.jp/article/2026/10/05/56384.html) | 21.0 | 20.0 | 42.0 |
-| [あいの風とやま鉄道 観光列車の座席管理システムに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/10/05/56383.html) | 21.0 | 20.0 | 42.0 |
-| [LEAN BODY が利用する分析ツール「Metabase」の脆弱性を悪用した不正アクセス](https://scan.netsecurity.ne.jp/article/2026/10/05/56382.html) | 21.0 | 20.0 | 42.0 |
-| [東産業 公式サイトにwp2shell を悪用した不正アクセス](https://scan.netsecurity.ne.jp/article/2026/10/05/56381.html) | 21.0 | 20.0 | 42.0 |
-| [日本大学の計 5 名の教員アカウントに不正アクセス、スパムメール送信の踏み台に](https://scan.netsecurity.ne.jp/article/2026/10/05/56380.html) | 21.0 | 20.0 | 42.0 |
-| [ECサイト「ビールの縁側」に不正アクセス、9 名のカード情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/10/05/56379.html) | 21.0 | 20.0 | 42.0 |
-| [クラウド請求書作成ソフト「Misoca」のメール送信機能を悪用した不審メールに注意を呼びかけ](https://scan.netsecurity.ne.jp/article/2026/10/05/56378.html) | 21.0 | 20.0 | 42.0 |
-| [政府が「攻撃元サーバ」に踏み込む 10月始動「能動的サイバー防御」で何が変わる？](https://atmarkit.itmedia.co.jp/ait/articles/2610/03/news001.html) | 21.0 | 20.0 | 42.0 |
-| [トランプ大統領、「Super Intelligence Force」創設を発表 国家情報長官やFTC委員長らが主導](https://www.itmedia.co.jp/news/article/2610/05/2000001990/) | 21.0 | 20.0 | 42.0 |
-| [「Linux」でとても便利なキーリングを使うべき5つの理由](https://japan.zdnet.com/article/35253055/) | 21.0 | 20.0 | 42.0 |
-| [日経新聞社、Microsoft 365アカウントの情報漏えいと、Google Workspaceからの情報漏えい疑いを発表](https://internet.watch.impress.co.jp/docs/news/2145512.html) | 20.0 | 20.0 | 42.0 |
-| [NTTデータ、SCS評価制度★3・★4取得を支援する「サイバーセキュリティお助け隊サービス（新類型）実証事業」の詳細を説明 地域共創型サイバーセキュリティ支援モデルの実証、最大80社を見込む](https://internet.watch.impress.co.jp/docs/news/2145075.html) | 20.0 | 20.0 | 42.0 |
-| [DV被害者らの情報漏洩 5年で68件](https://news.yahoo.co.jp/pickup/6597568?source=rss) | 20.0 | 20.0 | 42.0 |
-| [個人情報提供 事前報告を義務化へ](https://news.yahoo.co.jp/pickup/6597566?source=rss) | 20.0 | 20.0 | 42.0 |
+| [日本交通、不正アクセスで停止していた「電話でタクシー配車」再開へ 約3カ月ぶり](https://www.itmedia.co.jp/news/article/2610/05/2000001995/) | 29.0 | 20.0 | 42.0 |
+| [AI「Ataraxos」が軍人将棋型ボドゲ「ストラテゴ」で世界最強クラスのプレイヤーに15勝1敗4分で大勝](https://gigazine.net/news/20261005-stratego-ai-ataraxos/) | 27.0 | 20.0 | 42.0 |
+| [MetaのAI「Muse」は家族・友人・同僚ごとの「人物ページ」を作成して人間関係まで記録する設計、セキュリティ研究者がシステムプロンプトを抽出](https://gigazine.net/news/20261005-meta-muse-create-profile/) | 27.0 | 20.0 | 42.0 |
+| [「SpaceXAI」→「SpaceXSI」に改名へ マスク氏、トランプ大統領の“AI呼称廃止”に追随](https://www.itmedia.co.jp/news/article/2610/05/2000002000/) | 26.0 | 20.0 | 42.0 |
+| [AIエージェントの行動判断を学ぶデータセット公開、261件のシナリオを収録](https://news.mynavi.jp/techplus/article/20261005-5077753/) | 26.0 | 20.0 | 42.0 |
+| [AI生成の粗雑な報告投稿が原因でGoogleがオープンソースのバグバウンティを停止](https://www.helpnetsecurity.com/2026/10/05/google-ai-generated-vulnerability-reports-pause/) | 25.0 | 20.0 | 42.0 |
+| [「cPanel & WHM」に3件の脆弱性 - いずれも「クリティカル」](https://www.security-next.com/191015) | 22.0 | 20.0 | 42.0 |
+| [AIによるバグ報告が爆増したためGoogleがバグ報奨金プログラムを一時停止](https://gigazine.net/news/20261005-google-froze-open-source-bug-bounty-program/) | 22.0 | 20.0 | 42.0 |
+| [NEC、欧州にセキュリティ監視センターを設置--24時間の監視体制](https://japan.zdnet.com/article/35253248/) | 21.0 | 20.0 | 42.0 |
+| [ローソンのメールサーバが不正利用 約70万件の不審メール、人ごとではない「踏み台化」の怖さ](https://atmarkit.itmedia.co.jp/ait/articles/2610/05/news020.html) | 21.0 | 20.0 | 42.0 |
+| [大和証券、22万件情報漏えいか 顧客約11万人の口座番号も](https://www.itmedia.co.jp/news/article/2610/05/2000002005/) | 21.0 | 20.0 | 42.0 |
+| [パチンコ店の入場抽選アプリ「777CON-PASS」に不正アクセス 行動エリアやプロフ写真など流出か](https://www.itmedia.co.jp/news/article/2610/05/2000002003/) | 21.0 | 20.0 | 42.0 |
+| [量子コンピュータと企業セキュリティ 第1回 なぜ今、PQC（耐量子計算機暗号）対応に着手すべきなのか？](https://news.mynavi.jp/techplus/article/pqc2026-1/) | 21.0 | 20.0 | 42.0 |
+| [ShinyHuntersのリーダーとされる人物がヨルダンで逮捕された件](https://www.securityweek.com/alleged-shinyhunters-leader-arrested-in-jordan/) | 20.0 | 20.0 | 42.0 |
+| [GROWIにおけるアクセス制限不備の脆弱性](https://jvn.jp/jp/JVN24352487/) | 20.0 | 20.0 | 42.0 |
+| [病院のCISOがヘルスケアフィンテックベンダーに पूछくべき3つの質問](https://www.helpnetsecurity.com/2026/10/05/drew-mccombs-cylerity-healthcare-fintech-security/) | 20.0 | 20.0 | 42.0 |
+| [Keyorix：SaaSを使えないチーム向けのオープンソース秘密管理ツール](https://www.helpnetsecurity.com/2026/10/05/keyorix-open-source-on-premise-secrets-management/) | 20.0 | 20.0 | 42.0 |
+| [RMMの悪用が攻撃者に通常業務に見せかけた侵入手段を与える理由](https://www.helpnetsecurity.com/2026/10/05/remote-monitoring-and-management-rmm-abuse/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
