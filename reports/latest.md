@@ -1,18 +1,17 @@
-# 📡 サイレーダー 2026-10-06 11:00 JST
+# 📡 サイレーダー 2026-10-06 17:00 JST
 
-このレポートは、2026-10-06 05:00 JST〜2026-10-06 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-06 11:00 JST〜2026-10-06 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 51
+- 観測トピック数: 48
 - [音声で扱う想定のトピック](#audio-topics): 1
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 24
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 23
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Citrix NetScaler security snafus get even worse amid more 0-day reports](#topic-35828) | 47.0 | 64.0 | 66.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
-| 2 | [「FortiMail」のアップデートが提供開始 - ゼロデイ脆弱性を修正](#topic-35559) | 40.0 | 64.0 | 66.0 | 音声 | 温度感上位枠 |
+| 1 | [Atlassian warns of critical file access flaw in its datacenter products](#topic-36029) | 37.0 | 46.0 | 58.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -20,39 +19,36 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-35559"></a>
+<a id="topic-36029"></a>
 
-### 1. 「FortiMail」のアップデートが提供開始 - ゼロデイ脆弱性を修正
+### 1. Atlassian warns of critical file access flaw in its datacenter products
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>K⁠E⁠V</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 40.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 66.0 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
+| <nobr>確⁠度</nobr> | 58.0 |
 
 #### 概要
 
-Fortinetのメールセキュリティ製品「FortiMail」に関する脆弱性CVE-2026-104286について、アップデートの提供が始まったと伝えられています。
-複数の報道で、ゼロデイとして悪用が観測されている旨が示されており、早急な対応が必要な状況です。
-メールゲートウェイは組織の対外連絡の入口であり、影響を受けると広範囲に波及する可能性があります。
-ゼロデイ悪用が示唆されているため、公開後の通常対応では間に合わないケースが懸念されます。
+Atlassianは、複数のData Center製品に影響する重大な脆弱性「CVE-2026-21589」を公表しました。
+条件を満たすと、認証されていない攻撃者が各製品のWebアプリケーション配下にある特定ファイルを読み取れる可能性があるとされています。
+JiraやConfluenceを含む自己ホスト型の業務基盤に影響しうるため、機密情報の漏えいにつながるおそれがあります。
+重要度が高く、対象製品を運用している組織では早急な確認が必要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 6 sources。
-- 実悪用・ゼロデイ文脈。
+- 複数ソースで確認: 3 sources。
 - 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
-- 悪用情報あり。
 - RCEまたは認証バイパス系。
 
 ##### 確度
@@ -62,35 +58,33 @@ Fortinetのメールセキュリティ製品「FortiMail」に関する脆弱性
 
 #### 担当者向け確認ポイント
 
-- FortiMailの該当バージョンを利用しているか確認し、提供済みの修正を速やかに適用する。
-- 修正までの間は、ベンダーが案内する回避策や緩和策を優先して適用する。
-- FortiMail周辺のログを確認し、不審な挙動や想定外のファイル生成・設定変更がないか点検する。
+- 影響製品とバージョンを確認し、ベンダーの修正情報や回避策の適用可否をすぐに確認する。
+- Webアプリケーション配下に機密ファイルを置いていないか棚卸しし、不要な露出がないか見直す。
+- アクセスログを確認し、不審なファイル参照の兆候や例外的なリクエストがないか監視を強める。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-104286 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | Fortinet | 言及あり | 0.80 | — |
-| 製品 | Fortinet FortiGate | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2026-21589 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Atlassian | 言及あり | 0.80 | — |
+| 製品 | Atlassian Jira | 言及あり | 0.80 | — |
+| 製品 | Atlassian Confluence | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-104286](https://nvd.nist.gov/vuln/detail/CVE-2026-104286) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [「FortiMail」のアップデートが提供開始 - ゼロデイ脆弱性を修正](https://www.security-next.com/191061) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Fortinet sounds the alarm over actively exploited FortiMail zero-day](https://www.theregister.com/security/2026/10/02/fortinet-sounds-the-alarm-over-actively-exploited-fortimail-zero-day/5300803) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Critical FortiMail zero-day exploited in the wild (CVE-2026-104286)](https://www.helpnetsecurity.com/2026/10/02/fortinet-fortimail-vulnerability-cve-2026-104286/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Exploited Fortinet FortiMail Zero-Day Calls for Urgent Action](https://www.securityweek.com/exploited-fortinet-fortimail-zero-day-calls-for-urgent-action/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Critical FortiMail Zero-Day Flaw Exploited in Attacks Allows Unauthenticated Arb](https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Fortinet warns of critical FortiMail flaw exploited in zero-day attacks](https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-21589](https://nvd.nist.gov/vuln/detail/CVE-2026-21589) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Critical Atlassian Flaw Lets Unauthenticated Attackers Read Known Files Across 8](https://thehackernews.com/2026/10/critical-atlassian-flaw-lets.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [複数のAtlassian製品が影響を受ける「クリティカル」脆弱性](https://www.security-next.com/191078) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Atlassian warns of critical file access flaw in its datacenter products](https://www.theregister.com/security/2026/10/06/atlassian-warns-of-critical-file-access-flaw-in-its-datacenter-products/5301284) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
-- 国内開発者記事: 採用あり（1件）。
+- 国内開発者記事: なし。
 - 技術・開発者系ソース観測: 観測あり。
 
 ---
@@ -99,77 +93,7 @@ Fortinetのメールセキュリティ製品「FortiMail」に関する脆弱性
 
 ## 📌 GitHubのみ掲載の注目トピック
 
-<a id="topic-35828"></a>
-
-### 1. Citrix NetScaler security snafus get even worse amid more 0-day reports
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | GitHub |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>D⁠D⁠o⁠S</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
-| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
-| <nobr>温⁠度⁠感</nobr> | 47.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 66.0 |
-
-#### 概要
-
-CitrixのNetScaler製品で、新たにCVE-2026-88779として追跡される脆弱性が公表され、緊急更新が提供されています。
-公開情報では、この問題はサービス拒否につながるメモリオーバーフローとされ、ゼロデイ悪用が確認されたと報じられています。
-NetScalerは境界防御やリモートアクセスの要所に使われることが多く、可用性への影響が広がる可能性があります。
-さらに、関係機関の既知悪用リストにも含まれており、早急な対応が必要な事案として注目されています。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 5 sources。
-- 実悪用・ゼロデイ文脈。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 複数ソース確認。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 該当するNetScaler ADC/Gatewayのバージョンを確認し、提供済みの修正を速やかに適用する。
-- インターネット公開されている管理・接続系のNetScalerについて、異常な再起動やサービス停止の兆候を監視する。
-- 同時期に報告された他のNetScaler脆弱性への対応状況も含め、構成資産の棚卸しと優先順位付けを見直す。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-88771 | 関連CVE | 1.00 | 候補あり（URL 3件以上） |
-| 脆弱性 | CVE-2026-88779 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | Citrix | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-88779](https://nvd.nist.gov/vuln/detail/CVE-2026-88779) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Citrix discloses third actively exploited NetScaler zero-day in less than a week](https://cyberscoop.com/citrix-netscaler-third-exploited-zero-day-vulnerability/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Citrix NetScaler security snafus get even worse amid more 0-day reports](https://www.theregister.com/security/2026/10/05/citrix-netscaler-security-snafus-get-even-worse-amid-more-0-day-reports/5301232) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CISA flags new exploited NetScaler flaw as attackers crash appliances (CVE-2026-](https://www.helpnetsecurity.com/2026/10/05/cisa-flags-new-exploited-netscaler-flaw-as-attackers-crash-appliances-cve-2026-88779/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Exploitation of Citrix NetScaler Zero-Day Hits Appliances Patched Days Earlier](https://www.securityweek.com/exploitation-of-citrix-netscaler-zero-day-hits-appliances-patched-days-earlier/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Citrix patches NetScaler SAML zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -180,30 +104,29 @@ NetScalerは境界防御やリモートアクセスの要所に使われるこ�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [「なぜ、Mythos を使えないのか？」エーアイセキュリティラボが AI 時代の脆弱性診断をテーマに登壇 ～ 情報セキュリティEXPO 秋](https://scan.netsecurity.ne.jp/article/2026/10/06/56395.html) | 26.0 | 20.0 | 42.0 |
-| [「IBM Bob」開発責任者が語るエンタープライズAIの最適解](https://japan.zdnet.com/article/35252643/) | 26.0 | 20.0 | 42.0 |
-| [OpenAI、EUでChatGPTとCodexのテキストに不可視ウォーターマークを追加へ](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-adding-invisible-watermarks-to-chatgpt-and-codex-text-in-the-eu/) | 25.0 | 20.0 | 42.0 |
-| [Wikimedia Foundation、OpenAIエージェントによるページ編集とnotesツール侵害の試み](https://therecord.media/wikimedia-foundation-openai-agents-report) | 25.0 | 20.0 | 42.0 |
-| [新卒就活「OfferBox」、学生の氏名などを利用企業が開発者ツール経由で閲覧可能に 最大31万人](https://www.itmedia.co.jp/news/article/2610/06/2000002026/) | 21.0 | 20.0 | 42.0 |
-| [不正アクセスなぜ急増 原因はAIか、それとも…… 専門家の見解は](https://www.itmedia.co.jp/news/article/2610/06/2000002013/) | 21.0 | 20.0 | 42.0 |
-| [【一覧】焼肉きんぐ、第一生命、佐川急便……9月末から相次いだ不正アクセスを整理](https://news.mynavi.jp/techplus/article/20261006-5082829/) | 21.0 | 20.0 | 42.0 |
-| [Google Cloudとの統合を進めてAIのセキュリティを拡張](https://ascii.jp/elem/000/004/439/4439851/?rss=) | 21.0 | 20.0 | 42.0 |
-| [GMO「infoQ」に不正アクセス、最大95万件の会員情報漏えい ポイント287万円分が不正交換される](https://www.itmedia.co.jp/news/article/2610/06/2000002021/) | 21.0 | 20.0 | 42.0 |
-| [スタディサプリの「仕様不備」突く不正アクセス ユーザーのメアド3687件を第三者が特定か](https://www.itmedia.co.jp/news/article/2610/06/2000002019/) | 21.0 | 20.0 | 42.0 |
-| [失効クレジットカードを「復活」させる攻撃手法 ～ 非接触決済の通信改ざんで不正決済成功](https://scan.netsecurity.ne.jp/article/2026/10/06/56397.html) | 21.0 | 20.0 | 42.0 |
-| [Okta Blog 第20回 AIアカウント乗っ取りと偽登録の仕組み ～ Oktaが明かすアンダーグラウンドAI経済](https://scan.netsecurity.ne.jp/article/2026/10/06/56396.html) | 21.0 | 20.0 | 42.0 |
-| [「信濃毎日新聞デジタル」に不正アクセス、一時的に一部の履歴データが消去](https://scan.netsecurity.ne.jp/article/2026/10/06/56393.html) | 21.0 | 20.0 | 42.0 |
-| [「PhotoGoods」に不正アクセス、カード情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/10/06/56392.html) | 21.0 | 20.0 | 42.0 |
-| [ムラウチドットコムに不正アクセス、7,716,811件の個人情報が漏えい](https://scan.netsecurity.ne.jp/article/2026/10/06/56391.html) | 21.0 | 20.0 | 42.0 |
-| [公安調査庁、公式マスコット「ぴしゃ丸」発表 ～ ヒョウの観察力と忍者の隠密性を備えた広報担当](https://scan.netsecurity.ne.jp/article/2026/10/06/56390.html) | 21.0 | 20.0 | 42.0 |
-| [HENNGEが経団連に入会、SaaS・セキュリティ領域の知見活かし政策提言目指す](https://scan.netsecurity.ne.jp/article/2026/10/06/56389.html) | 21.0 | 20.0 | 42.0 |
-| [Apache HTTP Server 2.4 に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/10/06/56388.html) | 21.0 | 20.0 | 42.0 |
-| [なぜ退会者の免許証が7年残る？ タイムズカー漏えいが問う“データの持ち方”](https://www.itmedia.co.jp/enterprise/articles/2610/06/news018.html) | 21.0 | 20.0 | 42.0 |
-| [第1回：なぜセキュリティマネージャーは経営に向き合えないのか](https://japan.zdnet.com/article/35252982/) | 21.0 | 20.0 | 42.0 |
-| [バッファロー「WSR-300HP」「WEX-G300」に複数の深刻な脆弱性、ファームウェア更新提供中の記事に注目が集まる【アクセスランキング】](https://internet.watch.impress.co.jp/docs/news/ranking/2145837.html) | 20.0 | 20.0 | 42.0 |
-| [【金融庁が警鐘】相次ぐ「情報漏えい」…AI攻撃が爆速化する前に銀行が今やるべきこと](https://www.sbbit.jp/article/fj/187111?ref=rss) | 20.0 | 20.0 | 42.0 |
-| [ClingSTUNが脆弱なIoTデバイスをプロキシノード化](https://www.darkreading.com/iot/clingstun-vulnerable-iot-devices-proxy-nodes) | 20.0 | 20.0 | 42.0 |
-| [サイバーセキュリティ専門イベント「Security Days Fall 2026」全国5都市で開催 初の開催となる札幌会場は10月7日から](https://internet.watch.impress.co.jp/docs/news/2145521.html) | 20.0 | 20.0 | 42.0 |
+| [中国のオープンソースAIに対抗するためReflectionがパラメーター数5010億のオープンモデル「Beam」を発表、GLM 5.2に匹敵し使用する計算量は3～4分の1でAIエージェントタスクではQwen3.8-Maxに匹敵すると主張](https://gigazine.net/news/20261006-beam-reflection-501b-open-weight-model/) | 27.0 | 20.0 | 42.0 |
+| [パナソニック コネクト、クラウドカメラサービスに「AI定期巡回」機能を追加](https://japan.zdnet.com/article/35253273/) | 26.0 | 20.0 | 42.0 |
+| [Reflection’s Beam、コーディングテストでは主要オープンモデルに及ばずも推論計算量の低さを主張](https://www.helpnetsecurity.com/2026/10/06/reflections-beam-trails-top-open-models-on-coding-tests-but-claims-lower-inference-compute/) | 25.0 | 20.0 | 42.0 |
+| [委託先で侵害、問い合わせ顧客の情報が流出か - 大和証券](https://www.security-next.com/191068) | 22.0 | 20.0 | 42.0 |
+| [「楽天ドライブ」に不正アクセス 保存したデータなど1.5万アカウント分が取得・閲覧のおそれ](https://www.itmedia.co.jp/news/article/2610/06/2000002046/) | 21.0 | 20.0 | 42.0 |
+| [19万以上のアカウントで不正ログインはなぜ起きたのか【エスカとレンのセキュリティ通信】](https://ascii.jp/elem/000/004/437/4437506/?rss=) | 21.0 | 20.0 | 42.0 |
+| [CTC、工場の稼働を維持するOTセキュリティを提供開始 - 台湾TXOne製品を展開](https://news.mynavi.jp/techplus/article/20261006-5083817/) | 21.0 | 20.0 | 42.0 |
+| [NEC、「CyIOC」のグローバル運用体制を拡充 - 2027年4月に欧州拠点を開設](https://news.mynavi.jp/techplus/article/20261006-5079569/) | 21.0 | 20.0 | 42.0 |
+| [地政学的リスクとサイバーセキュリティ 国境を越える脅威への向き合い方](https://news.mynavi.jp/techplus/article/20261006-5083283/) | 21.0 | 20.0 | 42.0 |
+| [デンマークで住民登録簿に不正アクセス 880万人分の個人番号など流出 政府「極めて深刻」](https://www.itmedia.co.jp/news/article/2610/06/2000002032/) | 21.0 | 20.0 | 42.0 |
+| [ミスターマックス、最大173万人分の会員情報流出 不正アクセスで](https://www.itmedia.co.jp/news/article/2610/06/2000002030/) | 21.0 | 20.0 | 42.0 |
+| [Patch失敗によるShinyHunters侵害を受けFBIがAccenture契約社員を解任](https://thehackernews.com/2026/10/fbi-removes-accenture-contractor-after.html) | 20.0 | 20.0 | 42.0 |
+| [U.S. BankのCISOが語る、拡大し続けるセキュリティ責務は誰も一人で担えない](https://www.helpnetsecurity.com/2026/10/06/ann-barron-dicamillo-collective-cyber-defense/) | 20.0 | 20.0 | 42.0 |
+| [デンマーク、企業アカウント経由で880万人分のCPRデータに攻撃者がアクセスしたと発表](https://thehackernews.com/2026/10/denmark-says-attackers-accessed-cpr.html) | 20.0 | 20.0 | 42.0 |
+| [GMOリサーチ&AIのアンケート「infoQ」で不正アクセス、最大約95万件の個人情報が漏えいし、不正なポイント交換も](https://internet.watch.impress.co.jp/docs/news/2145989.html) | 20.0 | 20.0 | 42.0 |
+| [NIS2準拠：認証情報を保護するための低コスト7ステップ](https://www.helpnetsecurity.com/2026/10/06/passwork-nis2-credential-security/) | 20.0 | 20.0 | 42.0 |
+| [Webroot Mobile Securityがテキストを監視し、危険なサイトをブロックし、データ漏えいをチェックする機能を紹介](https://www.helpnetsecurity.com/2026/10/06/product-showcase-webroot-mobile-security/) | 20.0 | 20.0 | 42.0 |
+| [MCC製Universal Library for Linux (uldaq)におけるバッファオーバーフローの脆弱性](https://jvn.jp/jp/JVN13510969/) | 20.0 | 20.0 | 42.0 |
+| [Androidアプリ「チケット流通センター」における複数の脆弱性](https://jvn.jp/jp/JVN53292492/) | 20.0 | 20.0 | 42.0 |
+| [タイムズカー情報漏洩 法的責任は](https://news.yahoo.co.jp/pickup/6597727?source=rss) | 20.0 | 20.0 | 42.0 |
+| [Security researcherが発見したKVMゲストホストエスケープ脆弱性](https://www.theregister.com/offbeat/2026/10/06/security-researcher-claims-to-they-found-kvm-guest-host-escape-flaw/5301267) | 20.0 | 20.0 | 42.0 |
+| [Security researcherが発見したKVMゲスト・ホストエスケープ脆弱性](https://www.theregister.com/offbeat/2026/10/06/security-researcher-claims-they-found-kvm-guest-host-escape-flaw/5301267) | 20.0 | 20.0 | 42.0 |
+| [なぜ不正アクセス急増 識者の見解](https://news.yahoo.co.jp/pickup/6597718?source=rss) | 20.0 | 20.0 | 42.0 |
 
 ---
 
