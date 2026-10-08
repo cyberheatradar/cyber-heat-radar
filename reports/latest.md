@@ -1,15 +1,19 @@
-# 📡 サイレーダー 2026-10-08 11:00 JST
+# 📡 サイレーダー 2026-10-08 17:00 JST
 
-このレポートは、2026-10-08 05:00 JST〜2026-10-08 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-08 11:00 JST〜2026-10-08 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 63
-- [音声で扱う想定のトピック](#audio-topics): 0
+- 観測トピック数: 54
+- [音声で扱う想定のトピック](#audio-topics): 3
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 38
+- [低温だが記録しておくトピック](#low-record-topics): 27
 
-今回はサマリ掲載トピックはありません。
+| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
+|---:|---|---:|---:|---:|---|---|
+| 1 | [Medical devices patients rely on most are least prepared for quantum attacks](#topic-36548) | 36.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
+| 2 | [TensorLake npm SDK Compromised in ChainDrop Shai-Hulud Credential-Stealing Attack](#topic-36554) | 30.0 | 45.0 | 42.0 | 音声 | 温度感上位枠 |
+| 3 | [Ransomware fixer claimed he could decrypt files, allegedly defrauded clients instead](#topic-36561) | 30.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -17,7 +21,181 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-今回は音声で扱う想定のトピックはありません。
+<a id="topic-36548"></a>
+
+### 1. Medical devices patients rely on most are least prepared for quantum attacks
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>地⁠政⁠学⁠・⁠サ⁠イ⁠バ⁠ー⁠紛⁠争</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 36.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+医療機関で使われるIT、IoMT、OT、IoT機器が、ランサムウェアや患者データの窃取を伴う攻撃の対象になっているとする調査結果が紹介されています。
+あわせて、医療現場で重要度の高い医療機器ほど、将来の量子計算に向けた耐性や移行準備が十分でない可能性が示されています。
+医療機器や周辺システムは診療継続に直結するため、侵害が業務停止や患者安全に影響しやすい点が注目されます。
+量子耐性の整備はすぐに脅威化する話ではなくても、長期的な暗号移行計画を考える材料になります。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 医療機器、ネットワーク機器、業務端末を含めた資産棚卸しを進め、重要度ごとに管理範囲を明確にする。
+- ランサムウェア対策として、バックアップ、セグメント分離、多要素認証、脆弱性管理の基本対策を再確認する。
+- PQCの動向を踏まえ、長期保護が必要なデータや機器の暗号利用状況を把握し、移行方針の検討を始める。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Medical devices patients rely on most are least prepared for quantum attacks](https://www.helpnetsecurity.com/2026/10/08/forescout-healthcare-quantum-readiness-report/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
+
+<a id="topic-36554"></a>
+
+### 2. TensorLake npm SDK Compromised in ChainDrop Shai-Hulud Credential-Stealing Attack
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 45.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+TensorLakeのnpm SDKが改ざんされ、ChainDrop / Shai-Huludと呼ばれる攻撃の一環として認証情報を盗み取るマルウェアが配布されたと報告されています。
+対象とされたのはSDKの特定バージョンで、サプライチェーン経由で開発環境やCI/CDに影響が及ぶおそれがあります。
+npmのような広く使われるパッケージ基盤での侵害は、直接の利用者だけでなく、依存関係を通じて下流の開発者や組織にも波及し得ます。
+認証情報の流出は、ソースコードやクラウド環境への不正アクセスにつながる可能性があるため注意が必要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- npm/PyPI・侵害パッケージ・開発者/CI/CDへの影響を伴うサプライチェーン攻撃。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 利用中の依存パッケージにTensorLakeの該当SDKバージョンが含まれていないか確認する。
+- CI/CDや開発端末で使う秘密情報の保管・配布方法を見直し、不要な認証情報は速やかに失効する。
+- パッケージ更新時はロックファイルや整合性確認を行い、異常な依存関係変更を監視する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | HashiCorp | 言及あり | 0.80 | — |
+| 製品 | HashiCorp Vault | 言及あり | 0.80 | — |
+| 製品 | Exchange | 言及あり | 0.80 | — |
+| 製品 | Cursor | 言及あり | 0.80 | — |
+| 製品 | Apple macOS | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [TensorLake npm SDK Compromised in ChainDrop Shai-Hulud Credential-Stealing Attac](https://socket.dev/blog/tensorlake-compromise) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
+
+<a id="topic-36561"></a>
+
+### 3. Ransomware fixer claimed he could decrypt files, allegedly defrauded clients instead
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 30.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+ランサムウェア被害の復旧をうたっていた人物が、実際にはファイルの復号を行わず、依頼者から不正に金銭を得ていたとされる件が報じられています。
+公的機関の主張に基づく内容とされますが、現時点では個別の事実関係は裁判などの進展を待つ必要があります。
+被害者は暗号化被害の復旧を急ぐ中で、技術的支援を装う第三者にも追加被害を受けうることを示しています。ランサムウェア対応では、復旧支援業者の信頼性確認や契約条件の精査が重要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 技術・開発者系ソース観測: 観測あり。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 復旧支援やインシデント対応を名乗る事業者について、実績・契約条件・費用体系を事前に確認する。
+- 支払い前に、復号可否や作業範囲、成功条件を文書で明確化する。
+- ランサムウェア被害時は、法執行機関や信頼できるCSIRT/IR支援と連携し、単独判断で拙速に資金を動かさない。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Ransomware fixer claimed he could decrypt files, allegedly defrauded clients ins](https://www.theregister.com/cyber-crime/2026/10/08/ransomware-fixer-claimed-he-could-decrypt-files-allegedly-defrauded-clients-instead/5301831) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測あり。
+
+---
 
 <a id="github-only-topics"></a>
 
@@ -34,44 +212,33 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [「IDCFクラウド」障害の原因はランサムウェア攻撃、ニッスイ、茨城県など495の企業や自治体に影響](https://internet.watch.impress.co.jp/docs/news/2146594.html) | 28.0 | 30.0 | 42.0 |
-| [Smashing Security podcast #487: Clippyの暗号資産復活劇](https://grahamcluley.com/smashing-security-podcast-487/) | 28.0 | 30.0 | 42.0 |
-| [ランサムウェア関連の法執行・司法措置](https://www.bleepingcomputer.com/news/security/ransomware-recovery-ceo-charged-over-secret-ransom-payments/) | 28.0 | 30.0 | 42.0 |
-| [Cloud供給網攻撃におけるWeb3の進化](https://unit42.paloaltonetworks.com/web3-cloud-supply-chain-attacks/) | 28.0 | 20.0 | 42.0 |
-| [同価格帯の「ChatGPT Plus」と「Google AI Pro」、どちらを選ぶべきか？](https://japan.zdnet.com/article/35253343/) | 26.0 | 20.0 | 42.0 |
-| [NotionがAIエージェントではなく、コンテキスト基盤に注力する理由](https://ascii.jp/elem/000/004/440/4440885/?rss=) | 26.0 | 20.0 | 42.0 |
-| [「AeyeScan」に生成 AI を搭載したモバイルアプリ脆弱性診断機能を追加](https://scan.netsecurity.ne.jp/article/2026/10/08/56409.html) | 26.0 | 20.0 | 42.0 |
-| [ECサイトを侵害してカード情報60万件超が流出 複数のAIエージェントが役割分担](https://atmarkit.itmedia.co.jp/ait/articles/2610/08/news025.html) | 26.0 | 20.0 | 42.0 |
-| [Anthropic、「Claude Haiku 5.5」公開 「Haiku 4.5」から大幅性能向上で利用コスト約75％減](https://www.itmedia.co.jp/news/article/2610/08/2000002112/) | 26.0 | 20.0 | 42.0 |
-| [AIシステムの特徴を理解しよう 「結果が変化」など注意点を押さえる](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/100500575/100500001/) | 26.0 | 20.0 | 42.0 |
-| [NTTドコモビジネス、「Trusted Data Fabric」構想を始動--価値あるデータをAIに任せられる環境へ](https://japan.zdnet.com/article/35253327/) | 26.0 | 20.0 | 42.0 |
-| [オーストラリア政府、AIインシデント報告の義務化を検討](https://www.darkreading.com/cybersecurity-operations/australian-govt-ai-incident-reporting) | 25.0 | 20.0 | 42.0 |
-| [Anthropic、審査済み防御者向けにClaudeのガードレールを緩和](https://www.darkreading.com/vulnerabilities-threats/anthropic-vetted-defenders-claude-guardrails) | 25.0 | 20.0 | 42.0 |
-| [Cisco「NX-OS」の脆弱性14件を修正 - 半数が「クリティカル」](https://www.security-next.com/191184) | 22.0 | 20.0 | 42.0 |
-| [HPEネットワークアクセス制御製品に深刻な脆弱性 - 「クリティカル」10件](https://www.security-next.com/191180) | 22.0 | 20.0 | 42.0 |
-| [689Cloud、医療情報共有サービス「SecureMail-M」を提供開始](https://news.mynavi.jp/techplus/article/20261008-5093899/) | 21.0 | 20.0 | 42.0 |
-| [OTセキュリティは「ここまで来た」-情シスから始まる全社基盤化とスマートファクトリーへの第一歩](https://news.mynavi.jp/techplus/kikaku/20261008-4934654/) | 21.0 | 20.0 | 42.0 |
-| [漏えい相次ぐ中、保護委が対策を緊急例示 強い多要素認証やEDR導入、不要な個人データの消去など](https://www.itmedia.co.jp/news/article/2610/08/2000002115/) | 21.0 | 20.0 | 42.0 |
-| [AIによって加速する脅威動向に対して求められるサイバーハイジーンの向上](https://ascii.jp/elem/000/004/439/4439854/?rss=) | 21.0 | 20.0 | 42.0 |
-| [Dellの企業向けソフト2製品に深刻な脆弱性、root権限を奪われる恐れ](https://news.mynavi.jp/techplus/article/20261008-5088963/) | 21.0 | 20.0 | 42.0 |
-| [ScanNetSecurity 創刊28周年御礼の辞（上野宣）](https://scan.netsecurity.ne.jp/article/2026/10/08/56418.html) | 21.0 | 20.0 | 42.0 |
-| [インフォスティーラーに感染するのは誰か、1 万件の StealerLog が描き出す被害者の素顔](https://scan.netsecurity.ne.jp/article/2026/10/08/56417.html) | 21.0 | 20.0 | 42.0 |
-| [「L2 スイッチのリプレースでゼロトラスト」でおなじみのパイオリンク、TiFRONT を「インテリジェントディフェンススイッチ」にブランド変更](https://scan.netsecurity.ne.jp/article/2026/10/08/56416.html) | 21.0 | 20.0 | 42.0 |
-| [オンラインカジノに関するコンテンツを表示 ～ 千葉銀行子会社のちばぎん商店のコーポレートサイトに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/10/08/56415.html) | 21.0 | 20.0 | 42.0 |
-| [検索経由で無関係なサイトへ誘導 ～ スコア・ジャパンがサイト改ざん被害](https://scan.netsecurity.ne.jp/article/2026/10/08/56414.html) | 21.0 | 20.0 | 42.0 |
-| [不正アクセスによる漏えい等の件数「必ずしも増加傾向にない（古川デジタル大臣）」](https://scan.netsecurity.ne.jp/article/2026/10/08/56413.html) | 21.0 | 20.0 | 42.0 |
-| [シチズン時計、問い合わせフォームの委託先サーバに不正アクセス ～ 個人情報約10万件漏えい可能性](https://scan.netsecurity.ne.jp/article/2026/10/08/56412.html) | 21.0 | 20.0 | 42.0 |
-| [楽天ドライブに不正アクセス、管理アカウント乗っ取りでデータ閲覧](https://scan.netsecurity.ne.jp/article/2026/10/08/56411.html) | 21.0 | 20.0 | 42.0 |
-| [Android アプリ「チケット流通センター」に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/10/08/56410.html) | 21.0 | 20.0 | 42.0 |
-| [クラウドセキュリティサービス「HENNGE One」でパスワード管理サービス「HENNGE Password Manager」を提供開始](https://scan.netsecurity.ne.jp/article/2026/10/08/56408.html) | 21.0 | 20.0 | 42.0 |
-| [ニッスイ子会社で入出荷停止 IDCFクラウド影響か 委託先データセンターに不正アクセス](https://www.itmedia.co.jp/news/article/2610/08/2000002113/) | 21.0 | 20.0 | 42.0 |
-| [三井物産流通グループ、300社超のデータ共有アプリを「Snowflake」で刷新--20年もののシステム脱却](https://japan.zdnet.com/article/35252863/) | 21.0 | 20.0 | 42.0 |
-| [個人情報売買 ダークウェブの実態](https://news.yahoo.co.jp/pickup/6597942?source=rss) | 20.0 | 20.0 | 42.0 |
-| [Cisco quantum network controllerがアプリからオンデマンドでエンタングルメントを注文可能に](https://www.helpnetsecurity.com/2026/10/08/cisco-quantum-network-controller-research-prototype/) | 20.0 | 20.0 | 42.0 |
-| [玄関前に異変、まさかクマ！？ ネットワークカメラを設置しました。そこに映っていたのは……【奥川浩彦の「岐阜の山奥に移住しました」第15回】](https://internet.watch.impress.co.jp/docs/column/ijuu/2145481.html) | 20.0 | 20.0 | 42.0 |
-| [FBIが警告、FortiBleed攻撃でFortiGate VPN管理者が締め出し被害](https://www.bleepingcomputer.com/news/security/fbi-ongoing-fortibleed-attacks-lock-out-fortigate-vpn-admins/) | 20.0 | 20.0 | 42.0 |
-| [Citizen Lab、トランプ政権と「テクノ・ファシスト」経営陣を批判](https://www.darkreading.com/cyber-risk/citizen-lab-slams-trump-administration-techno-fascist-executives) | 20.0 | 20.0 | 42.0 |
-| [ハッカーがccTLDレジストリ侵害後にGoogleドメインを乗っ取り](https://www.bleepingcomputer.com/news/security/hackers-hijack-google-domains-after-breaching-cctld-registries/) | 20.0 | 20.0 | 42.0 |
+| [IDCフロンティアへのランサム攻撃、495の企業・自治体に影響](https://xtech.nikkei.com/atcl/nxt/news/24/03418/) | 29.0 | 30.0 | 42.0 |
+| [AI生成画像やAI生成動画を見分けるGoogleサービス「SynthID Detector」が誰でも使用可能に、Google・OpenAI・AppleのどのAIかも判別可能](https://gigazine.net/news/20261008-synth-id-ai-content/) | 29.0 | 20.0 | 42.0 |
+| [Tensorlake npmパッケージの侵害によりShai-Hulud認証情報窃取ワームが配布された件](https://thehackernews.com/2026/10/tensorlake-npm-package-compromised-to.html) | 28.0 | 45.0 | 42.0 |
+| [passkeyを最も理解している人々でもなおパスワードを入力している理由](https://www.helpnetsecurity.com/2026/10/08/passkey-adoption-typing-passwords/) | 28.0 | 20.0 | 42.0 |
+| [さくらインターネット、企業専用の生成AI基盤「さくらのAI Engine プライベートエディション」を提供開始](https://japan.zdnet.com/article/35253368/) | 26.0 | 20.0 | 42.0 |
+| [パーソルビジネスプロセスデザイン、「Copilot Studio定着支援伴走ヘルプデスクサービス」を提供](https://japan.zdnet.com/article/35253362/) | 26.0 | 20.0 | 42.0 |
+| [「Agentic Enterprise」を実現するHPEの戦略--AIエージェント時代の新たなIT運用](https://japan.zdnet.com/article/35253349/) | 26.0 | 20.0 | 42.0 |
+| [ChatGPT、無料版を含む全ユーザーに「GPT-6」 回答内に“操作できる画面”を生成する「Intelligent UI」搭載](https://www.itmedia.co.jp/news/article/2610/08/2000002119/) | 26.0 | 20.0 | 42.0 |
+| [AIが見守る街を監視するのは誰か](https://www.helpnetsecurity.com/2026/10/08/ai-surveillance-cameras-privacy/) | 25.0 | 20.0 | 42.0 |
+| [AIがサイバーセキュリティコンプライアンスを改善する方法：ダッシュボードから継続的な実行へ](https://www.helpnetsecurity.com/2026/10/08/espresso-labs-ai-cybersecurity-compliance/) | 25.0 | 20.0 | 42.0 |
+| [Javaライブラリの脆弱性：IBMとRed Hatが400件超の未公表欠陥を修正](https://www.helpnetsecurity.com/2026/10/08/lightwell-java-library-vulnerabilities/) | 25.0 | 20.0 | 42.0 |
+| [Pwn2Own IrelandでSamsung Galaxy S26がさらに3回ハッキングされる](https://www.bleepingcomputer.com/news/security/samsung-galaxy-s26-hacked-three-more-times-at-pwn2own-ireland/) | 22.0 | 20.0 | 43.0 |
+| [TP-Linkがルーターのセキュリティを偽り中国との関係を開示しなかったとしてアイオワ州など4州が提訴、TP-Linkは中国との関係を真っ向から否定](https://gigazine.net/news/20261008-us-4-states-sue-tp-link/) | 22.0 | 20.0 | 42.0 |
+| [タイ子会社に不正アクセス、パスポート情報流出の可能性 - HIS](https://www.security-next.com/191188) | 22.0 | 20.0 | 42.0 |
+| [Dellのコンテナストレージ製品に複数の脆弱性 - 重要度「クリティカル」](https://www.security-next.com/191191) | 22.0 | 20.0 | 42.0 |
+| [「AIで攻撃」が現実味を増す中で 「GLM-5.3」が示したオープンウエートモデルの危うさ](https://atmarkit.itmedia.co.jp/ait/articles/2610/08/news030.html) | 21.0 | 20.0 | 42.0 |
+| [タイムズ不正アクセス被害 裏で動いていた“20年前のシステム”とは？](https://atmarkit.itmedia.co.jp/ait/articles/2610/08/news032.html) | 21.0 | 20.0 | 42.0 |
+| [ライバル社に不正アクセス、顧客名簿入手し営業活動 容疑の光回線代理店従業員を逮捕](https://www.itmedia.co.jp/news/article/2610/08/2000002129/) | 21.0 | 20.0 | 42.0 |
+| [法務と開発者で「言葉が通じない」問題 トヨタやソニーが語るOSS管理の真実](https://techtarget.itmedia.co.jp/tt/article/2610/08/2000002103/) | 21.0 | 20.0 | 42.0 |
+| [約8割がバイブコーディングを経験、6割以上がトークンマネジメントを実践--GMO調査](https://japan.zdnet.com/article/35253355/) | 21.0 | 20.0 | 42.0 |
+| [止まらない不正アクセス、背景にAIの“超高速攻撃”か 識者「使われていない方が不自然」](https://www.itmedia.co.jp/news/article/2610/08/2000002101/) | 21.0 | 20.0 | 42.0 |
+| [写真や文書が7カ月半、閲覧可能に――「楽天ドライブ」不正アクセスで1万5382アカウントに被害](https://atmarkit.itmedia.co.jp/ait/articles/2610/08/news033.html) | 21.0 | 20.0 | 42.0 |
+| [国内で不正アクセス相次ぐ、JPCERT/CCが注意喚起 - 攻撃手法と対策を公表](https://news.mynavi.jp/techplus/article/20261008-5094531/) | 21.0 | 20.0 | 42.0 |
+| [ガートナー、日本におけるAI時代のサイバーセキュリティのハイプ・サイクル2026年版を発表](https://japan.zdnet.com/article/35253354/) | 21.0 | 20.0 | 42.0 |
+| [セキュリティ判断のための経済モデル構築とリスクコストの見積もり](https://www.helpnetsecurity.com/2026/10/08/ivan-milenkovic-qualys-cyber-risk-quantification/) | 20.0 | 20.0 | 42.0 |
+| [JPCERT/CC、相次ぐ不正アクセス事案について攻撃手法や対策をまとめたページを公開](https://internet.watch.impress.co.jp/docs/news/2146696.html) | 20.0 | 20.0 | 42.0 |
+| [16分野を対象とする「重要インフラ統一基準」が施行、サイバーセキュリティ対策の水準底上げへ](https://internet.watch.impress.co.jp/docs/news/2146610.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
