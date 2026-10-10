@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-10-10 17:00 JST
+# 📡 サイレーダー 2026-10-11 05:00 JST
 
-このレポートは、2026-10-10 11:00 JST〜2026-10-10 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-10 17:00 JST〜2026-10-11 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 27
+- 観測トピック数: 32
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 3
+- [低温だが記録しておくトピック](#low-record-topics): 8
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,9 +34,14 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [「お前たちのクラウドはわれわれのもの」 IDCFクラウドの管理画面に出た攻撃者のメッセージ 内容に運営元は](https://www.itmedia.co.jp/news/article/2610/09/2000002184/) | 24.0 | 30.0 | 42.0 |
-| [大和証券、シチズン、損保ジャパン、東武鉄道、オリックス生命――5社に影響した「同じ委託先」への不正アクセス 各社はどう動いた？](https://atmarkit.itmedia.co.jp/ait/articles/2610/10/news007.html) | 21.0 | 20.0 | 42.0 |
-| [個人情報漏えい巡る賠償 補償額は](https://news.yahoo.co.jp/pickup/6598235?source=rss) | 20.0 | 20.0 | 42.0 |
+| [ARTEX AIとClaudeエージェントが韓国の銀行へのサイバー攻撃に悪用された件](https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/) | 25.0 | 20.0 | 42.0 |
+| [Criminal IP、AITEMを次世代のAttack Surface Managementとして発表](https://www.bleepingcomputer.com/news/security/criminal-ip-introduces-aitem-as-the-next-evolution-of-attack-surface-management/) | 25.0 | 20.0 | 42.0 |
+| [選んだAIでは防げない第三者エージェント問題とは何か](https://thehackernews.com/2026/10/the-third-party-agent-problem-why.html) | 25.0 | 20.0 | 42.0 |
+| [Anthropic、Claudeのインジェクション脆弱性悪用を受け内部AIテストのライブインターネットアクセスを停止](https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html) | 25.0 | 20.0 | 42.0 |
+| [ShinyHuntersに関連するとされる事件でサイバー幹部が逮捕](https://www.bleepingcomputer.com/news/security/cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers/) | 20.0 | 20.0 | 42.0 |
+| [カナダのサイバーセキュリティ幹部が連邦政府による恐喝事件で逮捕](https://cyberscoop.com/edward-dubrovsky-cypfer-arrested-fbi-extortion-charges/) | 20.0 | 20.0 | 42.0 |
+| [産業企業を狙った内部者によるサイバー恐喝計画で技術者に実刑判決](https://www.securityweek.com/insider-cyber-extortion-plot-against-industrial-firm-lands-engineer-in-prison/) | 20.0 | 20.0 | 42.0 |
+| [Chromium系ブラウザで2文字がもたらすタイポスクワッティングの機会](https://www.theregister.com/security/2026/10/10/two-characters-open-up-a-world-of-typosquatting-opportunities-in-chromium-browsers/5302383) | 20.0 | 20.0 | 42.0 |
 
 ---
 
