@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-10-11 17:00 JST
+# 📡 サイレーダー 2026-10-12 05:00 JST
 
-このレポートは、2026-10-11 11:00 JST〜2026-10-11 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-11 17:00 JST〜2026-10-12 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 25
+- 観測トピック数: 29
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 5
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,7 +34,11 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [P7 DarkSword iOSエクスプロイトキットに暗号資産ウォレット情報窃取とリモートコマンド機能を追加](https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html) | 10.0 | 20.0 | 42.0 |
+| [Nippon Columbiaのマルウェア感染で860万人分のカラオケファン情報が流出](https://www.bleepingcomputer.com/news/security/nippon-columbia-malware-incident-exposes-86-million-karaoke-fan-records/) | 28.0 | 20.0 | 42.0 |
+| [30年前にBBCが放送した「アート作品を作るAI・AARON」を扱ったテレビ番組](https://gigazine.net/news/20261011-computer-art/) | 27.0 | 20.0 | 42.0 |
+| [AIシステムはインフラへの悪夢のような攻撃を十分に実行可能で、誰も備えができていない](https://www.theregister.com/security/2026/10/11/ai-systems-are-fully-capable-of-carrying-out-nightmare-attacks-against-infrastructure-and-nobodys-ready/5302450) | 25.0 | 20.0 | 42.0 |
+| [サイバー防御サービス 相談が急増](https://news.yahoo.co.jp/pickup/6598407?source=rss) | 20.0 | 20.0 | 42.0 |
+| [Week in review: FortiBleedはなお継続、Patch Tuesdayの見通し](https://www.helpnetsecurity.com/2026/10/11/week-in-review-fortibleed-is-still-active-patch-tuesday-forecast/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
