@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-10-12 11:00 JST
+# 📡 サイレーダー 2026-10-12 17:00 JST
 
-このレポートは、2026-10-12 05:00 JST〜2026-10-12 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-12 11:00 JST〜2026-10-12 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 25
+- 観測トピック数: 29
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 5
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,7 +34,11 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [AnthropicのAI、未解決殺人事件で警察に虚偽の情報提供 米政権は「通知と是正は義務」と警告](https://www.itmedia.co.jp/news/article/2610/12/2000002192/) | 21.0 | 20.0 | 42.0 |
+| [地政学とサイバーレジリエンスのギャップを脅威モデルに組み込むべき理由](https://www.helpnetsecurity.com/2026/10/12/akshay-joshi-wef-cyber-resilience-gap/) | 28.0 | 30.0 | 42.0 |
+| [Strands Box：AIエージェント向けオープンソースサンドボックス](https://www.helpnetsecurity.com/2026/10/12/aws-strands-box-open-source-ai-agent-sandbox/) | 25.0 | 20.0 | 42.0 |
+| [AI脆弱性パッチ適用には評価基準の課題がある](https://www.helpnetsecurity.com/2026/10/12/ai-vulnerability-patching-grading-problem/) | 25.0 | 20.0 | 42.0 |
+| [サイバー攻撃加速 AIの影響を指摘](https://news.yahoo.co.jp/pickup/6598504?source=rss) | 20.0 | 20.0 | 42.0 |
+| [一部のオープンソース更新が非常に難しい理由](https://www.helpnetsecurity.com/2026/10/12/google-open-source-maintenance-costs-report/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
