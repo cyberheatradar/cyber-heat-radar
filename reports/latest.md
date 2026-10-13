@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-10-13 11:00 JST
+# 📡 サイレーダー 2026-10-13 17:00 JST
 
-このレポートは、2026-10-13 05:00 JST〜2026-10-13 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-13 11:00 JST〜2026-10-13 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 61
+- 観測トピック数: 52
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 37
+- [低温だが記録しておくトピック](#low-record-topics): 28
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,43 +34,34 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [一部顧客のデータは復旧困難 IDCフロンティアにランサムウェア、495社・自治体に影響](https://atmarkit.itmedia.co.jp/ait/articles/2610/09/news036.html) | 29.0 | 30.0 | 42.0 |
-| [著名ランサムウェア交渉人、恐喝容疑で起訴](https://www.darkreading.com/insider-threats/prominent-ransomware-negotiator-extortion-charges) | 28.0 | 30.0 | 42.0 |
-| [中国を拠点とする企業「ITG」が支援するサイバー攻撃グループの手口を解説、国際アドバイザリーに日本も共同署名 不使用ポート無効化、脆弱性パッチなど緩和策の徹底を](https://internet.watch.impress.co.jp/docs/news/2147300.html) | 28.0 | 20.0 | 42.0 |
-| [Meta、同社最大のAIモデル「Muse Wonder」発表 記憶力と粘り強さを強化、AIエージェント「Muse」にも搭載へ](https://www.itmedia.co.jp/news/article/2610/13/2000002197/) | 26.0 | 20.0 | 42.0 |
-| [cotomiに託す賭け 自前AIを捨てない](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/100500574/100500003/) | 26.0 | 20.0 | 42.0 |
-| [AIに業務を最適化 広告と財務の変革](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600014/100500236/) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントに「ヒューマン・イン・ザ・ループ」を組み込んでも不十分な理由](https://japan.zdnet.com/article/35252978/) | 26.0 | 20.0 | 42.0 |
-| [第2回：生成AIはマネジメント・ボトルネックをどう変えるのか](https://japan.zdnet.com/article/35252983/) | 26.0 | 20.0 | 42.0 |
-| [4社に1社が「シャドーAIエージェント」を検知できず](https://japan.zdnet.com/article/35253316/) | 26.0 | 20.0 | 42.0 |
-| [Claude Code責任者が語る「超超急成長」の理由、リソース逼迫を乗り越えろ](https://xtech.nikkei.com/atcl/nxt/column/18/03757/100600002/) | 26.0 | 20.0 | 42.0 |
-| [企業専用の生成AI基盤「さくらのAI Engine プライベートエディション」提供開始 好きな生成AIモデルを専有環境で利用できる](https://internet.watch.impress.co.jp/docs/news/2147063.html) | 25.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年10月4日〜2026年10月10日）](https://www.security-next.com/191306) | 22.0 | 20.0 | 42.0 |
-| [「GitLab」が「クリティカル」脆弱性含む24件の修正を実施](https://www.security-next.com/191308) | 22.0 | 20.0 | 42.0 |
+| [低価格Androidスマートフォンにプリインストールされたマルウェアが住宅用プロキシ化する問題](https://thehackernews.com/2026/10/low-cost-android-phones-ship-with.html) | 28.0 | 20.0 | 42.0 |
+| [ChatGPT／Copilot／Safe AI Gatewayを比較 生成AIツール選びのポイントを解説](https://ascii.jp/elem/000/004/437/4437519/?rss=) | 26.0 | 20.0 | 42.0 |
+| [AI同士の電話は本人確認が重要、米Twilio CEOが語る通信の将来](https://xtech.nikkei.com/atcl/nxt/column/18/00001/12090/) | 26.0 | 20.0 | 42.0 |
+| [Anthropic、自己複製AIの「兆し」を指摘 55ドルのTVボックス15台で26Bモデルが稼働](https://www.itmedia.co.jp/news/article/2610/13/2000002204/) | 26.0 | 20.0 | 42.0 |
+| [Beyond Zeroとは何か：Google支援の最新セキュリティトレンドを解説](https://www.itpro.com/security/what-is-beyond-zero-the-latest-google-backed-security-trend-explained) | 25.0 | 20.0 | 42.0 |
+| [AIの良き先祖になるために：サイバーセキュリティはすでに手本を示している](https://www.helpnetsecurity.com/2026/10/13/cybersecurity-ai-safety-red-lines/) | 25.0 | 20.0 | 42.0 |
+| [Frontier AIがBooz Allenのラボで設定したOT攻撃目標をすべて達成](https://www.helpnetsecurity.com/2026/10/13/frontier-ai-ot-security-threat/) | 25.0 | 20.0 | 42.0 |
+| [AIエージェントによる環境確認で大半の高深刻度クラウドセキュリティ指摘が格下げに](https://www.helpnetsecurity.com/2026/10/13/cloud-security-findings-severity-ai-agent/) | 25.0 | 20.0 | 42.0 |
+| [公開アプリを解析してサーバーを攻撃する「A2B攻撃」、相次ぐ不正アクセスの原因の1つとしてNICTが注意喚起](https://internet.watch.impress.co.jp/docs/news/2147673.html) | 23.0 | 20.0 | 43.0 |
+| [ブラウザの「指紋」でユーザーを識別する仕組みを体験できるサイト、実際に回線を切り替えたりシークレットモードでも同じニックネームに](https://gigazine.net/news/20261013-fingerprints-are-the-new-cookies/) | 22.0 | 20.0 | 42.0 |
+| [Yandexのデータセンターがウクライナによる攻撃でフェイルオーバーできず多数のサービスがダウン](https://gigazine.net/news/20261013-yandex-no-failover/) | 22.0 | 20.0 | 42.0 |
+| [Anthropicが蒸留攻撃に対する効果的な対策を発見、敵対組織によるデータ抽出を90～99％削減](https://gigazine.net/news/20261013-anthropic-defense-distillation-attacks/) | 22.0 | 20.0 | 42.0 |
+| [「AnyDesk」に脆弱性、実証コードも - 6月の更新で修正](https://www.security-next.com/191346) | 22.0 | 20.0 | 42.0 |
+| [38万4000トークンの入力に対応した意思決定モデル「SubQ Snap」が登場、コンテキストウィンドウが長くても短くてもJevより優秀で画像にも対応](https://gigazine.net/news/20261013-subq-snap/) | 22.0 | 20.0 | 42.0 |
+| [ハッカーがサイバー攻撃でスーパーの冷蔵庫を50℃まで加熱](https://gigazine.net/news/20261013-french-refrigerator-hacked/) | 22.0 | 20.0 | 42.0 |
+| [DB高可用性ツール「IBM Db2 Mirror for i」に権限昇格の脆弱性](https://www.security-next.com/191340) | 22.0 | 20.0 | 42.0 |
+| [PDF処理ソフト「Ghostscript」の深刻な脆弱性 - 詳細が明らかに](https://www.security-next.com/191321) | 22.0 | 20.0 | 42.0 |
+| [キヤノン、業界初の「プリンターEDR」を実用化 - 複合機の脅威を常時監視](https://news.mynavi.jp/techplus/article/20261013-5122248/) | 21.0 | 20.0 | 42.0 |
 | [フランスのスーパー数百店舗で冷蔵設備にサイバー攻撃 温度が最高50度に上昇し食品大量廃棄に](https://www.itmedia.co.jp/news/article/2610/13/2000002201/) | 21.0 | 20.0 | 42.0 |
-| [創刊 28 周年記念キャンペーンのおしらせ（1）PayPal と銀行振込はご利用できません ごめんなさい](https://scan.netsecurity.ne.jp/article/2026/10/13/56438.html) | 21.0 | 20.0 | 42.0 |
-| [AeyeScan blog 第16回 たった1日でサプライチェーン攻撃対策を作った話。運用が破綻しない、コストほぼゼロの通信監視とは](https://scan.netsecurity.ne.jp/article/2026/10/13/56437.html) | 21.0 | 20.0 | 42.0 |
-| [穴吹ハウジングサービスがオーナーズサイトを一時停止、直ちに情報漏えいにつながるものではないが追加対策を講じることが望ましい](https://scan.netsecurity.ne.jp/article/2026/10/13/56435.html) | 21.0 | 20.0 | 42.0 |
-| [ローソンのアカウントサービスに不正アクセス、215 万 5,345 件のローソン ID が漏えい](https://scan.netsecurity.ne.jp/article/2026/10/13/56434.html) | 21.0 | 20.0 | 42.0 |
-| [EPARKリラク&エステの予約管理・顧客管理プラットフォーム「PeakManager」に不正アクセス、データベース内の情報の転送を確認](https://scan.netsecurity.ne.jp/article/2026/10/13/56433.html) | 21.0 | 20.0 | 42.0 |
-| [家計簿アプリ「くふう Zaim」に不正アクセス、一部の登録情報を異なる内容に書き換え](https://scan.netsecurity.ne.jp/article/2026/10/13/56432.html) | 21.0 | 20.0 | 42.0 |
-| [教育産業のメールアカウントに不正アクセス、フィッシングメールで Microsoft365 アカウントの認証情報が窃取されたことが原因](https://scan.netsecurity.ne.jp/article/2026/10/13/56431.html) | 21.0 | 20.0 | 42.0 |
-| [個人情報保護委員会、大規模な漏えい等事案を踏まえた対応について注意喚起](https://scan.netsecurity.ne.jp/article/2026/10/13/56430.html) | 21.0 | 20.0 | 42.0 |
-| [警察庁「サイバー警察局便り」で情報流出への注意を呼びかけ 企業から個人まで基本的対策の再点検を呼びかけ](https://scan.netsecurity.ne.jp/article/2026/10/13/56429.html) | 21.0 | 20.0 | 42.0 |
-| [JPCERT/CC、国内組織への不正アクセスに関する注意喚起を公開 API悪用などへの対策を推奨](https://scan.netsecurity.ne.jp/article/2026/10/13/56428.html) | 21.0 | 20.0 | 42.0 |
-| [ウルトラヒーローが怪獣と対決、HENNGE のセキュリティ CM 第二弾](https://scan.netsecurity.ne.jp/article/2026/10/13/56427.html) | 21.0 | 20.0 | 42.0 |
-| [AI利用が多い技術者ほど「自分でコードを書ける能力」も重視／世界の6割近くが「技術進歩が生活を破壊」と回答、ほか](https://ascii.jp/elem/000/004/441/4441773/?rss=) | 21.0 | 20.0 | 42.0 |
-| [「止まらない物流」をどう実現する？ --仏Exotec CTOが語る、フィジカルAIと群制御ロボットの未来](https://japan.zdnet.com/article/35252996/) | 21.0 | 20.0 | 42.0 |
-| [国の業務IT環境GSSで不正アクセス 約24万6000件が漏洩した可能性](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600011/100500216/) | 21.0 | 20.0 | 42.0 |
-| [委託先管理、何をどこまで求める？ --“つながり”で考えるサプライチェーンのセキュリティ](https://japan.zdnet.com/article/35253374/) | 21.0 | 20.0 | 42.0 |
-| [狙われるのは企業だけじゃない、あなたの家は大丈夫？ 「レジデンシャルプロキシ」の脅威](https://www.itmedia.co.jp/enterprise/articles/2610/13/news033.html) | 21.0 | 20.0 | 42.0 |
-| [Rapid7、“先を見越した予防”への転換に向けた脅威インテリジェンス「Rapid7 Intelligence」発表](https://internet.watch.impress.co.jp/docs/news/2147190.html) | 20.0 | 20.0 | 42.0 |
-| [Theliaにおける複数の脆弱性](https://jvn.jp/vu/JVNVU99982995/) | 20.0 | 20.0 | 42.0 |
-| [仏の店舗にサイバー攻撃 食品廃棄](https://news.yahoo.co.jp/pickup/6598579?source=rss) | 20.0 | 20.0 | 42.0 |
-| [Flockは自社製品のCVEを発行できるようになったが、信頼してよいのか？](https://cyberscoop.com/flock-cve-numbering-authority-cna/) | 20.0 | 20.0 | 42.0 |
-| [SonicWall SMAデバイスに対する最大深刻度のSSRF脆弱性への攻撃](https://www.darkreading.com/vulnerabilities-threats/max-severity-ssrf-flaw-sonicwall-sma-devices-under-attack) | 20.0 | 20.0 | 42.0 |
-| [AI時代のAppSec――AIセキュリティスキャナーは信頼に足るものなのか?【海の向こうの“セキュリティ”】](https://internet.watch.impress.co.jp/docs/column/security/2146074.html) | 20.0 | 20.0 | 42.0 |
-| [Microsoftの広告会社に対するGrindrデータ共有でノルウェーが960万ドルの罰金を科す](https://www.bleepingcomputer.com/news/security/norway-fines-microsoft-ad-firm-96-million-over-grindr-data-sharing/) | 20.0 | 20.0 | 42.0 |
+| [プリ機の開発自由度をどう守る? フリューが語る顧客理解とセキュリティ](https://news.mynavi.jp/techplus/article/20261013-5121513/) | 21.0 | 20.0 | 42.0 |
+| [skyticketで1464万件の個人情報流出か 413万件にはパスワードも、異なる3経路で不正アクセス](https://atmarkit.itmedia.co.jp/ait/articles/2610/13/news037.html) | 21.0 | 20.0 | 42.0 |
+| [情報漏えい深刻化に、東京都がサイバーセキュリティ強化へ 人員増強し関係機関と連携](https://www.itmedia.co.jp/news/article/2610/13/2000002206/) | 21.0 | 20.0 | 42.0 |
+| [「顔写真付き身分証明書画像」大量漏洩の衝撃、専門家が語るリスクと対策](https://xtech.nikkei.com/atcl/nxt/column/18/03790/100900002/) | 21.0 | 20.0 | 42.0 |
+| [VMwareが相次ぐパッチ配信に対応するため新たな管理ツールを提案](https://www.theregister.com/virtualization/2026/10/13/vmware-is-pushing-so-many-patches-it-thinks-users-need-new-tools-to-manage-the-flood-1/5302172) | 20.0 | 28.0 | 50.0 |
+| [現在募集中のサイバーセキュリティ求人：2026年10月13日](https://www.helpnetsecurity.com/2026/10/13/cybersecurity-jobs-available-right-now-october-13-2026/) | 20.0 | 20.0 | 42.0 |
+| [AssetViewにおける重要なリソースに対する不適切なアクセス権の割り当ての脆弱性](https://jvn.jp/jp/JVN38664315/) | 20.0 | 20.0 | 42.0 |
+| [偽サイトを2分で作成 AIの脅威](https://news.yahoo.co.jp/pickup/6598599?source=rss) | 20.0 | 20.0 | 42.0 |
+| [TrendAI™ Researchが示す、2026年に急増する日本のサイバーセキュリティ警告の重要性](https://newsroom.trendmicro.com/2026-10-12-TrendAI-TM-Research-Reinforces-Japans-Urgent-Cybersecurity-Warning-as-Incidents-Surge-in-2026) | 20.0 | 20.0 | 42.0 |
 
 ---
 
