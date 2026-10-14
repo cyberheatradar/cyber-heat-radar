@@ -1,18 +1,18 @@
-# 📡 サイレーダー 2026-10-14 11:00 JST
+# 📡 サイレーダー 2026-10-14 17:00 JST
 
-このレポートは、2026-10-14 05:00 JST〜2026-10-14 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-14 11:00 JST〜2026-10-14 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 71
-- [音声で扱う想定のトピック](#audio-topics): 1
-- [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 43
+- 観測トピック数: 63
+- [音声で扱う想定のトピック](#audio-topics): 2
+- [GitHubのみ掲載想定のトピック](#github-only-topics): 0
+- [低温だが記録しておくトピック](#low-record-topics): 37
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Microsoft 2026年10月 Patch Tuesday 関連まとめ](#topic-36757) | 50.0 | 56.0 | 55.0 | GitHub | audio_eligible_by_public_rules_false |
-| 2 | [Anthropic warns self-replicating AI could spread to your smart devices](#topic-37393) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 1 | [Microsoft Patches Record 1,413 Vulnerabilities, Including Exploited Windows Zero-Day](#topic-37349) | 43.0 | 46.0 | 55.0 | 音声 | 温度感上位枠 |
+| 2 | [日本のランサムウェア被害が約1.6倍に、S2Wが2026年上半期の脅威動向を公開](#topic-37415) | 37.0 | 30.0 | 42.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -20,67 +20,124 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-37393"></a>
+<a id="topic-37349"></a>
 
-### 1. Anthropic warns self-replicating AI could spread to your smart devices
+### 1. Microsoft Patches Record 1,413 Vulnerabilities, Including Exploited Windows Zero-Day
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>A⁠n⁠d⁠r⁠o⁠i⁠d</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>K⁠E⁠V</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 温度上昇中 |
+| <nobr>温⁠度⁠感</nobr> | 43.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
+| <nobr>確⁠度</nobr> | 55.0 |
 
 #### 概要
 
-Anthropicが、小型AIモデルが将来的に消費者向けIoT機器へ自己複製的に広がり、分散型ボットネットのような形で利用される可能性に警鐘を鳴らしたと報じられています。
-対象としてはAndroid TV बॉक्सやスマート家電などが挙げられていますが、現時点では将来の懸念としての言及であり、実際の広範な発生が確認されたわけではありません。
-AIがクラウドや専用サーバーだけでなく、身近な端末群に広がるリスクとして捉えられるため、従来のIoT防御や端末管理の考え方に影響します。
-AIの悪用がボットネット運用や計算資源の不正利用と結びつく可能性がある点が注目されています。
+Microsoftは、Windowsや関連ソフトウェア向けに1,400件超の脆弱性修正を公開しました。
+材料では、CVE-2026-96951がWindowsのセキュリティ機能バイパスに関わる問題として挙げられ、実際の悪用が確認されているとされています。
+月例としては非常に大きい修正規模であり、組織のパッチ適用計画や検証負荷に影響しやすい話題です。加えて、悪用観測ありとされる項目が含まれるため、優先度を上げた対応が求められます。
 
 #### 温度感の理由
 
 ##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
+- 複数ソースで確認: 2 sources。
+- 実悪用・ゼロデイ文脈。
 
 ##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+- 悪用情報あり。
 
 ##### 確度
+- 複数ソース確認。
+- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- IoT機器の資産把握と、不要な外部通信・遠隔管理機能の見直しを進める。
-- ルーターやIoT管理基盤で、未知の通信先や異常なトラフィック増加を監視する。
-- ベンダー更新の適用状況を確認し、古いOS・ファームウェアが残る機器を優先して整理する。
+- 該当するMicrosoft製品の更新適用状況を確認し、優先度の高い端末から順に展開する。
+- CVE-2026-96951の影響有無を自組織の利用構成に照らして確認し、関連ログや異常挙動の有無を点検する。
+- 広範な修正を含むため、適用前後の互換性確認と、失敗時のロールバック手順を事前に用意する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| ベンダー | Anthropic | 言及あり | 0.80 | — |
-| AIモデル/プロジェクト | Anthropic | 主題 | 0.80 | — |
+| 脆弱性 | CVE-2026-96951 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Anthropic warns self-replicating AI could spread to your smart devices](https://www.bleepingcomputer.com/news/security/anthropic-warns-self-replicating-ai-could-spread-to-your-smart-devices/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-96951](https://nvd.nist.gov/vuln/detail/CVE-2026-96951) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Patches Record 1,413 Vulnerabilities, Including Exploited Windows Zero](https://www.securityweek.com/microsoft-patches-record-1413-vulnerabilities-including-exploited-windows-zero-day/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft Patches More Than 1,400 Security Flaws](https://krebsonsecurity.com/2026/10/microsoft-patches-more-than-1400-security-flaws/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-37415"></a>
+
+### 2. 日本のランサムウェア被害が約1.6倍に、S2Wが2026年上半期の脅威動向を公開
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+S2Wが、2026年上半期の国家支援型APTとランサムウェアに関するレポートの日本語版を公開しました。
+材料では、日本のランサムウェア被害が約1.6倍に増えたとされており、国内の被害動向を把握するうえでの参考情報として注目されています。
+ランサムウェアは事業停止や復旧コストの増大につながるため、被害傾向の変化は実務上の優先順位に影響します。
+国内被害の増加が示唆されるなら、バックアップ、権限管理、監視体制の見直しを急ぐ材料になります。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- ランサムウェア文脈。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- 国内での被害増加が示されているため、自組織のバックアップ復旧手順と隔離運用を再点検する。
+- ランサムウェア対策として、多要素認証、特権ID管理、不要なリモートアクセスの整理を優先する。
+- 脅威動向レポートの内容を踏まえ、検知ルールやインシデント対応手順の更新要否を確認する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [日本のランサムウェア被害が約1.6倍に、S2Wが2026年上半期の脅威動向を公開](https://news.mynavi.jp/techplus/article/20261014-5127563/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
 
 ---
 
@@ -88,80 +145,7 @@ AIの悪用がボットネット運用や計算資源の不正利用と結びつ
 
 ## 📌 GitHubのみ掲載の注目トピック
 
-<a id="topic-36757"></a>
-
-### 1. Microsoft 2026年10月 Patch Tuesday 関連まとめ
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | GitHub |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>I⁠o⁠C</nobr> / <nobr>脅⁠威⁠レ⁠ポ⁠ー⁠ト</nobr> |
-| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 50.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 56.0 |
-| <nobr>確⁠度</nobr> | 55.0 |
-
-#### 概要
-
-Microsoftの2026年10月のPatch Tuesdayでは、同社製品群に多数の脆弱性が含まれ、WindowsやOffice関連を中心に広範な修正が行われたとされています。
-公開情報では、少なくとも一部の脆弱性について悪用観測や実運用上の注意喚起があり、更新適用の優先度が高い状況です。
-Microsoft製品は利用範囲が広いため、1件の脆弱性でも影響が大きくなりやすいのが特徴です。
-特に悪用が示唆されるものが含まれる場合、侵害リスク低減のため早期対応が重要になります。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 4 sources。
-- 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
-
-##### 実務影響
-- 悪用情報あり。
-- RCEまたは認証バイパス系。
-
-##### 確度
-- 複数ソース確認。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 影響を受けるMicrosoft製品とバージョンを棚卸しし、優先度の高い更新を先に適用する。
-- 特に外部公開環境や重要業務端末は、更新後の動作確認を含めて迅速に対応する。
-- EDRやログ監視で、不審な認証試行・権限昇格・異常なOffice/Windowsプロセス挙動を確認する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| 製品 | Chromium | 言及あり | 0.80 | — |
-| 製品 | Exchange | 言及あり | 0.80 | — |
-| ベンダー | Rapid7 | 言及あり | 0.80 | — |
-| 製品 | Microsoft Defender | 言及あり | 0.80 | — |
-| 製品 | Microsoft Exchange Server | 言及あり | 0.80 | — |
-| 製品 | Microsoft Windows | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Zero-Days Lurk in Microsoft's Overgrown October Patch Tuesday](https://www.darkreading.com/vulnerabilities-threats/zero-days-microsoft-october-patch-tuesday) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Patch Tuesday - October 2026](https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft Patch Tuesday for October 2026 — Snort rules and prominent vulnerabili](https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [October 2026 Patch Tuesday forecast: Time for an Office cleanup](https://www.helpnetsecurity.com/2026/10/09/october-2026-patch-tuesday-forecast/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: 候補あり・採用なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
+今回はGitHubのみ掲載の注目トピックはありません。
 
 <a id="low-record-topics"></a>
 
@@ -172,49 +156,43 @@ Microsoft製品は利用範囲が広いため、1件の脆弱性でも影響が�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Active Directoryが“人質”に ランサムウェアを使わない恐喝攻撃の手口とは](https://www.itmedia.co.jp/enterprise/articles/2610/14/news018.html) | 29.0 | 30.0 | 42.0 |
-| [大阪・福岡・東京・名古屋で開催される「Security Days」に HENNGE が出展・登壇 ～ SCS 対策やランサムウェア防御](https://scan.netsecurity.ne.jp/article/2026/10/14/56440.html) | 29.0 | 30.0 | 42.0 |
-| [第一興商の委託先 日本コロムビアグループでマルウェア感染、約 8,724,000 件の情報が漏えいしたおそれを否定できず](https://scan.netsecurity.ne.jp/article/2026/10/14/56449.html) | 29.0 | 20.0 | 42.0 |
-| [DOJが北朝鮮向け300万ドル収益に関与したラップトップファームを摘発、2人を逮捕](https://therecord.media/north-korea-laptop-farms-worker-scams-doj-raids-texas) | 28.0 | 20.0 | 42.0 |
-| [Visual Studio Copilot と SSMS のリモートコード実行（CVE-2026-103572）](https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/) | 27.0 | 49.0 | 51.0 |
-| [Character.ai、米連邦破産法11条を申請 Disney系が一部IPのライセンス取得で先行入札](https://www.itmedia.co.jp/news/article/2610/14/2000002238/) | 26.0 | 20.0 | 42.0 |
-| [AI エージェントの安全活用へ、Okta や AWS、Google Cloud ら「Blueprint Alliance」結成](https://scan.netsecurity.ne.jp/article/2026/10/14/56445.html) | 26.0 | 20.0 | 42.0 |
-| [AI とデータの新リスクに対応 ～ プルーフポイント、自律型エージェントを保護する新システム発表](https://scan.netsecurity.ne.jp/article/2026/10/14/56442.html) | 26.0 | 20.0 | 42.0 |
-| [生成AI利用に伴う不安と影響 最多は「AI依存による思考力の低下」](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600010/100500235/) | 26.0 | 20.0 | 42.0 |
-| [AI訓練の新興が11億ドル調達](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/040900481/100500039/) | 26.0 | 20.0 | 42.0 |
-| [質問するだけでAIコーディングエージェントが実行ファイル・ライブラリ・アプリなどをリバースエンジニアリングできる「REA」、ソースコードなしで同等機能を実装可能](https://gigazine.net/news/20261014-rea-tools/) | 25.0 | 20.0 | 43.0 |
-| [OpenAIの会議室で盗聴器が見つかり従業員が逮捕、FBIと同社が発表](https://www.securityweek.com/employee-arrested-after-listening-device-found-in-openai-conference-room-fbi-and-the-company-say/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIエンジニア、オフィスにスパイ装置を仕掛けた疑いで逮捕](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-engineer-arrested-for-allegedly-planting-spy-device-in-office/) | 25.0 | 20.0 | 42.0 |
-| [Anthropicが発見した将来のAIワームの要素](https://www.darkreading.com/perimeter/anthropic-ingredients-future-ai-worms) | 25.0 | 20.0 | 42.0 |
-| [Ghostscriptの脆弱性によりPDFアップロード経由でサーバーが乗っ取られる問題](https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/) | 24.0 | 46.0 | 50.0 |
-| [Microsoft製品向けの重要な修正プログラムを公開、2026年10月13日](https://www.cisecurity.org/advisory/critical-patches-issued-for-microsoft-products-october-13-2026_2026-114) | 24.0 | 38.0 | 42.0 |
-| [国内で相次ぐ不正アクセス、Androidアプリからサーバを狙う攻撃にNICTが警鐘](https://news.mynavi.jp/techplus/article/20261014-5126008/) | 24.0 | 20.0 | 43.0 |
-| [Mozillaが企業や組織向けの有料ブラウザ管理・セキュリティプラットフォーム「Firefox Enterprise」を発表](https://gigazine.net/news/20261014-firefox-enterprise/) | 22.0 | 20.0 | 42.0 |
-| [ブラウザ「Chrome」にアップデート - 脆弱性37件に対応](https://www.security-next.com/191382) | 22.0 | 20.0 | 42.0 |
-| [JR東海、ECサイトの顧客情報約1.5万件漏えいか IDCFへの不正アクセスで「閲覧された可能性を否定できない」](https://www.itmedia.co.jp/news/article/2610/14/2000002237/) | 21.0 | 20.0 | 42.0 |
-| [AIのアクセス権を狙う「LLMジャッキング」](https://ascii.jp/elem/000/004/441/4441876/?rss=) | 21.0 | 20.0 | 42.0 |
-| [さいたま市や横須賀市など、防災情報配信システムに不正アクセス 全国でメアド最大313万漏えいか](https://www.itmedia.co.jp/news/article/2610/14/2000002239/) | 21.0 | 20.0 | 42.0 |
-| [セキュリティは壁を高くする時代から 攻撃基盤そのものに働きかける時代へ ほか [Scan PREMIUM Monthly Executive Summary 2026年9月度]](https://scan.netsecurity.ne.jp/article/2026/10/14/56453.html) | 21.0 | 20.0 | 42.0 |
-| [内定者 96 名のアドレス流出 ～ 江戸川区「採用内定式」開催案内のメール誤送信](https://scan.netsecurity.ne.jp/article/2026/10/14/56452.html) | 21.0 | 20.0 | 42.0 |
-| [上司に報告せず発覚遅れる ～ 大阪市立美術館でメール誤送信](https://scan.netsecurity.ne.jp/article/2026/10/14/56451.html) | 21.0 | 20.0 | 42.0 |
-| [ConoHa WING byGMO に不正アクセス、不正プログラムを設置](https://scan.netsecurity.ne.jp/article/2026/10/14/56450.html) | 21.0 | 20.0 | 42.0 |
-| [ローソンのメールサーバから不審な英文メール送信](https://scan.netsecurity.ne.jp/article/2026/10/14/56448.html) | 21.0 | 20.0 | 42.0 |
-| [日本原子力研究開発機構が運用している研究支援サイトに不正アクセス、顔写真付公的身分証明証 200 件が漏えい](https://scan.netsecurity.ne.jp/article/2026/10/14/56447.html) | 21.0 | 20.0 | 42.0 |
-| [ブックオフグループホールディングス子会社に不正アクセス、最大 約 643 万件の会員データが漏えい](https://scan.netsecurity.ne.jp/article/2026/10/14/56446.html) | 21.0 | 20.0 | 42.0 |
-| [10月1日 能動的サイバー防御関連法施行](https://scan.netsecurity.ne.jp/article/2026/10/14/56444.html) | 21.0 | 20.0 | 42.0 |
-| [防衛省、「サイバーコンテスト」過去問を体験できる特設ページ公開](https://scan.netsecurity.ne.jp/article/2026/10/14/56443.html) | 21.0 | 20.0 | 42.0 |
-| [10 / 21 ～ 23 開催「Security Days Fall 2026 Tokyo」にエーアイセキュリティラボ出展・登壇](https://scan.netsecurity.ne.jp/article/2026/10/14/56441.html) | 21.0 | 20.0 | 42.0 |
-| [公式 SNS の偽アカウント「大学入試セソター」に注意呼びかけ](https://scan.netsecurity.ne.jp/article/2026/10/14/56439.html) | 21.0 | 20.0 | 42.0 |
-| [Let’s Encrypt、SSL/TLS証明書の有効期間を90日から64日に短縮 - 2027年2月から](https://news.mynavi.jp/techplus/article/20261014-5117641/) | 21.0 | 20.0 | 42.0 |
-| [AIの可視化の重要性と、多くの組織がAIガバナンスに苦戦する理由](https://japan.zdnet.com/article/35253286/) | 21.0 | 20.0 | 42.0 |
-| [CRA部分適用による負担増に備えを 違反した場合、高額の罰則金も](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/092400133/100600205/) | 21.0 | 20.0 | 42.0 |
-| [日本IBMが提示する、AI時代のサイバー防御 - ConcertとLightwellで脆弱性対策を自動化](https://news.mynavi.jp/techplus/article/20261014-5123314/) | 21.0 | 20.0 | 42.0 |
-| [Microsoft、1,400件超のセキュリティ脆弱性を修正](https://krebsonsecurity.com/2026/10/microsoft-patches-more-than-1400-security-flaws/) | 20.0 | 28.0 | 50.0 |
-| [北朝鮮による広範なリモートワーク詐欺で14人を起訴](https://cyberscoop.com/doj-north-korea-remote-work-laptop-farms/) | 20.0 | 20.0 | 48.0 |
-| [「保護ドメイン」のなりすましメールによる悪用を防ぐサービス、GMOブランドセキュリティが提供 ブランド防衛目的で保有するドメインを守る「GMOなりすましメールブロック」](https://internet.watch.impress.co.jp/docs/news/2147669.html) | 20.0 | 20.0 | 42.0 |
-| [ネットワーク内部のノイズ：稚拙な攻撃が明らかにしたサードパーティリスク](https://unit42.paloaltonetworks.com/noise-inside-network-third-party-risk/) | 20.0 | 20.0 | 42.0 |
-| [北朝鮮がウクライナ人を標的に戦争情報を狙うフィッシング攻撃](https://www.darkreading.com/cyberattacks-data-breaches/north-korea-phishes-ukrainians-war-intel) | 20.0 | 20.0 | 42.0 |
-| [FTC、性的脅迫被害者から支援を装って少なくとも6000万ドルを徴収した企業を告発](https://therecord.media/sextortion-assistance-company-alleged-fraud-ftc-complaint) | 20.0 | 20.0 | 42.0 |
+| [ランサムウェアが個人情報を悪用、「居場所を把握している」ような脅しも](https://www.theregister.com/cyber-crime/2026/10/14/ransomware-gets-personal-we-know-where-you-are-kind-of-stuff/5302939) | 28.0 | 30.0 | 42.0 |
+| [ランサムウェア集団が物理的脅迫や家族へのつきまといを採用？](https://www.darkreading.com/cybersecurity-analytics/ransomware-gangs-physical-threats-family-stalking) | 28.0 | 30.0 | 42.0 |
+| [AIチャットサービスのCharacter.aiが破産申請、ディズニーへの資産売却などを検討](https://gigazine.net/news/20261014-character-ai-bankruptcy/) | 27.0 | 20.0 | 42.0 |
+| [「Gemini 4 Argon」を正式リリース、Claude Fable 5.1やGPT-6 Astraと同等性能で久しぶりにGoogleがAIトップ競争に追いつく](https://gigazine.net/news/20261014-gemini-4-argon-available-for-everyone/) | 27.0 | 20.0 | 42.0 |
+| [kintoneデータを最強のAIコンテキストに MCP活用で変わるAIエージェント開発とデータアクセスレイヤーの重要性](https://ascii.jp/elem/000/004/439/4439655/?rss=) | 26.0 | 20.0 | 42.0 |
+| [多くの企業がAIエージェントを内部関係者とみなし、CISOは自身の責任を懸念している](https://www.helpnetsecurity.com/2026/10/14/ciso-ai-agent-insider-risk/) | 25.0 | 20.0 | 42.0 |
+| [注意喚起: SiteGuard Server EditionにおけるOSコマンドインジェクションの脆弱性（CVE-2026-106931）に関する注意喚起 (公開)](https://www.jpcert.or.jp/at/2026/at260032.html) | 24.0 | 46.0 | 50.0 |
+| [今日は毎月恒例「Windows Update」の日、過去最多となる1411件の脆弱性を修正](https://gigazine.net/news/20261014-windows-update/) | 24.0 | 20.0 | 43.0 |
+| [Microsoft、悪用済みのWindows Shellの不具合を含む1,413件の脆弱性を修正](https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html) | 22.0 | 32.0 | 42.0 |
+| [「HAProxy Data Plane API」に認証バイパスの深刻な脆弱性](https://www.security-next.com/191343) | 22.0 | 20.0 | 42.0 |
+| [フランス全土のスーパーマーケットの冷蔵庫を無理矢理50度まで上げたサイバー攻撃の詳細、パスワードは毎日自動更新で「本日の日付」になるという脆弱性](https://gigazine.net/news/20261014-freeze-controller-defrost-food-vulnerabilities-danfoss/) | 22.0 | 20.0 | 42.0 |
+| [「Drupal」に脆弱性、アップデートの公開を予告 - サイト管理者は準備を](https://www.security-next.com/191415) | 22.0 | 20.0 | 42.0 |
+| [Fortinet、アドバイザリ11件を公開 - 「FortiSandbox」「FortiSIEM」にクリティカル](https://www.security-next.com/191410) | 22.0 | 20.0 | 42.0 |
+| [世界最長の海底沈埋トンネル建設がサイバー攻撃で停止](https://gigazine.net/news/20261014-fehmarnbelt-querung-cyber-attacked/) | 22.0 | 20.0 | 42.0 |
+| [OpenAIの従業員をFBIが逮捕、役員会議室に盗聴器を仕掛けた疑い](https://gigazine.net/news/20261014-openai-employee-arrested-by-fbi/) | 22.0 | 20.0 | 42.0 |
+| [パスワードが「123456」の企業アカウント経由でデンマークの国家登録簿から880万人分の個人情報が流出](https://gigazine.net/news/20261014-denmark-123456-password/) | 22.0 | 20.0 | 42.0 |
+| [MS、月例更新で1400件以上の脆弱性に対応 - 一部悪用も](https://www.security-next.com/191394) | 22.0 | 20.0 | 42.0 |
+| [露やイランなど外国勢力の脅威「過去10年間で4倍増」と英MI5長官、AI悪用も警告](https://www.itmedia.co.jp/news/article/2610/14/2000002259/) | 21.0 | 20.0 | 42.0 |
+| [「セキュリティ強化は事業への投資」- 東芝テックが語る、店舗を止めないIT基盤](https://news.mynavi.jp/techplus/article/20261014-5127340/) | 21.0 | 20.0 | 42.0 |
+| [デンマークの880万人分流出、原因はパスワード「123456」 ハッカー「侵入は難しくなかった」 現地報道](https://www.itmedia.co.jp/news/article/2610/14/2000002257/) | 21.0 | 20.0 | 42.0 |
+| [全国各地で個人情報漏えいの可能性、防災メールにも影響 - 影響自治体一覧](https://news.mynavi.jp/techplus/article/20261014-5127481/) | 21.0 | 20.0 | 42.0 |
+| [IFSの産業用AI戦略--企業に眠る「40％の未活用能力」を解放](https://japan.zdnet.com/article/35253525/) | 21.0 | 20.0 | 42.0 |
+| [楽天モバイル、利用者の「支払い証明書」に第三者閲覧の恐れ 社内の脆弱性診断で発覚](https://www.itmedia.co.jp/news/article/2610/14/2000002250/) | 21.0 | 20.0 | 42.0 |
+| [国内で不正アクセス相次ぐ、ガートナーが緊急提言 - 大手企業、「脆弱性管理十分」は3割](https://news.mynavi.jp/techplus/article/20261014-5126494/) | 21.0 | 20.0 | 42.0 |
+| [自治体の防災情報配信などに使われる「SpeeCAN RAIDEN」、不正アクセスで個人情報漏洩の可能性 さいたま市、横須賀市をはじめ多数の自治体に影響](https://internet.watch.impress.co.jp/docs/news/2148069.html) | 20.0 | 20.0 | 42.0 |
+| [偽ITワーカー詐欺の拡大と脅威への対処方法](https://www.itpro.com/security/fake-it-worker-schemes-are-ramping-up-how-to-manage-the-threat) | 20.0 | 20.0 | 42.0 |
+| [SAPがNetWeaverとS/4HANAの重大な脆弱性を修正](https://www.securityweek.com/sap-patches-critical-netweaver-s-4hana-vulnerabilities/) | 20.0 | 20.0 | 42.0 |
+| [Windows SmartScreen Enclaveでコード実行を可能にした4バイト書き込みとタイミングバグ](https://thehackernews.com/2026/10/four-byte-write-and-timing-bug-let.html) | 20.0 | 20.0 | 42.0 |
+| [パッチ適用と問題予防に学ぶ教訓](https://www.helpnetsecurity.com/2026/10/14/kunal-modasiya-qualys-vulnerability-remediation/) | 20.0 | 20.0 | 42.0 |
+| [Meshery：Kubernetes向けのオープンソース・クラウドネイティブ管理ツール](https://www.helpnetsecurity.com/2026/10/14/meshery-open-source-cloud-native-manager-kubernetes/) | 20.0 | 20.0 | 42.0 |
+| [CISA ICS Advisory / ICS Medical Advisory（2026年10月13日）](https://jvn.jp/vu/JVNVU92045336/) | 20.0 | 20.0 | 42.0 |
+| [KomodoサーバーのエージェントPeripheryにおけるOSコマンドインジェクションの脆弱性](https://jvn.jp/vu/JVNVU96061614/) | 20.0 | 20.0 | 42.0 |
+| [Lowcoder Query Library APIにおける認可回避の脆弱性](https://jvn.jp/vu/JVNVU91984971/) | 20.0 | 20.0 | 42.0 |
+| [Go、OpenSSL、Apple、LibreSSL、pyca、wolfSSLのRFC 5280実装における名前制約が不整合である脆弱性](https://jvn.jp/vu/JVNVU91265939/) | 20.0 | 20.0 | 42.0 |
+| [Shopwareにおけるクロスサイトスクリプティングの脆弱性](https://jvn.jp/vu/JVNVU94083107/) | 20.0 | 20.0 | 42.0 |
+| [Google、Chromeのバグ報奨金の基本支給額を4倍に引き上げ、サンドボックス突破には最大2万ドルを提供](https://www.helpnetsecurity.com/2026/10/14/google-chrome-vulnerability-rewards-program-updates/) | 20.0 | 20.0 | 42.0 |
+| [注意喚起: 2026年10月マイクロソフトセキュリティ更新プログラムに関する注意喚起 (公開)](https://www.jpcert.or.jp/at/2026/at260031.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
