@@ -1,19 +1,18 @@
-# 📡 サイレーダー 2026-10-16 11:00 JST
+# 📡 サイレーダー 2026-10-16 17:00 JST
 
-このレポートは、2026-10-16 05:00 JST〜2026-10-16 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-16 11:00 JST〜2026-10-16 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 61
-- [音声で扱う想定のトピック](#audio-topics): 3
+- 観測トピック数: 55
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 34
+- [低温だが記録しておくトピック](#low-record-topics): 29
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [AI-Powered Espionage Campaign Targets Government Linux Infrastructure](#topic-37905) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
-| 2 | [AI Slop Isn't Just for Social Media; It's Ruining Cyberattacks, Too](#topic-37921) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
-| 3 | [Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers](#topic-37923) | 32.0 | 46.0 | 50.0 | 音声 | 温度感上位枠 |
+| 1 | [China-Linked Hackers Exploited BeyondTrust Zero-Day to Take Over Remote Support Servers](#topic-37930) | 37.0 | 46.0 | 51.0 | 音声 | 温度感上位枠 |
+| 2 | [BeyondTrust patches zero-day exploited in attacks since August](#topic-37935) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -21,148 +20,36 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-37905"></a>
+<a id="topic-37930"></a>
 
-### 1. AI-Powered Espionage Campaign Targets Government Linux Infrastructure
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-政府系のLinux基盤を狙うスパイ活動キャンペーンが報告されており、カスタムマルウェアやWebシェル、認証情報の窃取が関与しているとされています。
-AIを用いた脅威活動として紹介されており、攻撃の自動化や高度化を示唆する事例として注目されています。
-政府機関のLinux環境は機密情報や重要業務を支えることが多く、侵害されると影響が大きくなり得ます。
-AIを背景にした攻撃の可能性が示されているため、防御側は従来型の監視に加えて検知・認証管理の見直しが求められます。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Linuxサーバー上のWebシェル設置や不審な永続化の痕跡を確認すること。
-- 認証情報の保護を強化し、多要素認証や特権アカウントの監視を徹底すること。
-- 境界装置や公開サーバーのログを見直し、普段と異なるアクセスや不審なプロセス実行を早期に検知できるようにすること。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [AI-Powered Espionage Campaign Targets Government Linux Infrastructure](https://unit42.paloaltonetworks.com/ai-campaign-targets-linux-infrastructure/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-37921"></a>
-
-### 2. AI Slop Isn't Just for Social Media; It's Ruining Cyberattacks, Too
+### 1. China-Linked Hackers Exploited BeyondTrust Zero-Day to Take Over Remote Support Servers
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>A⁠I</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-公開情報では、AIを使った攻撃が必ずしも高度化しているわけではなく、むしろ攻撃の質を下げている可能性が指摘されています。
-現時点では、こうした動きが一部の脅威活動に見られるという文脈であり、広く一般化できる段階ではありません。
-AI活用が攻撃の効率化や巧妙化につながるという見方が広がる一方で、実際の脅威評価はより冷静に見る必要があることを示しています。
-防御側にとっては、AI関連の話題を過大評価せず、実際の攻撃品質や手口の変化を確認する視点が重要です。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- AIを使った攻撃でも、品質や一貫性は自動的に上がるとは限らないため、過度な前提を置かない。
-- 脅威評価では「AI使用の有無」より、実際の観測事例や被害傾向、再現性のある手口に注目する。
-- AI関連の話題は注目を集めやすいので、社内説明では誇張を避け、確認済みの事実に基づいて整理する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [AI Slop Isn't Just for Social Media; It's Ruining Cyberattacks, Too](https://www.darkreading.com/threat-intelligence/ai-slop-ruining-cyberattacks) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-37923"></a>
-
-### 3. Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>地⁠政⁠学⁠・⁠サ⁠イ⁠バ⁠ー⁠紛⁠争</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 32.0 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
-| <nobr>確⁠度</nobr> | 50.0 |
+| <nobr>確⁠度</nobr> | 51.0 |
 
 #### 概要
 
-Collabora Online の Nextcloud 向けアプリ「richdocumentscode」に存在する重大なコマンド実行の脆弱性が、CVE-2026-110447 として追跡されており、悪用が報告されています。
-影響を受ける環境では、Nextcloud サーバーへの不正な永続化につながる可能性があるため注意が必要です。
-RCE はサーバー上で任意の処理を実行されるおそれがあるため、侵害の起点になりやすい類型です。
-Nextcloud は業務利用も多く、関連アプリの脆弱性が運用影響に直結しやすい点が注目されます。
+BeyondTrust Remote Supportに、新たに公表された脆弱性CVE-2026-102764が見つかり、ゼロデイとして悪用されたと報告されています。
+公表内容によると、影響を受けるのは内部メッセージング関連の起点検証不備で、攻撃者がリモートサポートサーバーに影響を与えた可能性があります。
+リモートサポート製品は社内外の保守・運用の要となるため、侵害されると広範な業務影響につながりやすいです。
+今回は実際の悪用が示されているため、単なる理論上の脆弱性よりも優先度が高いと考えられます。
 
 #### 温度感の理由
 
 ##### 温度感
-- 脅威・攻撃キャンペーン文脈。
+- 実悪用・ゼロデイ文脈。
 
 ##### 実務影響
-- RCEまたは認証バイパス系。
+- 悪用情報あり。
 
 ##### 確度
 - CVE IDあり。
@@ -170,22 +57,84 @@ Nextcloud は業務利用も多く、関連アプリの脆弱性が運用影響�
 
 #### 担当者向け確認ポイント
 
-- Nextcloud で Collabora Online / richdocumentscode を利用しているかを確認し、該当バージョンの影響有無を点検する。
-- ベンダーや配布元の修正版・回避策が出ていないか確認し、可能なら早期適用する。
-- 不審な管理者権限の変更、未知のプロセス、設定改ざんなど、サーバー侵害の兆候を点検する。
+- BeyondTrust Remote Supportの該当版がないか確認し、ベンダー案内に沿って更新・緩和策を適用する。
+- 外部公開されたリモートサポート基盤の監査を行い、認証・アクセス制御・管理者権限の見直しを進める。
+- 関連サービスの監査ログを点検し、不審なセッション作成、設定変更、認証失敗の増加がないか確認する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-110447 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
+| 脆弱性 | CVE-2026-102764 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | BeyondTrust | 言及あり | 0.80 | — |
+| 製品 | BeyondTrust Remote Support | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-110447](https://nvd.nist.gov/vuln/detail/CVE-2026-110447) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers](https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-102764](https://nvd.nist.gov/vuln/detail/CVE-2026-102764) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [China-Linked Hackers Exploited BeyondTrust Zero-Day to Take Over Remote Support ](https://thehackernews.com/2026/10/china-linked-hackers-exploited.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-37935"></a>
+
+### 2. BeyondTrust patches zero-day exploited in attacks since August
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
+| <nobr>確⁠度</nobr> | 43.0 |
+
+#### 概要
+
+BeyondTrustは、Remote Support（RS）に存在する重大な脆弱性について、8月下旬以降にゼロデイ攻撃で悪用されていたとして利用者に修正を促しました。
+公開情報では、既に悪用の兆候がある脆弱性として扱われており、早急な対応が必要な状況です。ゼロデイとして実際に悪用されていた可能性があるため、放置すると侵害リスクが高まります。
+リモートサポート製品は業務影響が大きく、対応遅れが認証情報や支援環境のリスクにつながりやすい点も注意が必要です。
+
+#### 温度感の理由
+
+##### 温度感
+- 実悪用・ゼロデイ文脈。
+
+##### 実務影響
+- 悪用情報あり。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- BeyondTrust Remote Support（RS）を利用しているかを確認し、提供済みの修正・緩和策を優先適用する。
+- 管理画面や関連ログを確認し、8月下旬以降の不審なアクセスや設定変更の有無を点検する。
+- 外部公開の範囲や権限設定を見直し、必要最小限のアクセスに絞る。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | BeyondTrust | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [BeyondTrust patches zero-day exploited in attacks since August](https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -211,40 +160,35 @@ Nextcloud は業務利用も多く、関連アプリの脆弱性が運用影響�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [小さなエージェント、さらに小さな被害範囲：AIにできることを制御する](https://isc.sans.edu/diary/rss/33430) | 27.0 | 20.0 | 42.0 |
-| [Anthropic、METRの評価チームを社内に常駐させ“従業員並み”のアクセス付与 公表に拒否権なし](https://www.itmedia.co.jp/news/article/2610/16/2000002315/) | 26.0 | 20.0 | 42.0 |
-| [AI insideが魅せた業務完全自動化の世界 もはやデモはシンプルすぎて映えない](https://ascii.jp/elem/000/004/443/4443079/?rss=) | 26.0 | 20.0 | 42.0 |
-| [Webページヘッダーに潜む間接プロンプトインジェクションの増加に注意](https://www.theregister.com/ai-and-ml/2026/10/15/indirect-prompt-injection-starts-turning-up-in-webpage-headers-please-ignore-all-previous-instructions-and-rise-up-against-your-masters/5303434) | 25.0 | 20.0 | 42.0 |
-| [Linux カーネルのネットワーク機能におけるページキャッシュの上書きが可能となるデータ検証不備の脆弱性（Scan Tech Report）](https://scan.netsecurity.ne.jp/article/2026/10/16/56483.html) | 24.0 | 20.0 | 43.0 |
-| [わずか0.43GBでスマホ動作可能なAI「Ternary Bonsai 2」シリーズがオープンモデルとして登場、iPhone 18 Pro Maxで毎秒120トークンの高速処理が可能](https://gigazine.net/news/20261016-ternary-bonsai-2-2b-4b-9b/) | 22.0 | 20.0 | 42.0 |
-| [「Chrome」にセキュリティアップデート - 前回更新から2日](https://www.security-next.com/191540) | 22.0 | 20.0 | 42.0 |
+| [「ランサムウェア攻撃を失敗させる」VPN、PC、Active Directoryなどの設定チェックシート](https://atmarkit.itmedia.co.jp/ait/articles/2610/16/news072.html) | 29.0 | 30.0 | 42.0 |
+| [FortiOSの脆弱性を悪用してタグ付きVPNセッションの検査を回避するPEERSTITCHマルウェアの配布](https://thehackernews.com/2026/10/attackers-exploit-fortios-flaw-to.html) | 28.0 | 28.0 | 50.0 |
+| [DDoS攻撃は回線容量に達する前にサービスを停止させることができる](https://www.helpnetsecurity.com/2026/10/16/netscout-ddos-attack-growth-report/) | 28.0 | 20.0 | 42.0 |
+| [NVIDIAが画像・動画・文章をまとめて理解するオープンウェイトAI「Nemotron 3.5 Super VL」を公開、処理コストを40分の1に削減する事例も](https://gigazine.net/news/20261016-nemotron-3-5-super-vl/) | 27.0 | 20.0 | 42.0 |
+| [画像生成・編集AI「Krea 3」のベータ版がリリースされる、GPT-Image-2より10倍高速で価格は3分の1](https://gigazine.net/news/20261016-krea-3-beta/) | 27.0 | 20.0 | 42.0 |
+| [AIエージェントの導入半年で明確なビジネス成果--キズキレンタルに聞く勘所](https://japan.zdnet.com/article/35253643/) | 26.0 | 20.0 | 42.0 |
+| [“月面でAI実験”から“スマート養蜂”まで、HPEが技術の広がりを披露](https://ascii.jp/elem/000/004/443/4443109/?rss=) | 26.0 | 20.0 | 42.0 |
+| [Microsoft、社内エンジニア数万人を対象に「Claude Code」「Copilot CLI」導入の影響を分析 生産性どう変わる](https://www.itmedia.co.jp/news/article/2610/16/2000002277/) | 26.0 | 20.0 | 42.0 |
+| [CERT-In、AIエージェントによるインド組織の機密データアクセスを警告](https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html) | 25.0 | 20.0 | 42.0 |
+| [盗まれたAI APIキーがハッカーの自律スキャンを支えている](https://www.helpnetsecurity.com/2026/10/16/stolen-ai-api-keys-autonomous-scans/) | 25.0 | 20.0 | 42.0 |
+| [攻撃者はAIでアプリを解析していた - JPCERT/CCが不正アクセスの手口を公表](https://news.mynavi.jp/techplus/article/20261016-5138901/) | 24.0 | 20.0 | 43.0 |
+| [Adobe、アドバイザリ11件を公開 - 深刻な脆弱性にも対処](https://www.security-next.com/191434) | 22.0 | 20.0 | 42.0 |
+| [アクセンチュアが従業員に「Claudeは毎月29ドル(約4600円)までしか使えない」と伝える](https://gigazine.net/news/20261016-accenture-ai-limit/) | 22.0 | 20.0 | 42.0 |
+| [気象庁、緊急地震速報の取り消しで「サイバー攻撃」を否定 原因は調査中](https://www.itmedia.co.jp/news/article/2610/16/2000002333/) | 21.0 | 20.0 | 42.0 |
+| [返信したら攻撃が始まる GmailからGitHubまで悪用する情報窃取の手口](https://atmarkit.itmedia.co.jp/ait/articles/2610/16/news037.html) | 21.0 | 20.0 | 42.0 |
+| [人気Web制作ツール「Studio」全ユーザーの情報漏えいか フォームに送信された内容、外部APIキーなども](https://www.itmedia.co.jp/news/article/2610/16/2000002332/) | 21.0 | 20.0 | 42.0 |
+| [ACCESS台湾子会社のEC支援サービスに不正アクセス 通販顧客15万件、クレカのセキュリティコードも一部流出](https://www.itmedia.co.jp/news/article/2610/16/2000002329/) | 21.0 | 20.0 | 42.0 |
+| [不正アクセス多発、Gartnerが日本企業に「7つのアクション」を緊急提言](https://www.itmedia.co.jp/enterprise/articles/2610/16/news048.html) | 21.0 | 20.0 | 42.0 |
+| [コミックシーモア、不正アクセスの可能性でサービス停止 メンテ終了時期は未定](https://www.itmedia.co.jp/news/article/2610/16/2000002321/) | 21.0 | 20.0 | 42.0 |
+| [SaaSの約半数で「MFAが未提供」、利用者による「ログ確認不可」の場合も――5300サービスを調査](https://atmarkit.itmedia.co.jp/ait/articles/2610/16/news035.html) | 21.0 | 20.0 | 42.0 |
 | [「『楽天カード公式』から詐欺メール」報告相次ぐ ドコモメールに公式マーク付きフィッシング、一部企業の認証設定に脆弱性](https://www.itmedia.co.jp/news/article/2610/16/2000002314/) | 21.0 | 20.0 | 42.0 |
-| [システム業者への不正アクセスを受け、大分県で防災メール等配信システムの新規登録を停止](https://scan.netsecurity.ne.jp/article/2026/10/16/56482.html) | 21.0 | 20.0 | 42.0 |
-| [アルカディア運営の「SpeeCAN RAIDEN」に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/10/16/56481.html) | 21.0 | 20.0 | 42.0 |
-| [TOPPAN 受託の「保険料控除証明書 発行サービス 」運用業務で 177,426 名分のデータ誤送付](https://scan.netsecurity.ne.jp/article/2026/10/16/56480.html) | 21.0 | 20.0 | 42.0 |
-| [三井不動産への不正アクセス、攻撃者による資格情報の不正利用を確認](https://scan.netsecurity.ne.jp/article/2026/10/16/56479.html) | 21.0 | 20.0 | 42.0 |
-| [フクビ化学工業 英語版ウェブサイトに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/10/16/56478.html) | 21.0 | 20.0 | 42.0 |
-| [サンポー食品ウェブサイトに不正アクセス、管理者権限の取得や改ざんを確認](https://scan.netsecurity.ne.jp/article/2026/10/16/56477.html) | 21.0 | 20.0 | 42.0 |
-| [「極上珈琲 生豆本舗」に SQL インジェクション攻撃、サイトが正常に表示されない障害が発生](https://scan.netsecurity.ne.jp/article/2026/10/16/56476.html) | 21.0 | 20.0 | 42.0 |
-| [「TEMAIRAZU シリーズ」を利用する宿泊施設の予約客に不審なメッセージを送信](https://scan.netsecurity.ne.jp/article/2026/10/16/56475.html) | 21.0 | 20.0 | 42.0 |
-| [IPA、不正アクセスによる漏えい等の事案を踏まえ速やかに実施すべき対策を公表](https://scan.netsecurity.ne.jp/article/2026/10/16/56474.html) | 21.0 | 20.0 | 42.0 |
-| [楽天モバイルの複数のスマートフォンの Android Verified Boot 機能で既知のテスト用鍵がそのまま使用されている問題](https://scan.netsecurity.ne.jp/article/2026/10/16/56473.html) | 21.0 | 20.0 | 42.0 |
-| [SiteGuard Server Edition に OS コマンドインジェクションの脆弱性](https://scan.netsecurity.ne.jp/article/2026/10/16/56472.html) | 21.0 | 20.0 | 42.0 |
-| [EC-CUBE4 系用プラグイン「AmazonPayプラグイン」に不変と想定している Web パラメータの外部制御の脆弱性](https://scan.netsecurity.ne.jp/article/2026/10/16/56471.html) | 21.0 | 20.0 | 42.0 |
-| [マイクロソフトが 10 月のセキュリティ情報公開、悪用の事実を確認済みの脆弱性が 1 件](https://scan.netsecurity.ne.jp/article/2026/10/16/56470.html) | 21.0 | 20.0 | 42.0 |
-| [AssetView に脆弱性、管理コンソール等から SYSTEM 権限奪取の恐れ](https://scan.netsecurity.ne.jp/article/2026/10/16/56469.html) | 21.0 | 20.0 | 42.0 |
-| [ASMやインシデント初動対応をワンストップで ～ GMOイエラエ、年間契約型の新セキュリティプラン](https://scan.netsecurity.ne.jp/article/2026/10/16/56468.html) | 21.0 | 20.0 | 42.0 |
-| [日本企業の7割は脆弱性管理が不十分？ 相次ぐ不正アクセスにガートナーが緊急提言](https://atmarkit.itmedia.co.jp/ait/articles/2610/16/news019.html) | 21.0 | 20.0 | 42.0 |
-| [「セキュリティソフトも売ってるのに」ソースネクスト会員情報漏えい、パスワード含む最大2252万件 API不正利用される](https://www.itmedia.co.jp/news/article/2610/16/2000002312/) | 21.0 | 20.0 | 42.0 |
-| [Microsoft、10月の月例更新で脆弱性1413件に対応 悪用確認済みの脆弱性は](https://www.itmedia.co.jp/enterprise/articles/2610/16/news014.html) | 21.0 | 20.0 | 42.0 |
-| [重大なPwnEscape Linuxカーネル脆弱性によりゲストVMがホストメモリを読み取り可能に](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html) | 20.0 | 28.0 | 50.0 |
-| [CISA ICS Advisory / ICS Medical Advisory（2026年10月15日）](https://jvn.jp/vu/JVNVU96928590/) | 20.0 | 20.0 | 42.0 |
-| [SecTor 2026が示す急速に変化するサイバーセキュリティの情勢](https://www.darkreading.com/cybersecurity-operations/sector-2026-reveals-a-rapidly-shifting-cybersecurity-landscape) | 20.0 | 20.0 | 42.0 |
-| [F-Secure、50種以上の消費者詐欺を網羅する被害者目線の詐欺百科事典を公開](https://www.darkreading.com/threat-intelligence/f-secure-launches-victim-first-scam-encyclopedia-covering-50-types-of-consumer-fraud) | 20.0 | 20.0 | 42.0 |
-| [警察庁とマイクロソフトおよびJC3、日本の個人・法人を狙った詐欺集団の犯罪インフラをテイクダウン](https://internet.watch.impress.co.jp/docs/news/2148376.html) | 20.0 | 20.0 | 42.0 |
-| [Proofpoint、Varonisを63億ドルで買収へ](https://cyberscoop.com/proofpoint-acquires-varonis-systems-data-security/) | 20.0 | 20.0 | 42.0 |
-| [連邦破産裁判所、委託先へのサイバー攻撃後に障害発生](https://therecord.media/federal-bankruptcy-courts-dealing-with-cyberattack-outage) | 20.0 | 20.0 | 42.0 |
-| [ソースネクスト、不正アクセスでパスワード含む会員の個人情報最大約2252万件が流出 他サービスで同じパスワードを使っている人はただちに変更を](https://internet.watch.impress.co.jp/docs/news/2148588.html) | 20.0 | 20.0 | 42.0 |
+| [BAE Systemsへのサイバー攻撃で米連邦裁判所の業務に影響](https://www.bleepingcomputer.com/news/security/bae-systems-cyberattack-disrupts-us-federal-court-operations/) | 20.0 | 20.0 | 42.0 |
+| [ProofpointがVaronisを63億ドルの全額現金で買収へ](https://www.securityweek.com/proofpoint-inks-6-3-billion-all-cash-deal-to-acquire-varonis/) | 20.0 | 20.0 | 42.0 |
+| [管理者が1〜2人のチームでActive Directoryの脆弱性が長年放置される理由](https://www.helpnetsecurity.com/2026/10/16/david-fuhr-intcube-active-directory-security/) | 20.0 | 20.0 | 42.0 |
+| [ヤマト運輸 個人情報530万件流出](https://news.yahoo.co.jp/pickup/6598987?source=rss) | 20.0 | 20.0 | 42.0 |
+| [気象庁 サイバー攻撃の可能性ない](https://news.yahoo.co.jp/pickup/6598988?source=rss) | 20.0 | 20.0 | 42.0 |
+| [サイバー人材不足？求人件数が4年ぶりの低水準に](https://www.helpnetsecurity.com/2026/10/16/cybersecurity-job-postings-talent-shortage/) | 20.0 | 20.0 | 42.0 |
+| [「SpeeCAN RAIDEN」に不正アクセス発生のアルカディアが続報、情報漏えいは引き続き調査中](https://internet.watch.impress.co.jp/docs/news/2148769.html) | 20.0 | 20.0 | 42.0 |
+| [Fastfetch 2.70.0でディスクの空き容量表示方法が変更される](https://www.helpnetsecurity.com/2026/10/16/fastfetch-2-70-0-released/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
