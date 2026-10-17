@@ -1,17 +1,15 @@
-# 📡 サイレーダー 2026-10-17 11:00 JST
+# 📡 サイレーダー 2026-10-17 17:00 JST
 
-このレポートは、2026-10-17 05:00 JST〜2026-10-17 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-17 11:00 JST〜2026-10-17 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 33
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 26
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 7
+- [低温だが記録しておくトピック](#low-record-topics): 2
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [BeyondTrust Remote Support Zero-Day Continues Trend of Exploited Edge Bugs](#topic-38104) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -19,70 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-38104"></a>
-
-### 1. BeyondTrust Remote Support Zero-Day Continues Trend of Exploited Edge Bugs
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-BeyondTrust Remote Supportに関するゼロデイ脆弱性が、実際の悪用が観測されている文脈で取り上げられています。
-今週はIvanti、Cisco、Palo Alto Networksでもエッジ機器の脆弱性が注目されており、境界防御系の製品に対する攻撃が続いている状況がうかがえます。
-エッジやリモートサポート製品は外部から到達可能なことが多く、侵害されると組織内への足がかりになりやすいためです。
-悪用が確認されている場合は、公開パッチの適用や暫定対策の優先度が高まります。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- BeyondTrust Remote Supportを利用している環境では、ベンダー通知と修正情報を確認し、適用可能な対策を優先する。
-- インターネット公開しているエッジ系製品の棚卸しを行い、不要な公開やアクセス経路がないか見直す。
-- 関連ログを確認し、通常と異なる管理操作や認証失敗の増加など、侵害の兆候を監視する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Palo Alto Networks | 言及あり | 0.80 | — |
-| ベンダー | BeyondTrust | 言及あり | 0.80 | — |
-| ベンダー | Ivanti | 言及あり | 0.80 | — |
-| ベンダー | Cisco | 言及あり | 0.80 | — |
-| 製品 | BeyondTrust Remote Support | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [BeyondTrust Remote Support Zero-Day Continues Trend of Exploited Edge Bugs](https://www.darkreading.com/endpoint-security/beyondtrust-remote-support-exploited-edge-bugs) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -99,13 +34,8 @@ BeyondTrust Remote Supportに関するゼロデイ脆弱性が、実際の悪用
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Federal agencies、フロンティアAIシステム向けのサイバー対策と独立テストを推奨](https://cyberscoop.com/federal-ai-agent-sandbox-security-guidance/) | 25.0 | 20.0 | 42.0 |
-| [【保存版】WAFを入れても「他人の情報」が見える？API認可の盲点を暴く12の検証手順](https://www.sbbit.jp/article/cont1/187497?ref=rss) | 23.0 | 20.0 | 43.0 |
-| [エンジニアが勤務先の管理者アカウントをロックして約1億円相当の身代金を要求したとして有罪判決を受ける](https://gigazine.net/news/20261017-cyberattack-engineer-sentenced/) | 22.0 | 20.0 | 42.0 |
-| [ソースネクストで2251万件超の情報流出 退会者含めたユーザーパスワードも漏えい](https://atmarkit.itmedia.co.jp/ait/articles/2610/17/news010.html) | 21.0 | 20.0 | 42.0 |
-| [無料の「Photoshop」クローンを「Linux」で試す--不可能が可能に](https://japan.zdnet.com/article/35253562/) | 21.0 | 20.0 | 42.0 |
-| [Magentoサーバーでコード実行を可能にするBlockStrapの重大な脆弱性](https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/) | 20.0 | 28.0 | 50.0 |
-| [タイムズカー、退会後も7年間保管していた免許証画像を全削除へ 約660万アカウント分の漏えい受け](https://www.itmedia.co.jp/news/article/2610/16/2000002346/) | 16.0 | 20.0 | 42.0 |
+| [漏えいしたConnectWise認証情報を悪用し173件のMicrosoft 365テナントにログインしたハッカー](https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html) | 28.0 | 20.0 | 42.0 |
+| [「ダークWebで個人情報を検出しました」 アカウント“流出”の原因と、その予防策](https://atmarkit.itmedia.co.jp/ait/articles/2610/17/news006.html) | 21.0 | 20.0 | 42.0 |
 
 ---
 
