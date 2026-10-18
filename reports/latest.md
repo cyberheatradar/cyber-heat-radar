@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-10-18 05:00 JST
+# 📡 サイレーダー 2026-10-18 11:00 JST
 
-このレポートは、2026-10-17 17:00 JST〜2026-10-18 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-18 05:00 JST〜2026-10-18 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 31
+- 観測トピック数: 24
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 7
+- [低温だが記録しておくトピック](#low-record-topics): 0
 
 今回はサマリ掲載トピックはありません。
 
@@ -29,18 +29,7 @@
 
 ## ❄️ 低温だが記録しておくトピック
 
-音声や詳細解説には入れなかったものの、後から参照・検索・期間集計できるように残すアーカイブ枠です。
-重大度が低いという意味ではなく、今回の配信枠では優先度が相対的に下がった話題を含みます。
-
-| Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
-|---|---:|---:|---:|
-| [MALFEX npm Package「imgdecode」にWindowsネイティブアドオンを隠したShellcodeローダーを搭載](https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html) | 28.0 | 30.0 | 42.0 |
-| [Israeli広告会社がCandiruのゼロクリック型スパイウェア配信経路に転用されていた問題](https://www.securityweek.com/israeli-ad-firm-doubled-as-candirus-zero-click-spyware-delivery-channel/) | 28.0 | 20.0 | 42.0 |
-| [すべてのAIコーディングエージェントのコストを閲覧・検索・追跡しローカルで動作する「AgentsView」、Claude Code・Codex・Cursor・Copilot・Geminiなど60種類以上のエージェントを自動検出し全文検索も可能](https://gigazine.net/news/20261017-agentsview/) | 27.0 | 20.0 | 42.0 |
-| [Drupal、重大なRCE脆弱性を修正　まもなく悪用が出現する恐れも](https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/) | 24.0 | 38.0 | 42.0 |
-| [ConnectWiseのサプライチェーン攻撃を通じてMicrosoft 365テナントに侵入するハッカー](https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/) | 20.0 | 20.0 | 42.0 |
-| [情報漏えい 識者は「氷山の一角」](https://news.yahoo.co.jp/pickup/6599161?source=rss) | 20.0 | 20.0 | 42.0 |
-| [Cybercrimsがデータ窃取を超えて建物の物理システムを攻撃](https://www.theregister.com/security/2026/10/17/cybercrims-go-beyond-stealing-data-to-attack-physical-building-systems/5303677) | 20.0 | 20.0 | 42.0 |
+今回は低温記録トピックはありません。
 
 ---
 
