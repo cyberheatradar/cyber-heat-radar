@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-10-18 17:00 JST
+# 📡 サイレーダー 2026-10-19 05:00 JST
 
-このレポートは、2026-10-18 11:00 JST〜2026-10-18 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-18 17:00 JST〜2026-10-19 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 26
+- 観測トピック数: 29
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 2
+- [低温だが記録しておくトピック](#low-record-topics): 5
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,8 +34,11 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [AIが家電侵入 サイバー攻撃の脅威](https://news.yahoo.co.jp/pickup/6599237?source=rss) | 20.0 | 20.0 | 42.0 |
-| [日経の情報漏えい テレ東も影響か](https://news.yahoo.co.jp/pickup/6599232?source=rss) | 20.0 | 20.0 | 42.0 |
+| [ConnectWise、攻撃者によるMicrosoft 365テナント侵害を受けCloud Backupを停止](https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html) | 28.0 | 20.0 | 42.0 |
+| [米国のサイバーセキュリティ求人は26％減、AIセキュリティエンジニアの需要は急増](https://www.securityweek.com/us-cybersecurity-job-postings-fall-26-as-ai-security-engineer-demand-soars/) | 25.0 | 20.0 | 42.0 |
+| [週刊レビュー：Ledgerウォレットに潜む隠しインプラントと9,300万ドル盗難、1,500件超のnpmパッケージ流出](https://www.helpnetsecurity.com/2026/10/18/week-in-review-hidden-implant-in-ledger-wallets-linked-to-93m-theft-1500-npm-packages-exposed/) | 25.0 | 20.0 | 42.0 |
+| [HackersがSiteGuard WAFの脆弱性を悪用し管理者権限でコマンドを実行](https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/) | 24.0 | 38.0 | 42.0 |
+| [【特別企画】メッセージングセキュリティの最新動向がテーマ - JPAAWGが年次イベント](https://www.security-next.com/191246) | 22.0 | 20.0 | 42.0 |
 
 ---
 
