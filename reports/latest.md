@@ -1,18 +1,15 @@
-# 📡 サイレーダー 2026-10-19 11:00 JST
+# 📡 サイレーダー 2026-10-19 17:00 JST
 
-このレポートは、2026-10-19 05:00 JST〜2026-10-19 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-19 11:00 JST〜2026-10-19 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 59
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 51
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 33
+- [低温だが記録しておくトピック](#low-record-topics): 26
 
-| Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
-|---:|---|---:|---:|---:|---|---|
-| 1 | [「Fortinet」「BeyondTrust」の脆弱性悪用に注意喚起 - 米当局](#topic-38225) | 39.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
-| 2 | [Webサイトのデータベースを狙う攻撃が顕著に増加／情シス担当の半数が転職意向、背後にある変化／AI業務活用、実態は“AIオペレーター”？、ほか](#topic-38248) | 37.0 | 30.0 | 42.0 | 音声 | AI×Security枠 |
+今回はサマリ掲載トピックはありません。
 
 ---
 
@@ -20,123 +17,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-38225"></a>
-
-### 1. 「Fortinet」「BeyondTrust」の脆弱性悪用に注意喚起 - 米当局
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-米当局が、Fortinet製品とBeyondTrust製品に関する脆弱性2件について、悪用が確認されているとして注意喚起を行いました。
-現時点では、詳細な影響範囲や個別の攻撃手口は材料内で明示されていませんが、実際の悪用が示唆されている点が重要です。
-脆弱性が単なる未修正情報ではなく、すでに悪用されているとされるため、対応の優先度が上がります。該当製品を運用している組織では、該当有無の確認と修正適用の検討が必要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- FortinetおよびBeyondTrust製品の利用有無を確認し、該当バージョンや影響範囲を棚卸しする。
-- ベンダーや公的機関の情報を確認し、修正パッチや回避策があれば速やかに適用を検討する。
-- 関連システムのログや認証イベントを確認し、不審なアクセスや挙動がないか点検する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2025-61624 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-102764 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | BeyondTrust | 言及あり | 0.80 | — |
-| ベンダー | Fortinet | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [「Fortinet」「BeyondTrust」の脆弱性悪用に注意喚起 - 米当局](https://www.security-next.com/191608) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-38248"></a>
-
-### 2. Webサイトのデータベースを狙う攻撃が顕著に増加／情シス担当の半数が転職意向、背後にある変化／AI業務活用、実態は“AIオペレーター”？、ほか
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>国⁠家⁠支⁠援</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Webサイトのデータベースを狙う攻撃が増加していることが、公開情報の週次まとめで取り上げられました。
-あわせて、ランサムウェアや国家支援型APTの動向など、複数の脅威トピックが紹介されています。
-Webサイトやその背後のデータベースは、情報漏えいや改ざんにつながりやすく、運用現場への影響が大きい領域です。
-攻撃増加の傾向が示される場合、監視や防御の優先度を見直す必要があります。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- Webアプリケーションとデータベース周辺の監視を強化し、不審なアクセスや異常なエラーの増加を確認する。
-- 公開不要な管理機能や不要な外部公開設定がないか、設定の棚卸しを行う。
-- 脅威動向の変化を踏まえ、バックアップや復旧手順、通知体制が実運用で機能するか点検する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Webサイトのデータベースを狙う攻撃が顕著に増加／情シス担当の半数が転職意向、背後にある変化／AI業務活用、実態は“AIオペレーター”？、ほか](https://ascii.jp/elem/000/004/443/4443530/?rss=) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -153,39 +34,32 @@ Webサイトやその背後のデータベースは、情報漏えいや改ざ�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [連続不正アクセスの実態判明 Androidアプリを解析してAPIに侵入か](https://atmarkit.itmedia.co.jp/ait/articles/2610/19/news019.html) | 26.0 | 23.0 | 43.0 |
-| [Anthropic、第三者監査機関に「社員並みアクセス権」を付与--AI業界初](https://japan.zdnet.com/article/35253700/) | 26.0 | 20.0 | 42.0 |
-| [Anthropic、株式の5％を公益目的の新組織に拠出 企業価値の上昇に応じて割合を拡大](https://www.itmedia.co.jp/news/article/2610/19/2000002359/) | 26.0 | 20.0 | 42.0 |
-| [企業のAIを「ゲートウェイ」で統合管理、パロアルトが示す新たなセキュリティ戦略](https://news.mynavi.jp/techplus/article/20261019-5154402/) | 26.0 | 20.0 | 42.0 |
-| [GMOリサーチ&AI 運営のアンケートサイト「infoQ」に不正アクセス、89万4,082件の個人情報外部持ち出しを確認](https://scan.netsecurity.ne.jp/article/2026/10/19/56497.html) | 26.0 | 20.0 | 42.0 |
-| [Anthropic、社内でAIエージェントの稼働時間が人間の6倍に 技術系初級職の採用比率は27％→9％に激減](https://www.itmedia.co.jp/news/article/2610/19/2000002353/) | 26.0 | 20.0 | 42.0 |
-| [AI 時代のメール到達性などもテーマに ～ JPAAWG 9th General Meetingを 11 月 5 日・6 日に東京で開催](https://scan.netsecurity.ne.jp/article/2026/10/19/56488.html) | 26.0 | 20.0 | 42.0 |
-| [日本企業の「AI業務実装の壁」を打ち破る ― RPAのパイオニアが「AI×RPA×人」の統合基盤を国内展開](https://ascii.jp/elem/000/004/443/4443113/?rss=) | 26.0 | 20.0 | 42.0 |
-| [企業の50％がすでにAIから価値を創出--その方法とは](https://japan.zdnet.com/article/35253550/) | 26.0 | 20.0 | 42.0 |
-| [AIエージェントの暴走を「その場で」止められるガバナンス](https://japan.zdnet.com/article/35252979/) | 26.0 | 20.0 | 42.0 |
-| [「Node.<wbr>js」のセキュリティアップデート - 10月21日以降に公開予定](https://www.security-next.com/191592) | 22.0 | 20.0 | 42.0 |
-| [先週注目された記事（2026年10月11日〜2026年10月17日）](https://www.security-next.com/191589) | 22.0 | 20.0 | 42.0 |
-| [バーガーキング、会員情報約1118万件が漏えい 顧客データを預かる企業が点検すべき3項目](https://www.itmedia.co.jp/enterprise/articles/2610/17/news005.html) | 21.0 | 20.0 | 42.0 |
-| [サッカー協会公式アプリに不正アクセス 「JFA Passport」一部機能停止、「ログアウト控えて」](https://www.itmedia.co.jp/news/article/2610/19/2000002355/) | 21.0 | 20.0 | 42.0 |
-| [佐川急便「お荷物問い合わせサービス」に不正アクセス 第4報](https://scan.netsecurity.ne.jp/article/2026/10/19/56499.html) | 21.0 | 20.0 | 42.0 |
-| [バーガーキング公式アプリに不正アクセス、約1,118万件の会員情報が漏えい](https://scan.netsecurity.ne.jp/article/2026/10/19/56498.html) | 21.0 | 20.0 | 42.0 |
-| [えきねっと会員・大人の休日倶楽部会員の漏えいはなかったと判断 ～ IDCフロンティアへの不正アクセス](https://scan.netsecurity.ne.jp/article/2026/10/19/56496.html) | 21.0 | 20.0 | 42.0 |
-| [卒業生の生徒指導要録を紛失、283人分の学籍に関する記録 ～ 氏名 生年月日 性別 現住所 ほか](https://scan.netsecurity.ne.jp/article/2026/10/19/56495.html) | 21.0 | 20.0 | 42.0 |
-| [ホテルグランドヒル市ヶ谷、サイトコントローラー「TEMAIRAZU」シリーズに不正アクセス 不審メッセージ送信確認](https://scan.netsecurity.ne.jp/article/2026/10/19/56494.html) | 21.0 | 20.0 | 42.0 |
-| [アイホン豪州法人に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/10/19/56493.html) | 21.0 | 20.0 | 42.0 |
-| [唐津市情報メール配信サービスを業務委託しているアルカディアに不正アクセス](https://scan.netsecurity.ne.jp/article/2026/10/19/56492.html) | 21.0 | 20.0 | 42.0 |
-| [加古川市の職員メール配信システムを運用する事業者に不正アクセス、「防災ネットかこがわ」への影響はない](https://scan.netsecurity.ne.jp/article/2026/10/19/56491.html) | 21.0 | 20.0 | 42.0 |
-| [スマートフォンアプリ「ハンドメイドマーケットアプリ - Creema」にオープンリダイレクトの脆弱性](https://scan.netsecurity.ne.jp/article/2026/10/19/56490.html) | 21.0 | 20.0 | 42.0 |
-| [スマートフォンアプリ「ゲオアプリ」に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/10/19/56489.html) | 21.0 | 20.0 | 42.0 |
-| [入社時のパスワード発行のような「レガシーな習慣」がセキュリティの障害に ～ Yubico、Okta 共同調査](https://scan.netsecurity.ne.jp/article/2026/10/19/56487.html) | 21.0 | 20.0 | 42.0 |
-| [自民党国家サイバーセキュリティ戦略本部 本部長の平将明衆院議員「政府だけではなく国民も意識を持ってこの有事に立ち向かうことが重要」](https://scan.netsecurity.ne.jp/article/2026/10/19/56486.html) | 21.0 | 20.0 | 42.0 |
-| [内閣官房国家サイバー統括室、不正アクセスによる漏えい等の事案を踏まえた対応について発表](https://scan.netsecurity.ne.jp/article/2026/10/19/56485.html) | 21.0 | 20.0 | 42.0 |
-| [総務省が所管事業者及び関係団体に注意喚起、不正アクセスによる個人情報を含むデータが窃取される事案を踏まえ](https://scan.netsecurity.ne.jp/article/2026/10/19/56484.html) | 21.0 | 20.0 | 42.0 |
-| [SCS評価制度は担当者1人では回らない--制度が求める関与者と、取得したあとに続く運用](https://japan.zdnet.com/article/35253644/) | 21.0 | 20.0 | 42.0 |
-| [ヤマハ製VOCALOID6 Editorにおける外部エンティティ参照の不適切な制限の脆弱性](https://jvn.jp/vu/JVNVU93520490/) | 20.0 | 20.0 | 42.0 |
-| [Linux KVMゲストホストエスケープの重大脆弱性、penguin-powered networkingへの新たな攻撃手法となる可能性](https://www.theregister.com/virtualization/2026/10/19/linux-kvm-guest-host-escape-rated-critical-may-represent-a-new-way-to-attack-penguin-powered-networking/5303744) | 20.0 | 20.0 | 42.0 |
-| [個人情報漏えいが相次ぐ中、「パスワード使いまわし」は被害拡大の原因。今すぐやめよう！](https://internet.watch.impress.co.jp/docs/special/2149087.html) | 20.0 | 20.0 | 42.0 |
-| [サイバー攻撃 なぜ日本が狙われる](https://news.yahoo.co.jp/pickup/6599306?source=rss) | 20.0 | 20.0 | 42.0 |
+| [ランサムウェアの圧力が従業員の家庭や家族にまで及ぶ](https://www.helpnetsecurity.com/2026/10/19/semperis-ransomware-employee-safety-report/) | 28.0 | 30.0 | 42.0 |
+| [IFS COOに聞く「PoC死」の乗り越え方--AI導入を3週間で実現](https://japan.zdnet.com/article/35253675/) | 28.0 | 20.0 | 42.0 |
+| [Anthropicが株式の一部を公共利益のための子会社「Anthropic Public Benefit Fund」に拠出、拠出額はAnthropicの評価額に応じて増加予定](https://gigazine.net/news/20261019-public-benefit-fund/) | 27.0 | 20.0 | 42.0 |
+| [Anthropic社内ではAIが人間の6倍も稼働していることが判明、従業員の仕事は「AIの監督」へと変化](https://gigazine.net/news/20261019-employment-at-anthropic/) | 27.0 | 20.0 | 42.0 |
+| [Progress製データ連携ツール向けAIエージェント定義ファイルに脆弱性](https://www.security-next.com/191620) | 27.0 | 20.0 | 42.0 |
+| [アクティヴァーチ、AI・量子関連技術の活用支援と耐量子暗号対応の2サービスを開始](https://news.mynavi.jp/techplus/article/20261019-5155529/) | 26.0 | 20.0 | 42.0 |
+| [primeNumber、自律型データ基盤「ADP」を発表--AIエージェントが基盤の更新・精度維持を提案](https://japan.zdnet.com/article/35253703/) | 26.0 | 20.0 | 42.0 |
+| [AIの台頭でWebサイトのアクセス向上策はSEOからGEOにシフト 対応急務に](https://www.itmedia.co.jp/news/article/2610/19/2000002371/) | 26.0 | 20.0 | 42.0 |
+| [OpenCode Console侵害でOpenAI、Anthropic、GoogleのAPIキーが露出した可能性](https://thehackernews.com/2026/10/opencode-console-breach-may-have.html) | 25.0 | 20.0 | 42.0 |
+| [Trend Micro、AI時代の日本企業向けセキュリティ強化に向け最大100億円のサイバーレジリエンス・イニシアチブを発表](https://newsroom.trendmicro.com/2026-10-19-Trend-Micro-Announces-Up-to-JPY10-Billion-toward-Cyber-Resilience-Initiative-to-Strengthen-Security-for-Japanese-Organizations-in-the-AI-Era) | 25.0 | 20.0 | 42.0 |
+| [Meta由来のAIボットトラフィックがウェブサイトの半数を占める](https://www.helpnetsecurity.com/2026/10/19/datadome-ai-agent-traffic-report/) | 25.0 | 20.0 | 42.0 |
+| [AIプログラミングツール「OpenCode」でAPIキー流出の可能性、OpenAIやClaudeの利用残高が不正利用でゼロになったとの報告も](https://gigazine.net/news/20261019-opencode-leak/) | 22.0 | 20.0 | 42.0 |
+| [サイバートラスト、クラウドデータを保護する鍵管理サービス--PQC対応も視野](https://japan.zdnet.com/article/35253724/) | 21.0 | 20.0 | 42.0 |
+| [「Renta!」停止は「不正アクセスの可能性」のため 詳細は調査中、再開未定](https://www.itmedia.co.jp/news/article/2610/19/2000002379/) | 21.0 | 20.0 | 42.0 |
+| [民間企業がサイバー攻撃ツールを“堂々開発”？ 偵察対象には日本企業も](https://atmarkit.itmedia.co.jp/ait/articles/2610/19/news011.html) | 21.0 | 20.0 | 42.0 |
+| [世界で最も使われている「危険なパスワード」 NordPassが2025年版を発表](https://atmarkit.itmedia.co.jp/ait/articles/2610/19/news033.html) | 21.0 | 20.0 | 42.0 |
+| [ソースネクスト、パスワードなぜ平文で流出 「暗号化していたが、鍵にアクセスできるシステムに侵入された」](https://www.itmedia.co.jp/news/article/2610/19/2000002372/) | 21.0 | 20.0 | 42.0 |
+| [企業の16.2％が情報漏えいを経験、大企業では3割に - 帝国データバンク調査](https://news.mynavi.jp/techplus/article/20261019-5154980/) | 21.0 | 20.0 | 42.0 |
+| [Chromeで偽サイトが正規サイトに見える恐れ、特殊なUnicode文字で保護機能を回避](https://news.mynavi.jp/techplus/article/20261019-5138114/) | 21.0 | 20.0 | 42.0 |
+| [家電量販のJoshin、不正アクセスで一部サービス停止 個人情報漏えい「可能性否定できず」](https://www.itmedia.co.jp/news/article/2610/19/2000002369/) | 21.0 | 20.0 | 42.0 |
+| [横河レンタ、IT資産運用とセキュリティ運用を統合した新サービスを提供](https://japan.zdnet.com/article/35253704/) | 21.0 | 20.0 | 42.0 |
+| [セキュリティの1週間（10月12日～10月18日）](https://www.malwarebytes.com/blog/news/2026/10/a-week-in-security-october-12-october-18) | 20.0 | 20.0 | 42.0 |
+| [未修正のBroadcom Wi-Fi脆弱性により、通信圏内の攻撃者がルーター上でroot権限でコード実行可能に](https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html) | 20.0 | 20.0 | 42.0 |
+| [Bearer CLI：無料で利用できるソース公開型のコードセキュリティスキャンツール（SAST）](https://www.helpnetsecurity.com/2026/10/19/bearer-cli-free-code-security-scanning-tool-sast/) | 20.0 | 20.0 | 42.0 |
+| [実例でわかるRPOとRTOの解説](https://www.helpnetsecurity.com/2026/10/19/rpo-rto-video/) | 20.0 | 20.0 | 42.0 |
+| [ConnectWise、SaaS型のバックアップ・セキュリティ・管理サービスを停止してセキュリティ不備を調査](https://www.theregister.com/security/2026/10/19/connectwise-turns-off-its-saas-y-backup-security-and-management-services-to-probe-security-snafu/5303758) | 20.0 | 20.0 | 42.0 |
 
 ---
 
