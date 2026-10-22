@@ -1,18 +1,17 @@
-# 📡 サイレーダー 2026-10-22 11:00 JST
+# 📡 サイレーダー 2026-10-22 17:00 JST
 
-このレポートは、2026-10-22 05:00 JST〜2026-10-22 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-22 11:00 JST〜2026-10-22 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 57
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 65
+- [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 31
+- [低温だが記録しておくトピック](#low-record-topics): 40
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Critical PHP Vulnerability (CVE-2026-109618, CVE-2026-109619) \[infocon yellow\], (Wed, Oct 21st)](#topic-38753) | 67.0 | 64.0 | 66.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
-| 2 | [「まさかそこから」大阪公立大のランサム被害、NEC委託先への攻撃が発端と判明](#topic-38963) | 31.0 | 38.0 | 42.0 | 音声 | 温度感上位枠 |
+| 1 | [注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起 (公開)](#topic-38753) | 62.0 | 64.0 | 66.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
 
 ---
 
@@ -20,60 +19,7 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-38963"></a>
-
-### 1. 「まさかそこから」大阪公立大のランサム被害、NEC委託先への攻撃が発端と判明
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 31.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-NECは、システム開発・保守を委託していた先がサイバー攻撃を受けたことで、複数の顧客にシステム障害や情報漏えいが発生したと公表しました。
-大阪公立大学で公表されていたランサムウェア被害についても、この事案の影響だったことが判明しています。
-委託先を起点に複数組織へ影響が及ぶ事例であり、サプライチェーン経由のリスクを改めて示しています。自組織だけでなく、外部委託先のセキュリティ管理が被害拡大の分岐点になり得ます。
-
-#### 温度感の理由
-
-##### 温度感
-- 脅威・インシデント関連の公開情報として観測しています。
-
-##### 実務影響
-- 情報漏えい系。
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 委託先・再委託先を含むアクセス権限、接続経路、保守運用の管理状況を再点検する。
-- 障害時の影響範囲を素早く把握できるよう、委託先関連の資産・連携先の棚卸しを行う。
-- 情報漏えいの可能性を前提に、通知・報告・初動対応の手順が機能するか確認する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [「まさかそこから」大阪公立大のランサム被害、NEC委託先への攻撃が発端と判明](https://atmarkit.itmedia.co.jp/ait/articles/2610/22/news019.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
+今回は音声で扱う想定のトピックはありません。
 
 <a id="github-only-topics"></a>
 
@@ -81,7 +27,7 @@ NECは、システム開発・保守を委託していた先がサイバー攻�
 
 <a id="topic-38753"></a>
 
-### 1. Critical PHP Vulnerability (CVE-2026-109618, CVE-2026-109619) [infocon yellow], (Wed, Oct 21st)
+### 1. 注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起 (公開)
 
 #### スコアカード
 
@@ -90,20 +36,20 @@ NECは、システム開発・保守を委託していた先がサイバー攻�
 | <nobr>区⁠分</nobr> | GitHub |
 | <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>P⁠o⁠C</nobr> |
 | <nobr>温⁠度⁠状⁠態</nobr> | 高温 |
-| <nobr>温⁠度⁠感</nobr> | 67.0 |
+| <nobr>温⁠度⁠感</nobr> | 62.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
 | <nobr>確⁠度</nobr> | 66.0 |
 
 #### 概要
 
-PHPに関する2件の深刻な脆弱性（CVE-2026-109618、CVE-2026-109619）が公表され、認証なしのリモートコード実行につながる可能性があるとされています。
-複数のセキュリティ関連ソースで注目されており、修正情報とあわせて対応が進んでいます。PHPは利用範囲が広いため、影響を受ける環境が多い可能性があります。
-さらに、公開直後から悪用観測やPoCの言及があり、迅速な確認と更新が重要です。
+PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）について、JPCERT/CCやJVNが注意喚起を出しています。
+報道や各種アドバイザリでは、任意コード実行につながる可能性が指摘されており、影響範囲の広さが懸念されています。
+PHPは多くのWebサービスで使われているため、影響が出ると広範囲に及ぶ可能性があります。すでに関連する注意喚起や対策情報が出ていることから、早めの確認と更新対応が重要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 21 sources。
+- 複数ソースで確認: 22 sources。
 - 実悪用・ゼロデイ文脈。
 - 脅威・攻撃キャンペーン文脈。
 - 技術・開発者系ソース観測: 観測あり。
@@ -120,15 +66,15 @@ PHPに関する2件の深刻な脆弱性（CVE-2026-109618、CVE-2026-109619）�
 
 #### 担当者向け確認ポイント
 
-- PHPの利用有無と対象バージョンを確認し、該当する場合は修正版の適用を急ぐ。
-- Web公開サービスや関連製品で、異常な挙動や不審なリクエストの有無を点検する。
-- 影響範囲の大きい環境では、暫定的なアクセス制御や露出面の縮小を検討する。
+- 利用中のPHPバージョンと適用状況を確認し、修正版の有無を点検する。
+- 公開中のWebアプリケーションについて、影響有無を優先的に洗い出す。
+- ベンダーや公式アドバイザリの更新を継続監視し、必要に応じて緊急対応を検討する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-109618 | 関連CVE | 1.00 | 候補あり（URL 46件以上） |
+| 脆弱性 | CVE-2026-109618 | 関連CVE | 1.00 | 候補あり（URL 47件以上） |
 | 脆弱性 | CVE-2026-109619 | 関連CVE | 1.00 | 候補あり（URL 7件以上） |
 | ベンダー | Palo Alto Networks | 言及あり | 0.80 | — |
 | ベンダー | Cisco | 言及あり | 0.80 | — |
@@ -139,18 +85,18 @@ PHPに関する2件の深刻な脆弱性（CVE-2026-109618、CVE-2026-109619）�
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
 | <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-109618](https://nvd.nist.gov/vuln/detail/CVE-2026-109618) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起  (公開)](https://www.jpcert.or.jp/at/2026/at260033.html) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [PHPにおける複数の任意のコードが実行可能な脆弱性（CVE-2026-109618、CVE-2026-109619）](https://jvn.jp/vu/JVNVU99905564/) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Vulnerabilities in PHP Affecting Cisco Products: October 2026](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [多くのサイトが予防的に公開停止、高市総理が対応呼びかけ―「PHPの深刻な脆弱性」対応で何が起きた？](https://internet.watch.impress.co.jp/docs/news/2150203.html) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [CVE-2026-109618 Impact of Critical Vulnerabilities in PHP (CVE-2026-109618, CVE-](https://security.paloaltonetworks.com/CVE-2026-109618) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [Critical PHP Vulnerability (CVE-2026-109618, CVE-2026-109619) [infocon yellow], ](https://isc.sans.edu/diary/rss/33440) | <nobr>内容確認・補足情報</nobr> |
 | <nobr>出典</nobr> | [PHP2Shell Patches Land as First Exploitation Attempts Hit Sensors](https://www.securityweek.com/php2shell-patches-land-as-first-exploitation-attempts-hit-sensors/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Threat Brief: Critical Vulnerabilities in PHP: CVE-2026-109618, CVE-2026-109619](https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: あり（24件）。
+- 国内ブックマーク反応: あり（29件）。
 - 国内開発者記事: 採用あり（2件）。
 - 技術・開発者系ソース観測: 観測あり。
 
@@ -165,37 +111,46 @@ PHPに関する2件の深刻な脆弱性（CVE-2026-109618、CVE-2026-109619）�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Smashing Security podcast #489: 新しい暗号資産ウォレットにスパイが潜んでいた理由](https://grahamcluley.com/smashing-security-podcast-489/) | 28.0 | 20.0 | 42.0 |
-| [Chrome、非安全サイトを許可プロンプトの背後に配置](https://www.helpnetsecurity.com/2026/10/22/google-chrome-https-protection/) | 28.0 | 20.0 | 42.0 |
-| [Onamae Desktop Cloudが不正アクセス被害、最大2万7000台のサーバーに影響](https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/) | 28.0 | 20.0 | 42.0 |
-| [Lazarusがマルウェア配布にポスト量子暗号を利用](https://www.bleepingcomputer.com/news/security/lazarus-hackers-use-post-quantum-cryptography-for-malware-delivery/) | 28.0 | 20.0 | 42.0 |
-| [人間の指示なしでAIが自発的にタスクを実行するClaudeのエージェントアプリ「Claude Duet」が発表される](https://gigazine.net/news/20261022-claude-duet/) | 27.0 | 20.0 | 42.0 |
-| [AIエージェントが攻撃者なしでデータを露出する場合](https://www.f5.com/labs/articles/unprompted-when-ai-agents-expose-data-without-an-attacker) | 27.0 | 20.0 | 42.0 |
-| [Meta決算、売上高26％増も営業益37％減 AIエージェント「Muse」は1000万人超が利用開始](https://www.itmedia.co.jp/news/article/2610/22/2000002489/) | 26.0 | 20.0 | 42.0 |
-| [Microsoftが社内AIエージェントを「内部脅威」と呼ぶ理由は？ 「3つの封じ込め策」とともに紹介](https://www.itmedia.co.jp/enterprise/articles/2610/21/news070.html) | 26.0 | 20.0 | 42.0 |
-| [攻撃者のAIは「人間超え、寝ない」 それでも専門家が"最優先の脅威ではない"と言う理由](https://www.itmedia.co.jp/enterprise/articles/2610/15/news025.html) | 26.0 | 20.0 | 42.0 |
-| [Google Chrome、Gemini搭載の詐欺検知機能を追加し、ClickFix攻撃に警告](https://www.bleepingcomputer.com/news/google/google-chrome-adds-gemini-powered-scam-detection-warns-users-of-clickfix-attacks/) | 25.0 | 20.0 | 42.0 |
-| [Microsoft、ConnectWiseへのサプライチェーン攻撃を中国の国家関与型脅威グループに帰属と発表](https://cyberscoop.com/microsoft-attributes-connectwise-supply-chain-attack-china-storm-0940/) | 25.0 | 20.0 | 42.0 |
-| [「Gemini Notebook」で名刺を文字起こしして管理！ PFUの小型スキャナー「ScanSnap iX110」活用【自宅Wi-Fiの“わからない”をスッキリ！】](https://internet.watch.impress.co.jp/docs/column/homewifi/2149233.html) | 25.0 | 20.0 | 42.0 |
-| [ClaudeがOpenSSHなど25のOSSを解析、493件のセキュリティ問題を発見](https://news.mynavi.jp/techplus/article/20261022-5172686/) | 24.0 | 20.0 | 43.0 |
-| [米当局、「PHP脆弱性」の即修正を勧告 - 困難ならオフラインに](https://www.security-next.com/191766) | 22.0 | 20.0 | 42.0 |
-| [「GitLab」に深刻な脆弱性 - 旧ブランチにも修正を提供](https://www.security-next.com/191760) | 22.0 | 20.0 | 42.0 |
-| [eMudhraで侵害された8つの認証局すべての秘密鍵はなんとたった「1バイト」で秘密鍵の1つは「4」、Mozilla・Microsoft・Apple・Chromeのルートプログラムや多くの下流トラストストアによって信頼されているルート証明書に連鎖](https://gigazine.net/news/20261022-emudhra-problem/) | 22.0 | 20.0 | 42.0 |
-| [eMudhraの中間証明書の侵害](https://blog.talosintelligence.com/compromised-intermediate-certificates/) | 22.0 | 20.0 | 42.0 |
-| [大阪大、学生など7.8万人の情報漏えい NECが無断で協力会社とデータ共有](https://www.itmedia.co.jp/news/article/2610/22/2000002491/) | 21.0 | 20.0 | 42.0 |
-| [AIを悪用しながら進化するサイバー脅威に対する、防御の4つの基本方針とその実践方法に迫る](https://news.mynavi.jp/techplus/kikaku/20261022-5133861/) | 21.0 | 20.0 | 42.0 |
-| [氏名入りフィッシングメールを確認、9月の報告件数は約15%増](https://news.mynavi.jp/techplus/article/20261022-5161358/) | 21.0 | 20.0 | 42.0 |
-| [Tesla決算、営業益56％減 FSD契約は67％増の174万件 SpaceX合併は「昨日すべて話した」とマスク氏](https://www.itmedia.co.jp/news/article/2610/22/2000002488/) | 21.0 | 20.0 | 42.0 |
-| [PHPの「重大」脆弱性はAIが見つけた 「GPT-5.6 Solで発見」とOpenAI 「今後、AIによる脆弱性発見が急増」](https://www.itmedia.co.jp/news/article/2610/22/2000002486/) | 21.0 | 20.0 | 42.0 |
-| [Meta、Cambridge Analytica問題巡る訴訟で250億ドルの支払い命令](https://www.itmedia.co.jp/news/article/2610/22/2000002484/) | 21.0 | 20.0 | 42.0 |
-| [高市総理「大至急、PHPパッチ適用を」Xで異例の要請 エンジニアは評価「経営層に伝わる」](https://www.itmedia.co.jp/news/article/2610/22/2000002483/) | 21.0 | 20.0 | 42.0 |
-| [LIFF SDKにおけるクロスサイトスクリプティングの脆弱性](https://jvn.jp/vu/JVNVU91023667/) | 20.0 | 20.0 | 42.0 |
-| [ISC BINDにおける複数の脆弱性（2026年10月）](https://jvn.jp/vu/JVNVU91196958/) | 20.0 | 20.0 | 42.0 |
-| [PHP、サプライチェーンセキュリティ企業Chainguardをウェブの大部分を危険にさらしたとして非難](https://www.theregister.com/security/2026/10/22/php-blames-supply-chain-security-biz-chainguard-for-putting-huge-chunks-of-the-web-at-risk/5304611) | 20.0 | 20.0 | 42.0 |
-| [PHPの脆弱性 米OpenAIのAIで発見](https://news.yahoo.co.jp/pickup/6599651?source=rss) | 20.0 | 20.0 | 42.0 |
-| [TiDB侵害で露呈したクラウドセキュリティの誤った前提](https://www.darkreading.com/cloud-security/tidb-breach-flawed-cloud-security) | 20.0 | 20.0 | 42.0 |
-| [Marvell、Microsoft、Oracleがデータセンター・ハードウェアセキュリティの標準化に取り組む](https://www.darkreading.com/cloud-security/marvell-microsoft-oracle-standardize-data-center-hardware-security) | 20.0 | 20.0 | 42.0 |
-| [Cloud Security Allianceの調査、Data Loss Preventionはデータ漏えい発生後に検知することが多いと判明](https://www.darkreading.com/cloud-security/cloud-security-alliance-survey-data-loss-prevention-detects-data-loss) | 20.0 | 20.0 | 42.0 |
+| [「飲料メーカーA社」の被害事例を推察 ランサムウェア攻撃で今すぐ取り組むべき対策とは](https://atmarkit.itmedia.co.jp/ait/articles/2610/22/news031.html) | 29.0 | 30.0 | 42.0 |
+| [APT41がBlackLotusブートキットを復活させ、中央アジアの外交機関を攻撃した件](https://securelist.com/uefi-bootkit-blackx/121539/) | 28.0 | 20.0 | 42.0 |
+| [文化についてAIに質問すると日本が選ばれやすい傾向がある、8モデル・24言語で回答の偏りを調査](https://gigazine.net/news/20261022-llms-japanese-culture/) | 27.0 | 20.0 | 42.0 |
+| [豪州でAI「Claude」に保育施設銃撃を予告したら逮捕 弁護側「耳感染症でストレス」](https://www.itmedia.co.jp/news/article/2610/22/2000002517/) | 26.0 | 20.0 | 42.0 |
+| [Anthropic、Claudeでソフトウェアのアタックサーフェスを洗い出し・縮小する研究を公開 OpenSSHの修正にも貢献](https://www.itmedia.co.jp/news/article/2610/22/2000002498/) | 26.0 | 20.0 | 42.0 |
+| [PHPに深刻な脆弱性 更新だけで対策は終わらない、企業が最初にやるべき2つのこと](https://www.itmedia.co.jp/enterprise/articles/2610/22/news054.html) | 25.0 | 38.0 | 42.0 |
+| [月面で初のスーパーコンピューター性能テストをHPEとNASAが計画、AIによる地形解析やサイバー攻撃検知も実施へ](https://gigazine.net/news/20261022-hpt-nasa-moon-ai-benchmark/) | 25.0 | 20.0 | 43.0 |
+| [AIエージェントの権限拡大がセキュリティ対策を上回っている](https://www.helpnetsecurity.com/2026/10/22/ai-agent-permissions-security/) | 25.0 | 20.0 | 42.0 |
+| [少し話しかけただけで、仕組まれたAIが5000ドルを要求する](https://www.helpnetsecurity.com/2026/10/22/research-speech-model-backdoor/) | 25.0 | 20.0 | 42.0 |
+| [UAE、政府サービスの50％をエージェント型AIに移行](https://www.darkreading.com/cybersecurity-operations/uae-transitions-50-government-services-agentic-ai) | 25.0 | 20.0 | 42.0 |
+| [AIコーディングの急増がクラウド開発の脆弱性を露呈](https://www.helpnetsecurity.com/2026/10/22/localstack-ai-code-testing-report/) | 25.0 | 20.0 | 42.0 |
+| [中国関連ハッカーがConnectWiseのサプライチェーン攻撃でARTEX AIエージェントを悪用](https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html) | 25.0 | 20.0 | 42.0 |
+| [AIエージェントの可観測性はハルシネーションへの対応に苦戦している](https://www.helpnetsecurity.com/2026/10/22/ai-agent-observability-report/) | 25.0 | 20.0 | 42.0 |
+| [PHPの「重大」脆弱性はAIが見つけた 「GPT-5.6 Solで発見」とOpenAI 「今後、AIによる脆弱性発見が急増」](https://www.itmedia.co.jp/news/article/2610/22/2000002486/) | 24.0 | 20.0 | 42.0 |
+| [Node.<wbr>jsがセキュリティアップデートで「22.23.4」「24.22.1」「26.12.1」配信、全体で10件の脆弱性を修正](https://gigazine.net/news/20261022-node-js-security-releases/) | 22.0 | 20.0 | 42.0 |
+| [「ロボットの赤ちゃん」で育児のシミュレーションをするだけでカップルのテストステロン値に変化が生じる](https://gigazine.net/news/20261022-couples-caregiving-robot-baby-testosterone/) | 22.0 | 20.0 | 42.0 |
+| [Ciscoのビデオ会議製品に深刻な脆弱性 - 修正版が公開](https://www.security-next.com/191795) | 22.0 | 20.0 | 42.0 |
+| [「PHP」の深刻なRCE脆弱性「PHP2Shell」 - 悪用試行を観測](https://www.security-next.com/191788) | 22.0 | 20.0 | 42.0 |
+| [AIツール「LiteLLM」にパスワードを盗む不正プログラムが混入、インストールするだけで別のPythonプログラムにも影響](https://gigazine.net/news/20261022-litellm-backdoor/) | 22.0 | 20.0 | 42.0 |
+| [GitLabが任意のコードを実行可能な危険度最大の脆弱性など12件に対するセキュリティパッチを公開](https://gigazine.net/news/20261022-gitlab-critical-patch/) | 22.0 | 20.0 | 42.0 |
+| [「PHP脆弱性」が怖い理由 Webサイトの7割が利用、乗っ取られる恐れ](https://xtech.nikkei.com/atcl/nxt/column/18/00001/12118/) | 21.0 | 20.0 | 42.0 |
+| [PHP「緊急」脆弱性悪用の試み、数百万件に CloudflareのCEOが報告](https://www.itmedia.co.jp/news/article/2610/22/2000002516/) | 21.0 | 20.0 | 42.0 |
+| [PHP脆弱性、海外では“政府サイトごと停止”も オランダの電子認証やWikipedia関連サービスなどにも影響](https://www.itmedia.co.jp/news/article/2610/22/2000002514/) | 21.0 | 20.0 | 42.0 |
+| [PHP脆弱性で高市総理「サイトを一時的に停止することも重要」](https://www.itmedia.co.jp/news/article/2610/22/2000002512/) | 21.0 | 20.0 | 42.0 |
+| [PHPの重大脆弱性、情報流出と修正版の先行公開で混乱 - PHP財団が経緯公表](https://news.mynavi.jp/techplus/article/20261022-5173549/) | 21.0 | 20.0 | 42.0 |
+| [Oracle Javaに55件の脆弱性 IPAが「早急に適用を」と促す対象は](https://www.itmedia.co.jp/enterprise/articles/2610/22/news058.html) | 21.0 | 20.0 | 42.0 |
+| [PHPの重大脆弱性2件、1つはメモリー不足で悪用 増設だけでは防げず](https://xtech.nikkei.com/atcl/nxt/column/18/00001/12116/) | 21.0 | 20.0 | 42.0 |
+| [PHP重大脆弱性、財団が「構造的な失敗」と認める 兆候は24年に把握](https://xtech.nikkei.com/atcl/nxt/column/18/00001/12115/) | 21.0 | 20.0 | 42.0 |
+| [「GitLab」に深刻度“最大”の脆弱性 認証なしで任意のコード実行の恐れ、修正版適用を CVSS「10.0」](https://www.itmedia.co.jp/news/article/2610/22/2000002501/) | 21.0 | 20.0 | 42.0 |
+| [コミックシーモア、流出は最大約420万件に メールアドレスや生年月日など 不正アクセスの経路特定・遮断は完了](https://www.itmedia.co.jp/news/article/2610/22/2000002500/) | 21.0 | 20.0 | 42.0 |
+| [AKEY、Webサイト向け外部セキュリティ診断「SiteShield」を提供開始](https://news.mynavi.jp/techplus/article/20261022-5173138/) | 21.0 | 20.0 | 42.0 |
+| [旅行ゲーム「ワールドクエスト」、PHP脆弱性で即日サービス終了 「古い仕組みのため対策とれず」](https://www.itmedia.co.jp/news/article/2610/22/2000002493/) | 21.0 | 20.0 | 42.0 |
+| [認証局eMudhraの中間証明書、秘密鍵が「数ミリ秒」で復元可能な脆弱性 大手各社が緊急遮断](https://www.itmedia.co.jp/news/article/2610/21/2000002444/) | 20.0 | 20.0 | 43.0 |
+| [Meta、Facebookのプライバシーに関して利用者を欺いたとしてニューメキシコ州に250億ドルの支払いを命じられる](https://www.securityweek.com/meta-ordered-to-pay-new-mexico-25-billion-for-deceiving-users-about-privacy-on-facebook/) | 20.0 | 20.0 | 42.0 |
+| [認証局eMudhraが極めて弱い秘密鍵を擁護](https://www.theregister.com/security/2026/10/22/certification-authority-emudhra-defends-its-laughably-weak-private-keys/5304647) | 20.0 | 20.0 | 42.0 |
+| [バルテック、「PHPの脆弱性を標的としたサイバー攻撃」によりサービス停止、情報流出の可能性](https://internet.watch.impress.co.jp/docs/news/2150396.html) | 20.0 | 20.0 | 42.0 |
+| [主権とセキュリティをめぐる論点：MicrosoftのRoger Halbheer氏が指摘する問いのずれ](https://www.helpnetsecurity.com/2026/10/22/roger-halbheer-microsoft-data-sovereignty/) | 20.0 | 20.0 | 42.0 |
+| [「2年前から兆候把握」も修正できず…AIが暴いたPHP重大欠陥、開発元の“構造的失敗”](https://www.sbbit.jp/article/cont1/187680?ref=rss) | 20.0 | 20.0 | 42.0 |
+| [PHPの脆弱性 10年以上発見されず](https://news.yahoo.co.jp/pickup/6599674?source=rss) | 20.0 | 20.0 | 42.0 |
+| [「侵入経路塞いだが、バックドアから……」不正アクセス105時間の攻防、分単位で報告 防災メールのアルカディア](https://www.itmedia.co.jp/news/article/2610/20/2000002426/) | 10.0 | 20.0 | 42.0 |
 
 ---
 
