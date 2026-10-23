@@ -1,17 +1,17 @@
-# 📡 サイレーダー 2026-10-23 11:00 JST
+# 📡 サイレーダー 2026-10-23 17:00 JST
 
-このレポートは、2026-10-23 05:00 JST〜2026-10-23 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-23 11:00 JST〜2026-10-23 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 63
+- 観測トピック数: 60
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 1
-- [低温だが記録しておくトピック](#low-record-topics): 38
+- [低温だが記録しておくトピック](#low-record-topics): 34
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [PHP2Shell exploit bypasses protections designed to stop remote code execution](#topic-38753) | 66.0 | 74.0 | 67.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
+| 1 | [CVE-2026-109618 Impact of Critical Vulnerabilities in PHP (CVE-2026-109618, CVE-2026-109619) on Palo Alto Networks Products (Severity: HIGH)](#topic-38753) | 61.0 | 74.0 | 67.0 | GitHub | 直近音声掲載済み・新規材料ありのためGitHub継続掲載 |
 
 ---
 
@@ -27,7 +27,7 @@
 
 <a id="topic-38753"></a>
 
-### 1. PHP2Shell exploit bypasses protections designed to stop remote code execution
+### 1. CVE-2026-109618 Impact of Critical Vulnerabilities in PHP (CVE-2026-109618, CVE-2026-109619) on Palo Alto Networks Products (Severity: HIGH)
 
 #### スコアカード
 
@@ -36,16 +36,16 @@
 | <nobr>区⁠分</nobr> | GitHub |
 | <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>温⁠度⁠状⁠態</nobr> | 高温 |
-| <nobr>温⁠度⁠感</nobr> | 66.0 |
+| <nobr>温⁠度⁠感</nobr> | 61.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 74.0 |
 | <nobr>確⁠度</nobr> | 67.0 |
 
 #### 概要
 
-PHPに存在するCVE-2026-109618を含む複数の脆弱性について、保護回避を伴うリモートコード実行の懸念が広がっています。
-公開情報では、関連する検証コードやPoCの言及もあり、影響を受ける可能性のある環境では早急な対応が求められています。
-認証なしでのコード実行につながる可能性があるため、サーバー侵害や情報漏えい、サービス停止に直結し得ます。
-複数の製品・環境で影響が取り沙汰されており、広範な注意喚起が必要な事案です。
+PHPに存在する2件の重大な脆弱性（CVE-2026-109618、CVE-2026-109619）について、Palo Alto NetworksやCiscoなどの製品影響が案内されています。
+公開情報では、条件がそろう環境でリモートコード実行につながる可能性が示されており、関連する注意喚起や対策情報も広がっています。
+公開PoCや検証コードに言及があり、悪用可能性が高まるとみられるため、広く使われるPHP環境では早急な確認が必要です。
+影響範囲が複数ベンダーや周辺製品に及ぶ可能性があり、単一製品の問題として見落としにくい点も注目されています。
 
 #### 温度感の理由
 
@@ -69,9 +69,9 @@ PHPに存在するCVE-2026-109618を含む複数の脆弱性について、保�
 
 #### 担当者向け確認ポイント
 
-- PHP関連の修正版やベンダーの注意喚起を確認し、適用可能なものは速やかに更新する。
-- 公開されている侵害痕跡や異常な挙動がないか、関連ログとWeb公開サービスを点検する。
-- 影響範囲が大きい場合は、外部公開の縮小や一時的なアクセス制御など、暫定的なリスク低減策を検討する。
+- PHP関連の更新状況を確認し、提供元の修正版がある場合は優先的に適用する。
+- 自組織でPHPを利用するWebアプリや関連ミドルウェアの影響有無を棚卸しし、対象製品のアドバイザリも併せて確認する。
+- 不審な挙動や侵害痕跡の有無を点検し、必要に応じてログ調査とインシデント対応手順を準備する。
 
 #### 関連する対象
 
@@ -99,8 +99,8 @@ PHPに存在するCVE-2026-109618を含む複数の脆弱性について、保�
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: あり（12件）。
-- 国内開発者記事: 候補あり・採用なし。
+- 国内ブックマーク反応: あり（16件）。
+- 国内開発者記事: なし。
 - 技術・開発者系ソース観測: 観測あり。
 
 ---
@@ -114,44 +114,40 @@ PHPに存在するCVE-2026-109618を含む複数の脆弱性について、保�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [Toronto crime tips org、データ侵害の詳細判明で業務停止](https://therecord.media/toronto-crime-tips-org-freezes-ops-after-breach) | 28.0 | 20.0 | 42.0 |
-| [見逃されていたもの：連邦当局がテキサスのラップトップ農場を摘発](https://www.darkreading.com/insider-threats/texas-laptop-farms-north-korean-it-workers) | 28.0 | 20.0 | 42.0 |
+| [三菱電機、OTセキュリティ機能を産業機器へ実装 - マルウェア検知やUSB監視に対応](https://news.mynavi.jp/techplus/article/20261023-5179603/) | 29.0 | 20.0 | 42.0 |
+| [中国政府と関係するサイバー攻撃者が世界中の数百の組織に対してAIエージェント「ARTEX」を用いて攻撃を実施していたことがMicrosoftの調査で判明](https://gigazine.net/news/20261023-storm-0940-artex-cyber-attack/) | 27.0 | 20.0 | 42.0 |
+| [ソフォスがシャドーAIの可視化とリアルタイム保護を実現。「Sophos AI Defense」の提供を開始](https://news.mynavi.jp/techplus/article/20261023-5180157/) | 26.0 | 20.0 | 42.0 |
+| [花王、法人向け生成AI「ChatSense」を導入--研究所や商品カテゴリー越え知見を横展開](https://japan.zdnet.com/article/35253886/) | 26.0 | 20.0 | 42.0 |
+| [政府職員18万人がAIエージェント活用へ--古川デジタル大臣は会見で何を語ったか](https://japan.zdnet.com/article/35253859/) | 26.0 | 20.0 | 42.0 |
+| [AIエージェント普及で広がる攻撃面--パロアルトが説く、企業が向き合うべきAIリスクと統制の要諦](https://japan.zdnet.com/article/35253853/) | 26.0 | 20.0 | 42.0 |
 | [「AIでエンジニア派遣は不要になる」のか？ 各社に肌感を聞いた 求められる人材、明確に変化](https://www.itmedia.co.jp/news/article/2610/23/2000002527/) | 26.0 | 20.0 | 42.0 |
-| [OpenAIのAIエージェントが監視機能を無効化、指示を誤解して警告停止やコード削除](https://news.mynavi.jp/techplus/article/20261023-5175441/) | 26.0 | 20.0 | 42.0 |
-| [大阪10/28・東京11/11・名古屋12/2開催 ネットワーク＆セキュリティ MeetUp! 2026 に「Cloudbase AI」を出展](https://scan.netsecurity.ne.jp/article/2026/10/23/56548.html) | 26.0 | 20.0 | 42.0 |
-| [中国系攻撃者がAIエージェントで攻撃を自動化、「ConnectWise」のサプライチェーン攻撃に関与 Microsoftが警告](https://www.itmedia.co.jp/news/article/2610/23/2000002531/) | 26.0 | 20.0 | 42.0 |
-| [Claude Coworkが仕様変更 企業の懸念は減るか増えるか？](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100111/102100189/) | 26.0 | 20.0 | 42.0 |
-| [AIが「意思決定」まで担う時代に GitHubのプルリク承認機能](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100112/101600149/) | 26.0 | 20.0 | 42.0 |
-| [国内で未曽有の情報漏洩事件 AIでサイバー攻撃にコスト革命](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100113/101600197/) | 26.0 | 20.0 | 42.0 |
-| [AI時代のASPM 第2回：コードからクラウドまでの文脈で悪用可能なリスクを優先付けする](https://www.wiz.io/blog/aspm-ai-era-pt-2-prioritize-appsec-risk) | 25.0 | 20.0 | 42.0 |
-| [「Node.<wbr>js」に脆弱性10件 - Brotli圧縮データの処理でRCEのおそれ](https://www.security-next.com/191807) | 22.0 | 20.0 | 42.0 |
-| [HPEの無線LAN向けOSに多数の脆弱性 - クリティカルが33件](https://www.security-next.com/191821) | 22.0 | 20.0 | 42.0 |
-| [NRIとNRIセキュア、AI駆動型サイバー攻撃に備える「サイバーレジリエンス経営支援」を開始](https://news.mynavi.jp/techplus/article/20261023-5178609/) | 21.0 | 20.0 | 42.0 |
-| [証券口座で不正取引、金融サービスへのサイバー攻撃で何が起きている？](https://news.mynavi.jp/techplus/article/20261023-5178526/) | 21.0 | 20.0 | 42.0 |
-| [PHP脆弱性「PHP2Shell」で2260万件に影響 情シスの緊急チェックリスト](https://techtarget.itmedia.co.jp/tt/article/2610/23/2000002526/) | 21.0 | 20.0 | 42.0 |
-| [認証局eMudhra、SSL/TLS証明書事業から撤退へ 秘密鍵問題受け──既存顧客の証明書は無償で置き換え](https://www.itmedia.co.jp/news/article/2610/23/2000002534/) | 21.0 | 20.0 | 42.0 |
-| [「お名前.com」 のFX自動売買VPS、不正アクセスで金銭被害か 「600万円の損失」「55万円なくなった」……報告相次ぐ](https://www.itmedia.co.jp/news/article/2610/23/2000002532/) | 21.0 | 20.0 | 42.0 |
-| [AI時代のフィッシング詐欺に対する警告サインは何を重要とするべきか](https://ascii.jp/elem/000/004/443/4443596/?rss=) | 21.0 | 20.0 | 42.0 |
-| [トホホすぎる「内製化率５０％」目標](https://scan.netsecurity.ne.jp/article/2026/10/23/56557.html) | 21.0 | 20.0 | 42.0 |
-| [ふるさと納税ポータルサイト「ふるさとチョイス」に不正アクセス、泉大津市で寄附の受付ができない状況に](https://scan.netsecurity.ne.jp/article/2026/10/23/56556.html) | 21.0 | 20.0 | 42.0 |
-| [中古車情報サイト「カーセンサーnet」と中古車販売店向け業務支援サービス「C-MATCH」への不正アクセス、最大3,709,551件の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/10/23/56555.html) | 21.0 | 20.0 | 42.0 |
-| [メール配信システム「ブラストメール」に不正アクセス、データ持ち出しを確認](https://scan.netsecurity.ne.jp/article/2026/10/23/56554.html) | 21.0 | 20.0 | 42.0 |
-| [アバハウスインターナショナルに不正アクセス、複数の顧客からの問い合わせで発覚](https://scan.netsecurity.ne.jp/article/2026/10/23/56553.html) | 21.0 | 20.0 | 42.0 |
-| [講談社BECK 従業員のメールアカウントに不正アクセス、50件の不審なメールを送信](https://scan.netsecurity.ne.jp/article/2026/10/23/56552.html) | 21.0 | 20.0 | 42.0 |
-| [ムーンスターのサーバに不正アクセス、オンラインストアを利用した顧客情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/10/23/56551.html) | 21.0 | 20.0 | 42.0 |
-| [セーファーインターネット協会が利用する「さくらのレンタルサーバ」に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/10/23/56550.html) | 21.0 | 20.0 | 42.0 |
-| [富士急ハイランド公式アプリ・会員サイト「CLUB フジQ」にリスト型攻撃、159名の会員情報が閲覧された可能性](https://scan.netsecurity.ne.jp/article/2026/10/23/56549.html) | 21.0 | 20.0 | 42.0 |
-| [UnRTF に境界外書き込みの脆弱性](https://scan.netsecurity.ne.jp/article/2026/10/23/56547.html) | 21.0 | 20.0 | 42.0 |
-| [複数の Lenovo 製タブレットの Android Verified Boot 機能に既知のテスト用鍵がそのまま使用されている問題](https://scan.netsecurity.ne.jp/article/2026/10/23/56546.html) | 21.0 | 20.0 | 42.0 |
-| [アツミ電氣製 DVR に利用可能な非公開機能を悪用される問題](https://scan.netsecurity.ne.jp/article/2026/10/23/56545.html) | 21.0 | 20.0 | 42.0 |
-| [GMOイエラエ 育休取得率 男性60％ 女性100％ ～ 厚労省「子育てサポート企業」に認定](https://scan.netsecurity.ne.jp/article/2026/10/23/56544.html) | 21.0 | 20.0 | 42.0 |
-| [「自分たちの工場は自分たちで守る」 リコーが“リファレンス工場”から波及させたOTセキュリティ](https://ascii.jp/elem/000/004/443/4443693/?rss=) | 21.0 | 20.0 | 42.0 |
-| [PHP脆弱性問題は“また起こる” 事件の裏にあったエンジニアの根深い課題](https://atmarkit.itmedia.co.jp/ait/articles/2610/23/news038.html) | 21.0 | 20.0 | 42.0 |
-| [PHP2Shell、公表4日前に悪用の試み 「公表日より前にさかのぼって調査を」とAmazon](https://www.itmedia.co.jp/news/article/2610/23/2000002530/) | 21.0 | 20.0 | 42.0 |
-| [Railway、潜在的な侵害を受け開発者にシークレットのローテーションを警告](https://www.bleepingcomputer.com/news/security/railway-warns-devs-to-rotate-secrets-after-potential-breach/) | 20.0 | 20.0 | 42.0 |
-| [警視庁が個人情報漏えいに関する対策・啓発冊子を公開、都民向けと事業者向け](https://internet.watch.impress.co.jp/docs/news/2150370.html) | 20.0 | 20.0 | 42.0 |
-| [Microsoft、ConnectWiseへのサプライチェーン攻撃にStorm-0940の関与を特定](https://www.darkreading.com/cyberattacks-data-breaches/microsoft-storm-0940-connectwise-supply-chain-attack) | 20.0 | 20.0 | 42.0 |
-| [Capcom、1,170万アカウントに影響するデータ侵害を確認](https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/) | 20.0 | 20.0 | 42.0 |
+| [Google Cloud、OpenAIの競合にも開放へ　企業データはモデル学習に使わないと約束](https://www.helpnetsecurity.com/2026/10/23/google-cloud-openai-models-private-preview/) | 25.0 | 20.0 | 42.0 |
+| [AIがジュニア層からベテラン層までのサイバーセキュリティ職を奪いつつある](https://www.helpnetsecurity.com/2026/10/23/barracuda-cybersecurity-career-development-report/) | 25.0 | 20.0 | 42.0 |
+| [今週の新しい情報セキュリティ製品：2026年10月23日](https://www.helpnetsecurity.com/2026/10/23/new-infosec-products-of-the-week-october-23-2026/) | 25.0 | 20.0 | 42.0 |
+| [Android版「Firefox」に暗号関連の脆弱性 - 修正版が公開](https://www.security-next.com/191862) | 22.0 | 20.0 | 42.0 |
+| [「Splunk Enterprise」に複数の脆弱性 - 修正版が公開](https://www.security-next.com/191852) | 22.0 | 20.0 | 42.0 |
+| [他人に個人情報を悪用されて決済アカウントを作られた女性が逮捕され懲役6年の可能性](https://gigazine.net/news/20261023-cashapp-open-stolen-name/) | 22.0 | 20.0 | 42.0 |
+| [PHPの脆弱性をHacker Newsにリークした人物が「秘密だと知らなかった」と謝罪](https://gigazine.net/news/20261023-php-rce-unknowingly/) | 22.0 | 20.0 | 42.0 |
+| [「PHP2Shell」脆弱性公表後に悪用試行が数百万件単位に増加したとCloudflareが報告、顧客向けには新ファイアウォールを開発して有効化](https://gigazine.net/news/20261023-cloudflare-stats-php2shell-attempts/) | 22.0 | 20.0 | 42.0 |
+| [本来推測不可能な秘密鍵にわずか1バイトの値を使っていたeMudhraがSSL/TLS証明書事業から撤退](https://gigazine.net/news/20261023-emudhra-exit-ssl-tls/) | 22.0 | 20.0 | 42.0 |
+| [AmazonはPHP2Shell脆弱性を悪用した攻撃を公開4日前に検出していた](https://gigazine.net/news/20261023-amazon-knew-php2shell/) | 22.0 | 20.0 | 42.0 |
+| [「LiteLLM」に不正プログラム混入 - 認証情報漏洩やコード実行のおそれ](https://www.security-next.com/191830) | 22.0 | 20.0 | 42.0 |
+| [HIS子会社、約14万人の個人情報流出の可能性 委託先のラクスライトクラウドに不正アクセス](https://www.itmedia.co.jp/news/article/2610/23/2000002549/) | 21.0 | 20.0 | 42.0 |
+| [PHPの重大な脆弱性、国内で500件超のサービス停止告知、約6割は再開確認できず](https://news.mynavi.jp/techplus/article/20261023-5180045/) | 21.0 | 20.0 | 42.0 |
+| [クリスタ、脆弱性対応で一部サービス「予告なく停止」の可能性 データの事前ダウンロード呼び掛け](https://www.itmedia.co.jp/news/article/2610/23/2000002546/) | 21.0 | 20.0 | 42.0 |
+| [日経新聞への不正アクセスで日経BPの利用者情報も約80万件漏えい テレ東などにも影響か](https://www.itmedia.co.jp/news/article/2610/23/2000002544/) | 21.0 | 20.0 | 42.0 |
+| [デジタル庁、公式サイトへの問い合わせ最大1万3000件漏えいか Web制作ツール「Studio」不正アクセスで](https://www.itmedia.co.jp/news/article/2610/23/2000002543/) | 21.0 | 20.0 | 42.0 |
+| [PHPの重大脆弱性2件は典型的なメモリーバグ、複数の攻撃経路でコード実行](https://xtech.nikkei.com/atcl/nxt/column/18/00001/12122/) | 21.0 | 20.0 | 42.0 |
+| [IPAとJPCERT/CC、2026年7～9月の脆弱性届出状況を公表 - ソフトウエア製品は179件](https://news.mynavi.jp/techplus/article/20261023-5178981/) | 21.0 | 20.0 | 42.0 |
+| [1000万のWebサイトで「生きたAPIキー」が大量に“丸見え”状態？ 大手銀行やインフラの鍵も 米スタンフォード大などが調査](https://www.itmedia.co.jp/news/article/2610/23/2000002515/) | 21.0 | 20.0 | 42.0 |
+| [デジタル庁、問い合わせフォームの個人情報が最大1万3323件漏洩の恐れ](https://xtech.nikkei.com/atcl/nxt/news/24/03436/) | 21.0 | 20.0 | 42.0 |
+| [Progress WhatsUp Gold 2026レビュー](https://www.itpro.com/security/unified-threat-management/progress-whatsup-gold-2026-review-progress-delivers-a-big-toolbox-of-network-monitoring-services) | 20.0 | 20.0 | 42.0 |
+| [プリザンターのLDAP認証における認証不備の脆弱性](https://jvn.jp/jp/JVN82312317/) | 20.0 | 20.0 | 42.0 |
+| [ドローンプログラムのコンプライアンス：CTOが指摘する多くの機関の誤り](https://www.helpnetsecurity.com/2026/10/23/nick-donarski-rotorlab-drone-program-compliance/) | 20.0 | 20.0 | 42.0 |
+| [デジタル庁、Studio株式会社で発生した不正アクセスの影響による個人情報漏えいの可能性を発表](https://internet.watch.impress.co.jp/docs/news/2150695.html) | 20.0 | 20.0 | 42.0 |
+| [State Bank of Indiaで顧客のPIIデータ漏えい発生](https://www.darkreading.com/cyberattacks-data-breaches/state-bank-india-customer-pii-data-leak) | 20.0 | 20.0 | 42.0 |
+| [防災メールの情報漏えいに便乗する詐欺に注意！ メールやSMSのリンクから手続きしないで【読めば身に付くネットリテラシー】](https://internet.watch.impress.co.jp/docs/column/netliteracy/2149809.html) | 20.0 | 20.0 | 42.0 |
+| [三菱電機製の複数製品における複数の脆弱性（2026-006）](https://jvn.jp/vu/JVNVU93251594/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
