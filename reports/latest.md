@@ -1,17 +1,17 @@
-# 📡 サイレーダー 2026-10-25 17:00 JST
+# 📡 サイレーダー 2026-10-26 05:00 JST
 
-このレポートは、2026-10-25 11:00 JST〜2026-10-25 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-25 17:00 JST〜2026-10-26 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 26
+- 観測トピック数: 32
 - [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 1
+- [低温だが記録しておくトピック](#low-record-topics): 7
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [CVE-2026-109618 Impact of Critical Vulnerabilities in PHP (CVE-2026-109618, CVE-2026-109619) on Palo Alto Networks Products (Severity: HIGH)](#topic-38753) | 56.0 | 74.0 | 67.0 | 音声 | 温度感上位枠 |
+| 1 | [PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of AI-Assisted Hacking](#topic-39470) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
 
 ---
 
@@ -19,84 +19,59 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-38753"></a>
+<a id="topic-39470"></a>
 
-### 1. CVE-2026-109618 Impact of Critical Vulnerabilities in PHP (CVE-2026-109618, CVE-2026-109619) on Palo Alto Networks Products (Severity: HIGH)
+### 1. PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of AI-Assisted Hacking
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>R⁠C⁠E</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
-| <nobr>温⁠度⁠感</nobr> | 56.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 74.0 |
-| <nobr>確⁠度</nobr> | 67.0 |
+| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>A⁠I</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-PHPに存在する2件の重大な脆弱性（CVE-2026-109618、CVE-2026-109619）について、Palo Alto NetworksやCiscoなど複数のベンダーが関連製品への影響を案内しています。
-公開PoCや悪用に関する言及もあり、影響を受ける環境では早急な更新と確認が求められます。
-認証なしのリモートコード実行につながる可能性が示されており、WebサーバーやCMSを含む広い範囲に影響し得ます。
-公開情報上も注目度が高く、実運用環境での早期対応の重要性が増しています。
+PHP2Shellとして追跡される脆弱性（CVE-2026-109618、CVE-2026-109619）の悪用が観測され、欧州の政府系組織が標的になったとされています。
+報告では、初期侵入後の活動にエージェント型AIプラットフォームが使われた可能性も示されており、侵害後の展開が短時間で進んだケースが挙げられています。
+脆弱性の悪用だけでなく、その後の探索や権限拡大などの段階でAI活用が疑われる点が注目されています。
+攻撃の速度や自動化の進展は、検知と初動対応の難度をさらに高める可能性があります。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 24 sources。
-- 実悪用・ゼロデイ文脈。
-- 公開PoC・検証コード言及あり。
+- AI×Security文脈。
 - 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
-- 悪用情報あり。
-- 公開PoCにより再現・悪用可能性が上がる。
-- RCEまたは認証バイパス系。
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
 
 ##### 確度
-- 複数ソース確認。
-- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- 影響を受けるPHPおよび関連製品のバージョンを特定し、ベンダーの修正版・緩和策を適用する。
-- 公開されている注意喚起を確認し、異常な実行や設定変更など侵害の兆候がないか点検する。
-- Webサーバーや管理系システムを優先して、外部公開面の監視とログ確認を強化する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-109618 | 関連CVE | 1.00 | 候補あり（URL 94件以上） |
-| 脆弱性 | CVE-2026-109619 | 関連CVE | 1.00 | 候補あり（URL 12件以上） |
-| ベンダー | Palo Alto Networks | 言及あり | 0.80 | — |
-| ベンダー | Cisco | 言及あり | 0.80 | — |
-| ベンダー | Cloudflare | 言及あり | 0.80 | — |
+- 対象製品の脆弱性情報と適用状況を確認し、優先度を付けて対応する。
+- 侵入後の兆候として、認証情報への異常アクセスや多要素認証関連の不審な操作を監視する。
+- 短時間での横展開や権限上昇を想定し、ログ保全とインシデント対応手順を見直す。
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-109618](https://nvd.nist.gov/vuln/detail/CVE-2026-109618) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-109618 Impact of Critical Vulnerabilities in PHP (CVE-2026-109618, CVE-](https://security.paloaltonetworks.com/CVE-2026-109618) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Vulnerabilities in PHP Affecting Cisco Products: October 2026](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Threat Brief: Critical Vulnerabilities in PHP: CVE-2026-109618, CVE-2026-109619 ](https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [EOLのPHP 7.4、8.0、8.1にも異例のパッチ　JPCERT/CCが警告する「php2shell」の侵害痕跡3つと緊急対策](https://atmarkit.itmedia.co.jp/ait/articles/2610/23/news035.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [PHP2Shell exploit bypasses protections designed to stop remote code execution](https://www.theregister.com/security/2026/10/22/php2shell-exploit-bypasses-protections-designed-to-stop-remote-code-execution/5304883) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [PHP2Shell puts dozens of UK government services out of service](https://www.theregister.com/security/2026/10/22/php2shell-puts-dozens-of-uk-government-services-out-of-service/5304840) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [New PHP2Shell scanner checks your hosts for CVE-2026-109618 and CVE-2026-109619](https://www.helpnetsecurity.com/2026/10/22/php2shell-scanner-tool/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of ](https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: あり（18件）。
+- 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
+- 技術・開発者系ソース観測: 観測なし。
 
 ---
 
@@ -115,7 +90,13 @@ PHPに存在する2件の重大な脆弱性（CVE-2026-109618、CVE-2026-109619�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [日本へのサイバー攻撃報告が48％増、個人情報が狙われる背景とは](https://news.mynavi.jp/techplus/article/20261025-5180073/) | 21.0 | 20.0 | 42.0 |
+| [DownloadsフォルダのAGENTS.mdファイルを悪用したAIコーディングエージェントの乗っ取り](https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/) | 25.0 | 20.0 | 42.0 |
+| [元Unit 8200の元将校ら、Agentic SecOpsスタートアップMaveのために3400万ドルを調達](https://www.securityweek.com/former-unit-8200-officers-raise-34-million-for-agentic-secops-startup-mave/) | 25.0 | 20.0 | 42.0 |
+| [Broccoli2shell: Brotliデコーダーの重大な脆弱性について知っておくべきこと](https://www.wiz.io/blog/cve-2026-111497-brotli-rce-node-js) | 20.0 | 46.0 | 54.0 |
+| [未修正のTailscale SSH脆弱性により侵害端末が他のサーバーでroot権限を取得可能に](https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html) | 20.0 | 20.0 | 42.0 |
+| [不正アクセス GMO代表が謝罪](https://news.yahoo.co.jp/pickup/6600119?source=rss) | 20.0 | 20.0 | 42.0 |
+| [不正アクセス 官邸主導で対策急ぐ](https://news.yahoo.co.jp/pickup/6600103?source=rss) | 20.0 | 20.0 | 42.0 |
+| [今週の振り返り：PHPの脆弱性を修正、Palo Alto GlobalProtect VPNの脆弱性が悪用された](https://www.helpnetsecurity.com/2026/10/25/week-in-review-php-vulnerabilities-patched-exploited-palo-alto-globalprotect-vpn-flaw/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
