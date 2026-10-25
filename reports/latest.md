@@ -1,13 +1,13 @@
-# 📡 サイレーダー 2026-10-25 05:00 JST
+# 📡 サイレーダー 2026-10-25 11:00 JST
 
-このレポートは、2026-10-24 17:00 JST〜2026-10-25 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-25 05:00 JST〜2026-10-25 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 35
+- 観測トピック数: 25
 - [音声で扱う想定のトピック](#audio-topics): 0
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 11
+- [低温だが記録しておくトピック](#low-record-topics): 1
 
 今回はサマリ掲載トピックはありません。
 
@@ -34,17 +34,7 @@
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [BlackX UEFI bootkitがBaton Dropの脆弱性を悪用してSecure Bootを回避](https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/) | 28.0 | 20.0 | 42.0 |
-| [LiteLLMのマスターキー漏えいでGitHubトークンが窃取されリリースパイプラインが乗っ取られる](https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html) | 28.0 | 20.0 | 42.0 |
-| [Researchers、200万件超の更新を投入してPopcorn Time Updaterを遠隔無効化、ボットネット化の懸念](https://thehackernews.com/2026/10/researchers-push-over-2-million-updates.html) | 28.0 | 20.0 | 42.0 |
-| [人間とAIエージェント両方のために設計されたワークスペース全体を対象としたローカルファースト検索「zg」](https://gigazine.net/news/20261024-zvec-grep/) | 27.0 | 20.0 | 42.0 |
-| [Google、AI検索で共有されたGmailとPhotosのデータをターゲティング広告に利用可能と説明](https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html) | 25.0 | 20.0 | 42.0 |
-| [GMO、「能動的サイバー防御」発動を政府に要請 「お名前.com」FX用VPSへの攻撃で](https://www.itmedia.co.jp/news/article/2610/24/2000002567/) | 21.0 | 20.0 | 42.0 |
-| [GMO、不正取引の被害額を補償へ 見舞金5000円も 「お名前.com」FX用VPSへのサイバー攻撃で](https://www.itmedia.co.jp/news/article/2610/24/2000002566/) | 21.0 | 20.0 | 42.0 |
-| [パスキー万能説破れる？ Google同期パスキー実装に見つかった“想定外の穴”](https://atmarkit.itmedia.co.jp/ait/articles/2610/24/news007.html) | 21.0 | 20.0 | 42.0 |
-| [Brotliデコーダーの欠陥によるNode.<wbr>jsのRCEはBun、Pythonなど広く使われるソフトウェアにも影響](https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html) | 20.0 | 46.0 | 50.0 |
-| [自律型攻撃エージェント「Skynet mode」が他のモデルを乗っ取って悪用する手口](https://www.theregister.com/security/2026/10/24/autonomous-attack-agent-in-skynet-mode-hijacks-other-models-to-carry-out-its-evil-deeds/5305215) | 20.0 | 20.0 | 42.0 |
-| [能動サイバー防御要請 政府側慎重](https://news.yahoo.co.jp/pickup/6599979?source=rss) | 20.0 | 20.0 | 42.0 |
+| [CiscoによるeMudhraルートおよび中間認証局の緊急信頼解除に関する情報提供](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-emudhra-info-ScS22A1r) | 20.0 | 20.0 | 42.0 |
 
 ---
 
