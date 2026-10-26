@@ -1,17 +1,17 @@
-# 📡 サイレーダー 2026-10-26 05:00 JST
+# 📡 サイレーダー 2026-10-26 11:00 JST
 
-このレポートは、2026-10-25 17:00 JST〜2026-10-26 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-26 05:00 JST〜2026-10-26 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 32
+- 観測トピック数: 56
 - [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 7
+- [低温だが記録しておくトピック](#low-record-topics): 30
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of AI-Assisted Hacking](#topic-39470) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 1 | [AIエージェントによる操作の多くがボット検出システムのhCaptchaやCloudflare Turnstileを通過](#topic-39536) | 35.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
 
 ---
 
@@ -19,28 +19,28 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-39470"></a>
+<a id="topic-39536"></a>
 
-### 1. PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of AI-Assisted Hacking
+### 1. AIエージェントによる操作の多くがボット検出システムのhCaptchaやCloudflare Turnstileを通過
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>C⁠V⁠E</nobr> / <nobr>A⁠I</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>温⁠度⁠感</nobr> | 35.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
 | <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-PHP2Shellとして追跡される脆弱性（CVE-2026-109618、CVE-2026-109619）の悪用が観測され、欧州の政府系組織が標的になったとされています。
-報告では、初期侵入後の活動にエージェント型AIプラットフォームが使われた可能性も示されており、侵害後の展開が短時間で進んだケースが挙げられています。
-脆弱性の悪用だけでなく、その後の探索や権限拡大などの段階でAI活用が疑われる点が注目されています。
-攻撃の速度や自動化の進展は、検知と初動対応の難度をさらに高める可能性があります。
+公開情報によると、ボット検出システムを開発するProof of Humanが、複数の検出方式を比較した結果を公表し、AIエージェントによる操作の一部がhCaptchaやCloudflare Turnstileを通過したとされています。
+現時点では、個別の製品や設定ごとの違いがあり得るため、一般化しすぎずに受け止める必要があります。
+AIエージェントの利用拡大に伴い、従来のボット判定だけでは十分に見分けられない場面がある可能性が示された点が注目されています。
+Webサービス運営者にとっては、認証・不正対策の見直しを考える材料になります。
 
 #### 温度感の理由
 
@@ -56,15 +56,21 @@ PHP2Shellとして追跡される脆弱性（CVE-2026-109618、CVE-2026-109619�
 
 #### 担当者向け確認ポイント
 
-- 対象製品の脆弱性情報と適用状況を確認し、優先度を付けて対応する。
-- 侵入後の兆候として、認証情報への異常アクセスや多要素認証関連の不審な操作を監視する。
-- 短時間での横展開や権限上昇を想定し、ログ保全とインシデント対応手順を見直す。
+- CAPTCHAやTurnstileの通過可否だけで自動化対策の有効性を判断しないこと。
+- ログイン、決済、フォーム送信など重要操作では、追加の異常検知やリスクベース認証を併用すること。
+- AI由来の自動操作を想定し、レート制限や行動分析など複数層の防御を前提に設計すること。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Cloudflare | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of ](https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [AIエージェントによる操作の多くがボット検出システムのhCaptchaやCloudflare Turnstileを通過](https://gigazine.net/news/20261026-ai-bot-detection-benchmark/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -90,13 +96,36 @@ PHP2Shellとして追跡される脆弱性（CVE-2026-109618、CVE-2026-109619�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [DownloadsフォルダのAGENTS.mdファイルを悪用したAIコーディングエージェントの乗っ取り](https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/) | 25.0 | 20.0 | 42.0 |
-| [元Unit 8200の元将校ら、Agentic SecOpsスタートアップMaveのために3400万ドルを調達](https://www.securityweek.com/former-unit-8200-officers-raise-34-million-for-agentic-secops-startup-mave/) | 25.0 | 20.0 | 42.0 |
-| [Broccoli2shell: Brotliデコーダーの重大な脆弱性について知っておくべきこと](https://www.wiz.io/blog/cve-2026-111497-brotli-rce-node-js) | 20.0 | 46.0 | 54.0 |
-| [未修正のTailscale SSH脆弱性により侵害端末が他のサーバーでroot権限を取得可能に](https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html) | 20.0 | 20.0 | 42.0 |
-| [不正アクセス GMO代表が謝罪](https://news.yahoo.co.jp/pickup/6600119?source=rss) | 20.0 | 20.0 | 42.0 |
-| [不正アクセス 官邸主導で対策急ぐ](https://news.yahoo.co.jp/pickup/6600103?source=rss) | 20.0 | 20.0 | 42.0 |
-| [今週の振り返り：PHPの脆弱性を修正、Palo Alto GlobalProtect VPNの脆弱性が悪用された](https://www.helpnetsecurity.com/2026/10/25/week-in-review-php-vulnerabilities-patched-exploited-palo-alto-globalprotect-vpn-flaw/) | 20.0 | 20.0 | 42.0 |
+| [エスケーロジにランサムウェア攻撃、一部の社内情報の漏えいを確認](https://scan.netsecurity.ne.jp/article/2026/10/26/56561.html) | 29.0 | 30.0 | 42.0 |
+| [OpenAI、フロンティアモデルの学習中はインターネットに接続させない方針 学習中のAIが隔離環境を抜け出した件も公表](https://www.itmedia.co.jp/news/article/2610/26/2000002573/) | 26.0 | 20.0 | 42.0 |
+| [AI時代の「石油」--グーグルが航空会社の業務データを購入した理由](https://japan.zdnet.com/article/35253901/) | 26.0 | 20.0 | 42.0 |
+| [ネットワーク統合管理製品「Arista VCO」に深刻な脆弱性 - すでに悪用も](https://www.security-next.com/191919) | 24.0 | 20.0 | 43.0 |
+| [Gyazoから6.9億件情報漏洩 削除済みデータも対象](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/031800050/101900092/) | 24.0 | 20.0 | 43.0 |
+| [「Nextcloud」組込ツールや「Arista VCO」の脆弱性などに注意喚起 - 米当局](https://www.security-next.com/191926) | 22.0 | 20.0 | 42.0 |
+| [先週注目された記事（2026年10月18日〜2026年10月24日）](https://www.security-next.com/191917) | 22.0 | 20.0 | 42.0 |
+| [GMO熊谷代表「社内ホワイトハッカーが事前に指摘」も対策遅れ、国に「能動的サイバー防御」要請 「責任転嫁では」SNSで批判も](https://www.itmedia.co.jp/news/article/2610/26/2000002571/) | 21.0 | 20.0 | 42.0 |
+| [PHPの深刻な脆弱性、kintoneへの影響は？ プラグイン各社の対応状況](https://news.mynavi.jp/techplus/article/20261026-5196353/) | 21.0 | 20.0 | 42.0 |
+| [情報漏えい対策「あれもやれ、これもやれ」で混乱している人へ 無料PDFでまず“優先順位”を整理](https://atmarkit.itmedia.co.jp/ait/articles/2610/26/news028.html) | 21.0 | 20.0 | 42.0 |
+| [能動的サイバー防御とは？ GMOが政府に発動を要請、できることと限界を解説](https://news.mynavi.jp/techplus/article/20261026-5196062/) | 21.0 | 20.0 | 42.0 |
+| [創刊 28 周年記念キャンペーンのおしらせ（2）特別企画実施のおしらせ（When I'm 28）](https://scan.netsecurity.ne.jp/article/2026/10/26/56568.html) | 21.0 | 20.0 | 42.0 |
+| [「世界の集合知を『使える防御』に変える 脅威情報の共有と活用の実践」～ Internet Week 2026](https://scan.netsecurity.ne.jp/article/2026/10/26/56567.html) | 21.0 | 20.0 | 42.0 |
+| [セコムトラストシステムズ、5 大「反響の大きかったウェビナー」をアーカイブ配信](https://scan.netsecurity.ne.jp/article/2026/10/26/56566.html) | 21.0 | 20.0 | 42.0 |
+| [厚生労働省 委託事業の「東電福島第一原発廃炉等作業における被ばく低減対策普及啓発事業」で個人情報が漏えい](https://scan.netsecurity.ne.jp/article/2026/10/26/56565.html) | 21.0 | 20.0 | 42.0 |
+| [「お名前.com デスクトップクラウド」に不正アクセス、取引口座のログイン情報等が取得され不正利用された可能性](https://scan.netsecurity.ne.jp/article/2026/10/26/56564.html) | 21.0 | 20.0 | 42.0 |
+| [「焼肉きんぐ」公式アプリ会員管理システムに不正アクセス、1,078万8,963件の個人情報が漏えい](https://scan.netsecurity.ne.jp/article/2026/10/26/56563.html) | 21.0 | 20.0 | 42.0 |
+| [「大起水産公式アプリ」に不正アクセス、顧客17万4,933人の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/10/26/56562.html) | 21.0 | 20.0 | 42.0 |
+| [Apache Tomcat に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/10/26/56560.html) | 21.0 | 20.0 | 42.0 |
+| [PHP に複数の任意のコードが実行可能な脆弱性](https://scan.netsecurity.ne.jp/article/2026/10/26/56559.html) | 21.0 | 20.0 | 42.0 |
+| [エーアイセキュリティラボ、「A2B攻撃」に特化した診断ツールを近日中に提供](https://scan.netsecurity.ne.jp/article/2026/10/26/56558.html) | 21.0 | 20.0 | 42.0 |
+| [上場企業Webサイトで見る、PHP/WordPressの更新実態／クラウドコスト「可視化」と「削減」にギャップ、ほか](https://ascii.jp/elem/000/004/445/4445506/?rss=) | 21.0 | 20.0 | 42.0 |
+| [Pythonを起動するだけで認証情報が盗まれる LiteLLMに混入した悪性コードの正体](https://atmarkit.itmedia.co.jp/ait/articles/2610/26/news025.html) | 21.0 | 20.0 | 42.0 |
+| [「残念なセキュリティー」を招く3大パターン](https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/101900259/101900001/) | 21.0 | 20.0 | 42.0 |
+| [企業を襲う情報漏洩ラッシュ AIで加速、入口は今も「おなじみ」](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600011/102200217/) | 21.0 | 20.0 | 42.0 |
+| [ダッソー幹部が語る、製造業のサイバー防御とAI活用--知財保護と価値創出を両立する条件とは](https://japan.zdnet.com/article/35253801/) | 21.0 | 20.0 | 42.0 |
+| [新局面 漏洩被害者に迫る「脅威」](https://news.yahoo.co.jp/pickup/6600145?source=rss) | 20.0 | 20.0 | 42.0 |
+| [OpenSSL 4.1.0で何が新しくなり、何が削除され、何がまだ未解決なのか](https://www.helpnetsecurity.com/2026/10/26/openssl-4-1-0-released/) | 20.0 | 20.0 | 42.0 |
+| [GMO、「お名前.com デスクトップクラウド」へのサイバー攻撃で詳報、「能動的サイバー防御」の緊急要請も 見舞金、代替サービス、損失の補填など説明](https://internet.watch.impress.co.jp/docs/news/2150991.html) | 20.0 | 20.0 | 42.0 |
+| [「能動的サイバー防御」とは：サイバー攻撃を未然に防ぎ、被害拡大を防止するための取り組み【今週のキーワード】](https://internet.watch.impress.co.jp/docs/column/keyword/2148826.html) | 20.0 | 20.0 | 42.0 |
 
 ---
 
