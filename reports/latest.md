@@ -1,17 +1,17 @@
-# 📡 サイレーダー 2026-10-31 11:00 JST
+# 📡 サイレーダー 2026-10-31 17:00 JST
 
-このレポートは、2026-10-31 05:00 JST〜2026-10-31 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-10-31 11:00 JST〜2026-10-31 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 32
+- 観測トピック数: 26
 - [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 7
+- [低温だが記録しておくトピック](#low-record-topics): 2
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [China-backed threat group used agentic AI pentesting tool to compromise 140 sensitive targets in 11 days](#topic-40710) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 1 | [CVE-2026-111497 Portfolio Status: Impact of Brotli Vulnerability (CVE-2026-111497) on Palo Alto Networks Products (Severity: CRITICAL)](#topic-39379) | 39.0 | 64.0 | 66.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,68 +19,86 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-40710"></a>
+<a id="topic-39379"></a>
 
-### 1. China-backed threat group used agentic AI pentesting tool to compromise 140 sensitive targets in 11 days
+### 1. CVE-2026-111497 Portfolio Status: Impact of Brotli Vulnerability (CVE-2026-111497) on Palo Alto Networks Products (Severity: CRITICAL)
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>地⁠政⁠学⁠・⁠サ⁠イ⁠バ⁠ー⁠紛⁠争</nobr> / <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>I⁠o⁠C</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>P⁠o⁠C</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
+| <nobr>温⁠度⁠感</nobr> | 39.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
+| <nobr>確⁠度</nobr> | 66.0 |
 
 #### 概要
 
-CrowdStrikeによると、中国支援とみられる脅威グループ「Vapor Panda」が、エージェント型AIのペンテストツールを悪用し、11日間で140件の機微な標的への侵害に成功したとされています。
-対象は少なくとも14か国、200組織超に及ぶとされ、攻撃の進行速度が速い点が特徴とされています。
-攻撃者がAIを活用して侵入作業を効率化している可能性があり、従来より短時間で多くの標的に到達しうる点が注目されています。
-組織側には、検知・封じ込めまでの初動速度がこれまで以上に重要になることを示唆します。
+Palo Alto Networksのセキュリティ情報によると、Brotliライブラリの脆弱性CVE-2026-111497は同社製品への影響確認状況が案内されています。
+Node.<wbr>js側でも修正版が公開されており、関連するソフトウェアでは悪用観測やPoCの存在が報じられています。
+広く使われる圧縮ライブラリの脆弱性で、依存関係を通じて複数製品に影響が及ぶ可能性があるため注目されています。
+実際の悪用やPoCに関する情報もあるため、対応の優先度が高い話題です。
 
 #### 温度感の理由
 
 ##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
+- 複数ソースで確認: 11 sources。
+- 実悪用・ゼロデイ文脈。
+- 技術・開発者系ソース観測: 観測あり。
+- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+- 悪用情報あり。
+- RCEまたは認証バイパス系。
 
 ##### 確度
+- 複数ソース確認。
+- CVE IDあり。
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- AI由来かどうかにかかわらず、短時間で連続する不審な認証失敗・権限昇格・横展開の兆候を相関分析できる体制を確認する。
-- インターネット公開資産や外部公開サービスの棚卸しを行い、不要な露出や古い認証方式が残っていないか点検する。
-- 重要アカウントの多要素認証、特権アクセス管理、監査ログの保全を再確認し、異常時の隔離手順を整備する。
+- Node.<wbr>jsやBrotliを利用する製品・サービスが影響範囲に含まれるか確認する。
+- ベンダーの修正版やアドバイザリを確認し、更新可能な環境から優先して適用する。
+- 外部入力でBrotliデータを受け取る機能があるシステムは監視を強化し、異常動作の有無を点検する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| ベンダー | ConnectWise | 言及あり | 0.80 | — |
-| ベンダー | CrowdStrike | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2026-105482 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2026-105483 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2026-106069 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2026-111497 | 関連CVE | 1.00 | 候補あり（URL 30件以上） |
+| ベンダー | Google | 言及あり | 0.80 | — |
+| ベンダー | Palo Alto Networks | 言及あり | 0.80 | — |
 | ベンダー | Microsoft | 言及あり | 0.80 | — |
-| ベンダー | DeepSeek | 言及あり | 0.80 | — |
+| ベンダー | OpenAI | 言及あり | 0.80 | — |
+| ベンダー | Wiz | 言及あり | 0.80 | — |
+| ベンダー | Rapid7 | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [China-backed threat group used agentic AI pentesting tool to compromise 140 sens](https://cyberscoop.com/china-vapor-panda-agentic-ai-artex-campaign-crowdstrike/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-111497](https://nvd.nist.gov/vuln/detail/CVE-2026-111497) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [CVE-2026-111497 Portfolio Status: Impact of Brotli Vulnerability (CVE-2026-11149](https://security.paloaltonetworks.com/CVE-2026-111497) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Vulnerabilities in Node.<wbr>js Affecting Cisco Products: October 2026](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Adobe Commerce PolyShell Attacks Breach Hundreds of Stores as Brotli Exploit Tra](https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Brotli bug reaches far beyond Node.<wbr>js (CVE-2026-111497)](https://www.helpnetsecurity.com/2026/10/27/node2shell-broccoli2shell-vulnerability-cve-2026-111497/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Experts temper emergency-level alarms over critical Brotli defect](https://cyberscoop.com/brotli-critical-vulnerability-decompression-library-node2shell-broccoli2shell/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [eMudhra, Brotli, and the Long Tail of a Security Fix](https://socket.dev/blog/emudhra-brotli-security-fix) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Microsoft releases emergency .<wbr>NET security fixes for Google Brotli bug](https://www.theregister.com/security/2026/10/26/microsoft-releases-emergency-net-security-fixes-for-google-brotli-bug/5305515) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
+- 国内ブックマーク反応: あり（5件）。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
+- 技術・開発者系ソース観測: 観測あり。
 
 ---
 
@@ -99,13 +117,8 @@ CrowdStrikeによると、中国支援とみられる脅威グループ「Vapor 
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [日本の組織を狙うサイバー攻撃、44のAIエージェントで偵察から情報窃取まで自動化](https://news.mynavi.jp/techplus/article/20261031-5222776/) | 28.0 | 20.0 | 42.0 |
-| [AI開発プラットフォームを狙う「Black October」](https://www.wiz.io/blog/black-october-for-ai-developer-platforms) | 25.0 | 20.0 | 42.0 |
-| [DOJがCharacter.AIのチャット売却に関してプライバシー上の懸念を表明](https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale) | 25.0 | 20.0 | 42.0 |
-| [MPTCPサーバーでリモートroot攻撃を可能にするLinuxカーネルの重大な脆弱性](https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/) | 24.0 | 38.0 | 42.0 |
-| [GMO不正アクセスで“SNSをやめたくなった” 攻撃者の仕掛ける情報戦に企業と報道はどう向き合うべきか？](https://atmarkit.itmedia.co.jp/ait/articles/2610/31/news003.html) | 21.0 | 20.0 | 42.0 |
-| [Binanceの約1兆円流出、北朝鮮ハッカー集団「TraderTraitor」の犯行か](https://www.itmedia.co.jp/news/article/2610/31/2000002775/) | 21.0 | 20.0 | 42.0 |
-| [Cursor向けClaude Code拡張機能を改ざんしたトロイの木馬による開発者標的攻撃](https://www.darkreading.com/cyberattacks-data-breaches/devs-trojanized-claude-code-extension-cursor) | 20.0 | 20.0 | 42.0 |
+| [Cloudflare、Q3にネットワーク層DDoS攻撃1820万件を報告、38％増加](https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html) | 28.0 | 20.0 | 42.0 |
+| [共有されたChatGPTリンクで攻撃者のコード実行と非公開チャットの閲覧が可能になる脆弱性](https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html) | 25.0 | 20.0 | 42.0 |
 
 ---
 
