@@ -1,17 +1,18 @@
-# 📡 サイレーダー 2026-11-03 11:00 JST
+# 📡 サイレーダー 2026-11-03 17:00 JST
 
-このレポートは、2026-11-03 05:00 JST〜2026-11-03 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-11-03 11:00 JST〜2026-11-03 17:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 37
-- [音声で扱う想定のトピック](#audio-topics): 1
+- 観測トピック数: 32
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 12
+- [低温だが記録しておくトピック](#low-record-topics): 7
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Vulnerabilities in Node.<wbr>js Affecting Cisco Products: October 2026](#topic-39379) | 39.0 | 64.0 | 66.0 | 音声 | 温度感上位枠 |
+| 1 | [Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoors](#topic-40996) | 38.0 | 46.0 | 54.0 | 音声 | 温度感上位枠 |
+| 2 | [Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials](#topic-41018) | 32.0 | 46.0 | 50.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -19,40 +20,36 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-39379"></a>
+<a id="topic-40996"></a>
 
-### 1. Vulnerabilities in Node.<wbr>js Affecting Cisco Products: October 2026
+### 1. Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoors
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>K⁠E⁠V</nobr> / <nobr>I⁠o⁠C</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>P⁠o⁠C</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 継続監視 |
-| <nobr>温⁠度⁠感</nobr> | 39.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 64.0 |
-| <nobr>確⁠度</nobr> | 66.0 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 温度上昇中 |
+| <nobr>温⁠度⁠感</nobr> | 38.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
+| <nobr>確⁠度</nobr> | 54.0 |
 
 #### 概要
 
-CiscoのPSIRTは、Node.<wbr>jsに存在する複数の脆弱性が同社製品に影響し得るとして注意喚起しました。
-中でもCVE-2026-111497はBrotli処理に関わる問題とされ、Node.<wbr>jsの修正版公開後に広く注目されています。
-公開情報では、遠隔からのコード実行につながる可能性や、関連製品への影響が指摘されています。
-Node.<wbr>jsは多くの製品やサービスの基盤で使われているため、単一の脆弱性でも影響範囲が広がるおそれがあります。
-Ciscoや複数ベンダーが言及していることから、利用製品の棚卸しと更新状況の確認が重要です。
+Siemensの産業用IoTゲートウェイ「SIMATIC IoT2050 Advanced」に関する重大な脆弱性CVE-2026-58115について、実際の悪用が確認されていると報じられています。
+内容としては、認証不備により、遠隔から任意コード実行につながる可能性があるとされています。
+産業IoT機器は業務ネットワークや制御環境と接続されることがあり、侵害されると広い影響につながるおそれがあります。
+しかも、既に悪用が示唆されているため、公開情報の把握と早期対応の優先度が高い事案です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 11 sources。
-- 実悪用・ゼロデイ文脈。
-- 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
+- 複数ソースで確認: 2 sources。
+- 脅威・攻撃キャンペーン文脈。
 
 ##### 実務影響
-- 悪用情報あり。
 - RCEまたは認証バイパス系。
 
 ##### 確度
@@ -62,44 +59,94 @@ Ciscoや複数ベンダーが言及していることから、利用製品の棚
 
 #### 担当者向け確認ポイント
 
-- Node.<wbr>jsの影響を受けるバージョンや利用ライブラリを把握し、ベンダー提供の修正版・緩和策を確認する。
-- Node.<wbr>jsを組み込む自社製品や周辺サービスがある場合は、依存関係を点検して優先度高く適用計画を立てる。
-- 関連するCVEやベンダー告知を継続監視し、実際の悪用や追加の影響範囲がないか確認する。
+- 該当機器が利用中かどうか、影響を受ける構成・バージョンを確認する。
+- ベンダーの修正版や回避策の有無を確認し、適用計画を早めに立てる。
+- 外部公開の有無を見直し、不要な到達性を減らすとともに監視を強化する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-105482 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-105483 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-106069 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-111497 | 関連CVE | 1.00 | 候補あり（URL 33件以上） |
-| ベンダー | Google | 言及あり | 0.80 | — |
-| ベンダー | Palo Alto Networks | 言及あり | 0.80 | — |
-| ベンダー | Microsoft | 言及あり | 0.80 | — |
-| ベンダー | OpenAI | 言及あり | 0.80 | — |
-| ベンダー | Wiz | 言及あり | 0.80 | — |
-| ベンダー | Rapid7 | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2019-17558 | 関連CVE | 1.00 | 候補あり（URL 15件以上） |
+| 脆弱性 | CVE-2026-58115 | 関連CVE | 1.00 | 未確認 |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-111497](https://nvd.nist.gov/vuln/detail/CVE-2026-111497) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Vulnerabilities in Node.<wbr>js Affecting Cisco Products: October 2026](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CVE-2026-111497 Portfolio Status: Impact of Brotli Vulnerability (CVE-2026-11149](https://security.paloaltonetworks.com/CVE-2026-111497) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Adobe Commerce PolyShell Attacks Breach Hundreds of Stores as Brotli Exploit Tra](https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Brotli bug reaches far beyond Node.<wbr>js (CVE-2026-111497)](https://www.helpnetsecurity.com/2026/10/27/node2shell-broccoli2shell-vulnerability-cve-2026-111497/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Experts temper emergency-level alarms over critical Brotli defect](https://cyberscoop.com/brotli-critical-vulnerability-decompression-library-node2shell-broccoli2shell/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [eMudhra, Brotli, and the Long Tail of a Security Fix](https://socket.dev/blog/emudhra-brotli-security-fix) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Microsoft releases emergency .<wbr>NET security fixes for Google Brotli bug](https://www.theregister.com/security/2026/10/26/microsoft-releases-emergency-net-security-fixes-for-google-brotli-bug/5305515) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-58115](https://nvd.nist.gov/vuln/detail/CVE-2026-58115) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoor](https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Max-severity bug in widely used OT programming tool exploited to deliver Linux m](https://www.theregister.com/security/2026/11/02/max-severity-bug-in-widely-used-ot-programming-tool-exploited-to-deliver-linux-malware/5307086) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: あり（5件）。
+- 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測あり。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-41018"></a>
+
+### 2. Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 32.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
+| <nobr>確⁠度</nobr> | 50.0 |
+
+#### 概要
+
+CryptoPayment GatewayのWordPressプラグインに、未修正の重大な脆弱性（CVE-2026-81648）があるとして、実際に悪用を試みる動きが観測されています。
+公開情報では、この問題により認証なしでサーバー上のファイル操作が可能となり、ウォレット関連の機密情報が露出するおそれがあるとされています。
+決済関連のプラグインは影響範囲が広く、侵害されると資産や機密情報に直結する可能性があります。CVEスコアも高く、未修正の状態で攻撃対象になっている点が特に注意を要します。
+
+#### 温度感の理由
+
+##### 温度感
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- RCEまたは認証バイパス系。
+
+##### 確度
+- CVE IDあり。
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- CryptoPayment Gatewayプラグインの利用有無を確認し、該当する場合は修正版の適用状況を至急点検する。
+- サーバー上の不要なファイル削除や改ざん、認証情報関連の不審なアクセス痕跡を確認する。
+- WordPress本体や関連プラグインの更新管理を見直し、公開面の最小化と監視を強化する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| 脆弱性 | CVE-2026-81648 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
+| 製品 | WordPress | 言及あり | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-81648](https://nvd.nist.gov/vuln/detail/CVE-2026-81648) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Cre](https://thehackernews.com/2026/11/attackers-target-unpatched.html) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
 
 ---
 
@@ -118,18 +165,13 @@ Ciscoや複数ベンダーが言及していることから、利用製品の棚
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [もう何もかも漏れている……それでも「暗黒の10月」に焦らなかった筆者がした“たった一つの地道な作業”](https://www.itmedia.co.jp/enterprise/articles/2611/03/news007.html) | 29.0 | 30.0 | 42.0 |
-| [広く使われるOTプログラミングツールの重大な脆弱性がLinuxマルウェア配布に悪用される](https://www.theregister.com/security/2026/11/02/max-severity-bug-in-widely-used-ot-programming-tool-exploited-to-deliver-linux-malware/5307086) | 28.0 | 28.0 | 50.0 |
-| [1台の侵害されたノートPC、数十億ドルの損失：Binanceの攻撃経路への警告](https://www.darkreading.com/cyberattacks-data-breaches/binance-hack-test-attack-paths) | 28.0 | 20.0 | 42.0 |
-| [Google、認証済みAndroid端末上で稼働する大規模ボットネットを停止](https://cyberscoop.com/google-disrupts-xcpe-botnet-videostrong-android-devices/) | 28.0 | 20.0 | 42.0 |
-| [業界団体が情報共有法の長期延長を求める新たなキャンペーンを展開](https://cyberscoop.com/business-groups-cisa-2015-renewal-ndaa-cybersecurity/) | 28.0 | 20.0 | 42.0 |
-| [Anthropic、IPO申請書を修正 7?9月売上高は約170億ドル、インフラ契約額は約8954億ドル](https://www.itmedia.co.jp/news/article/2611/03/2000002831/) | 26.0 | 20.0 | 42.0 |
-| [Chinese hackersがARTEX AIを用いて200組織を標的に自動攻撃](https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/) | 25.0 | 20.0 | 42.0 |
-| [実際の攻撃に見る悪用された脆弱性の共通点：データ駆動による分析](https://www.microsoft.com/en-us/security/blog/2026/11/02/exploited-vulnerabilities-common-data-driven-analysis-real-world-attacks/) | 22.0 | 20.0 | 42.0 |
-| [今後数カ月でサイバー攻撃が「前例のない増加」に直面すると英国のサイバー責任者が警告](https://therecord.media/uk-ncsc-predicts-rise-cyberattacks-coming-months) | 20.0 | 20.0 | 42.0 |
-| [欧州店舗にサイバー攻撃 食品廃棄](https://news.yahoo.co.jp/pickup/6601127?source=rss) | 20.0 | 20.0 | 42.0 |
-| [Unit 42脅威インテリジェンスハイライト - 2026年11月2日](https://unit42.paloaltonetworks.com/u42-threat-intelligence-highlights-oct-2026/) | 20.0 | 20.0 | 42.0 |
-| [ブラジル最大の暗号資産取引所がサイバー攻撃を確認、数百万ドルが流出](https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist) | 20.0 | 20.0 | 42.0 |
+| [Product showcase: Sweet Virtual PatchingでHTTP2Shellを暫定阻止し、修正対応を待つ](https://www.helpnetsecurity.com/2026/11/03/product-showcase-sweet-security-virtual-patching/) | 33.0 | 20.0 | 42.0 |
+| [Tech Firmsが1.3百万台のTVボックスをプロキシ化したボットネットを解体](https://krebsonsecurity.com/2026/11/tech-firms-dismantle-botnet-that-turned-1-3m-tv-boxes-into-proxies/) | 28.0 | 20.0 | 48.0 |
+| [HackerOne CEOが語る、人間のハッカーがなおAIより優れていること](https://www.helpnetsecurity.com/2026/11/03/kara-sprague-hackerone-ai-bug-bounty/) | 25.0 | 20.0 | 42.0 |
+| [AIコーディングエージェントが、今後パッチされることのないMCPサーバーを導入している](https://www.helpnetsecurity.com/2026/11/03/mcphantom-deprecated-mcp-servers/) | 25.0 | 20.0 | 42.0 |
+| [Fireperf：ファイアウォールとルーター向けのオープンソースネットワークテストツール](https://www.helpnetsecurity.com/2026/11/03/fireperf-open-source-network-testing-tool/) | 20.0 | 20.0 | 42.0 |
+| [今すぐ応募できるサイバーセキュリティ求人：2026年11月3日](https://www.helpnetsecurity.com/2026/11/03/cybersecurity-jobs-available-right-now-november-3-2026/) | 20.0 | 20.0 | 42.0 |
+| [大阪市行政システム 情報漏えいか](https://news.yahoo.co.jp/pickup/6601164?source=rss) | 20.0 | 20.0 | 42.0 |
 
 ---
 
