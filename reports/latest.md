@@ -1,21 +1,18 @@
-# 📡 サイレーダー 2026-11-05 05:00 JST
+# 📡 サイレーダー 2026-11-05 11:00 JST
 
-このレポートは、2026-11-04 17:00 JST〜2026-11-05 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-11-05 05:00 JST〜2026-11-05 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 90
-- [音声で扱う想定のトピック](#audio-topics): 5
+- 観測トピック数: 51
+- [音声で扱う想定のトピック](#audio-topics): 2
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 62
+- [低温だが記録しておくトピック](#low-record-topics): 26
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [CVE-2026-55040: CISA KEV catalog addition](#topic-27420) | 47.0 | 74.0 | 60.0 | 音声 | 温度感上位枠 |
-| 2 | [CISA flags WordPress RCE flaw as actively exploited in attacks](#topic-41282) | 41.0 | 56.0 | 43.0 | 音声 | 温度感上位枠 |
-| 3 | [Cyber researchers issue warning over 'hybrid AI' ransomware capabilities after attacks on schools](#topic-41300) | 41.0 | 30.0 | 42.0 | 音声 | AI×Security枠 |
-| 4 | [3AM Ransomware Used Human-AI Hybrid Tactics in UK School Estate Compromise](#topic-41286) | 33.0 | 30.0 | 42.0 | 音声 | AI×Security枠 |
-| 5 | [Rigged Coding Assignment, Abused AI Tool Opened Path to $6 Billion Binance Heist](#topic-41303) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 1 | [CVE-2025-20333: Cisco ASA/FTD persistence mechanism update](#topic-203) | 58.0 | 74.0 | 66.0 | 音声 | 温度感上位枠 |
+| 2 | [Zyxel fixes zero-day exploited to hack nearly 1,000 network switches](#topic-41379) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
 
 ---
 
@@ -23,41 +20,41 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-27420"></a>
+<a id="topic-203"></a>
 
-### 1. CVE-2026-55040: CISA KEV catalog addition
+### 1. CVE-2025-20333: Cisco ASA/FTD persistence mechanism update
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>K⁠E⁠V</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>脆⁠弱⁠性</nobr> / <nobr>P⁠o⁠C</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>認⁠証⁠バ⁠イ⁠パ⁠ス</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 47.0 |
+| <nobr>温⁠度⁠感</nobr> | 58.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 74.0 |
-| <nobr>確⁠度</nobr> | 60.0 |
+| <nobr>確⁠度</nobr> | 66.0 |
 
 #### 概要
 
-CVE-2026-55040: CISA KEV catalog addition について、公開記事が報じた内容をもとに整理しています。
-関係組織、影響範囲、実務上の確認ポイントを参照リンクとスコア根拠から確認します。
+CISAとCiscoは、Cisco Secure Firewall ASA/FTDに関連する脅威対応情報を更新し、ArcaneDoorとされる攻撃者が、既知の修正版へ更新しても残る持続化の仕組みを新たに使っていると説明しました。
+この持続化はFXOS上に存在するとされ、初期侵入は2025年9月に修正されたCVE-2025-20333とCVE-2025-20362の悪用から始まった可能性が示されています。
+脆弱性の修正だけでは十分でない可能性があり、更新済み機器でも継続的な侵害確認が必要になるためです。境界機器は組織全体への侵入口になりやすく、影響範囲が大きい点でも注目されます。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 3 sources。
+- 複数ソースで確認: 7 sources。
 - 実悪用・ゼロデイ文脈。
-- 公開PoC・検証コード言及あり。
 - 脅威・攻撃キャンペーン文脈。
 - 技術・開発者系ソース観測: 観測あり。
 - 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
-- 公開PoCにより再現・悪用可能性が上がる。
 - RCEまたは認証バイパス系。
+- ランサムウェア文脈。
 
 ##### 確度
 - 複数ソース確認。
@@ -66,58 +63,65 @@ CVE-2026-55040: CISA KEV catalog addition について、公開記事が報じ�
 
 #### 担当者向け確認ポイント
 
-- 自組織で対象製品・関連資産を利用しているか確認する。
-- ベンダー公式情報または公的機関情報を優先確認する。
-- 対象バージョンか確認する。
-- 修正版・緩和策の適用状況を確認する。
-- インターネット露出の有無を確認する。
+- ASA/FTDを利用している環境では、修正版適用済みでも侵害の有無を別途確認すること。
+- CISAやCiscoの最新勧告を確認し、該当機器の調査・隔離・再構築の要否を判断すること。
+- VPN Web Server関連の脆弱性対策だけでなく、管理面のアクセス制御やログ監視も見直すこと。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 脆弱性 | CVE-2026-55040 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2025-20333 | 関連CVE | 1.00 | 候補あり（URL 3件以上） |
+| 脆弱性 | CVE-2025-20362 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
+| 脆弱性 | CVE-2026-111497 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2026-119977 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2026-97229 | 関連CVE | 1.00 | 未確認 |
+| ベンダー | Cisco | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-55040](https://nvd.nist.gov/vuln/detail/CVE-2026-55040) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [The Race Against the 3-Day Clock: How Rapid7 Helps Meet BOD 26-04 Compliance](https://www.rapid7.com/blog/post/it-racing-the-three-day-clock-cisa-bod-26-04) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Attackers exploit critical SharePoint flaw after PoC goes public (CVE-2026-55040](https://www.helpnetsecurity.com/2026/08/13/microsoft-sharepoint-cve-2026-55040-poc-exploit/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Attackers Exploit SharePoint Authentication Bypass After Public PoC Release](https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2025-20333](https://nvd.nist.gov/vuln/detail/CVE-2025-20333) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Weekly Report: Cisco Secure Firewall ASAおよびFTD Softwareにサービス運用妨害（DoS）の脆弱性](https://www.jpcert.or.jp/wr/2026/wr261105.html) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [CSuite Targets US and EU Organizations with Device-Code Phishing and Remote Acce](https://any.run/cybersecurity-blog/csuite-attack-analysis/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [OctLurk and SilkLurk: newly identified tailored backdoors in cyber-espionage cam](https://securelist.com/octlurk-silklurk-backdoors-central-asia/120840/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [US Threat Landscape Alert: 30 Active Malware Families Ranked by Real Sandbox Dat](https://any.run/cybersecurity-blog/usa-top-30-threats-2026/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [From edge appliance to enterprise compromise: Multi-stage Linux intrusion via F5](https://www.microsoft.com/en-us/security/blog/2026/05/22/from-edge-appliance-to-enterprise-compromise-multi-stage-linux-intrusion-via-f5-and-confluence/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Continued Evolution of Persistence Mechanism Against Cisco Secure Firewall Adapt](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-CISAED25-03) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Weekly Report: JPCERT/CCが「Cisco ASAおよびFTDにおける複数の脆弱性（CVE-2025-20333、CVE-2025-2036](https://www.jpcert.or.jp/wr/2026/wr260430.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
+- 国内開発者記事: 候補あり・採用なし。
 - 技術・開発者系ソース観測: 観測あり。
 
 ---
 
-<a id="topic-41282"></a>
+<a id="topic-41379"></a>
 
-### 2. CISA flags WordPress RCE flaw as actively exploited in attacks
+### 2. Zyxel fixes zero-day exploited to hack nearly 1,000 network switches
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>R⁠C⁠E</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 41.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 56.0 |
+| <nobr>温⁠度⁠感</nobr> | 37.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
 | <nobr>確⁠度</nobr> | 43.0 |
 
 #### 概要
 
-CISAが、最近修正されたWordPressの高深刻度脆弱性について、実際の攻撃で悪用が始まっていると注意喚起しました。
-対象の問題はリモートでコード実行につながる可能性があるとされ、すでにパッチが提供されています。
-公開後まもなく悪用が確認されるタイプの脆弱性は、未対応のサイトに被害が広がりやすいため注目されています。
-WordPressは利用範囲が広く、対応の遅れがそのままリスク増大につながります。
+Zyxelは、GS1900シリーズのネットワークスイッチに存在したゼロデイ脆弱性への修正を公表しました。
+報道によると、この脆弱性は実際に悪用され、世界で約1,000台の機器が侵害され、設定ファイルや認証情報が取得されたとされています。
+ネットワーク機器は組織内の通信基盤を担うため、侵害されると広範な影響につながるおそれがあります。
+すでに悪用が確認されている点から、単なる脆弱性情報ではなく、優先度の高い対応対象と見なす必要があります。
 
 #### 温度感の理由
 
@@ -126,206 +130,28 @@ WordPressは利用範囲が広く、対応の遅れがそのままリスク増�
 
 ##### 実務影響
 - 悪用情報あり。
-- RCEまたは認証バイパス系。
 
 ##### 確度
 - 一次・公的系ソースあり。
 
 #### 担当者向け確認ポイント
 
-- WordPress本体と関連コンポーネントを最新状態に更新し、適用状況を優先確認する。
-- 外部公開中のWordPressサイトは、管理画面や不審な改ざん・異常なアクセスの有無を点検する。
-- WAFや監視ルールを見直し、同種の攻撃兆候を早期に検知できるようにする。
+- GS1900シリーズの利用有無を確認し、提供済みの修正を速やかに適用する。
+- 設定ファイルや認証情報の流出可能性を考慮し、関連アカウントのパスワード変更や認証情報の点検を行う。
+- 機器の管理画面やログを確認し、不審な設定変更やアクセスの痕跡がないかを確認する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| 製品 | WordPress | 言及あり | 0.80 | — |
+| 脆弱性 | CVE-2026-107441 | 関連CVE | 1.00 | 未確認 |
+| 脆弱性 | CVE-2026-7273 | 関連CVE | 1.00 | 未確認 |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [CISA flags WordPress RCE flaw as actively exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-flags-wordpress-rce-flaw-as-actively-exploited-in-attacks/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-41300"></a>
-
-### 3. Cyber researchers issue warning over 'hybrid AI' ransomware capabilities after attacks on schools
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 41.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-研究者らは、学校を狙った攻撃を受けて、ランサムウェアの一部でAIを組み合わせた「ハイブリッドAI」的な手口が使われた可能性について注意を呼びかけています。
-材料によれば、3AMランサムウェアグループに関連するキャンペーンで、AIを用いた自動化が関与したとされています。
-AIの活用が確認されれば、攻撃の自動化や大量化が進み、防御側の対応負荷が高まる可能性があります。
-教育機関を含む組織にとって、従来のランサムウェア対策に加えてAI支援型の攻撃も想定した備えが必要になるためです。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- AIを使った攻撃の可能性を前提に、メール・認証・端末保護など基本対策の再点検を進める。
-- ランサムウェア対策として、バックアップの隔離保管と復旧手順の確認を優先する。
-- 教育機関や関連事業者は、フィッシングや不審な自動化挙動を含む異常検知の監視強化を検討する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ランサムウェアグループ | 3AM | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Cyber researchers issue warning over 'hybrid AI' ransomware capabilities after a](https://www.itpro.com/security/ransomware/cyber-researchers-issue-warning-over-hybrid-ai-ransomware-capabilities-after-attacks-on-schools) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-41286"></a>
-
-### 4. 3AM Ransomware Used Human-AI Hybrid Tactics in UK School Estate Compromise
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> / <nobr>T⁠T⁠P</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 30.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Infosecurity Magazineによると、3AMランサムウェアに関連する攻撃で、人間とAIを組み合わせたとみられる手法が用いられた可能性が示されています。
-対象は英国の学校関連組織で、財務データが持ち出されたとされています。AIを組み合わせた攻撃は、従来のランサムウェア事案よりも手口の変化を示すものとして注目されます。
-教育分野でも財務情報の流出が起きうることから、被害範囲の見極めと早期検知の重要性が改めて意識されます。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-
-##### 実務影響
-- ランサムウェア文脈。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 教育機関や関連事業者では、財務データを含む重要情報の保護とアクセス権限の点検を優先する。
-- 不審な認証試行、権限昇格、データ外部送信の兆候を監視し、通常と異なる挙動を早めに把握する。
-- ランサムウェア対策として、バックアップの分離保管と復旧手順の定期確認を継続する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ランサムウェアグループ | 3AM | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [3AM Ransomware Used Human-AI Hybrid Tactics in UK School Estate Compromise](https://www.infosecurity-magazine.com/news/3am-ransomware-hybrid-ai-uk-school/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-41303"></a>
-
-### 5. Rigged Coding Assignment, Abused AI Tool Opened Path to $6 Billion Binance Heist
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>攻⁠撃⁠キ⁠ャ⁠ン⁠ペ⁠ー⁠ン</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Binanceの初回報告によると、巨額の資産流出は数カ月にわたる攻撃キャンペーンに起因し、3人のエンジニアの端末が侵害されたとされています。
-報道では、偽装されたコーディング課題やAIツールの悪用が侵入の一因になった可能性が示されています。
-大手暗号資産事業者を狙った長期的な侵害事案として、サプライチェーンや従業員端末の管理リスクを改めて示すため注目されています。
-AIツールの業務利用が広がる中で、入力内容や連携先の統制が不十分だと攻撃面が広がり得る点も重要です。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 従業員端末の保護だけでなく、開発・採用・課題提出など業務プロセス全体の不審な接点を点検する。
-- AIツールの利用ルール、権限管理、機密情報の入力制御を見直す。
-- 複数端末・複数工程にまたがる侵害を前提に、監視、ログ分析、異常検知の範囲を広げる。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [Rigged Coding Assignment, Abused AI Tool Opened Path to $6 Billion Binance Heist](https://www.securityweek.com/rigged-coding-assignment-abused-ai-tool-opened-path-to-6-billion-binance-heist/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Zyxel fixes zero-day exploited to hack nearly 1,000 network switches](https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -351,68 +177,32 @@ AIツールの業務利用が広がる中で、入力内容や連携先の統制
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [DebianとUbuntuのAPTの不具合により、MitM攻撃者が検証済みパッケージを差し替えてroot権限でコードを実行可能に](https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html) | 28.0 | 20.0 | 42.0 |
-| [NIKKE PCゲームランチャーがハッキングされ、リモートアクセス・情報窃取マルウェアを拡散](https://www.bleepingcomputer.com/news/security/nikke-pc-game-launcher-hacked-to-spread-remote-access-data-stealing-malware/) | 28.0 | 20.0 | 42.0 |
-| [Google, Partners Disrupt 1.3 Million-Device-Strong XCPE Botnet](https://www.darkreading.com/endpoint-security/google-13-million-device-strong-xcpe-botnet) | 28.0 | 20.0 | 42.0 |
-| [Attacker abuses Microsoft Entra ID to target downstream MSP clients](https://www.cybersecuritydive.com/news/attacker-microsoft-entra-id-downstream-msp/873744/) | 28.0 | 20.0 | 42.0 |
-| [Google Calendarを悪用したフィッシングキャンペーンがセッションを乗っ取り、MFAを回避](https://www.bleepingcomputer.com/news/security/google-calendar-phishing-campaign-hijacks-sessions-bypasses-mfa/) | 28.0 | 20.0 | 42.0 |
-| [China-Aligned Group Abuses Sogou Input Method to Deliver Malware](https://www.infosecurity-magazine.com/news/slippynunchucks-sogou-dns-hijacking/) | 28.0 | 20.0 | 42.0 |
-| [APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits](https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html) | 28.0 | 20.0 | 42.0 |
-| [APT29 Watering Holes Target Unpatched iPhones and Android Devices](https://www.infosecurity-magazine.com/news/apt29-watering-holes-iphones/) | 28.0 | 20.0 | 42.0 |
-| [China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor](https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html) | 28.0 | 20.0 | 42.0 |
-| [Russian Police Arrest 3 Suspected VasyGrek Hackers, Dismantle Criminal Infrastructure](https://thehackernews.com/2026/11/russian-police-arrest-3-suspected.html) | 28.0 | 20.0 | 42.0 |
-| [富士フイルムが「磁気テープ」の製造能力を5倍に増強すると発表、AIブームによるデータアーカイブ需要増加に対応](https://gigazine.net/news/20261104-fujifilm-boost-tape-production-ai-fuels/) | 27.0 | 20.0 | 42.0 |
-| [銀行系企業がAIの利用コストを約10分の1に削減した事例を公開、商用AIから自社運用モデルへの切り替えで](https://gigazine.net/news/20261104-revolut-cut-ai-cost/) | 27.0 | 20.0 | 42.0 |
-| [米中間選挙で民主圧勝、「青い波」がAIブームに冷や水か 規制強化の公算](https://xtech.nikkei.com/atcl/nxt/column/18/00001/12155/) | 26.0 | 20.0 | 42.0 |
-| [議事録も資料もAIが作るなら、人間は何をする？ AIエージェントへ舵を切る「Plaud」を試す](https://www.itmedia.co.jp/news/article/2611/04/2000002764/) | 26.0 | 20.0 | 42.0 |
-| [Rapid7のAIマネジメントシステムがISO/IEC 42001認証を取得](https://www.rapid7.com/blog/post/ai-iso-iec-42001-certification-achieved) | 25.0 | 20.0 | 42.0 |
-| [Researchers Uncover Prompt Adware Hidden in OpenAI Codex Jailbreak Toolkit](https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html) | 25.0 | 20.0 | 42.0 |
-| [企業はサイバーセキュリティへの投資を増やしているが、AI監視にはなお苦戦している](https://www.cybersecuritydive.com/news/ai-security-governance-spending-dnsfilter/873725/) | 25.0 | 20.0 | 42.0 |
-| [Sysdig、AIエージェント向けにランタイムセキュリティとガバナンスを追加](https://www.securityweek.com/sysdig-adds-runtime-security-and-governance-for-ai-agents/) | 25.0 | 20.0 | 42.0 |
-| [AIエージェントは最も過小評価されたリスクと指摘される Synthetic CISO の見解](https://www.akamai.com/blog/ai/2026/nov/synthetic-cisos-call-ai-agents-most-underestimated-risk) | 25.0 | 20.0 | 42.0 |
-| [Impart、トラフィック経路にモデルを置かずに仮想パッチをAIで生成](https://www.helpnetsecurity.com/2026/11/04/impart-security-runtime-defense-harness/) | 25.0 | 20.0 | 42.0 |
-| [AI関連の侵害が増加、WorkOS・Northflank・Trigger.devがハッキング被害を公表](https://www.securityweek.com/ai-linked-breaches-mount-as-workos-northflank-trigger-dev-disclose-hacks/) | 25.0 | 20.0 | 42.0 |
-| [Agent Runtime Securityは基盤層なしでは機能しない理由](https://thehackernews.com/2026/11/radio-with-no-radar-why-agent-runtime.html) | 25.0 | 20.0 | 42.0 |
-| [もしセキュリティチームが未来を見通せたら](https://www.security.com/expert-perspectives/what-if-your-security-teams-could-see-future) | 25.0 | 20.0 | 42.0 |
-| [偽の採用面接が6.34億ドルのBinance窃盗につながる](https://www.helpnetsecurity.com/2026/11/04/binance-hack-north-korea-fake-job-interview/) | 25.0 | 20.0 | 42.0 |
-| [SonicWall、EoLとなったGMSの脆弱性を修正せず、ファイル漏えいとデータベース改ざんの恐れ](https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html) | 24.0 | 46.0 | 50.0 |
-| [Barracuda ESGの認証回避脆弱性によりroot権限取得の道が開く](https://www.securityweek.com/barracuda-email-security-gateway-authentication-bypass-opens-path-to-root/) | 24.0 | 38.0 | 42.0 |
-| [Critical Railsの脆弱性により細工されたImageMagickアップロードでサーバーファイルを書き込まれる問題](https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html) | 24.0 | 38.0 | 42.0 |
-| [脆弱なメールスクリプトが再び狙われるクラシックな脅威](https://isc.sans.edu/diary/rss/33488) | 22.0 | 28.0 | 50.0 |
-| [1つのプロンプトでHTTPヘッダーインジェクションを深刻化させる](https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt) | 22.0 | 20.0 | 42.0 |
-| [県立学校6校で生徒指導要録が所在不明 - 静岡県](https://www.security-next.com/192171) | 22.0 | 20.0 | 42.0 |
-| [SDカードを挿入しないと時刻設定できないカーナビをジェイルブレイク](https://gigazine.net/news/20261104-carnavi-jailbreak/) | 22.0 | 20.0 | 42.0 |
-| [ネット登録会員の個人情報が流出した可能性 - クラブツーリズム](https://www.security-next.com/192254) | 22.0 | 20.0 | 42.0 |
-| [無印良品、クレカ「MUJI Card」カード番号全ケタ、約109万件漏えいか 不正アクセスで続報](https://www.itmedia.co.jp/news/article/2611/04/2000002885/) | 21.0 | 20.0 | 42.0 |
-| [ブロックチェーン上の脆弱性突き止め、修正方法まで説明するAI JAISTが開発](https://news.mynavi.jp/techplus/article/20261104-5255031/) | 21.0 | 20.0 | 42.0 |
-| [OpsShieldのサプライチェーン攻撃で配信された悪意あるcPGuard更新](https://www.securityweek.com/malicious-cpguard-updates-served-in-opsshield-supply-chain-attack/) | 20.0 | 45.0 | 42.0 |
-| [Chrome 157 fixes 213 security issues, including 7 critical flaws](https://www.malwarebytes.com/blog/bugs/2026/11/chrome-157-fixes-213-security-issues-including-7-critical-flaws) | 20.0 | 28.0 | 50.0 |
-| [French bank confirms cyber heist, hackers suspected to have stolen an estimated $133 million](https://therecord.media/french-bank-confirms-cyber-heist) | 20.0 | 20.0 | 42.0 |
-| [Cyberattack disrupts blood storage refrigeration systems in France](https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-blood-storage-refrigeration-systems-in-france/) | 20.0 | 20.0 | 42.0 |
-| [mSecure tells users to change passwords but won’t say why](https://www.malwarebytes.com/blog/data-breaches/2026/11/msecure-tells-users-to-change-passwords-but-wont-say-why) | 20.0 | 20.0 | 42.0 |
-| [Ukrainian news outlet Kyiv Independent hit by suspected Russian cyberattack](https://therecord.media/ukraine-kyiv-independent-cyberattack) | 20.0 | 20.0 | 42.0 |
-| [mSecureパスワードマネージャーの不正アクセスでパスワードリセット警告が発生](https://www.bleepingcomputer.com/news/security/msecure-password-manager-hack-prompts-password-reset-warnings/) | 20.0 | 20.0 | 42.0 |
-| [米政府のIT担当者、機密文書をエチオピアへ送信した罪を認める](https://www.theregister.com/security/2026/11/04/us-gov-it-worker-pleads-guilty-to-sending-top-secret-files-to-ethiopia/5307595) | 20.0 | 20.0 | 42.0 |
-| [SonicWall warns of unpatched flaws in end-of-life GMS software](https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-unpatched-flaws-in-end-of-life-gms-software/) | 20.0 | 20.0 | 42.0 |
-| [インシデントは手書き管理では追いつかない](https://www.darkreading.com/cybersecurity-operations/incidents-move-fast-pen-paper) | 20.0 | 20.0 | 42.0 |
-| [Agentic Data Security Firm Sentra Raises $150 Million](https://www.securityweek.com/agentic-data-security-firm-sentra-raises-150-million/) | 20.0 | 20.0 | 42.0 |
-| [Cyberattack wipes cloud data at major Russian hosting provider Beget](https://therecord.media/russia-cyberattack-beget-cloud) | 20.0 | 20.0 | 42.0 |
-| [French blood service hit by Europe-wide cyberattacks on refrigeration](https://therecord.media/france-cyberattack-blood-refrigeration) | 20.0 | 20.0 | 42.0 |
-| [フランスの血液銀行を襲ったサイバー攻撃](https://www.helpnetsecurity.com/2026/11/04/cyberattack-hits-french-blood-banks/) | 20.0 | 20.0 | 42.0 |
-| [US charges two Canadians accused of hacking US universities](https://www.bleepingcomputer.com/news/security/us-charges-two-canadians-accused-of-hacking-us-universities/) | 20.0 | 20.0 | 42.0 |
-| [France Blood Service Cyber-Attack Sends Blood Storage Temperatures to 110°C](https://www.infosecurity-magazine.com/news/france-blood-service-cyberattack/) | 20.0 | 20.0 | 42.0 |
-| [Canadian Extradited to US Over Cryptomining Hacks on University Supercomputers](https://www.securityweek.com/canadian-extradited-to-us-over-cryptomining-hacks-on-university-supercomputers/) | 20.0 | 20.0 | 42.0 |
-| [French blood service hit by cyber attack threatening to turn stocks into “black pudding”](https://www.itpro.com/security/cyber-attacks/french-blood-service-hit-by-new-cyber-attack-threatening-to-turn-stocks-into-black-pudding) | 20.0 | 20.0 | 42.0 |
-| [Cyberattack on French plasma stores is enough to make your blood boil](https://www.theregister.com/security/2026/11/04/cyberattack-on-french-plasma-stores-is-enough-to-make-your-blood-boil/5307519) | 20.0 | 20.0 | 42.0 |
-| [Xen Hypervisorの脆弱性により悪意あるVMが他のVMのメモリを読み書き可能に](https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html) | 20.0 | 20.0 | 42.0 |
-| [Poisoned cPGuardアップデートが数千台のWebホスティングサーバーを直撃](https://www.helpnetsecurity.com/2026/11/04/cpguard-update-supply-chain-compromised/) | 20.0 | 20.0 | 42.0 |
-| [4年間の投資詐欺捜査で100台超のサーバーを押収](https://www.infosecurity-magazine.com/news/police-100-servers-fouryear/) | 20.0 | 20.0 | 42.0 |
-| [Chrome 157、213件のセキュリティ修正を含んで公開、うち7件はCritical評価](https://www.securityweek.com/chrome-157-rolls-out-with-213-security-fixes-seven-rated-critical/) | 20.0 | 20.0 | 42.0 |
-| [HackersがiOS・Android端末を狙うゼロクリック攻撃でn-day脆弱性を悪用](https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/) | 20.0 | 20.0 | 42.0 |
-| [Software Engineerの偽面接がBinanceの大規模窃取につながった件](https://www.infosecurity-magazine.com/news/fake-interview-software-engineer/) | 20.0 | 20.0 | 42.0 |
-| [北朝鮮、Binanceハッキングへの米国主張に抗議し海上へミサイルを発射](https://www.securityweek.com/north-korea-launches-missiles-toward-the-sea-as-pyongyang-protests-against-us-claims-on-binance-hack/) | 20.0 | 20.0 | 42.0 |
-| [Metaが公開したMuseの主要バグバウンティ報告、支払総額は120万ドルに到達](https://www.securityweek.com/meta-shares-top-muse-bug-bounty-findings-as-payouts-reach-1-2-million/) | 20.0 | 20.0 | 42.0 |
-| [セキュリティ上の欠陥の4分の1が完全には修正されない理由](https://www.itpro.com/security/a-quarter-of-security-vulnerabilities-are-never-fully-fixed-and-ai-is-compounding-the-problem) | 20.0 | 20.0 | 42.0 |
+| [ドン・キホーテ委託先にランサムウェア攻撃、時計修理を依頼者の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/11/05/56678.html) | 29.0 | 30.0 | 42.0 |
+| [Smashing Security podcast #491: AIエージェントが銀行を震え上がらせる理由](https://grahamcluley.com/smashing-security-podcast-491/) | 28.0 | 30.0 | 42.0 |
+| [重大なRailsの脆弱性が脆弱なサーバーを危険にさらす](https://www.darkreading.com/application-security/critical-rails-bug-derail-vulnerable-servers) | 28.0 | 20.0 | 42.0 |
+| [Vercelが盗まれたセッションCookie攻撃への新たな対策を導入](https://www.bleepingcomputer.com/news/security/vercel-rolls-out-new-protection-against-stolen-session-cookie-attacks/) | 28.0 | 20.0 | 42.0 |
+| [マルチベンダーのAIエージェント活用に向けて「ガバナンスの統一」に注力せよ](https://japan.zdnet.com/article/35254360/) | 26.0 | 20.0 | 42.0 |
+| [Cisco、AI エージェントの暴走を検知する「Project Quarry」をオープンソース化](https://scan.netsecurity.ne.jp/article/2026/11/05/56682.html) | 26.0 | 20.0 | 42.0 |
+| [「Muse」を使っていなくてもAIエージェントが非公開のメッセージにアクセスできる仕組みとは](https://japan.zdnet.com/article/35254098/) | 26.0 | 20.0 | 42.0 |
+| [「マインクラフト」で50体のAIエージェントによる協調動作を試す](https://japan.zdnet.com/article/35254319/) | 26.0 | 20.0 | 42.0 |
+| [仏銀行Credit Mutuel Arkeaにサイバー攻撃 委託先経由で侵入、不正送金の被害は約1億ユーロか](https://www.itmedia.co.jp/news/article/2611/05/2000002891/) | 21.0 | 20.0 | 42.0 |
+| [仏血液センターの冷蔵設備にサイバー攻撃 温度設定を不正変更、血液製剤への被害は回避](https://www.itmedia.co.jp/news/article/2611/05/2000002890/) | 21.0 | 20.0 | 42.0 |
+| [2026年のフィッシング動向と対策の現状 ～ Internet Week 2026](https://scan.netsecurity.ne.jp/article/2026/11/05/56681.html) | 21.0 | 20.0 | 42.0 |
+| [GMOペイメントゲートウェイ、ライフカード向けサービスで顧客情報一部流出の可能性](https://scan.netsecurity.ne.jp/article/2026/11/05/56680.html) | 21.0 | 20.0 | 42.0 |
+| [ライフネット生命の一部システムに不正アクセス、KDDIが保有する顧客情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/11/05/56679.html) | 21.0 | 20.0 | 42.0 |
+| [日本郵政グループ労働組合に不正アクセス、4万件以上の組合員情報が漏えい](https://scan.netsecurity.ne.jp/article/2026/11/05/56677.html) | 21.0 | 20.0 | 42.0 |
+| [障害者支援アプリ運営委託事業者ミラボに不正アクセス、設計段階で想定していなかった不備](https://scan.netsecurity.ne.jp/article/2026/11/05/56676.html) | 21.0 | 20.0 | 42.0 |
+| [ドトールコーヒーのシステムに不正アクセス、従業員及び退職者 計951名の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/11/05/56675.html) | 21.0 | 20.0 | 42.0 |
+| [ギフティへの不正アクセスによるeギフトの不正発行、約5.5億円の損失見込み](https://scan.netsecurity.ne.jp/article/2026/11/05/56674.html) | 21.0 | 20.0 | 42.0 |
+| [LINE連携基盤「COMSBI エンタープライズ基盤」に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/11/05/56673.html) | 21.0 | 20.0 | 42.0 |
+| [バリューデザインへの不正アクセス、一部のモスカード番号等が流出](https://scan.netsecurity.ne.jp/article/2026/11/05/56672.html) | 21.0 | 20.0 | 42.0 |
+| [ヤマハ製 YMS-VPN8 および YMS-VPN8-CP に引用符で囲まれていないファイルパスの脆弱性](https://scan.netsecurity.ne.jp/article/2026/11/05/56671.html) | 21.0 | 20.0 | 42.0 |
+| [Yamaha LAN Monitor for Windows のインストーラにDLL読み込みに関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/11/05/56670.html) | 21.0 | 20.0 | 42.0 |
+| [ヤマハ製 NWR100 に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/11/05/56669.html) | 21.0 | 20.0 | 42.0 |
+| [仏銀行サイバー攻撃 177億円流出](https://news.yahoo.co.jp/pickup/6601387?source=rss) | 20.0 | 20.0 | 42.0 |
+| [民主党が議会を掌握するとサイバーセキュリティはどう変わるのか](https://cyberscoop.com/democrats-congress-cybersecurity-cisa-ai-priorities/) | 20.0 | 20.0 | 42.0 |
+| [Apple、iCloudを監視対象に　公開共有リンクのスキャンを開始](https://www.theregister.com/security/2026/11/04/apple-turns-icloud-into-spy-cloud-will-start-looking-at-public-share-links/5307681) | 20.0 | 20.0 | 42.0 |
+| [スペインのITプロバイダーAmadeusへの攻撃後、アジアの航空会社で相次ぐデータ侵害の発表](https://therecord.media/asian-airlines-announce-data-breach-it-provider-incident) | 20.0 | 20.0 | 42.0 |
 
 ---
 
