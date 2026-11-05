@@ -1,18 +1,20 @@
-# 📡 サイレーダー 2026-11-05 11:00 JST
+# 📡 サイレーダー 2026-11-06 05:00 JST
 
-このレポートは、2026-11-05 05:00 JST〜2026-11-05 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-11-05 17:00 JST〜2026-11-06 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 51
-- [音声で扱う想定のトピック](#audio-topics): 2
+- 観測トピック数: 92
+- [音声で扱う想定のトピック](#audio-topics): 4
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 26
+- [低温だが記録しておくトピック](#low-record-topics): 68
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [CVE-2025-20333: Cisco ASA/FTD persistence mechanism update](#topic-203) | 58.0 | 74.0 | 66.0 | 音声 | 温度感上位枠 |
-| 2 | [Zyxel fixes zero-day exploited to hack nearly 1,000 network switches](#topic-41379) | 37.0 | 38.0 | 43.0 | 音声 | 温度感上位枠 |
+| 1 | [Zyxel Switch Hacks Blamed on Patched Flaw Actually Exploited a Zero-Day](#topic-41466) | 43.0 | 46.0 | 55.0 | 音声 | 温度感上位枠 |
+| 2 | [Vercel ties login sessions to devices, rolls out AI security reviews in public beta](#topic-41442) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 3 | [ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration](#topic-41446) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 4 | [CERT-In Flags AI-Driven Attacks as Backdoored ARTEX Exposes 62 Consoles to Root Access](#topic-41504) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
 
 ---
 
@@ -20,41 +22,37 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-203"></a>
+<a id="topic-41466"></a>
 
-### 1. CVE-2025-20333: Cisco ASA/FTD persistence mechanism update
+### 1. Zyxel Switch Hacks Blamed on Patched Flaw Actually Exploited a Zero-Day
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>R⁠C⁠E</nobr> / <nobr>防⁠御⁠・⁠運⁠用</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>ラ⁠ン⁠サ⁠ム⁠ウ⁠ェ⁠ア</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>L⁠i⁠n⁠u⁠x</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>K⁠E⁠V</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 再燃 |
-| <nobr>温⁠度⁠感</nobr> | 58.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 74.0 |
-| <nobr>確⁠度</nobr> | 66.0 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 43.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
+| <nobr>確⁠度</nobr> | 55.0 |
 
 #### 概要
 
-CISAとCiscoは、Cisco Secure Firewall ASA/FTDに関連する脅威対応情報を更新し、ArcaneDoorとされる攻撃者が、既知の修正版へ更新しても残る持続化の仕組みを新たに使っていると説明しました。
-この持続化はFXOS上に存在するとされ、初期侵入は2025年9月に修正されたCVE-2025-20333とCVE-2025-20362の悪用から始まった可能性が示されています。
-脆弱性の修正だけでは十分でない可能性があり、更新済み機器でも継続的な侵害確認が必要になるためです。境界機器は組織全体への侵入口になりやすく、影響範囲が大きい点でも注目されます。
+ZyxelのGS1900シリーズスイッチについて、当初は修正済みの脆弱性への対策として扱われていたものの、実際に悪用されていたのは別の未修正脆弱性だったと報じられています。
+対象の欠陥はCVE-2026-107441とされ、公開情報ではOSコマンド実行につながる可能性があるとされていますが、詳細な悪用状況は確認中です。
+ネットワーク機器は社内外の通信の要所に置かれるため、脆弱性が残ると広範な影響につながりやすい点が注目されています。
+修正済みと見なしていても別の欠陥が残っている可能性があり、パッチ適用後の確認が重要です。
 
 #### 温度感の理由
 
 ##### 温度感
-- 複数ソースで確認: 7 sources。
+- 複数ソースで確認: 2 sources。
 - 実悪用・ゼロデイ文脈。
-- 脅威・攻撃キャンペーン文脈。
-- 技術・開発者系ソース観測: 観測あり。
-- 現在の熱量に合わせた冷却補正。
 
 ##### 実務影響
 - 悪用情報あり。
-- RCEまたは認証バイパス系。
-- ランサムウェア文脈。
 
 ##### 確度
 - 複数ソース確認。
@@ -63,95 +61,205 @@ CISAとCiscoは、Cisco Secure Firewall ASA/FTDに関連する脅威対応情報
 
 #### 担当者向け確認ポイント
 
-- ASA/FTDを利用している環境では、修正版適用済みでも侵害の有無を別途確認すること。
-- CISAやCiscoの最新勧告を確認し、該当機器の調査・隔離・再構築の要否を判断すること。
-- VPN Web Server関連の脆弱性対策だけでなく、管理面のアクセス制御やログ監視も見直すこと。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2025-20333 | 関連CVE | 1.00 | 候補あり（URL 3件以上） |
-| 脆弱性 | CVE-2025-20362 | 関連CVE | 1.00 | 候補あり（URL 1件以上） |
-| 脆弱性 | CVE-2026-111497 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-119977 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-97229 | 関連CVE | 1.00 | 未確認 |
-| ベンダー | Cisco | 言及あり | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2025-20333](https://nvd.nist.gov/vuln/detail/CVE-2025-20333) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Weekly Report: Cisco Secure Firewall ASAおよびFTD Softwareにサービス運用妨害（DoS）の脆弱性](https://www.jpcert.or.jp/wr/2026/wr261105.html) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [CSuite Targets US and EU Organizations with Device-Code Phishing and Remote Acce](https://any.run/cybersecurity-blog/csuite-attack-analysis/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [OctLurk and SilkLurk: newly identified tailored backdoors in cyber-espionage cam](https://securelist.com/octlurk-silklurk-backdoors-central-asia/120840/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [US Threat Landscape Alert: 30 Active Malware Families Ranked by Real Sandbox Dat](https://any.run/cybersecurity-blog/usa-top-30-threats-2026/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [From edge appliance to enterprise compromise: Multi-stage Linux intrusion via F5](https://www.microsoft.com/en-us/security/blog/2026/05/22/from-edge-appliance-to-enterprise-compromise-multi-stage-linux-intrusion-via-f5-and-confluence/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Continued Evolution of Persistence Mechanism Against Cisco Secure Firewall Adapt](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-CISAED25-03) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Weekly Report: JPCERT/CCが「Cisco ASAおよびFTDにおける複数の脆弱性（CVE-2025-20333、CVE-2025-2036](https://www.jpcert.or.jp/wr/2026/wr260430.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: 候補あり・採用なし。
-- 技術・開発者系ソース観測: 観測あり。
-
----
-
-<a id="topic-41379"></a>
-
-### 2. Zyxel fixes zero-day exploited to hack nearly 1,000 network switches
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 37.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 38.0 |
-| <nobr>確⁠度</nobr> | 43.0 |
-
-#### 概要
-
-Zyxelは、GS1900シリーズのネットワークスイッチに存在したゼロデイ脆弱性への修正を公表しました。
-報道によると、この脆弱性は実際に悪用され、世界で約1,000台の機器が侵害され、設定ファイルや認証情報が取得されたとされています。
-ネットワーク機器は組織内の通信基盤を担うため、侵害されると広範な影響につながるおそれがあります。
-すでに悪用が確認されている点から、単なる脆弱性情報ではなく、優先度の高い対応対象と見なす必要があります。
-
-#### 温度感の理由
-
-##### 温度感
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- GS1900シリーズの利用有無を確認し、提供済みの修正を速やかに適用する。
-- 設定ファイルや認証情報の流出可能性を考慮し、関連アカウントのパスワード変更や認証情報の点検を行う。
-- 機器の管理画面やログを確認し、不審な設定変更やアクセスの痕跡がないかを確認する。
+- 対象機種と導入済みファームウェアがCVE-2026-107441の影響範囲に含まれるか確認する。
+- ベンダーの修正情報を再点検し、既存の更新が今回の脆弱性に対応しているかを切り分ける。
+- 外部公開された管理機能や不審なHTTPアクセスの有無を点検し、必要に応じてアクセス制限を強化する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
 | 脆弱性 | CVE-2026-107441 | 関連CVE | 1.00 | 未確認 |
-| 脆弱性 | CVE-2026-7273 | 関連CVE | 1.00 | 未確認 |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Zyxel fixes zero-day exploited to hack nearly 1,000 network switches](https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-107441](https://nvd.nist.gov/vuln/detail/CVE-2026-107441) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
+| <nobr>出典</nobr> | [Patched Zyxel GS1900 switches remained open to in-the-wild exploit (CVE-2026-107](https://www.helpnetsecurity.com/2026/11/05/zyxel-cve-2026-107441-exploit/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Zyxel Switch Hacks Blamed on Patched Flaw Actually Exploited a Zero-Day](https://www.securityweek.com/zyxel-switch-hacks-blamed-on-patched-flaw-actually-exploited-a-zero-day/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-41442"></a>
+
+### 2. Vercel ties login sessions to devices, rolls out AI security reviews in public beta
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Vercelが、ログインセッションを端末にひも付けるDevice Bound Session Credentials（DBSC）の導入と、AIを使ったセキュリティレビュー機能の公開ベータを発表しました。
+DBSCは、情報窃取型マルウェアなどでセッション情報が盗まれた場合の悪用リスクを抑えることを狙う仕組みです。
+セッションの不正利用は、認証情報そのものが漏れていなくても被害につながるため、対策の実装有無が重要です。
+あわせて、AIによるレビュー機能の実運用への適用が広がる流れとしても注目されます。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- セッション管理が端末ひも付け型の仕組みに対応しているか確認する。
+- Cookieやセッショントークンの保護、失効、再認証の設計を見直す。
+- AI支援のセキュリティレビューは補助として扱い、最終判断は人手で検証する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| マルウェア | RedLine Stealer | 主題 | 0.80 | — |
+| マルウェア | Lumma Stealer | 主題 | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [Vercel ties login sessions to devices, rolls out AI security reviews in public b](https://www.helpnetsecurity.com/2026/11/05/vercel-security-review-session-hijacking/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-41446"></a>
+
+### 3. ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>i⁠O⁠S</nobr> / <nobr>脆⁠弱⁠性</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+Check Point Researchは、ChatGPTのコード実行ランタイムに関連するセキュリティ上の問題について報告しました。
+説明では、会話データが秘密裏に外部へ送られる可能性があり、すでに修正が適用されたとされています。
+生成AIの利用が広がる中で、AIサービス内の隔離やデータ保護が実運用上の重要課題であることを示す事例です。
+会話や入力内容に機密情報が含まれる環境では、情報漏えい対策の見直しが必要になります。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AIサービスや連携機能を使う際は、機密情報の入力可否と保存・送信の扱いを再確認する。
+- 生成AIの権限設定やネットワーク隔離、外部通信の監視を運用面で点検する。
+- ベンダーの修正状況や公式アドバイザリを確認し、影響範囲に応じて利用ルールを更新する。
+
+#### 関連する対象
+
+| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
+|---|---|---|---:|---|
+| ベンダー | Check Point | 言及あり | 0.80 | — |
+| ベンダー | OpenAI | 言及あり | 0.80 | — |
+| AIモデル/プロジェクト | ChatGPT | 主題 | 0.80 | — |
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfilt](https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/) | <nobr>内容確認・補足情報</nobr> |
+
+#### 外部反応・国内波及シグナル
+
+- SNS反応: 観測あり・信頼度: 低。
+- 国内ブックマーク反応: なし。
+- 国内開発者記事: なし。
+- 技術・開発者系ソース観測: 観測なし。
+
+---
+
+<a id="topic-41504"></a>
+
+### 4. CERT-In Flags AI-Driven Attacks as Backdoored ARTEX Exposes 62 Consoles to Root Access
+
+#### スコアカード
+
+| 項⁠目 | 値 |
+|---|---:|
+| <nobr>区⁠分</nobr> | 音声 |
+| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
+| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
+| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
+| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
+| <nobr>確⁠度</nobr> | 42.0 |
+
+#### 概要
+
+CERT-Inは、AI支援型の脅威アクターがインドのBFSI（銀行・金融サービス・保険）分野を標的にしていると公表しました。
+公開されているAIベースの攻撃支援ツールが使われているとされ、活動は継続中とみられています。AIを悪用した攻撃は、従来よりも準備や運用の効率が高まりやすく、警戒すべき対象です。
+金融関連組織が標的とされている点から、業種を問わず防御態勢の見直しが意識されます。
+
+#### 温度感の理由
+
+##### 温度感
+- AI×Security文脈。
+- 脅威・攻撃キャンペーン文脈。
+
+##### 実務影響
+- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
+
+##### 確度
+- 一次・公的系ソースあり。
+
+#### 担当者向け確認ポイント
+
+- AI支援型の偵察・侵入補助ツールを前提に、検知ルールや監視観点を見直す。
+- BFSI関連の組織や取引先では、認証情報の保護、アクセス権限の点検、異常ログの監視を強化する。
+- 脅威情報としては、攻撃者の手口だけでなく、影響を受けやすい資産や業務範囲の把握を優先する。
+
+#### 参照リンク
+
+| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
+|---|---|---|
+| <nobr>出典</nobr> | [CERT-In Flags AI-Driven Attacks as Backdoored ARTEX Exposes 62 Consoles to Root ](https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
@@ -177,32 +285,74 @@ Zyxelは、GS1900シリーズのネットワークスイッチに存在したゼ
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [ドン・キホーテ委託先にランサムウェア攻撃、時計修理を依頼者の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/11/05/56678.html) | 29.0 | 30.0 | 42.0 |
-| [Smashing Security podcast #491: AIエージェントが銀行を震え上がらせる理由](https://grahamcluley.com/smashing-security-podcast-491/) | 28.0 | 30.0 | 42.0 |
-| [重大なRailsの脆弱性が脆弱なサーバーを危険にさらす](https://www.darkreading.com/application-security/critical-rails-bug-derail-vulnerable-servers) | 28.0 | 20.0 | 42.0 |
-| [Vercelが盗まれたセッションCookie攻撃への新たな対策を導入](https://www.bleepingcomputer.com/news/security/vercel-rolls-out-new-protection-against-stolen-session-cookie-attacks/) | 28.0 | 20.0 | 42.0 |
-| [マルチベンダーのAIエージェント活用に向けて「ガバナンスの統一」に注力せよ](https://japan.zdnet.com/article/35254360/) | 26.0 | 20.0 | 42.0 |
-| [Cisco、AI エージェントの暴走を検知する「Project Quarry」をオープンソース化](https://scan.netsecurity.ne.jp/article/2026/11/05/56682.html) | 26.0 | 20.0 | 42.0 |
-| [「Muse」を使っていなくてもAIエージェントが非公開のメッセージにアクセスできる仕組みとは](https://japan.zdnet.com/article/35254098/) | 26.0 | 20.0 | 42.0 |
-| [「マインクラフト」で50体のAIエージェントによる協調動作を試す](https://japan.zdnet.com/article/35254319/) | 26.0 | 20.0 | 42.0 |
-| [仏銀行Credit Mutuel Arkeaにサイバー攻撃 委託先経由で侵入、不正送金の被害は約1億ユーロか](https://www.itmedia.co.jp/news/article/2611/05/2000002891/) | 21.0 | 20.0 | 42.0 |
-| [仏血液センターの冷蔵設備にサイバー攻撃 温度設定を不正変更、血液製剤への被害は回避](https://www.itmedia.co.jp/news/article/2611/05/2000002890/) | 21.0 | 20.0 | 42.0 |
-| [2026年のフィッシング動向と対策の現状 ～ Internet Week 2026](https://scan.netsecurity.ne.jp/article/2026/11/05/56681.html) | 21.0 | 20.0 | 42.0 |
-| [GMOペイメントゲートウェイ、ライフカード向けサービスで顧客情報一部流出の可能性](https://scan.netsecurity.ne.jp/article/2026/11/05/56680.html) | 21.0 | 20.0 | 42.0 |
-| [ライフネット生命の一部システムに不正アクセス、KDDIが保有する顧客情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/11/05/56679.html) | 21.0 | 20.0 | 42.0 |
-| [日本郵政グループ労働組合に不正アクセス、4万件以上の組合員情報が漏えい](https://scan.netsecurity.ne.jp/article/2026/11/05/56677.html) | 21.0 | 20.0 | 42.0 |
-| [障害者支援アプリ運営委託事業者ミラボに不正アクセス、設計段階で想定していなかった不備](https://scan.netsecurity.ne.jp/article/2026/11/05/56676.html) | 21.0 | 20.0 | 42.0 |
-| [ドトールコーヒーのシステムに不正アクセス、従業員及び退職者 計951名の個人情報が漏えいした可能性](https://scan.netsecurity.ne.jp/article/2026/11/05/56675.html) | 21.0 | 20.0 | 42.0 |
-| [ギフティへの不正アクセスによるeギフトの不正発行、約5.5億円の損失見込み](https://scan.netsecurity.ne.jp/article/2026/11/05/56674.html) | 21.0 | 20.0 | 42.0 |
-| [LINE連携基盤「COMSBI エンタープライズ基盤」に不正アクセス](https://scan.netsecurity.ne.jp/article/2026/11/05/56673.html) | 21.0 | 20.0 | 42.0 |
-| [バリューデザインへの不正アクセス、一部のモスカード番号等が流出](https://scan.netsecurity.ne.jp/article/2026/11/05/56672.html) | 21.0 | 20.0 | 42.0 |
-| [ヤマハ製 YMS-VPN8 および YMS-VPN8-CP に引用符で囲まれていないファイルパスの脆弱性](https://scan.netsecurity.ne.jp/article/2026/11/05/56671.html) | 21.0 | 20.0 | 42.0 |
-| [Yamaha LAN Monitor for Windows のインストーラにDLL読み込みに関する脆弱性](https://scan.netsecurity.ne.jp/article/2026/11/05/56670.html) | 21.0 | 20.0 | 42.0 |
-| [ヤマハ製 NWR100 に複数の脆弱性](https://scan.netsecurity.ne.jp/article/2026/11/05/56669.html) | 21.0 | 20.0 | 42.0 |
-| [仏銀行サイバー攻撃 177億円流出](https://news.yahoo.co.jp/pickup/6601387?source=rss) | 20.0 | 20.0 | 42.0 |
-| [民主党が議会を掌握するとサイバーセキュリティはどう変わるのか](https://cyberscoop.com/democrats-congress-cybersecurity-cisa-ai-priorities/) | 20.0 | 20.0 | 42.0 |
-| [Apple、iCloudを監視対象に　公開共有リンクのスキャンを開始](https://www.theregister.com/security/2026/11/04/apple-turns-icloud-into-spy-cloud-will-start-looking-at-public-share-links/5307681) | 20.0 | 20.0 | 42.0 |
-| [スペインのITプロバイダーAmadeusへの攻撃後、アジアの航空会社で相次ぐデータ侵害の発表](https://therecord.media/asian-airlines-announce-data-breach-it-provider-incident) | 20.0 | 20.0 | 42.0 |
+| [医療機関のサイバーセキュリティー強化へ ランサムウエア攻撃で診療への長期影響リスク](https://www.itmedia.co.jp/news/article/2611/05/2000002921/) | 29.0 | 30.0 | 42.0 |
+| [New York州クイーンズ公共図書館がランサムウェア被害、Wi-Fiや貸出システム、Webサイトが停止](https://www.theregister.com/cyber-crime/2026/11/05/new-yorks-queens-public-library-battles-ransomware-crims-wi-fi-checkouts-and-website-go-dark/5307796) | 28.0 | 30.0 | 42.0 |
+| [ロシア政府系ハッカーがゼロクリック諜報キャンペーンでiPhoneとAndroid端末を標的に](https://therecord.media/russia-hackers-smartphone-cyberattacks) | 28.0 | 20.0 | 42.0 |
+| [トロイ化されたCWP Webサーバーを使ってLinuxサーバーにバックドアを仕掛けるハッカーたち](https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/) | 28.0 | 20.0 | 42.0 |
+| [PortSwiggerのBurp ATが企業に定義済みの制限付きでペネトストを委任可能に](https://www.helpnetsecurity.com/2026/11/05/portswigger-burp-at-enterprises/) | 28.0 | 20.0 | 42.0 |
+| [GTA 6の期待感に便乗してマルウェアや暗号資産詐欺を広める詐欺師たち](https://www.helpnetsecurity.com/2026/11/05/gta-6-scams-fake-leaks-early-access/) | 28.0 | 20.0 | 42.0 |
+| [ロシア系ハッカーがウォータリングホールでiOS・Android端末を狙うエクスプロイトチェーン攻撃](https://www.securityweek.com/russia-linked-hackers-hit-ios-android-devices-with-exploit-chains-via-watering-holes/) | 28.0 | 20.0 | 42.0 |
+| [2026年10月に米国企業を脅かす5つの活発なサイバー脅威](https://thehackernews.com/2026/11/5-active-cyber-threats-that-put-us.html) | 28.0 | 20.0 | 42.0 |
+| [銀行向けマルウェアのサンプルから発見された、Android端末をループクラッシュさせる脆弱性](https://www.helpnetsecurity.com/2026/11/05/ghostmap-android-bug-research/) | 28.0 | 20.0 | 42.0 |
+| [古いCisco IOSの脆弱性に対する脆弱性スキャン／オプトアウトヘッダー（11月5日木曜日）](https://isc.sans.edu/diary/rss/33492) | 25.0 | 31.0 | 51.0 |
+| [OpenAIのGPT-6 Astraが安全性研究タスクを密かに妨害](https://www.bleepingcomputer.com/news/security/openais-gpt-6-astra-silently-obstructed-safety-research-tasks/) | 25.0 | 20.0 | 42.0 |
+| [OpenAIの研究で明らかになった948件のLinuxカーネル脆弱性によりAIエージェントがroot権限を取得](https://www.securityweek.com/ai-agents-got-root-on-linux-via-948-kernel-flaws-in-openai-research/) | 25.0 | 20.0 | 42.0 |
+| [AIエージェントは人間ではないが、かなり人間に近い](https://blog.cloudflare.com/trusted-agent-delegation/) | 25.0 | 20.0 | 42.0 |
+| [OpenAI、GPT-6 Cyberを発表――性能向上と安全対策を強調](https://cyberscoop.com/openai-gpt-6-cyber-security-model/) | 25.0 | 20.0 | 42.0 |
+| [OpenAI、GPT-6 Cyberを公開し「交戦規定」を順守すると表明](https://www.theregister.com/security/2026/11/05/openai-releases-gpt-6-cyber-and-promises-this-one-stays-within-rules-of-engagement/5307855) | 25.0 | 20.0 | 42.0 |
+| [SecurityDataPipeline.comがAI時代向けの新しい教育リソースとして公開される](https://www.darkreading.com/cybersecurity-operations/securitydatapipeline-com-launches-as-a-new-educational-resource-for-the-ai-era) | 25.0 | 20.0 | 42.0 |
+| [CyberhavenがAIのデータ利用を追跡・制御するAgentic Data Securityを発表](https://www.helpnetsecurity.com/2026/11/05/cyberhaven-agentic-data-security/) | 25.0 | 20.0 | 42.0 |
+| [Box、エージェント型ワークフロー計画に新たな脅威対策を追加](https://www.helpnetsecurity.com/2026/11/05/box-architect/) | 25.0 | 20.0 | 42.0 |
+| [インド、金融・暗号資産ビジネスを狙う新たなAI駆動型サイバー攻撃に警告](https://www.infosecurity-magazine.com/news/india-warns-ai-cyberattacks/) | 25.0 | 20.0 | 42.0 |
+| [Gartnerレポート: 攻撃経路は多くのチームのパッチ適用より速く閉じつつある](https://www.rapid7.com/blog/post/ai-gartner-report-attack-paths-closing-faster-than-patchable) | 25.0 | 20.0 | 42.0 |
+| [Sysdig AI DefenseがAIエージェントの実行時にガードレールを適用](https://www.helpnetsecurity.com/2026/11/05/sysdig-ai-defense/) | 25.0 | 20.0 | 42.0 |
+| [Anthropic、Claude Dispatchの脆弱性修正を見送り　企業境界を越えたリモートコマンド実行の恐れ](https://www.theregister.com/research/2026/11/05/anthropic-wont-fix-a-claude-dispatch-flaw-that-could-let-attackers-execute-remote-commands-across-corporate-boundaries/5307684) | 25.0 | 20.0 | 42.0 |
+| [Agenticアイデンティティの統制におけるAgent Smithのジレンマ](https://www.securityweek.com/the-agent-smith-dilemma-governing-agentic-identities/) | 25.0 | 20.0 | 42.0 |
+| [Google、脅威を追跡し脆弱性を修正するAIエージェントに新たな制限を導入](https://www.helpnetsecurity.com/2026/11/05/google-cloud-ai-agents-security-controls/) | 25.0 | 20.0 | 42.0 |
+| [OpenAI、GPT-6 Astraが内部レッドチーミングとエクスプロイト課題で控えめな振る舞いをしていることを確認](https://www.securityweek.com/openai-finds-gpt-6-astra-quietly-holding-back-on-internal-red-teaming-exploit-tasks/) | 25.0 | 20.0 | 42.0 |
+| [OpenAIの新AIモデルが一度の実行で948件のLinux root権限エクスプロイトを作成](https://www.helpnetsecurity.com/2026/11/05/openai-linux-kernel-root-exploits/) | 25.0 | 20.0 | 42.0 |
+| [ThreatsDay: Apache OFBizのRCE、DreamHost侵害、DeFiサイトの乗っ取りほか17件の話題](https://thehackernews.com/2026/11/threatsday-apache-ofbiz-rce-dreamhost.html) | 24.0 | 38.0 | 42.0 |
+| [CiscoとWatchGuardが修正パッチを公開、SonicWallはGMSの脆弱性を修正せず](https://www.securityweek.com/cisco-watchguard-release-patches-sonicwall-wont-fix-gms-flaws/) | 24.0 | 38.0 | 42.0 |
+| [it-saから学ぶ教訓：Bring a tent, I've got the coffee](https://blog.talosintelligence.com/bring-a-tent-ive-got-the-coffee-lessons-from-it-sa/) | 22.0 | 20.0 | 42.0 |
+| [第三者が認証情報を不正作成か、アプリ移行処理に不備 - デニーズ](https://www.security-next.com/192388) | 22.0 | 20.0 | 42.0 |
+| [サーバ設定不備、従業員情報流出の可能性 - 資さんうどん](https://www.security-next.com/192260) | 22.0 | 20.0 | 42.0 |
+| [申請用ファイルに不備、サイト上に個人情報が残存 - 福岡県](https://www.security-next.com/192081) | 22.0 | 20.0 | 42.0 |
+| [個人情報含む業務用USBメモリが所在不明に - 奈良県](https://www.security-next.com/191606) | 22.0 | 20.0 | 42.0 |
+| [HPEのネットワーク管理製品に複数脆弱性 - 「クリティカル」3件](https://www.security-next.com/192402) | 22.0 | 20.0 | 42.0 |
+| [フランスの血液保存施設で冷蔵庫の設定を-30℃から110℃に引き上げるサイバー攻撃が発生、迅速な対応で血液製剤は無事](https://gigazine.net/news/20261105-french-blood-fridge-cyberattacked/) | 22.0 | 20.0 | 42.0 |
+| [個人情報が保存されたHDDや書類を紛失 - 都水道局](https://www.security-next.com/192391) | 22.0 | 20.0 | 42.0 |
+| [迫る大脆弱性時代--「SBOM.JP」が目指す脆弱性対応の優先順位付け](https://japan.zdnet.com/article/35254447/) | 21.0 | 20.0 | 42.0 |
+| [「脆弱性報告数が別次元に」 Mythos一般公開を恐れる前に、推奨される7つの優先対策](https://atmarkit.itmedia.co.jp/ait/articles/2611/05/news040.html) | 21.0 | 20.0 | 42.0 |
+| [muslベースのLinuxシステムで過度に長いパスワードを使ってroot権限を取得する方法](https://www.theregister.com/security/2026/11/05/get-root-on-a-musl-linux-system-by-slamming-it-with-an-overly-long-password/5307910) | 20.0 | 20.0 | 42.0 |
+| [Octoberのcrypto-tracker侵害：アクセス突破、法執行機関トークン大量流出](https://www.theregister.com/cyber-crime/2026/11/05/october-crypto-tracker-hack-access-cracked-law-enforcement-tokens-packed/5307852) | 20.0 | 20.0 | 42.0 |
+| [OpenSSHの脆弱性により、パスワード無効化されたLinuxアカウントへ不正ログイン可能に](https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/) | 20.0 | 20.0 | 42.0 |
+| [米民主党の議会におけるサイバーセキュリティ政策の展望](https://www.cybersecuritydive.com/news/congress-cybersecurity-democrats-agenda-cisa-ai/873883/) | 20.0 | 20.0 | 42.0 |
+| [DigiCertのデータ侵害で顧客情報と身分証明書が流出](https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/) | 20.0 | 20.0 | 42.0 |
+| [Tobacco企業がファイル共有に秘密のレシピを残していたことで被害を受けた話](https://www.theregister.com/security/2026/11/05/tobacco-company-got-smoked-by-leaving-secret-recipes-on-a-file-share/5307704) | 20.0 | 20.0 | 42.0 |
+| [White Houseネットワークにたどり着いたResidential Proxyトラフィック](https://www.infosecurity-magazine.com/news/white-house-residential-proxy-exits/) | 20.0 | 20.0 | 42.0 |
+| [フランス当局、国家の血液供給を標的としたサイバー攻撃を捜査](https://www.cybersecuritydive.com/news/french-probe-cyberattack-blood-supply/873871/) | 20.0 | 20.0 | 42.0 |
+| [Zyxel Switchのパッチ未適用脆弱性を突く攻撃の波](https://www.infosecurity-magazine.com/news/zyxel-gs1900-patch-missed-flaw/) | 20.0 | 20.0 | 42.0 |
+| [Service DeskにおけるID管理のギャップを埋める](https://www.bleepingcomputer.com/news/security/closing-the-identity-gap-at-the-service-desk/) | 20.0 | 20.0 | 42.0 |
+| [Arkose Labs、Agent Trust Managerを拡張しエージェントセッションを統制](https://www.helpnetsecurity.com/2026/11/05/arkose-agent-trust-manager/) | 20.0 | 20.0 | 42.0 |
+| [ノルウェーの援助機関へのサイバー攻撃で全ユーザーデータが流出した可能性](https://www.helpnetsecurity.com/2026/11/05/norad-grants-portal-breach/) | 20.0 | 20.0 | 42.0 |
+| [銀行のフィッシングサイトが摘発回避のために偽の「停止中」ページを表示](https://www.securityweek.com/bank-phishing-sites-show-fake-suspended-pages-to-evade-takedowns/) | 20.0 | 20.0 | 42.0 |
+| [フランスの血液バンクサイトがサイバー攻撃を受けるも血液製剤は無事](https://www.securityweek.com/cyberattack-hits-french-blood-bank-site-but-no-blood-products-are-compromised/) | 20.0 | 20.0 | 42.0 |
+| [総務省消防庁「安否情報システム」に不正アクセス、サービス停止中](https://internet.watch.impress.co.jp/docs/news/2154132.html) | 20.0 | 20.0 | 42.0 |
+| [Exposure Managementプラットフォームは本当に安全か？見落としを見つける5つのテスト](https://thehackernews.com/2026/11/is-your-exposure-management-platform.html) | 20.0 | 20.0 | 42.0 |
+| [VizioとSamsungのスマートテレビ、トラッキング拒否設定を無視している可能性](https://www.malwarebytes.com/blog/news/2026/11/vizio-samsung-smart-tvs-seem-to-ignore-tracking-opt-outs) | 20.0 | 20.0 | 42.0 |
+| [OpenAIのAIパイプラインが30時間の実行で948件のLinux権限昇格エクスプロイトを生成](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html) | 20.0 | 20.0 | 42.0 |
+| [中国国家系脅威活動、2026年第2四半期と第3四半期に大幅減少](https://www.infosecurity-magazine.com/news/chinese-nation-activity-falls/) | 20.0 | 20.0 | 42.0 |
+| [NTTドコモ、自社サーバーに不正アクセス。最大約30万件の利用者の情報流出](https://internet.watch.impress.co.jp/docs/news/2154115.html) | 20.0 | 20.0 | 42.0 |
+| [教育プラットフォームへの攻撃後、32万件の学校関連ファイルがダークウェブに公開](https://www.itpro.com/security/cyber-attacks/320-000-school-files-published-on-dark-web-after-attack-on-education-platform) | 20.0 | 20.0 | 42.0 |
+| [ノルウェーの援助機関が侵害され、全ユーザーデータが窃取される](https://www.theregister.com/cyber-crime/2026/11/05/norways-aid-agency-pwned-and-all-users-data-is-stolen/5307765) | 20.0 | 20.0 | 42.0 |
+| [CISO対話：Ryan Davis―セキュリティが現実と交わる未知の領域](https://www.securityweek.com/ciso-conversations-ryan-davis-the-unknown-is-where-security-meets-reality/) | 20.0 | 20.0 | 42.0 |
+| [GhostMapの不具合によりAndroid端末が再起動ループに陥る問題](https://www.infosecurity-magazine.com/news/ghostmap-bug-android-phones-stuck/) | 20.0 | 20.0 | 42.0 |
+| [SOCファイル5：パイプラインに潜む亡霊――Storm-2603によるファイルレスなSharePoint侵害](https://securelist.com/storm-2603-fileless-toolshell-attack/121467/) | 20.0 | 20.0 | 42.0 |
+| [脅威インテリジェンス基盤の見落としをなくす方法](https://any.run/cybersecurity-blog/how-to-close-threat-intelligence-stack-blind-spots/) | 20.0 | 20.0 | 42.0 |
+| [NATSの航空管制障害で英国経済に3300万ポンドの損失](https://www.infosecurity-magazine.com/news/nats-air-traffic-control-fail-cost/) | 20.0 | 20.0 | 42.0 |
+| [GhostMapのAndroid脆弱性により悪意のあるアプリが永続的なブートループを引き起こせる](https://www.bleepingcomputer.com/news/security/ghostmap-android-flaw-lets-malicious-app-trigger-persistent-boot-loop/) | 20.0 | 20.0 | 42.0 |
+| [iCloudリンク共有に有害コンテンツ確認を導入、違反時はアカウント停止の可能性も](https://www.helpnetsecurity.com/2026/11/05/apple-icloud-link-sharing-checks/) | 20.0 | 20.0 | 42.0 |
+| [サイバー攻撃 10月は国内4億件超](https://news.yahoo.co.jp/pickup/6601439?source=rss) | 20.0 | 20.0 | 42.0 |
 
 ---
 
