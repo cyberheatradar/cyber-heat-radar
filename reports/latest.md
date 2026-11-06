@@ -1,20 +1,17 @@
-# 📡 サイレーダー 2026-11-06 05:00 JST
+# 📡 サイレーダー 2026-11-06 11:00 JST
 
-このレポートは、2026-11-05 17:00 JST〜2026-11-06 05:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
+このレポートは、2026-11-06 05:00 JST〜2026-11-06 11:00 JST に収集・観測した公開情報をもとに、サイバーセキュリティ関連トピックの温度感を整理したものです。
 
 ## 🔥 今回の温度感サマリ
 
-- 観測トピック数: 92
-- [音声で扱う想定のトピック](#audio-topics): 4
+- 観測トピック数: 29
+- [音声で扱う想定のトピック](#audio-topics): 1
 - [GitHubのみ掲載想定のトピック](#github-only-topics): 0
-- [低温だが記録しておくトピック](#low-record-topics): 68
+- [低温だが記録しておくトピック](#low-record-topics): 25
 
 | Rank | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 | 区⁠分 | 分⁠類⁠理⁠由 |
 |---:|---|---:|---:|---:|---|---|
-| 1 | [Zyxel Switch Hacks Blamed on Patched Flaw Actually Exploited a Zero-Day](#topic-41466) | 43.0 | 46.0 | 55.0 | 音声 | 温度感上位枠 |
-| 2 | [Vercel ties login sessions to devices, rolls out AI security reviews in public beta](#topic-41442) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
-| 3 | [ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration](#topic-41446) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
-| 4 | [CERT-In Flags AI-Driven Attacks as Backdoored ARTEX Exposes 62 Consoles to Root Access](#topic-41504) | 33.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
+| 1 | [Threat actors use agentic AI tooling to find and abuse exposed secrets](#topic-41515) | 35.0 | 20.0 | 42.0 | 音声 | AI×Security枠 |
 
 ---
 
@@ -22,100 +19,35 @@
 
 ## 🔊 音声で扱う想定のトピック
 
-<a id="topic-41466"></a>
+<a id="topic-41515"></a>
 
-### 1. Zyxel Switch Hacks Blamed on Patched Flaw Actually Exploited a Zero-Day
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>脆⁠弱⁠性</nobr> / <nobr>C⁠V⁠E</nobr> / <nobr>ゼ⁠ロ⁠デ⁠イ</nobr> / <nobr>K⁠E⁠V</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | 温度感上位枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 43.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 46.0 |
-| <nobr>確⁠度</nobr> | 55.0 |
-
-#### 概要
-
-ZyxelのGS1900シリーズスイッチについて、当初は修正済みの脆弱性への対策として扱われていたものの、実際に悪用されていたのは別の未修正脆弱性だったと報じられています。
-対象の欠陥はCVE-2026-107441とされ、公開情報ではOSコマンド実行につながる可能性があるとされていますが、詳細な悪用状況は確認中です。
-ネットワーク機器は社内外の通信の要所に置かれるため、脆弱性が残ると広範な影響につながりやすい点が注目されています。
-修正済みと見なしていても別の欠陥が残っている可能性があり、パッチ適用後の確認が重要です。
-
-#### 温度感の理由
-
-##### 温度感
-- 複数ソースで確認: 2 sources。
-- 実悪用・ゼロデイ文脈。
-
-##### 実務影響
-- 悪用情報あり。
-
-##### 確度
-- 複数ソース確認。
-- CVE IDあり。
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- 対象機種と導入済みファームウェアがCVE-2026-107441の影響範囲に含まれるか確認する。
-- ベンダーの修正情報を再点検し、既存の更新が今回の脆弱性に対応しているかを切り分ける。
-- 外部公開された管理機能や不審なHTTPアクセスの有無を点検し、必要に応じてアクセス制限を強化する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| 脆弱性 | CVE-2026-107441 | 関連CVE | 1.00 | 未確認 |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>脆弱性DB</nobr> | [NVD: CVE-2026-107441](https://nvd.nist.gov/vuln/detail/CVE-2026-107441) | <nobr>CVE概要、CVSS、CWE、参⁠照情報</nobr> |
-| <nobr>出典</nobr> | [Patched Zyxel GS1900 switches remained open to in-the-wild exploit (CVE-2026-107](https://www.helpnetsecurity.com/2026/11/05/zyxel-cve-2026-107441-exploit/) | <nobr>内容確認・補足情報</nobr> |
-| <nobr>出典</nobr> | [Zyxel Switch Hacks Blamed on Patched Flaw Actually Exploited a Zero-Day](https://www.securityweek.com/zyxel-switch-hacks-blamed-on-patched-flaw-actually-exploited-a-zero-day/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-41442"></a>
-
-### 2. Vercel ties login sessions to devices, rolls out AI security reviews in public beta
+### 1. Threat actors use agentic AI tooling to find and abuse exposed secrets
 
 #### スコアカード
 
 | 項⁠目 | 値 |
 |---|---:|
 | <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>A⁠I</nobr> |
+| <nobr>タ⁠グ</nobr> | <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> / <nobr>A⁠I</nobr> / <nobr>A⁠I⁠エ⁠ー⁠ジ⁠ェ⁠ン⁠ト</nobr> / <nobr>ク⁠ラ⁠ウ⁠ド</nobr> / <nobr>政⁠策⁠・⁠規⁠制</nobr> / <nobr>W⁠i⁠n⁠d⁠o⁠w⁠s</nobr> |
 | <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
 | <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
+| <nobr>温⁠度⁠感</nobr> | 35.0 |
 | <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
 | <nobr>確⁠度</nobr> | 42.0 |
 
 #### 概要
 
-Vercelが、ログインセッションを端末にひも付けるDevice Bound Session Credentials（DBSC）の導入と、AIを使ったセキュリティレビュー機能の公開ベータを発表しました。
-DBSCは、情報窃取型マルウェアなどでセッション情報が盗まれた場合の悪用リスクを抑えることを狙う仕組みです。
-セッションの不正利用は、認証情報そのものが漏れていなくても被害につながるため、対策の実装有無が重要です。
-あわせて、AIによるレビュー機能の実運用への適用が広がる流れとしても注目されます。
+Microsoft Threat Intelligenceは、攻撃者がagentic AIツールを用いて公開リポジトリ上のOAuthアプリケーション秘密情報を探し出し、悪用していた事例を観測したとしています。
+漏えいした秘密情報が使われると、関連するOAuthアプリを通じて組織内の正規権限として操作が行われるおそれがあります。
+攻撃者側でもAIを使って秘密情報の探索や悪用を効率化している可能性が示され、従来以上に「公開されている設定情報・資格情報」の管理重要性が高まります。
+クラウドやSaaSの認証連携が多い環境では、ひとつの漏えいが後続の不正操作につながり得る点に注意が必要です。
 
 #### 温度感の理由
 
 ##### 温度感
 - AI×Security文脈。
 - 脅威・攻撃キャンペーン文脈。
+- 技術・開発者系ソース観測: 観測あり。
 
 ##### 実務影響
 - データ分類、権限管理、監査、外部接続管理などの確認観点があります。
@@ -125,148 +57,36 @@ DBSCは、情報窃取型マルウェアなどでセッション情報が盗ま�
 
 #### 担当者向け確認ポイント
 
-- セッション管理が端末ひも付け型の仕組みに対応しているか確認する。
-- Cookieやセッショントークンの保護、失効、再認証の設計を見直す。
-- AI支援のセキュリティレビューは補助として扱い、最終判断は人手で検証する。
+- GitHubなどの公開場所にAPIキー、OAuthクライアント秘密情報、トークンが残っていないかを継続的に点検する。
+- OAuthアプリの権限を最小化し、不要なアプリや長期間使われていない資格情報は棚卸し・失効する。
+- 異常な認証やアプリ経由の操作を検知できるよう、IdPやSaaSの監査ログ、条件付きアクセス、アプリ同意の監視を強化する。
 
 #### 関連する対象
 
 | <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
 |---|---|---|---:|---|
-| マルウェア | RedLine Stealer | 主題 | 0.80 | — |
-| マルウェア | Lumma Stealer | 主題 | 0.80 | — |
+| ベンダー | Microsoft | 言及あり | 0.80 | — |
+| 製品 | Microsoft Defender | 言及あり | 0.80 | — |
+| 製品 | Microsoft Entra ID | 言及あり | 0.80 | — |
+| 製品 | Microsoft Azure | 言及あり | 0.80 | — |
+| 製品 | Microsoft 365 | 言及あり | 0.80 | — |
+| 製品 | Microsoft SharePoint | 言及あり | 0.80 | — |
+| 製品 | Chromium | 言及あり | 0.80 | — |
+| 製品 | Ivanti Policy Secure | 言及あり | 0.80 | — |
+| 製品 | Active Directory | 言及あり | 0.80 | — |
 
 #### 参照リンク
 
 | 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
 |---|---|---|
-| <nobr>出典</nobr> | [Vercel ties login sessions to devices, rolls out AI security reviews in public b](https://www.helpnetsecurity.com/2026/11/05/vercel-security-review-session-hijacking/) | <nobr>内容確認・補足情報</nobr> |
+| <nobr>出典</nobr> | [Threat actors use agentic AI tooling to find and abuse exposed secrets](https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/) | <nobr>内容確認・補足情報</nobr> |
 
 #### 外部反応・国内波及シグナル
 
 - SNS反応: 観測あり・信頼度: 低。
 - 国内ブックマーク反応: なし。
 - 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-41446"></a>
-
-### 3. ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>T⁠T⁠P</nobr> / <nobr>フ⁠ィ⁠ッ⁠シ⁠ン⁠グ</nobr> / <nobr>マ⁠ル⁠ウ⁠ェ⁠ア</nobr> / <nobr>i⁠O⁠S</nobr> / <nobr>脆⁠弱⁠性</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-Check Point Researchは、ChatGPTのコード実行ランタイムに関連するセキュリティ上の問題について報告しました。
-説明では、会話データが秘密裏に外部へ送られる可能性があり、すでに修正が適用されたとされています。
-生成AIの利用が広がる中で、AIサービス内の隔離やデータ保護が実運用上の重要課題であることを示す事例です。
-会話や入力内容に機密情報が含まれる環境では、情報漏えい対策の見直しが必要になります。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- AIサービスや連携機能を使う際は、機密情報の入力可否と保存・送信の扱いを再確認する。
-- 生成AIの権限設定やネットワーク隔離、外部通信の監視を運用面で点検する。
-- ベンダーの修正状況や公式アドバイザリを確認し、影響範囲に応じて利用ルールを更新する。
-
-#### 関連する対象
-
-| <nobr>種⁠類</nobr> | 名⁠称 | <nobr>関⁠係</nobr> | <nobr>確⁠度</nobr> | <nobr>P⁠o⁠C⁠/⁠E⁠x⁠p⁠l⁠o⁠i⁠t</nobr> |
-|---|---|---|---:|---|
-| ベンダー | Check Point | 言及あり | 0.80 | — |
-| ベンダー | OpenAI | 言及あり | 0.80 | — |
-| AIモデル/プロジェクト | ChatGPT | 主題 | 0.80 | — |
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfilt](https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
-
----
-
-<a id="topic-41504"></a>
-
-### 4. CERT-In Flags AI-Driven Attacks as Backdoored ARTEX Exposes 62 Consoles to Root Access
-
-#### スコアカード
-
-| 項⁠目 | 値 |
-|---|---:|
-| <nobr>区⁠分</nobr> | 音声 |
-| <nobr>タ⁠グ</nobr> | <nobr>A⁠I</nobr> / <nobr>権⁠限⁠昇⁠格</nobr> / <nobr>脅⁠威⁠ア⁠ク⁠タ⁠ー</nobr> |
-| <nobr>分⁠類⁠理⁠由</nobr> | AI×Security枠 |
-| <nobr>温⁠度⁠状⁠態</nobr> | 初出 |
-| <nobr>温⁠度⁠感</nobr> | 33.0 |
-| <nobr>実⁠務⁠影⁠響</nobr> | 20.0 |
-| <nobr>確⁠度</nobr> | 42.0 |
-
-#### 概要
-
-CERT-Inは、AI支援型の脅威アクターがインドのBFSI（銀行・金融サービス・保険）分野を標的にしていると公表しました。
-公開されているAIベースの攻撃支援ツールが使われているとされ、活動は継続中とみられています。AIを悪用した攻撃は、従来よりも準備や運用の効率が高まりやすく、警戒すべき対象です。
-金融関連組織が標的とされている点から、業種を問わず防御態勢の見直しが意識されます。
-
-#### 温度感の理由
-
-##### 温度感
-- AI×Security文脈。
-- 脅威・攻撃キャンペーン文脈。
-
-##### 実務影響
-- データ分類、権限管理、監査、外部接続管理などの確認観点があります。
-
-##### 確度
-- 一次・公的系ソースあり。
-
-#### 担当者向け確認ポイント
-
-- AI支援型の偵察・侵入補助ツールを前提に、検知ルールや監視観点を見直す。
-- BFSI関連の組織や取引先では、認証情報の保護、アクセス権限の点検、異常ログの監視を強化する。
-- 脅威情報としては、攻撃者の手口だけでなく、影響を受けやすい資産や業務範囲の把握を優先する。
-
-#### 参照リンク
-
-| 種⁠別 | 参⁠照 | 確⁠認⁠す⁠べ⁠き⁠内⁠容 |
-|---|---|---|
-| <nobr>出典</nobr> | [CERT-In Flags AI-Driven Attacks as Backdoored ARTEX Exposes 62 Consoles to Root ](https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html) | <nobr>内容確認・補足情報</nobr> |
-
-#### 外部反応・国内波及シグナル
-
-- SNS反応: 観測あり・信頼度: 低。
-- 国内ブックマーク反応: なし。
-- 国内開発者記事: なし。
-- 技術・開発者系ソース観測: 観測なし。
+- 技術・開発者系ソース観測: 観測あり。
 
 ---
 
@@ -285,74 +105,31 @@ CERT-Inは、AI支援型の脅威アクターがインドのBFSI（銀行・金�
 
 | Topic | 温⁠度⁠感 | 実⁠務⁠影⁠響 | 確⁠度 |
 |---|---:|---:|---:|
-| [医療機関のサイバーセキュリティー強化へ ランサムウエア攻撃で診療への長期影響リスク](https://www.itmedia.co.jp/news/article/2611/05/2000002921/) | 29.0 | 30.0 | 42.0 |
-| [New York州クイーンズ公共図書館がランサムウェア被害、Wi-Fiや貸出システム、Webサイトが停止](https://www.theregister.com/cyber-crime/2026/11/05/new-yorks-queens-public-library-battles-ransomware-crims-wi-fi-checkouts-and-website-go-dark/5307796) | 28.0 | 30.0 | 42.0 |
-| [ロシア政府系ハッカーがゼロクリック諜報キャンペーンでiPhoneとAndroid端末を標的に](https://therecord.media/russia-hackers-smartphone-cyberattacks) | 28.0 | 20.0 | 42.0 |
-| [トロイ化されたCWP Webサーバーを使ってLinuxサーバーにバックドアを仕掛けるハッカーたち](https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/) | 28.0 | 20.0 | 42.0 |
-| [PortSwiggerのBurp ATが企業に定義済みの制限付きでペネトストを委任可能に](https://www.helpnetsecurity.com/2026/11/05/portswigger-burp-at-enterprises/) | 28.0 | 20.0 | 42.0 |
-| [GTA 6の期待感に便乗してマルウェアや暗号資産詐欺を広める詐欺師たち](https://www.helpnetsecurity.com/2026/11/05/gta-6-scams-fake-leaks-early-access/) | 28.0 | 20.0 | 42.0 |
-| [ロシア系ハッカーがウォータリングホールでiOS・Android端末を狙うエクスプロイトチェーン攻撃](https://www.securityweek.com/russia-linked-hackers-hit-ios-android-devices-with-exploit-chains-via-watering-holes/) | 28.0 | 20.0 | 42.0 |
-| [2026年10月に米国企業を脅かす5つの活発なサイバー脅威](https://thehackernews.com/2026/11/5-active-cyber-threats-that-put-us.html) | 28.0 | 20.0 | 42.0 |
-| [銀行向けマルウェアのサンプルから発見された、Android端末をループクラッシュさせる脆弱性](https://www.helpnetsecurity.com/2026/11/05/ghostmap-android-bug-research/) | 28.0 | 20.0 | 42.0 |
-| [古いCisco IOSの脆弱性に対する脆弱性スキャン／オプトアウトヘッダー（11月5日木曜日）](https://isc.sans.edu/diary/rss/33492) | 25.0 | 31.0 | 51.0 |
-| [OpenAIのGPT-6 Astraが安全性研究タスクを密かに妨害](https://www.bleepingcomputer.com/news/security/openais-gpt-6-astra-silently-obstructed-safety-research-tasks/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIの研究で明らかになった948件のLinuxカーネル脆弱性によりAIエージェントがroot権限を取得](https://www.securityweek.com/ai-agents-got-root-on-linux-via-948-kernel-flaws-in-openai-research/) | 25.0 | 20.0 | 42.0 |
-| [AIエージェントは人間ではないが、かなり人間に近い](https://blog.cloudflare.com/trusted-agent-delegation/) | 25.0 | 20.0 | 42.0 |
-| [OpenAI、GPT-6 Cyberを発表――性能向上と安全対策を強調](https://cyberscoop.com/openai-gpt-6-cyber-security-model/) | 25.0 | 20.0 | 42.0 |
-| [OpenAI、GPT-6 Cyberを公開し「交戦規定」を順守すると表明](https://www.theregister.com/security/2026/11/05/openai-releases-gpt-6-cyber-and-promises-this-one-stays-within-rules-of-engagement/5307855) | 25.0 | 20.0 | 42.0 |
-| [SecurityDataPipeline.comがAI時代向けの新しい教育リソースとして公開される](https://www.darkreading.com/cybersecurity-operations/securitydatapipeline-com-launches-as-a-new-educational-resource-for-the-ai-era) | 25.0 | 20.0 | 42.0 |
-| [CyberhavenがAIのデータ利用を追跡・制御するAgentic Data Securityを発表](https://www.helpnetsecurity.com/2026/11/05/cyberhaven-agentic-data-security/) | 25.0 | 20.0 | 42.0 |
-| [Box、エージェント型ワークフロー計画に新たな脅威対策を追加](https://www.helpnetsecurity.com/2026/11/05/box-architect/) | 25.0 | 20.0 | 42.0 |
-| [インド、金融・暗号資産ビジネスを狙う新たなAI駆動型サイバー攻撃に警告](https://www.infosecurity-magazine.com/news/india-warns-ai-cyberattacks/) | 25.0 | 20.0 | 42.0 |
-| [Gartnerレポート: 攻撃経路は多くのチームのパッチ適用より速く閉じつつある](https://www.rapid7.com/blog/post/ai-gartner-report-attack-paths-closing-faster-than-patchable) | 25.0 | 20.0 | 42.0 |
-| [Sysdig AI DefenseがAIエージェントの実行時にガードレールを適用](https://www.helpnetsecurity.com/2026/11/05/sysdig-ai-defense/) | 25.0 | 20.0 | 42.0 |
-| [Anthropic、Claude Dispatchの脆弱性修正を見送り　企業境界を越えたリモートコマンド実行の恐れ](https://www.theregister.com/research/2026/11/05/anthropic-wont-fix-a-claude-dispatch-flaw-that-could-let-attackers-execute-remote-commands-across-corporate-boundaries/5307684) | 25.0 | 20.0 | 42.0 |
-| [Agenticアイデンティティの統制におけるAgent Smithのジレンマ](https://www.securityweek.com/the-agent-smith-dilemma-governing-agentic-identities/) | 25.0 | 20.0 | 42.0 |
-| [Google、脅威を追跡し脆弱性を修正するAIエージェントに新たな制限を導入](https://www.helpnetsecurity.com/2026/11/05/google-cloud-ai-agents-security-controls/) | 25.0 | 20.0 | 42.0 |
-| [OpenAI、GPT-6 Astraが内部レッドチーミングとエクスプロイト課題で控えめな振る舞いをしていることを確認](https://www.securityweek.com/openai-finds-gpt-6-astra-quietly-holding-back-on-internal-red-teaming-exploit-tasks/) | 25.0 | 20.0 | 42.0 |
-| [OpenAIの新AIモデルが一度の実行で948件のLinux root権限エクスプロイトを作成](https://www.helpnetsecurity.com/2026/11/05/openai-linux-kernel-root-exploits/) | 25.0 | 20.0 | 42.0 |
-| [ThreatsDay: Apache OFBizのRCE、DreamHost侵害、DeFiサイトの乗っ取りほか17件の話題](https://thehackernews.com/2026/11/threatsday-apache-ofbiz-rce-dreamhost.html) | 24.0 | 38.0 | 42.0 |
-| [CiscoとWatchGuardが修正パッチを公開、SonicWallはGMSの脆弱性を修正せず](https://www.securityweek.com/cisco-watchguard-release-patches-sonicwall-wont-fix-gms-flaws/) | 24.0 | 38.0 | 42.0 |
-| [it-saから学ぶ教訓：Bring a tent, I've got the coffee](https://blog.talosintelligence.com/bring-a-tent-ive-got-the-coffee-lessons-from-it-sa/) | 22.0 | 20.0 | 42.0 |
-| [第三者が認証情報を不正作成か、アプリ移行処理に不備 - デニーズ](https://www.security-next.com/192388) | 22.0 | 20.0 | 42.0 |
-| [サーバ設定不備、従業員情報流出の可能性 - 資さんうどん](https://www.security-next.com/192260) | 22.0 | 20.0 | 42.0 |
-| [申請用ファイルに不備、サイト上に個人情報が残存 - 福岡県](https://www.security-next.com/192081) | 22.0 | 20.0 | 42.0 |
-| [個人情報含む業務用USBメモリが所在不明に - 奈良県](https://www.security-next.com/191606) | 22.0 | 20.0 | 42.0 |
-| [HPEのネットワーク管理製品に複数脆弱性 - 「クリティカル」3件](https://www.security-next.com/192402) | 22.0 | 20.0 | 42.0 |
-| [フランスの血液保存施設で冷蔵庫の設定を-30℃から110℃に引き上げるサイバー攻撃が発生、迅速な対応で血液製剤は無事](https://gigazine.net/news/20261105-french-blood-fridge-cyberattacked/) | 22.0 | 20.0 | 42.0 |
-| [個人情報が保存されたHDDや書類を紛失 - 都水道局](https://www.security-next.com/192391) | 22.0 | 20.0 | 42.0 |
-| [迫る大脆弱性時代--「SBOM.JP」が目指す脆弱性対応の優先順位付け](https://japan.zdnet.com/article/35254447/) | 21.0 | 20.0 | 42.0 |
-| [「脆弱性報告数が別次元に」 Mythos一般公開を恐れる前に、推奨される7つの優先対策](https://atmarkit.itmedia.co.jp/ait/articles/2611/05/news040.html) | 21.0 | 20.0 | 42.0 |
-| [muslベースのLinuxシステムで過度に長いパスワードを使ってroot権限を取得する方法](https://www.theregister.com/security/2026/11/05/get-root-on-a-musl-linux-system-by-slamming-it-with-an-overly-long-password/5307910) | 20.0 | 20.0 | 42.0 |
-| [Octoberのcrypto-tracker侵害：アクセス突破、法執行機関トークン大量流出](https://www.theregister.com/cyber-crime/2026/11/05/october-crypto-tracker-hack-access-cracked-law-enforcement-tokens-packed/5307852) | 20.0 | 20.0 | 42.0 |
-| [OpenSSHの脆弱性により、パスワード無効化されたLinuxアカウントへ不正ログイン可能に](https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/) | 20.0 | 20.0 | 42.0 |
-| [米民主党の議会におけるサイバーセキュリティ政策の展望](https://www.cybersecuritydive.com/news/congress-cybersecurity-democrats-agenda-cisa-ai/873883/) | 20.0 | 20.0 | 42.0 |
-| [DigiCertのデータ侵害で顧客情報と身分証明書が流出](https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/) | 20.0 | 20.0 | 42.0 |
-| [Tobacco企業がファイル共有に秘密のレシピを残していたことで被害を受けた話](https://www.theregister.com/security/2026/11/05/tobacco-company-got-smoked-by-leaving-secret-recipes-on-a-file-share/5307704) | 20.0 | 20.0 | 42.0 |
-| [White Houseネットワークにたどり着いたResidential Proxyトラフィック](https://www.infosecurity-magazine.com/news/white-house-residential-proxy-exits/) | 20.0 | 20.0 | 42.0 |
-| [フランス当局、国家の血液供給を標的としたサイバー攻撃を捜査](https://www.cybersecuritydive.com/news/french-probe-cyberattack-blood-supply/873871/) | 20.0 | 20.0 | 42.0 |
-| [Zyxel Switchのパッチ未適用脆弱性を突く攻撃の波](https://www.infosecurity-magazine.com/news/zyxel-gs1900-patch-missed-flaw/) | 20.0 | 20.0 | 42.0 |
-| [Service DeskにおけるID管理のギャップを埋める](https://www.bleepingcomputer.com/news/security/closing-the-identity-gap-at-the-service-desk/) | 20.0 | 20.0 | 42.0 |
-| [Arkose Labs、Agent Trust Managerを拡張しエージェントセッションを統制](https://www.helpnetsecurity.com/2026/11/05/arkose-agent-trust-manager/) | 20.0 | 20.0 | 42.0 |
-| [ノルウェーの援助機関へのサイバー攻撃で全ユーザーデータが流出した可能性](https://www.helpnetsecurity.com/2026/11/05/norad-grants-portal-breach/) | 20.0 | 20.0 | 42.0 |
-| [銀行のフィッシングサイトが摘発回避のために偽の「停止中」ページを表示](https://www.securityweek.com/bank-phishing-sites-show-fake-suspended-pages-to-evade-takedowns/) | 20.0 | 20.0 | 42.0 |
-| [フランスの血液バンクサイトがサイバー攻撃を受けるも血液製剤は無事](https://www.securityweek.com/cyberattack-hits-french-blood-bank-site-but-no-blood-products-are-compromised/) | 20.0 | 20.0 | 42.0 |
-| [総務省消防庁「安否情報システム」に不正アクセス、サービス停止中](https://internet.watch.impress.co.jp/docs/news/2154132.html) | 20.0 | 20.0 | 42.0 |
-| [Exposure Managementプラットフォームは本当に安全か？見落としを見つける5つのテスト](https://thehackernews.com/2026/11/is-your-exposure-management-platform.html) | 20.0 | 20.0 | 42.0 |
-| [VizioとSamsungのスマートテレビ、トラッキング拒否設定を無視している可能性](https://www.malwarebytes.com/blog/news/2026/11/vizio-samsung-smart-tvs-seem-to-ignore-tracking-opt-outs) | 20.0 | 20.0 | 42.0 |
-| [OpenAIのAIパイプラインが30時間の実行で948件のLinux権限昇格エクスプロイトを生成](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html) | 20.0 | 20.0 | 42.0 |
-| [中国国家系脅威活動、2026年第2四半期と第3四半期に大幅減少](https://www.infosecurity-magazine.com/news/chinese-nation-activity-falls/) | 20.0 | 20.0 | 42.0 |
-| [NTTドコモ、自社サーバーに不正アクセス。最大約30万件の利用者の情報流出](https://internet.watch.impress.co.jp/docs/news/2154115.html) | 20.0 | 20.0 | 42.0 |
-| [教育プラットフォームへの攻撃後、32万件の学校関連ファイルがダークウェブに公開](https://www.itpro.com/security/cyber-attacks/320-000-school-files-published-on-dark-web-after-attack-on-education-platform) | 20.0 | 20.0 | 42.0 |
-| [ノルウェーの援助機関が侵害され、全ユーザーデータが窃取される](https://www.theregister.com/cyber-crime/2026/11/05/norways-aid-agency-pwned-and-all-users-data-is-stolen/5307765) | 20.0 | 20.0 | 42.0 |
-| [CISO対話：Ryan Davis―セキュリティが現実と交わる未知の領域](https://www.securityweek.com/ciso-conversations-ryan-davis-the-unknown-is-where-security-meets-reality/) | 20.0 | 20.0 | 42.0 |
-| [GhostMapの不具合によりAndroid端末が再起動ループに陥る問題](https://www.infosecurity-magazine.com/news/ghostmap-bug-android-phones-stuck/) | 20.0 | 20.0 | 42.0 |
-| [SOCファイル5：パイプラインに潜む亡霊――Storm-2603によるファイルレスなSharePoint侵害](https://securelist.com/storm-2603-fileless-toolshell-attack/121467/) | 20.0 | 20.0 | 42.0 |
-| [脅威インテリジェンス基盤の見落としをなくす方法](https://any.run/cybersecurity-blog/how-to-close-threat-intelligence-stack-blind-spots/) | 20.0 | 20.0 | 42.0 |
-| [NATSの航空管制障害で英国経済に3300万ポンドの損失](https://www.infosecurity-magazine.com/news/nats-air-traffic-control-fail-cost/) | 20.0 | 20.0 | 42.0 |
-| [GhostMapのAndroid脆弱性により悪意のあるアプリが永続的なブートループを引き起こせる](https://www.bleepingcomputer.com/news/security/ghostmap-android-flaw-lets-malicious-app-trigger-persistent-boot-loop/) | 20.0 | 20.0 | 42.0 |
-| [iCloudリンク共有に有害コンテンツ確認を導入、違反時はアカウント停止の可能性も](https://www.helpnetsecurity.com/2026/11/05/apple-icloud-link-sharing-checks/) | 20.0 | 20.0 | 42.0 |
-| [サイバー攻撃 10月は国内4億件超](https://news.yahoo.co.jp/pickup/6601439?source=rss) | 20.0 | 20.0 | 42.0 |
+| [Queens Public Library、ランサムウェア攻撃でWi-Fiと館内端末に障害](https://therecord.media/queens-library-ransomware-causes-disruptions) | 28.0 | 30.0 | 42.0 |
+| [APT29の水飲み場攻撃が数千人のモバイルユーザーを標的にする](https://www.darkreading.com/mobile-security/apt29-watering-holes-target-mobile-users) | 28.0 | 20.0 | 42.0 |
+| [アラートを減らすだけでは不十分--AIOpsで「障害対応型」から「予防型」へ移行する方法](https://japan.zdnet.com/article/35254174/) | 26.0 | 20.0 | 42.0 |
+| [情報漏洩の背後にAIエージェント 悪用が相次ぐ「ARTEX」の正体](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100113/103000198/) | 26.0 | 20.0 | 42.0 |
+| [AIエージェントの導入率はトップ、しかし監視は追い付かず KnowBe4調査が示す日本企業のいびつな実態](https://www.itmedia.co.jp/enterprise/articles/2611/06/news022.html) | 26.0 | 20.0 | 42.0 |
+| [AIの進化が引き金に 「セキュリティー費用爆発」の実態](https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100111/110500190/) | 26.0 | 20.0 | 42.0 |
+| [AIエージェント賠償責任保険は本当に必要か--契約する前に知っておくべきこと](https://japan.zdnet.com/article/35254425/) | 26.0 | 20.0 | 42.0 |
+| [「届いた商品が不良品」その写真もAI製--中国ECで起きる返金をめぐるAI対AIの攻防](https://japan.zdnet.com/article/35254344/) | 26.0 | 20.0 | 42.0 |
+| [Akamai、AI推論サービス「Akamai Inference」とAIエージェント実行環境「Akamai Agent Sandbox」の提供を開始](https://internet.watch.impress.co.jp/docs/news/2153917.html) | 25.0 | 20.0 | 42.0 |
+| [AI生成の迷子ペット画像を使って飼い主を脅迫する詐欺師たち](https://www.malwarebytes.com/blog/ai/2026/11/scammers-use-ai-generated-images-of-missing-pets-to-extort-owners) | 25.0 | 20.0 | 42.0 |
+| [偽のOpenAIやSpaceXイベントを悪用してMicrosoftとGoogleアカウントを窃取する手口](https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/) | 25.0 | 20.0 | 42.0 |
+| [AIは開発者やプログラマーたちに長年にわたって蓄積されてきた技術的負債を返済することを強いている](https://gigazine.net/news/20261106-ai-in-cybersecurity-php2shell-vulnerability/) | 22.0 | 20.0 | 42.0 |
+| [JC-STARとEUサイバーレジリエンス法（CRA）の制度比較を本格化するため覚書署名、経産省とIPA](https://internet.watch.impress.co.jp/docs/news/2153922.html) | 21.0 | 20.0 | 42.0 |
+| [Bluetoothスニッフィングに注意--お気に入りのデバイスから情報漏えいのリスク](https://japan.zdnet.com/article/35254369/) | 21.0 | 20.0 | 42.0 |
+| [第1回 AI自律攻撃の衝撃と「2026年問題」--人間のスピードを超えた脆弱性危機の現実](https://japan.zdnet.com/article/35253791/) | 21.0 | 20.0 | 42.0 |
+| [経済同友会・山口代表幹事、「デジタル安全保障へ企業は選択肢と備えを」](https://xtech.nikkei.com/atcl/nxt/column/18/03795/110200008/) | 21.0 | 20.0 | 42.0 |
+| [実在の配達と偽の返品で請求されるPhone return詐欺](https://www.malwarebytes.com/blog/threat-intel/2026/11/phone-return-scams-where-a-real-delivery-and-a-fake-return-end-up-in-a-bill-for-you) | 20.0 | 20.0 | 42.0 |
+| [NIKKE PCランチャーの侵害でプレイヤーのパスワードと個人ファイルが危険にさらされる](https://www.malwarebytes.com/blog/news/2026/11/nikke-pc-launcher-compromise-put-players-passwords-and-personal-files-at-risk) | 20.0 | 20.0 | 42.0 |
+| [GMO不正アクセス、サーバを止めてもパスワードを変えても…被害が続く“ある抜け穴”](https://www.sbbit.jp/article/fj/187962?ref=rss) | 20.0 | 20.0 | 42.0 |
+| [米国政府のメールシステム、タイポによる悪用の危険にさらされる](https://www.darkreading.com/cybersecurity-operations/us-government-email-systems-abuse-typos) | 20.0 | 20.0 | 42.0 |
+| [見逃していたこと：Knicksのフィッシング訓練が逸脱する](https://www.darkreading.com/cyber-risk/what-we-missed-knicks-phishing-test-out-of-bounds) | 20.0 | 20.0 | 42.0 |
+| [その「返金のお知らせ」本物ですか？ 氏名や注文内容が正しくても詐欺メールかも……相次ぐ情報漏えいで巧妙化する手口【読めば身に付くネットリテラシー】](https://internet.watch.impress.co.jp/docs/column/netliteracy/2153541.html) | 20.0 | 20.0 | 42.0 |
+| [ホワイトハウスは住宅用プロキシの出口として人気があるらしい](https://www.theregister.com/security/2026/11/05/the-white-house-is-apparently-a-popular-residential-proxy-exit-spot/5307969) | 20.0 | 20.0 | 42.0 |
+| [SNS大手が、15歳以下を強迫的利用から守るカリフォルニア州法の無効化を求め提訴](https://therecord.media/social-media-giants-sue-california-over-social-media-law) | 20.0 | 20.0 | 42.0 |
+| [新たな失効プログラムで標的となった約150万件の露出したシークレット](https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets/) | 20.0 | 20.0 | 42.0 |
 
 ---
 
